@@ -11,9 +11,10 @@
 -- ============================================
 CREATE TABLE IF NOT EXISTS tantric_users (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    google_id VARCHAR(64) NULL UNIQUE,          -- Google OAuth subject (sub)
     user_id VARCHAR(64) UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,  -- Argon2id hash
+    password_hash VARCHAR(255) NOT NULL,  -- Argon2id hash, or OAUTH_MANAGED_GOOGLE
     role ENUM('seeker','practitioner','acharya','admin') DEFAULT 'seeker',
     is_active BOOLEAN DEFAULT TRUE,
     failed_login_attempts INT DEFAULT 0,

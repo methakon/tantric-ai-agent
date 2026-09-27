@@ -21,46 +21,77 @@ import numpy as np
 # Add venv packages
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'venv', 'lib', 'python3.12', 'site-packages'))
 
-# Try importing optional dependencies
+# Load .env (project root) BEFORE reading env-driven config
 try:
-    import cv2
-    HAS_OPENCV = True
+    from crypto_engine import load_env
+    load_env()
 except ImportError:
-    HAS_OPENCV = False
-    print("[WARN] OpenCV not available - camera features disabled")
+    pass
 
-try:
-    import mediapipe as mp
-    if not hasattr(mp, 'solutions'):
-        raise ImportError("MediaPipe solutions not available")
-    HAS_MEDIAPIPE = True
-except (ImportError, AttributeError):
-    HAS_MEDIAPIPE = False
-    print("[WARN] MediaPipe not available - palmistry features disabled")
-
-try:
-    import whisper
-    HAS_WHISPER = True
-except ImportError:
-    HAS_WHISPER = False
-    print("[WARN] Whisper not available - audio transcription disabled")
-
-try:
-    import librosa
-    HAS_LIBROSA = True
-except ImportError:
-    HAS_LIBROSA = False
-    print("[WARN] librosa not available - audio analysis limited")
+# ---------------------------------------------------------------
+# Heavy multimodal imports are LAZY: the auth/IPC server must start
+# in ~1s. Whisper alone costs ~25s to import — it is deferred until
+# a multimodal request actually arrives.
+# ---------------------------------------------------------------
+cv2 = None
+mp = None
+whisper = None
+librosa = None
+HAS_OPENCV = False
+HAS_MEDIAPIPE = False
+HAS_WHISPER = False
+HAS_LIBROSA = False
+_HEAVY_LOADED = False
 
 
-# Unix Domain Socket path
-UDS_PATH = "/tmp/tantric_esoteric.sock"
+def _load_heavy_imports():
+    """Import multimodal dependencies on first use (slow: whisper ~25s)."""
+    global cv2, mp, whisper, librosa
+    global HAS_OPENCV, HAS_MEDIAPIPE, HAS_WHISPER, HAS_LIBROSA, _HEAVY_LOADED
+    if _HEAVY_LOADED:
+        return
+    _HEAVY_LOADED = True
+
+    try:
+        import cv2 as _cv2
+        cv2 = _cv2
+        HAS_OPENCV = True
+    except ImportError:
+        print("[WARN] OpenCV not available - camera features disabled", flush=True)
+
+    try:
+        import mediapipe as _mp
+        if not hasattr(_mp, 'solutions'):
+            raise ImportError("MediaPipe solutions not available")
+        mp = _mp
+        HAS_MEDIAPIPE = True
+    except (ImportError, AttributeError):
+        print("[WARN] MediaPipe not available - palmistry features disabled", flush=True)
+
+    try:
+        import whisper as _whisper
+        whisper = _whisper
+        HAS_WHISPER = True
+    except ImportError:
+        print("[WARN] Whisper not available - audio transcription disabled", flush=True)
+
+    try:
+        import librosa as _librosa
+        librosa = _librosa
+        HAS_LIBROSA = True
+    except ImportError:
+        print("[WARN] librosa not available - audio analysis limited", flush=True)
+
+
+# Unix Domain Socket path (matches ESOTERIC_SOCKET_PATH in .env)
+UDS_PATH = os.environ.get("ESOTERIC_SOCKET_PATH", "/tmp/hermes_esoteric.sock")
 
 
 class MultimodalProcessor:
     """Processes camera and microphone input for Tantric analysis."""
     
     def __init__(self):
+        _load_heavy_imports()
         self.mp_hands = None
         self.whisper_model = None
         
@@ -327,8 +358,102 @@ class AcharyaSiddhaIPC:
         })
 
 
+class IPCServer:
+    """
+    Unix Domain Socket server (auth + service authority).
+
+    The C++ HTTP gateway connects here as a client and sends
+    length-prefixed JSON actions:
+      - VERIFY_GOOGLE_OAUTH  {id_token}  -> full Google login flow
+      - VALIDATE_SESSION     {token}     -> session lookup for WS handshake
+      - GET_AUTH_CONFIG      {}          -> {"client_id": "..."}
+      - PING                 {}          -> {"status": "SUCCESS", "pong": true}
+    """
+
+    def __init__(self, socket_path: str = UDS_PATH):
+        self.socket_path = socket_path
+        self.server_socket = None
+
+    def start(self):
+        if os.path.exists(self.socket_path):
+            os.unlink(self.socket_path)
+        self.server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+        self.server_socket.bind(self.socket_path)
+        os.chmod(self.socket_path, 0o600)  # owner-only access
+        self.server_socket.listen(16)
+        print(f"[INFO] IPC auth server listening at {self.socket_path}", flush=True)
+
+    def _recv_exact(self, conn, n: int):
+        buf = b""
+        while len(buf) < n:
+            chunk = conn.recv(n - len(buf))
+            if not chunk:
+                return None
+            buf += chunk
+        return buf
+
+    def _handle_action(self, req: dict) -> dict:
+        action = req.get("action", "")
+        try:
+            if action == "PING":
+                return {"status": "SUCCESS", "pong": True}
+
+            if action == "VERIFY_GOOGLE_OAUTH":
+                from auth_service import google_login
+                return google_login(req.get("id_token", ""))
+
+            if action == "VALIDATE_SESSION":
+                from auth_service import validate_session
+                rec = validate_session(req.get("token", ""))
+                if rec:
+                    return {"status": "SUCCESS",
+                            "user_id": rec["user_id"],
+                            "sub_profile_id": rec["sub_profile_id"]}
+                return {"status": "ERROR", "message": "invalid or expired session"}
+
+            if action == "GET_AUTH_CONFIG":
+                from auth_service import GOOGLE_CLIENT_ID
+                return {"status": "SUCCESS", "client_id": GOOGLE_CLIENT_ID}
+
+            return {"status": "ERROR", "message": f"unknown action: {action}"}
+        except Exception as e:
+            return {"status": "ERROR", "message": f"handler exception: {e}"}
+
+    def serve_forever(self):
+        print("[INFO] IPC server ready (Ctrl-C to stop)", flush=True)
+        while True:
+            conn, _ = self.server_socket.accept()
+            try:
+                length_bytes = self._recv_exact(conn, 4)
+                if not length_bytes:
+                    continue
+                length = struct.unpack('<I', length_bytes)[0]
+                if length == 0 or length > 4 * 1024 * 1024:
+                    continue
+                payload = self._recv_exact(conn, length)
+                if not payload:
+                    continue
+                req = json.loads(payload.decode('utf-8'))
+                resp = self._handle_action(req)
+                resp_bytes = json.dumps(resp).encode('utf-8')
+                conn.sendall(struct.pack('<I', len(resp_bytes)) + resp_bytes)
+            except (json.JSONDecodeError, ConnectionError, OSError) as e:
+                print(f"[WARN] connection error: {e}", flush=True)
+            finally:
+                conn.close()
+
+
 def main():
     """Main entry point for Python IPC bridge."""
+    if "--serve" in sys.argv:
+        server = IPCServer()
+        server.start()
+        try:
+            server.serve_forever()
+        except KeyboardInterrupt:
+            print("\n[INFO] IPC server stopped")
+        return
+
     print("=" * 60)
     print("  Tantric AI Agent - Python IPC Bridge")
     print("=" * 60)

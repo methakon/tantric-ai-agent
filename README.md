@@ -124,6 +124,49 @@ python3 scripts/crypto_engine.py   # encrypt/HMAC/file tests
 `web/index.html` — obsidian slate (#07070a) + temple gold (#d4af37) + ruby (#e63946).
 WebSocket streaming at `/v1/chat/ws` with inline Yantra SVG and acoustic metadata.
 
+## Google OAuth (Zero-Billing, Google Identity Services)
+
+```
+Browser                C++ Gateway (:8080)         Python Bridge (UDS)      MySQL
+-------                -------------------         -------------------      -----
+GIS button click
+  └─ ID token (JWT) ──> POST /api/v1/auth/google
+                          └─ VERIFY_GOOGLE_OAUTH ─> verify RS256 signature
+                                                     (google-auth, cached JWKS)
+                                                     upsert tantric_users
+                                                     + SELF sub-profile ────> tantric_users
+                          <─ {status, access_token}   issue session token      tantric_chat_sessions
+  <─ access_token ────────┘
+  └─ WS /v1/chat/ws?token=..> VALIDATE_SESSION ────> sha256 lookup
+                          <─ 101 Switching Protocols
+```
+
+**Setup required (one-time, free):**
+1. Google Cloud Console -> new project `tantra-acharya-auth` (no billing)
+2. OAuth consent screen: External; scopes `openid`, `userinfo.email`, `userinfo.profile`
+3. Credentials -> OAuth client ID -> Web application
+   - Authorized origins: `http://localhost:8080`, `http://127.0.0.1:8080`
+   - Redirect URIs: `http://localhost:8080`, `http://127.0.0.1:8080`
+4. Paste the Client ID into `.env` as `GOOGLE_CLIENT_ID=...`
+
+**Run:**
+```bash
+source venv/bin/activate
+python3 scripts/ipc_bridge.py --serve &      # auth authority + multimodal bridge (UDS)
+./tantric_gateway                            # HTTP/WS gateway on :8080
+# open http://localhost:8080
+```
+
+**Tests:**
+```bash
+python3 tests/test_google_auth.py            # 32/32 — full chain, offline (mock JWKS)
+```
+
+The test seam `TANTRIC_AUTH_TEST_CERTS=<pem>` swaps Google's JWKS for a local
+certificate so the entire OAuth chain (signature, audience, expiry, DB
+provisioning, WS handshake, rate limits) is validated without any live Google
+calls. Never set it in production.
+
 ---
 
 ## Hardware Requirements

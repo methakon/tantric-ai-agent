@@ -16,3 +16,6 @@ third_party/sweph/*.o
 tests/test_kinship_nashta
 tests/*_bin
 tests/test_gateway
+tantric_gateway
+tests/test_gateway
+tests/test_kinship_nashta

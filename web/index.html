@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>अचार्य-सिद्ध · Acharya-Siddha</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
 :root {
   --bg-primary: #07070a;
@@ -228,9 +229,88 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
   border-top: 1px solid rgba(212, 175, 55, 0.12);
 }
 .safety-notice .blocked { color: var(--ruby); }
+
+/* ---------- Google Sign-In modal ---------- */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+.auth-overlay.hidden { display: none; }
+
+.auth-card {
+  background: linear-gradient(160deg, #0f0c1b 0%, #07070a 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 14px;
+  padding: 2.4rem 2.8rem;
+  max-width: 420px;
+  width: 92%;
+  text-align: center;
+  box-shadow: 0 0 60px rgba(212, 175, 55, 0.08);
+}
+.auth-card .om {
+  width: 64px; height: 64px;
+  margin: 0 auto 1.2rem;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  color: var(--gold);
+}
+.auth-card h2 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+.auth-card p {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+#googleBtnContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.4rem;
+}
+#authStatus {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  padding-top: 1rem;
+}
+#authStatus.hidden { display: none; }
+#authStatus.error { color: var(--ruby); }
+
+.signed-in-strip {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  padding: 0.6rem 2rem 0;
+}
+.signed-in-strip .user { color: var(--gold); }
 </style>
 </head>
 <body>
+
+<!-- ============ Google Sign-In gate ============ -->
+<div id="authModal" class="auth-overlay">
+  <div class="auth-card">
+    <div class="om">ॐ</div>
+    <h2>Acharya-Siddha Portal</h2>
+    <p>Authenticate to access sacred calculations and session memory</p>
+    <div id="googleBtnContainer"></div>
+    <div id="authStatus" class="hidden">Verifying credentials with Hermes engine...</div>
+  </div>
+</div>
 
 <header>
   <div>
@@ -268,6 +348,7 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
   </aside>
 
   <div class="chat-area">
+    <div class="signed-in-strip" id="signedInStrip"></div>
     <div id="messages">
       <div class="message">
         <div class="role">Acharya-Siddha</div>
@@ -285,18 +366,24 @@ Native engines online: sidereal ephemeris (Lahiri), vector Yantra rendering, 22-
 </main>
 
 <script>
-const WS_URL = (location.protocol === 'https:' ? 'wss://' : 'ws://')
+const WS_BASE = (location.protocol === 'https:' ? 'wss://' : 'ws://')
              + location.host + '/v1/chat/ws';
 
 let ws = null;
 let currentProfile = 'self';
 let sessionId = crypto.randomUUID();
+let hermesToken = sessionStorage.getItem('hermes_jwt') || null;
+let googleClientId = null;
+let wsEverOpened = false;
 
 // ---------- WebSocket lifecycle ----------
 function connect() {
-  ws = new WebSocket(WS_URL);
+  if (!hermesToken) return;
+  wsEverOpened = false;
+  ws = new WebSocket(WS_BASE + '?token=' + encodeURIComponent(hermesToken));
 
   ws.onopen = () => {
+    wsEverOpened = true;
     document.getElementById('statusDot').classList.add('online');
     document.getElementById('statusText').textContent = 'connected';
   };
@@ -304,7 +391,14 @@ function connect() {
   ws.onclose = () => {
     document.getElementById('statusDot').classList.remove('online');
     document.getElementById('statusText').textContent = 'disconnected';
-    setTimeout(connect, 3000);
+    if (!wsEverOpened && googleClientId) {
+      // Handshake rejected (expired/invalid session) — re-authenticate
+      hermesToken = null;
+      sessionStorage.removeItem('hermes_jwt');
+      showAuthModal('Session expired — please sign in again.');
+      return;
+    }
+    if (hermesToken) setTimeout(connect, 3000);
   };
 
   ws.onmessage = (evt) => {
@@ -438,7 +532,107 @@ fileInput.addEventListener('change', async () => {
   }
 });
 
-connect();
+// ---------- Google Identity Services ----------
+function showAuthModal(message) {
+  const modal = document.getElementById('authModal');
+  const status = document.getElementById('authStatus');
+  modal.classList.remove('hidden');
+  if (message) {
+    status.classList.remove('hidden');
+    status.classList.add('error');
+    status.textContent = message;
+  }
+}
+
+function hideAuthModal() {
+  document.getElementById('authModal').classList.add('hidden');
+}
+
+function renderGoogleButton() {
+  if (typeof google === 'undefined' || !googleClientId) return;
+  google.accounts.id.initialize({
+    client_id: googleClientId,
+    callback: handleGoogleCredentialResponse,
+    auto_select: false,
+    cancel_on_tap_outside: true
+  });
+  google.accounts.id.renderButton(
+    document.getElementById('googleBtnContainer'),
+    { theme: 'filled_black', size: 'large', shape: 'pill', width: 280 }
+  );
+}
+
+async function handleGoogleCredentialResponse(response) {
+  const status = document.getElementById('authStatus');
+  status.classList.remove('hidden', 'error');
+  status.textContent = 'Authenticating with Hermes engine...';
+
+  try {
+    const res = await fetch('/api/v1/auth/google', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id_token: response.credential })
+    });
+    const data = await res.json();
+
+    if (data.status === 'SUCCESS') {
+      sessionStorage.setItem('hermes_jwt', data.access_token);
+      sessionStorage.setItem('active_user_id', data.user_id);
+      sessionStorage.setItem('active_sub_profile', data.sub_profile_id || 'self');
+      hermesToken = data.access_token;
+      hideAuthModal();
+      connect();
+      const strip = document.getElementById('signedInStrip');
+      if (strip) strip.innerHTML = 'Seeker: <span class="user">' +
+          (data.first_name || data.email || 'authenticated') + '</span>';
+    } else {
+      status.classList.add('error');
+      status.textContent = 'Authentication failed: ' + (data.message || 'unknown');
+    }
+  } catch (err) {
+    status.classList.add('error');
+    status.textContent = 'Connection error while verifying token.';
+    console.error(err);
+  }
+}
+
+async function initAuth() {
+  try {
+    const res = await fetch('/v1/auth/config');
+    const cfg = await res.json();
+    googleClientId = cfg.client_id || null;
+
+    if (cfg.enabled && googleClientId) {
+      if (hermesToken) {
+        connect();                   // try the stored session first
+      } else {
+        showAuthModal();
+      }
+      // GIS script may still be loading; retry until ready
+      let tries = 0;
+      const t = setInterval(() => {
+        if (typeof google !== 'undefined' && google.accounts) {
+          renderGoogleButton();
+          clearInterval(t);
+        } else if (++tries > 40) {
+          clearInterval(t);
+          showAuthModal('Google Sign-In failed to load. Check network and refresh.');
+        }
+      }, 250);
+    } else {
+      // Dev mode: gateway not configured with OAuth — anonymous local session
+      console.warn('[auth] GOOGLE_CLIENT_ID not configured — skipping sign-in');
+      hideAuthModal();
+      hermesToken = hermesToken || 'dev-anonymous';
+      connect();
+    }
+  } catch (err) {
+    showAuthModal('Gateway unreachable — is tantric_gateway running?');
+    console.error(err);
+  }
+}
+
+initAuth();
 </script>
 </body>
 </html>
