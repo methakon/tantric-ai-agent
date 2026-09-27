@@ -323,8 +323,41 @@ def _refusal(verdict: str, lang: str):
     return texts.get(verdict, texts["BLOCKED_HARMFUL_RITE"])
 
 
+_UPLOAD_RE = re.compile(r'^\[uploaded:\s*(.+?)\]$')
+
+
 def compose_consultation(content: str, lang: str):
     """Main composer. Returns response dict for the gateway."""
+    up = _UPLOAD_RE.match((content or "").strip())
+    if up:
+        name = up.group(1)
+        if lang == "en":
+            body = (
+                "Received. Your document \u2014 " + name + " \u2014 has been "
+                "ingested and stored encrypted in your profile vault, with "
+                "its EXIF metadata (device, location) stripped at intake.\n\n"
+                "Image-side analysis (palm lines, face, horoscope scan) is "
+                "wired to the vision layer as it comes online; until then "
+                "the document rests safely in your profile.\n\n"
+                "If this document relates to birth details, type the birth "
+                "date, time, and place as text \u2014 computation can begin "
+                "immediately from text."
+            )
+        else:
+            body = (
+                "গৃহীত. আপনার নথি — " + name + " — সুরক্ষিত ভান্ডারে "
+                "এনক্রিপ্ট করে রাখা হয়েছে; EXIF তথ্য (যন্ত্র/অবস্থান) "
+                "প্রবেশপথেই মুছে ফেলা হয়েছে. \n\n"
+                "ছবি-বিশ্লেষণ (হস্তরেখা, মুখ, কোষ্ঠি-অনুলিপি) ভিশন-স্তরে "
+                "যুক্ত হচ্ছে; ততক্ষণ নথিটি আপনার প্রোফাইলে সুরক্ষিত. \n\n"
+                "এই নথির সঙ্গে জন্ম-বিবরণ যুক্ত হলে টাইপ করে জানান — "
+                "গণনা তখনই শুরু করা যাবে."
+            )
+        chunks = _split_chunks(body)
+        resp = _pack(chunks, lang, None, None)
+        resp["_mode"] = "document"
+        return resp
+
     verdict = safety_check(content)
     if verdict.startswith("BLOCKED"):
         body = _refusal(verdict, lang)

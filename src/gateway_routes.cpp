@@ -615,6 +615,52 @@ int HttpGateway::run() {
                                 else
                                     http_response(c, 200, "OK", resp);
                             }
+                        } else if (m == "POST" && p == "/v1/upload") {
+                            // ---- document intake (file picker / in-browser camera) ----
+                            // Raw octet-stream body; headers: X-Session-Token,
+                            // X-Document-Name (urlencoded), X-Sub-Profile.
+                            constexpr size_t MAX_DOC_BYTES = 16 * 1024 * 1024;
+                            std::string token;
+                            auto ti = r.headers.find("x-session-token");
+                            if (ti != r.headers.end()) token = ti->second;
+                            if (token.empty()) {
+                                auto ai = r.headers.find("authorization");
+                                if (ai != r.headers.end()) {
+                                    const std::string& a = ai->second;
+                                    if (a.rfind("Bearer ", 0) == 0) token = a.substr(7);
+                                }
+                            }
+                            std::string fname = "upload.bin";
+                            auto fi = r.headers.find("x-document-name");
+                            if (fi != r.headers.end()) fname = url_decode(fi->second);
+                            std::string subp = "self";
+                            auto spi = r.headers.find("x-sub-profile");
+                            if (spi != r.headers.end() && !spi->second.empty()) subp = spi->second;
+
+                            std::string user_id;
+                            if (token.empty() ||
+                                !validate_via_ipc(cfg_.ipc_socket, token, cfg_.client_id, user_id)) {
+                                http_response(c, 401, "Unauthorized",
+                                    "{\"status\":\"ERROR\",\"error\":\"AUTH_REQUIRED\"}");
+                            } else if (body.empty() || body.size() > MAX_DOC_BYTES) {
+                                http_response(c, 413, "Payload Too Large",
+                                    "{\"status\":\"ERROR\",\"error\":\"PAYLOAD_TOO_LARGE\"}");
+                            } else {
+                                std::string req =
+                                    "{\"action\":\"UPLOAD_DOCUMENT\",\"filename\":\"" +
+                                    json_escape(fname) + "\",\"user_id\":\"" + json_escape(user_id) +
+                                    "\",\"sub_profile_id\":\"" + json_escape(subp) +
+                                    "\",\"data_b64\":\"" +
+                                    HttpGateway::base64_encode(
+                                        reinterpret_cast<const uint8_t*>(body.data()),
+                                        body.size()) + "\"}";
+                                std::string resp = ipc_call(cfg_.ipc_socket, req);
+                                if (resp.empty())
+                                    http_response(c, 502, "Bad Gateway",
+                                        "{\"status\":\"ERROR\",\"error\":\"ingest service unavailable\"}");
+                                else
+                                    http_response(c, 200, "OK", resp);
+                            }
                         } else if (m == "GET" && p == "/v1/chat/ws") {
                             std::string token = query_param(r.query, "token");
                             if (token.empty()) {

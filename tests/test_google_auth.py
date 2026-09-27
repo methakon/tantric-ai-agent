@@ -202,6 +202,17 @@ def http_post_json(path, obj):
         return e.code, e.read().decode()
 
 
+def http_post_bytes(path, data, headers):
+    req = urllib.request.Request(
+        f"http://127.0.0.1:{GATEWAY_PORT}{path}",
+        data=data, headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return r.status, r.read().decode()
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode()
+
+
 # ============================================
 # Main test flow
 # ============================================
@@ -221,8 +232,10 @@ def main():
     import tempfile
     import sqlite3 as _sqlite3
     TEST_DB = os.path.join(tempfile.gettempdir(), f"tantric_test_{os.getpid()}.db")
+    DOC_DIR = os.path.join(tempfile.gettempdir(), f"tantric_docs_{os.getpid()}")
     os.environ["DB_BACKEND"] = "sqlite"
     os.environ["SQLITE_PATH"] = TEST_DB
+    os.environ["DOCUMENTS_DIR"] = DOC_DIR
     _c = _sqlite3.connect(TEST_DB)
     with open(os.path.join(ROOT, "schema", "local_sqlite_schema.sql")) as _f:
         _c.executescript(_f.read())
@@ -241,6 +254,7 @@ def main():
         "GATEWAY_PORT": str(GATEWAY_PORT),
         "DB_BACKEND": "sqlite",
         "SQLITE_PATH": TEST_DB,
+        "DOCUMENTS_DIR": DOC_DIR,
     })
 
     # ------------------------------------------------------------
@@ -489,6 +503,61 @@ def main():
         check("unknown route -> 404", st == 404)
         st, body = http_get("/")
         check("GET / serves index.html", st == 200 and "Acharya-Siddha" in body)
+
+        # 16. document intake (file picker / in-browser camera capture path)
+        import base64 as _b64
+        import sqlite3 as _sq
+        PNG_1PX = _b64.b64decode(
+            "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4"
+            "nGP4z8DwHwAFAAH/q842iQAAAABJRU5ErkJggg==")
+        st, body = http_post_bytes(
+            "/v1/upload", PNG_1PX,
+            {"Content-Type": "application/octet-stream",
+             "X-Session-Token": access_token,
+             "X-Document-Name": "unit%20photo.png",
+             "X-Sub-Profile": "self"})
+        doc_id = ""
+        try:
+            _dj = json.loads(body)
+            if _dj.get("status") == "SUCCESS":
+                doc_id = _dj.get("document_id", "")
+        except Exception:
+            pass
+        check("POST /v1/upload -> document_id", st == 200 and bool(doc_id),
+              body[:130])
+
+        row = None
+        if doc_id:
+            _c = _sq.connect(TEST_DB)
+            row = _c.execute(
+                "SELECT original_filename, mime_type, exif_stripped, stored_path "
+                "FROM tantric_profile_documents WHERE document_id=?",
+                (doc_id,)).fetchone()
+            _c.close()
+            check("upload row recorded (decoded name, webp, strip flag)",
+                  row is not None and row[0] == "unit photo.png"
+                  and row[1] == "image/webp" and row[2] == 1, str(row))
+            check("encrypted container on disk",
+                  row is not None and os.path.exists(row[3]))
+            try:
+                from file_ingestion import load_document
+                plain = load_document(doc_id, "unit photo.png",
+                                      storage_root=DOC_DIR)
+                check("vault roundtrip decrypts to valid container",
+                      plain[:4] == b"RIFF", repr(plain[:8]))
+            except Exception as e:
+                check("vault roundtrip decrypts to valid container", False,
+                      str(e))
+
+        st, body = http_post_bytes("/v1/upload", b"definitely not an image",
+                                   {"X-Session-Token": access_token,
+                                    "X-Document-Name": "fake.jpg"})
+        check("bad magic rejected by ingestion guard",
+              "ERROR" in body and "MAGIC" in body.upper(), body[:110])
+
+        st, _ = http_post_bytes("/v1/upload", PNG_1PX,
+                                {"X-Document-Name": "x.png"})
+        check("upload without session token -> 401", st == 401)
 
     finally:
         gateway.terminate()

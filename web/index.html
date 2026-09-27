@@ -258,6 +258,82 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
 }
 .upload-zone:hover { border-color: var(--gold); color: var(--gold); }
 
+.camera-btn {
+  margin-top: 0.85rem;
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  font: inherit;
+  font-size: 0.72rem;
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.camera-btn:hover { background: rgba(212, 175, 55, 0.18); }
+
+.camera-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+  padding: 1rem;
+}
+.camera-overlay.hidden { display: none; }
+.camera-card {
+  background: linear-gradient(160deg, #0f0c1b 0%, #07070a 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 12px;
+  padding: 1.1rem;
+  width: min(720px, 96vw);
+}
+.camera-title {
+  font-size: 0.85rem;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+#cameraVideo {
+  width: 100%;
+  max-height: 60vh;
+  background: #000;
+  border-radius: 6px;
+  display: block;
+  object-fit: contain;
+}
+.camera-status {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-align: center;
+  min-height: 1.2em;
+  margin-top: 0.55rem;
+}
+.camera-controls { display: flex; gap: 0.6rem; margin-top: 0.6rem; }
+.camera-shoot, .camera-cancel {
+  flex: 1;
+  padding: 0.65rem;
+  font: inherit;
+  font-size: 0.78rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.camera-shoot {
+  color: #0b0a07;
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  font-weight: 600;
+}
+.camera-cancel {
+  color: var(--text-dim);
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
 .safety-notice {
   margin-top: auto;
   font-size: 0.62rem;
@@ -385,9 +461,22 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
     <div class="upload-zone" id="uploadZone">
       <span data-i18n="uploadZone">⌁ হাতের ছবি / মুখ / কোষ্ঠি এখানে ফেলুন</span><br>
       <span data-i18n="uploadZoneMeta">(সর্বোচ্চ ১৫ MB · EXIF মুছে ফেলা হয়)</span>
+      <button type="button" id="cameraBtn" class="camera-btn" data-i18n="cameraTake">📷 ক্যামেরায় ছবি তুলুন</button>
     </div>
     <input type="file" id="fileInput" style="display:none"
            accept="image/jpeg,image/png,image/webp,application/pdf">
+
+    <div id="cameraModal" class="camera-overlay hidden">
+      <div class="camera-card">
+        <div class="camera-title" data-i18n="cameraTitle">ডকুমেন্টের ছবি তুলুন</div>
+        <video id="cameraVideo" autoplay playsinline muted></video>
+        <div id="cameraStatus" class="camera-status"></div>
+        <div class="camera-controls">
+          <button type="button" id="cameraShoot" class="camera-shoot" data-i18n="cameraShoot">📸 ছবি তুলুন</button>
+          <button type="button" id="cameraCancel" class="camera-cancel" data-i18n="cameraClose">✕ বন্ধ করুন</button>
+        </div>
+      </div>
+    </div>
 
     <div class="safety-notice">
       <div data-i18n="safetyTitle">সুরক্ষা-নীতি সক্রিয়:</div>
@@ -453,6 +542,13 @@ const STRINGS = {
     payloadBig:    'পেলোড ১৫ MB সীমা ছাড়িয়েছে — পরিবহন-প্রহরায় বাতিল।',
     ingestRejected:'গ্রহণ বাতিল: ',
     uploadFailed:  'আপলোড ব্যর্থ: ',
+    cameraTake:    '📷 ক্যামেরায় ছবি তুলুন',
+    cameraTitle:   'ডকুমেন্টের ছবি তুলুন',
+    cameraShoot:   '📸 ছবি তুলুন',
+    cameraClose:   '✕ বন্ধ করুন',
+    cameraOpening: 'ক্যামেরা চালু হচ্ছে…',
+    cameraFailed:  'ক্যামেরা পাওয়া গেল না — ফাইল থেকে বেছে নিন।',
+    cameraDenied:  'ক্যামেরার অনুমতি দেওয়া হয়নি — ব্রাউজারে Allow চাপুন, নয়তো ফাইল বেছে নিন।',
     unknown:       'অজানা'
   },
   en: {
@@ -490,6 +586,13 @@ const STRINGS = {
     payloadBig:    'Payload exceeds 15 MB ceiling — dropped at transport guard.',
     ingestRejected:'Ingestion rejected: ',
     uploadFailed:  'Upload failed: ',
+    cameraTake:    '📷 Take photo with camera',
+    cameraTitle:   'Capture document photo',
+    cameraShoot:   '📸 Capture',
+    cameraClose:   '✕ Close',
+    cameraOpening: 'Starting camera…',
+    cameraFailed:  'No camera available — choose a file instead.',
+    cameraDenied:  'Camera permission denied — press Allow in the browser, or choose a file.',
     unknown:       'unknown'
   }
 };
@@ -643,6 +746,17 @@ function renderFrame(frame) {
   if (frame.final) msg.removeAttribute('id');
 }
 
+function appendUserBubble(text) {
+  const container = document.getElementById('messages');
+  const msg = document.createElement('div');
+  msg.className = 'message user';
+  msg.innerHTML = '<div class="role">' + t('roleSeeker') + '</div>'
+                + '<div class="content"></div>';
+  msg.querySelector('.content').textContent = text;
+  container.appendChild(msg);
+  container.scrollTop = container.scrollHeight;
+}
+
 function send() {
   const input = document.getElementById('input');
   const text = input.value.trim();
@@ -660,14 +774,7 @@ function send() {
     return;
   }
 
-  const container = document.getElementById('messages');
-  const msg = document.createElement('div');
-  msg.className = 'message user';
-  msg.innerHTML = '<div class="role">' + t('roleSeeker') + '</div>'
-                + '<div class="content"></div>';
-  msg.querySelector('.content').textContent = text;
-  container.appendChild(msg);
-  container.scrollTop = container.scrollHeight;
+  appendUserBubble(text);
 
   ws.send(JSON.stringify({
     type: 'user_message',
@@ -695,24 +802,33 @@ document.querySelectorAll('.profile-item').forEach(el => {
   });
 });
 
-// ---------- Upload ----------
+// ---------- Upload (file picker + in-browser camera capture) ----------
 const uploadZone = document.getElementById('uploadZone');
 const fileInput = document.getElementById('fileInput');
-uploadZone.addEventListener('click', () => fileInput.click());
-fileInput.addEventListener('change', async () => {
-  const file = fileInput.files[0];
+
+async function uploadDocument(file) {
   if (!file) return;
   if (file.size > 15 * 1024 * 1024) {
     alert(t('payloadBig'));
     return;
   }
-  const form = new FormData();
-  form.append('file', file);
-  form.append('sub_profile_id', currentProfile);
   try {
-    const res = await fetch('/v1/upload', { method: 'POST', body: form });
+    const res = await fetch('/v1/upload', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/octet-stream',
+        'X-Session-Token': hermesToken || '',
+        'X-Document-Name': encodeURIComponent(file.name),
+        'X-Sub-Profile': currentProfile
+      },
+      body: file
+    });
     const data = await res.json();
     if (data.document_id) {
+      if (!ws || ws.readyState !== WebSocket.OPEN) {
+        alert(t('notConnected'));
+        return;
+      }
       ws.send(JSON.stringify({
         type: 'user_message',
         session_id: sessionId,
@@ -721,13 +837,94 @@ fileInput.addEventListener('change', async () => {
         lang: LANG,
         attachments: [{ document_id: data.document_id, kind: 'image' }]
       }));
+      appendUserBubble('📎 ' + file.name);
     } else {
       alert(t('ingestRejected') + (data.error || t('unknown')));
     }
   } catch (e) {
     alert(t('uploadFailed') + e.message);
   }
+}
+
+uploadZone.addEventListener('click', () => fileInput.click());
+fileInput.addEventListener('change', async () => {
+  const file = fileInput.files[0];
+  await uploadDocument(file);
+  fileInput.value = '';   // allow re-selecting the same file
 });
+
+// -- camera capture: same pipeline as uploads, direct from the device camera --
+const cameraBtn = document.getElementById('cameraBtn');
+const cameraModal = document.getElementById('cameraModal');
+const cameraVideo = document.getElementById('cameraVideo');
+const cameraStatus = document.getElementById('cameraStatus');
+let cameraStream = null;
+
+function cameraAvailable() {
+  return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+}
+
+async function openCamera() {
+  cameraModal.classList.remove('hidden');
+  cameraStatus.textContent = t('cameraOpening');
+  if (!cameraAvailable()) {
+    closeCamera();
+    alert(t('cameraFailed'));
+    fileInput.click();
+    return;
+  }
+  try {
+    cameraStream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: 'environment', width: { ideal: 1920 }, height: { ideal: 1080 } },
+      audio: false
+    });
+    cameraVideo.srcObject = cameraStream;
+    cameraStatus.textContent = '';
+    try { await cameraVideo.play(); } catch (e) {}
+  } catch (e) {
+    closeCamera();
+    if (e && (e.name === 'NotAllowedError' || e.name === 'SecurityError')) {
+      alert(t('cameraDenied'));
+    } else {
+      alert(t('cameraFailed'));
+    }
+    fileInput.click();
+  }
+}
+
+function closeCamera() {
+  if (cameraStream) {
+    cameraStream.getTracks().forEach(tr => tr.stop());
+    cameraStream = null;
+  }
+  cameraVideo.srcObject = null;
+  cameraModal.classList.add('hidden');
+}
+
+function shootPhoto() {
+  if (!cameraStream || !cameraVideo.videoWidth) return;
+  const vw = cameraVideo.videoWidth, vh = cameraVideo.videoHeight;
+  const scale = Math.min(1, 2048 / Math.max(vw, vh));
+  const w = Math.round(vw * scale), h = Math.round(vh * scale);
+  const canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  canvas.getContext('2d').drawImage(cameraVideo, 0, 0, w, h);
+  canvas.toBlob(async (blob) => {
+    if (!blob) { alert(t('cameraFailed')); closeCamera(); return; }
+    const d = new Date(), p = (n) => String(n).padStart(2, '0');
+    const ts = d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate())
+             + '-' + p(d.getHours()) + p(d.getMinutes()) + p(d.getSeconds());
+    const file = new File([blob], 'camera-' + ts + '.jpg', { type: 'image/jpeg' });
+    closeCamera();                       // re-encode above already strips any EXIF
+    await uploadDocument(file);          // server re-validates + stores encrypted
+  }, 'image/jpeg', 0.92);
+}
+
+cameraBtn.addEventListener('click', (e) => { e.stopPropagation(); openCamera(); });
+document.getElementById('cameraShoot').addEventListener('click', shootPhoto);
+document.getElementById('cameraCancel').addEventListener('click', closeCamera);
+cameraModal.addEventListener('click', (e) => { if (e.target === cameraModal) closeCamera(); });
 
 // ---------- Google Identity Services ----------
 function showAuthModal(message) {

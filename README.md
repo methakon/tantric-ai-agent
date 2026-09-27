@@ -153,6 +153,37 @@ Browser WS ─> C++ gateway ─> UDS CONSULT ─> Python bridge
   gateway re-validates them (`strtol`/`strtod`) before embedding.
 - A restored session (token in sessionStorage) goes straight to the connected
   chat — the auth gate never remains over a working connection.
+- Sessions persist in `localStorage` as well: reloads and new tabs land
+  connected (12 h server TTL); transient WS failures retry 5× before the gate
+  is suspected, so a dev-server restart never wipes a live login.
+
+### Document intake — upload or camera capture
+
+Both paths converge on one pipeline (`POST /v1/upload`, raw octet-stream):
+
+```
+file picker ─┐
+             ├─> POST /v1/upload ─> gateway ─> UDS UPLOAD_DOCUMENT ─> bridge
+camera snap ─┘   (X-Session-Token,      (base64)      └─ file_ingestion four layers:
+                  X-Document-Name,                      size guard → magic bytes →
+                  X-Sub-Profile)                        EXIF-strip + re-encode (WEBP)
+                                                        → AES-256-GCM vault
+                                                        └─ row: tantric_profile_documents
+```
+
+- **Camera capture**: `📷` button opens `getUserMedia` (rear camera preferred)
+  in an in-app overlay; `📸` snapshots the frame to a canvas, re-encodes to
+  JPEG (EXIF never leaves the page), stops the stream immediately, and feeds
+  the same intake path. Without a camera / on denied permission it falls back
+  to the file picker with a bilingual notice.
+- Transport: raw body (≤16 MB at the gateway) + `X-Session-Token`; the session
+  must be valid or the gateway answers `401`. The bridge stores
+  `[16B salt][16B base64 nonce][base64 ciphertext]` containers and
+  `load_document()` decrypts them (filename = AES-GCM AAD, so it is required).
+- On success the client posts `[uploaded: <name>]` over the WS; the Acharya
+  acknowledges with a `document` mode reply (stored encrypted, EXIF stripped,
+  vision-side analysis pending).
+- Chat shows the seeker bubble `📎 <name>` for uploads, same as typed messages.
 
 ## Google OAuth (Zero-Billing, Google Identity Services)
 

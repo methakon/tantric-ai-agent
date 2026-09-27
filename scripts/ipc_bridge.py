@@ -425,6 +425,58 @@ class IPCServer:
                                user_id=req.get("user_id", ""),
                                sub_profile_id=req.get("sub_profile_id", ""))
 
+            if action == "UPLOAD_DOCUMENT":
+                # Document intake (file picker or in-browser camera capture).
+                # The gateway forwards raw bytes base64-encoded; the same
+                # four-layer ingestion pipeline (size guard, magic bytes,
+                # EXIF strip + re-encode, encrypted store) handles both.
+                import base64 as _b64
+                from file_ingestion import ingest_file, IngestionRejection
+                try:
+                    raw = _b64.b64decode(req.get("data_b64", ""))
+                except Exception:
+                    return {"status": "ERROR", "error": "BAD_BASE64"}
+                storage_root = os.environ.get(
+                    "DOCUMENTS_DIR",
+                    os.path.join(os.path.dirname(os.path.dirname(
+                        os.path.abspath(__file__))), "documents"))
+                try:
+                    doc = ingest_file(raw, req.get("filename", "upload.bin"),
+                                      req.get("user_id", ""),
+                                      storage_root=storage_root)
+                except IngestionRejection as e:
+                    return {"status": "ERROR", "error": f"{e.code}: {e.detail}"}
+                except Exception as e:
+                    return {"status": "ERROR", "error": f"ingest failed: {e}"}
+
+                try:
+                    from auth_service import db_connect
+                    conn = db_connect()
+                    try:
+                        with conn.cursor() as cur:
+                            cur.execute("""
+                                INSERT INTO tantric_profile_documents
+                                  (user_id, sub_profile_id, document_id,
+                                   original_filename, stored_path,
+                                   file_hash_sha256, mime_type,
+                                   file_size_bytes, exif_stripped,
+                                   encryption_salt)
+                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                            """, (req.get("user_id", ""),
+                                  req.get("sub_profile_id", "self"),
+                                  doc.document_id, doc.original_filename,
+                                  doc.stored_path, doc.sha256, doc.mime_type,
+                                  doc.size_bytes,
+                                  1 if doc.mime_type.startswith("image/") else 0,
+                                  doc.encryption_salt))
+                        conn.commit()
+                    finally:
+                        conn.close()
+                except Exception as e:
+                    print(f"[WARN] document row insert failed: {e}", flush=True)
+                return {"status": "SUCCESS", "document_id": doc.document_id,
+                        "mime_type": doc.mime_type, "size": doc.size_bytes}
+
             return {"status": "ERROR", "message": f"unknown action: {action}"}
         except Exception as e:
             return {"status": "ERROR", "message": f"handler exception: {e}"}
@@ -438,7 +490,7 @@ class IPCServer:
                 if not length_bytes:
                     continue
                 length = struct.unpack('<I', length_bytes)[0]
-                if length == 0 or length > 4 * 1024 * 1024:
+                if length == 0 or length > 32 * 1024 * 1024:
                     continue
                 payload = self._recv_exact(conn, length)
                 if not payload:

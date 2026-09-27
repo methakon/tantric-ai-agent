@@ -262,7 +262,10 @@ def ingest_file(
         enc = engine.encrypt_file(clean_bytes, original_filename)
         stored_path = os.path.join(storage_root, f"{document_id}.enc")
         with open(stored_path, 'wb') as f:
-            f.write(bytes.fromhex(enc['salt']) + enc['nonce'].encode()[:12])
+            # layout: [16B salt][16B base64 nonce][base64 ciphertext]
+            # (the nonce must be stored in FULL — a truncated nonce makes
+            #  the record permanently undecryptable)
+            f.write(bytes.fromhex(enc['salt']) + enc['nonce'].encode())
             f.write(enc['encrypted_data'].encode())  # base64 body
         salt_hex = enc['salt']
     except Exception as e:
@@ -278,6 +281,30 @@ def ingest_file(
         encryption_salt=salt_hex,
         extracted_text=extracted_text,
     )
+
+
+def load_document(document_id: str, original_filename: str,
+                  storage_root: str | None = None) -> bytes:
+    """Recover a stored document in the clear.
+
+    Container layout written by ``ingest_file``:
+    ``[16B salt][16B base64 nonce][base64 ciphertext]``.
+    ``original_filename`` is the AES-GCM associated data, hence required.
+    """
+    if storage_root is None:
+        storage_root = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                    '..', 'vault')
+    path = os.path.join(storage_root, f"{document_id}.enc")
+    with open(path, 'rb') as f:
+        raw = f.read()
+    if len(raw) < 33:
+        raise IngestionRejection("VAULT_CORRUPT", "truncated container")
+    salt_hex = raw[:16].hex()
+    nonce_b64 = raw[16:32].decode('ascii')
+    ct_b64 = raw[32:].decode('ascii')
+    from crypto_engine import get_encryption_engine
+    return get_encryption_engine().decrypt_file(
+        ct_b64, salt_hex, nonce_b64, original_filename)
 
 
 # ------------------------------------------------------------------
