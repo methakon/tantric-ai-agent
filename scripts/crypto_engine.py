@@ -30,9 +30,12 @@ except ImportError:
 # Load .env file
 def load_env(env_path: str = None):
     if env_path is None:
-        # Try multiple locations
+        # Try multiple locations, including parent dirs (project root)
+        here = os.path.dirname(os.path.abspath(__file__))
         candidates = [
-            os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env'),
+            os.path.join(here, '.env'),
+            os.path.join(here, '..', '.env'),
+            os.path.join(here, '..', '..', '.env'),
             os.path.join(os.getcwd(), '.env'),
             '.env'
         ]
