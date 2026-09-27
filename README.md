@@ -122,12 +122,14 @@ python3 scripts/crypto_engine.py   # encrypt/HMAC/file tests
 ## Web Client
 
 `web/index.html` — obsidian slate (#07070a) + temple gold (#d4af37) + ruby (#e63946).
-WebSocket streaming at `/v1/chat/ws` with inline Yantra SVG and acoustic metadata.
+Bilingual UI (বাংলা default / English) with an in-page language chooser — no
+Devanagari/Hindi anywhere in the client. WebSocket streaming at `/v1/chat/ws`
+with inline Yantra SVG (Bengali-script bija mantra) and acoustic metadata.
 
 ## Google OAuth (Zero-Billing, Google Identity Services)
 
 ```
-Browser                C++ Gateway (:8080)         Python Bridge (UDS)      MySQL
+Browser                C++ Gateway (:8090)         Python Bridge (UDS)      MySQL
 -------                -------------------         -------------------      -----
 GIS button click
   └─ ID token (JWT) ──> POST /api/v1/auth/google
@@ -141,20 +143,23 @@ GIS button click
                           <─ 101 Switching Protocols
 ```
 
+> Port note: the gateway binds **:8090** — `:8080` is occupied by cpp-trading-age
+> on this host. OAuth client registers both 8080 and 8090 origins; only 8090 is used.
+
 **Setup required (one-time, free):**
 1. Google Cloud Console -> new project `tantra-acharya-auth` (no billing)
 2. OAuth consent screen: External; scopes `openid`, `userinfo.email`, `userinfo.profile`
 3. Credentials -> OAuth client ID -> Web application
-   - Authorized origins: `http://localhost:8080`, `http://127.0.0.1:8080`
-   - Redirect URIs: `http://localhost:8080`, `http://127.0.0.1:8080`
+   - Authorized origins: `http://localhost:8090`, `http://127.0.0.1:8090` (+ 8080 variants)
+   - Redirect URIs: `http://localhost:8090`, `http://127.0.0.1:8090` (+ 8080 variants)
 4. Paste the Client ID into `.env` as `GOOGLE_CLIENT_ID=...`
 
 **Run:**
 ```bash
 source venv/bin/activate
 python3 scripts/ipc_bridge.py --serve &      # auth authority + multimodal bridge (UDS)
-./tantric_gateway                            # HTTP/WS gateway on :8080
-# open http://localhost:8080
+./tantric_gateway                            # HTTP/WS gateway on :8090
+# open http://localhost:8090
 ```
 
 **Tests:**

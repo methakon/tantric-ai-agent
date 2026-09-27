@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>अचार्य-सिद्ध · Acharya-Siddha</title>
+<title>আচার্য-সিদ্ধ · Acharya-Siddha</title>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
 :root {
@@ -13,8 +13,8 @@
   --ruby: #e63946;
   --text-main: #e8e6e3;
   --text-dim: #8a8794;
-  --mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --serif: 'Cinzel', 'Cormorant Garamond', serif;
+  --mono: 'JetBrains Mono', 'Fira Code', 'Noto Sans Bengali', monospace;
+  --serif: 'Cinzel', 'Cormorant Garamond', 'Noto Serif Bengali', serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,13 +34,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .title-sanskrit {
   font-family: var(--serif);
   font-size: 1.6rem;
   color: var(--gold);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
 }
 
 .title-latin {
@@ -49,6 +50,39 @@ header {
   letter-spacing: 0.3em;
   text-transform: uppercase;
 }
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* ---------- Language chooser ---------- */
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 3px;
+  overflow: hidden;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+.lang-switch button {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: inherit;
+  letter-spacing: inherit;
+  transition: all 0.15s;
+}
+.lang-switch button + button { border-left: 1px solid rgba(212, 175, 55, 0.25); }
+.lang-switch button.active {
+  background: rgba(212, 175, 55, 0.16);
+  color: var(--gold);
+}
+.lang-switch button:hover { color: var(--gold); }
 
 .session-status {
   font-size: 0.72rem;
@@ -75,6 +109,8 @@ aside {
   background: var(--bg-primary);
   padding: 1.5rem;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .panel-label {
@@ -144,6 +180,7 @@ aside {
   line-height: 1.75;
   color: var(--text-main);
   white-space: pre-wrap;
+  text-align: left;
 }
 .message.user .content {
   font-family: var(--mono);
@@ -217,6 +254,7 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
   font-size: 0.7rem;
   color: var(--text-dim);
   cursor: pointer;
+  line-height: 1.6;
 }
 .upload-zone:hover { border-color: var(--gold); color: var(--gold); }
 
@@ -262,7 +300,7 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
   align-items: center;
   justify-content: center;
   font-family: var(--serif);
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   color: var(--gold);
 }
 .auth-card h2 {
@@ -278,6 +316,7 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
   color: var(--text-dim);
   line-height: 1.6;
 }
+.auth-card .lang-switch { margin-top: 1.4rem; }
 #googleBtnContainer {
   display: flex;
   justify-content: center;
@@ -304,46 +343,57 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
 <!-- ============ Google Sign-In gate ============ -->
 <div id="authModal" class="auth-overlay">
   <div class="auth-card">
-    <div class="om">ॐ</div>
-    <h2>Acharya-Siddha Portal</h2>
-    <p>Authenticate to access sacred calculations and session memory</p>
+    <div class="om" id="omGlyph">ওঁ</div>
+    <h2 data-i18n="authTitle">আচার্য-সিদ্ধ প্রবেশপথ</h2>
+    <p data-i18n="authSub">পবিত্র গণনা ও সঞ্চিত স্মৃতিতে প্রবেশ করতে প্রমাণীকরণ করুন</p>
     <div id="googleBtnContainer"></div>
-    <div id="authStatus" class="hidden">Verifying credentials with Hermes engine...</div>
+    <div id="authStatus" class="hidden" data-i18n="verifying">হারমেস ইঞ্জিনের সঙ্গে যাচাই চলছে...</div>
+    <div class="lang-switch" data-lang-switch>
+      <button type="button" data-lang="bn">বাংলা</button>
+      <button type="button" data-lang="en">English</button>
+    </div>
   </div>
 </div>
 
 <header>
   <div>
-    <div class="title-sanskrit">अचार्य-सिद्ध</div>
-    <div class="title-latin">Acharya-Siddha · Cross-Tradition Esoteric Intelligence</div>
+    <div class="title-sanskrit" data-i18n="brand">আচার্য-সিদ্ধ</div>
+    <div class="title-latin" data-i18n="tagline">আচার্য-সিদ্ধ · আন্তঃপরম্পরা গূঢ়-বিদ্যা</div>
   </div>
-  <div class="session-status">
-    <span class="dot" id="statusDot"></span>
-    <span id="statusText">disconnected</span>
+  <div class="header-right">
+    <div class="lang-switch" data-lang-switch>
+      <button type="button" data-lang="bn">বাংলা</button>
+      <button type="button" data-lang="en">English</button>
+    </div>
+    <div class="session-status">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText" data-i18n="disconnected">বিচ্ছিন্ন</span>
+    </div>
   </div>
 </header>
 
 <main>
   <aside>
-    <div class="panel-label">Sub-Profiles</div>
+    <div class="panel-label" data-i18n="subProfiles">উপ-প্রোফাইল</div>
     <div id="profileList">
       <div class="profile-item active" data-profile="self">
-        <div class="rel">self</div>
-        <div>Native Chart</div>
+        <div class="rel" data-i18n="self">স্ব</div>
+        <div data-i18n="nativeChart">মূল কোষ্ঠি</div>
       </div>
     </div>
 
     <div class="upload-zone" id="uploadZone">
-      ⌁ Drop palm / face / horoscope<br>(max 15 MB · EXIF-stripped)
+      <span data-i18n="uploadZone">⌁ হাতের ছবি / মুখ / কোষ্ঠি এখানে ফেলুন</span><br>
+      <span data-i18n="uploadZoneMeta">(সর্বোচ্চ ১৫ MB · EXIF মুছে ফেলা হয়)</span>
     </div>
     <input type="file" id="fileInput" style="display:none"
            accept="image/jpeg,image/png,image/webp,application/pdf">
 
     <div class="safety-notice">
-      <div>Safety governance active:</div>
-      <div class="blocked">✗ Marana · Vidveshana · Ucchatana</div>
-      <div class="blocked">✗ Coercive Vashikaran · Death prediction</div>
-      <div>✓ Shanti · Paushtika · Raksha only</div>
+      <div data-i18n="safetyTitle">সুরক্ষা-নীতি সক্রিয়:</div>
+      <div class="blocked" data-i18n="safetyBlocked1">✗ মারণ · বিদ্বেষণ · উচ্ছাটন</div>
+      <div class="blocked" data-i18n="safetyBlocked2">✗ জবরদস্তিমূলক বশীকরণ · মৃত্যু-ভবিষ্যদ্বাণী</div>
+      <div data-i18n="safetyAllowed">✓ কেবল শান্তি · পৌষ্টিক · রক্ষা</div>
     </div>
   </aside>
 
@@ -351,21 +401,130 @@ button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
     <div class="signed-in-strip" id="signedInStrip"></div>
     <div id="messages">
       <div class="message">
-        <div class="role">Acharya-Siddha</div>
-        <div class="content">प्रणाम। I am the Acharya-Siddha. Provide a birth date, time, and place — or ask what weighs upon you — and I shall compute, not guess.
-
-Native engines online: sidereal ephemeris (Lahiri), vector Yantra rendering, 22-Shruti acoustic weaving, and cross-tradition remedial mapping.</div>
+        <div class="role" data-i18n="roleAcharya">আচার্য-সিদ্ধ</div>
+        <div class="content" id="greetingMsg"></div>
       </div>
     </div>
 
     <div class="composer">
-      <textarea id="input" placeholder="Speak your question, or supply birth details (date · time · place)..."></textarea>
-      <button class="primary" id="sendBtn">Consult</button>
+      <textarea id="input" data-i18n-ph="inputPlaceholder"></textarea>
+      <button class="primary" id="sendBtn" data-i18n="send">জিজ্ঞাসা করুন</button>
     </div>
   </div>
 </main>
 
 <script>
+// ============================================
+// i18n: Bengali (default) + English
+// ============================================
+const STRINGS = {
+  bn: {
+    appTitle:      'আচার্য-সিদ্ধ · Acharya-Siddha',
+    brand:         'আচার্য-সিদ্ধ',
+    tagline:       'আচার্য-সিদ্ধ · আন্তঃপরম্পরা গূঢ়-বিদ্যা',
+    connected:     'সংযুক্ত',
+    disconnected:  'বিচ্ছিন্ন',
+    authTitle:     'আচার্য-সিদ্ধ প্রবেশপথ',
+    authSub:       'পবিত্র গণনা ও সঞ্চিত স্মৃতিতে প্রবেশ করতে প্রমাণীকরণ করুন',
+    verifying:     'হারমেস ইঞ্জিনের সঙ্গে যাচাই চলছে...',
+    subProfiles:   'উপ-প্রোফাইল',
+    self:          'স্ব',
+    nativeChart:   'মূল কোষ্ঠি',
+    uploadZone:    '⌁ হাতের ছবি / মুখ / কোষ্ঠি এখানে ফেলুন',
+    uploadZoneMeta:'(সর্বোচ্চ ১৫ MB · EXIF মুছে ফেলা হয়)',
+    safetyTitle:   'সুরক্ষা-নীতি সক্রিয়:',
+    safetyBlocked1:'✗ মারণ · বিদ্বেষণ · উচ্ছাটন',
+    safetyBlocked2:'✗ জবরদস্তিমূলক বশীকরণ · মৃত্যু-ভবিষ্যদ্বাণী',
+    safetyAllowed: '✓ কেবল শান্তি · পৌষ্টিক · রক্ষা',
+    roleAcharya:   'আচার্য-সিদ্ধ',
+    roleSeeker:    'জিজ্ঞাসু',
+    greeting:      'প্রণাম। আমি আচার্য-সিদ্ধ। জন্ম তারিখ, সময় ও স্থান দিন — অথবা যা মনে ভার করছে জিজ্ঞাসা করুন — আমি গণনা করব, অনুমান নয়।\n\nসক্রিয় মূল ইঞ্জিন: নিরয়ন গ্রহপঞ্জি (লাহিড়ী), ভেক্টর যন্ত্র-চিত্রাঙ্কন, ২২-শ্রুতি ধ্বনি-বয়ন, এবং আন্তঃপরম্পরা প্রতিকার-নকশা।',
+    inputPlaceholder: 'আপনার প্রশ্ন লিখুন, অথবা জন্ম-বিবরণ দিন (তারিখ · সময় · স্থান)...',
+    send:          'জিজ্ঞাসা করুন',
+    signedIn:      'জিজ্ঞাসু: ',
+    sessionExpired:'সেশনের মেয়াদ শেষ — আবার প্রবেশ করুন।',
+    authFailed:    'প্রবেশ ব্যর্থ: ',
+    connError:     'টোকেন যাচাইয়ের সময় সংযোগ-ত্রুটি।',
+    gisFailed:     'Google প্রবেশ লোড হয়নি — নেটওয়ার্ক দেখে পাতা রিফ্রেশ করুন।',
+    gwUnreachable: 'গেটওয়ের সঙ্গে সংযোগ নেই — tantric_gateway চলছে কি?',
+    payloadBig:    'পেলোড ১৫ MB সীমা ছাড়িয়েছে — পরিবহন-প্রহরায় বাতিল।',
+    ingestRejected:'গ্রহণ বাতিল: ',
+    uploadFailed:  'আপলোড ব্যর্থ: ',
+    unknown:       'অজানা'
+  },
+  en: {
+    appTitle:      'Acharya-Siddha · Esoteric Intelligence',
+    brand:         'Acharya-Siddha',
+    tagline:       'Acharya-Siddha · Cross-Tradition Esoteric Intelligence',
+    connected:     'connected',
+    disconnected:  'disconnected',
+    authTitle:     'Acharya-Siddha Portal',
+    authSub:       'Authenticate to access sacred calculations and session memory',
+    verifying:     'Verifying credentials with Hermes engine...',
+    subProfiles:   'Sub-Profiles',
+    self:          'self',
+    nativeChart:   'Native Chart',
+    uploadZone:    '⌁ Drop palm / face / horoscope',
+    uploadZoneMeta:'(max 15 MB · EXIF-stripped)',
+    safetyTitle:   'Safety governance active:',
+    safetyBlocked1:'✗ Marana · Vidveshana · Ucchatana',
+    safetyBlocked2:'✗ Coercive Vashikaran · Death prediction',
+    safetyAllowed: '✓ Shanti · Paushtika · Raksha only',
+    roleAcharya:   'Acharya-Siddha',
+    roleSeeker:    'Seeker',
+    greeting:      'Pranam. I am the Acharya-Siddha. Provide a birth date, time, and place — or ask what weighs upon you — and I shall compute, not guess.\n\nNative engines online: sidereal ephemeris (Lahiri), vector Yantra rendering, 22-Shruti acoustic weaving, and cross-tradition remedial mapping.',
+    inputPlaceholder: 'Speak your question, or supply birth details (date · time · place)...',
+    send:          'Consult',
+    signedIn:      'Seeker: ',
+    sessionExpired:'Session expired — please sign in again.',
+    authFailed:    'Authentication failed: ',
+    connError:     'Connection error while verifying token.',
+    gisFailed:     'Google Sign-In failed to load. Check network and refresh.',
+    gwUnreachable: 'Gateway unreachable — is tantric_gateway running?',
+    payloadBig:    'Payload exceeds 15 MB ceiling — dropped at transport guard.',
+    ingestRejected:'Ingestion rejected: ',
+    uploadFailed:  'Upload failed: ',
+    unknown:       'unknown'
+  }
+};
+
+let LANG = localStorage.getItem('hermes_lang') || 'bn';
+function t(key) { return (STRINGS[LANG] && STRINGS[LANG][key]) || (STRINGS.bn[key] || key); }
+
+function applyLang(code) {
+  LANG = STRINGS[code] ? code : 'bn';
+  localStorage.setItem('hermes_lang', LANG);
+  document.documentElement.lang = LANG;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = t(el.getAttribute('data-i18n'));
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    el.placeholder = t(el.getAttribute('data-i18n-ph'));
+  });
+  document.querySelectorAll('[data-lang-switch] button').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === LANG);
+  });
+  document.title = t('appTitle');
+
+  // dynamic bits that live outside data-i18n
+  const status = document.getElementById('statusText');
+  if (status && (ws && ws.readyState === WebSocket.OPEN)) status.textContent = t('connected');
+  if (status && (!ws || ws.readyState !== WebSocket.OPEN)) status.textContent = t('disconnected');
+  const greeting = document.getElementById('greetingMsg');
+  if (greeting) greeting.textContent = t('greeting');
+  const strip = document.getElementById('signedInStrip');
+  if (strip && strip.dataset.name) strip.innerHTML = t('signedIn') + '<span class="user">' + strip.dataset.name + '</span>';
+}
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-lang-switch] button');
+  if (btn) applyLang(btn.dataset.lang);
+});
+
+// ============================================
+// WebSocket + auth (unchanged logic)
+// ============================================
 const WS_BASE = (location.protocol === 'https:' ? 'wss://' : 'ws://')
              + location.host + '/v1/chat/ws';
 
@@ -376,7 +535,6 @@ let hermesToken = sessionStorage.getItem('hermes_jwt') || null;
 let googleClientId = null;
 let wsEverOpened = false;
 
-// ---------- WebSocket lifecycle ----------
 function connect() {
   if (!hermesToken) return;
   wsEverOpened = false;
@@ -385,17 +543,16 @@ function connect() {
   ws.onopen = () => {
     wsEverOpened = true;
     document.getElementById('statusDot').classList.add('online');
-    document.getElementById('statusText').textContent = 'connected';
+    document.getElementById('statusText').textContent = t('connected');
   };
 
   ws.onclose = () => {
     document.getElementById('statusDot').classList.remove('online');
-    document.getElementById('statusText').textContent = 'disconnected';
+    document.getElementById('statusText').textContent = t('disconnected');
     if (!wsEverOpened && googleClientId) {
-      // Handshake rejected (expired/invalid session) — re-authenticate
       hermesToken = null;
       sessionStorage.removeItem('hermes_jwt');
-      showAuthModal('Session expired — please sign in again.');
+      showAuthModal(t('sessionExpired'));
       return;
     }
     if (hermesToken) setTimeout(connect, 3000);
@@ -411,7 +568,6 @@ function connect() {
   };
 }
 
-// ---------- Frame rendering ----------
 function renderFrame(frame) {
   if (frame.type !== 'diagnostic_chunk') return;
 
@@ -422,7 +578,7 @@ function renderFrame(frame) {
     msg = document.createElement('div');
     msg.className = 'message';
     msg.id = 'streaming-msg';
-    msg.innerHTML = '<div class="role">Acharya-Siddha</div>'
+    msg.innerHTML = '<div class="role">' + t('roleAcharya') + '</div>'
                   + '<div class="content"></div>';
     container.appendChild(msg);
   }
@@ -430,7 +586,6 @@ function renderFrame(frame) {
   const content = msg.querySelector('.content');
   if (frame.content) content.textContent += frame.content;
 
-  // Inline vector Yantra
   if (frame.yantra_svg) {
     let yc = msg.querySelector('.yantra-container');
     if (!yc) {
@@ -441,7 +596,6 @@ function renderFrame(frame) {
     yc.innerHTML = frame.yantra_svg;
   }
 
-  // Acoustic strip
   if (frame.audio && frame.audio.f0) {
     let strip = msg.querySelector('.acoustic-strip');
     if (!strip) {
@@ -458,7 +612,6 @@ function renderFrame(frame) {
   if (frame.final) msg.removeAttribute('id');
 }
 
-// ---------- Send ----------
 function send() {
   const input = document.getElementById('input');
   const text = input.value.trim();
@@ -467,7 +620,7 @@ function send() {
   const container = document.getElementById('messages');
   const msg = document.createElement('div');
   msg.className = 'message user';
-  msg.innerHTML = '<div class="role">Seeker</div>'
+  msg.innerHTML = '<div class="role">' + t('roleSeeker') + '</div>'
                 + '<div class="content"></div>';
   msg.querySelector('.content').textContent = text;
   container.appendChild(msg);
@@ -478,6 +631,7 @@ function send() {
     session_id: sessionId,
     sub_profile_id: currentProfile,
     content: text,
+    lang: LANG,
     attachments: []
   }));
 
@@ -506,10 +660,9 @@ fileInput.addEventListener('change', async () => {
   const file = fileInput.files[0];
   if (!file) return;
   if (file.size > 15 * 1024 * 1024) {
-    alert('Payload exceeds 15 MB ceiling — dropped at transport guard.');
+    alert(t('payloadBig'));
     return;
   }
-  // Upload via REST; response returns sanitized document_id
   const form = new FormData();
   form.append('file', file);
   form.append('sub_profile_id', currentProfile);
@@ -522,13 +675,14 @@ fileInput.addEventListener('change', async () => {
         session_id: sessionId,
         sub_profile_id: currentProfile,
         content: '[uploaded: ' + file.name + ']',
+        lang: LANG,
         attachments: [{ document_id: data.document_id, kind: 'image' }]
       }));
     } else {
-      alert('Ingestion rejected: ' + (data.error || 'unknown'));
+      alert(t('ingestRejected') + (data.error || t('unknown')));
     }
   } catch (e) {
-    alert('Upload failed: ' + e.message);
+    alert(t('uploadFailed') + e.message);
   }
 });
 
@@ -565,7 +719,7 @@ function renderGoogleButton() {
 async function handleGoogleCredentialResponse(response) {
   const status = document.getElementById('authStatus');
   status.classList.remove('hidden', 'error');
-  status.textContent = 'Authenticating with Hermes engine...';
+  status.textContent = t('verifying');
 
   try {
     const res = await fetch('/api/v1/auth/google', {
@@ -583,15 +737,17 @@ async function handleGoogleCredentialResponse(response) {
       hideAuthModal();
       connect();
       const strip = document.getElementById('signedInStrip');
-      if (strip) strip.innerHTML = 'Seeker: <span class="user">' +
-          (data.first_name || data.email || 'authenticated') + '</span>';
+      if (strip) {
+        strip.dataset.name = data.first_name || data.email || '';
+        strip.innerHTML = t('signedIn') + '<span class="user">' + strip.dataset.name + '</span>';
+      }
     } else {
       status.classList.add('error');
-      status.textContent = 'Authentication failed: ' + (data.message || 'unknown');
+      status.textContent = t('authFailed') + (data.message || t('unknown'));
     }
   } catch (err) {
     status.classList.add('error');
-    status.textContent = 'Connection error while verifying token.';
+    status.textContent = t('connError');
     console.error(err);
   }
 }
@@ -604,34 +760,33 @@ async function initAuth() {
 
     if (cfg.enabled && googleClientId) {
       if (hermesToken) {
-        connect();                   // try the stored session first
+        connect();
       } else {
         showAuthModal();
       }
-      // GIS script may still be loading; retry until ready
       let tries = 0;
-      const t = setInterval(() => {
+      const timer = setInterval(() => {
         if (typeof google !== 'undefined' && google.accounts) {
           renderGoogleButton();
-          clearInterval(t);
+          clearInterval(timer);
         } else if (++tries > 40) {
-          clearInterval(t);
-          showAuthModal('Google Sign-In failed to load. Check network and refresh.');
+          clearInterval(timer);
+          showAuthModal(t('gisFailed'));
         }
       }, 250);
     } else {
-      // Dev mode: gateway not configured with OAuth — anonymous local session
       console.warn('[auth] GOOGLE_CLIENT_ID not configured — skipping sign-in');
       hideAuthModal();
       hermesToken = hermesToken || 'dev-anonymous';
       connect();
     }
   } catch (err) {
-    showAuthModal('Gateway unreachable — is tantric_gateway running?');
+    showAuthModal(t('gwUnreachable'));
     console.error(err);
   }
 }
 
+applyLang(LANG);
 initAuth();
 </script>
 </body>

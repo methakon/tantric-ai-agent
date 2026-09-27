@@ -107,7 +107,7 @@ std::string ipc_call(const std::string& sock_path, const std::string& req_json) 
     if (fd < 0) return "";
 
     timeval tv{};
-    tv.tv_sec = 5;
+    tv.tv_sec = 20;  // first login = Google JWKS fetch + user upsert; 5s was too tight
     ::setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
     ::setsockopt(fd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
 

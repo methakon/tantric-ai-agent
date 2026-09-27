@@ -169,9 +169,9 @@ std::string_view YantraEngine::render_kali_yantra(
     append_double(ptr, end, cx);
     append_string(ptr, end, "\" y=\"");
     append_double(ptr, end, cy + 25.0);
-    append_string(ptr, end, "\" font-family=\"Siddham, Devanagari, sans-serif\" font-size=\"22\" fill=\"");
+    append_string(ptr, end, "\" font-family=\"Siddham, Noto Serif Bengali, Noto Sans Bengali, sans-serif\" font-size=\"22\" fill=\"");
     append_string(ptr, end, palette.text);
-    append_string(ptr, end, "\" text-anchor=\"middle\">क्रीं</text>\n");
+    append_string(ptr, end, "\" text-anchor=\"middle\">ক্ৰীং</text>\n");
 
     append_string(ptr, end, "</svg>");
 
