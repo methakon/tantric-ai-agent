@@ -63,6 +63,69 @@ See `TANTRIC_AI_AGENT_ROADMAP.md` for full details.
 
 ---
 
+## Native C++20 Engine (v1.2)
+
+| Component | File | Status |
+|-----------|------|--------|
+| Ephemeris (Swiss Ephemeris, Lahiri) | `include/ephemeris_engine.hpp` | ✅ compiled, 273μs/chart |
+| Multi-engine triangulation | `include/multi_engine.hpp` | ✅ Parashari/Jaimini/KP/Nadi/Lal Kitab |
+| Yantra SVG (zero-alloc) | `include/yantra_engine.hpp` | ✅ Kali/Shatkona/Sri, 44μs |
+| Sound weaver (22-Shruti) | `include/sound_weaver.hpp` | ✅ 11.3ns/sample, binaural |
+| Safety validator | `include/safety_validator.hpp` | ✅ 32 patterns, 6/6 pass |
+| Geocoding | `include/geocoding_engine.hpp` | ✅ offline city DB |
+| Self-audit feedback loop | `include/self_audit.hpp` | ✅ confidence tracking |
+| **Kinship/synastry** | `include/kinship_engine.hpp` | ✅ Bhavat Bhavam + Rinanu Bandhana |
+| **Nashta Jataka** | `include/nashta_jataka.hpp` | ✅ D12/D9/Adhana pipeline, F=0.875 demo |
+| **Gateway security** | `include/gateway_security.hpp` | ✅ rate limit, JWT policy, 20fps cap |
+
+**Build:**
+```bash
+g++ -std=c++20 -O3 -march=native -I include -I third_party/sweph \
+    -o tantric_engine src/*.cpp -L third_party/sweph -lswe -lm
+```
+
+## Security Architecture
+
+| Layer | Implementation |
+|-------|---------------|
+| Password hashing | Argon2id (64MB, 3 iter, 4 threads) — policy in gateway_security.hpp |
+| Access tokens | JWT HMAC-SHA256, 15-min TTL |
+| Refresh tokens | 256-bit random, SHA-256 stored, 7-day TTL, HttpOnly cookies |
+| Rate limiting | 5 attempts/15min/IP → 1-hour exponential backoff |
+| WS frame guard | 20 fps hard cap per connection |
+| File ingestion | 4-layer: size guard → magic bytes → sanitize → encrypted storage |
+| Chat integrity | AES-256-GCM + HMAC-SHA256 message chaining |
+
+**Encryption keys** live in `.env` (never committed): `SESSION_KEY`, `JWT_SECRET`,
+`FILE_ENCRYPTION_KEY`, `HMAC_SECRET`, `REFRESH_TOKEN_SECRET`, `API_KEY`.
+
+**Test commands:**
+```bash
+./tests/test_kinship_nashta      # 8/8 pass
+./tests/test_gateway             # 7/7 pass
+python3 scripts/file_ingestion.py  # 4/4 pass
+python3 scripts/crypto_engine.py   # encrypt/HMAC/file tests
+```
+
+## Database
+
+- **Primary:** Oracle Cloud MySQL `myjob_agent` (tunnel 127.0.0.1:3307)
+- **Schema files:** `schema/tantric_agent_schema.sql`, `schema/security_schema.sql`
+- **Local dev mirror:** SQLite `tantric_agent.db` (7 security tables) —
+  used when the Oracle VM SSH tunnel is down
+- **Tables:** tantric_consultations, tantric_natal_charts, tantric_multi_engine_results,
+  tantric_past_life, tantric_yantra_prescriptions, tantric_acoustic_prescriptions,
+  tantric_safety_audit, tantric_seeker_feedback, tantric_remedial_mapping (9 seeds),
+  tantric_users, tantric_user_sub_profiles, tantric_profile_documents,
+  tantric_chat_sessions, tantric_chat_messages, tantric_rate_limits, tantric_nashta_jataka
+
+## Web Client
+
+`web/index.html` — obsidian slate (#07070a) + temple gold (#d4af37) + ruby (#e63946).
+WebSocket streaming at `/v1/chat/ws` with inline Yantra SVG and acoustic metadata.
+
+---
+
 ## Hardware Requirements
 
 | Phase | Minimum | Recommended | Cost (India) |
