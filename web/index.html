@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अचार्य-सिद्ध · Acharya-Siddha</title>
+<style>
+:root {
+  --bg-primary: #07070a;
+  --bg-gradient: #0f0c1b;
+  --gold: #d4af37;
+  --ruby: #e63946;
+  --text-main: #e8e6e3;
+  --text-dim: #8a8794;
+  --mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --serif: 'Cinzel', 'Cormorant Garamond', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: radial-gradient(ellipse at 50% 0%, var(--bg-gradient) 0%, var(--bg-primary) 70%);
+  color: var(--text-main);
+  font-family: var(--mono);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-sanskrit {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
+.title-latin {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.session-status {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+.session-status .dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--ruby);
+  margin-right: 8px;
+}
+.session-status .dot.online { background: #4ade80; }
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1px;
+  background: rgba(212, 175, 55, 0.12);
+}
+
+aside {
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.panel-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.profile-item {
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 0.8rem;
+}
+.profile-item:hover {
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.05);
+}
+.profile-item.active {
+  border-color: var(--ruby);
+  background: rgba(230, 57, 70, 0.08);
+}
+.profile-item .rel {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.chat-area {
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.message {
+  margin-bottom: 1.8rem;
+  max-width: 820px;
+}
+.message.user { margin-left: auto; text-align: right; }
+
+.message .role {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.message.user .role { color: var(--ruby); }
+
+.message .content {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--text-main);
+  white-space: pre-wrap;
+}
+.message.user .content {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+}
+
+.message .yantra-container {
+  margin-top: 1.2rem;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: #0a0a0f;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 4px;
+}
+.message .yantra-container svg { max-width: 420px; height: auto; }
+
+.message .acoustic-strip {
+  margin-top: 0.9rem;
+  padding: 0.7rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(212, 175, 55, 0.04);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+.message .acoustic-strip .val { color: var(--gold); }
+
+.composer {
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 1.2rem 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+#input {
+  flex: 1;
+  background: #0c0c12;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--text-main);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 3px;
+  resize: none;
+  min-height: 52px;
+  outline: none;
+}
+#input:focus { border-color: var(--gold); }
+
+button.primary {
+  background: var(--ruby);
+  color: #fff;
+  border: none;
+  padding: 0 1.8rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+button.primary:hover { opacity: 0.85; }
+button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.upload-zone {
+  margin-top: 1.5rem;
+  border: 1px dashed rgba(212, 175, 55, 0.35);
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.upload-zone:hover { border-color: var(--gold); color: var(--gold); }
+
+.safety-notice {
+  margin-top: auto;
+  font-size: 0.62rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+}
+.safety-notice .blocked { color: var(--ruby); }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="title-sanskrit">अचार्य-सिद्ध</div>
+    <div class="title-latin">Acharya-Siddha · Cross-Tradition Esoteric Intelligence</div>
+  </div>
+  <div class="session-status">
+    <span class="dot" id="statusDot"></span>
+    <span id="statusText">disconnected</span>
+  </div>
+</header>
+
+<main>
+  <aside>
+    <div class="panel-label">Sub-Profiles</div>
+    <div id="profileList">
+      <div class="profile-item active" data-profile="self">
+        <div class="rel">self</div>
+        <div>Native Chart</div>
+      </div>
+    </div>
+
+    <div class="upload-zone" id="uploadZone">
+      ⌁ Drop palm / face / horoscope<br>(max 15 MB · EXIF-stripped)
+    </div>
+    <input type="file" id="fileInput" style="display:none"
+           accept="image/jpeg,image/png,image/webp,application/pdf">
+
+    <div class="safety-notice">
+      <div>Safety governance active:</div>
+      <div class="blocked">✗ Marana · Vidveshana · Ucchatana</div>
+      <div class="blocked">✗ Coercive Vashikaran · Death prediction</div>
+      <div>✓ Shanti · Paushtika · Raksha only</div>
+    </div>
+  </aside>
+
+  <div class="chat-area">
+    <div id="messages">
+      <div class="message">
+        <div class="role">Acharya-Siddha</div>
+        <div class="content">प्रणाम। I am the Acharya-Siddha. Provide a birth date, time, and place — or ask what weighs upon you — and I shall compute, not guess.
+
+Native engines online: sidereal ephemeris (Lahiri), vector Yantra rendering, 22-Shruti acoustic weaving, and cross-tradition remedial mapping.</div>
+      </div>
+    </div>
+
+    <div class="composer">
+      <textarea id="input" placeholder="Speak your question, or supply birth details (date · time · place)..."></textarea>
+      <button class="primary" id="sendBtn">Consult</button>
+    </div>
+  </div>
+</main>
+
+<script>
+const WS_URL = (location.protocol === 'https:' ? 'wss://' : 'ws://')
+             + location.host + '/v1/chat/ws';
+
+let ws = null;
+let currentProfile = 'self';
+let sessionId = crypto.randomUUID();
+
+// ---------- WebSocket lifecycle ----------
+function connect() {
+  ws = new WebSocket(WS_URL);
+
+  ws.onopen = () => {
+    document.getElementById('statusDot').classList.add('online');
+    document.getElementById('statusText').textContent = 'connected';
+  };
+
+  ws.onclose = () => {
+    document.getElementById('statusDot').classList.remove('online');
+    document.getElementById('statusText').textContent = 'disconnected';
+    setTimeout(connect, 3000);
+  };
+
+  ws.onmessage = (evt) => {
+    try {
+      const frame = JSON.parse(evt.data);
+      renderFrame(frame);
+    } catch (e) {
+      console.error('Malformed frame', e);
+    }
+  };
+}
+
+// ---------- Frame rendering ----------
+function renderFrame(frame) {
+  if (frame.type !== 'diagnostic_chunk') return;
+
+  const container = document.getElementById('messages');
+  let msg = document.getElementById('streaming-msg');
+
+  if (!msg) {
+    msg = document.createElement('div');
+    msg.className = 'message';
+    msg.id = 'streaming-msg';
+    msg.innerHTML = '<div class="role">Acharya-Siddha</div>'
+                  + '<div class="content"></div>';
+    container.appendChild(msg);
+  }
+
+  const content = msg.querySelector('.content');
+  if (frame.content) content.textContent += frame.content;
+
+  // Inline vector Yantra
+  if (frame.yantra_svg) {
+    let yc = msg.querySelector('.yantra-container');
+    if (!yc) {
+      yc = document.createElement('div');
+      yc.className = 'yantra-container';
+      msg.appendChild(yc);
+    }
+    yc.innerHTML = frame.yantra_svg;
+  }
+
+  // Acoustic strip
+  if (frame.audio && frame.audio.f0) {
+    let strip = msg.querySelector('.acoustic-strip');
+    if (!strip) {
+      strip = document.createElement('div');
+      strip.className = 'acoustic-strip';
+      msg.appendChild(strip);
+    }
+    strip.innerHTML =
+      'f₀ = <span class="val">' + frame.audio.f0 + ' Hz</span> · '
+      + 'binaural Δ = <span class="val">' + frame.audio.binaural + ' Hz</span>';
+  }
+
+  container.scrollTop = container.scrollHeight;
+  if (frame.final) msg.removeAttribute('id');
+}
+
+// ---------- Send ----------
+function send() {
+  const input = document.getElementById('input');
+  const text = input.value.trim();
+  if (!text || !ws || ws.readyState !== WebSocket.OPEN) return;
+
+  const container = document.getElementById('messages');
+  const msg = document.createElement('div');
+  msg.className = 'message user';
+  msg.innerHTML = '<div class="role">Seeker</div>'
+                + '<div class="content"></div>';
+  msg.querySelector('.content').textContent = text;
+  container.appendChild(msg);
+  container.scrollTop = container.scrollHeight;
+
+  ws.send(JSON.stringify({
+    type: 'user_message',
+    session_id: sessionId,
+    sub_profile_id: currentProfile,
+    content: text,
+    attachments: []
+  }));
+
+  input.value = '';
+}
+
+document.getElementById('sendBtn').addEventListener('click', send);
+document.getElementById('input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); }
+});
+
+// ---------- Profile switching ----------
+document.querySelectorAll('.profile-item').forEach(el => {
+  el.addEventListener('click', () => {
+    document.querySelectorAll('.profile-item').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    currentProfile = el.dataset.profile;
+  });
+});
+
+// ---------- Upload ----------
+const uploadZone = document.getElementById('uploadZone');
+const fileInput = document.getElementById('fileInput');
+uploadZone.addEventListener('click', () => fileInput.click());
+fileInput.addEventListener('change', async () => {
+  const file = fileInput.files[0];
+  if (!file) return;
+  if (file.size > 15 * 1024 * 1024) {
+    alert('Payload exceeds 15 MB ceiling — dropped at transport guard.');
+    return;
+  }
+  // Upload via REST; response returns sanitized document_id
+  const form = new FormData();
+  form.append('file', file);
+  form.append('sub_profile_id', currentProfile);
+  try {
+    const res = await fetch('/v1/upload', { method: 'POST', body: form });
+    const data = await res.json();
+    if (data.document_id) {
+      ws.send(JSON.stringify({
+        type: 'user_message',
+        session_id: sessionId,
+        sub_profile_id: currentProfile,
+        content: '[uploaded: ' + file.name + ']',
+        attachments: [{ document_id: data.document_id, kind: 'image' }]
+      }));
+    } else {
+      alert('Ingestion rejected: ' + (data.error || 'unknown'));
+    }
+  } catch (e) {
+    alert('Upload failed: ' + e.message);
+  }
+});
+
+connect();
+</script>
+</body>
+</html>

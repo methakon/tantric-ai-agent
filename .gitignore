@@ -15,3 +15,4 @@ third_party/sweph/*.o
 *.db
 tests/test_kinship_nashta
 tests/*_bin
+tests/test_gateway
