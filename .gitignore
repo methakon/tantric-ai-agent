@@ -13,3 +13,5 @@ third_party/sweph/*.h
 third_party/sweph/*.o
 .env
 *.db
+tests/test_kinship_nashta
+tests/*_bin
