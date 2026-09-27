@@ -75,6 +75,7 @@ CITIES = {
     "malda": (25.0119, 88.1433, 5.5), "siliguri": (26.7271, 88.3953, 5.5),
     "durgapur": (23.5204, 87.3119, 5.5), "asansol": (23.6739, 86.9524, 5.5),
     "bankura": (23.2324, 87.0716, 5.5), "kanchrapara": (22.9450, 88.4333, 5.5),
+    "kandi": (23.9500, 88.0300, 5.5), "krishnanagar": (23.4000, 88.5000, 5.5),
     "delhi": (28.6139, 77.2090, 5.5), "new delhi": (28.6139, 77.2090, 5.5),
     "mumbai": (19.0760, 72.8777, 5.5), "bombay": (19.0760, 72.8777, 5.5),
     "chennai": (13.0827, 80.2707, 5.5), "madras": (13.0827, 80.2707, 5.5),
@@ -366,6 +367,28 @@ def compose_consultation(content: str, lang: str):
         resp["_mode"] = "refusal"
         return resp
 
+    # ---- multi-profile / traditional-calendar / Nashta routing ----
+    kp = None
+    bn_date_conv = None
+    try:
+        from kinship_parser import extract_kinship_payload
+        kp = extract_kinship_payload(content)
+    except Exception as e:
+        print(f"[WARN] kinship parse skipped: {e}", file=sys.stderr)
+    if kp and kp.get("has_bengali_date"):
+        ok_conv = [c for c in kp["bengali_date_conversions"]
+                   if c.get("status") == "OK"]
+        if ok_conv:
+            bn_date_conv = ok_conv[0]
+    if kp and (kp["is_multi_profile"] or kp["is_nashta_jataka_requested"]):
+        fam = _family_consultation(kp, lang, content)
+        if fam is not None:
+            return fam
+    if kp and kp["has_bengali_date"]:
+        # traditional-calendar dates are first-class data: normalise the
+        # text and continue down the standard single-chart path
+        content = kp["normalized_text"]
+
     birth = parse_birth(content)
     if birth is None:
         # Guidance reply — ask for birth data, explain the protocol
@@ -406,6 +429,18 @@ def compose_consultation(content: str, lang: str):
                 "উচ্ছাটন), জবরদস্তিমূলক বশীকরণ, মৃত্যু/আয়ু-ভবিষ্যদ্বাণী, "
                 "চিকিৎসা-নির্ণয়. বিকল্প: শান্তি, পৌষ্টিক, রক্ষা ও আত্ম-পরায়ণ."
             )
+        if bn_date_conv:
+            if lang == "en":
+                body = (f"Traditional-calendar note: your record "
+                        f"'{bn_date_conv['raw']}' computes to "
+                        f"{bn_date_conv['date']} "
+                        f"({bn_date_conv['weekday']}) — sankranti-based "
+                        f"conversion, Lahiri sidereal.\n\n") + body
+            else:
+                body = (f"পঞ্জিকা-নোট: আপনার ‘{bn_date_conv['raw']}’ গণনায় "
+                        f"{bn_date_conv['date']} "
+                        f"({WEEKDAY_BN_FULL.get(bn_date_conv['weekday'], bn_date_conv['weekday'])}) "
+                        f"— সংক্রান্তি-ভিত্তিক, লাহিড়ী নিরয়ণ.\n\n") + body
         chunks = _split_chunks(body)
         svg, _ = render_yantra("sri_yantra")
         resp = _pack(chunks, lang, svg, None)
@@ -512,6 +547,317 @@ def compose_consultation(content: str, lang: str):
     resp = _pack(chunks, lang, svg, {"f0": f0, "binaural": binaural,
                                      "shruti": shruti})
     resp["_mode"] = "chart"
+    return resp
+
+
+WEEKDAY_BN_FULL = {"Monday": "সোমবার", "Tuesday": "মঙ্গলবার",
+                   "Wednesday": "বুধবার", "Thursday": "বৃহস্পতিবার",
+                   "Friday": "শুক্রবার", "Saturday": "শনিবার",
+                   "Sunday": "রবিবার"}
+
+RELATION_BN = {"self": "নিজে", "father": "বাবা", "mother": "মা", "wife": "স্ত্রী",
+               "husband": "স্বামী", "son": "ছেলে", "daughter": "মেয়ে",
+               "brother": "ভাই", "sister": "বোন", "grandfather": "দাদা",
+               "grandmother": "দিদা", "unspecified": "অজ্ঞাত"}
+RELATION_EN2 = {"self": "Self", "father": "Father", "mother": "Mother",
+                "wife": "Wife", "husband": "Husband", "son": "Son",
+                "daughter": "Daughter", "brother": "Brother",
+                "sister": "Sister", "grandfather": "Grandfather",
+                "grandmother": "Grandmother", "unspecified": "Unnamed"}
+
+
+def _family_consultation(kp, lang, content):
+    """Multi-profile / traditional-calendar / Nashta consultation — computed.
+
+    Progressive (streamed) verbatim composition. Every position, window and
+    check below is computed from Swiss Ephemeris charts; family-asserted
+    attributes are tested, never repeated as fact.
+    """
+    try:
+        from nashta_jataka_engine import (rectify_birth,
+                                          extract_stated_constraints,
+                                          asc_moon, moon_nakshatra_index)
+    except Exception as e:
+        print(f"[WARN] nashta engine unavailable: {e}", file=sys.stderr)
+        return None
+    en = lang == "en"
+    profiles = kp["profiles"]
+
+    def rashi(i):
+        return RASHI_EN[i] if en else RASHI_BN[i]
+
+    def nakshatra(i):
+        return NAKSHATRA_EN[i] if en else NAKSHATRA_BN[i]
+
+    def label(p):
+        base = (RELATION_EN2 if en else RELATION_BN).get(p["relation"], p["relation"])
+        return f"{base} {p['name']}" if p.get("name") else base
+
+    def resolve_place(pname):
+        if not pname:
+            return None
+        low = pname.lower()
+        if low in CITIES:
+            return CITIES[low]
+        for c, v in CITIES.items():
+            if c in low or low in c:
+                return v
+        return None
+
+    def profile_dict(p):
+        pl = resolve_place(p.get("place"))
+        d = {"name": p.get("name"), "relation": p.get("relation"),
+             "date": p.get("date"), "time_hours": p.get("time_hours"),
+             "place": p.get("place")}
+        if pl:
+            d.update({"lat": pl[0], "lon": pl[1], "tz": pl[2]})
+        return d
+
+    L = []
+    if en:
+        L.append(f"Family ingestion complete — {len(profiles)} profiles recognized. "
+                 "All positions below are computed (Lahiri sidereal), not recalled.\n")
+    else:
+        L.append(f"পরিবার-গ্রহণ সম্পূর্ণ — {len(profiles)} জনের প্রোফাইল চিহ্নিত. "
+                 "নিচের সব গণনা লাহিড়ী নিরয়ণ গ্রহপঞ্জিতে সম্পাদিত — স্মৃতি থেকে নয়.\n")
+
+    # ---- per-profile computation --------------------------------------
+    computed = []
+    for p in profiles:
+        pl = resolve_place(p.get("place"))
+        if p["date"] and p["time_hours"] is not None and pl:
+            y, m, d = (int(x) for x in p["date"].split("-"))
+            ch = compute_chart(y, m, d, p["time_hours"], pl[0], pl[1], pl[2])
+            if ch:
+                computed.append({"p": p, "chart": ch, "kind": "full"})
+                continue
+        if p["date"]:
+            # date only (or no place): Moon range across the IST day —
+            # Moon longitude is geocentric, so rashi/nakshatra are place-free
+            y, m, d = (int(x) for x in p["date"].split("-"))
+            rashis, naks, pm = set(), set(), None
+            for h in range(0, 25, 2):
+                asc, moon = asc_moon(y, m, d, h, 23.8, 88.1)
+                rashis.add(int(moon // 30))
+                naks.add(moon_nakshatra_index(moon))
+            computed.append({"p": p, "kind": "moonrange",
+                             "rashis": sorted(rashis), "naks": sorted(naks)})
+        else:
+            computed.append({"p": p, "kind": "nodata"})
+
+    for c in computed:
+        p = c["p"]
+        head = f"— {label(p)}"
+        if c["kind"] == "full":
+            ch = c["chart"]
+            asc_r = ch["asc_rashi"]
+            mr = ch["moon_rashi"]
+            nk = ch["moon_nak"]
+            if en:
+                L.append(f"{head}: {p['date']}, {p['time_raw'] or ''} {p['place']} → "
+                         f"Lagna {rashi(asc_r)} {ch['asc'] % 30:.2f}°, "
+                         f"Moon {rashi(mr)} / {nakshatra(nk)}, pada {ch['moon_pada']} "
+                         f"(lord {ch['nak_lord']}), Atmakaraka {ch['atmakaraka']}.")
+            else:
+                ak_bn = PLANET_BN[PLANET_EN.index(ch["atmakaraka"])] \
+                    if ch["atmakaraka"] in PLANET_EN else ch["atmakaraka"]
+                L.append(f"{head}: {p['date']}, {p['time_raw'] or ''} {p['place']} → "
+                         f"লগ্ন {rashi(asc_r)} {ch['asc'] % 30:.2f}°, "
+                         f"চন্দ্র {rashi(mr)} / {nakshatra(nk)}, পদ {ch['moon_pada']} "
+                         f"(অধিপতি {LORD_BN.get(ch['nak_lord'], ch['nak_lord'])}), "
+                         f"আত্মকারক {ak_bn}.")
+        elif c["kind"] == "moonrange":
+            r_lo, r_hi = c["rashis"][0], c["rashis"][-1]
+            n_lo, n_hi = c["naks"][0], c["naks"][-1]
+            note = ("Moon sign stable all day" if r_lo == r_hi
+                    else "Moon changes sign during the day")
+            note_bn = ("চন্দ্ররাশি সারা দিন স্থিতিশীল" if r_lo == r_hi
+                       else "দিনের মধ্যে চন্দ্ররাশি পরিবর্তন হয়")
+            if en:
+                L.append(f"{head}: {p['date']} (time/place unknown) → "
+                         f"Moon {rashi(r_lo)}–{rashi(r_hi)} / {nakshatra(n_lo)}–"
+                         f"{nakshatra(n_hi)}; {note}. Lagna needs time + place.")
+            else:
+                L.append(f"{head}: {p['date']} (সময়/স্থান অজানা) → "
+                         f"চন্দ্র {rashi(r_lo)}–{rashi(r_hi)} / {nakshatra(n_lo)}–"
+                         f"{nakshatra(n_hi)}; {note_bn}. লগ্নের জন্য সময় ও স্থান দরকার.")
+        else:
+            if en:
+                L.append(f"{head}: no birth date — cannot compute; see the "
+                         "Nashta Jataka section.")
+            else:
+                L.append(f"{head}: জন্মতারিখ নেই — গণনা অসম্ভব; নষ্ট-জাতক অংশ দেখুন.")
+
+    # ---- Nashta Jataka -------------------------------------------------
+    constraints = extract_stated_constraints(content)
+    needs_nashta = kp["is_nashta_jataka_requested"] or constraints or any(
+        c["kind"] == "nodata" for c in computed)
+    if needs_nashta:
+        if en:
+            L.append("\nNASHTA JATAKA (computed rectification):")
+        else:
+            L.append("\nনষ্ট-জাতক সংশোধন (গণনা):")
+
+        tackled = False
+        for c in computed:
+            p = c["p"]
+            pd = profile_dict(p)
+            if c["kind"] == "moonrange" and pd.get("lat") is None:
+                # place unknown — scan needs coordinates; use the text place if
+                # any, else ask
+                if en:
+                    L.append(f"— {label(p)}: birth time unknown; supply place "
+                             f"(and any remembered attribute like 'lagna ধনু') "
+                             f"to run the window scan.")
+                else:
+                    L.append(f"— {label(p)}: জন্মসময় অজানা; স্থান জানালে (এবং "
+                             f"মনে থাকা বৈশিষ্ট্য যেমন ‘লগ্ন ধনু’) উইন্ডো-স্ক্যান "
+                             f"চালানো যাবে.")
+                continue
+            if c["kind"] == "nodata":
+                if en:
+                    L.append(f"— {label(p)}: datum absent. Minimal anchors that "
+                             "enable rectification: approximate year/season, "
+                             "siblings' and parents' full data, or remembered "
+                             "attributes (lagna / Moon sign / nakshatra).")
+                else:
+                    L.append(f"— {label(p)}: তথ্য অনুপস্থিত. সংশোধনের ন্যূনতম "
+                             "সূত্র: আনুমানিক বছর/ঋতু, ভাইবোন ও পিতামাতার পূর্ণ "
+                             "তথ্য, বা স্মৃতির বৈশিষ্ট্য (লগ্ন / চন্দ্ররাশি / নক্ষত্র).")
+                continue
+
+            # person with a date: run the computed scan
+            # children = persons born AFTER the target (never parents/elders)
+            children = [profile_dict(o["p"]) for o in computed
+                        if o["p"] is not p and o["p"].get("date")
+                        and (o["p"]["date"] or "") > (p["date"] or "")
+                        and o["p"].get("relation") in
+                        ("son", "daughter", "unspecified")]
+            res = rectify_birth(pd, children=children, constraints=constraints)
+            tackled = True
+            if res.get("stated_time_audit"):
+                sta = res["stated_time_audit"]
+                if en:
+                    L.append(f"— {label(p)} @ {sta['time']}: computed Lagna "
+                             f"{rashi(RASHI_EN.index(sta['lagna_rashi']))} "
+                             f"{sta['lagna_deg']}°, Moon {sta['moon_nakshatra']} "
+                             f"(lord {sta['moon_nakshatra_lord']}).")
+                else:
+                    L.append(f"— {label(p)} @ {sta['time']}: প্রকৃত গণনা — লগ্ন "
+                             f"{rashi(RASHI_EN.index(sta['lagna_rashi']))} "
+                             f"{sta['lagna_deg']}°, চন্দ্র "
+                             f"{nakshatra(NAKSHATRA_EN.index(sta['moon_nakshatra']))} "
+                             f"(অধিপতি {LORD_BN.get(sta['moon_nakshatra_lord'], sta['moon_nakshatra_lord'])}).")
+                for claim in sta["claims"]:
+                    kind, val = claim["claim"].split("=")
+                    val_show = nakshatra(NAKSHATRA_EN.index(val)) if kind == "moon_nakshatra" \
+                        else rashi(RASHI_EN.index(val))
+                    if en:
+                        L.append(f"   · claim {kind}={val}: {claim['at_stated_time']} "
+                                 f"at the stated time")
+                    else:
+                        L.append(f"   · দাবি {kind}={val_show}: নির্দিষ্ট সময়ে গণনায় "
+                                 f"{'সমর্থিত' if claim['at_stated_time'] == 'supported' else 'অসমর্থিত'}")
+            for cw in res["constraint_windows"]:
+                kind, val = cw["constraint"].split("=")
+                val_show = nakshatra(NAKSHATRA_EN.index(val)) if kind == "moon_nakshatra" \
+                    else rashi(RASHI_EN.index(val))
+                wins = cw["windows"] or (["—"] if en else ["—"])
+                if en:
+                    L.append(f"   · ‘{kind}={val}’ holds only: {', '.join(wins)}")
+                else:
+                    L.append(f"   · ‘{val_show}’ শর্ত পূরণ হয় শুধু: {', '.join(wins)}")
+            if res["status"] == "RECTIFIED" and res.get("rectified_window"):
+                rw = res["rectified_window"]
+                if en:
+                    L.append(f"   → RECTIFIED window: {rw['start']}–{rw['end']} IST "
+                             f"(all stated attributes satisfied).")
+                else:
+                    L.append(f"   → সংশোধিত সময়-উইন্ডো: {rw['start']}–{rw['end']} IST "
+                             f"(সব শর্ত একসঙ্গে পূরণ).")
+            elif res["status"] == "CONFLICT":
+                if en:
+                    L.append("   → CONFLICT: no minute of the day satisfies all "
+                             "stated attributes together — the family record is "
+                             "internally inconsistent. Weigh each attribute "
+                             "above separately; confirm which memory is firmest.")
+                else:
+                    L.append("   → সংঘর্ষ: দিনের কোনো একক সময়ে সব দাবি একসঙ্গে "
+                             "সম্ভব নয় — পারিবারিক স্মৃতি পরস্পরবিরোধী. উপরের "
+                             "প্রতিটি শর্ত আলাদা করে দেখুন; কোনটি অধিক নিশ্চিত "
+                             "তা জানালে সংশোধন চূড়ান্ত হবে.")
+            for ba in res["biological_audit"]:
+                ok = ba["within_bounds_16_45"]
+                if en:
+                    L.append(f"   · age of {label(p)} at {(ba['child'] or 'child')}'s "
+                             f"birth: {ba['maternal_age_at_birth']}y "
+                             f"({'plausible' if ok else 'OUT OF BOUNDS'})")
+                else:
+                    L.append(f"   · {(ba['child'] or 'সন্তান')}-এর জন্মে {label(p)}-এর "
+                             f"বয়স: {ba['maternal_age_at_birth']} বছর "
+                             f"({'যুক্তিসঙ্গত' if ok else 'সীমার বাইরে'})")
+            for chk in res["children_checks"]:
+                for ck in chk["checks"]:
+                    if ck["status"] == "insufficient":
+                        continue
+                    if en:
+                        L.append(f"   · {chk['child']}: {ck['check']} — {ck['status']}"
+                                 + (f" ({ck['detail']})" if ck.get("detail") else ""))
+                    else:
+                        L.append(f"   · {chk['child']}: {ck['check']} — "
+                                 f"{'উত্তীর্ণ' if ck['status'] == 'pass' else ('অনুত্তীর্ণ' if ck['status'] == 'fail' else ck['status'])}"
+                                 + (f" ({ck['detail']})" if ck.get("detail") else ""))
+        if not tackled:
+            if en:
+                L.append("Rectification awaits the minimal anchor data above; "
+                         "the scan engine is ready the moment it arrives.")
+            else:
+                L.append("ন্যূনতম সূত্র পাওয়ামাত্রই স্ক্যান-ইঞ্জিন সংশোধন গণনা শুরু করবে.")
+
+    # ---- family Moon relations (only where computed) -------------------
+    fulls = [c for c in computed if c["kind"] == "full"]
+    if len(fulls) >= 2:
+        if en:
+            L.append("\nFamily lunar relations (computed):")
+        else:
+            L.append("\nপারিবারিক চন্দ্র-সম্বন্ধ (গণিত):")
+        for i in range(len(fulls)):
+            for j in range(i + 1, len(fulls)):
+                a, b = fulls[i], fulls[j]
+                d = (b["chart"]["moon_rashi"] - a["chart"]["moon_rashi"]) % 12
+                if d in (1, 11):
+                    tone_en, tone_bn = "harmonious trine (5/9)", "শুভ ত্রিকোণ (৫/৯)"
+                elif d in (5, 7):
+                    tone_en, tone_bn = "afflicted axis (6/8) — calming routines advised", "ষড়ষ্টক (৬/৮) — শান্তিদায়ক নিত্যকর্ম বিধেয়"
+                elif d == 0:
+                    tone_en, tone_bn = "same sign — shared temperament", "সমরাশি — সমধর্মী"
+                else:
+                    tone_en, tone_bn = "neutral", "সাধারণ"
+                ln = f"— {label(a['p'])} ↔ {label(b['p'])}: {tone_en if en else tone_bn}"
+                L.append(ln)
+
+    # ---- next data -----------------------------------------------------
+    missing_any = any(p["missing"] for p in profiles)
+    if en:
+        L.append("\nNext data (sharpens results): " + (
+            "times/places for the persons marked above; children's full "
+            "birth data (date + time + place) for the classical 4th-house "
+            "and D12 checks."
+            if missing_any else
+            "all profiles complete — request a full synastry or Nashta run "
+            "any time."))
+    else:
+        L.append("\nপরবর্তী তথ্য (ফলাফল সূক্ষ্মতর হবে): " + (
+            "উপরে যাদের সময়/স্থান নেই সেগুলো; ক্লাসিক্যাল ৪র্থ-ভাব ও D12 "
+            "পরীক্ষার জন্য সন্তানদের পূর্ণ জন্মবিবরণ (তারিখ + সময় + স্থান)."
+            if missing_any else
+            "সব প্রোফাইল সম্পূর্ণ — যখন খুশি পূর্ণ সম্বন্ধ বা নষ্ট-জাতক চালানো যাবে."))
+
+    body = "\n".join(L)
+    chunks = _split_chunks(body)
+    svg, _ = render_yantra("sri_yantra")
+    resp = _pack(chunks, lang, svg, None)
+    resp["_mode"] = "family"
     return resp
 
 

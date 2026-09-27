@@ -559,6 +559,63 @@ def main():
                                 {"X-Document-Name": "x.png"})
         check("upload without session token -> 401", st == 401)
 
+        # 17. multi-profile family ingestion + Nashta Jataka (computed)
+        sock4 = ws_connect(f"/v1/chat/ws?token={access_token}")[0]
+        ws_send_text(sock4, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": ("মা মমতা: ২৭ কার্তিক ১৪০৫, সকাল ১১টা, কান্দি "
+                        "— মায়ের লগ্ন ধনু বলে মনে হয়\n"
+                        "বাবা স্বপন: 1990-04-12 10:30 Berhampore\n"
+                        "বড় ছেলে Sastav: 2019-04-02, সময় জানা নেই\n"
+                        "ছোট ছেলে: জন্ম তারিখ ঠিক জানা নেই"),
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        fam_joined, fam_final, fam_yantra = "", False, False
+        for _ in range(20):
+            op, payload = ws_read_frame(sock4, timeout=10.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "diagnostic_chunk":
+                fam_joined += frame.get("content", "")
+                if frame.get("yantra_svg"):
+                    fam_yantra = True
+                if frame.get("final"):
+                    fam_final = True
+                    break
+        check("WS family ingestion (profiles + computed charts + nashta)",
+              fam_final and fam_yantra
+              and "পরিবার-গ্রহণ সম্পূর্ণ" in fam_joined
+              and "লগ্ন মকর 6.29" in fam_joined
+              and "নষ্ট-জাতক সংশোধন" in fam_joined,
+              fam_joined[:160])
+        check("Nashta audit computed (claim contradicted + real window)",
+              "অসমর্থিত" in fam_joined and "08:31" in fam_joined
+              and "10:36" in fam_joined, fam_joined[-220:])
+        sock4.close()
+
+        # 18. Bengali San date -> full computed chart consultation
+        sock5 = ws_connect(f"/v1/chat/ws?token={access_token}")[0]
+        ws_send_text(sock5, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": "আমার জন্ম ২৭ কার্তিক ১৪০৫, সকাল ১১টা, কান্দি",
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        bn_joined, bn_final = "", False
+        for _ in range(20):
+            op, payload = ws_read_frame(sock5, timeout=10.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "diagnostic_chunk":
+                bn_joined += frame.get("content", "")
+                if frame.get("final"):
+                    bn_final = True
+                    break
+        check("Bengali San date -> computed chart (12-11-1998, লগ্ন মকর)",
+              bn_final and "12-11-1998" in bn_joined
+              and "লগ্ন: মকর" in bn_joined and "মঘা" in bn_joined,
+              bn_joined[:160])
+        sock5.close()
+
     finally:
         gateway.terminate()
         bridge.terminate()

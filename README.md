@@ -185,6 +185,37 @@ camera snap ─┘   (X-Session-Token,      (base64)      └─ file_ingestion 
   vision-side analysis pending).
 - Chat shows the seeker bubble `📎 <name>` for uploads, same as typed messages.
 
+### Multi-profile ingestion, Bengali San calendar & Nashta Jataka
+
+`scripts/kinship_parser.py` + `scripts/nashta_jataka_engine.py`, wired into
+`compose_consultation` (`_mode: "family"`):
+
+- **Bengali San (বঙ্গাব্দ) conversion is computed, never assumed** — a Bengali
+  month is a sidereal solar month; the converter finds the month's sankranti
+  (Sun entering the month's sidereal sign, Lahiri) with Swiss Ephemeris and
+  dates the month from it. Convention validated against the anchor record
+  ২৭ কার্তিক ১৪০৫ = বৃহস্পতিবার 12 Nov 1998 (Kartik 1 = 17 Oct 1998 = the Tula
+  sankranti's civil date). A weekday (বার) in the text is a cross-check: the
+  converter reports a mismatch instead of silently adjusting.
+- **Multi-profile text is first-class**: "মা: …, বাবা: …, ছেলে: …" parses into
+  structured profiles (relation, name, date, time, place; Bengali script and
+  digits fully supported). Complete profiles get full charts; date-only
+  profiles get a Moon rashi/nakshatra range for the day; missing data is
+  listed, never fatal.
+- **Nashta Jataka protocol activates automatically** when a birth date/time is
+  unconfirmed, approximate, or a "লগ্ন ধনু বলে মনে হয়"-type attribute is
+  asserted. The solver scans the candidate day minute-by-minute and reports:
+  the computed window for each asserted attribute, the intersection
+  (RECTIFIED window) or a CONFLICT when the family record is internally
+  contradictory, a stated-time audit (what the asserted time *actually*
+  gives), biological bounds where child dates are known, and child-chart
+  checks (4th house / 4th lord vs the candidate's Moon) when a child's full
+  data exists. Scores are computed fractions of decidable checks — checks
+  with missing inputs are reported as insufficient, never counted as passed.
+- **No boilerplate rejections**: a traditional-calendar date present in a
+  message is converted, acknowledged, and (single profile, complete fields)
+  flows straight into the standard five-section consultation.
+
 ## Google OAuth (Zero-Billing, Google Identity Services)
 
 ```
