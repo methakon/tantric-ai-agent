@@ -537,9 +537,10 @@ const WS_BASE = (location.protocol === 'https:' ? 'wss://' : 'ws://')
 let ws = null;
 let currentProfile = 'self';
 let sessionId = crypto.randomUUID();
-let hermesToken = sessionStorage.getItem('hermes_jwt') || null;
+let hermesToken = sessionStorage.getItem('hermes_jwt') || localStorage.getItem('hermes_jwt') || null;
 let googleClientId = null;
 let wsEverOpened = false;
+let firstFail = 0;
 
 function connect() {
   if (!hermesToken) return;
@@ -548,6 +549,7 @@ function connect() {
 
   ws.onopen = () => {
     wsEverOpened = true;
+    firstFail = 0;
     document.getElementById('statusDot').classList.add('online');
     document.getElementById('statusText').textContent = t('connected');
     hideAuthModal();   // connected = the auth gate must never remain over the chat
@@ -556,13 +558,20 @@ function connect() {
   ws.onclose = () => {
     document.getElementById('statusDot').classList.remove('online');
     document.getElementById('statusText').textContent = t('disconnected');
-    if (!wsEverOpened && googleClientId) {
-      hermesToken = null;
-      sessionStorage.removeItem('hermes_jwt');
-      showAuthModal(t('sessionExpired'));
+    if (wsEverOpened) {
+      firstFail = 0;
+      if (hermesToken) setTimeout(connect, 3000);
       return;
     }
-    if (hermesToken) setTimeout(connect, 3000);
+    // Never succeeded yet. Could be a dead token OR just a restarted server —
+    // retry a few times before suspecting the session, and never wipe the
+    // stored token here (a restart must not log the seeker out).
+    firstFail += 1;
+    if (firstFail >= 5) {
+      showAuthModal(t('sessionExpired'));
+      return;           // stop retrying; a sign-in or reload starts afresh
+    }
+    setTimeout(connect, 3000);
   };
 
   ws.onmessage = (evt) => {
@@ -767,7 +776,12 @@ async function handleGoogleCredentialResponse(response) {
       sessionStorage.setItem('hermes_jwt', data.access_token);
       sessionStorage.setItem('active_user_id', data.user_id);
       sessionStorage.setItem('active_sub_profile', data.sub_profile_id || 'self');
+      // persist across tabs/reloads: the server session is the authority (12h TTL)
+      localStorage.setItem('hermes_jwt', data.access_token);
+      localStorage.setItem('active_user_id', data.user_id);
+      localStorage.setItem('active_sub_profile', data.sub_profile_id || 'self');
       hermesToken = data.access_token;
+      firstFail = 0;
       hideAuthModal();
       connect();
       const strip = document.getElementById('signedInStrip');
