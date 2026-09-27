@@ -1,0 +1,107 @@
+{
+  "stages": [
+    {
+      "stage_id": "G15",
+      "stage_name": "NATIVE_EPHEMERIS_ENGINE",
+      "stage_description": "C-linkage of Swiss Ephemeris (libswe.a), zero-allocation Lahiri sidereal calculations, and Jaimini Karaka extraction.",
+      "status": "IN_PROGRESS",
+      "items": [
+        {
+          "item_key": "G15_LIBSWE_LINK",
+          "description": "Compile libswe.a with -O3 -fPIC and configure CMakeLists.txt link directories.",
+          "is_completed": false
+        },
+        {
+          "item_key": "G15_ZERO_ALLOC_CHART",
+          "description": "Implement 64-byte cache-aligned NatalChartPayload struct with sub-10us calculation time.",
+          "is_completed": false
+        },
+        {
+          "item_key": "G15_LAHIRI_PRECISION",
+          "description": "Validate sidereal output against the Indian Rashtriya Panchang within 1 arc-second tolerance.",
+          "is_completed": false
+        }
+      ]
+    },
+    {
+      "stage_id": "G16",
+      "stage_name": "PARAMETRIC_SACRED_GEOMETRY",
+      "stage_description": "SIMD-optimized non-linear intersection solver for Sri Yantra and zero-heap SVG serialization via std::to_chars.",
+      "status": "PENDING",
+      "items": [
+        {
+          "item_key": "G16_SRI_YANTRA_SOLVER",
+          "description": "Implement Nelder-Mead optimization for the 54 Marma triple intersections with coordinate error epsilon < 1e-6.",
+          "is_completed": false
+        },
+        {
+          "item_key": "G16_SVG_CHARCONV",
+          "description": "Serialize SVG strings into pre-allocated memory buffers using std::to_chars without dynamic allocation.",
+          "is_completed": false
+        }
+      ]
+    },
+    {
+      "stage_id": "G17",
+      "stage_name": "REALTIME_AUDIO_DSP",
+      "stage_description": "SPSC LockFreeRingBuffer integration for 22-Shruti microtonal synthesis, binaural entrainment, and IIR biquad formant chanting.",
+      "status": "PENDING",
+      "items": [
+        {
+          "item_key": "G17_SINE_LUT_INIT",
+          "description": "Generate 4096-entry constexpr sine lookup table aligned to L1 cache lines.",
+          "is_completed": false
+        },
+        {
+          "item_key": "G17_BINAURAL_ENGINE",
+          "description": "Implement stereo phase-accumulator oscillators driving pure Just Intonation and binaural delta offsets.",
+          "is_completed": false
+        },
+        {
+          "item_key": "G17_BIQUAD_FORMANTS",
+          "description": "Construct dual-pole IIR bandpass filter chain for A-U-M vowel transitions and Anusvara nasal resonance.",
+          "is_completed": false
+        }
+      ]
+    },
+    {
+      "stage_id": "G18",
+      "stage_name": "MULTIMODAL_VISION_PERCEPTION",
+      "stage_description": "OpenCV and ONNX Runtime C++ pipelines for Yantra contour hierarchy extraction and MediaPipe palm crease segmentation.",
+      "status": "PENDING",
+      "items": [
+        {
+          "item_key": "G18_ONNX_CLASSIFIER",
+          "description": "Deploy quantized ViT-B/16 model via ONNX Runtime C++ for sacred glyph and yantra classification.",
+          "is_completed": false
+        },
+        {
+          "item_key": "G18_PALM_SEGMENT",
+          "description": "Extract 21 hand landmarks and isolate ROIs for Jupiter, Saturn, Apollo, and Venus mounts via OpenCV.",
+          "is_completed": false
+        }
+      ]
+    },
+    {
+      "stage_id": "G19",
+      "stage_name": "GATEWAY_SAFETY_GOVERNANCE",
+      "stage_description": "Deterministic safety filters for harmful rites (Shatkarma), non-fatalistic astrological boundaries, and HTTP REST routes.",
+      "status": "PENDING",
+      "items": [
+        {
+          "item_key": "G19_SHATKARMA_FILTER",
+          "description": "Implement deterministic keyword and semantic trie blocking destructive operations (Marana, Vidveshana, Ucchatana).",
+          "is_completed": false
+        },
+        {
+          "item_key": "G19_HTTP_ROUTES",
+          "description": "Expose non-blocking HTTP GET endpoints: /api/v1/horoscope, /api/v1/yantra, and /api/v1/sound/stream.",
+          "is_completed": false
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-09-27T19:30:00Z",
+  "source": "AI Tantrik System Blueprint.pdf",
+  "notes": "This seed file replaces direct SQL insertion per AGENTS.md constraints. Import via the project-status API when available."
+}

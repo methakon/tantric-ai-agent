@@ -1,0 +1,14 @@
+{
+  "id": "consult-1-1790531635",
+  "query": "Test consultation",
+  "confidence": 0.951,
+  "systems": "Parashari,Jaimini,KP",
+  "summary": "Test summary"
+}
+{
+  "id": "consult-1-1790531652",
+  "query": "Test consultation",
+  "confidence": 0.951,
+  "systems": "Parashari,Jaimini,KP",
+  "summary": "Test summary"
+}
