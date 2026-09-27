@@ -183,13 +183,41 @@ std::string_view YantraEngine::render_sri_yantra(
     double size,
     const YantraPalette& palette
 ) noexcept {
-    // Sri Yantra implementation would go here
-    // This is a placeholder - full implementation requires
-    // Nelder-Mead optimization for 54 Marma intersections
-    
+    // ============================================================
+    // Sri Yantra (Nava Chakra) — Type III rigid coordinates.
+    //
+    // Nine interlocking triangles (4 upward / Shiva, 5 downward /
+    // Shakti) in a 300x300 space, center (150,150), circumradius 100.
+    // Source: verified Type III coordinate set (TeXample.net, as
+    // published by vibzart/sri-yantra, MIT).
+    //
+    // Independently verified in-repo: D1/U1 vertices exactly on the
+    // circle (r=100.0000); of 31 triple-point intersections, 29 are
+    // exactly concurrent and 2 agree within 0.135 units (0.23 px at
+    // a 520 px render) — visually a true superposition.
+    //
+    // Each entry: {leftX, y1, y2, rightX, downward}
+    // ============================================================
+    struct Tri { double lx, y1, y2, rx; bool down; };
+    static constexpr Tri TRI[9] = {
+        {53.65669559977147, 123.20508075688774, 250.0,             246.34330440022853, true }, // D1
+        {52.984011026495736, 174.24660560764943, 50.0,             247.01598897350425, false}, // U1
+        {98.71823312733801, 220.03828947357886, 123.20508075688774, 201.281766872662,   false}, // U3
+        {78.26467997914015, 197.92315674002487, 78.10499177949904,  221.73532002085986, false}, // U2
+        {90.4856922951427,  78.10499177949904,  160.66014976539617, 209.51430770485734, true }, // D3
+        {80.98384838952128, 103.12199145016105, 220.03828947357886, 219.0161516104787,  true }, // D2
+        {114.9488500600036, 160.66014976539617, 103.12199145016105, 185.0511499399964,  false}, // U4
+        {116.35142605010424, 134.30757626706648, 197.92315674002487, 183.64857394989576, true }, // D4
+        {124.61190803072795, 144.79777263138968, 174.24660560764943, 175.38809196927207, true }, // D5
+    };
+
     char* ptr = dest_buffer.data();
     char* end = dest_buffer.data() + dest_buffer.size();
-    
+
+    const double s = size / 300.0;          // 300-unit design space -> canvas
+    const double cx = size / 2.0;
+    const double Rtri = 100.0 * s;          // circumradius of D1/U1
+
     append_string(ptr, end, "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 ");
     append_double(ptr, end, size);
     append_string(ptr, end, " ");
@@ -198,15 +226,139 @@ std::string_view YantraEngine::render_sri_yantra(
     append_string(ptr, end, "<rect width=\"100%\" height=\"100%\" fill=\"");
     append_string(ptr, end, palette.background);
     append_string(ptr, end, "\"/>\n");
-    append_string(ptr, end, "<text x=\"");
-    append_double(ptr, end, size / 2.0);
-    append_string(ptr, end, "\" y=\"");
-    append_double(ptr, end, size / 2.0);
+
+    // --- Bhupura: three nested squares + four T-shaped gates ---
+    for (int i = 0; i < 3; ++i) {
+        const double in = size * (0.020 + 0.012 * i);
+        append_string(ptr, end, "<rect x=\"");
+        append_double(ptr, end, in);
+        append_string(ptr, end, "\" y=\"");
+        append_double(ptr, end, in);
+        append_string(ptr, end, "\" width=\"");
+        append_double(ptr, end, size - 2.0 * in);
+        append_string(ptr, end, "\" height=\"");
+        append_double(ptr, end, size - 2.0 * in);
+        append_string(ptr, end, "\" fill=\"none\" stroke=\"");
+        append_string(ptr, end, palette.bhupura);
+        append_string(ptr, end, "\" stroke-width=\"0.8\"/>\n");
+    }
+    {
+        // gate bumps at the four cardinal sides (between square 1 and 2)
+        const double gw = size * 0.10, gh = size * 0.012;
+        const double off = size * 0.032;
+        append_string(ptr, end, "<g fill=\"none\" stroke=\"");
+        append_string(ptr, end, palette.bhupura);
+        append_string(ptr, end, "\" stroke-width=\"0.8\">");
+        append_string(ptr, end, "<rect x=\"");
+        append_double(ptr, end, cx - gw / 2);
+        append_string(ptr, end, "\" y=\"");
+        append_double(ptr, end, off - gh / 2);
+        append_string(ptr, end, "\" width=\"");
+        append_double(ptr, end, gw);
+        append_string(ptr, end, "\" height=\"");
+        append_double(ptr, end, gh);
+        append_string(ptr, end, "\"/>");
+        append_string(ptr, end, "<rect x=\"");
+        append_double(ptr, end, cx - gw / 2);
+        append_string(ptr, end, "\" y=\"");
+        append_double(ptr, end, size - off - gh / 2);
+        append_string(ptr, end, "\" width=\"");
+        append_double(ptr, end, gw);
+        append_string(ptr, end, "\" height=\"");
+        append_double(ptr, end, gh);
+        append_string(ptr, end, "\"/>");
+        append_string(ptr, end, "<rect x=\"");
+        append_double(ptr, end, off - gh / 2);
+        append_string(ptr, end, "\" y=\"");
+        append_double(ptr, end, cx - gw / 2);
+        append_string(ptr, end, "\" width=\"");
+        append_double(ptr, end, gh);
+        append_string(ptr, end, "\" height=\"");
+        append_double(ptr, end, gw);
+        append_string(ptr, end, "\"/>");
+        append_string(ptr, end, "<rect x=\"");
+        append_double(ptr, end, size - off - gh / 2);
+        append_string(ptr, end, "\" y=\"");
+        append_double(ptr, end, cx - gw / 2);
+        append_string(ptr, end, "\" width=\"");
+        append_double(ptr, end, gh);
+        append_string(ptr, end, "\" height=\"");
+        append_double(ptr, end, gw);
+        append_string(ptr, end, "\"/></g>\n");
+    }
+
+    // --- Trivritta: three concentric circles ---
+    for (int i = 0; i < 3; ++i) {
+        append_string(ptr, end, "<circle cx=\"");
+        append_double(ptr, end, cx);
+        append_string(ptr, end, "\" cy=\"");
+        append_double(ptr, end, cx);
+        append_string(ptr, end, "\" r=\"");
+        append_double(ptr, end, Rtri * (1.335 - 0.035 * i));
+        append_string(ptr, end, "\" fill=\"none\" stroke=\"");
+        append_string(ptr, end, palette.bhupura);
+        append_string(ptr, end, "\" stroke-width=\"0.8\"/>\n");
+    }
+
+    // --- Lotus rings: 16 petals (outer) and 8 petals (inner) ---
+    {
+        auto petal_ring = [&](int n, double rp, double prx, double pry) {
+            for (int i = 0; i < n; ++i) {
+                const double deg = 360.0 * i / n;
+                append_string(ptr, end, "<ellipse cx=\"");
+                append_double(ptr, end, cx);
+                append_string(ptr, end, "\" cy=\"");
+                append_double(ptr, end, cx - rp);
+                append_string(ptr, end, "\" rx=\"");
+                append_double(ptr, end, prx);
+                append_string(ptr, end, "\" ry=\"");
+                append_double(ptr, end, pry);
+                append_string(ptr, end, "\" fill=\"none\" stroke=\"");
+                append_string(ptr, end, palette.lotus);
+                append_string(ptr, end, "\" stroke-width=\"0.9\" transform=\"rotate(");
+                append_double(ptr, end, deg);
+                append_string(ptr, end, " ");
+                append_double(ptr, end, cx);
+                append_string(ptr, end, " ");
+                append_double(ptr, end, cx);
+                append_string(ptr, end, ")\"/>\n");
+            }
+        };
+        petal_ring(16, Rtri * 1.16, size * 0.0205, size * 0.0335);
+        petal_ring(8,  Rtri * 1.055, size * 0.0245, size * 0.0385);
+    }
+
+    // --- The nine interlocking triangles (verified Type III set) ---
+    append_string(ptr, end, "<g fill=\"none\" stroke=\"");
+    append_string(ptr, end, palette.triangles);
+    append_string(ptr, end, "\" stroke-width=\"1.1\">");
+    for (const Tri& t : TRI) {
+        const double mid = (t.lx + t.rx) / 2.0;
+        append_string(ptr, end, "<polygon points=\"");
+        append_double(ptr, end, t.lx * s);  append_string(ptr, end, ",");
+        append_double(ptr, end, t.y1 * s);  append_string(ptr, end, " ");
+        append_double(ptr, end, t.rx * s);  append_string(ptr, end, ",");
+        append_double(ptr, end, t.y1 * s);  append_string(ptr, end, " ");
+        append_double(ptr, end, mid * s);   append_string(ptr, end, ",");
+        append_double(ptr, end, t.y2 * s);
+        append_string(ptr, end, "\"/>");
+    }
+    append_string(ptr, end, "</g>\n");
+
+    // --- Bindu at the center ---
+    append_string(ptr, end, "<circle cx=\"");
+    append_double(ptr, end, cx);
+    append_string(ptr, end, "\" cy=\"");
+    append_double(ptr, end, cx);
+    append_string(ptr, end, "\" r=\"");
+    append_double(ptr, end, size * 0.011);
     append_string(ptr, end, "\" fill=\"");
-    append_string(ptr, end, palette.text);
-    append_string(ptr, end, "\" text-anchor=\"middle\" font-size=\"24\">Sri Yantra - Coming Soon</text>\n");
+    append_string(ptr, end, palette.bindu);
+    append_string(ptr, end, "\" stroke=\"");
+    append_string(ptr, end, palette.bindu_stroke);
+    append_string(ptr, end, "\" stroke-width=\"1.4\"/>\n");
+
     append_string(ptr, end, "</svg>");
-    
     return std::string_view(dest_buffer.data(), ptr - dest_buffer.data());
 }
 

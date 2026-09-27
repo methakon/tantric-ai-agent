@@ -438,6 +438,9 @@ const STRINGS = {
     safetyAllowed: '✓ কেবল শান্তি · পৌষ্টিক · রক্ষা',
     roleAcharya:   'আচার্য-সিদ্ধ',
     roleSeeker:    'জিজ্ঞাসু',
+    roleSystem:    'সিস্টেম',
+    engineError:   'প্রতিক্রিয়া সম্পূর্ণ হয়নি',
+    notConnected:  'সংযোগ নেই — মেরামত চলছে, কয়েক সেকেন্ড পর আবার পাঠান।',
     greeting:      'প্রণাম। আমি আচার্য-সিদ্ধ। জন্ম তারিখ, সময় ও স্থান দিন — অথবা যা মনে ভার করছে জিজ্ঞাসা করুন — আমি গণনা করব, অনুমান নয়।\n\nসক্রিয় মূল ইঞ্জিন: নিরয়ন গ্রহপঞ্জি (লাহিড়ী), ভেক্টর যন্ত্র-চিত্রাঙ্কন, ২২-শ্রুতি ধ্বনি-বয়ন, এবং আন্তঃপরম্পরা প্রতিকার-নকশা।',
     inputPlaceholder: 'আপনার প্রশ্ন লিখুন, অথবা জন্ম-বিবরণ দিন (তারিখ · সময় · স্থান)...',
     send:          'জিজ্ঞাসা করুন',
@@ -472,6 +475,9 @@ const STRINGS = {
     safetyAllowed: '✓ Shanti · Paushtika · Raksha only',
     roleAcharya:   'Acharya-Siddha',
     roleSeeker:    'Seeker',
+    roleSystem:    'System',
+    engineError:   'The response was not completed',
+    notConnected:  'No connection — recovering, please send again in a few seconds.',
     greeting:      'Pranam. I am the Acharya-Siddha. Provide a birth date, time, and place — or ask what weighs upon you — and I shall compute, not guess.\n\nNative engines online: sidereal ephemeris (Lahiri), vector Yantra rendering, 22-Shruti acoustic weaving, and cross-tradition remedial mapping.',
     inputPlaceholder: 'Speak your question, or supply birth details (date · time · place)...',
     send:          'Consult',
@@ -544,6 +550,7 @@ function connect() {
     wsEverOpened = true;
     document.getElementById('statusDot').classList.add('online');
     document.getElementById('statusText').textContent = t('connected');
+    hideAuthModal();   // connected = the auth gate must never remain over the chat
   };
 
   ws.onclose = () => {
@@ -569,6 +576,21 @@ function connect() {
 }
 
 function renderFrame(frame) {
+  if (frame.type === 'error') {
+    const container = document.getElementById('messages');
+    const errMsg = document.createElement('div');
+    errMsg.className = 'message';
+    errMsg.innerHTML = '<div class="role">' + t('roleSystem') + '</div>'
+                     + '<div class="content"></div>';
+    errMsg.querySelector('.content').textContent =
+      t('engineError') + (frame.message ? ': ' + frame.message : '')
+      + (frame.code ? ' [' + frame.code + ']' : '');
+    container.appendChild(errMsg);
+    container.scrollTop = container.scrollHeight;
+    const stuck = document.getElementById('streaming-msg');
+    if (stuck) stuck.removeAttribute('id');
+    return;
+  }
   if (frame.type !== 'diagnostic_chunk') return;
 
   const container = document.getElementById('messages');
@@ -615,7 +637,19 @@ function renderFrame(frame) {
 function send() {
   const input = document.getElementById('input');
   const text = input.value.trim();
-  if (!text || !ws || ws.readyState !== WebSocket.OPEN) return;
+  if (!text) return;
+  if (!ws || ws.readyState !== WebSocket.OPEN) {
+    const container = document.getElementById('messages');
+    const notice = document.createElement('div');
+    notice.className = 'message';
+    notice.innerHTML = '<div class="role">' + t('roleSystem') + '</div>'
+                     + '<div class="content"></div>';
+    notice.querySelector('.content').textContent = t('notConnected');
+    container.appendChild(notice);
+    container.scrollTop = container.scrollHeight;
+    if (hermesToken) connect();
+    return;
+  }
 
   const container = document.getElementById('messages');
   const msg = document.createElement('div');
@@ -760,6 +794,7 @@ async function initAuth() {
 
     if (cfg.enabled && googleClientId) {
       if (hermesToken) {
+        hideAuthModal();          // restored session: never leave the gate over the chat
         connect();
       } else {
         showAuthModal();
@@ -771,7 +806,7 @@ async function initAuth() {
           clearInterval(timer);
         } else if (++tries > 40) {
           clearInterval(timer);
-          showAuthModal(t('gisFailed'));
+          if (!hermesToken) showAuthModal(t('gisFailed'));
         }
       }, 250);
     } else {

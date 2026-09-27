@@ -124,7 +124,35 @@ python3 scripts/crypto_engine.py   # encrypt/HMAC/file tests
 `web/index.html` — obsidian slate (#07070a) + temple gold (#d4af37) + ruby (#e63946).
 Bilingual UI (বাংলা default / English) with an in-page language chooser — no
 Devanagari/Hindi anywhere in the client. WebSocket streaming at `/v1/chat/ws`
-with inline Yantra SVG (Bengali-script bija mantra) and acoustic metadata.
+with inline Yantra SVG and acoustic metadata.
+
+### Consultation pipeline (CONSULT)
+
+Each `user_message` WS frame is answered by a real, streamed consultation:
+
+```
+Browser WS ─> C++ gateway ─> UDS CONSULT ─> Python bridge
+                 │                             ├─ safety gate (C++ SafetyValidator,
+                 │                             │   `tantric_engine --safety`) — Shatkarma /
+                 │                             │   coercive / fatalist / crisis refusals
+                 │                             ├─ birth-data parse (date · time · city)
+                 │                             ├─ sidereal chart (pyswisseph, Lahiri)
+                 │                             ├─ Todola Tantra remedial row (SQLite/MySQL)
+                 │                             └─ yantra SVG (`tantric_engine --yantra …`)
+                 └─ diagnostic_chunk frames (chunks + yantra_svg + audio{f0,binaural} + final)
+```
+
+- Reply structure is fixed: 5 sections (Diagnostic · Esoteric context · Yantra ·
+  Acoustic & remedial practice · Philosophical synthesis), in the user's language.
+- Yantra renderers: `kali` (Kali Yantra), `shatkona` (hexagram, Bagalamukhi), and
+  `sri` (Sri Yantra — Nava Chakra, Type III rigid coordinates; verified: D1/U1
+  vertices exactly on the circle, 29/31 triple points exactly concurrent, 2
+  within 0.135 units ≈ 0.23 px at 520 px).
+- Wire contract for the string-only C++ micro-parser: numeric scalars
+  (`chunk_count`, `audio_f0`, `audio_binaural`) travel as *strings* and the
+  gateway re-validates them (`strtol`/`strtod`) before embedding.
+- A restored session (token in sessionStorage) goes straight to the connected
+  chat — the auth gate never remains over a working connection.
 
 ## Google OAuth (Zero-Billing, Google Identity Services)
 

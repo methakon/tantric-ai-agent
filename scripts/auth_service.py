@@ -21,6 +21,7 @@ import uuid
 import time
 import hashlib
 import secrets
+import sqlite3
 from typing import Optional
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -42,6 +43,13 @@ MYSQL = dict(
     password=os.environ.get("MYSQL_PASSWORD", ""),
     database=os.environ.get("MYSQL_DATABASE", "myjob_agent"),
 )
+
+# ----- Storage backend -----
+# DB_BACKEND=sqlite -> local tantric_agent.db (development / tunnel down)
+# DB_BACKEND=mysql  -> Oracle Cloud MySQL through the SSH tunnel (production)
+DB_BACKEND = os.environ.get("DB_BACKEND", "mysql").strip().lower()
+SQLITE_PATH = os.environ.get("SQLITE_PATH") or os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tantric_agent.db")
 
 # In-memory session map: sha256(token) -> session record
 _SESSIONS: dict = {}
@@ -121,7 +129,61 @@ def verify_google_token(token_str: str) -> dict:
 # ============================================
 # DATABASE SYNC
 # ============================================
-def _db():
+class _SqliteCursor:
+    """pymysql-cursor-compatible shim: %s placeholders -> ?, dict-like rows."""
+
+    def __init__(self, cur):
+        self._cur = cur
+
+    def execute(self, sql, params=None):
+        sql = sql.replace("%s", "?")
+        if params is None:
+            return self._cur.execute(sql)
+        return self._cur.execute(sql, tuple(params))
+
+    def fetchone(self):
+        return self._cur.fetchone()
+
+    def fetchall(self):
+        return self._cur.fetchall()
+
+    def close(self):
+        self._cur.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
+        return False
+
+
+class _SqliteConn:
+    """pymysql-connection-compatible shim over sqlite3."""
+
+    def __init__(self, path: str):
+        self._conn = sqlite3.connect(path, timeout=15)
+        self._conn.row_factory = sqlite3.Row
+        self._conn.execute("PRAGMA journal_mode=WAL")
+        self._conn.execute("PRAGMA foreign_keys=ON")
+
+    def cursor(self):
+        return _SqliteCursor(self._conn.cursor())
+
+    def commit(self):
+        self._conn.commit()
+
+    def rollback(self):
+        self._conn.rollback()
+
+    def close(self):
+        self._conn.close()
+
+
+def db_connect():
+    """Open the configured store. Same call sites work on both backends."""
+    if DB_BACKEND == "sqlite":
+        return _SqliteConn(SQLITE_PATH)
     import pymysql
     return pymysql.connect(
         host=MYSQL["host"], port=MYSQL["port"], user=MYSQL["user"],
@@ -129,6 +191,10 @@ def _db():
         cursorclass=pymysql.cursors.DictCursor,
         ssl_disabled=True, connect_timeout=8, read_timeout=8,
     )
+
+
+def _db():
+    return db_connect()
 
 
 def sync_user_with_db(user_info: dict) -> dict:

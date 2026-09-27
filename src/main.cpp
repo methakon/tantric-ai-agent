@@ -17,7 +17,10 @@
 #include <array>
 #include <chrono>
 #include <cstring>
+#include <cstdlib>
+#include <string>
 #include <fstream>
+#include <string_view>
 
 #include "ephemeris_engine.hpp"
 #include "yantra_engine.hpp"
@@ -299,7 +302,76 @@ void demo_self_audit() {
     std::cout << "  Average confidence: " << stats.average_confidence << "\n";
 }
 
-int main() {
+int main(int argc, char** argv) {
+    // ============================================================
+    // Machine modes (used by the Python IPC bridge over subprocess):
+    //   tantric_engine --yantra kali|sri|shatkona|wifq[:N] [--size N]
+    //   tantric_engine --safety "<user text>"
+    // ============================================================
+    if (argc > 1) {
+        std::string mode = argv[1];
+
+        if (mode == "--yantra") {
+            std::string kind = (argc > 2) ? argv[2] : "kali";
+            double size = tantric::geometry::YantraEngine::DEFAULT_SIZE;
+            for (int i = 3; i + 1 < argc; ++i) {
+                if (std::string(argv[i]) == "--size") size = std::atof(argv[i + 1]);
+            }
+            std::array<char, tantric::geometry::YantraEngine::BUFFER_SIZE> buf;
+            std::string_view svg;
+            try {
+                if (kind == "kali") {
+                    svg = tantric::geometry::YantraEngine::render_kali_yantra(buf, size);
+                } else if (kind == "sri") {
+                    svg = tantric::geometry::YantraEngine::render_sri_yantra(buf, size);
+                } else if (kind == "shatkona") {
+                    svg = tantric::geometry::YantraEngine::render_shatkona(buf, size);
+                } else if (kind.rfind("wifq", 0) == 0) {
+                    uint8_t order = 3;
+                    auto colon = kind.find(':');
+                    if (colon != std::string::npos) {
+                        order = static_cast<uint8_t>(std::atoi(kind.c_str() + colon + 1));
+                    }
+                    svg = tantric::geometry::YantraEngine::render_wifq(buf, order, size);
+                } else {
+                    std::cerr << "unknown yantra type: " << kind << "\n";
+                    return 2;
+                }
+            } catch (...) {
+                std::cerr << "render failed\n";
+                return 3;
+            }
+            std::cout.write(svg.data(), static_cast<std::streamsize>(svg.size()));
+            return 0;
+        }
+
+        if (mode == "--safety") {
+            if (argc < 3) {
+                std::cerr << "usage: --safety \"<text>\"\n";
+                return 2;
+            }
+            auto verdict = tantric::safety::SafetyValidator::inspect(argv[2]);
+            const char* name = "PERMITTED";
+            switch (verdict) {
+                case tantric::safety::SafetyResult::BLOCKED_HARMFUL_RITE:
+                    name = "BLOCKED_HARMFUL_RITE"; break;
+                case tantric::safety::SafetyResult::BLOCKED_FATALISTIC:
+                    name = "BLOCKED_FATALISTIC"; break;
+                case tantric::safety::SafetyResult::BLOCKED_MENTAL_HEALTH:
+                    name = "BLOCKED_MENTAL_HEALTH"; break;
+                case tantric::safety::SafetyResult::BLOCKED_COERCIVE:
+                    name = "BLOCKED_COERCIVE"; break;
+                default: break;
+            }
+            std::cout << name << "\n";
+            return 0;
+        }
+
+        std::cerr << "unknown mode: " << mode
+                  << " (expected --yantra or --safety)\n";
+        return 2;
+    }
+
     std::cout << "\n";
     std::cout << "╔════════════════════════════════════════════════════════════╗\n";
     std::cout << "║     TANTRIC AI AGENT v1.1 - C++20 ENGINE DEMO            ║\n";

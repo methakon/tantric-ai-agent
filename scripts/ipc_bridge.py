@@ -367,6 +367,9 @@ class IPCServer:
       - VERIFY_GOOGLE_OAUTH  {id_token}  -> full Google login flow
       - VALIDATE_SESSION     {token}     -> session lookup for WS handshake
       - GET_AUTH_CONFIG      {}          -> {"client_id": "..."}
+      - CONSULT              {content, lang, user_id, sub_profile_id}
+                                         -> 5-section consultation reply
+                                            (chunks + yantra SVG + acoustics)
       - PING                 {}          -> {"status": "SUCCESS", "pong": true}
     """
 
@@ -415,6 +418,13 @@ class IPCServer:
                 from auth_service import GOOGLE_CLIENT_ID
                 return {"status": "SUCCESS", "client_id": GOOGLE_CLIENT_ID}
 
+            if action == "CONSULT":
+                from consultation_engine import consult
+                return consult(req.get("content", ""),
+                               lang=req.get("lang", "bn"),
+                               user_id=req.get("user_id", ""),
+                               sub_profile_id=req.get("sub_profile_id", ""))
+
             return {"status": "ERROR", "message": f"unknown action: {action}"}
         except Exception as e:
             return {"status": "ERROR", "message": f"handler exception: {e}"}
@@ -435,7 +445,7 @@ class IPCServer:
                     continue
                 req = json.loads(payload.decode('utf-8'))
                 resp = self._handle_action(req)
-                resp_bytes = json.dumps(resp).encode('utf-8')
+                resp_bytes = json.dumps(resp, ensure_ascii=False).encode('utf-8')
                 conn.sendall(struct.pack('<I', len(resp_bytes)) + resp_bytes)
             except (json.JSONDecodeError, ConnectionError, OSError) as e:
                 print(f"[WARN] connection error: {e}", flush=True)

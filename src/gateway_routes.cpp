@@ -11,6 +11,7 @@
 #include <arpa/inet.h>
 #include <cerrno>
 #include <cstring>
+#include <cstdlib>
 #include <fcntl.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
@@ -690,11 +691,76 @@ int HttpGateway::run() {
                             c->frag_op = -1;
 
                             std::string content = json_extract_string(full, "content");
-                            std::string reply =
-                                "{\"type\":\"diagnostic_chunk\",\"section\":\"diagnostic\","
-                                "\"content\":\"[ack] " + json_escape(content) + "\","
-                                "\"final\":true}";
-                            ws_send(*c, 0x1, reply);
+                            std::string lang = json_extract_string(full, "lang");
+                            if (lang != "en") lang = "bn";
+                            std::string subp = json_extract_string(full, "sub_profile_id");
+
+                            // Consultation request -> Python bridge (CONSULT).
+                            // Timeout is the 20s IPC budget (JWKS-free path,
+                            // but pyswisseph + yantra render still cost ~0.3s).
+                            std::string ipc_req =
+                                "{\"action\": \"CONSULT\", "
+                                "\"user_id\": \"" + json_escape(c->session_user) + "\", "
+                                "\"sub_profile_id\": \"" + json_escape(subp) + "\", "
+                                "\"content\": \"" + json_escape(content) + "\", "
+                                "\"lang\": \"" + lang + "\"}";
+                            std::string resp = ipc_call(cfg_.ipc_socket, ipc_req);
+                            std::string status = json_extract_string(resp, "status");
+                            if (status != "SUCCESS") {
+                                std::string msg = json_extract_string(resp, "message");
+                                if (msg.empty()) msg = "consultation engine unavailable";
+                                ws_send(*c, 0x1,
+                                    "{\"type\":\"error\",\"code\":\"CONSULT_FAILED\","
+                                    "\"message\":\"" + json_escape(msg) + "\"}");
+                            } else {
+                                // chunk_count / audio values arrive as strings
+                                // (gateway micro-parser is string-only); validate
+                                // them here so a malformed scalar can never
+                                // corrupt the frame JSON.
+                                int n = 0;
+                                {
+                                    std::string cc = json_extract_string(resp, "chunk_count");
+                                    if (!cc.empty()) {
+                                        char* end = nullptr;
+                                        long v = std::strtol(cc.c_str(), &end, 10);
+                                        if (end && *end == '\0' && v > 0 && v <= 64)
+                                            n = static_cast<int>(v);
+                                    }
+                                }
+                                if (n < 1) n = 1;
+                                std::string yantra = json_extract_string(resp, "yantra_svg");
+                                std::string af0 = json_extract_string(resp, "audio_f0");
+                                std::string abin = json_extract_string(resp, "audio_binaural");
+                                bool audio_ok = false;
+                                {
+                                    char* e1 = nullptr; char* e2 = nullptr;
+                                    std::strtod(af0.c_str(), &e1);
+                                    std::strtod(abin.c_str(), &e2);
+                                    audio_ok = (!af0.empty() && !abin.empty() &&
+                                                e1 && *e1 == '\0' &&
+                                                e2 && *e2 == '\0');
+                                }
+                                for (int i = 0; i < n; ++i) {
+                                    std::string chunk = json_extract_string(
+                                        resp, "chunk_" + std::to_string(i));
+                                    std::string frame =
+                                        "{\"type\":\"diagnostic_chunk\","
+                                        "\"section\":\"diagnostic\","
+                                        "\"content\":\"" + json_escape(chunk) + "\"";
+                                    if (i == n - 1) {
+                                        if (!yantra.empty())
+                                            frame += ",\"yantra_svg\":\"" +
+                                                     json_escape(yantra) + "\"";
+                                        if (audio_ok)
+                                            frame += ",\"audio\":{\"f0\":" + af0 +
+                                                     ",\"binaural\":" + abin + "}";
+                                        frame += ",\"final\":true}";
+                                    } else {
+                                        frame += ",\"final\":false}";
+                                    }
+                                    ws_send(*c, 0x1, frame);
+                                }
+                            }
                         } else {
                             ws_send(*c, 0x1,
                                 "{\"type\":\"error\",\"code\":\"UNSUPPORTED_OPCODE\"}");
