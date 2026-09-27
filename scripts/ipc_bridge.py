@@ -18,6 +18,10 @@ import threading
 import time
 import numpy as np
 
+# Kinship provisioning: last AUTO_SYNC result per user so the CONSULT
+# immediately following can acknowledge the registration truthfully.
+_LAST_SYNC = {}
+
 # Add venv packages
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'venv', 'lib', 'python3.12', 'site-packages'))
 
@@ -420,10 +424,64 @@ class IPCServer:
 
             if action == "CONSULT":
                 from consultation_engine import consult
+                uid = req.get("user_id", "")
+                registered = None
+                rec = _LAST_SYNC.get(uid) if uid else None
+                if rec and (time.time() - rec["t"]) < 300:
+                    registered = rec["names"]
+                self_name = None
+                if uid:
+                    try:
+                        from auth_service import db_connect
+                        from subprofile_service import _self_display_name
+                        _c = db_connect()
+                        try:
+                            self_name = _self_display_name(_c, uid)
+                        finally:
+                            _c.close()
+                    except Exception:
+                        self_name = None
                 return consult(req.get("content", ""),
                                lang=req.get("lang", "bn"),
-                               user_id=req.get("user_id", ""),
-                               sub_profile_id=req.get("sub_profile_id", ""))
+                               user_id=uid,
+                               sub_profile_id=req.get("sub_profile_id", ""),
+                               registered=registered,
+                               self_name=self_name)
+
+            if action == "AUTO_SYNC_FAMILY_PROFILES":
+                # Kinship provisioning: extract every named person in the
+                # message (numbered lists, "Name (Wife), Date of Birth: …",
+                # Bengali San dates) and upsert them under the active user.
+                # Fast no-op for ordinary chat messages.
+                from subprofile_extractor import extract_profiles_from_text
+                from subprofile_service import sync_subprofiles
+                uid = (req.get("user_id") or "").strip()
+                text = req.get("message_text", "")
+                if not uid:
+                    return {"status": "NO_USER"}
+                if len(text) < 8:
+                    return {"status": "NO_PROFILES_DETECTED"}
+                profiles = extract_profiles_from_text(text)
+                if not profiles:
+                    return {"status": "NO_PROFILES_DETECTED"}
+                synced = sync_subprofiles(uid, profiles)
+                synced = [s for s in synced
+                          if s.get("action") in ("CREATED", "UPDATED")]
+                if not synced:
+                    return {"status": "NO_PROFILES_DETECTED"}
+                _LAST_SYNC[uid] = {"t": time.time(),
+                                   "names": [s["name"] for s in synced]}
+                names = ", ".join(s["name"] for s in synced)
+                if req.get("lang") == "en":
+                    event_text = (f"Kinship Tree updated: {len(synced)} "
+                                  f"profile(s) registered — {names}")
+                else:
+                    event_text = (f"Kinship Tree হালনাগাদ: {len(synced)}টি প্রোফাইল "
+                                  f"নিবন্ধিত — {names}")
+                return {"status": "SUCCESS",
+                        "synced_count": str(len(synced)),
+                        "event_text": event_text,
+                        "names": names}
 
             if action == "UPLOAD_DOCUMENT":
                 # Document intake (file picker or in-browser camera capture).

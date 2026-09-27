@@ -216,6 +216,36 @@ camera snap ─┘   (X-Session-Token,      (base64)      └─ file_ingestion 
   message is converted, acknowledged, and (single profile, complete fields)
   flows straight into the standard five-section consultation.
 
+### Autonomous kinship provisioning (AUTO_SYNC_FAMILY_PROFILES)
+
+Every WS `user_message` first runs through the provisioning pipeline (fast
+no-op for ordinary chat):
+
+```
+message -> gateway AUTO_SYNC_FAMILY_PROFILES -> bridge
+        -> subprofile_extractor.extract_profiles_from_text (name + relation +
+           date/time/place; Bengali San via the computed converter; weekday
+           cross-checked; Gregorian "December 9, 1981" forms; 12h clocks)
+        -> subprofile_service.sync_subprofiles (upsert into
+           tantric_user_sub_profiles via auth_service.db_connect — SQLite now,
+           MySQL later; dedupe: user_id + relationship + name; the SELF row is
+           matched by relationship and updated in place)
+        -> {"status":"SUCCESS","synced_count":N,"event_text":…}
+gateway -> WS frame {"type":"profiles_synced","event":"SUB_PROFILES_SYNCED",
+                     "count":N,"text":…}   (client shows a Kinship Tree note)
+gateway -> CONSULT   (the family reply then acknowledges the registration
+                      with the real names and the computed charts)
+```
+
+Persistence rules: only people **with birth data and a usable name** (or the
+account holder stating their own birth data) become rows — chat sentences and
+bare date lines never do. Dates from regional calendars are stored with
+`birth_date_confirmed = 0` (derived, rectification pending). Extra columns
+`gender`, `birth_place`, `metadata` (relation label, declared attributes,
+warnings JSON) are added by `init_local_db.py`'s idempotent upgrade path.
+Relationship values stay lowercase (`self`, `spouse`, `child`, `father`,
+`mother`, …) to match the existing OAuth-provisioned rows.
+
 ## Google OAuth (Zero-Billing, Google Identity Services)
 
 ```

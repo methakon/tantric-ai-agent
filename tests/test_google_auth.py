@@ -616,6 +616,53 @@ def main():
               bn_joined[:160])
         sock5.close()
 
+        # 19. kinship provisioning: family payload -> SUB_PROFILES_SYNCED + rows
+        sock6 = ws_connect(f"/v1/chat/ws?token={access_token}")[0]
+        ws_send_text(sock6, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": ("1. Swarna Sekhar Dhar, Date of Birth: December 9, 1981, "
+                        "Time of Birth: 01:00 AM, Place: Berhampore\n"
+                        "2. Mamata Rajbanshi Dhar (Wife), বাংলা তারিখ: ২৭ কার্তিক ১৪০৫, "
+                        "বার: বৃহস্পতিবার, Time: 11:00 AM, Place: Kandi\n"
+                        "3. Sastav Dhar (Elder Son), Date of Birth: April 2, 2019, "
+                        "Time: 13:09, Place: Kandi\n"
+                        "4. Abhyant Dhar (Younger Son), Date of Birth: August 19, 2021, "
+                        "Time: 16:02, Place: Kandi"),
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        synced_event = None
+        prov_joined, prov_final = "", False
+        for _ in range(24):
+            op, payload = ws_read_frame(sock6, timeout=12.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "profiles_synced":
+                synced_event = frame
+            elif frame.get("type") == "diagnostic_chunk":
+                prov_joined += frame.get("content", "")
+                if frame.get("final"):
+                    prov_final = True
+                    break
+        check("WS family payload -> SUB_PROFILES_SYNCED event",
+              synced_event is not None
+              and str(synced_event.get("count")) == "4"
+              and "নিবন্ধিত" in (synced_event.get("text") or ""),
+              str(synced_event)[:160])
+        _c = _sqlite3.connect(TEST_DB)
+        pairs = set(_c.execute(
+            "SELECT relationship, birth_year FROM tantric_user_sub_profiles"
+        ).fetchall())
+        _c.close()
+        check("kinship rows persisted (self 1981, spouse 1998, children 2019/2021)",
+              {("self", 1981), ("spouse", 1998),
+               ("child", 2019), ("child", 2021)} <= pairs, str(sorted(pairs)))
+        check("consult reply acknowledges registration + computed charts",
+              prov_final and "Kinship Tree-তে নিবন্ধিত" in prov_joined
+              and "লগ্ন কন্যা 13.89" in prov_joined
+              and "শুভ ত্রিকোণ" in prov_joined,
+              prov_joined[:160])
+        sock6.close()
+
     finally:
         gateway.terminate()
         bridge.terminate()

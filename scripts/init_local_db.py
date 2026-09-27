@@ -41,6 +41,18 @@ def main():
                 conn.execute(
                     "CREATE UNIQUE INDEX IF NOT EXISTS idx_users_google_id "
                     "ON tantric_users(google_id)")
+        # tantric_user_sub_profiles: kinship provisioning columns
+        if "tantric_user_sub_profiles" in tables:
+            cols = _columns(conn, "tantric_user_sub_profiles")
+            if "gender" not in cols:
+                conn.execute("ALTER TABLE tantric_user_sub_profiles "
+                             "ADD COLUMN gender TEXT")
+            if "birth_place" not in cols:
+                conn.execute("ALTER TABLE tantric_user_sub_profiles "
+                             "ADD COLUMN birth_place TEXT")
+            if "metadata" not in cols:
+                conn.execute("ALTER TABLE tantric_user_sub_profiles "
+                             "ADD COLUMN metadata TEXT")
         # tantric_remedial_mapping: rebuilt once to mirror the MySQL shape
         if "tantric_remedial_mapping" in tables:
             cols = _columns(conn, "tantric_remedial_mapping")

@@ -327,7 +327,8 @@ def _refusal(verdict: str, lang: str):
 _UPLOAD_RE = re.compile(r'^\[uploaded:\s*(.+?)\]$')
 
 
-def compose_consultation(content: str, lang: str):
+def compose_consultation(content: str, lang: str, registered=None,
+                         self_name=None):
     """Main composer. Returns response dict for the gateway."""
     up = _UPLOAD_RE.match((content or "").strip())
     if up:
@@ -381,7 +382,8 @@ def compose_consultation(content: str, lang: str):
         if ok_conv:
             bn_date_conv = ok_conv[0]
     if kp and (kp["is_multi_profile"] or kp["is_nashta_jataka_requested"]):
-        fam = _family_consultation(kp, lang, content)
+        fam = _family_consultation(kp, lang, content, registered=registered,
+                                   self_name=self_name)
         if fam is not None:
             return fam
     if kp and kp["has_bengali_date"]:
@@ -566,7 +568,8 @@ RELATION_EN2 = {"self": "Self", "father": "Father", "mother": "Mother",
                 "grandmother": "Grandmother", "unspecified": "Unnamed"}
 
 
-def _family_consultation(kp, lang, content):
+def _family_consultation(kp, lang, content, registered=None,
+                         self_name=None):
     """Multi-profile / traditional-calendar / Nashta consultation — computed.
 
     Progressive (streamed) verbatim composition. Every position, window and
@@ -589,8 +592,14 @@ def _family_consultation(kp, lang, content):
     def nakshatra(i):
         return NAKSHATRA_EN[i] if en else NAKSHATRA_BN[i]
 
+    def _norm(s):
+        return " ".join((s or "").lower().split())
+
     def label(p):
-        base = (RELATION_EN2 if en else RELATION_BN).get(p["relation"], p["relation"])
+        if self_name and _norm(p.get("name")) == _norm(self_name):
+            base = "Self" if en else "নিজে"
+        else:
+            base = (RELATION_EN2 if en else RELATION_BN).get(p["relation"], p["relation"])
         return f"{base} {p['name']}" if p.get("name") else base
 
     def resolve_place(pname):
@@ -615,11 +624,19 @@ def _family_consultation(kp, lang, content):
 
     L = []
     if en:
-        L.append(f"Family ingestion complete — {len(profiles)} profiles recognized. "
-                 "All positions below are computed (Lahiri sidereal), not recalled.\n")
+        line = (f"Family ingestion complete — {len(profiles)} profiles recognized. "
+                "All positions below are computed (Lahiri sidereal), not recalled.")
+        if registered:
+            line += (" Registered in your Kinship Tree: " +
+                     ", ".join(registered) + ".")
+        L.append(line + "\n")
     else:
-        L.append(f"পরিবার-গ্রহণ সম্পূর্ণ — {len(profiles)} জনের প্রোফাইল চিহ্নিত. "
-                 "নিচের সব গণনা লাহিড়ী নিরয়ণ গ্রহপঞ্জিতে সম্পাদিত — স্মৃতি থেকে নয়.\n")
+        line = (f"পরিবার-গ্রহণ সম্পূর্ণ — {len(profiles)} জনের প্রোফাইল চিহ্নিত. "
+                "নিচের সব গণনা লাহিড়ী নিরয়ণ গ্রহপঞ্জিতে সম্পাদিত — স্মৃতি থেকে নয়.")
+        if registered:
+            line += (" Kinship Tree-তে নিবন্ধিত/হালনাগাদ: " +
+                     ", ".join(registered) + ".")
+        L.append(line + "\n")
 
     # ---- per-profile computation --------------------------------------
     computed = []
@@ -825,12 +842,14 @@ def _family_consultation(kp, lang, content):
             for j in range(i + 1, len(fulls)):
                 a, b = fulls[i], fulls[j]
                 d = (b["chart"]["moon_rashi"] - a["chart"]["moon_rashi"]) % 12
-                if d in (1, 11):
+                if d in (4, 8):
                     tone_en, tone_bn = "harmonious trine (5/9)", "শুভ ত্রিকোণ (৫/৯)"
                 elif d in (5, 7):
                     tone_en, tone_bn = "afflicted axis (6/8) — calming routines advised", "ষড়ষ্টক (৬/৮) — শান্তিদায়ক নিত্যকর্ম বিধেয়"
                 elif d == 0:
                     tone_en, tone_bn = "same sign — shared temperament", "সমরাশি — সমধর্মী"
+                elif d == 6:
+                    tone_en, tone_bn = "opposition (7/7) — balancing needed", "সম্মুখ (৭/৭) — ভারসাম্য কাম্য"
                 else:
                     tone_en, tone_bn = "neutral", "সাধারণ"
                 ln = f"— {label(a['p'])} ↔ {label(b['p'])}: {tone_en if en else tone_bn}"
@@ -891,10 +910,17 @@ def _pack(chunks, lang, svg, audio):
 
 
 def consult(content: str, lang: str = "bn", user_id: str = "",
-            sub_profile_id: str = "") -> dict:
-    """Entry point used by the IPC bridge (CONSULT action)."""
+            sub_profile_id: str = "", registered=None,
+            self_name=None) -> dict:
+    """Entry point used by the IPC bridge (CONSULT action).
+
+    ``registered`` — names just synced into the Kinship Tree for this user
+    (from the bridge's AUTO_SYNC bookkeeping); when present the family reply
+    acknowledges the registration with the real names.
+    """
     try:
-        resp = compose_consultation(content or "", "en" if lang == "en" else "bn")
+        resp = compose_consultation(content or "", "en" if lang == "en" else "bn",
+                                    registered=registered, self_name=self_name)
     except Exception as e:
         return {"status": "ERROR", "message": f"consultation failed: {e}"}
 

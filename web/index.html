@@ -688,6 +688,19 @@ function connect() {
 }
 
 function renderFrame(frame) {
+  if (frame.type === 'profiles_synced') {
+    // Kinship Tree provisioning notice (server-composed bilingual text)
+    const container = document.getElementById('messages');
+    const note = document.createElement('div');
+    note.className = 'message';
+    note.innerHTML = '<div class="role">' + t('roleSystem') + '</div>'
+                   + '<div class="content"></div>';
+    note.querySelector('.content').textContent =
+      '🌳 ' + (frame.text || '');
+    container.appendChild(note);
+    container.scrollTop = container.scrollHeight;
+    return;
+  }
   if (frame.type === 'error') {
     const container = document.getElementById('messages');
     const errMsg = document.createElement('div');

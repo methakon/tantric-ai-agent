@@ -258,7 +258,8 @@ NAME_WITH_ROLE = re.compile(
     r"\((father|mother|wife|husband|son|daughter|brother|sister|self)\)",
     re.IGNORECASE)
 NAME_STOPWORDS = {"জন্ম", "জন্মতারিখ", "তারিখ", "সময়", "স্থান", "বার",
-                  "জন্ম তারিখ", "জন্মতারিখ", "বয়স"}
+                  "জন্ম তারিখ", "জন্মতারিখ", "বয়স",
+                  "Date", "Time", "Place", "Birth", "DOB", "TOB"}
 
 BN_PLACES = {
     "কান্দি": "Kandi", "বহরমপুর": "Berhampore", "বরহমপুর": "Berhampore",
@@ -274,6 +275,14 @@ BN_DATE_RE = re.compile(
     r"([০-৯0-9]{1,2})\s*([\u0980-\u09FF]+)\s*[,،\s]*\s*([০-৯0-9]{3,4})")
 ISO_DATE_RE = re.compile(r"\b(\d{4})-(\d{1,2})-(\d{1,2})\b")
 DMY_DATE_RE = re.compile(r"\b(\d{1,2})[/.](\d{1,2})[/.](\d{4})\b")
+
+_EN_MONTHS = {m.lower(): i + 1 for i, m in enumerate(
+    ["January", "February", "March", "April", "May", "June", "July",
+     "August", "September", "October", "November", "December"])}
+_EN_MONTHS.update({m[:3].lower(): i + 1 for i, m in enumerate(
+    ["January", "February", "March", "April", "May", "June", "July",
+     "August", "September", "October", "November", "December"])})
+EN_DATE_RE = re.compile(r"\b([A-Z][a-z]{2,8})\.?\s+(\d{1,2}),\s*(\d{4})\b")
 TIME_RE = re.compile(r"(\d{1,2})\s*[:.]\s*(\d{2})")
 BN_HOUR_RE = re.compile(
     r"(সকাল|সুপ্রভাত|দুপুর|বিকাল|বিকেল|সন্ধ্যা|রাত|রাত্রি)?\s*"
@@ -334,19 +343,40 @@ def _find_time_hours(segment):
     return None, None
 
 
+_PLACE_STOPWORDS = {"date", "time", "birth", "place", "dob", "tob", "son",
+                    "daughter", "wife", "husband", "father", "mother"}
+
+
 def _find_place(segment):
     # Bengali place aliases first (longest match wins)
     for bn_name in sorted(BN_PLACES, key=len, reverse=True):
         if bn_name in segment:
             return BN_PLACES[bn_name]
-    m = re.search(r"(?:in|at|,|place[:\s])\s*([A-Z][A-Za-z]+(?:[\s-][A-Z][A-Za-z]+)?)",
+    # labelled forms: "Place: Kandi", "Place of Birth: Berhampore"
+    m = re.search(r"(?:Place of Birth|POB|Place|স্থান)[\s:]*"
+                  r"([A-Z][A-Za-z]+(?:[\s-][A-Z][A-Za-z]+)?)", segment)
+    if m and m.group(1).lower() not in _PLACE_STOPWORDS:
+        return m.group(1)
+    # known city table matches (word-boundary, case-insensitive)
+    try:
+        from consultation_engine import CITIES
+        low = segment.lower()
+        for city in sorted(CITIES, key=len, reverse=True):
+            if len(city) >= 4 and re.search(
+                    r"(?<![a-z])" + re.escape(city) + r"(?![a-z])", low):
+                return city.title()
+    except Exception:
+        pass
+    m = re.search(r"(?:in|at|,)\s*([A-Z][A-Za-z]+(?:[\s-][A-Z][A-Za-z]+)?)",
                   segment)
-    if m and m.group(1).lower() not in WEEKDAYS_EN:
+    if m and m.group(1).lower() not in WEEKDAYS_EN \
+            and m.group(1).lower() not in _PLACE_STOPWORDS:
         return m.group(1)
     # trailing capitalized place ("... 10:30 Berhampore")
     m = re.search(r"([A-Z][A-Za-z]{3,}(?:[\s-][A-Z][A-Za-z]+)?)\s*$",
                   segment.strip())
-    if m and m.group(1).lower() not in WEEKDAYS_EN:
+    if m and m.group(1).lower() not in WEEKDAYS_EN \
+            and m.group(1).lower() not in _PLACE_STOPWORDS:
         return m.group(1)
     return None
 
@@ -368,6 +398,15 @@ def _name_for(segment, relation):
     m = NAME_WITH_ROLE.search(segment)
     if m:
         return m.group(1).strip()
+    # leading capitalized name ("1. Swarna Sekhar Dhar, Date of Birth: …")
+    m = re.search(r"^\s*(?:\d{1,3}[\.\)]\s*)?"
+                  r"([A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+){0,4})"
+                  r"(?=\s*[,(\n:]|\s*$)", segment)
+    if m:
+        cand = m.group(1).strip()
+        if cand and cand not in NAME_STOPWORDS and len(cand) >= 2 \
+                and not any(w in cand.split() for w in NAME_STOPWORDS):
+            return cand
     if relation:
         m = re.search(
             r"(?:ছেলে|মেয়ে|পুত্র|কন্যা|son|daughter)\s+([A-Z][A-Za-z]{2,})",
@@ -432,6 +471,12 @@ def extract_kinship_payload(text: str):
             m = DMY_DATE_RE.search(norm_seg)
             if m:
                 date_iso = f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}"
+            else:
+                m = EN_DATE_RE.search(norm_seg)
+                if m and m.group(1).lower() in _EN_MONTHS:
+                    date_iso = (f"{m.group(3)}-"
+                                f"{_EN_MONTHS[m.group(1).lower()]:02d}-"
+                                f"{int(m.group(2)):02d}")
 
         hours, time_raw = _find_time_hours(raw_seg)
         if hours is not None and time_raw and ":" not in time_raw:

@@ -36,6 +36,9 @@ CREATE TABLE IF NOT EXISTS tantric_user_sub_profiles (
     birth_hour REAL, birth_lat REAL, birth_lon REAL,
     birth_timezone TEXT,
     birth_date_confirmed BOOLEAN DEFAULT 0,
+    gender TEXT,
+    birth_place TEXT,
+    metadata TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

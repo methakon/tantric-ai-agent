@@ -741,6 +741,40 @@ int HttpGateway::run() {
                             if (lang != "en") lang = "bn";
                             std::string subp = json_extract_string(full, "sub_profile_id");
 
+                            // Kinship provisioning: extract + upsert every
+                            // named person with birth data in the message
+                            // (fast no-op for ordinary chat), then notify the
+                            // client so the Kinship Tree refreshes before the
+                            // consultation chunks arrive.
+                            if (!c->session_user.empty()) {
+                                std::string sync_req =
+                                    "{\"action\": \"AUTO_SYNC_FAMILY_PROFILES\", "
+                                    "\"user_id\": \"" + json_escape(c->session_user) + "\", "
+                                    "\"lang\": \"" + lang + "\", "
+                                    "\"message_text\": \"" + json_escape(content) + "\"}";
+                                std::string sync_resp = ipc_call(cfg_.ipc_socket, sync_req);
+                                if (json_extract_string(sync_resp, "status") == "SUCCESS") {
+                                    int n_sync = 0;
+                                    {
+                                        std::string sc = json_extract_string(sync_resp, "synced_count");
+                                        if (!sc.empty()) {
+                                            char* endp = nullptr;
+                                            long v = std::strtol(sc.c_str(), &endp, 10);
+                                            if (endp && *endp == '\0' && v > 0 && v <= 64)
+                                                n_sync = static_cast<int>(v);
+                                        }
+                                    }
+                                    if (n_sync > 0) {
+                                        std::string evt = json_extract_string(sync_resp, "event_text");
+                                        ws_send(*c, 0x1,
+                                            "{\"type\":\"profiles_synced\","
+                                            "\"event\":\"SUB_PROFILES_SYNCED\","
+                                            "\"count\":" + std::to_string(n_sync) + "," +
+                                            "\"text\":\"" + json_escape(evt) + "\"}");
+                                    }
+                                }
+                            }
+
                             // Consultation request -> Python bridge (CONSULT).
                             // Timeout is the 20s IPC budget (JWKS-free path,
                             // but pyswisseph + yantra render still cost ~0.3s).
