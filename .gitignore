@@ -12,3 +12,4 @@ third_party/sweph/*.c
 third_party/sweph/*.h
 third_party/sweph/*.o
 .env
+*.db
