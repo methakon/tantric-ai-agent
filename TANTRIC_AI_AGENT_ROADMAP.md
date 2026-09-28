@@ -3,7 +3,7 @@
 **Created:** 2026-09-27
 **Source:** AI Tantrik System Blueprint.pdf
 **Context:** Autonomous Cross-Tradition Tantrik and Divinatory AI Agent
-**Persona:** Acharya-Siddha — erudite, contemplative, cross-tradition lineage guide
+**Persona:** Dharantrax Kapalik (ধরণ্ট্রাক্স কাপালিক) — erudite, contemplative, cross-tradition lineage guide
 
 ---
 
@@ -331,12 +331,12 @@ Input: Yantra type + parameters
 
 ### Phase 3: Alignment, Instruction Fine-Tuning, and Guardrail Integration
 
-**Goal:** Train language model with Acharya-Siddha persona and safety protocols.
+**Goal:** Train language model with Dharantrax Kapalik persona and safety protocols.
 
 **Fine-tuning Corpus:**
 - Classical commentaries (Abhinavagupta, Bhaskararaya)
 - Academic curricula (BHU, SSVV)
-- Dialogues framed as Acharya-Siddha persona
+- Dialogues framed as Dharantrax Kapalik persona
 - Cross-cultural synthesis examples
 
 **Safety Guardrails:**
@@ -464,7 +464,7 @@ Input: Yantra type + parameters
 2. **AI Integration:**
    - `src/ai/` — AWS Bedrock provider
    - `ai-bedrock-provider.test.js` — Bedrock connectivity
-   - **Missing:** GraphRAG, knowledge graph, Acharya-Siddha persona
+   - **Missing:** GraphRAG, knowledge graph, Dharantrax Kapalik persona
 
 3. **Trading Agent:**
    - `src/trading-agent/` — market data, pattern engine
@@ -481,7 +481,7 @@ Input: Yantra type + parameters
 3. **Computational Engine:** No pyswisseph, no sidereal calculations
 4. **Divinatory Systems:** Only basic Parashari (partial)
 5. **Safety Guardrails:** No harmful rite detection, no mental health protocol
-6. **Persona:** No Acharya-Siddha training
+6. **Persona:** No Dharantrax Kapalik training
 7. **Cross-Cultural:** No Buddhist, Taoist, Islamic esoteric modules
 
 ---
@@ -531,7 +531,7 @@ Input: Yantra type + parameters
 ### When Budget Allows (Step 3)
 1. Purchase RTX 3060 12GB + 32GB RAM
 2. Install CUDA drivers
-3. Begin LLM fine-tuning with Acharya-Siddha persona
+3. Begin LLM fine-tuning with Dharantrax Kapalik persona
 
 ---
 

@@ -423,7 +423,9 @@ def main():
                     saw_final = True
                     break
         check("WS consultation streamed (chunk + yantra + final)",
-              got_chunk and saw_yantra and saw_final and "সিদ্ধান্তমূলক" in joined,
+              got_chunk and saw_yantra and saw_final
+              and "বহু-পদ্ধতি যাচাই সারসংক্ষেপ" in joined
+              and "ঐকমত্য ম্যাট্রিক্স" in joined,
               joined[:140])
 
         # 12b. safety refusal over WS (Shatkarma blocked, no yantra attached)
@@ -502,7 +504,9 @@ def main():
         st, _ = http_get("/definitely-not-a-route")
         check("unknown route -> 404", st == 404)
         st, body = http_get("/")
-        check("GET / serves index.html", st == 200 and "Acharya-Siddha" in body)
+        check("GET / serves index.html", st == 200
+              and "Dharantrax Kapalik" in body
+              and "ধরণ্ট্রাক্স কাপালিক" in body)
 
         # 16. document intake (file picker / in-browser camera capture path)
         import base64 as _b64

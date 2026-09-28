@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tantric AI Agent — Acharya-Siddha consultation engine (deterministic).
+Tantric AI Agent — Dharantrax Kapalik consultation engine (deterministic).
 
 Composes streamed consultation replies for the WebSocket gateway:
 
@@ -8,7 +8,7 @@ Composes streamed consultation replies for the WebSocket gateway:
     -> birth-data parse -> sidereal chart (pyswisseph, Lahiri)
     -> Todala Tantra remedial mapping (SQLite/MySQL via auth_service)
     -> yantra SVG (C++ YantraEngine via subprocess)
-    -> 5-section Acharya-Siddha reply, Bengali (default) or English
+    -> 5-section Dharantrax Kapalik reply, Bengali (default) or English
 
 Nothing here guesses: every chart number comes from Swiss Ephemeris,
 every remedy from the seeded mapping table, every yantra from the
@@ -396,7 +396,7 @@ def compose_consultation(content: str, lang: str, registered=None,
         # Guidance reply — ask for birth data, explain the protocol
         if lang == "en":
             body = (
-                "Pranam. I am the Acharya-Siddha. To compute rather than "
+                "Pranam. I am Dharantrax Kapalik. To compute rather than "
                 "guess, I need three things:\n\n"
                 "  1. Birth date  (e.g. 1990-04-12)\n"
                 "  2. Birth time  (e.g. 10:30)\n"
@@ -416,7 +416,7 @@ def compose_consultation(content: str, lang: str, registered=None,
             )
         else:
             body = (
-                "প্রণাম. আমি আচার্য-সিদ্ধ. অনুমান নয় — গণনা করতে আমার তিনটি "
+                "প্রণাম. আমি ধরণ্ট্রাক্স কাপালিক. অনুমান নয় — গণনা করতে আমার তিনটি "
                 "বিষয় দরকার:\n\n"
                 "  ১. জন্ম তারিখ  (যেমন 1990-04-12)\n"
                 "  ২. জন্ম সময়    (যেমন 10:30)\n"
@@ -454,13 +454,38 @@ def compose_consultation(content: str, lang: str, registered=None,
     if chart is None:
         return {"status": "ERROR", "message": "ephemeris unavailable"}
 
-    ak = chart["atmakaraka"]
-    remedy = remedy_for_planet(ak)
+    # v1.2: multi-system triangulation. The yantra targets the CONSENSUS
+    # root planet (the planet most systems flag), never a single-method
+    # claim; the engine falls back to the Atmakaraka only when no system
+    # agrees (explicitly labelled).
+    from triangulation_engine import compute_triangulation
+    tri = compute_triangulation(chart, y, m, d, hour, lat, lon, tz)
+    target = tri["consensus"]["root_planet"]  # AK fallback baked in
+    fallback = tri["consensus"]["fallback"]
+    remedy = remedy_for_planet(target)
     yantra_type = (remedy["yantra_type"] if remedy else "sri_yantra")
     svg, renderer = render_yantra(yantra_type)
     f0, binaural, shruti = acoustic_params(chart)
 
     pos = chart["positions"]
+    _SEV_EN = {"তীব্র": "severe", "মধ্যম": "moderate", "লঘু": "mild",
+               "নেই": "none"}
+    _DIG_BN = {"exalted": "উচ্চস্থ", "debilitated": "নীচস্থ",
+               "own": "স্বক্ষেত্র", "neutral": "সাম্য"}
+    par = tri["parashari"]
+    jai = tri["jaimini"]
+    kp_sec = tri["kp"]
+    nad = tri["nadi"]
+    lk = tri["lal_kitab"]
+    vg = tri["vargas"]
+    con = tri["consensus"]
+    dsh = par["dasha"]
+    ar = jai["arudhas"]
+    votes_line = ", ".join(f"{r['planet']} x{r['score']}"
+                           for r in con["votes"][:5])
+    agree_line = (", ".join(f"{r['planet']} x{r['score']}"
+                            for r in con["agreement"])
+                  if con["agreement"] else "—")
     if lang == "en":
         plist = " · ".join(
             f"{p} {pos[p]:.2f}° {RASHI_EN[int(pos[p]/30)]}"
@@ -472,30 +497,62 @@ def compose_consultation(content: str, lang: str, registered=None,
                 f"\n(Engine renders '{renderer}' — the classical "
                 f"{yantra_type.replace('_', ' ').title()} is mapped to its "
                 "closest supported vector form.)")
+        root_note = ("Atmakaraka fallback — no two systems agreed"
+                     if con["fallback"] else "cross-system consensus")
         body = (
-            "1. DIAGNOSTIC EVALUATION\n"
+            "Pranam. I am Dharantrax Kapalik — the multi-method "
+            "jyotisha-tantra intelligence. "
             f"Birth data accepted: {d:02d}-{m:02d}-{y}, {hour:.2f}h, "
-            f"{city_key.title()} ({lat:.2f}, {lon:.2f}, UTC+{tz}).\n"
+            f"{city_key.title()} ({lat:.2f}, {lon:.2f}, UTC+{tz}). "
             f"Lagna: {RASHI_EN[chart['asc_rashi']]} ({chart['asc']:.2f}°). "
             f"Chandra: {RASHI_EN[chart['moon_rashi']]}, "
             f"nakshatra {NAKSHATRA_EN[chart['moon_nak']]} "
-            f"pada {chart['moon_pada']}; nakshatra lord {chart['nak_lord']}."
+            f"pada {chart['moon_pada']}."
             "\n\n"
-            "2. ESOTERIC ARCHETYPE & LINEAGE CONTEXT\n"
-            f"Atmakaraka: {ak} ({('%.2f' % (pos[ak] % 30))}° in sign). "
-            f"Lahiri ayanamsha {chart['ayanamsha']:.4f}°. "
-            "Systems computed independently: Parashari and Jaimini readings "
-            "are kept distinct — never merged into one statement."
+            "1. MULTI-ENGINE VERIFICATION SUMMARY\n"
+            f"Parashari: lagnesha {par['lagna_lord']} in house "
+            f"{par['lagna_lord_house']} ({par['lagna_lord_dignity']}); "
+            f"Vimshottari now — Maha {dsh['maha']['lord']} / "
+            f"Bhukti {dsh['bhukti']['lord']}. "
+            f"Jaimini: AK8 {jai['atmakaraka8']}, AK7 {jai['atmakaraka7']}, "
+            f"karakamsha {RASHI_EN[jai['karakamsha']]}; "
+            f"Arudhas AL {RASHI_EN[ar['AL']['pada_sign']]}, "
+            f"A7 {RASHI_EN[ar['A7']['pada_sign']]}, "
+            f"UL {RASHI_EN[ar['UL']['pada_sign']]}. "
+            f"KP: lagna sub-lord {kp_sec['lagna_sub'][1]} "
+            f"(star {kp_sec['lagna_sub'][0]}); "
+            f"cusp 8 sub {kp_sec['cusp8_sub'][1]}, "
+            f"cusp 12 sub {kp_sec['cusp12_sub'][1]}. "
+            f"Nadi: conjunctions "
+            + (", ".join(f"{a}+{b}" for a, b, _ in nad["conjunctions"])
+               or "none") + "; "
+            f"trines " + (", ".join(f"{a}+{b}" for a, b in nad["trines"])
+                          or "none") + "; "
+            f"karmic " + (", ".join(f"{a}+{b}" for a, b in nad["karmic"])
+                          or "none") + ". "
+            f"Lal Kitab: Pitri Rin {_SEV_EN[lk['pitri']['severity']]} "
+            f"({lk['pitri']['count']} "
+            f"{'marker' if lk['pitri']['count'] == 1 else 'markers'}), "
+            f"Matru Rin {_SEV_EN[lk['matri']['severity']]} "
+            f"({lk['matri']['count']} "
+            f"{'marker' if lk['matri']['count'] == 1 else 'markers'}). "
+            f"Vargas: Moon D60 {vg['Moon']['d60_deity']}, "
+            f"AK D60 {vg[jai['atmakaraka7']]['d60_deity']}."
+            "\n\n"
+            "2. CONSENSUS MATRIX\n"
+            f"Root planet: {con['root_planet']} ({root_note}). "
+            f"Votes: {votes_line}. "
+            f"Agreement at 3+ systems: {agree_line}."
             "\n\n"
             "3. PARAMETRIC VECTOR YANTRA\n"
-            f"Presiding Mahavidya for {ak}: {mahavidya}. "
+            f"Presiding Mahavidya for {target}: {mahavidya}. "
             f"Bija: {mantra}. Vector form rendered: {renderer}."
             f"{note}"
             "\n\n"
             "4. ACOUSTIC & REMEDIAL PRACTICE\n"
             f"Acoustic: f0 = {f0} Hz (22-shruti grid, step {shruti}), "
             f"binaural delta = {binaural} Hz. "
-            f"Remedial aim ({ak}): {objective}. "
+            f"Remedial aim ({target}): {objective}. "
             "Practice 11 minutes at sunrise; japa mala 108 counts."
             "\n\n"
             "5. PHILOSOPHICAL SYNTHESIS\n"
@@ -513,30 +570,73 @@ def compose_consultation(content: str, lang: str, registered=None,
         note = ("" if yantra_type in YANTRA_RENDERABLE else
                 f"\n(ইঞ্জিন '{renderer}' রেন্ডার করেছে — ধ্রুপদী "
                 f"{yantra_type} কে নিকটতম সমর্থিত রূপে ম্যাপ করা হয়েছে.)")
+
+        def pbn(x):
+            return PLANET_BN[PLANET_EN.index(x)] if x in PLANET_EN else x
+
+        root_note = ("আত্মকারক ফলব্যাক — কোনো দুটি পদ্ধতি একমত হয়নি"
+                     if con["fallback"] else "বহু-পদ্ধতি ঐকমত্য")
+        votes_bn = ", ".join(f"{pbn(r['planet'])} x{r['score']}"
+                             for r in con["votes"][:5])
+        agree_bn = (", ".join(f"{pbn(r['planet'])} x{r['score']}"
+                              for r in con["agreement"])
+                    if con["agreement"] else "—")
         body = (
-            "১. সিদ্ধান্তমূলক মূল্যায়ন\n"
-            f"জন্ম-তথ্য গৃহীত: {d:02d}-{m:02d}-{y}, {hour:.2f}\u0998, "
-            f"{city_key.title()} ({lat:.2f}, {lon:.2f}, UTC+{tz}).\n"
+            "প্রণাম. আমি ধরণ্ট্রাক্স কাপালিক — বহু-পদ্ধতি জ্যোতিষ-তন্ত্র "
+            "বুদ্ধিমত্তা. "
+            f"জন্ম-তথ্য গৃহীত: {d:02d}-{m:02d}-{y}, {hour:.2f}ঘ, "
+            f"{city_key.title()} ({lat:.2f}, {lon:.2f}, UTC+{tz}). "
             f"লগ্ন: {RASHI_BN[chart['asc_rashi']]} ({chart['asc']:.2f}°). "
             f"চন্দ্র: {RASHI_BN[chart['moon_rashi']]}, "
             f"নক্ষত্র {NAKSHATRA_BN[chart['moon_nak']]} "
-            f"পদ {chart['moon_pada']}; নক্ষত্রপতি {LORD_BN[chart['nak_lord']]}."
+            f"পদ {chart['moon_pada']}."
             "\n\n"
-            "২. জ্যোতিষিক প্রেক্ষিত\n"
-            f"আত্মকারক: {PLANET_BN[PLANET_EN.index(ak)]} "
-            f"({('%.2f' % (pos[ak] % 30))}° রাশিতে). "
-            f"লাহিড়ী অয়নাংশ {chart['ayanamsha']:.4f}°. "
-            "পরাশরী ও জৈমিনি — দুই পদ্ধতি পৃথকভাবে গণিত, কখনও মিশ্রিত নয়."
+            "১. বহু-পদ্ধতি যাচাই সারসংক্ষেপ\n"
+            f"পরাশরী: লগ্নেশ {pbn(par['lagna_lord'])} "
+            f"{par['lagna_lord_house']} ভাবে "
+            f"({_DIG_BN.get(par['lagna_lord_dignity'], par['lagna_lord_dignity'])}); "
+            f"বিম্শোত্তরী এখন — মহা {pbn(dsh['maha']['lord'])} / "
+            f"ভুক্তি {pbn(dsh['bhukti']['lord'])}. "
+            f"জৈমিনী: আত্মকারক৮ {pbn(jai['atmakaraka8'])}, "
+            f"আত্মকারক৭ {pbn(jai['atmakaraka7'])}, "
+            f"কারকাংশ {RASHI_BN[jai['karakamsha']]}; "
+            f"আরূঢ় AL {RASHI_BN[ar['AL']['pada_sign']]}, "
+            f"A7 {RASHI_BN[ar['A7']['pada_sign']]}, "
+            f"UL {RASHI_BN[ar['UL']['pada_sign']]}. "
+            f"কে.পি.: লগ্ন সাব-লর্ড {pbn(kp_sec['lagna_sub'][1])} "
+            f"(নক্ষত্রপতি {pbn(kp_sec['lagna_sub'][0])}); "
+            f"কাসপ ৮ সাব {pbn(kp_sec['cusp8_sub'][1])}, "
+            f"কাসপ ১২ সাব {pbn(kp_sec['cusp12_sub'][1])}. "
+            f"নাড়ী: সংযোগ "
+            + (", ".join(f"{pbn(a)}+{pbn(b)}" for a, b, _ in nad["conjunctions"])
+               or "নেই") + "; "
+            f"ত্রিকোণ " + (", ".join(f"{pbn(a)}+{pbn(b)}"
+                                      for a, b in nad["trines"])
+                           or "নেই") + "; "
+            f"কর্ম-সংকেত " + (", ".join(f"{pbn(a)}+{pbn(b)}"
+                                        for a, b in nad["karmic"])
+                             or "নেই") + ". "
+            f"লাল কিতাব: পিতৃঋণ {lk['pitri']['severity']} "
+            f"({lk['pitri']['count']} চিহ্ন), "
+            f"মাতৃঋণ {lk['matri']['severity']} "
+            f"({lk['matri']['count']} চিহ্ন). "
+            f"বর্গ: চন্দ্র D60 {vg['Moon']['d60_deity']}, "
+            f"আত্মকারক D60 {vg[jai['atmakaraka7']]['d60_deity']}."
+            "\n\n"
+            "২. ঐকমত্য ম্যাট্রিক্স\n"
+            f"মূল গ্রহ: {pbn(con['root_planet'])} ({root_note}). "
+            f"ভোট: {votes_bn}. "
+            f"৩+ পদ্ধতির ঐকমত্য: {agree_bn}."
             "\n\n"
             "৩. যন্ত্র-নির্দেশ (ভেক্টর)\n"
-            f"{PLANET_BN[PLANET_EN.index(ak)]}-এর অধিষ্ঠাত্রী মহাবিদ্যা: "
+            f"{pbn(target)}-এর অধিষ্ঠাত্রী মহাবিদ্যা: "
             f"{mahavidya}. বীজ: {mantra}. রেন্ডারিত রূপ: {renderer}."
             f"{note}"
             "\n\n"
             "৪. ধ্বনি ও প্রতিকার-সাধনা\n"
             f"ধ্বনি: f0 = {f0} Hz (২২-শ্রুতি গ্রিড, ধাপ {shruti}), "
             f"বাইনরাল ডেল্টা = {binaural} Hz. "
-            f"প্রতিকারের লক্ষ্য ({PLANET_BN[PLANET_EN.index(ak)]}): {objective}. "
+            f"প্রতিকারের লক্ষ্য ({pbn(target)}): {objective}. "
             "সূর্যোদয়ে ১১ মিনিট, জপমালা ১০৮ বার."
             "\n\n"
             "৫. দার্শনিক সমন্বয়\n"
@@ -646,7 +746,9 @@ def _family_consultation(kp, lang, content, registered=None,
             y, m, d = (int(x) for x in p["date"].split("-"))
             ch = compute_chart(y, m, d, p["time_hours"], pl[0], pl[1], pl[2])
             if ch:
-                computed.append({"p": p, "chart": ch, "kind": "full"})
+                computed.append({"p": p, "chart": ch, "kind": "full",
+                                 "params": (y, m, d, p["time_hours"],
+                                            pl[0], pl[1], pl[2])})
                 continue
         if p["date"]:
             # date only (or no place): Moon range across the IST day —
@@ -854,6 +956,73 @@ def _family_consultation(kp, lang, content, registered=None,
                     tone_en, tone_bn = "neutral", "সাধারণ"
                 ln = f"— {label(a['p'])} ↔ {label(b['p'])}: {tone_en if en else tone_bn}"
                 L.append(ln)
+
+    # ---- v1.2 multi-method statement + family consensus + bhavat-bhavam
+    from triangulation_engine import compute_triangulation as _compute_tri
+    roots = []
+    for c in fulls:
+        ch = c["chart"]
+        y2, m2, d2, hr2, la2, lo2, tz2 = c["params"]
+        tri_c = _compute_tri(ch, y2, m2, d2, hr2, la2, lo2, tz2)
+        rp = tri_c["consensus"]["root_planet"]
+        sc = tri_c["consensus"]["votes"][0]["score"] \
+            if tri_c["consensus"]["votes"] else 0
+        fb = tri_c["consensus"]["fallback"]
+        roots.append((label(c["p"]), rp, sc, fb))
+    if len(fulls) >= 2:
+        if en:
+            L.append("\nMulti-system triangulation (computed):")
+        else:
+            L.append("\nবহু-পদ্ধতি ত্রিকোণীকরণ (গণিত):")
+        for nm, rp, sc, fb in roots:
+            fb_note = (" (Atmakaraka fallback — no two systems agreed)"
+                       if fb else "")
+            if en:
+                L.append(f"— {nm}: consensus root {rp} "
+                         f"({sc} systems{fb_note}).")
+            else:
+                L.append(f"— {nm}: ঐকমত্য-মূল গ্রহ "
+                         f"{PLANET_BN[PLANET_EN.index(rp)]} "
+                         f"({sc} পদ্ধতি{fb_note}).")
+        # family-level consensus: modal root across members
+        from collections import Counter
+        modal = Counter(rp for _, rp, _, _ in roots).most_common(1)[0]
+        if en:
+            L.append("Family consensus: " + (
+                f"{modal[0]} shared by {modal[1]} members."
+                if modal[1] >= 2 else
+                "no shared root planet across members — each member's "
+                "remedial vector stays individual."))
+        else:
+            L.append("পারিবারিক ঐকমত্য: " + (
+                f"{PLANET_BN[PLANET_EN.index(modal[0])]} — {modal[1]} জনের "
+                "মধ্যে অভিন্ন."
+                if modal[1] >= 2 else
+                "সদস্যদের মধ্যে কোনো অভিন্ন মূল গ্রহ নেই — প্রত্যেকের "
+                "প্রতিকার-ভেক্টর স্বতন্ত্র থাকবে."))
+    if len(fulls) >= 1:
+        # bhavat-bhavam: 4th house (mother) and 9th house (father)
+        # for every full chart — child's 4th = mother's field,
+        # 9th = father's field, mapped against the parent charts when present
+        if en:
+            L.append("\nBhavat-bhavam family map (4th = mother, "
+                     "9th = father):")
+        else:
+            L.append("\nভাবাত-ভাবম পারিবারিক মানচিত্র "
+                     "(৪র্থ = মা, ৯ম = বাবা):")
+        for c in fulls:
+            ch = c["chart"]
+            asc_r = ch["asc_rashi"]
+            fourth = (asc_r + 3) % 12
+            ninth = (asc_r + 8) % 12
+            if en:
+                L.append(f"— {label(c['p'])}: 4th house "
+                         f"{RASHI_EN[fourth]} (mother), 9th house "
+                         f"{RASHI_EN[ninth]} (father).")
+            else:
+                L.append(f"— {label(c['p'])}: ৪র্থ ভাব "
+                         f"{RASHI_BN[fourth]} (মা), ৯ম ভাব "
+                         f"{RASHI_BN[ninth]} (বাবা).")
 
     # ---- next data -----------------------------------------------------
     missing_any = any(p["missing"] for p in profiles)

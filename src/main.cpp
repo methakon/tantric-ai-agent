@@ -374,8 +374,8 @@ int main(int argc, char** argv) {
 
     std::cout << "\n";
     std::cout << "╔════════════════════════════════════════════════════════════╗\n";
-    std::cout << "║     TANTRIC AI AGENT v1.1 - C++20 ENGINE DEMO            ║\n";
-    std::cout << "║     Acharya-Siddha Multi-Engine Astrological Agent        ║\n";
+    std::cout << "║     TANTRIC AI AGENT v1.2 - C++20 ENGINE DEMO            ║\n";
+    std::cout << "║     Dharantrax Kapalik Multi-Engine Astrological Agent   ║\n";
     std::cout << "╚════════════════════════════════════════════════════════════╝\n";
     
     // Run demonstrations

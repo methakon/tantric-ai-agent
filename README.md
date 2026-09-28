@@ -2,7 +2,7 @@
 
 **Working Directory:** `/home/swarna-sekhar-dhar/projects/tantra/`
 **Source Blueprint:** AI Tantrik System Blueprint.pdf
-**Persona:** Acharya-Siddha
+**Persona:** Dharantrax Kapalik (ধরণ্ট্রাক্স কাপালিক)
 
 ---
 
@@ -13,7 +13,7 @@ Autonomous Cross-Tradition Tantrik and Divinatory AI Agent implementing:
 - Cross-cultural esoteric frameworks (Hindu, Buddhist, Taoist, Islamic)
 - 9+ divinatory systems (Parashari, Jaimini, Nadi, KP, Lal Kitab, etc.)
 - GraphRAG knowledge architecture
-- Acharya-Siddha persona with safety guardrails
+- Dharantrax Kapalik persona with safety guardrails
 - **Phase 2:** Sacred geometry generation, CV palmistry, acoustic analysis, sound weaving
 
 ---
@@ -180,7 +180,7 @@ camera snap ─┘   (X-Session-Token,      (base64)      └─ file_ingestion 
   must be valid or the gateway answers `401`. The bridge stores
   `[16B salt][16B base64 nonce][base64 ciphertext]` containers and
   `load_document()` decrypts them (filename = AES-GCM AAD, so it is required).
-- On success the client posts `[uploaded: <name>]` over the WS; the Acharya
+- On success the client posts `[uploaded: <name>]` over the WS; the agent
   acknowledges with a `document` mode reply (stored encrypted, EXIF stripped,
   vision-side analysis pending).
 - Chat shows the seeker bubble `📎 <name>` for uploads, same as typed messages.

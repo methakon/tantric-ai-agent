@@ -253,9 +253,9 @@ class UnixDomainSocketClient:
             self.client_socket.close()
 
 
-class AcharyaSiddhaIPC:
+class DharantraxKapalikIPC:
     """
-    Acharya-Siddha IPC Command Interface
+    Dharantrax Kapalik IPC Command Interface
     
     Implements the v1.1 directive command registry:
     - resolve_geocoding
