@@ -391,6 +391,9 @@ _TOPIC_WORDS = {
     "children": ("সন্তান", ["সন্তান", "ছেলে", "মেয়ে", "children",
                             "প্রেগনেন্সি", "pregnancy"]),
     "family": ("পরিবার", ["পরিবার", "family", "মা-বাবা", "শ্বশুর"]),
+    "sadesati": ("শনি-সাড়ে সাতী", ["sade sati", "sadesati", "sarasathi",
+                                   "sarasati", "সাড়ে সাতী", "সাড়ে সাত",
+                                   "shani", "শনি"]),
 }
 # Houses relevant to each topic, read from the stored chart.
 _TOPIC_HOUSES = {
@@ -648,6 +651,9 @@ def _conversational_reply(content: str, lang: str):
         "সন্তান": ("সন্তান", ["সন্তান", "ছেলে", "মেয়ে", "children", "প্রেগনেন্সি",
                               "pregnancy"]),
         "পরিবার": ("পরিবার", ["পরিবার", "family", "মা-বাবা", "শ্বশুর"]),
+        "সাড়ে সাতী": ("শনি-সাড়ে সাতী", ["sade sati", "sadesati", "sarasathi",
+                                     "sarasati", "সাড়ে সাতী", "সাড়ে সাত",
+                                     "shani", "শনি"]),
     }
     for key, (label, words) in topics.items():
         if any(w in text for w in words):
@@ -692,6 +698,111 @@ _GAVE_RE = re.compile(r"(dieachi|diyechi|dilam|disi|dicchi|dicchi|"
                       re.I)
 _DETAILS_RE = re.compile(r"(details?|তথ্য|বিবরণ|বিস্তারিত|বিবরন|"
                          r"birth\s*(data|details)?|জন্ম)", re.I)
+
+
+def _sade_sati_reading(chart, lang):
+    """Saturn's current transit phase vs the natal Moon (Sade Sati).
+
+    Phases: rising (Saturn in the sign before the Moon), peak (in the
+    Moon's sign), setting (the sign after). Entry dates are computed by
+    scanning Saturn's sidereal position with Swiss Ephemeris — never
+    table-recalled. Returns a reply string or None.
+    """
+    try:
+        import swisseph as swe
+    except Exception:
+        return None
+    swe.set_sid_mode(swe.SIDM_LAHIRI)
+    flags = swe.FLG_SWIEPH | swe.FLG_SIDEREAL
+    now = datetime.datetime.utcnow()
+    jd_now = swe.julday(now.year, now.month, now.day,
+                        now.hour + now.minute / 60.0)
+    moon_sign = chart["moon_rashi"]
+
+    def sat_sign(jd):
+        return int(swe.calc_ut(jd, swe.SATURN, flags)[0][0] % 360.0 / 30.0)
+
+    def fmt(jd):
+        y, m, d, _ = swe.revjul(jd)
+        return f"{int(y)}-{int(m):02d}"
+
+    # record sign entries from 3y before now to 9y after (2-day steps)
+    entries = {}
+    prev = None
+    jd = jd_now - 1100.0
+    while jd <= jd_now + 3300.0:
+        s = sat_sign(jd)
+        if prev is not None and s != prev:
+            entries.setdefault(s, jd - 1.0)
+        prev = s
+        jd += 2.0
+
+    rising = (moon_sign + 11) % 12
+    peak = moon_sign
+    setting = (moon_sign + 1) % 12
+    cur = sat_sign(jd_now)
+    sat_deg = swe.calc_ut(jd_now, swe.SATURN, flags)[0][0] % 360.0
+
+    phase = None
+    win = None
+    if cur == rising:
+        phase = ("rising", "উদয়")
+        win = (entries.get(rising, jd_now), entries.get(peak))
+    elif cur == peak:
+        phase = ("peak", "চূড়া")
+        win = (entries.get(peak, jd_now), entries.get(setting))
+    elif cur == setting:
+        phase = ("setting", "অবসান")
+        win = (entries.get(setting, jd_now), entries.get((setting + 1) % 12))
+
+    sign_bn = RASHI_BN[cur]
+    sign_en = RASHI_EN[cur]
+    if phase is None:
+        # outside the 7.5-year cycle: report when it opens next
+        nxt = entries.get(rising)
+        if nxt is None or nxt < jd_now:
+            nxt = None
+        if lang == "en":
+            return (
+                f"Sade Sati (computed): natal Moon in {RASHI_EN[moon_sign]}. "
+                f"Saturn now at {sat_deg:.2f}° {sign_en} — outside the "
+                f"7.5-year cycle. "
+                + (f"Next cycle opens {fmt(nxt)} (Saturn into "
+                   f"{RASHI_EN[rising]})." if nxt else
+                   "The next cycle lies beyond the computed window.")
+            )
+        return (
+            f"শনি-সাড়ে সাতী (গণনা): জন্ম-চন্দ্র {RASHI_BN[moon_sign]}-এ. "
+            f"শনি এখন {sat_deg:.2f}° {sign_bn} — সাড়ে সাতীর পরিসরের বাইরে. "
+            + (f"পরবর্তী চক্র শুরু {fmt(nxt)} (শনি {RASHI_BN[rising]}-এ "
+               f"প্রবেশ)." if nxt else
+               "পরবর্তী চক্র গণিত-জানালার বাইরে.")
+        )
+
+    p_en, p_bn = phase
+    start, end = win
+    end_s = fmt(end) if end is not None else "—"
+    start_s = fmt(start)
+    if lang == "en":
+        return (
+            f"Sade Sati (computed): natal Moon in {RASHI_EN[moon_sign]}. "
+            f"Saturn now at {sat_deg:.2f}° {sign_en} — the {p_en} phase "
+            f"({start_s} → {end_s}). "
+            f"Full cycle: rising {RASHI_EN[rising]} → peak "
+            f"{RASHI_EN[peak]} → setting {RASHI_EN[setting]}. "
+            "This is a computed period, not a verdict: the tradition "
+            "reads it as a discipline of patience, service and Shani-"
+            "shanti practice — not as doom."
+        )
+    return (
+        f"শনি-সাড়ে সাতী (গণনা): জন্ম-চন্দ্র {RASHI_BN[moon_sign]}-এ. "
+        f"শনি এখন {sat_deg:.2f}° {sign_bn}-এ — {p_bn} পর্ব "
+        f"({start_s} → {end_s}). "
+        f"পূর্ণ চক্র: উদয় {RASHI_BN[rising]} → চূড়া {RASHI_BN[peak]} → "
+        f"অবসান {RASHI_BN[setting]}. "
+        "এটি গণিত কাল-পরিসর, রায় নয়: ধৈর্য, সেবা ও শনি-শান্তি অনুশীলনের "
+        "পর্ব হিসেবে শাস্ত্র একে পড়ে — অমঙ্গল-ফরমান হিসেবে নয়."
+    )
 
 
 def _memory_followup(content: str, lang: str, mem: dict):
@@ -760,6 +871,8 @@ def _memory_followup(content: str, lang: str, mem: dict):
             )
 
     mem["last_topic"] = topic
+    if topic == "sadesati":
+        return _sade_sati_reading(chart, lang)
     lagna = chart["asc_rashi"]
     houses = _TOPIC_HOUSES[topic]
     lines = []

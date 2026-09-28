@@ -809,7 +809,68 @@ def main():
               and "ভুক্তি" in ak_joined
               and "তিনটি বিষয়" not in ak_joined,
               ak_joined[:220])
-        sock4c.close()
+
+        # 17e. Sade Sati follow-up — computed from Saturn's transit vs
+        # the stored natal Moon (never a canned block)
+        ws_send_text(sock4c, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": "WHATS MY SHANI SARASATHI SHAYES",
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        ss_joined, ss_final = "", False
+        for _ in range(14):
+            op, payload = ws_read_frame(sock4c, timeout=10.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "diagnostic_chunk":
+                ss_joined += frame.get("content", "")
+                if frame.get("final"):
+                    ss_final = True
+                    break
+        check("sade sati follow-up computed from Saturn transit",
+              ss_final
+              and "শনি-সাড়ে সাতী (গণনা)" in ss_joined
+              and "পর্ব" in ss_joined
+              and "উদয়" in ss_joined
+              and "→" in ss_joined
+              and "তিনটি বিষয়" not in ss_joined,
+              ss_joined[:220])
+
+        # 17f. single-person flat paste (no numbered heads) -> clean
+        # name in AUTO_SYNC, no field labels glued to the name
+        sock4d = ws_connect(f"/v1/chat/ws?token={access_token}")[0]
+        ws_send_text(sock4d, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": (
+                "Swarna Sekhar Dhar   Date of Birth: December 9, "
+                "1981[cite: 7]   Time of Birth: 01:00 AM[cite: 7]Place of "
+                "Birth: Berhampore, Murshidabad[cite: 7]Gotra: Sandilya"
+                "[cite: 7]Lagna (Ascendant): Virgo (Kanya)[cite: 7]Rashi "
+                "(Moon Sign): Aries (Mesha)[cite: 7]Nakshatra: Bharani "
+                "(Pada 3/4)[cite: 7]Ruling Planets: Mercury (Lagna Lord), "
+                "Mars (Rashi Lord), Venus (Nakshatra Lord)[cite: 7]"),
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        s1_joined, s1_final, s1_sync = "", False, None
+        for _ in range(20):
+            op, payload = ws_read_frame(sock4d, timeout=10.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "profiles_synced":
+                s1_sync = frame
+            if frame.get("type") == "diagnostic_chunk":
+                s1_joined += frame.get("content", "")
+                if frame.get("final"):
+                    s1_final = True
+                    break
+        check("single-person flat paste -> chart reply computed",
+              s1_final and "জন্ম-তথ্য গৃহীত" in s1_joined,
+              s1_joined[:140])
+        check("single-person flat paste -> clean sync name (no labels)",
+              s1_sync is not None
+              and "Date of Birth" not in str(s1_sync.get("text") or ""),
+              str(s1_sync)[:200])
+        sock4d.close()
 
         # 18. Bengali San date -> full computed chart consultation
         sock5 = ws_connect(f"/v1/chat/ws?token={access_token}")[0]

@@ -129,9 +129,16 @@ def _relation_and_label(block):
     return None, label, None
 
 
+_FIELD_CUT = re.compile(
+    r"\s+(?=(Date of Birth|Time of Birth|Place of Birth|Gotra|Lagna|Rashi|"
+    r"Nakshatra|Ruling Planets|Auspicious Syllables|DOB|TOB|জন্মতারিখ|"
+    r"জন্ম সময়|জন্মস্থান|লগ্ন|রাশি|নক্ষত্র)\b)", re.I)
+
+
 def _clean_name(block):
-    """Name = text before the first comma / paren / colon / dash."""
-    head = re.split(r"[,(\n:—–]", block, 1)[0]
+    """Name = text before the first comma / paren / colon / dash / field label."""
+    head = re.split(r"[,(:\n—–]", block, 1)[0]
+    head = _FIELD_CUT.split(head, 1)[0]
     head = _strip_numbering(head).strip(" -–—.")
     # drop trailing relation words glued after the name ("Mamata ... Wife")
     return head if 2 <= len(head) <= 80 else ""
