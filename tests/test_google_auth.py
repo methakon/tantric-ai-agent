@@ -621,6 +621,61 @@ def main():
               and "10:36" in fam_joined, fam_joined[-220:])
         sock4.close()
 
+        # 17b. structured-report ingestion (numbered fields + [cite: N])
+        # — a pasted AI report must yield one profile per person, never
+        # phantom profiles per field label
+        sock4b = ws_connect(f"/v1/chat/ws?token={access_token}")[0]
+        ws_send_text(sock4b, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": (
+                "1. Swarna Sekhar Dhar\n"
+                "Date of Birth: December 9, 1981[cite: 7]\n"
+                "Time of Birth: 01:00 AM[cite: 7]\n"
+                "Place of Birth: Berhampore, Murshidabad[cite: 7]\n"
+                "Gotra: Sandilya[cite: 7]\n"
+                "Lagna (Ascendant): Virgo (Kanya)\n"
+                "Rashi (Moon Sign): Aries (Mesha)\n"
+                "Nakshatra: Bharani (Pada 3/4)\n\n"
+                "2. Mamata Rajbanshi Dhar (Wife)\n"
+                "Date of Birth: November 14, 2002[cite: 8]\n"
+                "Time of Birth: Unrecorded (estimated daytime)[cite: 8]\n"
+                "Place of Birth: Kandi, Murshidabad[cite: 8]\n"
+                "Rashi (Moon Sign): Leo (Simha)\n"
+                "Nakshatra: Purva Phalguni\n\n"
+                "3. Sastav Dhar (Elder Son)\n"
+                "Date of Birth: April 2, 2019\n"
+                "Time of Birth: 13:09 (01:09 PM)\n"
+                "Place of Birth: Kandi, Murshidabad\n"
+                "Lagna (Ascendant): Cancer (Karka)\n\n"
+                "4. Abhyant Dhar (Younger Son)\n"
+                "Date of Birth: August 19, 2021\n"
+                "Time of Birth: 16:02 (04:02 PM)\n"
+                "Place of Birth: Kandi, Murshidabad\n"
+                "Lagna (Ascendant): Sagittarius (Dhanu)"),
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        rep_joined, rep_final = "", False
+        for _ in range(20):
+            op, payload = ws_read_frame(sock4b, timeout=10.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "diagnostic_chunk":
+                rep_joined += frame.get("content", "")
+                if frame.get("final"):
+                    rep_final = True
+                    break
+        check("structured report -> 4 profiles, no phantom field labels",
+              rep_final
+              and "4 জনের প্রোফাইল চিহ্নিত" in rep_joined
+              and "জন্মতারিখ নেই" not in rep_joined.split("নষ্ট-জাতক")[0]
+              and "অজ্ঞাত Gotra" not in rep_joined
+              and "লগ্ন কন্যা 13.89" in rep_joined,
+              rep_joined[:200])
+        check("structured report -> stated attributes audited (self Virgo "
+              "lagna supported)",
+              "সমর্থিত" in rep_joined, rep_joined[200:600])
+        sock4b.close()
+
         # 18. Bengali San date -> full computed chart consultation
         sock5 = ws_connect(f"/v1/chat/ws?token={access_token}")[0]
         ws_send_text(sock5, json.dumps({

@@ -217,6 +217,9 @@ def _resolve_coords(place_name):
 
 def extract_profiles_from_text(raw_text: str):
     """Parse a family message into structured sub-profile dicts."""
+    # citation markers from pasted reports pollute fields — strip first
+    raw_text = re.sub(r"\[\s*cite\s*:?\s*\d+\s*\]", "", raw_text, flags=re.I)
+    raw_text = re.sub(r"\[\s*\d+\s*\]", "", raw_text)
     profiles = []
     for block in _split_blocks(raw_text):
         if not block or len(block) < 8:

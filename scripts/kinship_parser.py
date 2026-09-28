@@ -259,7 +259,12 @@ NAME_WITH_ROLE = re.compile(
     re.IGNORECASE)
 NAME_STOPWORDS = {"জন্ম", "জন্মতারিখ", "তারিখ", "সময়", "স্থান", "বার",
                   "জন্ম তারিখ", "জন্মতারিখ", "বয়স",
-                  "Date", "Time", "Place", "Birth", "DOB", "TOB"}
+                  "Date", "Time", "Place", "Birth", "DOB", "TOB",
+                  # field labels from structured reports — never names
+                  "Gotra", "Lagna", "Rashi", "Nakshatra", "Ruling",
+                  "Planets", "Auspicious", "Syllables", "Sign",
+                  "Ascendant", "Lord", "Mercury", "Mars", "Venus",
+                  "Jupiter", "Saturn", "Moon"}
 
 BN_PLACES = {
     "কান্দি": "Kandi", "বহরমপুর": "Berhampore", "বরহমপুর": "Berhampore",
@@ -422,7 +427,18 @@ def extract_kinship_payload(text: str):
     Returns dict with: profiles, bengali_date_conversions, is_multi_profile,
     is_nashta_jataka_requested, normalized_text (Bengali dates replaced by
     ISO), notes.
+
+    Segmentation handles BOTH free-form messages and structured reports
+    (numbered person headings with one-field-per-line blocks, citation
+    markers like \"[cite: 7]\", \"Date of Birth: December 9, 1981\",
+    \"Lagna (Ascendant): Virgo (Kanya)\"): a numbered line opens a person
+    block and its field lines belong to that person until the next
+    numbered line. Field labels never become names (NAME_STOPWORDS).
     """
+    # citation markers from pasted reports pollute fields — strip first
+    text = re.sub(r"\[\s*cite\s*:?\s*\d+\s*\]", "", text, flags=re.I)
+    text = re.sub(r"\[\s*\d+\s*\]", "", text)
+
     normalized = text.translate(BN_DIGITS)
     notes = []
 
@@ -453,8 +469,38 @@ def extract_kinship_payload(text: str):
         n_text = n_text[:start] + iso + n_text[end:]
 
     # --- profiles (segments of the message) ----------------------------
-    segments = re.split("[\n;\u0964]+", text)
-    norm_segments = re.split("[\n;\u0964]+", n_text)
+    # Structured-report mode: numbered person headings ("1. Name",
+    # "2. Name (Wife)") open person blocks; every field line until the
+    # next numbered heading belongs to that person. Free-form messages
+    # (no numbered headings) keep the plain line split.
+    _NUM_HEAD_RE = re.compile(r"^\s*\d{1,3}[.)]\s+\S")
+    _FIELD_LINE_RE = re.compile(
+        r"^\s*(Date of Birth|Time of Birth|Place of Birth|Gotra|Lagna|"
+        r"Rashi|Nakshatra|Ruling Planets|Auspicious Syllables|DOB|TOB|"
+        r"জন্মতারিখ|জন্ম সময়|জন্মস্থান|লগ্ন|রাশি|নক্ষত্র)\b", re.I)
+    lines = text.split("\n")
+    numbered_heads = [i for i, ln in enumerate(lines) if _NUM_HEAD_RE.match(ln)]
+    field_lines = [i for i, ln in enumerate(lines) if _FIELD_LINE_RE.match(ln)]
+    structured = numbered_heads and field_lines
+    if structured:
+        # preamble before the first numbered heading is dropped
+        first_head = numbered_heads[0]
+        lines = lines[first_head:]
+        # block boundaries as line ranges, then applied to BOTH the raw
+        # text and n_text (so Bengali-date ISO replacements survive)
+        ranges = []
+        start = 0
+        for i, ln in enumerate(lines):
+            if i > 0 and _NUM_HEAD_RE.match(ln):
+                ranges.append((start, i))
+                start = i
+        ranges.append((start, len(lines)))
+        segments = ["\n".join(lines[a:b]) for a, b in ranges]
+        n_lines = n_text.split("\n")[first_head:]
+        norm_segments = ["\n".join(n_lines[a:b]) for a, b in ranges]
+    else:
+        segments = re.split("[\n;।]+", text)
+        norm_segments = re.split("[\n;।]+", n_text)
     profiles = []
     current_relation = None
     for raw_seg, norm_seg in zip(segments, norm_segments):
@@ -505,6 +551,14 @@ def extract_kinship_payload(text: str):
             missing.append("time")
         if not place:
             missing.append("place")
+        # stated attributes belong to THIS person's block only — they are
+        # constraints for this person's rectification, never global
+        p_constraints = []
+        try:
+            from nashta_jataka_engine import extract_stated_constraints
+            p_constraints = extract_stated_constraints(raw_seg)
+        except Exception:
+            pass
         profiles.append({
             "relation": rel or "unspecified",
             "name": name,
@@ -513,6 +567,7 @@ def extract_kinship_payload(text: str):
             "time_raw": time_raw,
             "place": place,
             "missing": missing,
+            "constraints": p_constraints,
         })
 
     is_multi = len([p for p in profiles if p["date"]]) >= 2

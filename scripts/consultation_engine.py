@@ -143,20 +143,41 @@ def safety_check(text: str) -> str:
 # Birth-data parsing and chart
 # ============================================================
 def parse_birth(text: str):
-    """Extract (y, m, d, hour_float, city_key, city_tuple) or None."""
+    """Extract (y, m, d, hour_float, city_key, city_tuple) or None.
+
+    Accepts ISO (1981-12-09), D/M/Y, and month-name (\"December 9, 1981\")
+    dates; 24h or AM/PM times; city names or \"Place of Birth: ...\"
+    labels — so structured reports parse like free-form messages.
+    """
     low = text.lower()
     dt = re.search(r"(\d{4})-(\d{1,2})-(\d{1,2})", text)
     if dt:
         y, m, d = int(dt.group(1)), int(dt.group(2)), int(dt.group(3))
     else:
         dt = re.search(r"(\d{1,2})[/.](\d{1,2})[/.](\d{4})", text)
-        if not dt:
-            return None
-        d, m, y = int(dt.group(1)), int(dt.group(2)), int(dt.group(3))
-    tm = re.search(r"(\d{1,2}):(\d{2})", text)
+        if dt:
+            d, m, y = int(dt.group(1)), int(dt.group(2)), int(dt.group(3))
+        else:
+            _MONTHS = {"january": 1, "february": 2, "march": 3, "april": 4,
+                       "may": 5, "june": 6, "july": 7, "august": 8,
+                       "september": 9, "october": 10, "november": 11,
+                       "december": 12}
+            _MONTHS.update({k[:3]: v for k, v in list(_MONTHS.items())})
+            dt = re.search(r"([A-Za-z]{3,9})\.?\s+(\d{1,2}),?\s+(\d{4})", text)
+            if not dt or dt.group(1).lower() not in _MONTHS:
+                return None
+            m = _MONTHS[dt.group(1).lower()]
+            d, y = int(dt.group(2)), int(dt.group(3))
+    tm = re.search(r"(\d{1,2}):(\d{2})(?::\d{2})?\s*([AaPp][Mm])?", text)
     if not tm:
         return None
     hour = int(tm.group(1)) + int(tm.group(2)) / 60.0
+    if tm.group(3):
+        ap = tm.group(3).upper()
+        if ap == "PM" and hour < 12:
+            hour += 12
+        elif ap == "AM" and hour >= 12:
+            hour -= 12
     city_key = None
     for c in CITIES:
         if c in low:
@@ -922,11 +943,11 @@ def _family_consultation(kp, lang, content, registered=None,
             note_bn = ("চন্দ্ররাশি সারা দিন স্থিতিশীল" if r_lo == r_hi
                        else "দিনের মধ্যে চন্দ্ররাশি পরিবর্তন হয়")
             if en:
-                L.append(f"{head}: {p['date']} (time/place unknown) → "
+                L.append(f"{head}: {p['date']} (time unknown) → "
                          f"Moon {rashi(r_lo)}–{rashi(r_hi)} / {nakshatra(n_lo)}–"
                          f"{nakshatra(n_hi)}; {note}. Lagna needs time + place.")
             else:
-                L.append(f"{head}: {p['date']} (সময়/স্থান অজানা) → "
+                L.append(f"{head}: {p['date']} (সময় অজানা) → "
                          f"চন্দ্র {rashi(r_lo)}–{rashi(r_hi)} / {nakshatra(n_lo)}–"
                          f"{nakshatra(n_hi)}; {note_bn}. লগ্নের জন্য সময় ও স্থান দরকার.")
         else:
@@ -981,7 +1002,12 @@ def _family_consultation(kp, lang, content, registered=None,
                         and (o["p"]["date"] or "") > (p["date"] or "")
                         and o["p"].get("relation") in
                         ("son", "daughter", "unspecified")]
-            res = rectify_birth(pd, children=children, constraints=constraints)
+            # stated attributes are scoped to THIS person's block when the
+            # parser carries them (structured reports); global constraints
+            # remain the fallback for free-form messages
+            p_constraints = p.get("constraints") or constraints
+            res = rectify_birth(pd, children=children,
+                                constraints=p_constraints)
             tackled = True
             if res.get("stated_time_audit"):
                 sta = res["stated_time_audit"]

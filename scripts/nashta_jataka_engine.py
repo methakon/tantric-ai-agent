@@ -140,13 +140,18 @@ def extract_stated_constraints(text: str):
                         return
     _find_labeled(lagna_words, RASHI_EN, RASHI_BN, "lagna_rashi")
     _find_labeled(moon_words, NAKSHATRA_EN, NAKSHATRA_BN, "moon_nakshatra")
-    # moon rashi only when labelled explicitly as চন্দ্র রাশি / moon sign
-    for idx, (en, bn) in enumerate(zip(RASHI_EN, RASHI_BN)):
-        for name in (bn,):
-            for m in re.finditer(re.escape(name), low):
-                lo = max(0, m.start() - 16)
-                hi = min(len(low), m.end() + 16)
-                if re.search(r"(চন্দ্র\s*রাশি|moon\s*sign|চন্দ্র)", low[lo:hi]):
+    # moon rashi: capture the value right after an explicit label
+    # ("Rashi (Moon Sign): Aries (Mesha)" / "চন্দ্র রাশি মেষ") — searching
+    # the field value instead of scanning a wide window, so the previous
+    # line's lagna value can never leak into the moon constraint
+    for m in re.finditer(
+            r"(?:moon\s*sign|চন্দ্র\s*রাশি|চন্দ্র)[)\s:]*", low, re.I):
+        window = low[m.end():m.end() + 24]
+        for en, bn in zip(RASHI_EN, RASHI_BN):
+            for name in (en, bn):
+                pat = (r"(?<![\u0980-\u09FFa-zA-Z])" + re.escape(name)
+                       + r"(?![\u0980-\u09FFa-zA-Z])")
+                if re.search(pat, window, re.I):
                     constraints.append({"kind": "moon_rashi", "value": en,
                                         "value_bn": bn, "match": name})
                     break
