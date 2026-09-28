@@ -25,6 +25,7 @@ import json
 import uuid
 import subprocess
 import sys
+import datetime
 from typing import Optional
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -360,6 +361,11 @@ def _refusal(verdict: str, lang: str):
 
 _UPLOAD_RE = re.compile(r'^\[uploaded:\s*(.+?)\]$')
 
+# Per-process conversational counter: varies greeting/thanks phrasing so
+# repeated messages never echo an identical line (computed content in
+# chart replies stays fully deterministic — this affects only the voice).
+_CONVO_N = 0
+
 # Lineage-wisdom routing: question keywords (bn + en) that pull from the
 # C++ wisdom bank. Masters match by name; topics by the canonical keys.
 _LINEAGE_MASTERS = {
@@ -427,6 +433,21 @@ def _lineage_consultation(content: str, lang: str):
     # is a consultation, not a lineage question.
     if parse_birth(content) is not None:
         return None
+    # Conversational openers win over topic-only routing — "কেমন আছো?"
+    # contains "মন" (mind) but is a greeting, not a lineage question.
+    if master is None:
+        low = text
+        if re.search(r"^(hi+|h[ae]llo+w?|hell+|hey+|yo+|namaste|namaskar|"
+                     r"good\s*(morning|afternoon|evening|night)|হাই|হ্যালো|"
+                     r"নমস্কার|প্রণাম|নমঃ?)\b", low):
+            return None
+        if re.search(r"(how\s*are\s*you|কেমন\s*(আছ|আছো|আছেন)|kemon)", low):
+            return None
+        if re.search(r"(thanks|thank\s*you|thnx|ধন্যবাদ|থ্যাংকস)", low):
+            return None
+        if re.search(r"(who\s*are\s*you|your\s*name|তুমি\s*কে|কে\s*তুমি|"
+                     r"তোমার\s*নাম|আপনি\s*কে)", low):
+            return None
     # Topic-only routing applies to short questions only (long messages
     # mentioning 'mind'/'fear' in passing stay on the normal path).
     if master is None and len(text) > 160:
@@ -470,6 +491,150 @@ def _lineage_consultation(content: str, lang: str):
     resp = _pack(chunks, lang, None, None)
     resp["_mode"] = "lineage"
     return resp
+
+
+def _conversational_reply(content: str, lang: str):
+    """Natural, varied replies for non-birth-data chat — the agent's voice.
+
+    Returns a reply string or None (fall through to the full protocol
+    guidance). Variants rotate deterministically per (message, day) plus
+    a per-process counter, so repeated greetings never echo the same
+    line while computed content stays reproducible.
+    """
+    global _CONVO_N
+    text = (content or "").strip().lower()
+    if len(text) > 120:
+        return None
+    _CONVO_N += 1
+    seed = (sum(ord(c) for c in text) + datetime.date.today().toordinal()
+            + _CONVO_N) % 97
+
+    def pick(seq):
+        return seq[seed % len(seq)]
+
+    # ---- greetings ----------------------------------------------------
+    greet = re.search(
+        r"^(hi+|h[ae]llo+w?|hell+|hey+|yo+|namaste|namaskar|good\s*(morning|"
+        r"afternoon|evening|night)|হাই|হ্যালো|নমস্কার|প্রণাম|নমঃ?)\b", text)
+    howare = re.search(r"(how\s*are\s*you|কেমন\s*(আছ|আছো|আছেন)|kemon)", text)
+    thanks = re.search(r"(thanks|thank\s*you|thnx|ধন্যবাদ|থ্যাংকস)", text)
+    who = re.search(r"(who\s*are\s*you|your\s*name|তুমি\s*কে|কে\s*তুমি|"
+                    r"তোমার\s*নাম|আপনি\s*কে)", text)
+
+    if who:
+        if lang == "en":
+            return pick([
+                "I am Dharantrax Kapalik — the multi-method jyotisha-tantra "
+                "agent. Parashari, Jaimini, KP, Nadi, Lal Kitab — each system "
+                "computed separately, then cross-checked. Give me your birth "
+                "data and I will cast the chart.",
+                "The name is Dharantrax Kapalik. I compute, I don't guess — "
+                "Lahiri sidereal, six-system verification, yantra and sound "
+                "prescription. Send your birth date, time and place.",
+                "Dharantrax Kapalik, at your service. Chart, family, "
+                "sadhana — tell me what brings you.",
+            ])
+        return pick([
+            "আমি ধরণ্ট্রাক্স কাপালিক — বহু-পদ্ধতি জ্যোতিষ-তন্ত্র এজেন্ট. "
+            "পরাশরী, জৈমিনী, কে.পি., নাড়ী, লাল কিতাব — প্রতিটি পদ্ধতি আলাদা "
+            "ভাবে গণনা করে মিলিয়ে দেখি. আপনার জন্ম-বিবরণ দিলে কোষ্ঠি বানিয়ে "
+            "বলতে পারি.",
+            "নাম ধরণ্ট্রাক্স কাপালিক. আমি গণনা করি, অনুমান নয় — লাহিড়ী "
+            "নিরয়ণ, ষড়-পদ্ধতি যাচাই, যন্ত্র ও ধ্বনি-নির্দেশ. জন্ম-তারিখ, "
+            "সময় ও স্থান দিন, শুরু করি.",
+            "ধরণ্ট্রাক্স কাপালিক — আপনার সেবায়. কোষ্ঠি, পরিবার, সাধনা — "
+            "যা নিয়ে ডেকেছেন, বলুন.",
+        ])
+    if thanks:
+        if lang == "en":
+            return pick([
+                "Your word is dharma to me. I am here whenever you need me.",
+                "No trouble at all — this is what I am for. Ask me anything "
+                "else when you wish.",
+                "Pranam accepted. I remain at your service.",
+            ])
+        return pick([
+            "আপনার কথাই ধর্ম. যখনই দরকার, আমি এখানেই.",
+            "কিছু মনে করবেন না — এই তো আমার কাজ. আর কিছু জানতে চাইলে বলুন.",
+            "প্রণাম গ্রহণ করলাম. আরও কিছু দরকার হলে আমি আছি.",
+        ])
+    if howare:
+        if lang == "en":
+            return pick([
+                "I am well — engine awake, calculations ready. How are you? "
+                "What is on your mind?",
+                "Well, and better for hearing from you. What shall we talk "
+                "about today?",
+                "I am here — give me birth data and I cast the chart, or "
+                "simply tell me what weighs on you.",
+            ])
+        return pick([
+            "আমি ঠিক আছি — ইঞ্জিন সচল, গণনা প্রস্তুত. আপনি কেমন আছেন? "
+            "কী নিয়ে ভাবছেন?",
+            "ভালো আছি, আপনার খবর শুনে আরও ভালো লাগল. আজ কী নিয়ে কথা বলব?",
+            "আমি আছি — জন্ম-বিবরণ দিলে কোষ্ঠি গড়ি, নইলে আপনার কথাই শুনি. "
+            "বলুন.",
+        ])
+    if greet:
+        if lang == "en":
+            return pick([
+                "Pranam. What brings you — chart, family, or sadhana? "
+                "Send your birth date, time and place and I begin.",
+                "Pranam. I am listening. For a chart, give me birth date, "
+                "time and place; for anything else, speak plainly.",
+                "Namaskar. Tell me — send your birth data, or say what "
+                "weighs on your mind.",
+            ])
+        return pick([
+            "প্রণাম. কী নিয়ে ডেকেছেন — কোষ্ঠি, পরিবার, না সাধনা? "
+            "জন্ম-তারিখ, সময় ও স্থান দিলে গণনা শুরু করি.",
+            "প্রণাম. আমি শুনছি. কোষ্ঠি-প্রশ্ন হলে জন্ম-তারিখ, সময় ও স্থান "
+            "দিন; অন্য কিছু হলে সোজাসুজি বলুন.",
+            "নমস্কার. বলুন — জন্ম-বিবরণ দিন, বা যা মনে ভার করছে শুনি.",
+        ])
+    # ---- topic questions ---------------------------------------------
+    topics = {
+        "বিয়ে": ("বিবাহ", ["বিয়ে", "বিবাহ", "দ্বিতীয় বিবাহ", "শাদি",
+                           "marriage", "সম্পর্ক"]),
+        "কর্ম": ("কর্ম/জীবিকা", ["চাকরি", "কর্ম", "job", "career", "ব্যবসা",
+                                "business", "প্রমোশন"]),
+        "স্বাস্থ্য": ("স্বাস্থ্য", ["স্বাস্থ্য", "অসুখ", "রোগ", "health",
+                                   "sickness", "শরীর"]),
+        "অর্থ": ("অর্থ-অবরোধ", ["অর্থ", "টাকা", "money", "finance", "ঋণ",
+                                "লোন", "debt"]),
+        "সাধনা": ("সাধনা", ["সাধনা", "জপ", "মন্ত্র", "ধ্যান", "pranayama",
+                            "প্রাণায়াম", "sadhana", "যন্ত্র"]),
+        "সন্তান": ("সন্তান", ["সন্তান", "ছেলে", "মেয়ে", "children", "প্রেগনেন্সি",
+                              "pregnancy"]),
+        "পরিবার": ("পরিবার", ["পরিবার", "family", "মা-বাবা", "শ্বশুর"]),
+    }
+    for key, (label, words) in topics.items():
+        if any(w in text for w in words):
+            if lang == "en":
+                return pick([
+                    f"Talking about {key} — good. For a reliable answer I "
+                    f"need three things: birth date, birth time and birth "
+                    f"place. Send them and I will show you the calculation.",
+                    f"{key} — the relevant house and planets must be read "
+                    f"from the chart. Send birth date, time and place; I "
+                    f"will compute where the block is and which Shanti "
+                    f"practice fits.",
+                    f"For {key} I need the chart first — birth date, time "
+                    f"and place, and I begin. Family members' data too, if "
+                    f"you wish; I cross-check.",
+                ])
+            return pick([
+                f"{label} নিয়ে কথা বলছেন — ভালো. এ ক্ষেত্রে কোষ্ঠি থেকে সঠিক "
+                f"উত্তর পেতে আমার তিনটি জিনিস লাগবে: জন্ম-তারিখ, জন্ম-সময়, "
+                f"ও জন্ম-স্থান. দিন, আমি হিসেব করে দেখাই.",
+                f"{label} — এর জন্য কোষ্ঠির নির্দিষ্ট ভাব ও গ্রহ দেখতে হয়. "
+                f"জন্ম-তারিখ, সময় ও স্থান দিন; গণনা করে বলি কোথায় বাধা আর "
+                f"কোন শান্তি-উপায় চলবে.",
+                f"{label} বিষয়ে আগে চার্ট চাই — জন্ম-তারিখ, সময় ও স্থান "
+                f"দিলেই শুরু. চাইলে পরিবারের অন্যদের তথ্যও দিন, মিলিয়ে "
+                f"দেখব.",
+            ])
+    return None
 
 
 def compose_consultation(content: str, lang: str, registered=None,
@@ -543,6 +708,17 @@ def compose_consultation(content: str, lang: str, registered=None,
 
     birth = parse_birth(content)
     if birth is None:
+        # ---- conversational layer -------------------------------------
+        # Greetings, thanks, identity and topic questions get natural
+        # varied replies; only unmatched messages fall to the full
+        # protocol guidance. Variation is deterministic per (message,
+        # day) so the same word never feels like a canned echo.
+        conv = _conversational_reply(content, lang)
+        if conv is not None:
+            chunks = _split_chunks(conv)
+            resp = _pack(chunks, lang, None, None)
+            resp["_mode"] = "conversation"
+            return resp
         # Guidance reply — ask for birth data, explain the protocol
         if lang == "en":
             body = (

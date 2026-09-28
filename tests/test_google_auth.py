@@ -472,6 +472,40 @@ def main():
               lin_joined[:140])
         sock_l.close()
 
+        # 12d. conversational layer — greetings/thanks get natural varied
+        # replies, never the full protocol block; a second identical
+        # greeting must not echo the exact same line
+        def consult_once(conn, msg, lang="bn"):
+            ws_send_text(conn, json.dumps({
+                "type": "user_message", "session_id": "s1",
+                "content": msg, "lang": lang, "attachments": []},
+                ensure_ascii=False))
+            joined, final = "", False
+            for _ in range(14):
+                op, payload = ws_read_frame(conn, timeout=8.0)
+                if op != 0x1 or not payload:
+                    break
+                frame = json.loads(payload.decode())
+                if frame.get("type") == "diagnostic_chunk":
+                    joined += frame.get("content", "")
+                    if frame.get("final"):
+                        final = True
+                        break
+            return joined, final
+
+        sock_c, _, resp_c = ws_connect(f"/v1/chat/ws?token={access_token}")
+        g1, f1 = consult_once(sock_c, "hi")
+        g2, f2 = consult_once(sock_c, "hi")
+        check("WS conversational greeting (short, not the protocol block)",
+              f1 and g1 and "তিনটি বিষয়" not in g1 and len(g1) < 200,
+              g1[:140])
+        check("WS conversational variation (repeated greeting rotates)",
+              f2 and g2 and g2 != g1, g2[:140])
+        t1, tf = consult_once(sock_c, "ধন্যবাদ")
+        check("WS conversational thanks acknowledged",
+              tf and t1 and "তিনটি বিষয়" not in t1, t1[:140])
+        sock_c.close()
+
         # 13. WS handshake (invalid token) -> 401
         s2, _, resp2 = ws_connect("/v1/chat/ws?token=invalid-token-xyz")
         check("WS handshake invalid token -> 401", b"401" in resp2[:64],
