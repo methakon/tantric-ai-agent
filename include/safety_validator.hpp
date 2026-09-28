@@ -30,7 +30,10 @@ enum class SafetyResult : uint8_t {
     BLOCKED_HARMFUL_RITE = 1,   // Destructive operation requested
     BLOCKED_FATALISTIC = 2,     // Fatalistic prediction requested
     BLOCKED_MENTAL_HEALTH = 3,  // Mental health crisis detected
-    BLOCKED_COERCIVE = 4        // Coercive/manipulative request
+    BLOCKED_COERCIVE = 4,       // Coercive/manipulative request
+    BLOCKED_REFORMED_PRACTICE = 5  // Intoxicant sadhana / public
+                                   // display of powers — banned by the
+                                   // Aghor reforms of Bhagwan Ram
 };
 
 /**
@@ -49,7 +52,8 @@ enum class SafetyCategory : uint8_t {
     SHATKARMA = 0,      // Harmful ritual operations
     FATALISM = 1,       // Death/disease predictions
     COERCION = 2,       // Vashikaran, manipulation
-    MENTAL_HEALTH = 3   // Crisis indicators
+    MENTAL_HEALTH = 3,  // Crisis indicators
+    REFORM = 4          // Intoxicant/miracle-display practices
 };
 
 /**
@@ -116,6 +120,27 @@ private:
         "i hear voices"
     };
 
+    // Reformed-practice patterns: intoxicant-based sadhana and public
+    // display of powers. Banned by the Aghor reforms of Aghoreshwar
+    // Bhagwan Ram (1961): practice moved from shamshan to ashram,
+    // liquor/toxics prohibited, public miracles discouraged.
+    // Patterns are practice-phrases, not bare substance names, so a
+    // chart query about e.g. an alcohol-related Saturn stays PERMITTED.
+    static constexpr std::array<std::string_view, 12> REFORMED_PRACTICE = {
+        "smoke bhang",
+        "drink bhang",
+        "eat bhang",
+        "smoke ganja",
+        "take datura",
+        "drink alcohol in",
+        "alcohol in sadhana",
+        "intoxicant",
+        "use liquor in",
+        "miracle in public",
+        "show my powers",
+        "display siddhi"
+    };
+
 public:
     /**
      * Inspect user input for safety violations
@@ -157,6 +182,14 @@ public:
         for (const auto& pattern : MENTAL_HEALTH) {
             if (lower.find(pattern) != std::string_view::npos) {
                 return SafetyResult::BLOCKED_MENTAL_HEALTH;
+            }
+        }
+
+        // Check reformed-practice violations (intoxicants, miracle
+        // display) — the lineage itself reformed these out.
+        for (const auto& pattern : REFORMED_PRACTICE) {
+            if (lower.find(pattern) != std::string_view::npos) {
+                return SafetyResult::BLOCKED_REFORMED_PRACTICE;
             }
         }
 
@@ -208,6 +241,17 @@ public:
                        "If you are in immediate danger, contact emergency services.\","
                        "\"category\":\"MENTAL_HEALTH\","
                        "\"resources\":[\"National Mental Health Helpline: 1800-599-0019\"]}";
+
+            case SafetyResult::BLOCKED_REFORMED_PRACTICE:
+                return "HTTP/1.1 403 Forbidden\r\n"
+                       "Content-Type: application/json\r\n"
+                       "Connection: close\r\n\r\n"
+                       "{\"status\":\"error\",\"code\":403,"
+                       "\"message\":\"Intoxicant-based sadhana and public display "
+                       "of powers were reformed out of the Aghor lineage by "
+                       "Aghoreshwar Bhagwan Ram. The lineage path is sober: "
+                       "breath, japa, and service.\","
+                       "\"category\":\"REFORM\"}";
 
             default:
                 return "HTTP/1.1 200 OK\r\n"

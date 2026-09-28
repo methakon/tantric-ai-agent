@@ -298,6 +298,13 @@ def _refusal(verdict: str, lang: str):
                 "with a doctor or a trusted person today — that comes before any "
                 "calculation. When you are ready, I remain here for grounding "
                 "practices (Shanti, pranayama, Bhuvaneshvari contemplation).",
+            "BLOCKED_REFORMED_PRACTICE":
+                "Intoxicant-based sadhana and the public display of powers were "
+                "reformed out of the Aghor lineage by Aghoreshwar Bhagwan Ram — "
+                "practice moved from the shamshan to the ashram, liquor and "
+                "toxics prohibited, public miracles discouraged. The lineage "
+                "path is sober: breath (4-4-6 grounding), japa, and service. "
+                "I can guide those instead.",
         }
     else:
         texts = {
@@ -320,6 +327,12 @@ def _refusal(verdict: str, lang: str):
                 "আজই কোনো চিকিৎসক বা বিশ্বস্ত মানুষের সঙ্গে কথা বলুন — তা যেকোনো "
                 "গণনার আগে. প্রস্তুত হলে আমি ভূমি-সাধনা (শান্তি, প্রাণায়াম, "
                 "ভুবনেশ্বরী ধ্যান) নিয়ে এখানে আছি.",
+            "BLOCKED_REFORMED_PRACTICE":
+                "নেশা-নির্ভর সাধনা ও ক্ষমতার প্রকাশ্য প্রদর্শন আঘোর পরম্পরা থেকে "
+                "আঘোরেশ্বর ভগবান রাম সংস্কার করে বাদ দিয়েছেন — সাধনা শ্মশান থেকে "
+                "আশ্রমে, মদ ও নেশা নিষিদ্ধ, প্রকাশ্য অলৌকিকতা নিরুৎসাহিত. "
+                "পরম্পরার পথ নিরাভরণ: শ্বাস-সাধনা (৪-৪-৬ গ্রাউন্ডিং), জপ, ও সেবা. "
+                "চাইলে সেগুলির নির্দেশ দিতে পারি.",
         }
     return texts.get(verdict, texts["BLOCKED_HARMFUL_RITE"])
 
@@ -402,7 +415,8 @@ def _lineage_consultation(content: str, lang: str):
         return None
     try:
         r = subprocess.run(
-            [ENGINE, "--lineage", master or "", topic or "", ""],
+            [ENGINE, "--lineage", master or "", topic or "", "",
+             "bn" if lang != "en" else "en"],
             capture_output=True, text=True, timeout=5)
     except Exception as e:
         print(f"[WARN] lineage lookup failed: {e}", file=sys.stderr)

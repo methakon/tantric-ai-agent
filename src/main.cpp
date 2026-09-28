@@ -308,7 +308,7 @@ int main(int argc, char** argv) {
     // Machine modes (used by the Python IPC bridge over subprocess):
     //   tantric_engine --yantra kali|sri|shatkona|wifq[:N] [--size N]
     //   tantric_engine --safety "<user text>"
-    //   tantric_engine --lineage [master] [topic] [needle]
+    //   tantric_engine --lineage [master] [topic] [needle] [bn|en]
     // ============================================================
     if (argc > 1) {
         std::string mode = argv[1];
@@ -363,6 +363,8 @@ int main(int argc, char** argv) {
                     name = "BLOCKED_MENTAL_HEALTH"; break;
                 case tantric::safety::SafetyResult::BLOCKED_COERCIVE:
                     name = "BLOCKED_COERCIVE"; break;
+                case tantric::safety::SafetyResult::BLOCKED_REFORMED_PRACTICE:
+                    name = "BLOCKED_REFORMED_PRACTICE"; break;
                 default: break;
             }
             std::cout << name << "\n";
@@ -373,8 +375,9 @@ int main(int argc, char** argv) {
             std::string master = (argc > 2) ? argv[2] : "";
             std::string topic = (argc > 3) ? argv[3] : "";
             std::string needle = (argc > 4) ? argv[4] : "";
+            bool bn = (argc > 5) && std::string(argv[5]) == "bn";
             auto hits = tantric::lineage::query(master, topic, needle);
-            std::cout << tantric::lineage::render(hits, false);
+            std::cout << tantric::lineage::render(hits, bn);
             return 0;
         }
 

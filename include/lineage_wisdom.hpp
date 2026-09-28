@@ -28,7 +28,8 @@ struct Teaching {
     const char* master;       // e.g. "Gorakhnath"
     const char* tradition;    // e.g. "Nath", "Aghor", "Shakta (Tarapith)"
     const char* topic;        // retrieval key: "seva", "fearlessness", ...
-    const char* teaching;     // distilled statement (<= ~220 chars)
+    const char* teaching;     // distilled statement, English (<= ~220 chars)
+    const char* bn;           // distilled statement, Bengali (UI default)
     const char* quote;        // short quote or "" (policy in file header)
     const char* source;       // text title, e.g. "Gorakh Bani"
     const char* source_url;   // verification URL (register in docs/)
@@ -44,6 +45,8 @@ std::vector<Teaching> query(std::string_view master,
                             std::string_view needle = {});
 
 // Render matched teachings as a numbered plain-text block (bn or en).
+// Bengali render uses the bn field for the teaching text; quotes stay
+// in the source language (fidelity over translation).
 std::string render(const std::vector<Teaching>& hits,
                    bool bengali = false);
 
