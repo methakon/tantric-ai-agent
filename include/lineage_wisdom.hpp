@@ -28,9 +28,10 @@ struct Teaching {
     const char* master;       // e.g. "Gorakhnath"
     const char* tradition;    // e.g. "Nath", "Aghor", "Shakta (Tarapith)"
     const char* topic;        // retrieval key: "seva", "fearlessness", ...
-    const char* teaching;     // distilled statement (<= ~200 chars)
-    const char* quote;        // short quote or "" (public-domain / fair-use)
+    const char* teaching;     // distilled statement (<= ~220 chars)
+    const char* quote;        // short quote or "" (policy in file header)
     const char* source;       // text title, e.g. "Gorakh Bani"
+    const char* source_url;   // verification URL (register in docs/)
 };
 
 // The full researched bank (filled from docs/lineage_sources.md).
@@ -48,7 +49,7 @@ std::string render(const std::vector<Teaching>& hits,
 
 // Topic vocabulary the consultation layer can map onto (for the CLI
 // self-check and the bridge's LINEAGE_WISDOM action).
-const std::array<const char*, 12>& topics();
+const std::array<const char*, 14>& topics();
 
 }  // namespace lineage
 }  // namespace tantric

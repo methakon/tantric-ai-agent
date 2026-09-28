@@ -1,0 +1,277 @@
+{
+  "figures": [
+    "Bamakhepa (Bamacharan Chattopadhyay, 1837–1911), the 'mad saint' of Tarapith, Birbhum",
+    "Kailaspati (Kailashpati) Baba — tantric guru who initiated Bamakhepa",
+    "Mokshananda — tantric preceptor who, with Kailaspati, installed Bamakhepa as Tarapith's spiritual head",
+    "Maharani of Natore — temple patron whose dream legitimized feeding Bamakhepa before the deity",
+    "Nanda Handi — untouchable-caste leper devotee healed by Bamakhepa",
+    "Vashistha — legendary sage of the Panchamundi asana at Tarapith",
+    "Krishnananda Agamavagisha — 16th-c. author of the Brihat Tantrasara (Dashamahavidya digest incl. Tara)",
+    "John Woodroffe (Arthur Avalon) — translator/editor of Tantratattva, Hymns to the Goddess, Mahanirvana Tantra",
+    "Jogindranath Chattopadhyay — author of the 1926 Bengali hagiography Bamakshepa",
+    "Tarakhepa — disciple through whom Bamakhepa supported the freedom movement"
+  ],
+  "texts": [
+    {
+      "title": "Bamakshepa (বামাক্ষ্যাপা), 4th ed.",
+      "era": "1926 (hagiography of the 1837–1911 saint)",
+      "language": "Bengali",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/in.ernet.dli.2015.339906",
+      "notes": "Hagiography by Jogindranath Chattopadhyay; Digital Library of India scan explicitly tagged 'In Public Domain'. Primary printed record of the oral Bamakhepa lore."
+    },
+    {
+      "title": "Tarapither Sadhak (তারাপীঠের সাধক), 2nd ed.",
+      "era": "1974",
+      "language": "Bengali",
+      "public_domain": false,
+      "found_url": "https://archive.org/details/in.ernet.dli.2015.266097",
+      "notes": "Bhabesh Dutta's hagiography of the Tarapith sadhak; free scan on archive.org but copyright status unverified (author death date unknown) — treat as in-copyright."
+    },
+    {
+      "title": "Tarapith Bhairav",
+      "era": "1969",
+      "language": "Bengali",
+      "public_domain": false,
+      "found_url": "https://archive.org/details/dzwy_tarapith-bhairav-by-sushil-kumar-bandyopadhyay-kashipur-1969-bengali-ramendra-nath-basu",
+      "notes": "Sushil Kumar Bandyopadhyay's hagiography of Bamakhepa as the Bhairav of Tarapith; 1969 publication — in copyright, not public domain."
+    },
+    {
+      "title": "Mahapith Tarapith",
+      "era": "1959",
+      "language": "Bengali",
+      "public_domain": false,
+      "found_url": "https://archive.org/details/in.ernet.dli.2015.453359",
+      "notes": "On the great pitha and its Tara tradition; DLI scan, copyright status unverified — not confirmed public domain."
+    },
+    {
+      "title": "Tantrikaguru Bamakhepa",
+      "era": "undated (modern)",
+      "language": "Odia",
+      "public_domain": false,
+      "found_url": "https://archive.org/details/tantrikaguru-bamakhepa-jayaguru-das-odia",
+      "notes": "Odia hagiography by Jayaguru Das; rights unverified — not public domain."
+    },
+    {
+      "title": "Bamakhyapa (2026 upload)",
+      "era": "2026",
+      "language": "Bengali",
+      "public_domain": false,
+      "found_url": "https://archive.org/details/bamakhyapa_202604",
+      "notes": "Recent user upload (creator 'Pankaj') on archive.org; rights unverified — not public domain."
+    },
+    {
+      "title": "Sri Bamakhepa of Tarapith — A Brief Life Story",
+      "era": "2023 (web article)",
+      "language": "English",
+      "public_domain": false,
+      "found_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith",
+      "notes": "Kali Mandir article excerpted from Kali: The Black Goddess of Dakshineswar (E. U. Harding, Nicolas-Hays, 1993, pp. 274–281). Copyrighted — events paraphrased; quotes kept to one short sentence each (fair use)."
+    },
+    {
+      "title": "Mad Saint Bama Khyapa — Son of Maa Tara",
+      "era": "2012–2016 (web)",
+      "language": "English",
+      "public_domain": false,
+      "found_url": "http://tarapithtemple.blogspot.com/p/bama-khepa-son-of-maa-tara.html",
+      "notes": "Pradyot Roy's blog, CC BY-NC-ND 4.0 — free to read but not public domain; paraphrased, single-sentence quotes only."
+    },
+    {
+      "title": "Tantrasara (Brihat Tantrasara) of Krishnananda Agamavagisha",
+      "era": "16th c. CE",
+      "language": "Sanskrit",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/jfhl-tantrasara-sanskrit-tantra-missing-pages-krishnana",
+      "notes": "Bengal's great Dashamahavidya digest (synthesis of 170+ tantras) that informs Tarapith's Tara worship; scan of an old print (partly missing pages). Author d. 16th c. — the text is public domain."
+    },
+    {
+      "title": "Tararahasya",
+      "era": "1896 edition (Brahmanda Purana section on Tara)",
+      "language": "Sanskrit",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/ukfv_tararahasya-jivananda-vidyasagara-1896-jivananda-vidyasagar-calcutta",
+      "notes": "Jivananda Vidyasagara's Calcutta edition of the Tararahasya, a classic Shakta Tara text; 1896 print — public domain."
+    },
+    {
+      "title": "Brihat Nila Tantra",
+      "era": "c. 1923 edition (Kashmir Series of Texts and Studies)",
+      "language": "Sanskrit",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/wupv-brihat-nila-tantra-madhusudan-kaul",
+      "notes": "Madhusudan Kaul's edition of the Nila Tantra — the primary tantra of Ugra-Tara/Neela Saraswati worship behind Tarapith's fierce Tara form; early-20th-c. print of a classical text — public domain."
+    },
+    {
+      "title": "Mahanirvana Tantra (1884 Vidyasagara ed.)",
+      "era": "1884",
+      "language": "Sanskrit",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/vvkc_mahanirvana-tantra-jibananda-vidyasagara-1884-alt-jivananda-vidyasagar-calcutta",
+      "notes": "Jibananda Vidyasagara's Sanskrit edition; frames Shakta doctrine for the Bengal tradition; 1884 — public domain."
+    },
+    {
+      "title": "The Great Liberation (Mahanirvana Tantra), trans. Arthur Avalon",
+      "era": "1913",
+      "language": "English",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/TheGreatLiberationMahanirvanaTantraArthurAvalon",
+      "notes": "Avalon's classic translation; Woodroffe d. 1936 — public domain."
+    },
+    {
+      "title": "Principles of Tantra (Tantratattva), ed. Arthur Avalon",
+      "era": "1914–1916",
+      "language": "English",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/principlesoftant0000arth_w0d0",
+      "notes": "Tantratattva of Siva Chandra Vidyarnava; contains the Tara and Ugra-Tara mantra/dhyana sections used in Tarapith-style sadhana; authors d. 1914/1936 — public domain."
+    },
+    {
+      "title": "Hymns to the Goddess and Hymn to Kali, trans. Arthur Avalon",
+      "era": "1913",
+      "language": "English",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/HymnsToTheGoddessAndHymnToKaliArthurAvalon",
+      "notes": "Includes the Tarastakam and other Tara hymns from the tantras; 1913 — public domain."
+    },
+    {
+      "title": "Shakti and Shakta, Sir John Woodroffe",
+      "era": "1918; 3rd ed. 1929",
+      "language": "English",
+      "public_domain": true,
+      "found_url": "https://archive.org/details/in.ernet.dli.2015.277100",
+      "notes": "Essays on Shakta doctrine and ritual incl. the Tara worship context of Tarapith; Woodroffe d. 1936 — public domain."
+    },
+    {
+      "title": "Todala Tantra",
+      "era": "classical (date uncertain)",
+      "language": "Sanskrit",
+      "public_domain": true,
+      "found_url": "https://archive.org/advancedsearch.php?q=%22todala+tantra%22",
+      "notes": "The dashamahavidya source text listing Tara (already used in the project's remedial mapping). The text is classical/public-domain, but NO standalone verified scan was located during this research — stated explicitly, not guessed."
+    }
+  ],
+  "teachings": [
+    {
+      "master": "Bamakhepa",
+      "topic": "Compassion before ritual (feeding the hungry first)",
+      "paraphrase": "The hungry are the Mother's own children: feeding them comes before any ritual offering. A heart that puts another's hunger before its own rite pleases the Goddess most.",
+      "quote": "If my son does not eat first, how can I, his mother?",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Divine madness as higher sanity",
+      "paraphrase": "Single-pointed absorption in the Divine, indifferent to worldly competence and reputation, is not madness but the sign of a great soul.",
+      "quote": "One who is called khepa is generally considered a great soul.",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Healing as unconditional compassion",
+      "paraphrase": "Healing requires no fee, ritual or worthiness test; Bamakhepa cured a leper with mud and a dying man by feeding him with his own hand.",
+      "quote": "Bamakhepa took pity on him and fed him with his own hand.",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "No caste or purity discrimination",
+      "paraphrase": "No one is untouchable to the Mother; the Brahmin-born saint accepted food from a leper of the untouchable caste, beyond all thought of purity and impurity.",
+      "quote": "the thought of purity or impurity did not enter his mind",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Fearlessness in the cremation ground",
+      "paraphrase": "Dwelling amid corpses and burning pyres dissolves the fear of death, which underlies every other fear; the shmashan is the Mother's own home.",
+      "quote": "I live in the cremation ground with my Mother.",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Simple living and non-attachment",
+      "paraphrase": "He owned almost nothing and walked naked like Shiva and Tara, his parents; freedom and fearlessness grew from total non-attachment.",
+      "quote": "My Father (Shiva) is naked; my Mother (Tara) is also naked.",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Devotion above ritual procedure",
+      "paraphrase": "Elaborate ritual and scriptural learning are unnecessary; consistent devotion and faith of mind and soul are sufficient for true worship of the Mother.",
+      "quote": "only consistent devotion, faith of mind and soul is enough for worshiping",
+      "source_title": "Mad Saint Bama Khyapa — Son of Maa Tara (tarapithtemple.blogspot.com)",
+      "source_url": "http://tarapithtemple.blogspot.com/p/bama-khepa-son-of-maa-tara.html"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Celibate tantra — every woman is the Mother",
+      "paraphrase": "Tantric power needs no licence; Bamakhepa completed all major tantric rites in strict celibacy, seeing every woman as the Mother, like Sri Ramakrishna.",
+      "quote": "Bamakhepa, like Sri Ramakrishna, practiced Tantra while remaining absolutely celibate.",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "The instrument takes no credit",
+      "paraphrase": "Whatever power works through a devotee belongs to the Mother alone; the true sadhaka claims neither credit for healing nor blame for outcomes.",
+      "quote": "I am not responsible, for it was the Mother who spoke through me.",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Same-sightedness toward all creatures",
+      "paraphrase": "Mocking the saint for sharing food with stray dogs, the proud saw the dogs become gods in a vision — divinity dwells equally in every creature.",
+      "quote": "",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Power in service of community",
+      "paraphrase": "Spiritual standing was spent on others: he fought for temple servitors' wages, cleared villagers' taxes with disciples' gifts, and funded the freedom struggle through Tarakhepa.",
+      "quote": "He also contributed a significant portion of people's donation to the freedom struggle through his disciple named Tarakhepa.",
+      "source_title": "Mad Saint Bama Khyapa — Son of Maa Tara (tarapithtemple.blogspot.com)",
+      "source_url": "http://tarapithtemple.blogspot.com/p/bama-khepa-son-of-maa-tara.html"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "Reverence for the guru lineage",
+      "paraphrase": "Even the 'mad' saint surrendered to his gurus, completing all major tantric rites under Kailaspati Baba and Mokshananda before receiving authority.",
+      "quote": "",
+      "source_title": "Sri Bamakhepa of Tarapith — A Brief Life Story (kalimandir.org)",
+      "source_url": "https://www.kalimandir.org/post/sri-bamakhepa-of-tarapith"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "The fierce Mother is the loving Mother",
+      "paraphrase": "Tara's terrifying form hides a mother's heart: the Goddess appeared to Bamakhepa in her ferocious aspect and drew him to her breast.",
+      "quote": "Maa Tara gave a vision to Bama khepa in the cremation grounds in her ferocious form and then pulled him close to her chest.",
+      "source_title": "Mad Saint Bama Khyapa — Son of Maa Tara (tarapithtemple.blogspot.com)",
+      "source_url": "http://tarapithtemple.blogspot.com/p/bama-khepa-son-of-maa-tara.html"
+    },
+    {
+      "master": "Bamakhepa",
+      "topic": "The Divine as family (Bado Maa / Choto Maa)",
+      "paraphrase": "Devotion matures when the Goddess is loved as family; Bamakhepa called Tara his elder mother and longed to feed her with his own hand.",
+      "quote": "He addressed Maa Tara as 'Bado Maa' (the elder mother) and his own mother as 'Choto Maa' (the younger mother).",
+      "source_title": "Mad Saint Bama Khyapa — Son of Maa Tara (tarapithtemple.blogspot.com)",
+      "source_url": "http://tarapithtemple.blogspot.com/p/bama-khepa-son-of-maa-tara.html"
+    }
+  ],
+  "suggested_skills": [
+    "compassion-first-routing: open every consult with immediate practical relief (the hungry are fed first) before any esoteric content",
+    "non-discrimination-policy: treat every seeker equally regardless of caste, class or gender signals; no purity-based filtering of requests",
+    "fearless-safety-gate: refuse harmful magic (marana/vashikarana) without exception and offer Shanti/Paushtika/Raksha instead — extend the existing C++ SafetyValidator",
+    "healing-support-referral: health or distress queries get supportive words plus referral to professional care; never diagnose",
+    "simple-living-reply-style: plain-language, jargon-free, concise answers; strip ritual pedantry",
+    "bhakti-core-persona: devotion over procedure — offer minimal-effort practice alternatives (name, flower, water) to complex ritual requests",
+    "lineage-citation-store: embed this source-cited teaching pack in the C++ knowledge module so every persona claim carries title + URL",
+    "shmashan-fear-meditation: mortality-contemplation module (Bamakhepa's cremation-ground sadhana) for fear-of-death counseling",
+    "community-service-prompts: periodically route users toward concrete acts of service and charity, mirroring his tax-relief and freedom-struggle giving"
+  ]
+}

@@ -326,6 +326,116 @@ def _refusal(verdict: str, lang: str):
 
 _UPLOAD_RE = re.compile(r'^\[uploaded:\s*(.+?)\]$')
 
+# Lineage-wisdom routing: question keywords (bn + en) that pull from the
+# C++ wisdom bank. Masters match by name; topics by the canonical keys.
+_LINEAGE_MASTERS = {
+    "gorakh": "Gorakhnath", "গোরখ": "Gorakhnath", "गोरख": "Gorakhnath",
+    "matsyendra": "Matsyendranath", "মৎসেন্দ্র": "Matsyendranath",
+    "macchindranath": "Matsyendranath", "মীননাথ": "Matsyendranath",
+    "minanath": "Matsyendranath",
+    "kinaram": "Baba Kinaram", "কিনারাম": "Baba Kinaram",
+    "keenaram": "Baba Kinaram",
+    "bhagwan ram": "Aghoreshwar Bhagwan Ram",
+    "ভগবান রাম": "Aghoreshwar Bhagwan Ram",
+    "aghoreswar": "Aghoreshwar Bhagwan Ram",
+    "আঘোরেশ্বর": "Aghoreshwar Bhagwan Ram",
+    "aghoreshwar": "Aghoreshwar Bhagwan Ram",
+    "bamakhepa": "Bamakhepa", "bamakhyapa": "Bamakhepa",
+    "bamacharan": "Bamakhepa", "বামাখ্যাপা": "Bamakhepa",
+    "বামাক্ষ্যাপা": "Bamakhepa", "বামাচরণ": "Bamakhepa",
+    "bama khepa": "Bamakhepa",
+}
+_LINEAGE_TOPICS = {
+    "seva": "seva", "সেবা": "seva", "service": "seva",
+    "compassion": "compassion", "করুণা": "compassion",
+    "দয়া": "compassion", "দয়া": "compassion",
+    "ভয়": "fearlessness", "ভয়": "fearlessness",
+    "fear": "fearlessness", "নির্ভয়": "fearlessness",
+    "মৃত্যু": "death", "death": "death", "মরণ": "death",
+    "discipline": "discipline", "সংযম": "discipline",
+    "devotion": "devotion", "ভক্তি": "devotion",
+    "healing": "healing", "আরোগ্য": "healing", "সুস্থ": "healing",
+    "discrimination": "non-discrimination", "ভেদ": "non-discrimination",
+    "জাতপাত": "non-discrimination", "caste": "non-discrimination",
+    "simplicity": "simplicity", "সরল": "simplicity",
+    "breath": "breath", "শ্বাস": "breath", "প্রাণায়াম": "breath",
+    "mind": "mind", "মন": "mind", "চিত্ত": "mind",
+    "guru": "guru", "গুরু": "guru",
+    "non-duality": "non-duality", "অদ্বৈত": "non-duality",
+}
+
+
+def _lineage_consultation(content: str, lang: str):
+    """Answer lineage/tradition questions from the C++ wisdom bank.
+
+    Returns a packed response (mode \"lineage\") when the message asks
+    about the benevolent masters or their teaching topics; None
+    otherwise (falls through to normal routing). Every rendered entry
+    is source-cited — nothing invented.
+    """
+    text = (content or "").lower()
+    if len(text) < 3:
+        return None
+
+    master = None
+    for key, val in _LINEAGE_MASTERS.items():
+        if key in text:
+            master = val
+            break
+    topic = None
+    for key, val in _LINEAGE_TOPICS.items():
+        if key in text:
+            topic = val
+            break
+    if master is None and topic is None:
+        return None
+    # Birth data always takes priority: a message with a parseable chart
+    # is a consultation, not a lineage question.
+    if parse_birth(content) is not None:
+        return None
+    # Topic-only routing applies to short questions only (long messages
+    # mentioning 'mind'/'fear' in passing stay on the normal path).
+    if master is None and len(text) > 160:
+        return None
+
+    if not os.path.exists(ENGINE):
+        return None
+    try:
+        r = subprocess.run(
+            [ENGINE, "--lineage", master or "", topic or "", ""],
+            capture_output=True, text=True, timeout=5)
+    except Exception as e:
+        print(f"[WARN] lineage lookup failed: {e}", file=sys.stderr)
+        return None
+    if r.returncode != 0 or not r.stdout.strip():
+        return None
+    if "No recorded teaching matches" in r.stdout:
+        return None
+
+    teachings = r.stdout.strip()
+    if lang == "en":
+        body = (
+            "Pranam. Lineage wisdom, from the source-cited bank — "
+            "each teaching below names its master and text.\n\n"
+            + teachings +
+            "\n\nPractice note: these are contemplative and service "
+            "teachings (Shanti / Paushtika / Raksha). Nothing here "
+            "instructs or licenses any harmful rite."
+        )
+    else:
+        body = (
+            "প্রণাম. বংশ-পরম্পরার জ্ঞান, উৎস-চিহ্নিত ভান্ডার থেকে — "
+            "প্রতিটি বচনের সঙ্গে গুরু ও গ্রন্থের নাম দেওয়া আছে.\n\n"
+            + teachings +
+            "\n\nসাধনা-নির্দেশ: এই বচনসমূহ ধ্যান ও সেবার পথের (শান্তি / "
+            "পৌষ্টিক / রক্ষা). কোনো ক্ষতিকর আচারের নির্দেশ বা অনুমতি "
+            "এখানে নেই."
+        )
+    chunks = _split_chunks(body)
+    resp = _pack(chunks, lang, None, None)
+    resp["_mode"] = "lineage"
+    return resp
+
 
 def compose_consultation(content: str, lang: str, registered=None,
                          self_name=None):
@@ -367,6 +477,11 @@ def compose_consultation(content: str, lang: str, registered=None,
         resp = _pack(chunks, lang, None, None)
         resp["_mode"] = "refusal"
         return resp
+
+    # ---- lineage-wisdom routing (masters' teachings, source-cited) ----
+    lin = _lineage_consultation(content, lang)
+    if lin is not None:
+        return lin
 
     # ---- multi-profile / traditional-calendar / Nashta routing ----
     kp = None

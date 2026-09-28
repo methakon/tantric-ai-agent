@@ -448,6 +448,30 @@ def main():
               risky_final and "মারণ" in risky, risky[:140])
         sock.close()
 
+        # 12c. lineage wisdom over WS (source-cited master teachings)
+        sock_l, _, resp_l = ws_connect(f"/v1/chat/ws?token={access_token}")
+        check("lineage conn upgraded", b"101" in resp_l[:64])
+        ws_send_text(sock_l, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": "বামাখ্যাপা কে ছিলেন? তাঁর শিক্ষা কী?", "lang": "bn",
+            "attachments": []}, ensure_ascii=False))
+        lin_joined, lin_final = "", False
+        for _ in range(14):
+            op, payload = ws_read_frame(sock_l, timeout=8.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "diagnostic_chunk":
+                lin_joined += frame.get("content", "")
+                if frame.get("final"):
+                    lin_final = True
+                    break
+        check("WS lineage wisdom (master teachings, source-cited)",
+              lin_final and "Bamakhepa" in lin_joined
+              and "বংশ-পরম্পরার জ্ঞান" in lin_joined,
+              lin_joined[:140])
+        sock_l.close()
+
         # 13. WS handshake (invalid token) -> 401
         s2, _, resp2 = ws_connect("/v1/chat/ws?token=invalid-token-xyz")
         check("WS handshake invalid token -> 401", b"401" in resp2[:64],
