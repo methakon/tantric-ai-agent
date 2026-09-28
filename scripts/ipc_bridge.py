@@ -422,6 +422,27 @@ class IPCServer:
                 from auth_service import GOOGLE_CLIENT_ID
                 return {"status": "SUCCESS", "client_id": GOOGLE_CLIENT_ID}
 
+            if action == "LINEAGE_WISDOM":
+                # Source-cited teachings of the benevolent tantric masters,
+                # served from the C++ lineage engine (deterministic bank).
+                import subprocess as _sp
+                engine = os.path.join(os.path.dirname(os.path.dirname(
+                    os.path.abspath(__file__))), "tantric_engine")
+                if not os.path.exists(engine):
+                    return {"status": "ERROR",
+                            "message": "engine binary unavailable"}
+                master = req.get("master", "") or ""
+                topic = req.get("topic", "") or ""
+                needle = req.get("needle", "") or ""
+                try:
+                    r = _sp.run([engine, "--lineage", master, topic, needle],
+                                capture_output=True, text=True, timeout=5)
+                    if r.returncode != 0:
+                        return {"status": "ERROR", "message": r.stderr.strip()}
+                    return {"status": "SUCCESS", "text": r.stdout}
+                except Exception as e:
+                    return {"status": "ERROR", "message": str(e)}
+
             if action == "CONSULT":
                 from consultation_engine import consult
                 uid = req.get("user_id", "")

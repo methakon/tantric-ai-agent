@@ -25,6 +25,7 @@
 #include "ephemeris_engine.hpp"
 #include "yantra_engine.hpp"
 #include "sound_weaver.hpp"
+#include "lineage_wisdom.hpp"
 #include "safety_validator.hpp"
 #include "wav_writer.hpp"
 #include "multi_engine.hpp"
@@ -307,6 +308,7 @@ int main(int argc, char** argv) {
     // Machine modes (used by the Python IPC bridge over subprocess):
     //   tantric_engine --yantra kali|sri|shatkona|wifq[:N] [--size N]
     //   tantric_engine --safety "<user text>"
+    //   tantric_engine --lineage [master] [topic] [needle]
     // ============================================================
     if (argc > 1) {
         std::string mode = argv[1];
@@ -367,8 +369,17 @@ int main(int argc, char** argv) {
             return 0;
         }
 
+        if (mode == "--lineage") {
+            std::string master = (argc > 2) ? argv[2] : "";
+            std::string topic = (argc > 3) ? argv[3] : "";
+            std::string needle = (argc > 4) ? argv[4] : "";
+            auto hits = tantric::lineage::query(master, topic, needle);
+            std::cout << tantric::lineage::render(hits, false);
+            return 0;
+        }
+
         std::cerr << "unknown mode: " << mode
-                  << " (expected --yantra or --safety)\n";
+                  << " (expected --yantra, --safety or --lineage)\n";
         return 2;
     }
 
