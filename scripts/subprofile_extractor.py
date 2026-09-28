@@ -27,7 +27,7 @@ import re
 
 from kinship_parser import (
     BN_DIGITS, WEEKDAYS_BN, BN_PLACES, _find_time_hours, _find_place,
-    convert_bengali_date_to_gregorian,
+    convert_bengali_date_to_gregorian, normalize_flat_report,
 )
 from consultation_engine import CITIES
 
@@ -220,6 +220,9 @@ def extract_profiles_from_text(raw_text: str):
     # citation markers from pasted reports pollute fields — strip first
     raw_text = re.sub(r"\[\s*cite\s*:?\s*\d+\s*\]", "", raw_text, flags=re.I)
     raw_text = re.sub(r"\[\s*\d+\s*\]", "", raw_text)
+    # chat inputs collapse pasted newlines: re-linebreak flat structured
+    # reports so numbered heads and field labels sit on their own lines
+    raw_text = normalize_flat_report(raw_text)
     profiles = []
     for block in _split_blocks(raw_text):
         if not block or len(block) < 8:

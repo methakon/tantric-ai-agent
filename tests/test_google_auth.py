@@ -710,6 +710,107 @@ def main():
               "সমর্থিত" in rep_joined, rep_joined[200:600])
         sock4b.close()
 
+        # 17c. flattened single-line paste — chat windows collapse pasted
+        # newlines; the parser must re-linebreak and still yield 4 profiles
+        sock4c = ws_connect(f"/v1/chat/ws?token={access_token}")[0]
+        ws_send_text(sock4c, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": (
+                "1. Swarna Sekhar Dhar   Date of Birth: December 9, "
+                "1981[cite: 7]   Time of Birth: 01:00 AM[cite: 7]Place of "
+                "Birth: Berhampore, Murshidabad[cite: 7]Gotra: Sandilya"
+                "[cite: 7]Lagna (Ascendant): Virgo (Kanya)[cite: 7]Rashi "
+                "(Moon Sign): Aries (Mesha)[cite: 7]Nakshatra: Bharani "
+                "(Pada 3/4)[cite: 7]Ruling Planets: Mercury (Lagna Lord), "
+                "Mars (Rashi Lord), Venus (Nakshatra Lord)[cite: 7]2. "
+                "Mamata Rajbanshi Dhar (Wife)   Date of Birth: November "
+                "14, 2002[cite: 8]   Time of Birth: Unrecorded (estimated "
+                "daytime)[cite: 8]Place of Birth: Kandi, Murshidabad"
+                "[cite: 8]Rashi (Moon Sign): Leo (Simha)[cite: 8]Nakshatra: "
+                "Purva Phalguni[cite: 8]Ruling Planets: Sun (Rashi Lord), "
+                "Venus (Nakshatra Lord)[cite: 8]Auspicious Syllables: Mo, "
+                "Ta, Ti, Tu[cite: 8]3. Sastav Dhar (Elder Son)   Date of "
+                "Birth: April 2, 2019[cite: 9]   Time of Birth: 13:09 "
+                "(01:09 PM)[cite: 9]Place of Birth: Kandi, Murshidabad"
+                "[cite: 9]Lagna (Ascendant): Cancer (Karka)Rashi (Moon "
+                "Sign): Aquarius (Kumbha)Nakshatra: Shatabhisha (Pada 1)"
+                "Ruling Planets: Moon (Lagna Lord), Saturn (Rashi Lord), "
+                "Rahu (Nakshatra Lord)4. Abhyant Dhar (Younger Son)   "
+                "Date of Birth: August 19, 2021[cite: 9]   Time of Birth: "
+                "16:02 (04:02 PM)[cite: 9]Place of Birth: Kandi, "
+                "Murshidabad[cite: 9]Lagna (Ascendant): Sagittarius "
+                "(Dhanu)Rashi (Moon Sign): Sagittarius (Dhanu)Nakshatra: "
+                "Purva Ashadha (Pada 2)Ruling Planets: Jupiter (Lagna & "
+                "Rashi Lord), Venus (Nakshatra Lord)"),
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        flat_joined, flat_final = "", False
+        for _ in range(20):
+            op, payload = ws_read_frame(sock4c, timeout=10.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "diagnostic_chunk":
+                flat_joined += frame.get("content", "")
+                if frame.get("final"):
+                    flat_final = True
+                    break
+        check("flattened single-line report -> 4 profiles (re-linebreak)",
+              flat_final
+              and "4 জনের প্রোফাইল চিহ্নিত" in flat_joined
+              and "জন্মতারিখ নেই" not in flat_joined.split("নষ্ট-জাতক")[0]
+              and "লগ্ন কন্যা 13.89" in flat_joined,
+              flat_joined[:200])
+
+        # 17d. session memory — follow-up questions must answer from the
+        # chart just computed above, never re-ask for birth data
+        ws_send_text(sock4c, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": "what about job i have lost my job when should i "
+                       "get a new one",
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        fu_joined, fu_final = "", False
+        for _ in range(14):
+            op, payload = ws_read_frame(sock4c, timeout=10.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "diagnostic_chunk":
+                fu_joined += frame.get("content", "")
+                if frame.get("final"):
+                    fu_final = True
+                    break
+        check("follow-up job question answered from stored chart",
+              fu_final
+              and "সংরক্ষিত কোষ্ঠি" in fu_joined
+              and "কর্ম (10) ভাব" in fu_joined
+              and "ভুক্তি" in fu_joined
+              and "জন্ম-তারিখ, সময় ও স্থান" not in fu_joined,
+              fu_joined[:220])
+
+        ws_send_text(sock4c, json.dumps({
+            "type": "user_message", "session_id": "s1",
+            "content": "dekhun ami to agei sobar details dieachi",
+            "lang": "bn", "attachments": []}, ensure_ascii=False))
+        ak_joined, ak_final = "", False
+        for _ in range(14):
+            op, payload = ws_read_frame(sock4c, timeout=10.0)
+            if op != 0x1 or not payload:
+                break
+            frame = json.loads(payload.decode())
+            if frame.get("type") == "diagnostic_chunk":
+                ak_joined += frame.get("content", "")
+                if frame.get("final"):
+                    ak_final = True
+                    break
+        check("\"already gave details\" acknowledged with computed answer",
+              ak_final
+              and ("বিবরণ আমার কাছেই আছে" in ak_joined
+                   or "সংরক্ষিত কোষ্ঠি" in ak_joined)
+              and "ভুক্তি" in ak_joined
+              and "তিনটি বিষয়" not in ak_joined,
+              ak_joined[:220])
+        sock4c.close()
+
         # 18. Bengali San date -> full computed chart consultation
         sock5 = ws_connect(f"/v1/chat/ws?token={access_token}")[0]
         ws_send_text(sock5, json.dumps({

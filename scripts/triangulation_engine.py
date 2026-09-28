@@ -220,6 +220,50 @@ def vimshottari_at(y, m, d, hour, tz, moon_lon, now=None):
     return {"maha": maha, "bhukti": None, "balance_years": round(balance, 2)}
 
 
+def bhukti_windows(y, m, d, hour, tz, moon_lon, now=None, count=3):
+    """Current bhukti plus the next `count`-1 bhukti windows at/after `now`.
+
+    Each window: {"lord", "start": (y,m,d,h), "end": (y,m,d,h)} — computed
+    from the Vimshottari sequence, never estimated.
+    """
+    swe = _swe()
+    birth_jd = swe.julday(y, m, d, hour - tz)
+    if now is None:
+        now = datetime.datetime.utcnow()
+    now_jd = swe.julday(now.year, now.month, now.day,
+                        now.hour + now.minute / 60.0)
+    nak = int(moon_lon / (360.0 / 27))
+    li = nak % 9
+    frac = (moon_lon - nak * (360.0 / 27)) / (360.0 / 27)
+    balance = (1.0 - frac) * VIMSHOTTARI_YEARS[NAK_LORDS[li]]
+    YEAR = 365.2425
+    # Walk maha-dashas from birth (same as vimshottari_at).
+    jd = birth_jd
+    idx = li
+    while True:
+        lord, yrs = VIMSHOTTARI_ORDER[idx]
+        dur = (balance if abs(jd - birth_jd) < 1e-6 else yrs) * YEAR
+        end = jd + dur
+        if now_jd < end or idx == (li + 8) % 9:
+            break
+        jd = end
+        idx = (idx + 1) % 9
+    # Walk bhuktis from the current maha start; emit current + upcoming.
+    windows = []
+    bj = jd
+    for k in range(9):
+        bl = VIMSHOTTARI_ORDER[(idx + k) % 9][0]
+        bdur = yrs * VIMSHOTTARI_YEARS[bl] / 120.0 * YEAR
+        bend = bj + bdur
+        if now_jd < bend:
+            windows.append({"lord": bl, "start": swe.revjul(bj),
+                            "end": swe.revjul(bend)})
+            if len(windows) >= count:
+                break
+        bj = bend
+    return windows
+
+
 def parashari_section(chart, params, now=None):
     y, m, d, hour, lat, lon, tz = params
     lagna = chart["asc_rashi"]

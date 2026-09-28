@@ -68,6 +68,28 @@ WEEKDAY_EN_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
 _IST_TZ = 5.5
 _SUNRISE_FALLBACK = 6.0
 
+# Field labels and numbered heads that can appear MID-LINE in a flattened
+# single-line paste (chat windows collapse pasted newlines). Detected only
+# when >= 2 numbered heads exist, so prose never gets chopped up.
+_FLAT_NUM_HEAD = re.compile(r"(?<=[\s\)\u0980-\u09FFa-zA-Z0-9])(?<!\(Pada )(?<!/)(\d{1,3}[.)]\s+[A-Z\u0980-\u09FF])")
+_FLAT_FIELD = re.compile(
+    r"(?=(Date of Birth|Time of Birth|Place of Birth|Gotra|Lagna|Rashi|"
+    r"Nakshatra|Ruling Planets|Auspicious Syllables|DOB|TOB|"
+    r"জন্মতারিখ|জন্ম সময়|জন্মস্থান|লগ্ন|রাশি|নক্ষত্র)(?:\s*[:\(]|\s*$))", re.I)
+
+
+def normalize_flat_report(text: str) -> str:
+    """Re-linebreak a structured report that arrived as ONE line (newlines
+    collapsed by the chat input) into the one-field-per-line layout the
+    segmenter expects. Returns the text unchanged for prose messages."""
+    if not text or "\n" in text.strip():
+        return text
+    if len(_FLAT_NUM_HEAD.findall(text)) < 2:
+        return text
+    out = _FLAT_NUM_HEAD.sub(lambda m: "\n" + m.group(1), text)
+    out = _FLAT_FIELD.sub("\n", out)
+    return out
+
 
 # ============================================================
 # Bengali (Bongabdo) <-> Gregorian — computed, never assumed
@@ -438,6 +460,9 @@ def extract_kinship_payload(text: str):
     # citation markers from pasted reports pollute fields — strip first
     text = re.sub(r"\[\s*cite\s*:?\s*\d+\s*\]", "", text, flags=re.I)
     text = re.sub(r"\[\s*\d+\s*\]", "", text)
+    # chat inputs collapse pasted newlines: re-linebreak flat structured
+    # reports so numbered heads and field labels sit on their own lines
+    text = normalize_flat_report(text)
 
     normalized = text.translate(BN_DIGITS)
     notes = []

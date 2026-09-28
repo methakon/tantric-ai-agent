@@ -26,6 +26,7 @@ import uuid
 import subprocess
 import sys
 import datetime
+import time
 from typing import Optional
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -366,6 +367,46 @@ _UPLOAD_RE = re.compile(r'^\[uploaded:\s*(.+?)\]$')
 # chart replies stays fully deterministic — this affects only the voice).
 _CONVO_N = 0
 
+# ---- session memory (per user, in-process) ------------------------------
+# After a chart or family consultation, the computed context is stashed
+# under the session key so FOLLOW-UP questions ("what about my job…",
+# "I already gave my details") answer from the stored chart instead of
+# re-asking for birth data. Fresh for 24h; everything in the reply is
+# recomputed from the stored params, never recalled as text.
+_CHART_MEMORY = {}
+_MEMORY_TTL = 86400.0
+
+# Life topics shared by the conversational layer and the memory layer.
+_TOPIC_WORDS = {
+    "career": ("কর্ম/জীবিকা", ["চাকরি", "কর্ম", "job", "career", "ব্যবসা",
+                              "business", "প্রমোশন", "চাকুরী"]),
+    "marriage": ("বিবাহ", ["বিয়ে", "বিবাহ", "দ্বিতীয় বিবাহ", "শাদি",
+                           "marriage", "সম্পর্ক"]),
+    "health": ("স্বাস্থ্য", ["স্বাস্থ্য", "অসুখ", "রোগ", "health",
+                             "sickness", "শরীর"]),
+    "money": ("অর্থ-অবরোধ", ["অর্থ", "টাকা", "money", "finance", "ঋণ",
+                             "লোন", "debt"]),
+    "sadhana": ("সাধনা", ["সাধনা", "জপ", "মন্ত্র", "ধ্যান", "pranayama",
+                          "প্রাণায়াম", "sadhana", "যন্ত্র"]),
+    "children": ("সন্তান", ["সন্তান", "ছেলে", "মেয়ে", "children",
+                            "প্রেগনেন্সি", "pregnancy"]),
+    "family": ("পরিবার", ["পরিবার", "family", "মা-বাবা", "শ্বশুর"]),
+}
+# Houses relevant to each topic, read from the stored chart.
+_TOPIC_HOUSES = {
+    "career": [10, 6, 11, 2],
+    "marriage": [7, 8],
+    "health": [6, 1, 8],
+    "money": [2, 11],
+    "children": [5, 9],
+    "sadhana": [9, 5, 12],
+    "family": [4, 9, 2],
+}
+_DIG_BN = {"exalted": "উচ্চস্থ", "debilitated": "নীচস্থ",
+           "own": "স্বক্ষেত্র", "neutral": "সাম্য"}
+_DIG_EN = {"exalted": "exalted", "debilitated": "debilitated",
+           "own": "own sign", "neutral": "neutral"}
+
 # Lineage-wisdom routing: question keywords (bn + en) that pull from the
 # C++ wisdom bank. Masters match by name; topics by the canonical keys.
 _LINEAGE_MASTERS = {
@@ -637,8 +678,141 @@ def _conversational_reply(content: str, lang: str):
     return None
 
 
+_HOUSE_NAME_BN = {1: "তনু", 2: "ধন", 3: "সহজ", 4: "সুখ/মাতৃ",
+                  5: "পুত্র", 6: "রিপু/রোগ", 7: "কলত্র", 8: "আয়ু",
+                  9: "ভাগ্য", 10: "কর্ম", 11: "লাভ", 12: "ব্যায়"}
+_HOUSE_NAME_EN = {1: "the 1st (self)", 2: "the 2nd (wealth)",
+                  3: "the 3rd (initiative)", 4: "the 4th (home/mother)",
+                  5: "the 5th (children)", 6: "the 6th (service/health)",
+                  7: "the 7th (partnership)", 8: "the 8th (transformation)",
+                  9: "the 9th (fortune)", 10: "the 10th (career)",
+                  11: "the 11th (gains)", 12: "the 12th (release)"}
+_GAVE_RE = re.compile(r"(dieachi|diyechi|dilam|disi|dicchi|dicchi|"
+                      r"দিয়েছি|দিয়েছি|দিলাম|দিছি|agei|আগেই|already|earlier)",
+                      re.I)
+_DETAILS_RE = re.compile(r"(details?|তথ্য|বিবরণ|বিস্তারিত|বিবরন|"
+                         r"birth\s*(data|details)?|জন্ম)", re.I)
+
+
+def _memory_followup(content: str, lang: str, mem: dict):
+    """Answer follow-up questions from the user's stored chart.
+
+    Returns a reply string or None. Every reading below is recomputed
+    from the stored birth params — the memory holds parameters, never
+    canned text. Timing windows are presented as computed periods, not
+    promises.
+    """
+    text = (content or "").strip().lower()
+    if len(text) > 200:
+        return None
+    gave = _GAVE_RE.search(text)
+    details = _DETAILS_RE.search(text)
+    topic = None
+    for key, (_label, words) in _TOPIC_WORDS.items():
+        if any(w in text for w in words):
+            topic = key
+            break
+    if topic is None and not (gave and details):
+        return None
+
+    params = mem.get("params")
+    if not params:
+        return None
+    y, m, d, hour, lat, lon, tz = params
+    chart = compute_chart(y, m, d, hour, lat, lon, tz)
+    if chart is None:
+        return None
+    from triangulation_engine import (compute_triangulation, bhukti_windows,
+                                      sign_lord)
+    tri = compute_triangulation(chart, y, m, d, hour, lat, lon, tz)
+    par = tri["parashari"]
+    dsh = par["dasha"]
+    wins = bhukti_windows(y, m, d, hour, tz, chart["positions"]["Moon"],
+                          count=3)
+
+    def pbn(x):
+        return PLANET_BN[PLANET_EN.index(x)] if x in PLANET_EN else x
+
+    def fmt_w(w):
+        s, e = w["start"], w["end"]
+        return (f"{int(s[0])}-{int(s[1]):02d} → {int(e[0])}-{int(e[1]):02d}")
+
+    # "I already gave my details" — acknowledge stored data; re-answer
+    # the last topic when one exists.
+    if topic is None:
+        last = mem.get("last_topic")
+        if last and last in _TOPIC_HOUSES:
+            topic = last
+        else:
+            if lang == "en":
+                return (
+                    f"You already gave your details — they are with me: "
+                    f"{d:02d}-{m:02d}-{y}, {hour:.2f}h (UTC+{tz}). "
+                    f"Ask the question directly — job, marriage, health, "
+                    f"money, children, sadhana, family — and I read that "
+                    f"house from your chart."
+                )
+            return (
+                f"আপনার বিবরণ আমার কাছেই আছে — {d:02d}-{m:02d}-{y}, "
+                f"{hour:.2f}ঘ (UTC+{tz}). প্রশ্নটি সরাসরি বলুন — কর্ম, "
+                f"বিবাহ, স্বাস্থ্য, অর্থ, সন্তান, সাধনা, পরিবার — আমি সেই "
+                f"ভাবটি কোষ্ঠি থেকে পড়ে দেখাই."
+            )
+
+    mem["last_topic"] = topic
+    lagna = chart["asc_rashi"]
+    houses = _TOPIC_HOUSES[topic]
+    lines = []
+    if lang == "en":
+        lines.append("Read from your stored chart (computed, not recalled):")
+        for h in houses:
+            lord = sign_lord((lagna + h - 1) % 12)
+            place = par["house_of"][lord]
+            dig = par["dignities"][lord]
+            lines.append(
+                f"— {_HOUSE_NAME_EN[h]}: lord {lord}, placed in house "
+                f"{place}, {_DIG_EN.get(dig, dig)}.")
+        lines.append(
+            f"Dasha now: Maha {dsh['maha']['lord']} / Bhukti "
+            f"{dsh['bhukti']['lord']} (ends "
+            f"{int(dsh['bhukti']['end'][0])}-"
+            f"{int(dsh['bhukti']['end'][1]):02d}).")
+        if len(wins) > 1:
+            lines.append("Upcoming computed bhukti windows: " +
+                         "; ".join(f"{w['lord']} ({fmt_w(w)})"
+                                   for w in wins[1:]) + ".")
+        lines.append(
+            "These are computed periods, not promises — the chart shows "
+            "weather, and effort decides the harvest. A transition is "
+            "strongly favoured where the bhukti lord aspects or occupies "
+            "the career houses.")
+    else:
+        lines.append("আপনার সংরক্ষিত কোষ্ঠি থেকে পড়ছি (গণনা, স্মৃতি নয়):")
+        for h in houses:
+            lord = sign_lord((lagna + h - 1) % 12)
+            place = par["house_of"][lord]
+            dig = par["dignities"][lord]
+            lines.append(
+                f"— {_HOUSE_NAME_BN[h]} ({h}) ভাব: অধিপতি {pbn(lord)}, "
+                f"অবস্থান {place} ভাবে, {_DIG_BN.get(dig, dig)}.")
+        lines.append(
+            f"এখনকার দশা: মহা {pbn(dsh['maha']['lord'])} / ভুক্তি "
+            f"{pbn(dsh['bhukti']['lord'])} (শেষ "
+            f"{int(dsh['bhukti']['end'][0])}-"
+            f"{int(dsh['bhukti']['end'][1]):02d}).")
+        if len(wins) > 1:
+            lines.append("পরবর্তী গণিত ভুক্তি-জানালা: " +
+                         "; ".join(f"{pbn(w['lord'])} ({fmt_w(w)})"
+                                   for w in wins[1:]) + ".")
+        lines.append(
+            "এগুলো গণিত কাল-পরিসর, প্রতিশ্রুতি নয় — কোষ্ঠি আবহাওয়া দেখায়, "
+            "ফসল ঠিক করে প্রয়াস. কর্ম-ভাবের সঙ্গে যে ভুক্তি-পতি যুক্ত বা "
+            "দৃষ্টি দেয়, সেই পরিসরে পরিবর্তনের ইঙ্গিত প্রবল.")
+    return "\n".join(lines)
+
+
 def compose_consultation(content: str, lang: str, registered=None,
-                         self_name=None):
+                         self_name=None, session_key=""):
     """Main composer. Returns response dict for the gateway."""
     up = _UPLOAD_RE.match((content or "").strip())
     if up:
@@ -698,7 +872,7 @@ def compose_consultation(content: str, lang: str, registered=None,
             bn_date_conv = ok_conv[0]
     if kp and (kp["is_multi_profile"] or kp["is_nashta_jataka_requested"]):
         fam = _family_consultation(kp, lang, content, registered=registered,
-                                   self_name=self_name)
+                                   self_name=self_name, session_key=session_key)
         if fam is not None:
             return fam
     if kp and kp["has_bengali_date"]:
@@ -708,6 +882,21 @@ def compose_consultation(content: str, lang: str, registered=None,
 
     birth = parse_birth(content)
     if birth is None:
+        # ---- session memory (stored chart follow-ups) -------------------
+        # The user already gave birth data in this session: topic
+        # questions and "I already gave my details" get computed answers
+        # from the stored chart instead of another request for data.
+        mem = _CHART_MEMORY.get(session_key or "anon")
+        if mem and (time.time() - mem.get("t", 0)) > _MEMORY_TTL:
+            _CHART_MEMORY.pop(session_key or "anon", None)
+            mem = None
+        if mem is not None:
+            fu = _memory_followup(content, lang, mem)
+            if fu is not None:
+                chunks = _split_chunks(fu)
+                resp = _pack(chunks, lang, None, None)
+                resp["_mode"] = "followup"
+                return resp
         # ---- conversational layer -------------------------------------
         # Greetings, thanks, identity and topic questions get natural
         # varied replies; only unmatched messages fall to the full
@@ -788,6 +977,14 @@ def compose_consultation(content: str, lang: str, registered=None,
     tri = compute_triangulation(chart, y, m, d, hour, lat, lon, tz)
     target = tri["consensus"]["root_planet"]  # AK fallback baked in
     fallback = tri["consensus"]["fallback"]
+    # Session memory: store PARAMETERS (never text) so follow-up
+    # questions can recompute from the same chart.
+    _CHART_MEMORY[session_key or "anon"] = {
+        "t": time.time(),
+        "params": (y, m, d, hour, lat, lon, tz),
+        "city": city_key,
+        "last_topic": None,
+    }
     remedy = remedy_for_planet(target)
     yantra_type = (remedy["yantra_type"] if remedy else "sri_yantra")
     svg, renderer = render_yantra(yantra_type)
@@ -995,7 +1192,7 @@ RELATION_EN2 = {"self": "Self", "father": "Father", "mother": "Mother",
 
 
 def _family_consultation(kp, lang, content, registered=None,
-                         self_name=None):
+                         self_name=None, session_key=""):
     """Multi-profile / traditional-calendar / Nashta consultation — computed.
 
     Progressive (streamed) verbatim composition. Every position, window and
@@ -1089,6 +1286,39 @@ def _family_consultation(kp, lang, content, registered=None,
                              "rashis": sorted(rashis), "naks": sorted(naks)})
         else:
             computed.append({"p": p, "kind": "nodata"})
+
+    # Session memory: stash the SELF member's full chart params (when
+    # computed) so follow-up questions answer from it.
+    if session_key:
+        def _is_self(pr, first_unlabeled):
+            if pr.get("relation") == "self":
+                return True
+            if pr.get("relation") in (None, "unspecified") and first_unlabeled:
+                # convention: the first unlabeled profile is the person
+                # writing about their family — the account holder
+                return True
+            if self_name and _norm(pr.get("name")) == _norm(self_name):
+                return True
+            return False
+        for c in computed:
+            if c["kind"] == "full" and _is_self(c["p"], c is computed[0]):
+                _CHART_MEMORY[session_key or "anon"] = {
+                    "t": time.time(),
+                    "params": c["params"],
+                    "city": c["p"].get("place") or "",
+                    "last_topic": None,
+                }
+                break
+        else:
+            for c in computed:
+                if c["kind"] == "full":
+                    _CHART_MEMORY[session_key or "anon"] = {
+                        "t": time.time(),
+                        "params": c["params"],
+                        "city": c["p"].get("place") or "",
+                        "last_topic": None,
+                    }
+                    break
 
     for c in computed:
         p = c["p"]
@@ -1420,7 +1650,8 @@ def consult(content: str, lang: str = "bn", user_id: str = "",
     """
     try:
         resp = compose_consultation(content or "", "en" if lang == "en" else "bn",
-                                    registered=registered, self_name=self_name)
+                                    registered=registered, self_name=self_name,
+                                    session_key=user_id or "anon")
     except Exception as e:
         return {"status": "ERROR", "message": f"consultation failed: {e}"}
 
