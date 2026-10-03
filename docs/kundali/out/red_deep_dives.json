@@ -1,0 +1,3107 @@
+{
+  "generated_from": {
+    "risk_timeline": "out/risk_timeline.json",
+    "sensitivity": "out/red_birth_time_sensitivity.json"
+  },
+  "engine_unchanged": {
+    "note": "This module READS the engine. It does not recalibrate any threshold, weight, mechanism definition or gate.",
+    "RED_threshold": 8,
+    "ORANGE_threshold": 7,
+    "mechanisms_required_for_red": 4
+  },
+  "red_years": [
+    1987,
+    1994,
+    1997,
+    2000,
+    2002,
+    2014,
+    2016,
+    2038,
+    2039,
+    2042,
+    2044,
+    2050
+  ],
+  "deep_dives": [
+    {
+      "year": 1987,
+      "age": 5,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Venus",
+      "antardasha": "Jupiter",
+      "pratyantardasha": "Sun",
+      "transit": {
+        "jupiter": {
+          "sign": "Aries",
+          "house": 8,
+          "aspects": [
+            1,
+            3,
+            5
+          ]
+        },
+        "saturn": {
+          "sign": "Scorpio",
+          "house": 3,
+          "aspects": [
+            8,
+            10,
+            12
+          ]
+        },
+        "rahu": {
+          "sign": "Pisces",
+          "house": 7,
+          "aspects": [
+            2,
+            4,
+            12
+          ]
+        },
+        "ketu": {
+          "sign": "Virgo",
+          "house": 1,
+          "aspects": [
+            6,
+            8,
+            10
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 9,
+      "score_range": [
+        7,
+        9
+      ],
+      "sensitivity_class": "TIME-SENSITIVE — LOW CONFIDENCE",
+      "red_variants_out_of_7": 2,
+      "variants_still_red": [
+        "00:55",
+        "01:00"
+      ],
+      "variants_not_red": [
+        [
+          "00:45",
+          "ORANGE",
+          7
+        ],
+        [
+          "00:50",
+          "ORANGE",
+          7
+        ],
+        [
+          "01:05",
+          "YELLOW",
+          8
+        ],
+        [
+          "01:10",
+          "YELLOW",
+          8
+        ],
+        [
+          "01:15",
+          "YELLOW",
+          8
+        ]
+      ],
+      "worst_category": "health_self",
+      "worst_category_label": "",
+      "theme_houses": "1, 6, 8, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Jupiter",
+        "Sun-pd",
+        "Venus"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "kp",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "kp",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_1",
+            "detail": "Mars, Saturn in the 1th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_1_placed",
+            "detail": "1th lord Mercury sits in the 3th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_6_placed",
+            "detail": "6th lord Saturn sits in the 1th house",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lagna_lord_placed",
+            "detail": "lagna lord Mercury in the 3th house",
+            "houses": [
+              1
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Venus_rules_primary",
+            "detail": "Venus MD rules the [2] house(s)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Jupiter_rules_primary",
+            "detail": "Jupiter AD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Sun_rules_primary",
+            "detail": "Sun PD rules the [12] house(s)",
+            "houses": [
+              12
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_3",
+            "detail": "Saturn transiting the 3th house (Scorpio)",
+            "houses": [
+              3
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_7",
+            "detail": "Rahu transiting the 7th house (Pisces)",
+            "houses": [
+              7
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_1",
+            "detail": "Ketu transiting the 1th house (Virgo)",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_8",
+            "detail": "Jupiter transiting the 8th house (Aries)",
+            "houses": [
+              8
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": []
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 1994,
+      "age": 12,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Venus",
+      "antardasha": "Mercury",
+      "pratyantardasha": "Jupiter",
+      "transit": {
+        "jupiter": {
+          "sign": "Libra",
+          "house": 2,
+          "aspects": [
+            7,
+            9,
+            11
+          ]
+        },
+        "saturn": {
+          "sign": "Aquarius",
+          "house": 6,
+          "aspects": [
+            1,
+            3,
+            11
+          ]
+        },
+        "rahu": {
+          "sign": "Libra",
+          "house": 2,
+          "aspects": [
+            7,
+            9,
+            11
+          ]
+        },
+        "ketu": {
+          "sign": "Aries",
+          "house": 8,
+          "aspects": [
+            1,
+            3,
+            5
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 9,
+      "score_range": [
+        8,
+        9
+      ],
+      "sensitivity_class": "TIME-ROBUST WITHIN THE TESTED ±15-MINUTE WINDOW",
+      "red_variants_out_of_7": 7,
+      "variants_still_red": [
+        "00:45",
+        "00:50",
+        "00:55",
+        "01:00",
+        "01:05",
+        "01:10",
+        "01:15"
+      ],
+      "variants_not_red": [],
+      "worst_category": "health_self",
+      "worst_category_label": "",
+      "theme_houses": "1, 6, 8, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Jupiter-pd",
+        "Mercury",
+        "Venus"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "kp",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "kp",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_1",
+            "detail": "Mars, Saturn in the 1th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_1_placed",
+            "detail": "1th lord Mercury sits in the 3th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_6_placed",
+            "detail": "6th lord Saturn sits in the 1th house",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lagna_lord_placed",
+            "detail": "lagna lord Mercury in the 3th house",
+            "houses": [
+              1
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Venus_rules_primary",
+            "detail": "Venus MD rules the [2] house(s)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Mercury_rules_primary",
+            "detail": "Mercury AD rules the [1, 10] house(s)",
+            "houses": [
+              1,
+              10
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Jupiter_rules_primary",
+            "detail": "Jupiter PD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_6",
+            "detail": "Saturn transiting the 6th house (Aquarius)",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_2",
+            "detail": "Rahu transiting the 2th house (Libra)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_8",
+            "detail": "Ketu transiting the 8th house (Aries)",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_2",
+            "detail": "Jupiter transiting the 2th house (Libra)",
+            "houses": [
+              2
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "MK_Mercury_runs",
+            "detail": "Jaimini MK (Mercury) runs as dasha lord; activates the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "GK_Venus_runs",
+            "detail": "Jaimini GK (Venus) runs as dasha lord; activates the [2, 5, 9] house(s)",
+            "houses": [
+              2,
+              5,
+              9
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 1997,
+      "age": 15,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Sun",
+      "antardasha": "Mars",
+      "pratyantardasha": "Venus",
+      "transit": {
+        "jupiter": {
+          "sign": "Capricorn",
+          "house": 5,
+          "aspects": [
+            2,
+            10,
+            12
+          ]
+        },
+        "saturn": {
+          "sign": "Pisces",
+          "house": 7,
+          "aspects": [
+            2,
+            4,
+            12
+          ]
+        },
+        "rahu": {
+          "sign": "Leo",
+          "house": 12,
+          "aspects": [
+            5,
+            7,
+            9
+          ]
+        },
+        "ketu": {
+          "sign": "Aquarius",
+          "house": 6,
+          "aspects": [
+            1,
+            3,
+            11
+          ]
+        }
+      },
+      "sade_sati_status": "PHASE 1",
+      "level": "RED",
+      "base_score": 8,
+      "score_range": [
+        5,
+        8
+      ],
+      "sensitivity_class": "TIME-SENSITIVE — LOW CONFIDENCE",
+      "red_variants_out_of_7": 3,
+      "variants_still_red": [
+        "01:00",
+        "01:10",
+        "01:15"
+      ],
+      "variants_not_red": [
+        [
+          "00:45",
+          "YELLOW",
+          6
+        ],
+        [
+          "00:50",
+          "YELLOW",
+          5
+        ],
+        [
+          "00:55",
+          "YELLOW",
+          6
+        ],
+        [
+          "01:05",
+          "ORANGE",
+          7
+        ]
+      ],
+      "worst_category": "health_self",
+      "worst_category_label": "",
+      "theme_houses": "1, 6, 8, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Mars",
+        "Sun",
+        "Venus-pd"
+      ],
+      "transit_mechanisms": [
+        "ketu",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_1",
+            "detail": "Mars, Saturn in the 1th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_1_placed",
+            "detail": "1th lord Mercury sits in the 3th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_6_placed",
+            "detail": "6th lord Saturn sits in the 1th house",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lagna_lord_placed",
+            "detail": "lagna lord Mercury in the 3th house",
+            "houses": [
+              1
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Sun_rules_primary",
+            "detail": "Sun MD rules the [12] house(s)",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Mars_rules_primary",
+            "detail": "Mars AD rules the [8] house(s)",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Venus_rules_primary",
+            "detail": "Venus PD rules the [2] house(s)",
+            "houses": [
+              2
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_7",
+            "detail": "Saturn transiting the 7th house (Pisces)",
+            "houses": [
+              7
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_12",
+            "detail": "Rahu transiting the 12th house (Leo)",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_6",
+            "detail": "Ketu transiting the 6th house (Aquarius)",
+            "houses": [
+              6
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "BK_Sun_runs",
+            "detail": "Jaimini BK (Sun) runs as dasha lord; activates the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "DK_Mars_runs",
+            "detail": "Jaimini DK (Mars) runs as dasha lord; activates the [1, 3, 8] house(s)",
+            "houses": [
+              1,
+              3,
+              8
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2000,
+      "age": 18,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Sun",
+      "antardasha": "Mercury",
+      "pratyantardasha": "Venus",
+      "transit": {
+        "jupiter": {
+          "sign": "Taurus",
+          "house": 9,
+          "aspects": [
+            2,
+            4,
+            6
+          ]
+        },
+        "saturn": {
+          "sign": "Taurus",
+          "house": 9,
+          "aspects": [
+            2,
+            4,
+            6
+          ]
+        },
+        "rahu": {
+          "sign": "Cancer",
+          "house": 11,
+          "aspects": [
+            4,
+            6,
+            8
+          ]
+        },
+        "ketu": {
+          "sign": "Capricorn",
+          "house": 5,
+          "aspects": [
+            2,
+            10,
+            12
+          ]
+        }
+      },
+      "sade_sati_status": "PHASE 3",
+      "level": "RED",
+      "base_score": 9,
+      "score_range": [
+        2,
+        9
+      ],
+      "sensitivity_class": "MODERATE STABILITY",
+      "red_variants_out_of_7": 4,
+      "variants_still_red": [
+        "01:00",
+        "01:05",
+        "01:10",
+        "01:15"
+      ],
+      "variants_not_red": [
+        [
+          "00:45",
+          "YELLOW",
+          2
+        ],
+        [
+          "00:50",
+          "ORANGE",
+          7
+        ],
+        [
+          "00:55",
+          "ORANGE",
+          7
+        ]
+      ],
+      "worst_category": "duty_obligations",
+      "worst_category_label": "",
+      "theme_houses": "9, 10, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Mercury",
+        "Sun",
+        "Venus-pd"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Sun_rules_primary",
+            "detail": "Sun MD rules the [12] house(s)",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Mercury_rules_primary",
+            "detail": "Mercury AD rules the [1, 10] house(s)",
+            "houses": [
+              1,
+              10
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Venus_rules_primary",
+            "detail": "Venus PD rules the [2] house(s)",
+            "houses": [
+              2
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_9",
+            "detail": "Saturn transiting the 9th house (Taurus)",
+            "houses": [
+              9
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_11",
+            "detail": "Rahu transiting the 11th house (Cancer)",
+            "houses": [
+              11
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_5",
+            "detail": "Ketu transiting the 5th house (Capricorn)",
+            "houses": [
+              5
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_9",
+            "detail": "Jupiter transiting the 9th house (Taurus)",
+            "houses": [
+              9
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "BK_Sun_runs",
+            "detail": "Jaimini BK (Sun) runs as dasha lord; activates the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "MK_Mercury_runs",
+            "detail": "Jaimini MK (Mercury) runs as dasha lord; activates the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2002,
+      "age": 20,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Sun",
+      "antardasha": "Venus",
+      "pratyantardasha": "Mercury",
+      "transit": {
+        "jupiter": {
+          "sign": "Gemini",
+          "house": 10,
+          "aspects": [
+            3,
+            5,
+            7
+          ]
+        },
+        "saturn": {
+          "sign": "Taurus",
+          "house": 9,
+          "aspects": [
+            2,
+            4,
+            6
+          ]
+        },
+        "rahu": {
+          "sign": "Taurus",
+          "house": 9,
+          "aspects": [
+            2,
+            4,
+            6
+          ]
+        },
+        "ketu": {
+          "sign": "Scorpio",
+          "house": 3,
+          "aspects": [
+            8,
+            10,
+            12
+          ]
+        }
+      },
+      "sade_sati_status": "PHASE 3",
+      "level": "RED",
+      "base_score": 8,
+      "score_range": [
+        1,
+        8
+      ],
+      "sensitivity_class": "TIME-SENSITIVE — LOW CONFIDENCE",
+      "red_variants_out_of_7": 2,
+      "variants_still_red": [
+        "01:00",
+        "01:05"
+      ],
+      "variants_not_red": [
+        [
+          "00:45",
+          "ORANGE",
+          7
+        ],
+        [
+          "00:50",
+          "ORANGE",
+          7
+        ],
+        [
+          "00:55",
+          "ORANGE",
+          7
+        ],
+        [
+          "01:10",
+          "YELLOW",
+          1
+        ],
+        [
+          "01:15",
+          "YELLOW",
+          2
+        ]
+      ],
+      "worst_category": "duty_obligations",
+      "worst_category_label": "",
+      "theme_houses": "9, 10, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Mercury-pd",
+        "Sun",
+        "Venus"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "kp",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "kp",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Sun_rules_primary",
+            "detail": "Sun MD rules the [12] house(s)",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Venus_rules_primary",
+            "detail": "Venus AD rules the [2] house(s)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Mercury_rules_primary",
+            "detail": "Mercury PD rules the [1, 10] house(s)",
+            "houses": [
+              1,
+              10
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_9",
+            "detail": "Saturn transiting the 9th house (Taurus)",
+            "houses": [
+              9
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_9",
+            "detail": "Rahu transiting the 9th house (Taurus)",
+            "houses": [
+              9
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_10",
+            "detail": "Jupiter transiting the 10th house (Gemini)",
+            "houses": [
+              10
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "BK_Sun_runs",
+            "detail": "Jaimini BK (Sun) runs as dasha lord; activates the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "GK_Venus_runs",
+            "detail": "Jaimini GK (Venus) runs as dasha lord; activates the [2, 5, 9] house(s)",
+            "houses": [
+              2,
+              5,
+              9
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2014,
+      "age": 32,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Mars",
+      "antardasha": "Jupiter",
+      "pratyantardasha": "Rahu",
+      "transit": {
+        "jupiter": {
+          "sign": "Cancer",
+          "house": 11,
+          "aspects": [
+            4,
+            6,
+            8
+          ]
+        },
+        "saturn": {
+          "sign": "Libra",
+          "house": 2,
+          "aspects": [
+            7,
+            9,
+            11
+          ]
+        },
+        "rahu": {
+          "sign": "Libra",
+          "house": 2,
+          "aspects": [
+            7,
+            9,
+            11
+          ]
+        },
+        "ketu": {
+          "sign": "Aries",
+          "house": 8,
+          "aspects": [
+            1,
+            3,
+            5
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 8,
+      "score_range": [
+        8,
+        8
+      ],
+      "sensitivity_class": "TIME-ROBUST WITHIN THE TESTED ±15-MINUTE WINDOW",
+      "red_variants_out_of_7": 7,
+      "variants_still_red": [
+        "00:45",
+        "00:50",
+        "00:55",
+        "01:00",
+        "01:05",
+        "01:10",
+        "01:15"
+      ],
+      "variants_not_red": [],
+      "worst_category": "encumbrance",
+      "worst_category_label": "",
+      "theme_houses": "8, 11, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Jupiter",
+        "Mars"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Mars_rules_primary",
+            "detail": "Mars MD rules the [8] house(s)",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Jupiter_rules_primary",
+            "detail": "Jupiter AD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_2",
+            "detail": "Saturn transiting the 2th house (Libra)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_2",
+            "detail": "Rahu transiting the 2th house (Libra)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_8",
+            "detail": "Ketu transiting the 8th house (Aries)",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_11",
+            "detail": "Jupiter transiting the 11th house (Cancer)",
+            "houses": [
+              11
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "PK_Jupiter_runs",
+            "detail": "Jaimini PK (Jupiter) runs as dasha lord; activates the [2, 4, 7] house(s)",
+            "houses": [
+              2,
+              4,
+              7
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "DK_Mars_runs",
+            "detail": "Jaimini DK (Mars) runs as dasha lord; activates the [1, 3, 8] house(s)",
+            "houses": [
+              1,
+              3,
+              8
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2016,
+      "age": 34,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Mars",
+      "antardasha": "Mercury",
+      "pratyantardasha": "Mars",
+      "transit": {
+        "jupiter": {
+          "sign": "Leo",
+          "house": 12,
+          "aspects": [
+            5,
+            7,
+            9
+          ]
+        },
+        "saturn": {
+          "sign": "Scorpio",
+          "house": 3,
+          "aspects": [
+            8,
+            10,
+            12
+          ]
+        },
+        "rahu": {
+          "sign": "Leo",
+          "house": 12,
+          "aspects": [
+            5,
+            7,
+            9
+          ]
+        },
+        "ketu": {
+          "sign": "Aquarius",
+          "house": 6,
+          "aspects": [
+            1,
+            3,
+            11
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 9,
+      "score_range": [
+        8,
+        9
+      ],
+      "sensitivity_class": "TIME-ROBUST WITHIN THE TESTED ±15-MINUTE WINDOW",
+      "red_variants_out_of_7": 7,
+      "variants_still_red": [
+        "00:45",
+        "00:50",
+        "00:55",
+        "01:00",
+        "01:05",
+        "01:10",
+        "01:15"
+      ],
+      "variants_not_red": [],
+      "worst_category": "health_self",
+      "worst_category_label": "",
+      "theme_houses": "1, 6, 8, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Mars",
+        "Mars-pd",
+        "Mercury"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_1",
+            "detail": "Mars, Saturn in the 1th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_1_placed",
+            "detail": "1th lord Mercury sits in the 3th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_6_placed",
+            "detail": "6th lord Saturn sits in the 1th house",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lagna_lord_placed",
+            "detail": "lagna lord Mercury in the 3th house",
+            "houses": [
+              1
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Mars_rules_primary",
+            "detail": "Mars MD rules the [8] house(s)",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Mercury_rules_primary",
+            "detail": "Mercury AD rules the [1, 10] house(s)",
+            "houses": [
+              1,
+              10
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Mars_rules_primary",
+            "detail": "Mars PD rules the [8] house(s)",
+            "houses": [
+              8
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_3",
+            "detail": "Saturn transiting the 3th house (Scorpio)",
+            "houses": [
+              3
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_12",
+            "detail": "Rahu transiting the 12th house (Leo)",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_6",
+            "detail": "Ketu transiting the 6th house (Aquarius)",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_12",
+            "detail": "Jupiter transiting the 12th house (Leo)",
+            "houses": [
+              12
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "MK_Mercury_runs",
+            "detail": "Jaimini MK (Mercury) runs as dasha lord; activates the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "DK_Mars_runs",
+            "detail": "Jaimini DK (Mars) runs as dasha lord; activates the [1, 3, 8] house(s)",
+            "houses": [
+              1,
+              3,
+              8
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2038,
+      "age": 56,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Jupiter",
+      "antardasha": "Jupiter",
+      "pratyantardasha": "Mars",
+      "transit": {
+        "jupiter": {
+          "sign": "Cancer",
+          "house": 11,
+          "aspects": [
+            4,
+            6,
+            8
+          ]
+        },
+        "saturn": {
+          "sign": "Leo",
+          "house": 12,
+          "aspects": [
+            5,
+            7,
+            9
+          ]
+        },
+        "rahu": {
+          "sign": "Gemini",
+          "house": 10,
+          "aspects": [
+            3,
+            5,
+            7
+          ]
+        },
+        "ketu": {
+          "sign": "Sagittarius",
+          "house": 4,
+          "aspects": [
+            1,
+            9,
+            11
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 8,
+      "score_range": [
+        7,
+        8
+      ],
+      "sensitivity_class": "TIME-SENSITIVE — LOW CONFIDENCE",
+      "red_variants_out_of_7": 2,
+      "variants_still_red": [
+        "00:55",
+        "01:00"
+      ],
+      "variants_not_red": [
+        [
+          "00:45",
+          "ORANGE",
+          7
+        ],
+        [
+          "00:50",
+          "ORANGE",
+          7
+        ],
+        [
+          "01:05",
+          "ORANGE",
+          7
+        ],
+        [
+          "01:10",
+          "ORANGE",
+          7
+        ],
+        [
+          "01:15",
+          "ORANGE",
+          7
+        ]
+      ],
+      "worst_category": "home_land",
+      "worst_category_label": "",
+      "theme_houses": "4",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Jupiter",
+        "Mars-pd"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "jaimini",
+        "strength"
+      ],
+      "families": [
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Jupiter_rules_primary",
+            "detail": "Jupiter MD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Jupiter_rules_primary",
+            "detail": "Jupiter AD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Mars_rules_primary",
+            "detail": "Mars PD rules the [8] house(s)",
+            "houses": [
+              8
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_12",
+            "detail": "Saturn transiting the 12th house (Leo)",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_4",
+            "detail": "Ketu transiting the 4th house (Sagittarius)",
+            "houses": [
+              4
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_11",
+            "detail": "Jupiter transiting the 11th house (Cancer)",
+            "houses": [
+              11
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "ketu_on_sav_weakest",
+            "detail": "Ketu on the weakest computed sign (Sagittarius)",
+            "houses": [
+              4
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "PK_Jupiter_runs",
+            "detail": "Jaimini PK (Jupiter) runs as dasha lord; activates the [2, 4, 7] house(s)",
+            "houses": [
+              2,
+              4,
+              7
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2039,
+      "age": 57,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Jupiter",
+      "antardasha": "Jupiter",
+      "pratyantardasha": "Mercury",
+      "transit": {
+        "jupiter": {
+          "sign": "Leo",
+          "house": 12,
+          "aspects": [
+            5,
+            7,
+            9
+          ]
+        },
+        "saturn": {
+          "sign": "Leo",
+          "house": 12,
+          "aspects": [
+            5,
+            7,
+            9
+          ]
+        },
+        "rahu": {
+          "sign": "Taurus",
+          "house": 9,
+          "aspects": [
+            2,
+            4,
+            6
+          ]
+        },
+        "ketu": {
+          "sign": "Scorpio",
+          "house": 3,
+          "aspects": [
+            8,
+            10,
+            12
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 8,
+      "score_range": [
+        7,
+        8
+      ],
+      "sensitivity_class": "MODERATE STABILITY",
+      "red_variants_out_of_7": 4,
+      "variants_still_red": [
+        "01:00",
+        "01:05",
+        "01:10",
+        "01:15"
+      ],
+      "variants_not_red": [
+        [
+          "00:45",
+          "YELLOW",
+          7
+        ],
+        [
+          "00:50",
+          "YELLOW",
+          7
+        ],
+        [
+          "00:55",
+          "YELLOW",
+          7
+        ]
+      ],
+      "worst_category": "health_self",
+      "worst_category_label": "",
+      "theme_houses": "1, 6, 8, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Jupiter",
+        "Mercury-pd"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_1",
+            "detail": "Mars, Saturn in the 1th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_1_placed",
+            "detail": "1th lord Mercury sits in the 3th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_6_placed",
+            "detail": "6th lord Saturn sits in the 1th house",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lagna_lord_placed",
+            "detail": "lagna lord Mercury in the 3th house",
+            "houses": [
+              1
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Jupiter_rules_primary",
+            "detail": "Jupiter MD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Jupiter_rules_primary",
+            "detail": "Jupiter AD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Mercury_rules_primary",
+            "detail": "Mercury PD rules the [1, 10] house(s)",
+            "houses": [
+              1,
+              10
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_12",
+            "detail": "Saturn transiting the 12th house (Leo)",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_3",
+            "detail": "Ketu transiting the 3th house (Scorpio)",
+            "houses": [
+              3
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_12",
+            "detail": "Jupiter transiting the 12th house (Leo)",
+            "houses": [
+              12
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": []
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2042,
+      "age": 60,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Jupiter",
+      "antardasha": "Mercury",
+      "pratyantardasha": "Venus",
+      "transit": {
+        "jupiter": {
+          "sign": "Libra",
+          "house": 2,
+          "aspects": [
+            7,
+            9,
+            11
+          ]
+        },
+        "saturn": {
+          "sign": "Libra",
+          "house": 2,
+          "aspects": [
+            7,
+            9,
+            11
+          ]
+        },
+        "rahu": {
+          "sign": "Pisces",
+          "house": 7,
+          "aspects": [
+            2,
+            4,
+            12
+          ]
+        },
+        "ketu": {
+          "sign": "Virgo",
+          "house": 1,
+          "aspects": [
+            6,
+            8,
+            10
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 9,
+      "score_range": [
+        7,
+        9
+      ],
+      "sensitivity_class": "TIME-ROBUST WITHIN THE TESTED ±15-MINUTE WINDOW",
+      "red_variants_out_of_7": 6,
+      "variants_still_red": [
+        "00:50",
+        "00:55",
+        "01:00",
+        "01:05",
+        "01:10",
+        "01:15"
+      ],
+      "variants_not_red": [
+        [
+          "00:45",
+          "ORANGE",
+          7
+        ]
+      ],
+      "worst_category": "health_self",
+      "worst_category_label": "",
+      "theme_houses": "1, 6, 8, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Jupiter",
+        "Mercury",
+        "Venus-pd"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_1",
+            "detail": "Mars, Saturn in the 1th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_1_placed",
+            "detail": "1th lord Mercury sits in the 3th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_6_placed",
+            "detail": "6th lord Saturn sits in the 1th house",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lagna_lord_placed",
+            "detail": "lagna lord Mercury in the 3th house",
+            "houses": [
+              1
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Jupiter_rules_primary",
+            "detail": "Jupiter MD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Mercury_rules_primary",
+            "detail": "Mercury AD rules the [1, 10] house(s)",
+            "houses": [
+              1,
+              10
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Venus_rules_primary",
+            "detail": "Venus PD rules the [2] house(s)",
+            "houses": [
+              2
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_2",
+            "detail": "Saturn transiting the 2th house (Libra)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_7",
+            "detail": "Rahu transiting the 7th house (Pisces)",
+            "houses": [
+              7
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_1",
+            "detail": "Ketu transiting the 1th house (Virgo)",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_2",
+            "detail": "Jupiter transiting the 2th house (Libra)",
+            "houses": [
+              2
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "MK_Mercury_runs",
+            "detail": "Jaimini MK (Mercury) runs as dasha lord; activates the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "PK_Jupiter_runs",
+            "detail": "Jaimini PK (Jupiter) runs as dasha lord; activates the [2, 4, 7] house(s)",
+            "houses": [
+              2,
+              4,
+              7
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2044,
+      "age": 62,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Jupiter",
+      "antardasha": "Mercury",
+      "pratyantardasha": "Mercury",
+      "transit": {
+        "jupiter": {
+          "sign": "Capricorn",
+          "house": 5,
+          "aspects": [
+            2,
+            10,
+            12
+          ]
+        },
+        "saturn": {
+          "sign": "Libra",
+          "house": 2,
+          "aspects": [
+            7,
+            9,
+            11
+          ]
+        },
+        "rahu": {
+          "sign": "Aquarius",
+          "house": 6,
+          "aspects": [
+            1,
+            3,
+            11
+          ]
+        },
+        "ketu": {
+          "sign": "Leo",
+          "house": 12,
+          "aspects": [
+            5,
+            7,
+            9
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 8,
+      "score_range": [
+        5,
+        8
+      ],
+      "sensitivity_class": "MODERATE STABILITY",
+      "red_variants_out_of_7": 4,
+      "variants_still_red": [
+        "00:45",
+        "00:50",
+        "00:55",
+        "01:00"
+      ],
+      "variants_not_red": [
+        [
+          "01:05",
+          "YELLOW",
+          5
+        ],
+        [
+          "01:10",
+          "YELLOW",
+          6
+        ],
+        [
+          "01:15",
+          "YELLOW",
+          6
+        ]
+      ],
+      "worst_category": "health_self",
+      "worst_category_label": "",
+      "theme_houses": "1, 6, 8, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Jupiter",
+        "Mercury",
+        "Mercury-pd"
+      ],
+      "transit_mechanisms": [
+        "ketu",
+        "rahu",
+        "saturn"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_1",
+            "detail": "Mars, Saturn in the 1th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_1_placed",
+            "detail": "1th lord Mercury sits in the 3th house",
+            "houses": [
+              1
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_6_placed",
+            "detail": "6th lord Saturn sits in the 1th house",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lagna_lord_placed",
+            "detail": "lagna lord Mercury in the 3th house",
+            "houses": [
+              1
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Jupiter_rules_primary",
+            "detail": "Jupiter MD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Mercury_rules_primary",
+            "detail": "Mercury AD rules the [1, 10] house(s)",
+            "houses": [
+              1,
+              10
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Mercury_rules_primary",
+            "detail": "Mercury PD rules the [1, 10] house(s)",
+            "houses": [
+              1,
+              10
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "saturn_occupies_2",
+            "detail": "Saturn transiting the 2th house (Libra)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_6",
+            "detail": "Rahu transiting the 6th house (Aquarius)",
+            "houses": [
+              6
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_12",
+            "detail": "Ketu transiting the 12th house (Leo)",
+            "houses": [
+              12
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          },
+          {
+            "family": "strength",
+            "indicator": "Mercury_below_minimum_shadbala",
+            "detail": "Mercury Shadbala 5.748 ru is below the required 7.0 ru; weakens the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "MK_Mercury_runs",
+            "detail": "Jaimini MK (Mercury) runs as dasha lord; activates the [1, 3, 10] house(s)",
+            "houses": [
+              1,
+              3,
+              10
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "PK_Jupiter_runs",
+            "detail": "Jaimini PK (Jupiter) runs as dasha lord; activates the [2, 4, 7] house(s)",
+            "houses": [
+              2,
+              4,
+              7
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    },
+    {
+      "year": 2050,
+      "age": 68,
+      "age_convention": "age on 1 July of that year (birthday 9 December)",
+      "mahadasha": "Jupiter",
+      "antardasha": "Mars",
+      "pratyantardasha": "Venus",
+      "transit": {
+        "jupiter": {
+          "sign": "Cancer",
+          "house": 11,
+          "aspects": [
+            4,
+            6,
+            8
+          ]
+        },
+        "saturn": {
+          "sign": "Capricorn",
+          "house": 5,
+          "aspects": [
+            2,
+            10,
+            12
+          ]
+        },
+        "rahu": {
+          "sign": "Libra",
+          "house": 2,
+          "aspects": [
+            7,
+            9,
+            11
+          ]
+        },
+        "ketu": {
+          "sign": "Aries",
+          "house": 8,
+          "aspects": [
+            1,
+            3,
+            5
+          ]
+        }
+      },
+      "sade_sati_status": "NONE",
+      "level": "RED",
+      "base_score": 8,
+      "score_range": [
+        5,
+        8
+      ],
+      "sensitivity_class": "TIME-SENSITIVE — LOW CONFIDENCE",
+      "red_variants_out_of_7": 3,
+      "variants_still_red": [
+        "00:55",
+        "01:00",
+        "01:10"
+      ],
+      "variants_not_red": [
+        [
+          "00:45",
+          "YELLOW",
+          5
+        ],
+        [
+          "00:50",
+          "ORANGE",
+          7
+        ],
+        [
+          "01:05",
+          "ORANGE",
+          7
+        ],
+        [
+          "01:15",
+          "ORANGE",
+          7
+        ]
+      ],
+      "worst_category": "encumbrance",
+      "worst_category_label": "",
+      "theme_houses": "8, 11, 12",
+      "mechanism_count": 4,
+      "dasha_mechanisms": [
+        "Jupiter",
+        "Mars",
+        "Venus-pd"
+      ],
+      "transit_mechanisms": [
+        "jupiter",
+        "ketu",
+        "rahu"
+      ],
+      "natal_exposure": [
+        "d1",
+        "jaimini",
+        "strength"
+      ],
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "red_gate_met": true,
+      "red_requires": "2+ distinct dasha lords AND 2+ distinct transit grahas AND >=4 mechanisms on the same theme",
+      "trace": {
+        "natal_d1": [
+          {
+            "family": "d1",
+            "indicator": "planet_in_8",
+            "detail": "Moon in the 8th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_8_placed",
+            "detail": "8th lord Mars sits in the 1th house",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "d1",
+            "indicator": "lord_12_placed",
+            "detail": "12th lord Sun sits in the 3th house",
+            "houses": [
+              12
+            ]
+          }
+        ],
+        "dasha": [
+          {
+            "family": "dasha",
+            "indicator": "MD_Jupiter_rules_primary",
+            "detail": "Jupiter MD rules the [4, 7] house(s)",
+            "houses": [
+              4,
+              7
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "AD_Mars_rules_primary",
+            "detail": "Mars AD rules the [8] house(s)",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "dasha",
+            "indicator": "PD_Venus_rules_primary",
+            "detail": "Venus PD rules the [2] house(s)",
+            "houses": [
+              2
+            ]
+          }
+        ],
+        "transit": [
+          {
+            "family": "transit",
+            "indicator": "rahu_occupies_2",
+            "detail": "Rahu transiting the 2th house (Libra)",
+            "houses": [
+              2
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "ketu_occupies_8",
+            "detail": "Ketu transiting the 8th house (Aries)",
+            "houses": [
+              8
+            ]
+          },
+          {
+            "family": "transit",
+            "indicator": "jupiter_occupies_11",
+            "detail": "Jupiter transiting the 11th house (Cancer)",
+            "houses": [
+              11
+            ]
+          }
+        ],
+        "strength": [
+          {
+            "family": "strength",
+            "indicator": "Sun_below_minimum_shadbala",
+            "detail": "Sun Shadbala 5.771 ru is below the required 6.5 ru; weakens the [3, 12] house(s)",
+            "houses": [
+              3,
+              12
+            ]
+          }
+        ],
+        "jaimini": [
+          {
+            "family": "jaimini",
+            "indicator": "PK_Jupiter_runs",
+            "detail": "Jaimini PK (Jupiter) runs as dasha lord; activates the [2, 4, 7] house(s)",
+            "houses": [
+              2,
+              4,
+              7
+            ]
+          },
+          {
+            "family": "jaimini",
+            "indicator": "DK_Mars_runs",
+            "detail": "Jaimini DK (Mars) runs as dasha lord; activates the [1, 3, 8] house(s)",
+            "houses": [
+              1,
+              3,
+              8
+            ]
+          }
+        ]
+      },
+      "what_this_does_not_mean": "This flag does not predict a specific event. It does not determine death, and no analysis in this project can do so.",
+      "practical_precautions": [
+        "Verify every contractual and statutory filing; do not rely on informal assurance.",
+        "Keep identity, address and civic records current and documented.",
+        "Seek professional advice before responding to any legal or official notice."
+      ],
+      "traditional_remedy": "TRADITIONAL / CULTURAL PRACTICE: truthful record-keeping, respect for lawful process, and charitable intent in dealings. No remedy substitutes for legal advice.",
+      "limitations": [
+        "Traditional astrological interpretation, not a prediction.",
+        "Ashtakavarga is used only for the four independently verified tables (Sun, Moon, Mars, Saturn); Mercury, Jupiter and Venus tables are excluded.",
+        "Year-level sampling uses 1 July; each antardasha spans about 1.7 years, so year boundaries are coarse.",
+        "Saturn/Rahu/Ketu transits are annual positions, not daily motion."
+      ]
+    }
+  ],
+  "language_policy": {
+    "death": "never predicted; 'attention period' only",
+    "medical": "no diagnosis offered",
+    "financial": "capital-preservation framing; no amounts",
+    "red_label": "EXTREME ATTENTION, never EXTREME DANGER",
+    "remedies": "TRADITIONAL / CULTURAL PRACTICE, no guarantee"
+  }
+}
