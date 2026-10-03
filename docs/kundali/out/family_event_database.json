@@ -1,0 +1,131 @@
+{
+  "disclaimer": "Identifiers (PAN number, death-registration number, street address) are deliberately excluded; this repository is public.",
+  "people": [
+    {
+      "key": "kusankur",
+      "name": "KUSANKUR DHAR",
+      "father": "SISIR KUMAR DHAR",
+      "mother": "PRAMILA BALA DHAR",
+      "spouse": "MITRA DHAR",
+      "place_level": "Khagra, Berhampore, Murshidabad, West Bengal",
+      "source": "family-supplied"
+    },
+    {
+      "key": "son",
+      "name": "SWARNA SEKHAR DHAR",
+      "father": "KUSANKUR DHAR",
+      "mother": "MITRA DHAR",
+      "dob": "1981-12-09",
+      "dob_time": "01:00 IST",
+      "place": "Berhampore, Murshidabad",
+      "source": "user-confirmed",
+      "confidence": "HIGH"
+    },
+    {
+      "key": "grandson_1",
+      "name": "SASTAV DHAR",
+      "father": "SWARNA SEKHAR DHAR",
+      "dob": "2019-04-02",
+      "dob_time": "16:09 IST",
+      "place": "Kandi, Murshidabad",
+      "source": "user-supplied",
+      "confidence": "HIGH"
+    },
+    {
+      "key": "grandson_2",
+      "name": "ABHYANT DHAR",
+      "father": "SWARNA SEKHAR DHAR",
+      "dob": "2021-08-19",
+      "dob_time": "16:01 IST",
+      "place": "Kandi, Murshidabad",
+      "source": "user-supplied",
+      "confidence": "HIGH"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "E1",
+      "person": "kusankur",
+      "date": "1951-07-03",
+      "event_type": "birth (CANDIDATE)",
+      "relationship": "self",
+      "source": "PAN card",
+      "source_quality": "government id, DOB often transcribed",
+      "confidence": "MEDIUM",
+      "note": "Treat as candidate only; contradicted by E9 age"
+    },
+    {
+      "event_id": "E2",
+      "person": "kusankur",
+      "date": "2019-06-21",
+      "event_type": "death",
+      "relationship": "self",
+      "source": "death certificate",
+      "source_quality": "civil registration",
+      "confidence": "HIGH",
+      "note": "Recorded age at death: 68"
+    },
+    {
+      "event_id": "E3",
+      "person": "son",
+      "date": "1981-12-09",
+      "event_type": "birth",
+      "relationship": "child of kusankur",
+      "source": "user-confirmed",
+      "source_quality": "family record",
+      "confidence": "HIGH"
+    },
+    {
+      "event_id": "E4",
+      "person": "grandson_1",
+      "date": "2019-04-02",
+      "event_type": "birth",
+      "relationship": "grandchild of kusankur",
+      "source": "user-supplied",
+      "source_quality": "family record",
+      "confidence": "HIGH"
+    },
+    {
+      "event_id": "E5",
+      "person": "grandson_2",
+      "date": "2021-08-19",
+      "event_type": "birth",
+      "relationship": "grandchild of kusankur",
+      "source": "user-supplied",
+      "source_quality": "family record",
+      "confidence": "HIGH"
+    }
+  ],
+  "documentary_consistency_check": {
+    "pan_dob": "1951-07-03",
+    "death_date": "2019-06-21",
+    "implied_age": "67y 11m 18d",
+    "certificate_age": "68",
+    "consistent": false,
+    "window_consistent_with_age_68": [
+      "1950-06-22",
+      "1951-06-21"
+    ],
+    "pan_date_inside_that_window": false,
+    "days_outside": 12,
+    "explanation_ranking": [
+      {
+        "cause": "age rounded up in registration",
+        "plausibility": "HIGH"
+      },
+      {
+        "cause": "PAN date transcription error",
+        "plausibility": "MEDIUM"
+      },
+      {
+        "cause": "both documents approximate",
+        "plausibility": "MEDIUM"
+      }
+    ],
+    "resolvable_by": [
+      "birth certificate",
+      "school leaving certificate",
+      "service/admission record"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "verdict": "NO DISCRIMINATING RELATIONSHIP FOUNDED",
+  "note": "Each row records a traditional relationship actually computed. None showed date-specific variation adequate to isolate a birth date; the 1,461-date scan produced a 125-way tie at the top score.",
+  "rows": [
+    {
+      "generation": "KUSANKUR -> SWARNA",
+      "planet": "D12 lagna",
+      "relationship": "Pisces = father in D12",
+      "result": "varied but not isolating",
+      "strength": "WEAK",
+      "limitation": "no documented dating function"
+    },
+    {
+      "generation": "KUSANKUR -> SWARNA",
+      "planet": "Jupiter/Saturn",
+      "relationship": "D12 parent karakas",
+      "result": "varied",
+      "strength": "WEAK",
+      "limitation": "sign placement only; 30-day granularity"
+    },
+    {
+      "generation": "KUSANKUR -> SWARNA",
+      "planet": "Sun",
+      "relationship": "father marker in son's chart",
+      "strength": "NONE",
+      "limitation": "describes the son, constant across candidates"
+    },
+    {
+      "generation": "KUSANKUR -> SWARNA",
+      "planet": "9th house/lord",
+      "relationship": "Parashari father house",
+      "strength": "NONE",
+      "limitation": "describes the son, not a candidate-dependent test"
+    },
+    {
+      "generation": "KUSANKUR -> SWARNA",
+      "planet": "Moon",
+      "relationship": "nakshatra equality/trine",
+      "result": "varied",
+      "strength": "WEAK",
+      "limitation": "1-2 matches per 4-year scan"
+    },
+    {
+      "generation": "KUSANKUR -> SASTAV",
+      "planet": "D12",
+      "relationship": "grandparent varga link",
+      "result": "tested",
+      "strength": "NONE",
+      "limitation": "68-year gap; no traditional grandparent rule is date-bearing"
+    },
+    {
+      "generation": "KUSANKUR -> ABHYANT",
+      "planet": "D12",
+      "relationship": "grandparent varga link",
+      "result": "tested",
+      "strength": "NONE",
+      "limitation": "70-year gap; same limitation"
+    }
+  ],
+  "pattern_significance": "NOT ASSESSED AS SIGNIFICANT - insufficient discriminating power to distinguish signal from coincidence"
+}

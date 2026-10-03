@@ -1,0 +1,37 @@
+{
+  "engine": "Swiss Ephemeris 2.10.03 (pyswisseph)",
+  "ayanamsha": "Lahiri (Chitrapaksha)",
+  "flags": "FLG_SWIEPH | FLG_SPEED (tropical, then one explicit ayanamsha subtraction)",
+  "coordinates": {
+    "latitude": 24.1044927,
+    "longitude": 88.2510635,
+    "source": "OpenStreetMap/Nominatim, Berhampore municipal centroid",
+    "altitude_m": 0.0
+  },
+  "timezone": "Asia/Kolkata UTC+05:30",
+  "dst": "none (India has not observed DST since 1944)",
+  "independence": "Descendant charts recalculated from raw birth data in this module; cached values from the separate Kundali project were NOT reused.",
+  "descendant_spotcheck": [
+    {
+      "body": "son lagna",
+      "value": "Virgo 13.8897",
+      "agrees_with_prior_run": true
+    },
+    {
+      "body": "son Moon",
+      "value": "Aries 16.8722 Bharani pada 2",
+      "agrees_with_prior_run": true
+    },
+    {
+      "body": "grandson_1 lagna",
+      "value": "Leo 25.3797",
+      "agrees_with_prior_run": true
+    },
+    {
+      "body": "grandson_2 lagna",
+      "value": "Sagittarius 27.8497",
+      "agrees_with_prior_run": true
+    }
+  ],
+  "note": "Lagna values for the two grandchildren differ in the second decimal from the earlier family_validation run because the nominal birth TIME differs; signs and nakshatras agree, which is the material result."
+}

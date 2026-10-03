@@ -1,0 +1,2752 @@
+{
+  "method": {
+    "blind": true,
+    "candidate_range": "1949-01-01 .. 1952-12-31",
+    "range_rationale": "The death certificate records 'Age 68' at 2019-06-21, which arithmetically implies birth between 1950-06-22 and 1951-06-21. The scan deliberately spans a WIDER window (1949-1952) than that implication so the astrological scan is not confined by the documentary prior.",
+    "nominal_birth_time": "12:00 local (no birth time is known)",
+    "weights": {
+      "d12_pisces_father_karakamsha": 3.0,
+      "d12_saturn_jupiter_quality": 2.0,
+      "son_9th_house_father": 2.0,
+      "son_9th_lord_relationship": 1.5,
+      "son_sun_father": 1.0,
+      "son_chara_karaka_bi_relation": 2.0,
+      "son_arudha_9th": 1.0,
+      "nakshatra_gandanta_or_exchange": 1.0,
+      "grandchild_d12_support": 1.0
+    },
+    "critical_caveat": "These are traditional interpretive relationships, not a dating algorithm. A high score means closer CORRESPONDENCE with the descendant charts on these specific relationships; it is not evidence of a birth date."
+  },
+  "descendants": {
+    "son": {
+      "label": "SWARNA SEKHAR DHAR 1981-12-09 01:00 IST",
+      "bodies": [
+        {
+          "body": "Sun",
+          "longitude": 233.030297,
+          "sign": "Scorpio",
+          "degree_in_sign": 23.0303,
+          "nakshatra": "Jyeshtha",
+          "pada": 2,
+          "house": 3,
+          "d9": "Capricorn",
+          "d12": "Leo",
+          "retrograde": false
+        },
+        {
+          "body": "Moon",
+          "longitude": 16.872238,
+          "sign": "Aries",
+          "degree_in_sign": 16.8722,
+          "nakshatra": "Bharani",
+          "pada": 2,
+          "house": 8,
+          "d9": "Virgo",
+          "d12": "Libra",
+          "retrograde": false
+        },
+        {
+          "body": "Mars",
+          "longitude": 152.930133,
+          "sign": "Virgo",
+          "degree_in_sign": 2.9301,
+          "nakshatra": "Uttara Phalguni",
+          "pada": 2,
+          "house": 1,
+          "d9": "Capricorn",
+          "d12": "Libra",
+          "retrograde": false
+        },
+        {
+          "body": "Mercury",
+          "longitude": 232.026607,
+          "sign": "Scorpio",
+          "degree_in_sign": 22.0266,
+          "nakshatra": "Jyeshtha",
+          "pada": 2,
+          "house": 3,
+          "d9": "Capricorn",
+          "d12": "Cancer",
+          "retrograde": false
+        },
+        {
+          "body": "Jupiter",
+          "longitude": 188.625369,
+          "sign": "Libra",
+          "degree_in_sign": 8.6254,
+          "nakshatra": "Swati",
+          "pada": 1,
+          "house": 2,
+          "d9": "Sagittarius",
+          "d12": "Capricorn",
+          "retrograde": false
+        },
+        {
+          "body": "Venus",
+          "longitude": 276.355823,
+          "sign": "Capricorn",
+          "degree_in_sign": 6.3558,
+          "nakshatra": "Uttara Ashadha",
+          "pada": 3,
+          "house": 5,
+          "d9": "Aquarius",
+          "d12": "Pisces",
+          "retrograde": false
+        },
+        {
+          "body": "Saturn",
+          "longitude": 176.241229,
+          "sign": "Virgo",
+          "degree_in_sign": 26.2412,
+          "nakshatra": "Chitra",
+          "pada": 1,
+          "house": 1,
+          "d9": "Leo",
+          "d12": "Cancer",
+          "retrograde": false
+        },
+        {
+          "body": "Rahu",
+          "longitude": 90.807566,
+          "sign": "Cancer",
+          "degree_in_sign": 0.8076,
+          "nakshatra": "Punarvasu",
+          "pada": 4,
+          "house": 11,
+          "d9": "Cancer",
+          "d12": "Cancer",
+          "retrograde": null
+        },
+        {
+          "body": "Ketu",
+          "longitude": 270.807566,
+          "sign": "Capricorn",
+          "degree_in_sign": 0.8076,
+          "nakshatra": "Uttara Ashadha",
+          "pada": 2,
+          "house": 5,
+          "d9": "Capricorn",
+          "d12": "Capricorn",
+          "retrograde": null
+        },
+        {
+          "body": "Ascendant",
+          "longitude": 163.889678,
+          "sign": "Virgo",
+          "degree_in_sign": 13.8897,
+          "nakshatra": "Hasta",
+          "pada": 2,
+          "house": 1,
+          "d9": "Taurus",
+          "d12": "Aquarius",
+          "retrograde": null
+        }
+      ],
+      "julian_day_ut": 2444947.3125,
+      "ayanamsha_deg": 23.604776
+    },
+    "grandson_1": {
+      "label": "SASTAV DHAR 2019-04-02 16:09 IST",
+      "bodies": [
+        {
+          "body": "Sun",
+          "longitude": 348.276932,
+          "sign": "Pisces",
+          "degree_in_sign": 18.2769,
+          "nakshatra": "Revati",
+          "pada": 1,
+          "house": 8,
+          "d9": "Sagittarius",
+          "d12": "Libra",
+          "retrograde": false
+        },
+        {
+          "body": "Moon",
+          "longitude": 315.685668,
+          "sign": "Aquarius",
+          "degree_in_sign": 15.6857,
+          "nakshatra": "Shatabhisha",
+          "pada": 3,
+          "house": 7,
+          "d9": "Aquarius",
+          "d12": "Leo",
+          "retrograde": false
+        },
+        {
+          "body": "Mars",
+          "longitude": 37.320081,
+          "sign": "Taurus",
+          "degree_in_sign": 7.3201,
+          "nakshatra": "Krittika",
+          "pada": 4,
+          "house": 10,
+          "d9": "Pisces",
+          "d12": "Cancer",
+          "retrograde": false
+        },
+        {
+          "body": "Mercury",
+          "longitude": 323.029722,
+          "sign": "Aquarius",
+          "degree_in_sign": 23.0297,
+          "nakshatra": "Purva Bhadrapada",
+          "pada": 1,
+          "house": 7,
+          "d9": "Aries",
+          "d12": "Scorpio",
+          "retrograde": false
+        },
+        {
+          "body": "Jupiter",
+          "longitude": 240.117295,
+          "sign": "Sagittarius",
+          "degree_in_sign": 0.1173,
+          "nakshatra": "Mula",
+          "pada": 1,
+          "house": 5,
+          "d9": "Aries",
+          "d12": "Sagittarius",
+          "retrograde": false
+        },
+        {
+          "body": "Venus",
+          "longitude": 313.847699,
+          "sign": "Aquarius",
+          "degree_in_sign": 13.8477,
+          "nakshatra": "Shatabhisha",
+          "pada": 3,
+          "house": 7,
+          "d9": "Aquarius",
+          "d12": "Cancer",
+          "retrograde": false
+        },
+        {
+          "body": "Saturn",
+          "longitude": 265.77577,
+          "sign": "Sagittarius",
+          "degree_in_sign": 25.7758,
+          "nakshatra": "Purva Ashadha",
+          "pada": 4,
+          "house": 5,
+          "d9": "Scorpio",
+          "d12": "Libra",
+          "retrograde": false
+        },
+        {
+          "body": "Rahu",
+          "longitude": 88.599115,
+          "sign": "Gemini",
+          "degree_in_sign": 28.5991,
+          "nakshatra": "Punarvasu",
+          "pada": 3,
+          "house": 11,
+          "d9": "Gemini",
+          "d12": "Taurus",
+          "retrograde": null
+        },
+        {
+          "body": "Ketu",
+          "longitude": 268.599115,
+          "sign": "Sagittarius",
+          "degree_in_sign": 28.5991,
+          "nakshatra": "Uttara Ashadha",
+          "pada": 1,
+          "house": 5,
+          "d9": "Sagittarius",
+          "d12": "Scorpio",
+          "retrograde": null
+        },
+        {
+          "body": "Ascendant",
+          "longitude": 145.376522,
+          "sign": "Leo",
+          "degree_in_sign": 25.3765,
+          "nakshatra": "Purva Phalguni",
+          "pada": 4,
+          "house": 1,
+          "d9": "Scorpio",
+          "d12": "Gemini",
+          "retrograde": null
+        }
+      ],
+      "julian_day_ut": 2458575.94375,
+      "ayanamsha_deg": 24.126
+    },
+    "grandson_2": {
+      "label": "ABHYANT DHAR 2021-08-19 16:01 IST",
+      "bodies": [
+        {
+          "body": "Sun",
+          "longitude": 122.509114,
+          "sign": "Leo",
+          "degree_in_sign": 2.5091,
+          "nakshatra": "Magha",
+          "pada": 1,
+          "house": 9,
+          "d9": "Aries",
+          "d12": "Virgo",
+          "retrograde": false
+        },
+        {
+          "body": "Moon",
+          "longitude": 262.721086,
+          "sign": "Sagittarius",
+          "degree_in_sign": 22.7211,
+          "nakshatra": "Purva Ashadha",
+          "pada": 3,
+          "house": 1,
+          "d9": "Libra",
+          "d12": "Virgo",
+          "retrograde": false
+        },
+        {
+          "body": "Mars",
+          "longitude": 138.829263,
+          "sign": "Leo",
+          "degree_in_sign": 18.8293,
+          "nakshatra": "Purva Phalguni",
+          "pada": 2,
+          "house": 9,
+          "d9": "Virgo",
+          "d12": "Pisces",
+          "retrograde": false
+        },
+        {
+          "body": "Mercury",
+          "longitude": 139.136336,
+          "sign": "Leo",
+          "degree_in_sign": 19.1363,
+          "nakshatra": "Purva Phalguni",
+          "pada": 2,
+          "house": 9,
+          "d9": "Virgo",
+          "d12": "Pisces",
+          "retrograde": false
+        },
+        {
+          "body": "Jupiter",
+          "longitude": 303.144937,
+          "sign": "Aquarius",
+          "degree_in_sign": 3.1449,
+          "nakshatra": "Dhanishta",
+          "pada": 3,
+          "house": 3,
+          "d9": "Libra",
+          "d12": "Pisces",
+          "retrograde": true
+        },
+        {
+          "body": "Venus",
+          "longitude": 159.682144,
+          "sign": "Virgo",
+          "degree_in_sign": 9.6821,
+          "nakshatra": "Uttara Phalguni",
+          "pada": 4,
+          "house": 10,
+          "d9": "Pisces",
+          "d12": "Sagittarius",
+          "retrograde": false
+        },
+        {
+          "body": "Saturn",
+          "longitude": 284.77858,
+          "sign": "Capricorn",
+          "degree_in_sign": 14.7786,
+          "nakshatra": "Shravana",
+          "pada": 2,
+          "house": 2,
+          "d9": "Taurus",
+          "d12": "Gemini",
+          "retrograde": true
+        },
+        {
+          "body": "Rahu",
+          "longitude": 42.496892,
+          "sign": "Taurus",
+          "degree_in_sign": 12.4969,
+          "nakshatra": "Rohini",
+          "pada": 1,
+          "house": 6,
+          "d9": "Aries",
+          "d12": "Virgo",
+          "retrograde": null
+        },
+        {
+          "body": "Ketu",
+          "longitude": 222.496892,
+          "sign": "Scorpio",
+          "degree_in_sign": 12.4969,
+          "nakshatra": "Anuradha",
+          "pada": 3,
+          "house": 12,
+          "d9": "Libra",
+          "d12": "Pisces",
+          "retrograde": null
+        },
+        {
+          "body": "Ascendant",
+          "longitude": 267.846157,
+          "sign": "Sagittarius",
+          "degree_in_sign": 27.8462,
+          "nakshatra": "Uttara Ashadha",
+          "pada": 1,
+          "house": 1,
+          "d9": "Sagittarius",
+          "d12": "Scorpio",
+          "retrograde": null
+        }
+      ],
+      "julian_day_ut": 2459445.938194,
+      "ayanamsha_deg": 24.159276
+    }
+  },
+  "results_ranked": [
+    {
+      "date": "1949-01-25",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Virgo",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Sagittarius",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Sagittarius"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Capricorn (Shravana)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Jupiter; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-01-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Virgo",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Sagittarius",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Sagittarius"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Capricorn (Shravana)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Venus; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-01-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Virgo",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Sagittarius",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Sagittarius"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Capricorn (Shravana)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Rahu; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-02-21",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Scorpio",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aquarius (Shatabhisha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-02-22",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Scorpio",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aquarius (Shatabhisha)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mercury; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-02-23",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Scorpio",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aquarius (Shatabhisha)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-03-24",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aquarius",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Pisces"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Pisces (Uttara Bhadrapada)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Pisces, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-03-25",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aquarius",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Pisces"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Pisces (Uttara Bhadrapada)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Pisces, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-03-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aquarius",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Pisces"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Pisces (Uttara Bhadrapada)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Pisces, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Saturn; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-04-25",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Aries"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aries (Ashvini)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-04-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Aries"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aries (Ashvini)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-04-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Aries"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aries (Bharani)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Jupiter; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-05-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Taurus (same sign as son 9th)"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Taurus (Rohini)"
+        },
+        {
+          "key": "nakshatra_same_moon",
+          "detail": "father Moon and son Moon share nakshatra Bharani"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Venus; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-05-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Taurus (same sign as son 9th)"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Taurus (Rohini)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-05-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Taurus (same sign as son 9th)"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Taurus (Rohini)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-06-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Pisces",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Scorpio",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Gemini"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Gemini (Ardra)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-06-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Pisces",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Scorpio",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Cancer"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Gemini (Ardra)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Saturn; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-07-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aquarius",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Sagittarius",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Leo"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Cancer (Pushya)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Leo, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Cancer, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Venus; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-07-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aquarius",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Sagittarius",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Leo"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Cancer (Pushya)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Leo, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Cancer, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-08-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aquarius",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Virgo"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Leo (Magha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Venus; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-08-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aquarius",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Virgo"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Leo (Magha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-08-29",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aquarius",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Virgo"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Leo (Magha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-09-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Libra"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Virgo (Hasta)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Saturn; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-09-29",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Libra"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Virgo (Hasta)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Saturn; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-09-30",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Libra"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Virgo (Hasta)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-10-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Capricorn",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Scorpio"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Libra (Swati)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-10-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Capricorn",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Scorpio"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Libra (Swati)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-10-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Capricorn",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Scorpio"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Libra (Swati)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Rahu; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-11-20",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aquarius",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Sagittarius"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Scorpio (Anuradha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Jupiter; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-11-21",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Pisces",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Sagittarius"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Scorpio (Anuradha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Rahu; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-12-11",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Gemini",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Scorpio (Jyeshtha)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Leo, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "nakshatra_same_sun",
+          "detail": "father Sun and son Sun share nakshatra Jyeshtha"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Jupiter; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1949-12-12",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Gemini",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Scorpio (Jyeshtha)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Leo, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "nakshatra_same_sun",
+          "detail": "father Sun and son Sun share nakshatra Jyeshtha"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Rahu; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-01-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Leo",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Gemini",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Capricorn (Shravana)"
+        },
+        {
+          "key": "nakshatra_same_moon",
+          "detail": "father Moon and son Moon share nakshatra Bharani"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-01-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Leo",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Gemini",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Capricorn (Shravana)"
+        },
+        {
+          "key": "nakshatra_same_moon",
+          "detail": "father Moon and son Moon share nakshatra Bharani"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Jupiter; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-02-21",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aquarius (Shatabhisha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mercury; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-02-22",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aquarius (Shatabhisha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Rahu; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-02-23",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Scorpio",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aquarius (Shatabhisha)"
+        },
+        {
+          "key": "nakshatra_same_moon",
+          "detail": "father Moon and son Moon share nakshatra Bharani"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-03-24",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aquarius",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aries",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Pisces (Uttara Bhadrapada)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Pisces, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-03-25",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Pisces",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aries",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Pisces (Uttara Bhadrapada)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Pisces, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-03-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Pisces",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aries",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Capricorn"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Pisces (Uttara Bhadrapada)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Pisces, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mercury; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-04-25",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Taurus",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Aquarius"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aries (Ashvini)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-04-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Taurus",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Aquarius"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aries (Ashvini)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Rahu; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-04-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Taurus",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Aquarius"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Aries (Ashvini)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Leo, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-05-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Pisces"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Taurus (Rohini)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Leo, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Rahu; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-05-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Aries"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Taurus (Rohini)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-05-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Pisces",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Aries"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Taurus (Rohini)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-06-26",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aries",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Taurus (same sign as son 9th)"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Gemini (Ardra)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Jupiter; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-06-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aries",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Taurus (same sign as son 9th)"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Gemini (Ardra)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-06-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Aries",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Taurus (same sign as son 9th)"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Gemini (Ardra)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Jupiter; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-07-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Gemini"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Cancer (Pushya)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Cancer, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-07-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Gemini"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Cancer (Pushya)"
+        },
+        {
+          "key": "nakshatra_trine_moon",
+          "detail": "father Moon in Sagittarius, son Moon in Aries (trine/opposition)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Cancer, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Rahu; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-07-29",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Cancer",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Taurus",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Gemini"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Cancer (Pushya)"
+        },
+        {
+          "key": "nakshatra_trine_sun",
+          "detail": "father Sun in Cancer, son Sun in Scorpio (trine/opposition)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-08-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Taurus",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Gemini",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Cancer"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Leo (Magha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-08-29",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Taurus",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Gemini",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Cancer"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Leo (Magha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Sun; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-08-30",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Taurus",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Gemini",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Cancer"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Leo (Magha)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Moon; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-09-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Virgo",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Leo"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Virgo (Hasta)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-09-29",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Virgo",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Virgo"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Virgo (Hasta)"
+        },
+        {
+          "key": "nakshatra_same_moon",
+          "detail": "father Moon and son Moon share nakshatra Bharani"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-09-30",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Aries",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Virgo",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Virgo"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Virgo (Hasta)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-10-27",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Pisces",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Libra"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Libra (Swati)"
+        },
+        {
+          "key": "nakshatra_same_moon",
+          "detail": "father Moon and son Moon share nakshatra Bharani"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Mercury; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    },
+    {
+      "date": "1950-10-28",
+      "score": 4.5,
+      "signals": [
+        {
+          "key": "d12_pisces_father_karakamsha",
+          "detail": "father sign Pisces in D12"
+        },
+        {
+          "key": "d12_jupiter_in_Pisces",
+          "detail": "Jupiter D12 placement"
+        },
+        {
+          "key": "d12_saturn_in_Libra",
+          "detail": "Saturn D12 placement"
+        },
+        {
+          "key": "son_9th_house_father",
+          "detail": "9th from son lagna = Taurus; lord Venus"
+        },
+        {
+          "key": "son_9th_lord_relationship",
+          "detail": "father's Venus in Libra"
+        },
+        {
+          "key": "son_sun_father",
+          "detail": "father Sun in Libra (Swati)"
+        },
+        {
+          "key": "son_chara_karaka_bi_relation",
+          "detail": "father's Pitri karaka Venus; son houses 3/8 (Sun/Moon)"
+        }
+      ]
+    }
+  ],
+  "top_tied_dates": [
+    "1949-01-25",
+    "1949-01-26",
+    "1949-01-27",
+    "1949-02-21",
+    "1949-02-22",
+    "1949-02-23",
+    "1949-03-24",
+    "1949-03-25",
+    "1949-03-26",
+    "1949-04-25",
+    "1949-04-26",
+    "1949-04-27",
+    "1949-05-26",
+    "1949-05-27",
+    "1949-05-28",
+    "1949-06-26",
+    "1949-06-27",
+    "1949-07-27",
+    "1949-07-28",
+    "1949-08-27",
+    "1949-08-28",
+    "1949-08-29",
+    "1949-09-28",
+    "1949-09-29",
+    "1949-09-30",
+    "1949-10-26",
+    "1949-10-27",
+    "1949-10-28",
+    "1949-11-20",
+    "1949-11-21",
+    "1949-12-11",
+    "1949-12-12",
+    "1950-01-26",
+    "1950-01-27",
+    "1950-02-21",
+    "1950-02-22",
+    "1950-02-23",
+    "1950-03-24",
+    "1950-03-25",
+    "1950-03-26",
+    "1950-04-25",
+    "1950-04-26",
+    "1950-04-27",
+    "1950-05-26",
+    "1950-05-27",
+    "1950-05-28",
+    "1950-06-26",
+    "1950-06-27",
+    "1950-06-28",
+    "1950-07-27",
+    "1950-07-28",
+    "1950-07-29",
+    "1950-08-28",
+    "1950-08-29",
+    "1950-08-30",
+    "1950-09-28",
+    "1950-09-29",
+    "1950-09-30",
+    "1950-10-27",
+    "1950-10-28",
+    "1950-11-20",
+    "1950-11-21",
+    "1950-12-11",
+    "1950-12-12",
+    "1951-01-26",
+    "1951-01-27",
+    "1951-02-22",
+    "1951-02-23",
+    "1951-03-24",
+    "1951-03-25",
+    "1951-03-26",
+    "1951-04-25",
+    "1951-04-26",
+    "1951-04-27",
+    "1951-05-26",
+    "1951-05-27",
+    "1951-05-28",
+    "1951-06-26",
+    "1951-06-27",
+    "1951-06-28",
+    "1951-07-27",
+    "1951-07-28",
+    "1951-07-29",
+    "1951-08-28",
+    "1951-08-29",
+    "1951-08-30",
+    "1951-09-28",
+    "1951-09-29",
+    "1951-09-30",
+    "1951-10-27",
+    "1951-10-28",
+    "1951-11-20",
+    "1951-11-21",
+    "1951-12-12",
+    "1952-01-26",
+    "1952-01-27",
+    "1952-02-22",
+    "1952-02-23",
+    "1952-02-24",
+    "1952-03-23",
+    "1952-03-24",
+    "1952-03-25",
+    "1952-04-24",
+    "1952-04-25",
+    "1952-04-26",
+    "1952-05-26",
+    "1952-05-27",
+    "1952-05-28",
+    "1952-06-25",
+    "1952-06-26",
+    "1952-06-27",
+    "1952-07-26",
+    "1952-07-27",
+    "1952-07-28",
+    "1952-08-27",
+    "1952-08-28",
+    "1952-08-29",
+    "1952-09-28",
+    "1952-09-29",
+    "1952-10-26",
+    "1952-10-27",
+    "1952-11-19",
+    "1952-11-20",
+    "1952-12-11",
+    "1952-12-12"
+  ],
+  "pan_candidate": {
+    "date": "1951-07-03",
+    "score": 1.5,
+    "rank": 959,
+    "of_total": 1461,
+    "signals": [
+      {
+        "key": "d12_pisces_father_karakamsha_absent",
+        "detail": "D12 lagna Taurus (not Pisces)"
+      },
+      {
+        "key": "d12_jupiter_in_Libra",
+        "detail": "Jupiter D12 placement"
+      },
+      {
+        "key": "d12_saturn_in_Libra",
+        "detail": "Saturn D12 placement"
+      },
+      {
+        "key": "son_9th_house_father",
+        "detail": "9th from son lagna = Taurus; lord Venus"
+      },
+      {
+        "key": "son_9th_lord_relationship",
+        "detail": "father's Venus in Leo"
+      },
+      {
+        "key": "son_sun_father",
+        "detail": "father Sun in Gemini (Ardra)"
+      },
+      {
+        "key": "son_chara_karaka_bi_relation",
+        "detail": "father's Pitri karaka Mars; son houses 3/8 (Sun/Moon)"
+      }
+    ]
+  }
+}
