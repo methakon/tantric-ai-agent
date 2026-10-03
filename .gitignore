@@ -6,7 +6,8 @@ __pycache__/
 build/
 dist/
 *.wav
-*.svg
+# vector chart assets are deliverables — keep them tracked under docs/kundali/
+!docs/kundali/out/*.svg
 tantric_engine
 third_party/sweph/*.c
 third_party/sweph/*.h
