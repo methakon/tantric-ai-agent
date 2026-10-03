@@ -1,0 +1,69 @@
+{
+  "providers": [
+    {
+      "provider": "bailian / DashScope (currently configured)",
+      "configured": true,
+      "credential_env_var": "DASHSCOPE_API_KEY",
+      "credential_present": true,
+      "auth_test": "HTTP 401",
+      "vision_model": "qwen-vl-max",
+      "result": "HTTP 401 (rejected)"
+    },
+    {
+      "provider": "OpenAI-compatible (OPENAI_API_KEY)",
+      "configured": true,
+      "credential_env_var": "OPENAI_API_KEY",
+      "credential_present": true,
+      "auth_test": "HTTP 401",
+      "vision_model": "gpt-4o-mini",
+      "result": "HTTP 401 (rejected)"
+    },
+    {
+      "provider": "Nous inference",
+      "configured": true,
+      "credential_env_var": "HERMES_API_KEY",
+      "credential_present": false,
+      "auth_test": "not attempted",
+      "vision_model": "Hermes-4-14B",
+      "result": "skipped - no credential"
+    },
+    {
+      "provider": "Gemini",
+      "configured": true,
+      "credential_env_var": "GEMINI_API_KEY",
+      "credential_present": true,
+      "auth_test": "network/other error",
+      "vision_model": "gemini-2.0-flash",
+      "result": "KeyError"
+    },
+    {
+      "provider": "OpenRouter",
+      "configured": true,
+      "credential_env_var": "OPENROUTER_API_KEY",
+      "credential_present": true,
+      "auth_test": "HTTP 404",
+      "vision_model": "google/gemini-2.0-flash-exp:free",
+      "result": "HTTP 404 (rejected)"
+    },
+    {
+      "provider": "Fireworks",
+      "configured": true,
+      "credential_env_var": "FIREWORKS_API_KEY",
+      "credential_present": true,
+      "auth_test": "HTTP 404",
+      "vision_model": "accounts/fireworks/models/llama-v3p2-90b-vision-instruct",
+      "result": "HTTP 404 (rejected)"
+    },
+    {
+      "provider": "NVIDIA",
+      "configured": true,
+      "credential_env_var": "NVIDIA_API_KEY",
+      "credential_present": true,
+      "auth_test": "HTTP 404",
+      "vision_model": "nvidia/llama-3.2-90b-vision-instruct",
+      "result": "HTTP 404 (rejected)"
+    }
+  ],
+  "any_working": false,
+  "working_providers": []
+}

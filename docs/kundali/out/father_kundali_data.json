@@ -1,0 +1,919 @@
+{
+  "key": "father",
+  "name": "Swarna Sekhar Dhar",
+  "sex": "Male",
+  "role": "primary chart under construction",
+  "birth": {
+    "date": "1981-12-09",
+    "time_ist": "01:00:00",
+    "place": "Berhampore, Murshidabad, West Bengal, India",
+    "timezone": "Asia/Kolkata",
+    "utc_offset": "+05:30"
+  },
+  "coordinates": {
+    "latitude": 24.1044927,
+    "longitude": 88.2510635,
+    "altitude_m": 0.0,
+    "source": "OpenStreetMap / Nominatim, 'Berhampore, Murshidabad, West Bengal, India'",
+    "match_type": "city (place) centroid"
+  },
+  "utc": "1981-12-08 19:30 UTC",
+  "dst_status": "No daylight saving in effect (India has not observed DST since 1945)",
+  "julian_day_ut": 2444947.3125,
+  "ayanamsha": {
+    "name": "Lahiri (Chitrapaksha)",
+    "degrees": 23.604776,
+    "dms": "23d 36m"
+  },
+  "ephemeris": "Swiss Ephemeris 2.10.03 (pyswisseph)",
+  "ascendant": {
+    "longitude_sidereal": 163.889678,
+    "sign": "Virgo",
+    "sign_number": 6,
+    "degree_in_sign": 13.8897,
+    "degree_minute": "13d 53m",
+    "nakshatra": "Hasta",
+    "placidus_cusps": [
+      163.889678,
+      192.775819,
+      223.084661,
+      253.939634,
+      284.98849,
+      315.470209,
+      343.889678,
+      12.775819,
+      43.084661,
+      73.939634,
+      104.98849,
+      135.470209
+    ]
+  },
+  "planets": [
+    {
+      "body": "Sun",
+      "abbreviation": "Su",
+      "longitude_sidereal": 233.030297,
+      "tropical_longitude": 256.635072,
+      "sign_number": 8,
+      "sign": "Scorpio",
+      "degree_in_sign": 23.0303,
+      "degree_minute": "23d 2m",
+      "nakshatra": "Jyeshtha",
+      "nakshatra_lord": "Mercury",
+      "nakshatra_pada": 2,
+      "nakshatra_number": 18,
+      "house_whole_sign": 3,
+      "d9_sign": "Capricorn",
+      "d10_sign_r1": "Aquarius",
+      "d10_sign_r2": "Aquarius",
+      "retrograde": false,
+      "dignity": "Enemy's sign"
+    },
+    {
+      "body": "Moon",
+      "abbreviation": "Mo",
+      "longitude_sidereal": 16.872238,
+      "tropical_longitude": 40.477014,
+      "sign_number": 1,
+      "sign": "Aries",
+      "degree_in_sign": 16.8722,
+      "degree_minute": "16d 52m",
+      "nakshatra": "Bharani",
+      "nakshatra_lord": "Venus",
+      "nakshatra_pada": 2,
+      "nakshatra_number": 2,
+      "house_whole_sign": 8,
+      "d9_sign": "Virgo",
+      "d10_sign_r1": "Virgo",
+      "d10_sign_r2": "Virgo",
+      "retrograde": false,
+      "dignity": "Enemy's sign"
+    },
+    {
+      "body": "Mars",
+      "abbreviation": "Ma",
+      "longitude_sidereal": 152.930133,
+      "tropical_longitude": 176.534909,
+      "sign_number": 6,
+      "sign": "Virgo",
+      "degree_in_sign": 2.9301,
+      "degree_minute": "2d 56m",
+      "nakshatra": "Uttara Phalguni",
+      "nakshatra_lord": "Sun",
+      "nakshatra_pada": 2,
+      "nakshatra_number": 12,
+      "house_whole_sign": 1,
+      "d9_sign": "Capricorn",
+      "d10_sign_r1": "Taurus",
+      "d10_sign_r2": "Taurus",
+      "retrograde": false,
+      "dignity": "Enemy's sign"
+    },
+    {
+      "body": "Mercury",
+      "abbreviation": "Me",
+      "longitude_sidereal": 232.026607,
+      "tropical_longitude": 255.631383,
+      "sign_number": 8,
+      "sign": "Scorpio",
+      "degree_in_sign": 22.0266,
+      "degree_minute": "22d 2m",
+      "nakshatra": "Jyeshtha",
+      "nakshatra_lord": "Mercury",
+      "nakshatra_pada": 2,
+      "nakshatra_number": 18,
+      "house_whole_sign": 3,
+      "d9_sign": "Capricorn",
+      "d10_sign_r1": "Aquarius",
+      "d10_sign_r2": "Aquarius",
+      "retrograde": false,
+      "dignity": "Enemy's sign"
+    },
+    {
+      "body": "Jupiter",
+      "abbreviation": "Ju",
+      "longitude_sidereal": 188.625369,
+      "tropical_longitude": 212.230145,
+      "sign_number": 7,
+      "sign": "Libra",
+      "degree_in_sign": 8.6254,
+      "degree_minute": "8d 38m",
+      "nakshatra": "Swati",
+      "nakshatra_lord": "Rahu",
+      "nakshatra_pada": 1,
+      "nakshatra_number": 15,
+      "house_whole_sign": 2,
+      "d9_sign": "Sagittarius",
+      "d10_sign_r1": "Sagittarius",
+      "d10_sign_r2": "Sagittarius",
+      "retrograde": false,
+      "dignity": "Enemy's sign"
+    },
+    {
+      "body": "Venus",
+      "abbreviation": "Ve",
+      "longitude_sidereal": 276.355823,
+      "tropical_longitude": 299.960599,
+      "sign_number": 10,
+      "sign": "Capricorn",
+      "degree_in_sign": 6.3558,
+      "degree_minute": "6d 21m",
+      "nakshatra": "Uttara Ashadha",
+      "nakshatra_lord": "Sun",
+      "nakshatra_pada": 3,
+      "nakshatra_number": 21,
+      "house_whole_sign": 5,
+      "d9_sign": "Aquarius",
+      "d10_sign_r1": "Pisces",
+      "d10_sign_r2": "Scorpio",
+      "retrograde": false,
+      "dignity": "Enemy's sign"
+    },
+    {
+      "body": "Saturn",
+      "abbreviation": "Sa",
+      "longitude_sidereal": 176.241229,
+      "tropical_longitude": 199.846005,
+      "sign_number": 6,
+      "sign": "Virgo",
+      "degree_in_sign": 26.2412,
+      "degree_minute": "26d 14m",
+      "nakshatra": "Chitra",
+      "nakshatra_lord": "Mars",
+      "nakshatra_pada": 1,
+      "nakshatra_number": 14,
+      "house_whole_sign": 1,
+      "d9_sign": "Leo",
+      "d10_sign_r1": "Capricorn",
+      "d10_sign_r2": "Capricorn",
+      "retrograde": false,
+      "dignity": "Enemy's sign"
+    },
+    {
+      "body": "Rahu",
+      "abbreviation": "Ra",
+      "longitude_sidereal": 90.807566,
+      "tropical_longitude": 114.412341,
+      "sign_number": 4,
+      "sign": "Cancer",
+      "degree_in_sign": 0.8076,
+      "degree_minute": "0d 48m",
+      "nakshatra": "Punarvasu",
+      "nakshatra_lord": "Jupiter",
+      "nakshatra_pada": 4,
+      "nakshatra_number": 7,
+      "house_whole_sign": 11,
+      "d9_sign": "Cancer",
+      "d10_sign_r1": "Cancer",
+      "d10_sign_r2": "Pisces",
+      "retrograde": true,
+      "dignity": "n/a - lunar node"
+    },
+    {
+      "body": "Ketu",
+      "abbreviation": "Ke",
+      "longitude_sidereal": 270.807566,
+      "tropical_longitude": 294.412341,
+      "sign_number": 10,
+      "sign": "Capricorn",
+      "degree_in_sign": 0.8076,
+      "degree_minute": "0d 48m",
+      "nakshatra": "Uttara Ashadha",
+      "nakshatra_lord": "Sun",
+      "nakshatra_pada": 2,
+      "nakshatra_number": 21,
+      "house_whole_sign": 5,
+      "d9_sign": "Capricorn",
+      "d10_sign_r1": "Capricorn",
+      "d10_sign_r2": "Virgo",
+      "retrograde": true,
+      "dignity": "n/a - lunar node"
+    },
+    {
+      "body": "Ascendant",
+      "abbreviation": "As",
+      "longitude_sidereal": 163.889678,
+      "tropical_longitude": null,
+      "sign_number": 6,
+      "sign": "Virgo",
+      "degree_in_sign": 13.8897,
+      "degree_minute": "13d 53m",
+      "nakshatra": "Hasta",
+      "nakshatra_lord": "Moon",
+      "nakshatra_pada": 2,
+      "nakshatra_number": 13,
+      "house_whole_sign": 1,
+      "d9_sign": "Taurus",
+      "d10_sign_r1": "Virgo",
+      "d10_sign_r2": "Virgo"
+    }
+  ],
+  "panchanga": {
+    "vara": "Wednesday",
+    "vara_ephemeris_division": "Thursday",
+    "civil_weekday": "Wednesday",
+    "tithi": "Shukla Dwadashi",
+    "tithi_index": 12,
+    "nakshatra": "Bharani",
+    "nakshatra_lord": "Venus",
+    "nakshatra_pada": 2,
+    "yoga": "NYoga 19",
+    "yoga_index": 19,
+    "karana": "Balava",
+    "moon_sign": "Aries",
+    "sun_sign": "Scorpio"
+  },
+  "vimshottari": {
+    "nakshatra": "Bharani",
+    "nakshatra_lord": "Venus",
+    "nakshatra_span_deg": 13.333333333333334,
+    "fraction_of_nakshatra": 0.265417861796,
+    "first_lord_period_years": 20,
+    "balance_at_birth_years": 5.308357,
+    "balance_arithmetic": "fraction = 0.265417862; lord period = 20 y; elapsed = 0.265417862 x 20 = 5.308357 y",
+    "mahadashas": [
+      {
+        "lord": "Venus",
+        "start": "1976-08-18",
+        "end": "1996-08-18",
+        "years": 20
+      },
+      {
+        "lord": "Sun",
+        "start": "1996-08-18",
+        "end": "2002-08-18",
+        "years": 6
+      },
+      {
+        "lord": "Moon",
+        "start": "2002-08-18",
+        "end": "2012-08-18",
+        "years": 10
+      },
+      {
+        "lord": "Mars",
+        "start": "2012-08-18",
+        "end": "2019-08-18",
+        "years": 7
+      },
+      {
+        "lord": "Rahu",
+        "start": "2019-08-18",
+        "end": "2037-08-18",
+        "years": 18
+      },
+      {
+        "lord": "Jupiter",
+        "start": "2037-08-18",
+        "end": "2053-08-18",
+        "years": 16
+      },
+      {
+        "lord": "Saturn",
+        "start": "2053-08-18",
+        "end": "2072-08-18",
+        "years": 19
+      },
+      {
+        "lord": "Mercury",
+        "start": "2072-08-18",
+        "end": "2089-08-18",
+        "years": 17
+      },
+      {
+        "lord": "Ketu",
+        "start": "2089-08-18",
+        "end": "2096-08-18",
+        "years": 7
+      },
+      {
+        "lord": "Venus",
+        "start": "2096-08-18",
+        "end": "2116-08-19",
+        "years": 20
+      }
+    ],
+    "antardashas": [
+      {
+        "lord": "Venus",
+        "mahadasha": "Venus",
+        "start": "1976-08-18",
+        "end": "1979-12-18",
+        "years": 3.3333
+      },
+      {
+        "lord": "Sun",
+        "mahadasha": "Venus",
+        "start": "1979-12-18",
+        "end": "1980-12-17",
+        "years": 1.0
+      },
+      {
+        "lord": "Moon",
+        "mahadasha": "Venus",
+        "start": "1980-12-17",
+        "end": "1982-08-18",
+        "years": 1.6667
+      },
+      {
+        "lord": "Mars",
+        "mahadasha": "Venus",
+        "start": "1982-08-18",
+        "end": "1983-10-18",
+        "years": 1.1667
+      },
+      {
+        "lord": "Rahu",
+        "mahadasha": "Venus",
+        "start": "1983-10-18",
+        "end": "1986-10-18",
+        "years": 3.0
+      },
+      {
+        "lord": "Jupiter",
+        "mahadasha": "Venus",
+        "start": "1986-10-18",
+        "end": "1989-06-18",
+        "years": 2.6667
+      },
+      {
+        "lord": "Saturn",
+        "mahadasha": "Venus",
+        "start": "1989-06-18",
+        "end": "1992-08-18",
+        "years": 3.1667
+      },
+      {
+        "lord": "Mercury",
+        "mahadasha": "Venus",
+        "start": "1992-08-18",
+        "end": "1995-06-18",
+        "years": 2.8333
+      },
+      {
+        "lord": "Ketu",
+        "mahadasha": "Venus",
+        "start": "1995-06-18",
+        "end": "1996-08-18",
+        "years": 1.1667
+      },
+      {
+        "lord": "Sun",
+        "mahadasha": "Sun",
+        "start": "1996-08-18",
+        "end": "1996-12-05",
+        "years": 0.3
+      },
+      {
+        "lord": "Moon",
+        "mahadasha": "Sun",
+        "start": "1996-12-05",
+        "end": "1997-06-06",
+        "years": 0.5
+      },
+      {
+        "lord": "Mars",
+        "mahadasha": "Sun",
+        "start": "1997-06-06",
+        "end": "1997-10-12",
+        "years": 0.35
+      },
+      {
+        "lord": "Rahu",
+        "mahadasha": "Sun",
+        "start": "1997-10-12",
+        "end": "1998-09-05",
+        "years": 0.9
+      },
+      {
+        "lord": "Jupiter",
+        "mahadasha": "Sun",
+        "start": "1998-09-05",
+        "end": "1999-06-24",
+        "years": 0.8
+      },
+      {
+        "lord": "Saturn",
+        "mahadasha": "Sun",
+        "start": "1999-06-24",
+        "end": "2000-06-05",
+        "years": 0.95
+      },
+      {
+        "lord": "Mercury",
+        "mahadasha": "Sun",
+        "start": "2000-06-05",
+        "end": "2001-04-12",
+        "years": 0.85
+      },
+      {
+        "lord": "Ketu",
+        "mahadasha": "Sun",
+        "start": "2001-04-12",
+        "end": "2001-08-18",
+        "years": 0.35
+      },
+      {
+        "lord": "Venus",
+        "mahadasha": "Sun",
+        "start": "2001-08-18",
+        "end": "2002-08-18",
+        "years": 1.0
+      },
+      {
+        "lord": "Moon",
+        "mahadasha": "Moon",
+        "start": "2002-08-18",
+        "end": "2003-06-18",
+        "years": 0.8333
+      },
+      {
+        "lord": "Mars",
+        "mahadasha": "Moon",
+        "start": "2003-06-18",
+        "end": "2004-01-17",
+        "years": 0.5833
+      },
+      {
+        "lord": "Rahu",
+        "mahadasha": "Moon",
+        "start": "2004-01-17",
+        "end": "2005-07-18",
+        "years": 1.5
+      },
+      {
+        "lord": "Jupiter",
+        "mahadasha": "Moon",
+        "start": "2005-07-18",
+        "end": "2006-11-17",
+        "years": 1.3333
+      },
+      {
+        "lord": "Saturn",
+        "mahadasha": "Moon",
+        "start": "2006-11-17",
+        "end": "2008-06-17",
+        "years": 1.5833
+      },
+      {
+        "lord": "Mercury",
+        "mahadasha": "Moon",
+        "start": "2008-06-17",
+        "end": "2009-11-17",
+        "years": 1.4167
+      },
+      {
+        "lord": "Ketu",
+        "mahadasha": "Moon",
+        "start": "2009-11-17",
+        "end": "2010-06-18",
+        "years": 0.5833
+      },
+      {
+        "lord": "Venus",
+        "mahadasha": "Moon",
+        "start": "2010-06-18",
+        "end": "2012-02-16",
+        "years": 1.6667
+      },
+      {
+        "lord": "Sun",
+        "mahadasha": "Moon",
+        "start": "2012-02-16",
+        "end": "2012-08-17",
+        "years": 0.5
+      },
+      {
+        "lord": "Mars",
+        "mahadasha": "Mars",
+        "start": "2012-08-18",
+        "end": "2013-01-14",
+        "years": 0.4083
+      },
+      {
+        "lord": "Rahu",
+        "mahadasha": "Mars",
+        "start": "2013-01-14",
+        "end": "2014-02-01",
+        "years": 1.05
+      },
+      {
+        "lord": "Jupiter",
+        "mahadasha": "Mars",
+        "start": "2014-02-01",
+        "end": "2015-01-08",
+        "years": 0.9333
+      },
+      {
+        "lord": "Saturn",
+        "mahadasha": "Mars",
+        "start": "2015-01-08",
+        "end": "2016-02-17",
+        "years": 1.1083
+      },
+      {
+        "lord": "Mercury",
+        "mahadasha": "Mars",
+        "start": "2016-02-17",
+        "end": "2017-02-13",
+        "years": 0.9917
+      },
+      {
+        "lord": "Ketu",
+        "mahadasha": "Mars",
+        "start": "2017-02-13",
+        "end": "2017-07-12",
+        "years": 0.4083
+      },
+      {
+        "lord": "Venus",
+        "mahadasha": "Mars",
+        "start": "2017-07-12",
+        "end": "2018-09-11",
+        "years": 1.1667
+      },
+      {
+        "lord": "Sun",
+        "mahadasha": "Mars",
+        "start": "2018-09-11",
+        "end": "2019-01-17",
+        "years": 0.35
+      },
+      {
+        "lord": "Moon",
+        "mahadasha": "Mars",
+        "start": "2019-01-17",
+        "end": "2019-08-18",
+        "years": 0.5833
+      }
+    ]
+  },
+  "jaimini": {
+    "chara_karakas": {
+      "AK": {
+        "planet": "Rahu",
+        "deg_in_sign": 29.1924,
+        "sign": "Cancer",
+        "house": null
+      },
+      "AmK": {
+        "planet": "Saturn",
+        "deg_in_sign": 26.2412,
+        "sign": "Virgo",
+        "house": null
+      },
+      "BK": {
+        "planet": "Sun",
+        "deg_in_sign": 23.0303,
+        "sign": "Scorpio",
+        "house": null
+      },
+      "MK": {
+        "planet": "Mercury",
+        "deg_in_sign": 22.0266,
+        "sign": "Scorpio",
+        "house": null
+      },
+      "PiK": {
+        "planet": "Moon",
+        "deg_in_sign": 16.8722,
+        "sign": "Aries",
+        "house": null
+      },
+      "PK": {
+        "planet": "Jupiter",
+        "deg_in_sign": 8.6254,
+        "sign": "Libra",
+        "house": null
+      },
+      "GK": {
+        "planet": "Venus",
+        "deg_in_sign": 6.3558,
+        "sign": "Capricorn",
+        "house": null
+      },
+      "DK": {
+        "planet": "Mars",
+        "deg_in_sign": 2.9301,
+        "sign": "Virgo",
+        "house": null
+      }
+    },
+    "atmakaraka": "Rahu",
+    "upapada_lagna": "Scorpio",
+    "arudha": {
+      "AL": {
+        "bhava": 1,
+        "bhava_sign": "Virgo",
+        "lord": "Mercury",
+        "lord_sign": "Scorpio",
+        "sign": "Capricorn",
+        "exception_applied": false,
+        "lord_placement_house": 3,
+        "from_lagna_house": 5
+      },
+      "A2": {
+        "bhava": 2,
+        "bhava_sign": "Libra",
+        "lord": "Venus",
+        "lord_sign": "Capricorn",
+        "sign": "Capricorn",
+        "exception_applied": false,
+        "lord_placement_house": 5,
+        "from_lagna_house": 5
+      },
+      "A3": {
+        "bhava": 3,
+        "bhava_sign": "Scorpio",
+        "lord": "Mars",
+        "lord_sign": "Virgo",
+        "sign": "Cancer",
+        "exception_applied": false,
+        "lord_placement_house": 1,
+        "from_lagna_house": 11
+      },
+      "A4": {
+        "bhava": 4,
+        "bhava_sign": "Sagittarius",
+        "lord": "Jupiter",
+        "lord_sign": "Libra",
+        "sign": "Leo",
+        "exception_applied": false,
+        "lord_placement_house": 2,
+        "from_lagna_house": 12
+      },
+      "A5": {
+        "bhava": 5,
+        "bhava_sign": "Capricorn",
+        "lord": "Saturn",
+        "lord_sign": "Virgo",
+        "sign": "Taurus",
+        "exception_applied": false,
+        "lord_placement_house": 1,
+        "from_lagna_house": 9
+      },
+      "A6": {
+        "bhava": 6,
+        "bhava_sign": "Aquarius",
+        "lord": "Saturn",
+        "lord_sign": "Virgo",
+        "sign": "Aries",
+        "exception_applied": false,
+        "lord_placement_house": 1,
+        "from_lagna_house": 8
+      },
+      "A7": {
+        "bhava": 7,
+        "bhava_sign": "Pisces",
+        "lord": "Jupiter",
+        "lord_sign": "Libra",
+        "sign": "Taurus",
+        "exception_applied": false,
+        "lord_placement_house": 2,
+        "from_lagna_house": 9
+      },
+      "A8": {
+        "bhava": 8,
+        "bhava_sign": "Aries",
+        "lord": "Mars",
+        "lord_sign": "Virgo",
+        "sign": "Aquarius",
+        "exception_applied": false,
+        "lord_placement_house": 1,
+        "from_lagna_house": 6
+      },
+      "A9": {
+        "bhava": 9,
+        "bhava_sign": "Taurus",
+        "lord": "Venus",
+        "lord_sign": "Capricorn",
+        "sign": "Virgo",
+        "exception_applied": false,
+        "lord_placement_house": 5,
+        "from_lagna_house": 1
+      },
+      "A10": {
+        "bhava": 10,
+        "bhava_sign": "Gemini",
+        "lord": "Mercury",
+        "lord_sign": "Scorpio",
+        "sign": "Aries",
+        "exception_applied": false,
+        "lord_placement_house": 3,
+        "from_lagna_house": 8
+      },
+      "A11": {
+        "bhava": 11,
+        "bhava_sign": "Cancer",
+        "lord": "Moon",
+        "lord_sign": "Aries",
+        "sign": "Libra",
+        "exception_applied": false,
+        "lord_placement_house": 8,
+        "from_lagna_house": 2
+      },
+      "A12": {
+        "bhava": 12,
+        "bhava_sign": "Leo",
+        "lord": "Sun",
+        "lord_sign": "Scorpio",
+        "sign": "Scorpio",
+        "exception_applied": false,
+        "lord_placement_house": 3,
+        "from_lagna_house": 3
+      }
+    }
+  },
+  "sade_sati": {
+    "natal_moon_sign": "Aries",
+    "natal_moon_degree": 16.8722,
+    "windows": [
+      {
+        "phase": "Uday (Ascent / Dawn)",
+        "houses": "12th from Moon",
+        "signs": [
+          "Pisces"
+        ]
+      },
+      {
+        "phase": "Chul (Peak / Zenith)",
+        "houses": "Moon's own sign",
+        "signs": [
+          "Aries"
+        ]
+      },
+      {
+        "phase": "Astambhan (Descent / Closure)",
+        "houses": "2nd from Moon",
+        "signs": [
+          "Taurus"
+        ]
+      }
+    ],
+    "rule": "Saturn over the signs 12th from, equal to, and 2nd from the natal Moon"
+  },
+  "_internal": {
+    "longs": {
+      "Sun": 233.03029671700864,
+      "Moon": 16.872238157286226,
+      "Mars": 152.93013291005227,
+      "Mercury": 232.0266069392951,
+      "Jupiter": 188.62536920533003,
+      "Venus": 276.3558227912016,
+      "Saturn": 176.24122885670508,
+      "Rahu": 90.80756559101614,
+      "Ketu": 270.80756559101616
+    },
+    "asc": 163.8896777770897,
+    "asc_sign": 5,
+    "moon_nak_index": 1,
+    "frac": 0.2654178617964669,
+    "jd": 2444947.3125,
+    "ayan": 23.60477574092397,
+    "lat": 24.1044927,
+    "lon": 88.2510635
+  },
+  "birth_time_sensitivity": {
+    "grid": [
+      {
+        "offset_minutes": -5,
+        "ascendant_sign": "Virgo",
+        "ascendant_deg": 12.747,
+        "ascendant_sign_number": 6,
+        "d9_ascendant_sign": "Aries",
+        "moon_sign": "Aries",
+        "moon_nakshatra": "Bharani"
+      },
+      {
+        "offset_minutes": -2,
+        "ascendant_sign": "Virgo",
+        "ascendant_deg": 13.4327,
+        "ascendant_sign_number": 6,
+        "d9_ascendant_sign": "Taurus",
+        "moon_sign": "Aries",
+        "moon_nakshatra": "Bharani"
+      },
+      {
+        "offset_minutes": 0,
+        "ascendant_sign": "Virgo",
+        "ascendant_deg": 13.8897,
+        "ascendant_sign_number": 6,
+        "d9_ascendant_sign": "Taurus",
+        "moon_sign": "Aries",
+        "moon_nakshatra": "Bharani"
+      },
+      {
+        "offset_minutes": 2,
+        "ascendant_sign": "Virgo",
+        "ascendant_deg": 14.3466,
+        "ascendant_sign_number": 6,
+        "d9_ascendant_sign": "Taurus",
+        "moon_sign": "Aries",
+        "moon_nakshatra": "Bharani"
+      },
+      {
+        "offset_minutes": 5,
+        "ascendant_sign": "Virgo",
+        "ascendant_deg": 15.0318,
+        "ascendant_sign_number": 6,
+        "d9_ascendant_sign": "Taurus",
+        "moon_sign": "Aries",
+        "moon_nakshatra": "Bharani"
+      }
+    ],
+    "verdict": "TIME ROBUST (rasi lagna and Moon nakshatra stable)",
+    "changed_at": [
+      -5
+    ],
+    "rasi_lagna_or_nakshatra_changed_at": [],
+    "d9_lagna_changed_at_only": [
+      -5
+    ],
+    "divisional_caveat": "The D9 lagna alone changes at offsets [-5]. That is a varga boundary effect: the D9 degree sits within minutes of a 3d20' navamsa cusp, so the sign flips while the underlying longitude does not. The rasi lagna, the D1 placements and the Moon's nakshatra are unaffected.",
+    "note": "Only lagna sign, D9 lagna and Moon nakshatra are treated as step changes; within-sign degree drift is expected and is not a placement change."
+  },
+  "engine_comparison": {
+    "engine_a": "Swiss Ephemeris 2.10.03, sidereal (Lahiri), dynamical longitudes",
+    "engine_b": "NASA/JPL Horizons, geocentric APPARENT ecliptic longitude (ICRF)",
+    "tolerance_deg": 0.05,
+    "tolerance_rationale": "Dominated by light-time (up to ~0.03 deg at Mars) and annual aberration (~0.005 deg); the two engines report genuinely different quantities.",
+    "bodies": [
+      {
+        "body": "Sun",
+        "engine_a_swisseph_sidereal": 233.030297,
+        "engine_b_horizons_apparent_geocentric": 233.030283,
+        "difference_deg": 1.3e-05,
+        "within_tolerance": true
+      },
+      {
+        "body": "Mercury",
+        "engine_a_swisseph_sidereal": 232.026607,
+        "engine_b_horizons_apparent_geocentric": 232.026592,
+        "difference_deg": 1.5e-05,
+        "within_tolerance": true
+      },
+      {
+        "body": "Jupiter",
+        "engine_a_swisseph_sidereal": 188.625369,
+        "engine_b_horizons_apparent_geocentric": 188.625316,
+        "difference_deg": 5.3e-05,
+        "within_tolerance": true
+      },
+      {
+        "body": "Venus",
+        "engine_a_swisseph_sidereal": 276.355823,
+        "engine_b_horizons_apparent_geocentric": 276.355798,
+        "difference_deg": 2.5e-05,
+        "within_tolerance": true
+      },
+      {
+        "body": "Saturn",
+        "engine_a_swisseph_sidereal": 176.241229,
+        "engine_b_horizons_apparent_geocentric": 176.241222,
+        "difference_deg": 7e-06,
+        "within_tolerance": true
+      }
+    ],
+    "all_within_tolerance": true
+  }
+}
