@@ -164,7 +164,14 @@ def main():
                      "(KP) node the degree would differ by "
                      f"{abs(nat_mean - nat_true):.4f} deg."),
         },
-        "A_cancer_ingress": event(A, {"event": "Jupiter Gemini -> Cancer"}),
+        "A_cancer_ingress": event(A, {
+            "event": "Jupiter Gemini -> Cancer",
+            # Bisection converges to the boundary from BELOW, so at A the sign
+            # still reads Gemini with degree 30.0000. A = the FIRST instant the
+            # new sign holds. Evaluating the sign at A + 1s gives Cancer 0.0000,
+            # which is the correct label for an ingress instant.
+            "sign_at_exact_boundary": K.SIGNS[K.sign_of(jup_lon(A))],
+            "degree_at_exact_boundary": round(K.deg_in_sign(jup_lon(A)), 6)}),
         "B_reaches_natal_rahu": (event(B, {
             "event": "Jupiter reaches natal Rahu longitude (mean node)",
             "node": "mean",

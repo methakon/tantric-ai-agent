@@ -14,7 +14,9 @@
     "sign": "Gemini",
     "degree_in_sign": 30.0,
     "speed_deg_per_day": 0.0,
-    "event": "Jupiter Gemini -> Cancer"
+    "event": "Jupiter Gemini -> Cancer",
+    "sign_at_exact_boundary": "Gemini",
+    "degree_at_exact_boundary": 30.0
   },
   "B_reaches_natal_rahu": {
     "ist": "2026-06-06 06:30:00",

@@ -1,0 +1,117 @@
+
+=== completeness: exactly 1981-2053 ===
+  PASS  json has 73 years
+  PASS  json years are 1981..2053 in order
+  PASS  markdown has 73 year headings
+  PASS  markdown years match json
+  PASS  no duplicate year headings
+  PASS  no missing year
+
+=== no placeholders / stubs ===
+  PASS  no 'TODO'
+  PASS  no 'TBD'
+  PASS  no 'FIXME'
+  PASS  no 'Lorem ipsum'
+  PASS  no 'XXX'
+  PASS  no 'PLACEHOLDER'
+  PASS  no '<insert'
+  PASS  no '{{'
+  PASS  no '}}'
+  PASS  no standalone 'nan'
+  PASS  no standalone 'NaN'
+  PASS  no standalone 'undefined'
+  PASS  no standalone 'Infinity'
+  PASS  no bare placeholder value after a colon
+  PASS  no '?' in lord placements
+  PASS  no unresolved sign '?'
+
+=== every year carries the required sections ===
+  PASS  73 year blocks parsed
+  PASS  all required sections in all 73 years
+
+=== non-boilerplate: whole-dataset differentiation ===
+  PASS  no two years produce an identical body
+  PASS  consecutive same-mahadasha years differ in length
+  PASS  consecutive pairs actually tested
+  PASS  every year has a distinct output signature
+  PASS  consecutive same-mahadasha years differ in full signature
+  PASS  Saturn transit degree is distinct per year
+  PASS  activation profiles vary across years
+
+=== risk distribution regression (must be 12/9/52/0) ===
+  PASS  12 RED
+  PASS  9 ORANGE
+  PASS  52 YELLOW
+  PASS  0 GREEN
+  PASS  RED years unchanged
+
+=== the five TIME-SENSITIVE years keep their label ===
+  PASS  1987 labelled TIME-SENSITIVE — LOW CONFIDENCE
+  PASS  1997 labelled TIME-SENSITIVE — LOW CONFIDENCE
+  PASS  2002 labelled TIME-SENSITIVE — LOW CONFIDENCE
+  PASS  2038 labelled TIME-SENSITIVE — LOW CONFIDENCE
+  PASS  2050 labelled TIME-SENSITIVE — LOW CONFIDENCE
+  PASS  1994 labelled ROBUST
+  PASS  2014 labelled ROBUST
+  PASS  2016 labelled ROBUST
+  PASS  2042 labelled ROBUST
+  PASS  1987 json sensitivity correct
+  PASS  1997 json sensitivity correct
+  PASS  2002 json sensitivity correct
+  PASS  2038 json sensitivity correct
+  PASS  2050 json sensitivity correct
+
+=== safety language: no deterministic death/medical/financial ===
+  PASS  no 'will die' outside a negation
+  PASS  no 'he will die' outside a negation
+  PASS  no 'she will die' outside a negation
+  PASS  no 'dies in YYYY' outside a negation
+  PASS  no 'death in YYYY' outside a negation
+  PASS  no 'expected to die' outside a negation
+  PASS  no 'will be diagnosed' outside a negation
+  PASS  no 'diagnosed with' outside a negation
+  PASS  no 'will go bankrupt' outside a negation
+  PASS  no 'guaranteed profit' outside a negation
+  PASS  no 'will definitely' outside a negation
+  PASS  safety notice present
+
+=== uncertainty preserved, not silently upgraded ===
+  PASS  'D12 LAGNA is birth-time sensitive' disclosed
+  PASS  'D4' disclosed
+  PASS  'D9' disclosed
+  PASS  'D7' disclosed
+  PASS  'Ashtakavarga' disclosed
+  PASS  'Shadbala' disclosed
+  PASS  'KP' disclosed
+  PASS  'Tajika' disclosed
+  PASS  'Nadi' disclosed
+  PASS  'NOT AVAILABLE' disclosed
+  PASS  'INCOMPLETE' disclosed
+  PASS  'Sisir Kumar' disclosed
+  PASS  'Kula Devata NOT YET' disclosed
+  PASS  Kula Devata asserts no deity
+
+=== golden 2026 dossier preserved ===
+  PASS  yearwise_preview_2026.md exists
+  PASS  golden v1 copy exists
+  PASS  golden is non-trivial
+
+=== prior artifacts not destroyed ===
+  PASS  kundali_data.json present
+  PASS  risk_timeline.json present
+  PASS  jupiter_2026_events.json present
+  PASS  red_birth_time_sensitivity.json present
+  PASS  yearwise_preview_2026.md present
+  PASS  paternal_ancestral_family.json present
+  PASS  yearwise_preview_2026_golden_v1.md present
+
+=== existing suites still green ===
+  PASS  test_kundali_core green
+  PASS  validate_second_pass green
+  PASS  test_red_sensitivity green
+  PASS  test_final_risk_report green
+  PASS  test_reference_verification green
+  PASS  test_transit_aspects green
+
+================================================================
+RESULT: 92 passed, 0 failed

@@ -1,0 +1,83 @@
+{
+  "generation_timestamp": "2026-10-04T01:45:16",
+  "git_commit": "b89cf35fca019a7c6b0110b1f8f10179e0c856a9",
+  "version": "v5",
+  "birth_data": {
+    "name": "Swarna Sekhar Dhar",
+    "date": "1981-12-09",
+    "time": "01:00:00",
+    "timezone": "Asia/Kolkata",
+    "utc_offset_hours": 5.5,
+    "place": "Berhampore, Murshidabad, West Bengal, India",
+    "julian_day_ut": 2444947.3125
+  },
+  "ephemeris": "pyswisseph (Swiss Ephemeris 2.10.03)",
+  "ayanamsha": "Lahiri (Chitrapaksha)",
+  "ayanamsa_degrees": 23.604776,
+  "node_convention": "Mean node",
+  "house_system": "Whole-sign (bhava-chalit) for D1 interpretation; Placidus computed for KP cusps only",
+  "aspect_convention": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)",
+  "d10_convention": "R1 (class-based: movable from itself, fixed/dual from the 9th)",
+  "risk_engine_version": "risk_engine.py calibrated; thresholds MIN_WEIGHT_RED=8 MIN_WEIGHT_ORANGE=7 MIN_MECHANISMS_RED=4 (module constants)",
+  "years_generated": 73,
+  "year_sections": 73,
+  "year_range": [
+    1981,
+    2053
+  ],
+  "word_count": 229538,
+  "page_count": 343,
+  "charts_emitted": 12,
+  "risk_distribution": {
+    "RED": 12,
+    "ORANGE": 9,
+    "YELLOW": 52,
+    "GREEN": 0
+  },
+  "confidence_sensitive_years": [
+    1987,
+    1997,
+    2002,
+    2038,
+    2050
+  ],
+  "moderate_sensitivity_years": [
+    2000,
+    2039,
+    2044
+  ],
+  "robust_red_years": [
+    1994,
+    2014,
+    2016,
+    2042
+  ],
+  "known_limitations": [
+    "D27 Bhreshta NOT IMPLEMENTED (15 of 16 vargas)",
+    "Tajika beyond Muntha only - INCOMPLETE",
+    "Nadi NOT AVAILABLE - not computed",
+    "KP sub-lords PARTIAL",
+    "Ashtakavarga PARTIAL (Sun, Moon, Mars, Saturn only) - classical grand total NOT reported",
+    "Shadbala PARTIAL",
+    "D12/D4/D9/D7 lagnas are birth-time sensitive and carry no weight",
+    "Transit obstruction (vedha) NOT implemented",
+    "Sunrise approximate; sunset unavailable (.se1 files absent)",
+    "Sisir Kumar genealogy conflict UNRESOLVED",
+    "Kula Devata NOT YET VERIFIED - no deity asserted"
+  ],
+  "source_datasets": [
+    "out/kundali_data.json",
+    "out/risk_timeline.json",
+    "out/reference_verification.json",
+    "out/red_birth_time_sensitivity.json",
+    "out/jupiter_2026_events.json",
+    "out/paternal_ancestral_family.json",
+    "out/year_data_1981_2053_v5.json"
+  ],
+  "golden_reference_preserved": [
+    "out/yearwise_preview_2026.md",
+    "out/yearwise_preview_2026_golden_v1.md"
+  ],
+  "test_count": null,
+  "test_failures": null
+}

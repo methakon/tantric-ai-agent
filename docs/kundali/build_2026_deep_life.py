@@ -19,11 +19,22 @@ sys.path.insert(0, HERE)
 import data_2026 as D                        # noqa: E402
 import data_2026_life as LIFE                # noqa: E402
 import data_2026_deep as DP                  # noqa: E402
+import year_engine as YE                     # noqa: E402
 import sensitivity_gate as SG                # noqa: E402
 
 OUT = os.path.join(HERE, "out")
 HS, AR = D.HOUSE_SIGNS, D.ARUDHA
 R = D.RISK
+
+import json as _json
+
+# Exact transit events for 2026, computed live from the production ephemeris,
+# plus the Jupiter ingress/conjunction/retrograde file. The earlier 2026 text
+# claimed Rahu and Ketu transit "all year", which the ephemeris contradicts.
+_ctx = YE.load_context()
+EVENTS_2026 = YE.year_data(_ctx, 2026)["sign_events"]
+with open(os.path.join(YE.OUT, "jupiter_2026_events.json"), encoding="utf-8") as _fh:
+    JEV = _json.load(_fh)
 
 SENS = SG.contribution_for_year({
     "career", "money", "health_safety", "dasha_timing", "transit_effects",
@@ -111,8 +122,24 @@ W("  Saturn    Pisces, whole year — the 7th house sign, aspecting the 2nd, 4th
 W("             and 12th from there. Also aspecting natal Jupiter, the 7th lord.")
 W("  Jupiter   Gemini (10th) to 1 June, then Cancer (11th), crossing natal Rahu.")
 W("             Moves into Leo (12th) on 31 October 2026, then retrogrades back to Cancer.")
-W("  Rahu      Aquarius, whole year — the 6th house sign, aspecting the 1st and 3rd.")
-W("  Ketu      Leo, whole year — the 12th house sign, aspecting the 5th, 7th, 9th.")
+W("Rahu      Aquarius (6th) until 5 December, then Capricorn (5th).")
+W("Ketu      Leo (12th) until 5 December, then Cancer (11th).")
+W("")
+W("  EXACT TRANSIT EVENTS 2026  [Swiss Ephemeris 2.10.03, Lahiri sidereal, IST]")
+W("  computed by bracketed bisection on the real ephemeris:")
+W("")
+table(["Planet", "Event", "Date / time (IST)", "Sidereal longitude"],
+      [(e["planet"], e["event"], e["ist"],
+        f"{e['sidereal_longitude_deg']:.4f} ({e['sign']} "
+        f"{e['degree_in_sign']:.4f})") for e in EVENTS_2026]
+      + [("Jupiter", "reaches natal Rahu longitude (MEAN node)",
+          JEV["B_reaches_natal_rahu"]["ist"],
+          f'{JEV["B_reaches_natal_rahu"]["sidereal_longitude_deg"]:.4f} '
+          f'(Cancer {JEV["B_reaches_natal_rahu"]["degree_in_sign"]:.4f})'),
+         ("Jupiter", "retrogrades back into Cancer",
+          JEV["retrograde_reentry_into_cancer"]["ist"],
+          f'{JEV["retrograde_reentry_into_cancer"]["sign"]} '
+          f'{JEV["retrograde_reentry_into_cancer"]["degree_in_sign"]:.4f}')])
 W("")
 W("STRONGEST HOUSES")
 W("  7th  — transiting Saturn occupies it for the entire year, during its own")

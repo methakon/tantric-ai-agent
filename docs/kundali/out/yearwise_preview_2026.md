@@ -61,8 +61,20 @@ MAJOR TRANSITS
              and 12th from there. Also aspecting natal Jupiter, the 7th lord.
   Jupiter   Gemini (10th) to 1 June, then Cancer (11th), crossing natal Rahu.
              Moves into Leo (12th) on 31 October 2026, then retrogrades back to Cancer.
-  Rahu      Aquarius, whole year — the 6th house sign, aspecting the 1st and 3rd.
-  Ketu      Leo, whole year — the 12th house sign, aspecting the 5th, 7th, 9th.
+Rahu      Aquarius (6th) until 5 December, then Capricorn (5th).
+Ketu      Leo (12th) until 5 December, then Cancer (11th).
+
+  EXACT TRANSIT EVENTS 2026  [Swiss Ephemeris 2.10.03, Lahiri sidereal, IST]
+  computed by bracketed bisection on the real ephemeris:
+
+| Planet | Event | Date / time (IST) | Sidereal longitude |
+|---|---|---|---|
+| Jupiter | enters Cancer (from Gemini) | 2026-06-02 01:30:00 | 90.0000 (Cancer 0.0000) |
+| Jupiter | enters Leo (from Cancer) | 2026-10-31 11:30:00 | 120.0000 (Leo 0.0000) |
+| Rahu | enters Capricorn (from Aquarius) | 2026-12-05 23:30:00 | 300.0000 (Capricorn 30.0000) |
+| Ketu | enters Cancer (from Leo) | 2026-12-05 23:30:00 | 120.0000 (Cancer 30.0000) |
+| Jupiter | reaches natal Rahu longitude (MEAN node) | 2026-06-06 06:30:00 | 90.8076 (Cancer 0.8076) |
+| Jupiter | retrogrades back into Cancer | 2027-01-25 11:30:00 | Cancer 29.9535 |
 
 STRONGEST HOUSES
   7th  — transiting Saturn occupies it for the entire year, during its own

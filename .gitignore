@@ -30,3 +30,4 @@ documents/
 docs/kundali/_books/
 *_books/
 **/_books/
+docs/kundali/out/_render_*.html

@@ -1,0 +1,52 @@
+=== file ===
+  PASS  PDF exists
+  PASS  PDF is substantial
+      size: 1,306,283 bytes
+
+=== structure ===
+  PASS  page count is substantial
+      pages: 343
+  PASS  text layer present on sampled pages
+  PASS  all 73 year labels present in the PDF text
+
+=== required sections in the PDF ===
+  PASS  'INTERPRETATION & SAFETY NOTICE' in PDF
+  PASS  'CONTENTS' in PDF
+  PASS  'BIRTH DATA AND CALCULATION CONVENTIONS' in PDF
+  PASS  'VERIFICATION DASHBOARD' in PDF
+  PASS  'PLANETARY POSITION TABLE' in PDF
+  PASS  'PANCHANGA' in PDF
+  PASS  'DASHA TIMELINES' in PDF
+  PASS  'ASHTAKAVARGA' in PDF
+  PASS  'SHADBALA' in PDF
+  PASS  'JAIMINI' in PDF
+  PASS  'KP ANALYSIS' in PDF
+  PASS  'TAJIKA' in PDF
+  PASS  'BIRTH-TIME SENSITIVITY' in PDF
+  PASS  'RISK TIMELINE' in PDF
+  PASS  'TREND ANALYSIS' in PDF
+  PASS  'PATERNAL GENEALOGY' in PDF
+  PASS  'KULA DEVATA' in PDF
+  PASS  'REMEDIES' in PDF
+  PASS  'METHODOLOGY AND LIMITATIONS' in PDF
+  PASS  'FINAL VALIDATION' in PDF
+  PASS  'YEAR-WISE ANALYSIS 1981-2053' in PDF
+  PASS  'AGE 44' in PDF
+  PASS  'BIRTH YEAR' in PDF
+  PASS  'TIME-SENSITIVE' in PDF
+
+=== safety language in the PDF ===
+  PASS  no 'will die' outside a negation
+  PASS  no 'dies in YYYY' outside a negation
+  PASS  no 'will be diagnosed' outside a negation
+  PASS  no 'will go bankrupt' outside a negation
+
+=== rasterise sampled pages (real layout, not just parse) ===
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  PASS  no blank sampled pages
+  PASS  no text beyond the page box
+      rasterised and checked 43 pages
+  PASS  page numbers present on early interior pages
+
+==============================================================
+RESULT: 36 passed, 0 failed

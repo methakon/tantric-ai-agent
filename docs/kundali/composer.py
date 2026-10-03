@@ -168,9 +168,24 @@ def compose_phase(graha: str, phase_houses: list, label: str) -> list[str]:
         sig = GRAHA_HOUSE.get(graha, {}).get(hh)
         if sig:
             lines.append(f"      H{hh}: {sig}.")
-    lines.append(f"      The difficult expression is {neg}, which in this "
-                 f"configuration shows up as the gap between the intention and "
-                 f"the structure supporting it.")
+    # Vary the closing line by the houses actually involved. A single fixed
+    # sentence here is boilerplate wearing a derived coat: every year printed
+    # the identical "gap between the intention and the structure" regardless of
+    # which houses were active.
+    span = f"{min(phase_houses)}-{max(phase_houses)}" if len(phase_houses) > 1 \
+        else str(phase_houses[0])
+    closer = {
+        "1": "in a single-house period the whole reading concentrates on one "
+             "area and cannot be redistributed elsewhere",
+        "2": "with the houses adjacent, the stress and the relief arrive "
+             "together rather than in sequence",
+        "3": "across three houses the effects interlock, so no single one of "
+             "them can be managed in isolation",
+    }.get(str(len(phase_houses)),
+          "spread across widely separated houses, the period resists a single "
+          "coherent response and is best handled house by house")
+    lines.append(f"      The difficult expression is {neg}. With houses {span} "
+                 f"involved it appears as {closer}.")
     return lines
 
 
@@ -197,13 +212,31 @@ def compose_house(house: int, acc: dict, natals: dict, lordship: dict) -> list[s
                      "generic text.")
         return lines
     w = strength_word(e["score"])
-    lines.append(f"  2026 ACTIVATION   : {w} activated "
+    lines.append(f"  ACTIVATION        : {w} activated "
                  f"(activation score {e['score']}). Reasons: "
                  f"{'; '.join(e['reasons'])}.")
     drivers = sorted({r.split()[1].rstrip("0123456789") for r in e["reasons"]})
     lines.append(f"  DRIVERS           : {', '.join(drivers)}.")
-    lines.append("  POSSIBLE EFFECT   : derived from the drivers above — see "
-                 "the lexicon attribution for each named graha in this house.")
+    # Derive the effect from the drivers actually present. A fixed sentence here
+    # repeated 1,121 times across 73 years — boilerplate wearing a derived coat,
+    # which is the exact failure this module exists to prevent.
+    occ_txt = ", ".join(occ) if occ else "no planet"
+    if drivers == ["transiting"]:
+        lines.append(f"  POSSIBLE EFFECT   : {occ_txt} sit in this house, so "
+                     f"transits reach it directly this year. The reading is "
+                     f"driven by the transiting graha's own nature, not by "
+                     f"anything placed here.")
+    elif any("dasha lord" in r for r in e["reasons"]):
+        dl = [r.split()[2] for r in e["reasons"] if "dasha lord" in r]
+        lines.append(f"  POSSIBLE EFFECT   : {', '.join(dl)} run(s) the period "
+                     f"at score {e['score']}, so house {house} is under dasha "
+                     f"authority as well as transit reach. With {occ_txt} "
+                     f"placed here the effect is dasha-driven and does not "
+                     f"depend on the transit alone.")
+    else:
+        lines.append(f"  POSSIBLE EFFECT   : reached by aspect only this year, "
+                     f"from {', '.join(drivers)}. With {occ_txt} placed here "
+                     f"the influence is secondary to the natal condition.")
     return lines
 
 
