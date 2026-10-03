@@ -1,0 +1,2916 @@
+{
+  "base_birth_time": "01:00",
+  "base_birth_date": "09-Dec-1981",
+  "production_chart_unchanged": true,
+  "tested_offsets_minutes": [
+    -15,
+    -10,
+    -5,
+    0,
+    5,
+    10,
+    15
+  ],
+  "thresholds": {
+    "RED": 8,
+    "ORANGE": 7,
+    "source": "read from risk_engine (not redefined here)"
+  },
+  "method_note": "Tests whether the ENGINE OUTPUT is sensitive to birth-time perturbation. Says nothing about whether any astrological prediction is true.",
+  "red_gate_assertion": "RED requires dasha_lords>=2 AND transit_grahas>=2 AND natal_exposure AND weight>=RED threshold",
+  "gate_violations": [],
+  "years": {
+    "1987": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "partnership",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Venus",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "rahu"
+          ],
+          "natal_exposure": false,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Jupiter",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "partnership",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Venus",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "rahu"
+          ],
+          "natal_exposure": false,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Jupiter",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Sun-pd",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Jupiter",
+            "PD": "Sun"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Sun-pd",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Jupiter",
+            "PD": "Sun"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Jupiter",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Jupiter",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Jupiter",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 2,
+        "ORANGE": 2,
+        "YELLOW": 3,
+        "GREEN": 0
+      },
+      "stability": "TIME-SENSITIVE RED",
+      "score_range": [
+        7,
+        9
+      ],
+      "level_range": [
+        "ORANGE",
+        "RED",
+        "YELLOW"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Jupiter\", \"MD\": \"Venus\", \"PD\": \"Moon\"}",
+        "{\"AD\": \"Jupiter\", \"MD\": \"Venus\", \"PD\": \"Sun\"}",
+        "{\"AD\": \"Jupiter\", \"MD\": \"Venus\", \"PD\": \"Venus\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "1994": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter-pd",
+            "Mercury",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Mercury",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter-pd",
+            "Mercury",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Mercury",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter-pd",
+            "Mercury",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Mercury",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter-pd",
+            "Mercury",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Mercury",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter-pd",
+            "Mercury",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Mercury",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Mercury",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Venus",
+            "AD": "Mercury",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 7,
+        "ORANGE": 0,
+        "YELLOW": 0,
+        "GREEN": 0
+      },
+      "stability": "ROBUST RED",
+      "score_range": [
+        8,
+        9
+      ],
+      "level_range": [
+        "RED"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Mercury\", \"MD\": \"Venus\", \"PD\": \"Jupiter\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Venus\", \"PD\": \"Saturn\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "1997": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 6,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter-pd",
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Moon",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 5,
+          "mechanism_count": 3,
+          "dasha_mechanisms": [
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Moon",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 6,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury-pd",
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Moon",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Sun",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Mars",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "health_self",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Mars",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter-pd",
+            "Mars",
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Mars",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Mercury-pd",
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Mars",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 3,
+        "ORANGE": 1,
+        "YELLOW": 3,
+        "GREEN": 0
+      },
+      "stability": "TIME-SENSITIVE RED",
+      "score_range": [
+        5,
+        8
+      ],
+      "level_range": [
+        "ORANGE",
+        "RED",
+        "YELLOW"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Mars\", \"MD\": \"Sun\", \"PD\": \"Jupiter\"}",
+        "{\"AD\": \"Mars\", \"MD\": \"Sun\", \"PD\": \"Mercury\"}",
+        "{\"AD\": \"Mars\", \"MD\": \"Sun\", \"PD\": \"Rahu\"}",
+        "{\"AD\": \"Mars\", \"MD\": \"Sun\", \"PD\": \"Venus\"}",
+        "{\"AD\": \"Moon\", \"MD\": \"Sun\", \"PD\": \"Jupiter\"}",
+        "{\"AD\": \"Moon\", \"MD\": \"Sun\", \"PD\": \"Mercury\"}",
+        "{\"AD\": \"Moon\", \"MD\": \"Sun\", \"PD\": \"Saturn\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2000": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 2,
+          "mechanism_count": 1,
+          "dasha_mechanisms": [
+            "Sun"
+          ],
+          "transit_mechanisms": [],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Saturn",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "duty_obligations",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury-pd",
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Saturn",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "duty_obligations",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury-pd",
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Saturn",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "duty_obligations",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury",
+            "Sun",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Mercury",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "duty_obligations",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury",
+            "Sun",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Mercury",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "duty_obligations",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury",
+            "Sun",
+            "Sun-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Mercury",
+            "PD": "Sun"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "speculation_risk",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars-pd",
+            "Mercury",
+            "Sun"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Mercury",
+            "PD": "Mars"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 4,
+        "ORANGE": 2,
+        "YELLOW": 1,
+        "GREEN": 0
+      },
+      "stability": "MODERATELY STABLE RED",
+      "score_range": [
+        2,
+        9
+      ],
+      "level_range": [
+        "ORANGE",
+        "RED",
+        "YELLOW"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Mercury\", \"MD\": \"Sun\", \"PD\": \"Mars\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Sun\", \"PD\": \"Sun\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Sun\", \"PD\": \"Venus\"}",
+        "{\"AD\": \"Saturn\", \"MD\": \"Sun\", \"PD\": \"Mercury\"}",
+        "{\"AD\": \"Saturn\", \"MD\": \"Sun\", \"PD\": \"Saturn\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2002": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "duty_obligations",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Sun",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Venus",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "duty_obligations",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Sun",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Venus",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "duty_obligations",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Sun",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Venus",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "duty_obligations",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury-pd",
+            "Sun",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Venus",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "duty_obligations",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mercury-pd",
+            "Sun",
+            "Venus"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Sun",
+            "AD": "Venus",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 1,
+          "mechanism_count": 0,
+          "dasha_mechanisms": [],
+          "transit_mechanisms": [
+            "ketu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Moon",
+            "AD": "Moon",
+            "PD": "Ketu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 2,
+          "mechanism_count": 0,
+          "dasha_mechanisms": [
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Moon",
+            "AD": "Moon",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 2,
+        "ORANGE": 3,
+        "YELLOW": 2,
+        "GREEN": 0
+      },
+      "stability": "TIME-SENSITIVE RED",
+      "score_range": [
+        1,
+        8
+      ],
+      "level_range": [
+        "ORANGE",
+        "RED",
+        "YELLOW"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Moon\", \"MD\": \"Moon\", \"PD\": \"Ketu\"}",
+        "{\"AD\": \"Moon\", \"MD\": \"Moon\", \"PD\": \"Venus\"}",
+        "{\"AD\": \"Venus\", \"MD\": \"Sun\", \"PD\": \"Jupiter\"}",
+        "{\"AD\": \"Venus\", \"MD\": \"Sun\", \"PD\": \"Mercury\"}",
+        "{\"AD\": \"Venus\", \"MD\": \"Sun\", \"PD\": \"Saturn\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2014": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Jupiter",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Jupiter",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Jupiter",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Jupiter",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Jupiter",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Jupiter-pd",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Jupiter",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Jupiter-pd",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Jupiter",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 7,
+        "ORANGE": 0,
+        "YELLOW": 0,
+        "GREEN": 0
+      },
+      "stability": "ROBUST RED",
+      "score_range": [
+        8,
+        8
+      ],
+      "level_range": [
+        "RED"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Jupiter\", \"MD\": \"Mars\", \"PD\": \"Jupiter\"}",
+        "{\"AD\": \"Jupiter\", \"MD\": \"Mars\", \"PD\": \"Moon\"}",
+        "{\"AD\": \"Jupiter\", \"MD\": \"Mars\", \"PD\": \"Rahu\"}",
+        "{\"AD\": \"Jupiter\", \"MD\": \"Mars\", \"PD\": \"Venus\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2016": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Mercury",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Mercury",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Mercury",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Mercury",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Mercury"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Mercury",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Mars-pd",
+            "Mercury"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Mercury",
+            "PD": "Mars"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Mercury"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Mercury",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Mars",
+            "Mercury"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Mercury",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter-pd",
+            "Mars",
+            "Mercury"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Mars",
+            "AD": "Mercury",
+            "PD": "Jupiter"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 7,
+        "ORANGE": 0,
+        "YELLOW": 0,
+        "GREEN": 0
+      },
+      "stability": "ROBUST RED",
+      "score_range": [
+        8,
+        9
+      ],
+      "level_range": [
+        "RED"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Mercury\", \"MD\": \"Mars\", \"PD\": \"Jupiter\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Mars\", \"PD\": \"Mars\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Mars\", \"PD\": \"Moon\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Mars\", \"PD\": \"Rahu\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Mars\", \"PD\": \"Venus\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2038": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "home_land",
+          "weighted_score": 7,
+          "mechanism_count": 3,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": false,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "home_land",
+          "weighted_score": 7,
+          "mechanism_count": 3,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": false,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Mars"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Mars"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "home_land",
+          "weighted_score": 7,
+          "mechanism_count": 3,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": false,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "home_land",
+          "weighted_score": 7,
+          "mechanism_count": 3,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": false,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "home_land",
+          "weighted_score": 7,
+          "mechanism_count": 3,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": false,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 2,
+        "ORANGE": 5,
+        "YELLOW": 0,
+        "GREEN": 0
+      },
+      "stability": "TIME-SENSITIVE RED",
+      "score_range": [
+        7,
+        8
+      ],
+      "level_range": [
+        "ORANGE",
+        "RED"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Jupiter\", \"MD\": \"Jupiter\", \"PD\": \"Mars\"}",
+        "{\"AD\": \"Jupiter\", \"MD\": \"Jupiter\", \"PD\": \"Moon\"}",
+        "{\"AD\": \"Jupiter\", \"MD\": \"Jupiter\", \"PD\": \"Rahu\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2039": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 7,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 7,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 7,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Saturn"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Jupiter",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 4,
+        "ORANGE": 0,
+        "YELLOW": 3,
+        "GREEN": 0
+      },
+      "stability": "MODERATELY STABLE RED",
+      "score_range": [
+        7,
+        8
+      ],
+      "level_range": [
+        "RED",
+        "YELLOW"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Jupiter\", \"MD\": \"Jupiter\", \"PD\": \"Mercury\"}",
+        "{\"AD\": \"Jupiter\", \"MD\": \"Jupiter\", \"PD\": \"Saturn\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2042": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "health_self",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Saturn",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Ketu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Ketu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 9,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 6,
+        "ORANGE": 1,
+        "YELLOW": 0,
+        "GREEN": 0
+      },
+      "stability": "ROBUST RED",
+      "score_range": [
+        7,
+        9
+      ],
+      "level_range": [
+        "ORANGE",
+        "RED"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Mercury\", \"MD\": \"Jupiter\", \"PD\": \"Ketu\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Jupiter\", \"PD\": \"Venus\"}",
+        "{\"AD\": \"Saturn\", \"MD\": \"Jupiter\", \"PD\": \"Mercury\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2044": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "health_self",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mercury",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 5,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Ketu",
+            "PD": "Ketu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 6,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Ketu",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 6,
+          "mechanism_count": 2,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu",
+            "saturn"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Ketu",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 4,
+        "ORANGE": 0,
+        "YELLOW": 3,
+        "GREEN": 0
+      },
+      "stability": "MODERATELY STABLE RED",
+      "score_range": [
+        5,
+        8
+      ],
+      "level_range": [
+        "RED",
+        "YELLOW"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Ketu\", \"MD\": \"Jupiter\", \"PD\": \"Ketu\"}",
+        "{\"AD\": \"Ketu\", \"MD\": \"Jupiter\", \"PD\": \"Venus\"}",
+        "{\"AD\": \"Mercury\", \"MD\": \"Jupiter\", \"PD\": \"Mercury\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    },
+    "2050": {
+      "results": [
+        {
+          "birth_time": "00:45",
+          "offset_minutes": -15,
+          "year_level": "YELLOW",
+          "worst_category_level": "YELLOW",
+          "worst_category": "health_self",
+          "weighted_score": 5,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mercury-pd"
+          ],
+          "transit_mechanisms": [
+            "ketu",
+            "rahu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Moon",
+            "PD": "Mercury"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 10.4604,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:50",
+          "offset_minutes": -10,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "encumbrance",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mars",
+            "PD": "Ketu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 11.6039,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "00:55",
+          "offset_minutes": -5,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mars",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 12.747,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:00",
+          "offset_minutes": 0,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars",
+            "Venus-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mars",
+            "PD": "Venus"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 13.8897,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:05",
+          "offset_minutes": 5,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "encumbrance",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mars",
+            "PD": "Moon"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 15.0318,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:10",
+          "offset_minutes": 10,
+          "year_level": "RED",
+          "worst_category_level": "RED",
+          "worst_category": "encumbrance",
+          "weighted_score": 8,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars",
+            "Mars-pd"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": true,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mars",
+            "PD": "Mars"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 16.1733,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        },
+        {
+          "birth_time": "01:15",
+          "offset_minutes": 15,
+          "year_level": "ORANGE",
+          "worst_category_level": "ORANGE",
+          "worst_category": "encumbrance",
+          "weighted_score": 7,
+          "mechanism_count": 4,
+          "dasha_mechanisms": [
+            "Jupiter",
+            "Mars"
+          ],
+          "transit_mechanisms": [
+            "jupiter",
+            "ketu",
+            "rahu"
+          ],
+          "natal_exposure": true,
+          "red_gate_met": false,
+          "dasha": {
+            "MD": "Jupiter",
+            "AD": "Mars",
+            "PD": "Rahu"
+          },
+          "asc_sign": "Virgo",
+          "asc_deg": 17.3141,
+          "moon_nak": "Bharani",
+          "moon_pada": 2
+        }
+      ],
+      "level_counts": {
+        "RED": 3,
+        "ORANGE": 3,
+        "YELLOW": 1,
+        "GREEN": 0
+      },
+      "stability": "TIME-SENSITIVE RED",
+      "score_range": [
+        5,
+        8
+      ],
+      "level_range": [
+        "ORANGE",
+        "RED",
+        "YELLOW"
+      ],
+      "lagna_boundary_crossed": false,
+      "lagna_signs_seen": [
+        "Virgo"
+      ],
+      "dasha_changed": true,
+      "dasha_variants": [
+        "{\"AD\": \"Mars\", \"MD\": \"Jupiter\", \"PD\": \"Ketu\"}",
+        "{\"AD\": \"Mars\", \"MD\": \"Jupiter\", \"PD\": \"Mars\"}",
+        "{\"AD\": \"Mars\", \"MD\": \"Jupiter\", \"PD\": \"Moon\"}",
+        "{\"AD\": \"Mars\", \"MD\": \"Jupiter\", \"PD\": \"Rahu\"}",
+        "{\"AD\": \"Mars\", \"MD\": \"Jupiter\", \"PD\": \"Venus\"}",
+        "{\"AD\": \"Moon\", \"MD\": \"Jupiter\", \"PD\": \"Mercury\"}"
+      ],
+      "moon_nak_variants": [
+        "Bharani"
+      ],
+      "boundary_sensitive": false
+    }
+  }
+}

@@ -126,26 +126,15 @@ def main():
         })
 
     # ---- pass 2: percentile gate so RED means exceptional-within-this-series --
-    for cat in R.CATEGORIES:
-        scores = [y["categories"][cat]["mechanism_count"] for y in years
-                  if cat in y["categories"]]
-        thresh = R.percentile_threshold(scores, R.RED_PERCENTILE)
-        for y in years:
-            v = y["categories"].get(cat)
-            if not v:
-                continue
-            v["red_percentile_threshold"] = thresh
-            if v["level"] == "RED":
-                if thresh is not None and v["mechanism_count"] < thresh:
-                    v["level"] = "ORANGE"
-                    v["downgraded_by_percentile"] = True
-            elif (v["level"] == "ORANGE" and thresh is not None
-                  and v["mechanism_count"] >= thresh
-                  and v["red_gate_met"]):
-                v["level"] = "RED"
-                v["promoted_by_percentile"] = True
-        for y in years:
-            y["level"] = R.overall(y["categories"])
+    # FACTORED OUT into risk_engine.apply_percentile_gate so the sensitivity
+    # harness applies the IDENTICAL rule. Previously it lived only here, so the
+    # harness reported a YELLOW year that the gate considered RED-qualifying -
+    # the two disagreed on the same data.
+    for y in years:
+        R.apply_percentile_gate(y, R.CATEGORIES)
+
+    for y in years:
+        y["level"] = R.overall(y["categories"])
 
     # ---- calibration report: distribution must be visible ----
     from collections import Counter

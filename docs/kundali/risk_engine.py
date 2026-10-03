@@ -107,6 +107,18 @@ TIME_DOMAIN = {"dasha", "transit"}
 YEAR_VARYING = {"dasha", "transit"}
 NATAL_BASELINE = {"d1", "strength", "jaimini", "kp", "divisional"}
 
+# Convergence thresholds. Module-level so the sensitivity harness reads the
+# engine's own values instead of restating them (which would let a future edit
+# silently desynchronise the two).
+MIN_MECHANISMS_RED = 4
+MIN_MECHANISMS_ORANGE = 3
+# Weighted score thresholds, on a scale where one Saturn occupation of a theme
+# house = 3 (Saturn 3, Rahu/Ketu 2, Jupiter 1), MD/AD lordship = 2, PD = 1.
+# Anchored to the OBSERVED distribution across 438 year-category pairs
+# (0..9, p50=4, p75=5, p90=6) so RED admits only genuinely exceptional years.
+MIN_WEIGHT_RED = 8
+MIN_WEIGHT_ORANGE = 7
+
 LEVEL_ORDER = {"GREEN": 0, "YELLOW": 1, "ORANGE": 2, "RED": 3}
 LEVEL_ICON = {"GREEN": "🟢", "YELLOW": "🟡", "ORANGE": "🟠", "RED": "🔴"}
 LEVEL_WORD = {"GREEN": "LOW", "YELLOW": "CAUTION", "ORANGE": "ELEVATED",
@@ -447,17 +459,6 @@ def evaluate_year(d1, dasha, transit, strength, jaimini, kp, divisional,
         transit_grahas = _mechanisms("transit")
         both_families = "dasha" in annual_fams and "transit" in annual_fams
 
-        MIN_MECHANISMS_RED = 4
-        MIN_MECHANISMS_ORANGE = 3
-        # Weighted thresholds are taken from the OBSERVED score distribution
-        # rather than chosen by feel. Across all 438 year-category pairs the
-        # scores run 0..9 with p50=4, p75=5, p90=6. Setting RED at >=8 admits
-        # only the top decile or so (the rare years combining a Saturn or node
-        # occupation with a primary dasha lord), and ORANGE at >=7 the next
-        # band. Earlier guesses of 8/5 produced 47% RED because the
-        # non-weighted machinery let ORANGE-grade years through.
-        MIN_WEIGHT_RED = 8
-        MIN_WEIGHT_ORANGE = 7
 
         # RED requires the FULL complement from both time-domain families
         # (2 dasha lords AND 2 transit grahas) - any partial combination is
@@ -540,6 +541,36 @@ def evaluate_year(d1, dasha, transit, strength, jaimini, kp, divisional,
             "sade_sati": sade_sati_status(sade_phase),
         }
     return result
+
+
+def apply_percentile_gate(year_row, categories=None):
+    """Apply the per-category percentile rule to one year, in place.
+
+    RED means "exceptional WITHIN this series": a category qualifies only if its
+    convergence score reaches the category's RED threshold across the whole
+    1981-2053 run. This lives here (not in the builder) so the birth-time
+    sensitivity harness applies the IDENTICAL rule - when it was duplicated in
+    the builder only, the two components disagreed on the same data and a
+    gate-qualifying year was reported YELLOW.
+
+    Raises if the rule cannot be applied (missing RED evidence).
+    """
+    cats = categories or CATEGORIES
+    for cat in cats:
+        v = year_row["categories"].get(cat)
+        if not v:
+            continue
+        thresh = v.get("red_percentile_threshold")
+        if thresh is None:
+            continue
+        gate_ok = bool(v.get("red_gate_met"))
+        if v["level"] == "RED" and v["weighted_score"] < thresh:
+            v["level"] = "ORANGE"
+            v["downgraded_by_percentile"] = True
+        elif (v["level"] == "ORANGE" and gate_ok
+              and v["weighted_score"] >= thresh):
+            v["level"] = "RED"
+            v["promoted_by_percentile"] = True
 
 
 def overall(res):

@@ -239,8 +239,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -379,8 +378,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -436,8 +434,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -556,8 +553,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -690,8 +686,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -847,8 +842,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -1114,8 +1108,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -1300,8 +1293,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -1372,8 +1364,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -1506,8 +1497,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -1638,8 +1628,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -1807,8 +1796,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -2045,8 +2033,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -2193,8 +2180,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -2251,8 +2237,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -2396,8 +2381,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -2551,8 +2535,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -2711,8 +2694,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -2942,8 +2924,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -3126,8 +3107,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -3191,8 +3171,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -3334,8 +3313,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -3496,8 +3474,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -3651,8 +3628,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -3892,8 +3868,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -4032,8 +4007,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -4099,8 +4073,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -4231,8 +4204,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -4394,8 +4366,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -4549,8 +4520,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -4821,8 +4791,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -4986,8 +4955,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -5068,8 +5036,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -5179,8 +5146,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -5331,8 +5297,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -5498,8 +5463,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -5762,8 +5726,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -5909,8 +5872,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -5981,8 +5943,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "ORANGE",
@@ -6133,8 +6094,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -6275,8 +6235,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -6444,8 +6403,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -6658,8 +6616,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -6805,8 +6762,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -6864,8 +6820,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "ORANGE",
@@ -7021,8 +6976,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "ORANGE",
@@ -7178,8 +7132,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -7334,8 +7287,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -7589,8 +7541,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -7745,8 +7696,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -7815,8 +7765,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -7948,8 +7897,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -8086,8 +8034,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -8256,8 +8203,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -8487,8 +8433,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -8653,8 +8598,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -8721,8 +8665,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -8844,8 +8787,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -8982,8 +8924,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -9128,8 +9069,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -9360,8 +9300,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -9526,8 +9465,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -9596,8 +9534,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -9730,8 +9667,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -9860,8 +9796,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -10006,8 +9941,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -10273,8 +10207,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -10461,8 +10394,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -10533,8 +10465,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -10666,8 +10597,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -10804,8 +10734,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -10966,8 +10895,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -11235,8 +11163,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -11394,8 +11321,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -11469,8 +11395,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -11548,8 +11473,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -11644,8 +11568,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -11816,8 +11739,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -12106,8 +12028,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -12256,8 +12177,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -12342,8 +12262,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -12465,8 +12384,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -12596,8 +12514,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -12754,8 +12671,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -12995,8 +12911,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "financial": {
           "level": "YELLOW",
@@ -13116,8 +13031,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "career": {
           "level": "YELLOW",
@@ -13162,8 +13076,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         },
         "relationship": {
           "level": "YELLOW",
@@ -13283,8 +13196,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "property": {
           "level": "YELLOW",
@@ -13412,8 +13324,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -13567,8 +13478,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         }
       },
       "deep_dive": false
@@ -13820,8 +13730,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "financial": {
           "level": "YELLOW",
@@ -13964,8 +13873,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "career": {
           "level": "YELLOW",
@@ -14026,8 +13934,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         },
         "relationship": {
           "level": "YELLOW",
@@ -14169,8 +14076,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "property": {
           "level": "YELLOW",
@@ -14267,8 +14173,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -14415,8 +14320,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         }
       },
       "deep_dive": false
@@ -14680,8 +14584,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "financial": {
           "level": "ORANGE",
@@ -14845,8 +14748,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "career": {
           "level": "YELLOW",
@@ -14911,8 +14813,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         },
         "relationship": {
           "level": "ORANGE",
@@ -15065,8 +14966,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "property": {
           "level": "YELLOW",
@@ -15209,8 +15109,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -15400,8 +15299,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         }
       },
       "deep_dive": true
@@ -15665,8 +15563,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "financial": {
           "level": "YELLOW",
@@ -15829,8 +15726,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "career": {
           "level": "YELLOW",
@@ -15916,8 +15812,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "relationship": {
           "level": "YELLOW",
@@ -16049,8 +15944,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "property": {
           "level": "YELLOW",
@@ -16181,8 +16075,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -16373,8 +16266,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         }
       },
       "deep_dive": false
@@ -16608,8 +16500,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "financial": {
           "level": "YELLOW",
@@ -16735,8 +16626,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "career": {
           "level": "YELLOW",
@@ -16793,8 +16683,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "relationship": {
           "level": "YELLOW",
@@ -16916,8 +16805,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "property": {
           "level": "YELLOW",
@@ -17061,8 +16949,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -17242,8 +17129,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         }
       },
       "deep_dive": false
@@ -17475,8 +17361,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "financial": {
           "level": "RED",
@@ -17661,8 +17546,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "career": {
           "level": "YELLOW",
@@ -17736,8 +17620,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         },
         "relationship": {
           "level": "YELLOW",
@@ -17846,8 +17729,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "property": {
           "level": "YELLOW",
@@ -17969,8 +17851,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -18138,8 +18019,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         }
       },
       "deep_dive": true
@@ -18362,8 +18242,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "financial": {
           "level": "YELLOW",
@@ -18506,8 +18385,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "career": {
           "level": "YELLOW",
@@ -18576,8 +18454,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         },
         "relationship": {
           "level": "YELLOW",
@@ -18710,8 +18587,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "property": {
           "level": "YELLOW",
@@ -18844,8 +18720,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -19003,8 +18878,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         }
       },
       "deep_dive": false
@@ -19250,8 +19124,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "financial": {
           "level": "RED",
@@ -19438,8 +19311,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "career": {
           "level": "YELLOW",
@@ -19510,8 +19382,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         },
         "relationship": {
           "level": "YELLOW",
@@ -19652,8 +19523,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "property": {
           "level": "YELLOW",
@@ -19794,8 +19664,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -19964,8 +19833,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         }
       },
       "deep_dive": true
@@ -20200,8 +20068,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -20333,8 +20200,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -20401,8 +20267,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -20522,8 +20387,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -20656,8 +20520,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -20814,8 +20677,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -21065,8 +20927,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -21230,8 +21091,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -21309,8 +21169,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -21429,8 +21288,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -21558,8 +21416,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -21736,8 +21593,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -22001,8 +21857,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -22141,8 +21996,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -22224,8 +22078,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -22312,8 +22165,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -22421,8 +22273,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -22600,8 +22451,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -22846,8 +22696,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -22954,8 +22803,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -23046,8 +22894,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -23138,8 +22985,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -23261,8 +23107,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -23407,8 +23252,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -23682,8 +23526,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -23813,8 +23656,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -23903,8 +23745,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -24016,8 +23857,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -24151,8 +23991,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -24332,8 +24171,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -24570,8 +24408,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -24747,8 +24584,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -24832,8 +24668,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -24951,8 +24786,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -25080,8 +24914,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -25253,8 +25086,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -25501,8 +25333,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -25678,8 +25509,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -25764,8 +25594,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -25864,8 +25693,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -25974,8 +25802,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -26148,8 +25975,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -26393,8 +26219,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -26547,8 +26372,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -26615,8 +26439,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -26749,8 +26572,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -26880,8 +26702,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -27036,8 +26857,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -27292,8 +27112,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -27456,8 +27275,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -27502,8 +27320,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -27637,8 +27454,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -27772,8 +27588,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -27950,8 +27765,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -28196,8 +28010,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -28361,8 +28174,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -28405,8 +28217,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -28515,8 +28326,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -28625,8 +28435,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -28784,8 +28593,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -29040,8 +28848,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -29180,8 +28987,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -29259,8 +29065,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -29393,8 +29198,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -29536,8 +29340,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -29709,8 +29512,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -29966,8 +29768,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -30108,8 +29909,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -30169,8 +29969,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "ORANGE",
@@ -30325,8 +30124,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "RED",
@@ -30491,8 +30289,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -30652,8 +30449,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -30898,8 +30694,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -30999,8 +30794,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -31058,8 +30852,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -31161,8 +30954,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -31287,8 +31079,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -31448,8 +31239,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -31725,8 +31515,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "ORANGE",
@@ -31892,8 +31681,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -31967,8 +31755,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -32101,8 +31888,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -32235,8 +32021,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "RED",
@@ -32448,8 +32233,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -32716,8 +32500,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -32829,8 +32612,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -32890,8 +32672,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -33016,8 +32797,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -33142,8 +32922,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -33346,8 +33125,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -33583,8 +33361,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "ORANGE",
@@ -33725,8 +33502,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -33771,8 +33547,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -33916,8 +33691,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "ORANGE",
@@ -34101,8 +33875,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -34261,8 +34034,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -34487,8 +34259,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -34608,8 +34379,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -34666,8 +34436,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -34798,8 +34567,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -34930,8 +34698,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -35088,8 +34855,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -35283,8 +35049,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -35412,8 +35177,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -35491,8 +35255,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -35588,8 +35351,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -35694,8 +35456,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -35826,8 +35587,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -36047,8 +35807,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -36176,8 +35935,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -36255,8 +36013,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -36312,8 +36069,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -36399,8 +36155,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -36545,8 +36300,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -36787,8 +36541,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -36898,8 +36651,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -36987,8 +36739,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -37101,8 +36852,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -37214,8 +36964,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -37370,8 +37119,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -37611,8 +37359,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -37719,8 +37466,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -37798,8 +37544,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -37902,8 +37647,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -38034,8 +37778,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -38200,8 +37943,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -38454,8 +38196,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -38587,8 +38328,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -38681,8 +38421,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -38753,8 +38492,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -38851,8 +38589,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -39009,8 +38746,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -39283,8 +39019,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "financial": {
           "level": "YELLOW",
@@ -39434,8 +39169,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "career": {
           "level": "YELLOW",
@@ -39572,8 +39306,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         },
         "relationship": {
           "level": "YELLOW",
@@ -39682,8 +39415,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "property": {
           "level": "YELLOW",
@@ -39815,8 +39547,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -39998,8 +39729,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         }
       },
       "deep_dive": false
@@ -40261,8 +39991,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "financial": {
           "level": "YELLOW",
@@ -40399,8 +40128,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "career": {
           "level": "YELLOW",
@@ -40539,8 +40267,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         },
         "relationship": {
           "level": "YELLOW",
@@ -40628,8 +40355,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "property": {
           "level": "YELLOW",
@@ -40760,8 +40486,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 1"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -40930,8 +40655,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 1",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 1"
         }
       },
       "deep_dive": false
@@ -41195,8 +40919,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "financial": {
           "level": "YELLOW",
@@ -41367,8 +41090,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "career": {
           "level": "YELLOW",
@@ -41467,8 +41189,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "relationship": {
           "level": "YELLOW",
@@ -41564,8 +41285,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "property": {
           "level": "YELLOW",
@@ -41704,8 +41424,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -41876,8 +41595,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         }
       },
       "deep_dive": false
@@ -42133,8 +41851,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "financial": {
           "level": "YELLOW",
@@ -42319,8 +42036,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "career": {
           "level": "YELLOW",
@@ -42435,8 +42151,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "relationship": {
           "level": "YELLOW",
@@ -42564,8 +42279,7 @@
               "caveat": "Ashtakavarga is PARTIALLY CALCULATED (4 of 7 tables)"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "property": {
           "level": "YELLOW",
@@ -42705,8 +42419,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -42885,8 +42598,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         }
       },
       "deep_dive": false
@@ -43132,8 +42844,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "financial": {
           "level": "YELLOW",
@@ -43298,8 +43009,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "career": {
           "level": "YELLOW",
@@ -43414,8 +43124,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "relationship": {
           "level": "YELLOW",
@@ -43502,8 +43211,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "property": {
           "level": "YELLOW",
@@ -43620,8 +43328,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 2 / JANMA"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -43792,8 +43499,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "PHASE 2 / JANMA",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 2 / JANMA"
         }
       },
       "deep_dive": false
@@ -43999,8 +43705,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "financial": {
           "level": "YELLOW",
@@ -44147,8 +43852,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "career": {
           "level": "YELLOW",
@@ -44212,8 +43916,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         },
         "relationship": {
           "level": "YELLOW",
@@ -44308,8 +44011,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "property": {
           "level": "YELLOW",
@@ -44416,8 +44118,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -44557,8 +44258,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         }
       },
       "deep_dive": false
@@ -44767,8 +44467,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "financial": {
           "level": "YELLOW",
@@ -44931,8 +44630,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "career": {
           "level": "YELLOW",
@@ -44996,8 +44694,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         },
         "relationship": {
           "level": "YELLOW",
@@ -45094,8 +44791,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "property": {
           "level": "YELLOW",
@@ -45223,8 +44919,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 3
+          "sade_sati": "PHASE 3"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -45364,8 +45059,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "PHASE 3",
-          "red_percentile_threshold": 2
+          "sade_sati": "PHASE 3"
         }
       },
       "deep_dive": false
@@ -45594,8 +45288,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -45777,8 +45470,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -45856,8 +45548,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -45967,8 +45658,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -46119,8 +45809,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -46274,8 +45963,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -46514,8 +46202,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -46667,8 +46354,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -46766,8 +46452,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -46856,8 +46541,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -46984,8 +46668,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -47149,8 +46832,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -47404,8 +47086,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -47558,8 +47239,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -47657,8 +47337,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -47760,8 +47439,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -47869,8 +47547,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -48030,8 +47707,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -48281,8 +47957,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -48436,8 +48111,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -48523,8 +48197,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -48633,8 +48306,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -48762,8 +48434,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -48950,8 +48621,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -49182,8 +48852,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -49363,8 +49032,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -49446,8 +49114,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -49532,8 +49199,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -49651,8 +49317,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -49807,8 +49472,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -50054,8 +49718,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "ORANGE",
@@ -50227,8 +49890,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -50330,8 +49992,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -50444,8 +50105,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -50577,8 +50237,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -50761,8 +50420,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -50983,8 +50641,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -51103,8 +50760,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -51173,8 +50829,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "ORANGE",
@@ -51297,8 +50952,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "RED",
@@ -51431,8 +51085,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -51578,8 +51231,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -51821,8 +51473,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -51953,8 +51604,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -52033,8 +51683,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -52132,8 +51781,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -52231,8 +51879,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -52377,8 +52024,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -52612,8 +52258,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -52710,8 +52355,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -52801,8 +52445,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -52872,8 +52515,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -52959,8 +52601,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -53117,8 +52758,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -53363,8 +53003,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -53454,8 +53093,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -53556,8 +53194,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -53641,8 +53278,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -53753,8 +53389,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -53921,8 +53556,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -54199,8 +53833,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -54336,8 +53969,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -54433,8 +54065,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -54535,8 +54166,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -54627,8 +54257,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -54789,8 +54418,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -55047,8 +54675,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -55173,8 +54800,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -55270,8 +54896,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -55384,8 +55009,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -55488,8 +55112,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -55650,8 +55273,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -55919,8 +55541,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -56087,8 +55708,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -56195,8 +55815,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -56277,8 +55896,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -56376,8 +55994,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -56539,8 +56156,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -56772,8 +56388,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -56909,8 +56524,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -56977,8 +56591,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -57088,8 +56701,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -57199,8 +56811,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -57365,8 +56976,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -57589,8 +57199,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -57721,8 +57330,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -57803,8 +57411,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -57934,8 +57541,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -58076,8 +57682,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -58222,8 +57827,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -58425,8 +58029,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -58572,8 +58175,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -58632,8 +58234,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "ORANGE",
@@ -58797,8 +58398,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "ORANGE",
@@ -58962,8 +58562,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -59108,8 +58707,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -59331,8 +58929,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -59476,8 +59073,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -59536,8 +59132,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -59669,8 +59264,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -59802,8 +59396,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -59949,8 +59542,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -60186,8 +59778,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -60338,8 +59929,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -60398,8 +59988,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -60520,8 +60109,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -60642,8 +60230,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -60789,8 +60376,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -61046,8 +60632,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "ORANGE",
@@ -61198,8 +60783,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -61259,8 +60843,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "ORANGE",
@@ -61415,8 +60998,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "RED",
@@ -61581,8 +61163,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -61742,8 +61323,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": true
@@ -61974,8 +61554,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -62105,8 +61684,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -62172,8 +61750,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -62286,8 +61863,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -62409,8 +61985,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -62565,8 +62140,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -62806,8 +62380,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -62911,8 +62484,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -63000,8 +62572,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -63072,8 +62643,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -63170,8 +62740,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -63336,8 +62905,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
@@ -63600,8 +63168,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "financial": {
           "level": "YELLOW",
@@ -63743,8 +63310,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "career": {
           "level": "YELLOW",
@@ -63837,8 +63403,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         },
         "relationship": {
           "level": "YELLOW",
@@ -63931,8 +63496,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "property": {
           "level": "YELLOW",
@@ -64053,8 +63617,7 @@
               "caveat": ""
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 3
+          "sade_sati": "NONE"
         },
         "legal_admin": {
           "level": "YELLOW",
@@ -64221,8 +63784,7 @@
               "caveat": "KP: Krishnamurti ayanamsha + Placidus cusps"
             }
           ],
-          "sade_sati": "NONE",
-          "red_percentile_threshold": 2
+          "sade_sati": "NONE"
         }
       },
       "deep_dive": false
