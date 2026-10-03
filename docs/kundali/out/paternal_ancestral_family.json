@@ -1,0 +1,295 @@
+{
+  "_meta": {
+    "file": "paternal_ancestral_family.json",
+    "purpose": "Structured multi-generational paternal family database",
+    "privacy": "PUBLIC REPOSITORY. PAN number, death-registration number and street address are deliberately EXCLUDED. Location is recorded at locality level only.",
+    "no_fabrication_rule": "Every null is a genuine unknown. No birth date, birth time, death date, occupation, mouza, khatian, dag/plot or property link has been invented anywhere in this file.",
+    "verification_method": "Ancestry screenshot read by FOUR independent methods (single-shot vision, structured top-down vision, per-card-row crop + OCR + vision, and a targeted yes/no presence probe). Sppellings that varied between passes are recorded as alternatives and NOT silently normalised.",
+    "critical_conflict": "The supplied screenshot does NOT contain Kusankur Dhar or Swarna Sekhar Dhar, and places Sisir Kumar Dhar + Pramila Bala in the BOTTOM (youngest) row rather than as Kusankur's parents. Per the user's decision, the user-supplied chain below is treated as AUTHORITATIVE and the screenshot is recorded separately as a PARTIAL/DIFFERENT BRANCH with the conflict flagged.",
+    "date_status": "NO birth year, date, place or time is readable on ANY card in the screenshot. All such fields are null."
+  },
+
+  "authoritative_paternal_chain": {
+    "_status": "USER-SUPPLIED, treated as authoritative per user decision 2026-10-03. NOT independently verified from the screenshot - the screenshot does not show this chain.",
+    "_verification": "CONFIRMED_BY_USER_NOT_BY_DOCUMENT",
+    "generations": [
+      {
+        "generation": 0,
+        "name": "Swarna Sekhar Dhar",
+        "relationship": "self",
+        "father": "Kusankur Dhar",
+        "mother": null,
+        "spouses": [],
+        "birth_date": "1981-12-09",
+        "birth_time": "01:00",
+        "birth_time_basis": "IST, user-supplied; sensitivity-tested +/-15 min",
+        "birth_place": "Berhampore, Murshidabad, West Bengal",
+        "coordinates": [24.1044927, 88.2510635],
+        "death_date": null,
+        "occupation": null,
+        "source": "user supplied (primary birth data, used for the astronomical chart)",
+        "confidence": "HIGH"
+      },
+      {
+        "generation": 1,
+        "name": "Kusankur Dhar",
+        "relationship": "father",
+        "father": "Sisir Kumar Dhar",
+        "mother": "Pramila Bala Dhar",
+        "spouses": [
+          {"name": "Mitra Dhar", "relationship": "wife", "source": "user supplied", "confidence": "HIGH"}
+        ],
+        "birth_date": null,
+        "birth_date_candidate": "1951-07-03",
+        "birth_date_candidate_source": "PAN card supplied by family",
+        "birth_date_status": "CANDIDATE ONLY - NOT CONFIRMED. Arithmetically incompatible with the death certificate's recorded age (see documentary_conflict).",
+        "birth_time": null,
+        "birth_place": "Berhampore, Murshidabad, West Bengal",
+        "death_date": "2019-06-21",
+        "death_age_recorded": 68,
+        "death_place_locality": "Berhampore, Murshidabad, West Bengal",
+        "death_registration_authority": "Registrar (Birth & Death), Berhampore Municipality",
+        "death_registration_reference": "WITHHELD - present in user records, excluded from this public repository",
+        "occupation": null,
+        "source": "user supplied (PAN candidate, death certificate, family information)",
+        "confidence": "HIGH for name/relationships/death date; birth date UNRESOLVED"
+      },
+      {
+        "generation": 2,
+        "name": "Sisir Kumar Dhar",
+        "relationship": "paternal grandfather",
+        "father": null,
+        "mother": null,
+        "spouses": [
+          {"name": "Pramila Bala Dhar", "relationship": "wife", "source": "user supplied", "confidence": "HIGH"}
+        ],
+        "birth_date": null,
+        "birth_time": null,
+        "birth_place": null,
+        "death_date": null,
+        "occupation": null,
+        "source": "user supplied; name also appears in the Ancestry screenshot in a conflicting position (see ancestry_screenshot_branch)",
+        "confidence": "HIGH as Kusankur's father (user-supplied); placement in the screenshot CONTRADICTS this"
+      },
+      {
+        "generation": 3,
+        "name": "Shobhi B Dhar",
+        "relationship": "paternal great-grandfather",
+        "visual_reading": "Shobhi B Dhar",
+        "screenshot_readings": ["Shoshi b DHAR", "Shoshi b DHAR", "Shashi b DHAR"],
+        "verification_status": "PARTIAL",
+        "spelling_note": "The screenshot consistently shows 'Shoshi'/'Shashi'; the user's transcription is 'Shobhi'. Neither spelling is confirmed by a document. Both are recorded; neither is silently substituted for the other.",
+        "father": null,
+        "mother": null,
+        "spouses": [
+          {"name": "Nagendra b", "relationship": "wife (per screenshot)", "source": "Ancestry screenshot", "confidence": "LOW", "note": "Spelling as rendered; surname unknown"}
+        ],
+        "birth_date": null,
+        "birth_time": null,
+        "birth_place": null,
+        "death_date": null,
+        "occupation": null,
+        "source": "user transcription + Ancestry screenshot (spelling varies)",
+        "confidence": "LOW"
+      },
+      {
+        "generation": 4,
+        "name": "Invar C Dhar",
+        "relationship": "2x paternal great-grandfather",
+        "visual_reading": "Invar C Dhar",
+        "screenshot_readings": ["Iswer C DHAR", "Iswar c DHAR", "Isvar c DHAR"],
+        "verification_status": "UNCLEAR",
+        "spelling_note": "Three different readings across passes: Iswer / Iswar / Isvar. Given name is genuinely uncertain; initial 'C' is consistent.",
+        "father": null,
+        "mother": null,
+        "spouses": [
+          {"name": "chandra m", "relationship": "wife (per screenshot)", "source": "Ancestry screenshot", "confidence": "LOW"}
+        ],
+        "birth_date": null,
+        "birth_time": null,
+        "birth_place": null,
+        "death_date": null,
+        "occupation": null,
+        "source": "user transcription + Ancestry screenshot (given name varies)",
+        "confidence": "LOW"
+      },
+      {
+        "generation": 5,
+        "name": "Lakshmik Dhar",
+        "relationship": "3x paternal great-grandfather",
+        "visual_reading": "Lakshmik Dhar",
+        "screenshot_readings": ["Lakshmiki DHAR", "Lakshmikant DHAR", "Lakshmi k DHAR"],
+        "verification_status": "UNCLEAR",
+        "spelling_note": "Screenshot gives 'Lakshmi k', 'Lakshmiki' and 'Lakshmikant'. Given name is uncertain.",
+        "father": null,
+        "mother": null,
+        "spouses": [
+          {"name": "Madhobi", "relationship": "wife (per screenshot)", "source": "Ancestry screenshot", "confidence": "MEDIUM"}
+        ],
+        "birth_date": null,
+        "birth_time": null,
+        "birth_place": null,
+        "death_date": null,
+        "occupation": null,
+        "source": "user transcription + Ancestry screenshot (spelling varies)",
+        "confidence": "LOW"
+      },
+      {
+        "generation": 6,
+        "name": "Kinkar Dhar",
+        "relationship": "4x paternal great-grandfather",
+        "visual_reading": "Kinkar Dhar",
+        "screenshot_readings": ["Kirtikar DHAR", "Kinkar DHAR", "Kinkar DHAR"],
+        "verification_status": "PROBABLE",
+        "spelling_note": "Two passes agree on 'Kinkar'; one read 'Kirtikar'. Screenshot shows an 'Add mother' placeholder beside him, so no wife is recorded.",
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "spouses_status": "UNKNOWN - screenshot shows only an 'Add mother' placeholder",
+        "birth_date": null,
+        "birth_time": null,
+        "birth_place": null,
+        "death_date": null,
+        "occupation": null,
+        "source": "user transcription + Ancestry screenshot (2 of 3 passes agree)",
+        "confidence": "PROBABLE"
+      },
+      {
+        "generation": 7,
+        "name": "Machiram Dhar",
+        "relationship": "5x paternal great-grandfather",
+        "visual_reading": "Machiram Dhar",
+        "screenshot_readings": ["Muchiram DHAR", "Muchiram DHAR", "not separately detected"],
+        "verification_status": "PARTIAL",
+        "spelling_note": "Screenshot consistently reads 'Muchiram'; user transcription is 'Machiram'. Topmost card in the tree with an 'Add mother' placeholder.",
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "spouses_status": "UNKNOWN - screenshot shows only an 'Add mother' placeholder",
+        "birth_date": null,
+        "birth_time": null,
+        "birth_place": null,
+        "death_date": null,
+        "occupation": null,
+        "source": "user transcription + Ancestry screenshot (spelling varies)",
+        "confidence": "LOW"
+      }
+    ]
+  },
+
+  "descendants": [
+    {
+      "generation": -1,
+      "name": "Sastav Dhar",
+      "relationship": "son",
+      "father": "Swarna Sekhar Dhar",
+      "mother": null,
+      "birth_date": "2019-04-02",
+      "birth_time": "16:09",
+      "birth_place": "Kandi, Murshidabad, West Bengal",
+      "coordinates": [23.957862, 88.0422449],
+      "birth_facility": "Kandi Maternity & Nursing Home",
+      "source": "user supplied",
+      "confidence": "HIGH",
+      "chart_status": "calculated and independently validated"
+    },
+    {
+      "generation": -1,
+      "name": "Abhyant Dhar",
+      "relationship": "son",
+      "father": "Swarna Sekhar Dhar",
+      "mother": null,
+      "birth_date": "2021-08-19",
+      "birth_time": "16:01",
+      "birth_place": "Kandi, Murshidabad, West Bengal",
+      "coordinates": [23.957862, 88.0422449],
+      "source": "user supplied",
+      "confidence": "HIGH",
+      "chart_status": "calculated and independently validated"
+    }
+  ],
+
+  "ancestry_screenshot_branch": {
+    "_status": "SEPARATE / PARTIAL BRANCH - recorded per user decision. NOT merged into the authoritative chain above, because the screenshot does not show Kusankur or Swarna Sekhar and positions Sisir Kumar differently.",
+    "source_image": "/home/swarna-sekhar-dhar/Pictures/Screenshots/Screenshot from 2026-10-03 22-16-30.png",
+    "image_dimensions": [1280, 1024],
+    "tree_title_as_rendered": "DHAR Family Tree",
+    "ancestry_tree_url_as_rendered": "ancestry.com/Family-tree/tree/7543708/ (public tree id visible in the browser address bar)",
+    "detected_generations": 7,
+    "readability": "Card NAMES are partly legible. NO birth year, date, place or time is readable on any card.",
+    "persons_read": [
+      {"row": 2, "name_as_rendered": "Muchiram DHAR", "spouse_card": "Add mother (placeholder)", "user_chain_name": "Machiram Dhar"},
+      {"row": 3, "name_as_rendered": "Kinkar DHAR", "spouse_card": "Add mother (placeholder)", "user_chain_name": "Kinkar Dhar"},
+      {"row": 4, "name_as_rendered": "Durlav DHAR", "spouse_card": null, "user_chain_name": null, "note": "Appears ONLY in the screenshot. No counterpart in the user-supplied chain."},
+      {"row": 4, "name_as_rendered": "Lakshmi k DHAR", "spouse_card": "Madhobi", "user_chain_name": "Lakshmik Dhar"},
+      {"row": 5, "name_as_rendered": "HaraDhan DHAR", "spouse_card": "nittya moni", "user_chain_name": null, "note": "Appears ONLY in the screenshot."},
+      {"row": 6, "name_as_rendered": "Krishna C DHAR", "living_tag": true, "spouse_card": null},
+      {"row": 6, "name_as_rendered": "Navadip DHAR", "living_tag": true, "spouse_card": null},
+      {"row": 6, "name_as_rendered": "Ram C DHAR", "living_tag": true, "spouse_card": null},
+      {"row": 6, "name_as_rendered": "Isvar C DHAR", "spouse_card": "chandra m", "user_chain_name": "Invar C Dhar"},
+      {"row": 6, "name_as_rendered": "bihari DHAR", "living_tag": true, "spouse_card": null},
+      {"row": 6, "name_as_rendered": "Swarnam", "living_tag": true, "spouse_card": null},
+      {"row": 6, "name_as_rendered": "Gokul DHAR", "living_tag": true, "spouse_card": null},
+      {"row": 6, "name_as_rendered": "Anandom", "living_tag": true, "spouse_card": null},
+      {"row": 6, "name_as_rendered": "Yogi DHAR", "living_tag": true, "spouse_card": null},
+      {"row": 6, "name_as_rendered": "Shashi b DHAR", "spouse_card": "Nagendra b", "user_chain_name": "Shobhi B Dhar"},
+      {"row": 6, "name_as_rendered": "Domon P Chandra", "spouse_card": "Satyabala"},
+      {"row": 6, "name_as_rendered": "sripoti Paul", "living_tag": true, "spouse_card": "Khanto b D"},
+      {"row": 6, "name_as_rendered": "Jogendra n Addha", "living_tag": true, "spouse_card": "suniti b D"},
+      {"row": 7, "name_as_rendered": "Sisir kumar DHAR", "spouse_card": "Promila bala chandra", "user_chain_name": "Sisir Kumar Dhar", "CONFLICT": "Appears in the BOTTOM row of this tree, not above Kusankur."},
+      {"row": 7, "name_as_rendered": "Himangshu Paul", "spouse_card": "Monika Addha"},
+      {"row": 7, "name_as_rendered": "Monika Addha", "living_tag": true}
+    ],
+    "persons_absent_from_screenshot": [
+      {"name": "Kusankur Dhar", "status": "NOT PRESENT - confirmed absent by a targeted yes/no presence probe across four image regions"},
+      {"name": "Swarna Sekhar Dhar", "status": "NOT PRESENT - confirmed absent by the same probe"},
+      {"name": "Mitra Dhar", "status": "NOT PRESENT - confirmed absent"},
+      {"name": "Pramila Bala Dhar", "status": "present only as 'Promila bala chandra' in the bottom row"}
+    ],
+    "structural_conflict": {
+      "statement": "In this screenshot Sisir Kumar Dhar appears in the BOTTOM (youngest) row, joined to 'Promila bala chandra'. The user-supplied chain places Sisir Kumar as Kusankur's FATHER, i.e. two generations above Kusankur.",
+      "possible_explanations": [
+        "The screenshot shows a COLLATERAL branch (e.g. a sibling line of Sisir Kumar) rather than the paternal ancestor line.",
+        "The tree is a private/unverified user tree whose generation labels do not correspond to the documented lineage.",
+        "The user transcription of the older generations (Machiram, Kinkar, Lakshmik, Invar C, Shobhi B) was derived from this same screenshot rather than from documents.",
+        "Two different individuals named 'Sisir Kumar Dhar' exist in the extended family."
+      ],
+      "resolution": "UNRESOLVED. Requires a document or a direct statement from the family. NOT resolved by inference."
+    }
+  },
+
+  "documentary_conflict_kusankur_dob": {
+    "statement": "The PAN-reported birth date and the death certificate's recorded age are arithmetically incompatible.",
+    "pan_candidate_dob": "1951-07-03",
+    "death_date": "2019-06-21",
+    "age_at_death_computed_from_pan": "67 years, 11 months, 18 days (17 days short of the 68th birthday)",
+    "age_recorded_on_certificate": 68,
+    "window_for_completed_age_68": {
+      "earliest": "1950-06-22",
+      "latest": "1951-06-21",
+      "span_days": 365,
+      "pan_candidate_offset_days_outside_window": 12
+    },
+    "resolution_needed": "A single civil document (school leaving certificate, birth certificate, EPIC/voter roll, or service record) resolves which field is wrong.",
+    "prior_plausibility": [
+      {"explanation": "Age rounded UP at registration (born 03-Jul-1951, died 17 days short of 68)", "implication": "PAN date is CORRECT", "plausibility": "HIGH - routine in West Bengal civil registration"},
+      {"explanation": "PAN date transcription error", "implication": "True DOB lies in the 1950-06-22..1951-06-21 window", "plausibility": "MEDIUM"},
+      {"explanation": "Both fields approximate", "implication": "undetermined", "plausibility": "MEDIUM"}
+    ],
+    "astrological_backtracking_result": "INSUFFICIENT INFORMATION FOR RELIABLE DOB DETERMINATION. See kusankur_birthdate_backtracking_report.md.",
+    "conclusion": "KUSANKUR DOB = UNRESOLVED. 1951-07-03 remains a documentary candidate only."
+  },
+
+  "field_coverage_summary": {
+    "total_persons_in_authoritative_chain": 8,
+    "persons_with_a_confirmed_birth_date": 1,
+    "persons_with_a_confirmed_birth_date_note": "Only Swarna Sekhar Dhar (the subject). Sons are recorded under descendants.",
+    "persons_with_any_birth_date": 1,
+    "persons_with_birth_time": 1,
+    "persons_with_birth_place": 3,
+    "ancestors_with_calculated_charts": 0,
+    "ancestors_with_calculated_charts_reason": "No ancestor has a known birth date or birth time. Per the no-fabrication rule, NO chart was calculated for any ancestor.",
+    "birth_years_available": 0,
+    "birth_years_available_note": "Not one card in the screenshot displays a birth year."
+  }
+}

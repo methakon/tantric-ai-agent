@@ -1,61 +1,359 @@
 {
-  "verdict": "NO DISCRIMINATING RELATIONSHIP FOUNDED",
-  "note": "Each row records a traditional relationship actually computed. None showed date-specific variation adequate to isolate a birth date; the 1,461-date scan produced a 125-way tie at the top score.",
-  "rows": [
-    {
-      "generation": "KUSANKUR -> SWARNA",
-      "planet": "D12 lagna",
-      "relationship": "Pisces = father in D12",
-      "result": "varied but not isolating",
-      "strength": "WEAK",
-      "limitation": "no documented dating function"
+  "_scope": "Only 3 of the 8 people in the paternal line have usable birth data. No ancestor chart was calculated because no ancestor has a known birth date or time.",
+  "_classification": {
+    "DOCUMENTARY_FACT": "stated dates supplied by the user",
+    "ASTRONOMICAL_CALCULATION": "every longitude/sign/house/nakshatra below",
+    "TRADITIONAL_JYOTISH_INTERPRETATION": "the meaning assigned to a relationship",
+    "HYPOTHESIS": "any suggested cause not evidenced by calculation"
+  },
+  "charts": {
+    "SWARNA SEKHAR DHAR": {
+      "role": "subject (father)",
+      "jd_ut": 2444947.3125,
+      "ascendant": {
+        "lon": 163.889678,
+        "sign": "Virgo",
+        "deg_in_sign": 13.889678,
+        "nakshatra": "Hasta",
+        "pada": 2
+      },
+      "planets": {
+        "Sun": {
+          "lon": 233.030297,
+          "sign": "Scorpio",
+          "deg_in_sign": 23.030297,
+          "nakshatra": "Jyeshtha",
+          "pada": 2,
+          "whole_sign_house": 3,
+          "d12_sign": "Leo"
+        },
+        "Moon": {
+          "lon": 16.872238,
+          "sign": "Aries",
+          "deg_in_sign": 16.872238,
+          "nakshatra": "Bharani",
+          "pada": 2,
+          "whole_sign_house": 8,
+          "d12_sign": "Libra"
+        },
+        "Mars": {
+          "lon": 152.930133,
+          "sign": "Virgo",
+          "deg_in_sign": 2.930133,
+          "nakshatra": "Uttara Phalguni",
+          "pada": 2,
+          "whole_sign_house": 1,
+          "d12_sign": "Libra"
+        },
+        "Mercury": {
+          "lon": 232.026607,
+          "sign": "Scorpio",
+          "deg_in_sign": 22.026607,
+          "nakshatra": "Jyeshtha",
+          "pada": 2,
+          "whole_sign_house": 3,
+          "d12_sign": "Cancer"
+        },
+        "Jupiter": {
+          "lon": 188.625369,
+          "sign": "Libra",
+          "deg_in_sign": 8.625369,
+          "nakshatra": "Swati",
+          "pada": 1,
+          "whole_sign_house": 2,
+          "d12_sign": "Capricorn"
+        },
+        "Venus": {
+          "lon": 276.355823,
+          "sign": "Capricorn",
+          "deg_in_sign": 6.355823,
+          "nakshatra": "Uttara Ashadha",
+          "pada": 3,
+          "whole_sign_house": 5,
+          "d12_sign": "Pisces"
+        },
+        "Saturn": {
+          "lon": 176.241229,
+          "sign": "Virgo",
+          "deg_in_sign": 26.241229,
+          "nakshatra": "Chitra",
+          "pada": 1,
+          "whole_sign_house": 1,
+          "d12_sign": "Cancer"
+        },
+        "Rahu": {
+          "lon": 90.807566,
+          "sign": "Cancer",
+          "deg_in_sign": 0.807566,
+          "nakshatra": "Punarvasu",
+          "pada": 4,
+          "whole_sign_house": 11,
+          "d12_sign": "Cancer"
+        },
+        "Ketu": {
+          "lon": 270.807566,
+          "sign": "Capricorn",
+          "deg_in_sign": 0.807566,
+          "nakshatra": "Uttara Ashadha",
+          "pada": 2,
+          "whole_sign_house": 5,
+          "d12_sign": "Capricorn"
+        }
+      },
+      "moon_nakshatra": "Bharani",
+      "moon_pada": 2,
+      "vimshottari_start": null
     },
-    {
-      "generation": "KUSANKUR -> SWARNA",
-      "planet": "Jupiter/Saturn",
-      "relationship": "D12 parent karakas",
-      "result": "varied",
-      "strength": "WEAK",
-      "limitation": "sign placement only; 30-day granularity"
+    "SASTAV DHAR": {
+      "role": "son",
+      "jd_ut": 2458575.94375,
+      "ascendant": {
+        "lon": 145.174639,
+        "sign": "Leo",
+        "deg_in_sign": 25.174639,
+        "nakshatra": "Purva Phalguni",
+        "pada": 4
+      },
+      "planets": {
+        "Sun": {
+          "lon": 348.276932,
+          "sign": "Pisces",
+          "deg_in_sign": 18.276932,
+          "nakshatra": "Revati",
+          "pada": 1,
+          "whole_sign_house": 8,
+          "d12_sign": "Libra"
+        },
+        "Moon": {
+          "lon": 315.685668,
+          "sign": "Aquarius",
+          "deg_in_sign": 15.685668,
+          "nakshatra": "Shatabhisha",
+          "pada": 3,
+          "whole_sign_house": 7,
+          "d12_sign": "Leo"
+        },
+        "Mars": {
+          "lon": 37.320081,
+          "sign": "Taurus",
+          "deg_in_sign": 7.320081,
+          "nakshatra": "Krittika",
+          "pada": 4,
+          "whole_sign_house": 10,
+          "d12_sign": "Cancer"
+        },
+        "Mercury": {
+          "lon": 323.029722,
+          "sign": "Aquarius",
+          "deg_in_sign": 23.029722,
+          "nakshatra": "Purva Bhadrapada",
+          "pada": 1,
+          "whole_sign_house": 7,
+          "d12_sign": "Scorpio"
+        },
+        "Jupiter": {
+          "lon": 240.117295,
+          "sign": "Sagittarius",
+          "deg_in_sign": 0.117295,
+          "nakshatra": "Mula",
+          "pada": 1,
+          "whole_sign_house": 5,
+          "d12_sign": "Sagittarius"
+        },
+        "Venus": {
+          "lon": 313.847699,
+          "sign": "Aquarius",
+          "deg_in_sign": 13.847699,
+          "nakshatra": "Shatabhisha",
+          "pada": 3,
+          "whole_sign_house": 7,
+          "d12_sign": "Cancer"
+        },
+        "Saturn": {
+          "lon": 265.77577,
+          "sign": "Sagittarius",
+          "deg_in_sign": 25.77577,
+          "nakshatra": "Purva Ashadha",
+          "pada": 4,
+          "whole_sign_house": 5,
+          "d12_sign": "Libra"
+        },
+        "Rahu": {
+          "lon": 88.599115,
+          "sign": "Gemini",
+          "deg_in_sign": 28.599115,
+          "nakshatra": "Punarvasu",
+          "pada": 3,
+          "whole_sign_house": 11,
+          "d12_sign": "Taurus"
+        },
+        "Ketu": {
+          "lon": 268.599115,
+          "sign": "Sagittarius",
+          "deg_in_sign": 28.599115,
+          "nakshatra": "Uttara Ashadha",
+          "pada": 1,
+          "whole_sign_house": 5,
+          "d12_sign": "Scorpio"
+        }
+      },
+      "moon_nakshatra": "Shatabhisha",
+      "moon_pada": 3,
+      "vimshottari_start": null
     },
-    {
-      "generation": "KUSANKUR -> SWARNA",
-      "planet": "Sun",
-      "relationship": "father marker in son's chart",
-      "strength": "NONE",
-      "limitation": "describes the son, constant across candidates"
-    },
-    {
-      "generation": "KUSANKUR -> SWARNA",
-      "planet": "9th house/lord",
-      "relationship": "Parashari father house",
-      "strength": "NONE",
-      "limitation": "describes the son, not a candidate-dependent test"
-    },
-    {
-      "generation": "KUSANKUR -> SWARNA",
-      "planet": "Moon",
-      "relationship": "nakshatra equality/trine",
-      "result": "varied",
-      "strength": "WEAK",
-      "limitation": "1-2 matches per 4-year scan"
-    },
-    {
-      "generation": "KUSANKUR -> SASTAV",
-      "planet": "D12",
-      "relationship": "grandparent varga link",
-      "result": "tested",
-      "strength": "NONE",
-      "limitation": "68-year gap; no traditional grandparent rule is date-bearing"
-    },
-    {
-      "generation": "KUSANKUR -> ABHYANT",
-      "planet": "D12",
-      "relationship": "grandparent varga link",
-      "result": "tested",
-      "strength": "NONE",
-      "limitation": "70-year gap; same limitation"
+    "ABHYANT DHAR": {
+      "role": "son",
+      "jd_ut": 2459445.938194,
+      "ascendant": {
+        "lon": 267.705168,
+        "sign": "Sagittarius",
+        "deg_in_sign": 27.705168,
+        "nakshatra": "Uttara Ashadha",
+        "pada": 1
+      },
+      "planets": {
+        "Sun": {
+          "lon": 122.509114,
+          "sign": "Leo",
+          "deg_in_sign": 2.509114,
+          "nakshatra": "Magha",
+          "pada": 1,
+          "whole_sign_house": 9,
+          "d12_sign": "Virgo"
+        },
+        "Moon": {
+          "lon": 262.721086,
+          "sign": "Sagittarius",
+          "deg_in_sign": 22.721086,
+          "nakshatra": "Purva Ashadha",
+          "pada": 3,
+          "whole_sign_house": 1,
+          "d12_sign": "Virgo"
+        },
+        "Mars": {
+          "lon": 138.829263,
+          "sign": "Leo",
+          "deg_in_sign": 18.829263,
+          "nakshatra": "Purva Phalguni",
+          "pada": 2,
+          "whole_sign_house": 9,
+          "d12_sign": "Pisces"
+        },
+        "Mercury": {
+          "lon": 139.136336,
+          "sign": "Leo",
+          "deg_in_sign": 19.136336,
+          "nakshatra": "Purva Phalguni",
+          "pada": 2,
+          "whole_sign_house": 9,
+          "d12_sign": "Pisces"
+        },
+        "Jupiter": {
+          "lon": 303.144937,
+          "sign": "Aquarius",
+          "deg_in_sign": 3.144937,
+          "nakshatra": "Dhanishta",
+          "pada": 3,
+          "whole_sign_house": 3,
+          "d12_sign": "Pisces"
+        },
+        "Venus": {
+          "lon": 159.682144,
+          "sign": "Virgo",
+          "deg_in_sign": 9.682144,
+          "nakshatra": "Uttara Phalguni",
+          "pada": 4,
+          "whole_sign_house": 10,
+          "d12_sign": "Sagittarius"
+        },
+        "Saturn": {
+          "lon": 284.77858,
+          "sign": "Capricorn",
+          "deg_in_sign": 14.77858,
+          "nakshatra": "Shravana",
+          "pada": 2,
+          "whole_sign_house": 2,
+          "d12_sign": "Gemini"
+        },
+        "Rahu": {
+          "lon": 42.496892,
+          "sign": "Taurus",
+          "deg_in_sign": 12.496892,
+          "nakshatra": "Rohini",
+          "pada": 1,
+          "whole_sign_house": 6,
+          "d12_sign": "Virgo"
+        },
+        "Ketu": {
+          "lon": 222.496892,
+          "sign": "Scorpio",
+          "deg_in_sign": 12.496892,
+          "nakshatra": "Anuradha",
+          "pada": 3,
+          "whole_sign_house": 12,
+          "d12_sign": "Pisces"
+        }
+      },
+      "moon_nakshatra": "Purva Ashadha",
+      "moon_pada": 3,
+      "vimshottari_start": null
     }
-  ],
-  "pattern_significance": "NOT ASSESSED AS SIGNIFICANT - insufficient discriminating power to distinguish signal from coincidence"
+  },
+  "parent_child_links": {
+    "SWARNA->SASTAV": {
+      "parent_sun_nakshatra": "Jyeshtha",
+      "child_sun_nakshatra": "Revati",
+      "sun_nakshatra_relation": "parent nakshatra is 18 positions from the child's",
+      "parent_d12_jupiter": "Capricorn",
+      "child_d12_jupiter": "Sagittarius",
+      "parent_d12_saturn": "Cancer",
+      "child_d12_saturn": "Libra",
+      "parent_9th_house_sign": "Taurus",
+      "parent_9th_lord_house": null,
+      "d12_relationships": {
+        "Sun": "11th from",
+        "Moon": "3rd from",
+        "Mars": "4th from",
+        "Mercury": "9th from",
+        "Jupiter": "2nd from",
+        "Venus": "9th from",
+        "Saturn": "10th from (aspect)",
+        "Rahu": "3rd from",
+        "Ketu": "3rd from"
+      }
+    },
+    "SWARNA->ABHYANT": {
+      "parent_sun_nakshatra": "Jyeshtha",
+      "child_sun_nakshatra": "Magha",
+      "sun_nakshatra_relation": "parent nakshatra is 8 positions from the child's",
+      "parent_d12_jupiter": "Capricorn",
+      "child_d12_jupiter": "Pisces",
+      "parent_d12_saturn": "Cancer",
+      "child_d12_saturn": "Gemini",
+      "parent_9th_house_sign": "Taurus",
+      "parent_9th_lord_house": null,
+      "d12_relationships": {
+        "Sun": "12th from",
+        "Moon": "2nd from",
+        "Mars": "8th from",
+        "Mercury": "5th from (aspect)",
+        "Jupiter": "11th from",
+        "Venus": "4th from",
+        "Saturn": "2nd from",
+        "Rahu": "11th from",
+        "Ketu": "11th from"
+      }
+    }
+  },
+  "brother_comparison": {
+    "note": "Sastav and Abhyant are brothers, not a lineage. Their charts are independent astronomical calculations and are NOT used to infer anything about an ancestor.",
+    "moon_sign": [
+      "Aquarius",
+      "Sagittarius"
+    ],
+    "asc_sign": [
+      "Leo",
+      "Sagittarius"
+    ]
+  }
 }

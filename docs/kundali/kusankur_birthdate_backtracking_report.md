@@ -182,3 +182,52 @@ exist.
 **Privacy:** the repository is public, so the PAN number, death-registration
 number and street address are excluded from every file and commit. Location is
 used only as locality coordinates.
+
+---
+
+## 9. ADDENDUM — expanded family history (2026-10-03)
+
+An Ancestry.com screenshot of a 7-generation "DHAR Family Tree" was examined to
+see whether extended ancestry could constrain the birth date. **It cannot.**
+
+**What the screenshot contributed: nothing usable.**
+
+| Field | Cards showing it |
+|---|---|
+| Birth date | **0 of 21** |
+| Birth year | **0 of 21** |
+| Birth time | **0 of 21** |
+| Birth place | **0 of 21** |
+| Death date | **0 of 21** |
+
+**Two structural problems were also found:**
+
+1. **"Kusankur" and "Swarna Sekhar" do not appear in the image at all** —
+   confirmed absent by a targeted yes/no probe across four image regions.
+2. **"Sisir Kumar" appears in the BOTTOM (youngest) row** of the tree, joined to
+   "Promila bala chandra", rather than as Kusankur's father two generations up.
+   This contradicts the lineage used throughout this report.
+
+Per the user's instruction, the supplied chain is treated as authoritative and
+the screenshot is retained as a separate, flagged branch. Neither the names nor
+the structure yields a birth-date constraint.
+
+**Net effect on this investigation: none.** The candidate scan result stands
+unchanged — 125 candidates tied, PAN candidate at rank 959/1461 (worse than the
+random position of 731).
+
+**The conclusion is therefore unchanged:**
+
+> **INSUFFICIENT INFORMATION FOR RELIABLE DOB DETERMINATION.**
+>
+> The only defensible narrowing remains **documentary and arithmetic**:
+> **1950-06-22 … 1951-06-21** *if* the recorded age of 68 is exact — with
+> **03-Jul-1951 admissible only if that age was rounded.**
+
+**A document, not a chart, is what would resolve this.** A school leaving
+certificate (Class X/XII) is usually the most reliable Indian civil record of
+date of birth; a birth certificate, EPIC/voter roll, or service record would each
+do the same, and would simultaneously show which of the two conflicting fields is
+wrong.
+
+*See `paternal_ancestral_verification.md` and `ancestral_kundali_analysis.md`.*
