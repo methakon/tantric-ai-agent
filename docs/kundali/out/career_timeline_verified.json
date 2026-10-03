@@ -1,0 +1,66 @@
+{
+  "_note": "Career timeline from PUBLIC sources only. Nothing here is invented. LinkedIn was NOT accessed; exact employment dates are NOT established. GitHub API rate-limited mid-collection, so only anchors actually retrieved are recorded.",
+  "_linkedin_status": "LinkedIn profile https://www.linkedin.com/in/methakon9/ NOT directly verified in this run.",
+  "subject": "Swarna Sekhar Dhar",
+  "verified_anchors": [
+    {"type": "github_account_created", "handle": "methakon", "date": "2013-01-14",
+     "source": "GitHub users API (via search result page metadata)",
+     "confidence": "HIGH",
+     "note": "Referenced as the blog/LinkedIn URL on the public profile."},
+    {"type": "github_account_created", "handle": "swarna-divii", "date": "2021-02-26",
+     "source": "GitHub users API (via search result page metadata)",
+     "confidence": "HIGH"},
+    {"type": "public_activity_window", "date_range": "2026-09-13 to 2026-10-03",
+     "detail": "99 public events retrieved: PushEvent/CreateEvent across my-job-agent, bbolt, prysm, libredb-studio, optimism, vitest, yq, tqdm; plus IssueComment/PullRequest on libredb, netbox, ethereum-optimism.",
+     "source": "GitHub users events API",
+     "confidence": "HIGH",
+     "note": "Continuous, high-volume technical activity during Sept-Oct 2026."},
+    {"type": "public_profile", "url": "https://about.me/sdhar",
+     "detail": "Self-described: 'Software Engineer and Web Developer in Kolkata, India'; MCA.",
+     "source": "about.me public page (search snippet)",
+     "confidence": "MEDIUM",
+     "note": "Snippet only; full page not extracted (web_extract backend unavailable)."},
+    {"type": "public_profile", "url": "https://github.com/swarna-divii",
+     "detail": "Bio references Company: Han River, blog hanriver.co",
+     "source": "GitHub profile (search snippet)",
+     "confidence": "LOW",
+     "note": "Association only; no dates. NOT treated as employment evidence."},
+    {"type": "public_profile", "url": "https://hinduism.stackexchange.com/users/9598/swarna-sekhar-dhar",
+     "detail": "Member since 2017-04-24, reputation 209, location Kolkata",
+     "source": "Stack Exchange profile (search snippet)",
+     "confidence": "MEDIUM",
+     "note": "Continuous professional presence from Apr 2017."},
+    {"type": "written_publication", "date": "2026-09-13",
+     "detail": "Article 'Hermes: Autonomous AI Agents for Career Growth and Opportunity Exploration' published.",
+     "source": "wpnews.pro search result", "confidence": "MEDIUM"}
+  ],
+  "employment_intervals": {
+    "_status": "NOT ESTABLISHED",
+    "reason": "No public source consulted provides employer start/end dates. The three historical job losses reported by the subject could NOT be dated, and the two 2026 unemployment periods could NOT be dated.",
+    "gaps": [
+      {"id": "G1", "period": "unknown (historical)", "detail": "Job loss 1 - reported, undated", "confidence": "LOW"},
+      {"id": "G2", "period": "unknown (historical)", "detail": "Job loss 2 - reported, undated", "confidence": "LOW"},
+      {"id": "G3", "period": "unknown (historical)", "detail": "Job loss 3 - reported, undated", "confidence": "LOW"},
+      {"id": "G4", "period": "2026, dates unspecified", "detail": "First 2026 unemployment period", "confidence": "LOW"},
+      {"id": "G5", "period": "2026, dates unspecified", "detail": "Second 2026 unemployment period", "confidence": "LOW"}
+    ]
+  },
+  "discriminating_evidence": {
+    "observation": "99 public GitHub events between 2026-09-13 and 2026-10-03, including pushes to my-job-agent and creation of multiple repositories.",
+    "implication": "Continuous, high-volume development activity during Sept-Oct 2026. A PROLONGED unemployment period overlapping that window is inconsistent with this evidence.",
+    "astrological_consequence": "The 2026 job-loss events therefore cannot be pinned to specific dates from the available evidence, and any attempt to match them to a narrow astrological window would be unfalsifiable. Classified UNTESTABLE.",
+    "does_not_prove": "This does NOT establish employment status - open-source activity can occur during unemployment. It establishes only that no PUBLIC evidence of a prolonged 2026 career interruption exists."
+  },
+  "career_milestones_used_as_positive_evidence": [
+    {"year": 2005, "event": "BCA first class", "source": "subject statement"},
+    {"year": 2011, "event": "MCA qualification finally obtained", "source": "subject statement"},
+    {"year": 2017, "event": "Sustained professional public presence begins (Stack Exchange member since 2017-04-24)", "source": "Stack Exchange profile", "confidence": "MEDIUM"},
+    {"year": 2019, "event": "First professional repository evidence era", "source": "GitHub account created 2013; repositories span multiple years", "confidence": "MEDIUM"}
+  ],
+  "confidence_legend": {
+    "HIGH": "Dated, primary-source, unambiguous",
+    "MEDIUM": "Public profile metadata, snippet-level only",
+    "LOW": "Single unverified mention or undated report",
+    "NONE": "Could not be established from any source consulted"
+  }
+}

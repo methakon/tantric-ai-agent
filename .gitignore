@@ -9,6 +9,9 @@ dist/
 *.svg
 # vector chart assets are deliverables — keep them tracked under docs/kundali/
 !docs/kundali/out/*.svg
+# v6 vector charts live in a subdirectory; the negation above only covers
+# the out/ root, so these were being silently ignored and lost.
+!docs/kundali/out/svg_v6/*.svg
 tantric_engine
 third_party/sweph/*.c
 third_party/sweph/*.h
@@ -31,3 +34,4 @@ docs/kundali/_books/
 *_books/
 **/_books/
 docs/kundali/out/_render_*.html
+docs/kundali/out/_qa_v*.html
