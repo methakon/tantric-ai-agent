@@ -1,0 +1,234 @@
+{
+  "_method": "Recomputed from the birth data; the PDF is never an input.",
+  "panchanga_at_birth": {
+    "reference": {
+      "vedic_weekday": "Tuesday (Mangalvar)",
+      "tithi": "Shukla Dwadashi (12th), 98.7% elapsed",
+      "tithi_ends": "~16 minutes after 01:00",
+      "nakshatra": "Bharani, pada 2",
+      "lagna_nakshatra": "Hasta pada 2",
+      "yoga": "Parigha",
+      "karana": "Balava",
+      "hora": "Moon hora"
+    },
+    "independent": {
+      "vara": "Wednesday",
+      "vara_ephemeris_division": "Thursday",
+      "civil_weekday": "Wednesday",
+      "tithi": "Shukla Dwadashi",
+      "tithi_index": 12,
+      "nakshatra": "Bharani",
+      "nakshatra_lord": "Venus",
+      "nakshatra_pada": 2,
+      "yoga": "NYoga 19",
+      "yoga_index": 19,
+      "karana": "Balava",
+      "moon_sign": "Aries",
+      "sun_sign": "Scorpio",
+      "tithi_pct_elapsed": 98.683,
+      "tithi_remaining_hours": 0.16,
+      "tithi_remaining_minutes": 9.6,
+      "tithi_end_jd": 2444947.319181994,
+      "sun_sidereal": 233.030297,
+      "moon_sidereal": 16.872238,
+      "local_birth": "1981-12-09T01:00:00"
+    }
+  },
+  "tithi_boundary": {
+    "tithi": "Shukla Dwadashi",
+    "tithi_end_jd": 2444947.319181994,
+    "minutes_remaining_at_birth": 9.6,
+    "reference_claim": "~16 minutes after 01:00",
+    "agreement": false,
+    "trayodashi_note": "Birth at 01:00 IST falls 9.6 minutes before the tithi changes. Because the tithi junction is so close, a Surya-Siddhanta based Bengali panjika using a different sunrise, a different local meridian or drik-vs-vikram reconciliation could legitimately place the birth on Trayodashi instead. The reference's statement is TECHNICALLY REASONABLE: at under ~20 minutes from the boundary the tithi label is genuinely sensitive to method."
+  },
+  "birth_time_sensitivity": {
+    "offsets_tested_minutes": [
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15
+    ],
+    "variants": [
+      {
+        "minutes": 45,
+        "time": "00:45",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 1,
+        "d9_lagna": "Aries",
+        "d7_lagna": "Taurus",
+        "d10_lagna": "Leo",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 97.474,
+        "tithi_remaining_min": 18.4,
+        "vimshottari_balance": 14.92502,
+        "bharani_fraction": 0.253749
+      },
+      {
+        "minutes": 50,
+        "time": "00:50",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 1,
+        "d9_lagna": "Aries",
+        "d7_lagna": "Taurus",
+        "d10_lagna": "Leo",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 97.877,
+        "tithi_remaining_min": 15.5,
+        "vimshottari_balance": 14.84723,
+        "bharani_fraction": 0.257638
+      },
+      {
+        "minutes": 55,
+        "time": "00:55",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 1,
+        "d9_lagna": "Aries",
+        "d7_lagna": "Taurus",
+        "d10_lagna": "Virgo",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 98.28,
+        "tithi_remaining_min": 12.6,
+        "vimshottari_balance": 14.76944,
+        "bharani_fraction": 0.261528
+      },
+      {
+        "minutes": 60,
+        "time": "01:00",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 2,
+        "d9_lagna": "Taurus",
+        "d7_lagna": "Gemini",
+        "d10_lagna": "Virgo",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 98.683,
+        "tithi_remaining_min": 9.6,
+        "vimshottari_balance": 14.69164,
+        "bharani_fraction": 0.265418
+      },
+      {
+        "minutes": 65,
+        "time": "01:05",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 2,
+        "d9_lagna": "Taurus",
+        "d7_lagna": "Gemini",
+        "d10_lagna": "Libra",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 99.086,
+        "tithi_remaining_min": 6.7,
+        "vimshottari_balance": 14.61384,
+        "bharani_fraction": 0.269308
+      },
+      {
+        "minutes": 70,
+        "time": "01:10",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 2,
+        "d9_lagna": "Taurus",
+        "d7_lagna": "Gemini",
+        "d10_lagna": "Libra",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 99.489,
+        "tithi_remaining_min": 3.7,
+        "vimshottari_balance": 14.53603,
+        "bharani_fraction": 0.273199
+      },
+      {
+        "minutes": 75,
+        "time": "01:15",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 3,
+        "d9_lagna": "Gemini",
+        "d7_lagna": "Cancer",
+        "d10_lagna": "Libra",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 99.892,
+        "tithi_remaining_min": 0.8,
+        "vimshottari_balance": 14.45821,
+        "bharani_fraction": 0.277089
+      }
+    ],
+    "boundary_crossings_minutes_from_base": {
+      "lagna_sign": null,
+      "lagna_nakshatra": null,
+      "lagna_pada": 55,
+      "d9_lagna": 55,
+      "d7_lagna": 55,
+      "d10_lagna": 50,
+      "moon_pada": null,
+      "tithi": null
+    },
+    "varies_anywhere_in_window": {
+      "lagna_sign": false,
+      "lagna_nakshatra": false,
+      "lagna_pada": true,
+      "d9_lagna": true,
+      "d7_lagna": true,
+      "d10_lagna": true,
+      "moon_pada": false,
+      "tithi": false
+    },
+    "reference_claims_minutes": {
+      "D9": [
+        -2.5,
+        12.25
+      ],
+      "D7": [
+        -4.75,
+        14.25
+      ],
+      "D10": [
+        -8.5,
+        5.0
+      ],
+      "lagna_pada": [
+        -2.5,
+        12.25
+      ],
+      "moon_pada": [
+        -20.25,
+        null
+      ],
+      "tithi": [
+        null,
+        16.0
+      ],
+      "lagna_sign": [
+        -60.0,
+        71.0
+      ]
+    },
+    "chart_stability": {
+      "lagna_sign_constant": true,
+      "lagna_sign": "Virgo",
+      "d9_lagna_constant": false,
+      "d7_lagna_constant": false,
+      "d10_lagna_constant": false
+    }
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "_note": "Independent recalculation; the reference PDF is never used as an input to any computed value.",
+  "ayanamsa_deg": 23.60477574092397,
+  "chara_karakas": {
+    "seven_karaka_scheme_strict_8_labels": {
+      "AK": "Saturn",
+      "AmK": "Sun",
+      "BK": "Mercury",
+      "MK": "Moon",
+      "PiK": "Jupiter",
+      "PK": "Venus",
+      "GK": "Mars"
+    },
+    "reference_style_7_labels_piK_omitted": {
+      "AK": "Saturn",
+      "AmK": "Sun",
+      "BK": "Mercury",
+      "MK": "Moon",
+      "PK": "Jupiter",
+      "GK": "Venus",
+      "DK": "Mars"
+    },
+    "eight_karaka_scheme_engine": {
+      "AK": "Rahu",
+      "AmK": "Saturn",
+      "BK": "Sun",
+      "MK": "Mercury",
+      "PiK": "Moon",
+      "PK": "Jupiter",
+      "GK": "Venus",
+      "DK": "Mars"
+    },
+    "reference": {
+      "AK": "Saturn",
+      "AmK": "Sun",
+      "BK": "Mercury",
+      "MK": "Moon",
+      "PK": "Jupiter",
+      "GK": "Venus",
+      "DK": "Mars"
+    },
+    "reference_style_matches_reference_exactly": true,
+    "descending_order": [
+      "Saturn",
+      "Sun",
+      "Mercury",
+      "Moon",
+      "Jupiter",
+      "Venus",
+      "Mars"
+    ],
+    "reference_declared_order": [
+      "Saturn",
+      "Sun",
+      "Mercury",
+      "Moon",
+      "Jupiter",
+      "Venus",
+      "Mars"
+    ],
+    "resolution": "The difference is a SCHEME difference, not an error. The reference uses the classical 7-karaka scheme (Sun..Moon, node excluded); the production engine uses the 8-karaka Jaimini scheme where Rahu is measured in reverse (30 - 0.8076 = 29.1924) and therefore takes AK, shifting every other karaka down one slot. Under the 7-karaka scheme the independent result reproduces the reference exactly for AK, AmK, BK, MK. Both schemes are reported; neither is discarded.",
+    "karakamsha_note": "Karakamsha is the sign of the AK in the navamsa. Under the 8-karaka scheme AK is Rahu, so the karakamsha depends on which scheme is adopted - the reference's Leo therefore presumes the 7-karaka AK (Saturn in D9 = Leo)."
+  },
+  "varga_lagnas": {
+    "independent": {
+      "Saptamsa D7": "Gemini",
+      "Navamsa D9": "Taurus",
+      "Dasamsa D10": "Virgo",
+      "Dwadasamsa D12": "Aquarius",
+      "Chaturvimsamsa D24": "Gemini",
+      "Shashtiamsa D60": "Sagittarius"
+    },
+    "reference": {
+      "D9": "Taurus",
+      "D10": "Virgo",
+      "D7": "Gemini"
+    },
+    "d9_match": true,
+    "d10_match": true,
+    "d7_match": true
+  },
+  "multi_varga_jupiter": {
+    "reference_claim": "Jupiter occupies its own sign in D7, D9 and D10",
+    "jupiter_d1_sign": "Libra",
+    "jupiter_own_signs": [
+      "Sagittarius",
+      "Pisces"
+    ],
+    "d1_note": "Jupiter is in LIBRA in D1 - Libra is ruled by Saturn, so Jupiter is NOT in its own sign in D1. Its own signs are Sagittarius and Pisces.",
+    "placements": {
+      "Saptamsa D7": "Sagittarius",
+      "Navamsa D9": "Sagittarius",
+      "Dasamsa D10": "Sagittarius"
+    },
+    "verified": true,
+    "status": "MULTI-VARGA JUPITER STRENGTH = VERIFIED - Jupiter occupies Sagittarius, its own sign, in D7, D9 and D10",
+    "precision_note": "The claim is verified in the divisional charts only. Jupiter is NOT in its own sign in D1 (it is in Libra), so the correct phrasing is 'Jupiter occupies its own sign in D7, D9 and D10' - not that Jupiter is strong in D1."
+  },
+  "varga_detail": {
+    "Saptamsa D7": {
+      "lagna": "Gemini",
+      "planets": {
+        "Sun": "Libra",
+        "Moon": "Cancer",
+        "Mars": "Pisces",
+        "Mercury": "Libra",
+        "Jupiter": "Sagittarius",
+        "Venus": "Leo",
+        "Saturn": "Virgo",
+        "Rahu": "Capricorn",
+        "Ketu": "Cancer"
+      }
+    },
+    "Navamsa D9": {
+      "lagna": "Taurus",
+      "planets": {
+        "Sun": "Capricorn",
+        "Moon": "Virgo",
+        "Mars": "Capricorn",
+        "Mercury": "Capricorn",
+        "Jupiter": "Sagittarius",
+        "Venus": "Aquarius",
+        "Saturn": "Leo",
+        "Rahu": "Cancer",
+        "Ketu": "Capricorn"
+      }
+    },
+    "Dasamsa D10": {
+      "lagna": "Virgo",
+      "planets": {
+        "Sun": "Aquarius",
+        "Moon": "Virgo",
+        "Mars": "Taurus",
+        "Mercury": "Aquarius",
+        "Jupiter": "Sagittarius",
+        "Venus": "Pisces",
+        "Saturn": "Capricorn",
+        "Rahu": "Cancer",
+        "Ketu": "Capricorn"
+      }
+    },
+    "Dwadasamsa D12": {
+      "lagna": "Aquarius",
+      "planets": {
+        "Sun": "Leo",
+        "Moon": "Libra",
+        "Mars": "Libra",
+        "Mercury": "Cancer",
+        "Jupiter": "Capricorn",
+        "Venus": "Pisces",
+        "Saturn": "Cancer",
+        "Rahu": "Cancer",
+        "Ketu": "Capricorn"
+      }
+    },
+    "Chaturvimsamsa D24": {
+      "lagna": "Gemini",
+      "planets": {
+        "Sun": "Capricorn",
+        "Moon": "Virgo",
+        "Mars": "Virgo",
+        "Mercury": "Sagittarius",
+        "Jupiter": "Aquarius",
+        "Venus": "Sagittarius",
+        "Saturn": "Pisces",
+        "Rahu": "Cancer",
+        "Ketu": "Cancer"
+      }
+    },
+    "Shashtiamsa D60": {
+      "lagna": "Sagittarius",
+      "planets": {
+        "Sun": "Virgo",
+        "Moon": "Capricorn",
+        "Mars": "Aquarius",
+        "Mercury": "Cancer",
+        "Jupiter": "Pisces",
+        "Venus": "Capricorn",
+        "Saturn": "Capricorn",
+        "Rahu": "Leo",
+        "Ketu": "Aquarius"
+      }
+    }
+  },
+  "node_types": {
+    "mean_node_rahu": {
+      "sign": "Cancer",
+      "deg_in_sign": 0.807565591016143,
+      "house_whole_sign": 11,
+      "used_by": "Parashari"
+    },
+    "true_node_rahu": {
+      "sign": "Gemini",
+      "deg_in_sign": 29.375278795423952,
+      "house_whole_sign": 10,
+      "used_by": "Krishnamurti Paddhati",
+      "reference": "Gemini ~29°24′"
+    },
+    "why_house_changes": "The mean node moves backwards along the ecliptic at ~19.3°/year while the true node moves irregularly; over the interval between the two osculating positions they differ by more than a sign here. Mean Rahu falls in the 11th house from a Virgo lagna, true Rahu in the 10th. BOTH are computed and kept separate - neither overwrites the other."
+  },
+  "yoga_audit": {
+    "Gajakesari": {
+      "rule": "Jupiter in a kendra (1/4/7/10) from the Moon AND aspecting it",
+      "offset_from_moon": 6,
+      "in_kendra": true,
+      "aspects_moon": true,
+      "verdict": "SATISFIED (classical yoga, also a Puranic variant)",
+      "confidence": "HIGH - unambiguous"
+    },
+    "Budhaditya": {
+      "rule": "Sun and Mercury in the same sign, neither combust",
+      "same_sign": true,
+      "sign": "Scorpio",
+      "separation_deg": 1.0036897777135323,
+      "combust": true,
+      "verdict": "PARTIALLY SATISFIED - conjunction holds, but Mercury is combust at 1.00° from the Sun, and several texts require Mercury to be unobscured",
+      "confidence": "HIGH on the conditions, MODERATE on the verdict (school-dependent)"
+    },
+    "Kemadruma": {
+      "rule": "No planet in the 2nd, 12th or with the Moon",
+      "planets_in_2nd_12th_from_moon": [],
+      "verdict": "FORMED",
+      "cancellation_note": "Cancelled if the Moon is aspected by a planet other than the Sun, or if Jupiter aspects the Moon from a kendra.",
+      "jup_aspects_moon": true,
+      "verdict_with_cancellation": "CANCELLED - Jupiter in a kendra from the Moon cancels it",
+      "confidence": "MODERATE - Kemadruma cancellation is school-dependent"
+    },
+    "Mangal_Dosha": {
+      "rule": "Mars in the 1st, 2nd, 4th, 7th, 8th or 12th from the Lagna",
+      "mars_house": 1,
+      "verdict": "PRESENT (house 1)",
+      "confidence": "HIGH"
+    },
+    "Mars_Mercury_Parivartana": {
+      "rule": "Two planets exchange signs (each in the other's rashi)",
+      "mars_sign": "Virgo",
+      "mercury_sign": "Scorpio",
+      "mars_ruler_of_mercury_sign": "Mars",
+      "mercury_ruler_of_mars_sign": "Mercury",
+      "exchange": false,
+      "verdict": "SATISFIED - Mars is lord of Scorpio where Mercury sits, and Mercury is lord of Virgo where Mars sits",
+      "confidence": "HIGH"
+    },
+    "Vasi": {
+      "rule": "Jupiter in the 12th from the Sun (Vasi yoga)",
+      "offset_from_sun": 11,
+      "verdict": "SATISFIED (offset 11)",
+      "confidence": "HIGH"
+    },
+    "Adhi_Yoga": {
+      "rule": "Benefics in the 6th, 7th or 8th from the Moon",
+      "jupiter_offset": 6,
+      "mercury_offset": 7,
+      "both_in_6_7_8": true,
+      "verdict": "PARTIALLY SATISFIED - Jupiter (6th) and Mercury (7th) are both in range, but Mercury is combust, and Mercury is a malefic in some schools, which would break the yoga",
+      "confidence": "MODERATE - school-dependent on counting a combust Mercury"
+    }
+  },
+  "yoga_summary": {
+    "fully_satisfied": [
+      "Gajakesari",
+      "Mars_Mercury_Parivartana",
+      "Vasi"
+    ],
+    "partially_satisfied": [
+      "Budhaditya",
+      "Adhi_Yoga"
+    ],
+    "cancelled": [
+      "Kemadruma"
+    ],
+    "none_accepted_without_check": true
+  }
+}

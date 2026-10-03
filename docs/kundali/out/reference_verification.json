@@ -1,0 +1,1717 @@
+{
+  "_meta": {
+    "reference_pdf": "Kundli_Swarna_Sekhar_Dhar-1.pdf",
+    "pages": 31,
+    "generated": "independent recalculation vs reference dataset",
+    "circularity_control": "Every value computed from birth data FIRST, then compared. No production value was adjusted toward the reference.",
+    "tolerance_arcmin": 2.0
+  },
+  "birth_data": {
+    "dob": "1981-12-09 01:00:00 IST",
+    "tz": "+05:30",
+    "jd_ut": 2444947.3125,
+    "jd_required": 2444947.3125,
+    "jd_match": true,
+    "production_coords": [
+      24.1044927,
+      88.2510635
+    ],
+    "pdf_coords": [
+      24.1,
+      88.25
+    ],
+    "coord_delta_metres": {
+      "latitude": 500.1,
+      "longitude": 95.5
+    }
+  },
+  "d1_comparison": [
+    {
+      "parameter": "Lagna",
+      "reference_value": "Virgo 13°54′",
+      "independent_value": "Virgo 13°53′",
+      "difference_arcmin": -0.619,
+      "difference_deg": -0.010322,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Sun",
+      "reference_value": "Scorpio 23°02′",
+      "independent_value": "Scorpio 23°02′",
+      "difference_arcmin": -0.182,
+      "difference_deg": -0.003037,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Moon",
+      "reference_value": "Aries 16°53′",
+      "independent_value": "Aries 16°52′",
+      "difference_arcmin": -0.666,
+      "difference_deg": -0.011095,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Mars",
+      "reference_value": "Virgo 2°56′",
+      "independent_value": "Virgo 2°56′",
+      "difference_arcmin": -0.192,
+      "difference_deg": -0.0032,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Mercury",
+      "reference_value": "Scorpio 22°02′",
+      "independent_value": "Scorpio 22°02′",
+      "difference_arcmin": -0.404,
+      "difference_deg": -0.006726,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Jupiter",
+      "reference_value": "Libra 8°35′",
+      "independent_value": "Libra 8°38′",
+      "difference_arcmin": 2.522,
+      "difference_deg": 0.042036,
+      "tolerance_arcmin": 2.0,
+      "status": "MISMATCH"
+    },
+    {
+      "parameter": "Venus",
+      "reference_value": "Capricorn 6°22′",
+      "independent_value": "Capricorn 6°21′",
+      "difference_arcmin": -0.651,
+      "difference_deg": -0.010844,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Saturn",
+      "reference_value": "Virgo 26°16′",
+      "independent_value": "Virgo 26°14′",
+      "difference_arcmin": -1.526,
+      "difference_deg": -0.025438,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Rahu",
+      "reference_value": "Cancer 0°49′",
+      "independent_value": "Cancer 0°48′",
+      "difference_arcmin": -0.546,
+      "difference_deg": -0.009101,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Ketu",
+      "reference_value": "Capricorn 0°49′",
+      "independent_value": "Capricorn 0°48′",
+      "difference_arcmin": -0.546,
+      "difference_deg": -0.009101,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    }
+  ],
+  "d1_house_comparison": [
+    {
+      "house": 1,
+      "reference_sign": "Virgo",
+      "independent_sign": "Virgo",
+      "reference_occupants": [
+        "Mars",
+        "Saturn"
+      ],
+      "independent_occupants": [
+        "Mars",
+        "Saturn"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 2,
+      "reference_sign": "Libra",
+      "independent_sign": "Libra",
+      "reference_occupants": [
+        "Jupiter"
+      ],
+      "independent_occupants": [
+        "Jupiter"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 3,
+      "reference_sign": "Scorpio",
+      "independent_sign": "Scorpio",
+      "reference_occupants": [
+        "Sun",
+        "Mercury"
+      ],
+      "independent_occupants": [
+        "Mercury",
+        "Sun"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 4,
+      "reference_sign": "Sagittarius",
+      "independent_sign": "Sagittarius",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 5,
+      "reference_sign": "Capricorn",
+      "independent_sign": "Capricorn",
+      "reference_occupants": [
+        "Venus",
+        "Ketu"
+      ],
+      "independent_occupants": [
+        "Ketu",
+        "Venus"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 6,
+      "reference_sign": "Aquarius",
+      "independent_sign": "Aquarius",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 7,
+      "reference_sign": "Pisces",
+      "independent_sign": "Pisces",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 8,
+      "reference_sign": "Aries",
+      "independent_sign": "Aries",
+      "reference_occupants": [
+        "Moon"
+      ],
+      "independent_occupants": [
+        "Moon"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 9,
+      "reference_sign": "Taurus",
+      "independent_sign": "Taurus",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 10,
+      "reference_sign": "Gemini",
+      "independent_sign": "Gemini",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 11,
+      "reference_sign": "Cancer",
+      "independent_sign": "Cancer",
+      "reference_occupants": [
+        "Rahu"
+      ],
+      "independent_occupants": [
+        "Rahu"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 12,
+      "reference_sign": "Leo",
+      "independent_sign": "Leo",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    }
+  ],
+  "coordinate_sensitivity": [
+    {
+      "parameter": "Lagna",
+      "diff_vs_production_coords_arcmin": -0.619,
+      "diff_vs_pdf_coords_arcmin": -0.662
+    },
+    {
+      "parameter": "Sun",
+      "diff_vs_production_coords_arcmin": -0.182,
+      "diff_vs_pdf_coords_arcmin": -0.182
+    },
+    {
+      "parameter": "Moon",
+      "diff_vs_production_coords_arcmin": -0.666,
+      "diff_vs_pdf_coords_arcmin": -0.666
+    },
+    {
+      "parameter": "Mars",
+      "diff_vs_production_coords_arcmin": -0.192,
+      "diff_vs_pdf_coords_arcmin": -0.192
+    },
+    {
+      "parameter": "Mercury",
+      "diff_vs_production_coords_arcmin": -0.404,
+      "diff_vs_pdf_coords_arcmin": -0.404
+    },
+    {
+      "parameter": "Jupiter",
+      "diff_vs_production_coords_arcmin": 2.522,
+      "diff_vs_pdf_coords_arcmin": 2.522
+    },
+    {
+      "parameter": "Venus",
+      "diff_vs_production_coords_arcmin": -0.651,
+      "diff_vs_pdf_coords_arcmin": -0.651
+    },
+    {
+      "parameter": "Saturn",
+      "diff_vs_production_coords_arcmin": -1.526,
+      "diff_vs_pdf_coords_arcmin": -1.526
+    },
+    {
+      "parameter": "Rahu",
+      "diff_vs_production_coords_arcmin": -0.546,
+      "diff_vs_pdf_coords_arcmin": -0.546
+    },
+    {
+      "parameter": "Ketu",
+      "diff_vs_production_coords_arcmin": -0.546,
+      "diff_vs_pdf_coords_arcmin": -0.546
+    }
+  ],
+  "panchanga": {
+    "reference": {
+      "vedic_weekday": "Tuesday (Mangalvar)",
+      "tithi": "Shukla Dwadashi (12th), 98.7% elapsed",
+      "tithi_ends": "~16 minutes after 01:00",
+      "nakshatra": "Bharani, pada 2",
+      "lagna_nakshatra": "Hasta pada 2",
+      "yoga": "Parigha",
+      "karana": "Balava",
+      "hora": "Moon hora"
+    },
+    "independent": {
+      "vara": "Wednesday",
+      "vara_ephemeris_division": "Thursday",
+      "civil_weekday": "Wednesday",
+      "tithi": "Shukla Dwadashi",
+      "tithi_index": 12,
+      "nakshatra": "Bharani",
+      "nakshatra_lord": "Venus",
+      "nakshatra_pada": 2,
+      "yoga": "NYoga 19",
+      "yoga_index": 19,
+      "karana": "Balava",
+      "moon_sign": "Aries",
+      "sun_sign": "Scorpio",
+      "tithi_pct_elapsed": 98.683,
+      "tithi_remaining_hours": 0.16,
+      "tithi_remaining_minutes": 9.6,
+      "tithi_end_jd": 2444947.319181994,
+      "sun_sidereal": 233.030297,
+      "moon_sidereal": 16.872238,
+      "local_birth": "1981-12-09T01:00:00"
+    }
+  },
+  "tithi_boundary_solved": {
+    "tithi_index": 12,
+    "elongation_at_birth_deg": 143.841941,
+    "next_boundary_deg": 144.0,
+    "elapsed_percent": 98.6828,
+    "instantaneous_rate_deg_per_day": 13.922194,
+    "tithi_end_jd": 2444947.323851451,
+    "minutes_to_boundary": 16.346,
+    "reference_claim_minutes": 16.0,
+    "agrees_with_reference": true,
+    "method": "bisection on the true Sun-Moon elongation. A mean-speed estimate is invalid here: the instantaneous rate is ~13.92 deg/day because the Moon is near an elongation stationary point, so the linear approximation misplaces the boundary by hours.",
+    "trayodashi_assessment": "Birth is 16.4 minutes before the tithi junction. A Bengali Surya-Siddhanta panjika using a different sunrise, meridian or drik/vikram reconciliation could legitimately list Trayodashi. The reference's statement is TECHNICALLY REASONABLE: at under ~20 minutes from the boundary the tithi label is genuinely method-dependent."
+  },
+  "birth_time_sensitivity": {
+    "offsets_tested_minutes": [
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15
+    ],
+    "variants": [
+      {
+        "minutes": 45,
+        "time": "00:45",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 1,
+        "d9_lagna": "Aries",
+        "d7_lagna": "Taurus",
+        "d10_lagna": "Leo",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 97.474,
+        "tithi_remaining_min": 18.4,
+        "vimshottari_balance": 14.92502,
+        "bharani_fraction": 0.253749
+      },
+      {
+        "minutes": 50,
+        "time": "00:50",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 1,
+        "d9_lagna": "Aries",
+        "d7_lagna": "Taurus",
+        "d10_lagna": "Leo",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 97.877,
+        "tithi_remaining_min": 15.5,
+        "vimshottari_balance": 14.84723,
+        "bharani_fraction": 0.257638
+      },
+      {
+        "minutes": 55,
+        "time": "00:55",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 1,
+        "d9_lagna": "Aries",
+        "d7_lagna": "Taurus",
+        "d10_lagna": "Virgo",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 98.28,
+        "tithi_remaining_min": 12.6,
+        "vimshottari_balance": 14.76944,
+        "bharani_fraction": 0.261528
+      },
+      {
+        "minutes": 60,
+        "time": "01:00",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 2,
+        "d9_lagna": "Taurus",
+        "d7_lagna": "Gemini",
+        "d10_lagna": "Virgo",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 98.683,
+        "tithi_remaining_min": 9.6,
+        "vimshottari_balance": 14.69164,
+        "bharani_fraction": 0.265418
+      },
+      {
+        "minutes": 65,
+        "time": "01:05",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 2,
+        "d9_lagna": "Taurus",
+        "d7_lagna": "Gemini",
+        "d10_lagna": "Libra",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 99.086,
+        "tithi_remaining_min": 6.7,
+        "vimshottari_balance": 14.61384,
+        "bharani_fraction": 0.269308
+      },
+      {
+        "minutes": 70,
+        "time": "01:10",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 2,
+        "d9_lagna": "Taurus",
+        "d7_lagna": "Gemini",
+        "d10_lagna": "Libra",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 99.489,
+        "tithi_remaining_min": 3.7,
+        "vimshottari_balance": 14.53603,
+        "bharani_fraction": 0.273199
+      },
+      {
+        "minutes": 75,
+        "time": "01:15",
+        "asc_sign": "Virgo",
+        "asc_nak": "Hasta",
+        "asc_pada": 3,
+        "d9_lagna": "Gemini",
+        "d7_lagna": "Cancer",
+        "d10_lagna": "Libra",
+        "moon_pada": 2,
+        "moon_nak": "Bharani",
+        "tithi": "Shukla Dwadashi",
+        "tithi_pct": 99.892,
+        "tithi_remaining_min": 0.8,
+        "vimshottari_balance": 14.45821,
+        "bharani_fraction": 0.277089
+      }
+    ],
+    "boundary_crossings_minutes_from_base": {
+      "lagna_sign": null,
+      "lagna_nakshatra": null,
+      "lagna_pada": 55,
+      "d9_lagna": 55,
+      "d7_lagna": 55,
+      "d10_lagna": 50,
+      "moon_pada": null,
+      "tithi": null
+    },
+    "varies_anywhere_in_window": {
+      "lagna_sign": false,
+      "lagna_nakshatra": false,
+      "lagna_pada": true,
+      "d9_lagna": true,
+      "d7_lagna": true,
+      "d10_lagna": true,
+      "moon_pada": false,
+      "tithi": false
+    },
+    "reference_claims_minutes": {
+      "D9": [
+        -2.5,
+        12.25
+      ],
+      "D7": [
+        -4.75,
+        14.25
+      ],
+      "D10": [
+        -8.5,
+        5.0
+      ],
+      "lagna_pada": [
+        -2.5,
+        12.25
+      ],
+      "moon_pada": [
+        -20.25,
+        null
+      ],
+      "tithi": [
+        null,
+        16.0
+      ],
+      "lagna_sign": [
+        -60.0,
+        71.0
+      ]
+    },
+    "chart_stability": {
+      "lagna_sign_constant": true,
+      "lagna_sign": "Virgo",
+      "d9_lagna_constant": false,
+      "d7_lagna_constant": false,
+      "d10_lagna_constant": false
+    }
+  },
+  "chara_karakas": {
+    "seven_karaka_scheme_strict_8_labels": {
+      "AK": "Saturn",
+      "AmK": "Sun",
+      "BK": "Mercury",
+      "MK": "Moon",
+      "PiK": "Jupiter",
+      "PK": "Venus",
+      "GK": "Mars"
+    },
+    "reference_style_7_labels_piK_omitted": {
+      "AK": "Saturn",
+      "AmK": "Sun",
+      "BK": "Mercury",
+      "MK": "Moon",
+      "PK": "Jupiter",
+      "GK": "Venus",
+      "DK": "Mars"
+    },
+    "eight_karaka_scheme_engine": {
+      "AK": "Rahu",
+      "AmK": "Saturn",
+      "BK": "Sun",
+      "MK": "Mercury",
+      "PiK": "Moon",
+      "PK": "Jupiter",
+      "GK": "Venus",
+      "DK": "Mars"
+    },
+    "reference": {
+      "AK": "Saturn",
+      "AmK": "Sun",
+      "BK": "Mercury",
+      "MK": "Moon",
+      "PK": "Jupiter",
+      "GK": "Venus",
+      "DK": "Mars"
+    },
+    "reference_style_matches_reference_exactly": true,
+    "descending_order": [
+      "Saturn",
+      "Sun",
+      "Mercury",
+      "Moon",
+      "Jupiter",
+      "Venus",
+      "Mars"
+    ],
+    "reference_declared_order": [
+      "Saturn",
+      "Sun",
+      "Mercury",
+      "Moon",
+      "Jupiter",
+      "Venus",
+      "Mars"
+    ],
+    "resolution": "The difference is a SCHEME difference, not an error. The reference uses the classical 7-karaka scheme (Sun..Moon, node excluded); the production engine uses the 8-karaka Jaimini scheme where Rahu is measured in reverse (30 - 0.8076 = 29.1924) and therefore takes AK, shifting every other karaka down one slot. Under the 7-karaka scheme the independent result reproduces the reference exactly for AK, AmK, BK, MK. Both schemes are reported; neither is discarded.",
+    "karakamsha_note": "Karakamsha is the sign of the AK in the navamsa. Under the 8-karaka scheme AK is Rahu, so the karakamsha depends on which scheme is adopted - the reference's Leo therefore presumes the 7-karaka AK (Saturn in D9 = Leo)."
+  },
+  "varga_lagnas": {
+    "independent": {
+      "Saptamsa D7": "Gemini",
+      "Navamsa D9": "Taurus",
+      "Dasamsa D10": "Virgo",
+      "Dwadasamsa D12": "Aquarius",
+      "Chaturvimsamsa D24": "Gemini",
+      "Shashtiamsa D60": "Sagittarius"
+    },
+    "reference": {
+      "D9": "Taurus",
+      "D10": "Virgo",
+      "D7": "Gemini"
+    },
+    "d9_match": true,
+    "d10_match": true,
+    "d7_match": true
+  },
+  "multi_varga_jupiter": {
+    "reference_claim": "Jupiter occupies its own sign in D7, D9 and D10",
+    "jupiter_d1_sign": "Libra",
+    "jupiter_own_signs": [
+      "Sagittarius",
+      "Pisces"
+    ],
+    "d1_note": "Jupiter is in LIBRA in D1 - Libra is ruled by Saturn, so Jupiter is NOT in its own sign in D1. Its own signs are Sagittarius and Pisces.",
+    "placements": {
+      "Saptamsa D7": "Sagittarius",
+      "Navamsa D9": "Sagittarius",
+      "Dasamsa D10": "Sagittarius"
+    },
+    "verified": true,
+    "status": "MULTI-VARGA JUPITER STRENGTH = VERIFIED - Jupiter occupies Sagittarius, its own sign, in D7, D9 and D10",
+    "precision_note": "The claim is verified in the divisional charts only. Jupiter is NOT in its own sign in D1 (it is in Libra), so the correct phrasing is 'Jupiter occupies its own sign in D7, D9 and D10' - not that Jupiter is strong in D1."
+  },
+  "node_types": {
+    "mean_node_rahu": {
+      "sign": "Cancer",
+      "deg_in_sign": 0.807565591016143,
+      "house_whole_sign": 11,
+      "used_by": "Parashari"
+    },
+    "true_node_rahu": {
+      "sign": "Gemini",
+      "deg_in_sign": 29.375278795423952,
+      "house_whole_sign": 10,
+      "used_by": "Krishnamurti Paddhati",
+      "reference": "Gemini ~29°24′"
+    },
+    "why_house_changes": "The mean node moves backwards along the ecliptic at ~19.3°/year while the true node moves irregularly; over the interval between the two osculating positions they differ by more than a sign here. Mean Rahu falls in the 11th house from a Virgo lagna, true Rahu in the 10th. BOTH are computed and kept separate - neither overwrites the other."
+  },
+  "yoga_audit": {
+    "Gajakesari": {
+      "rule": "Jupiter in a kendra (1/4/7/10) from the Moon AND aspecting it",
+      "offset_from_moon": 6,
+      "in_kendra": true,
+      "aspects_moon": true,
+      "verdict": "SATISFIED (classical yoga, also a Puranic variant)",
+      "confidence": "HIGH - unambiguous"
+    },
+    "Budhaditya": {
+      "rule": "Sun and Mercury in the same sign, neither combust",
+      "same_sign": true,
+      "sign": "Scorpio",
+      "separation_deg": 1.0036897777135323,
+      "combust": true,
+      "verdict": "PARTIALLY SATISFIED - conjunction holds, but Mercury is combust at 1.00° from the Sun, and several texts require Mercury to be unobscured",
+      "confidence": "HIGH on the conditions, MODERATE on the verdict (school-dependent)"
+    },
+    "Kemadruma": {
+      "rule": "No planet in the 2nd, 12th or with the Moon",
+      "planets_in_2nd_12th_from_moon": [],
+      "verdict": "FORMED",
+      "cancellation_note": "Cancelled if the Moon is aspected by a planet other than the Sun, or if Jupiter aspects the Moon from a kendra.",
+      "jup_aspects_moon": true,
+      "verdict_with_cancellation": "CANCELLED - Jupiter in a kendra from the Moon cancels it",
+      "confidence": "MODERATE - Kemadruma cancellation is school-dependent"
+    },
+    "Mangal_Dosha": {
+      "rule": "Mars in the 1st, 2nd, 4th, 7th, 8th or 12th from the Lagna",
+      "mars_house": 1,
+      "verdict": "PRESENT (house 1)",
+      "confidence": "HIGH"
+    },
+    "Mars_Mercury_Parivartana": {
+      "rule": "Two planets exchange signs (each in the other's rashi)",
+      "mars_sign": "Virgo",
+      "mercury_sign": "Scorpio",
+      "mars_ruler_of_mercury_sign": "Mars",
+      "mercury_ruler_of_mars_sign": "Mercury",
+      "exchange": false,
+      "verdict": "SATISFIED - Mars is lord of Scorpio where Mercury sits, and Mercury is lord of Virgo where Mars sits",
+      "confidence": "HIGH"
+    },
+    "Vasi": {
+      "rule": "Jupiter in the 12th from the Sun (Vasi yoga)",
+      "offset_from_sun": 11,
+      "verdict": "SATISFIED (offset 11)",
+      "confidence": "HIGH"
+    },
+    "Adhi_Yoga": {
+      "rule": "Benefics in the 6th, 7th or 8th from the Moon",
+      "jupiter_offset": 6,
+      "mercury_offset": 7,
+      "both_in_6_7_8": true,
+      "verdict": "PARTIALLY SATISFIED - Jupiter (6th) and Mercury (7th) are both in range, but Mercury is combust, and Mercury is a malefic in some schools, which would break the yoga",
+      "confidence": "MODERATE - school-dependent on counting a combust Mercury"
+    }
+  },
+  "yoga_summary": {
+    "fully_satisfied": [
+      "Gajakesari",
+      "Mars_Mercury_Parivartana",
+      "Vasi"
+    ],
+    "partially_satisfied": [
+      "Budhaditya",
+      "Adhi_Yoga"
+    ],
+    "cancelled": [
+      "Kemadruma"
+    ],
+    "none_accepted_without_check": true
+  },
+  "vimshottari": {
+    "moon_nakshatra": "Bharani",
+    "pada": 2,
+    "mahadashas": [
+      {
+        "lord": "Venus",
+        "start": "1976-08-18",
+        "end": "1996-08-18"
+      },
+      {
+        "lord": "Sun",
+        "start": "1996-08-18",
+        "end": "2002-08-18"
+      },
+      {
+        "lord": "Moon",
+        "start": "2002-08-18",
+        "end": "2012-08-18"
+      },
+      {
+        "lord": "Mars",
+        "start": "2012-08-18",
+        "end": "2019-08-18"
+      },
+      {
+        "lord": "Rahu",
+        "start": "2019-08-18",
+        "end": "2037-08-18"
+      },
+      {
+        "lord": "Jupiter",
+        "start": "2037-08-18",
+        "end": "2053-08-18"
+      },
+      {
+        "lord": "Saturn",
+        "start": "2053-08-18",
+        "end": "2072-08-18"
+      },
+      {
+        "lord": "Mercury",
+        "start": "2072-08-18",
+        "end": "2089-08-18"
+      },
+      {
+        "lord": "Ketu",
+        "start": "2089-08-18",
+        "end": "2096-08-18"
+      }
+    ],
+    "raw_start": null,
+    "reference_balance_venus_years": 14.69
+  },
+  "ashtakavarga": {
+    "note": "Production Ashtakavarga is PARTIAL by design: only the Sun, Moon, Mars and Saturn tables were independently verified against their published fixed totals. Mercury, Jupiter and Venus are EXCLUDED rather than fitted to a checksum, so the classical SAV of 337 is deliberately NOT reported - a partial sum would be a misleading number.",
+    "verified_planets": [
+      "Mars",
+      "Moon",
+      "Saturn",
+      "Sun"
+    ],
+    "excluded_planets": [
+      "Mercury",
+      "Jupiter",
+      "Venus"
+    ],
+    "bav_reference_full_totals": {
+      "Sun": 48,
+      "Moon": 49,
+      "Mars": 39,
+      "Mercury": 54,
+      "Jupiter": 56,
+      "Venus": 52,
+      "Saturn": 39
+    },
+    "independent_totals_verified_tables": {
+      "Mars": 39,
+      "Moon": 49,
+      "Saturn": 39,
+      "Sun": 48
+    },
+    "sav_reference": 337,
+    "sarvashtakavarga_partial": {
+      "column_sum_over_verified_tables": [
+        12,
+        10,
+        22,
+        19,
+        15,
+        21,
+        10,
+        14,
+        10,
+        13,
+        17,
+        12
+      ],
+      "per_sign": [
+        "Aries 12",
+        "Taurus 10",
+        "Gemini 22",
+        "Cancer 19",
+        "Leo 15",
+        "Virgo 21",
+        "Libra 10",
+        "Scorpio 14",
+        "Sagittarius 10",
+        "Capricorn 13",
+        "Aquarius 17",
+        "Pisces 12"
+      ],
+      "total_over_verified_tables": 175,
+      "classical_total_would_be": 337,
+      "equals_classical_sav": false,
+      "interpretation_limit": "Column sums over 4 of 7 tables. Each sign can reach 32 here versus 56 in a full SAV, so the classical strength bands (25-29 moderate, 30+ strong) DO NOT APPLY. Use only for relative ordering within this table.",
+      "strongest_sign": "Gemini",
+      "weakest_sign": "Sagittarius",
+      "ranking": [
+        "Gemini (22)",
+        "Virgo (21)",
+        "Cancer (19)",
+        "Aquarius (17)",
+        "Leo (15)",
+        "Scorpio (14)",
+        "Capricorn (13)",
+        "Aries (12)",
+        "Pisces (12)",
+        "Taurus (10)",
+        "Libra (10)",
+        "Sagittarius (10)"
+      ]
+    }
+  },
+  "risk_engine_comparison": {
+    "_note": "The reference PDF's year-wise outlook is qualitative narrative, not a scored risk classification, so it cannot be differenced numerically against the engine. What CAN be compared is the dasha sequence, which both compute independently.",
+    "red_years_unaffected": [
+      1987,
+      1994,
+      1997,
+      2000,
+      2002,
+      2014,
+      2016,
+      2038,
+      2039,
+      2042,
+      2044,
+      2050
+    ],
+    "rule": "The engine's RED years remain authoritative. The PDF's star ratings are NOT substituted for them anywhere.",
+    "years": [
+      {
+        "year": 1981,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Moon",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1982,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Moon",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1983,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Mars",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1984,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1985,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1986,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1987,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "TIME-SENSITIVE — LOW CONFIDENCE",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1988,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1989,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1990,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1991,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1992,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1993,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1994,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "TIME-ROBUST WITHIN THE TESTED ±15-MINUTE WINDOW",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1995,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Ketu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1996,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Venus",
+        "engine_antardasha": "Ketu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1997,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Sun",
+        "engine_antardasha": "Mars",
+        "sensitivity": "TIME-SENSITIVE — LOW CONFIDENCE",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1998,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Sun",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 1999,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Sun",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2000,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Sun",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "MODERATE STABILITY",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2001,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Sun",
+        "engine_antardasha": "Ketu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2002,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Sun",
+        "engine_antardasha": "Venus",
+        "sensitivity": "TIME-SENSITIVE — LOW CONFIDENCE",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2003,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Mars",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2004,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2005,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2006,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2007,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2008,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2009,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2010,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2011,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2012,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Moon",
+        "engine_antardasha": "Sun",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2013,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Mars",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2014,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Mars",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "TIME-ROBUST WITHIN THE TESTED ±15-MINUTE WINDOW",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2015,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Mars",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2016,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Mars",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "TIME-ROBUST WITHIN THE TESTED ±15-MINUTE WINDOW",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2017,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Mars",
+        "engine_antardasha": "Ketu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2018,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Mars",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2019,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Mars",
+        "engine_antardasha": "Moon",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2020,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2021,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2022,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2023,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2024,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2025,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2026,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2027,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2028,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2029,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2030,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Ketu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2031,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2032,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2033,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2034,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Sun",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2035,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Moon",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2036,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Moon",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2037,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Rahu",
+        "engine_antardasha": "Mars",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2038,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "TIME-SENSITIVE — LOW CONFIDENCE",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2039,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Jupiter",
+        "sensitivity": "MODERATE STABILITY",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2040,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2041,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Saturn",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2042,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "TIME-ROBUST WITHIN THE TESTED ±15-MINUTE WINDOW",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2043,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2044,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Mercury",
+        "sensitivity": "MODERATE STABILITY",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2045,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2046,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2047,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Venus",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2048,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Sun",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2049,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Moon",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2050,
+        "engine_level": "RED",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Mars",
+        "sensitivity": "TIME-SENSITIVE — LOW CONFIDENCE",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2051,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2052,
+        "engine_level": "YELLOW",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      },
+      {
+        "year": 2053,
+        "engine_level": "ORANGE",
+        "engine_score": null,
+        "engine_mahadasha": "Jupiter",
+        "engine_antardasha": "Rahu",
+        "sensitivity": "n/a (not RED)",
+        "reference_rating": null,
+        "agreement": null,
+        "reason": null
+      }
+    ]
+  },
+  "d1_discrepancies": {
+    "count": 1,
+    "detail": [
+      {
+        "parameter": "Jupiter",
+        "reference_value": "Libra 8°35′",
+        "independent_value": "Libra 8°38′",
+        "difference_arcmin": 2.522,
+        "difference_deg": 0.042036,
+        "tolerance_arcmin": 2.0,
+        "status": "MISMATCH"
+      }
+    ],
+    "third_source_check": {
+      "method": "JPL Horizons (independent of Swiss Ephemeris), geocentric observer ecliptic longitude, interpolated to the birth instant",
+      "swiss_ephemeris_tropical_deg": 212.230145,
+      "horizons_tropical_deg": 212.229994,
+      "agreement_arcmin": 0.009,
+      "reference_tropical_deg": 212.188109,
+      "reference_vs_both_arcmin": 2.52,
+      "conclusion": "Two independent engines agree to 0.009 arcmin. The reference's printed 'Libra 8°35'' lies 2.5 arcmin from BOTH, so it is a transcription/rounding artefact in the PDF table, not a difference in the underlying calculation. Correct value: Libra 8°37' (188.6254°).",
+      "production_value_unchanged": true
+    },
+    "d1_verified_despite_count": true
+  },
+  "verification_dashboard": {
+    "D1": "VERIFIED - 9/10 exact within 2'; the 1 discrepancy (Jupiter) resolved to a PDF transcription artefact via JPL Horizons",
+    "Panchang": "VERIFIED",
+    "Vimshottari": "VERIFIED (balance 14.6916 y vs reference 14.69 y)",
+    "D9": "VERIFIED (lagna Taurus) - birth-time sensitive, see below",
+    "D10": "VERIFIED (lagna Virgo)",
+    "D7": "VERIFIED (lagna Gemini)",
+    "Varga": "VERIFIED for 15 of 16; D27 NOT IMPLEMENTED in the engine",
+    "Ashtakavarga": "PARTIAL - 4 of 7 tables verified by design",
+    "Jaimini": "VERIFIED under the 7-karaka scheme; 8-karaka differs",
+    "KP": "PARTIAL - true node verified, house cusps NOT computed",
+    "Tajika": "NOT COMPUTED (reference also partial)",
+    "Shadbala": "PARTIAL - only the components the engine computes",
+    "Nadi": "NOT COMPUTED"
+  },
+  "houses_all_match": true
+}

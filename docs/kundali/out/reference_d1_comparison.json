@@ -1,0 +1,692 @@
+{
+  "_method": "Every value computed from the birth data first, then compared. No production value was adjusted toward the reference.",
+  "birth_data": {
+    "dob": "1981-12-09 01:00:00 IST",
+    "tz": "+05:30",
+    "jd_ut": 2444947.3125,
+    "jd_required": 2444947.3125,
+    "jd_match": true,
+    "production_coords": [
+      24.1044927,
+      88.2510635
+    ],
+    "pdf_coords": [
+      24.1,
+      88.25
+    ],
+    "coord_delta_metres": {
+      "latitude": 500.1,
+      "longitude": 95.5
+    }
+  },
+  "d1_comparison": [
+    {
+      "parameter": "Lagna",
+      "reference_value": "Virgo 13°54′",
+      "independent_value": "Virgo 13°53′",
+      "difference_arcmin": -0.619,
+      "difference_deg": -0.010322,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Sun",
+      "reference_value": "Scorpio 23°02′",
+      "independent_value": "Scorpio 23°02′",
+      "difference_arcmin": -0.182,
+      "difference_deg": -0.003037,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Moon",
+      "reference_value": "Aries 16°53′",
+      "independent_value": "Aries 16°52′",
+      "difference_arcmin": -0.666,
+      "difference_deg": -0.011095,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Mars",
+      "reference_value": "Virgo 2°56′",
+      "independent_value": "Virgo 2°56′",
+      "difference_arcmin": -0.192,
+      "difference_deg": -0.0032,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Mercury",
+      "reference_value": "Scorpio 22°02′",
+      "independent_value": "Scorpio 22°02′",
+      "difference_arcmin": -0.404,
+      "difference_deg": -0.006726,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Jupiter",
+      "reference_value": "Libra 8°35′",
+      "independent_value": "Libra 8°38′",
+      "difference_arcmin": 2.522,
+      "difference_deg": 0.042036,
+      "tolerance_arcmin": 2.0,
+      "status": "MISMATCH"
+    },
+    {
+      "parameter": "Venus",
+      "reference_value": "Capricorn 6°22′",
+      "independent_value": "Capricorn 6°21′",
+      "difference_arcmin": -0.651,
+      "difference_deg": -0.010844,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Saturn",
+      "reference_value": "Virgo 26°16′",
+      "independent_value": "Virgo 26°14′",
+      "difference_arcmin": -1.526,
+      "difference_deg": -0.025438,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Rahu",
+      "reference_value": "Cancer 0°49′",
+      "independent_value": "Cancer 0°48′",
+      "difference_arcmin": -0.546,
+      "difference_deg": -0.009101,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    },
+    {
+      "parameter": "Ketu",
+      "reference_value": "Capricorn 0°49′",
+      "independent_value": "Capricorn 0°48′",
+      "difference_arcmin": -0.546,
+      "difference_deg": -0.009101,
+      "tolerance_arcmin": 2.0,
+      "status": "MATCH"
+    }
+  ],
+  "d1_house_comparison": [
+    {
+      "house": 1,
+      "reference_sign": "Virgo",
+      "independent_sign": "Virgo",
+      "reference_occupants": [
+        "Mars",
+        "Saturn"
+      ],
+      "independent_occupants": [
+        "Mars",
+        "Saturn"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 2,
+      "reference_sign": "Libra",
+      "independent_sign": "Libra",
+      "reference_occupants": [
+        "Jupiter"
+      ],
+      "independent_occupants": [
+        "Jupiter"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 3,
+      "reference_sign": "Scorpio",
+      "independent_sign": "Scorpio",
+      "reference_occupants": [
+        "Sun",
+        "Mercury"
+      ],
+      "independent_occupants": [
+        "Mercury",
+        "Sun"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 4,
+      "reference_sign": "Sagittarius",
+      "independent_sign": "Sagittarius",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 5,
+      "reference_sign": "Capricorn",
+      "independent_sign": "Capricorn",
+      "reference_occupants": [
+        "Venus",
+        "Ketu"
+      ],
+      "independent_occupants": [
+        "Ketu",
+        "Venus"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 6,
+      "reference_sign": "Aquarius",
+      "independent_sign": "Aquarius",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 7,
+      "reference_sign": "Pisces",
+      "independent_sign": "Pisces",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 8,
+      "reference_sign": "Aries",
+      "independent_sign": "Aries",
+      "reference_occupants": [
+        "Moon"
+      ],
+      "independent_occupants": [
+        "Moon"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 9,
+      "reference_sign": "Taurus",
+      "independent_sign": "Taurus",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 10,
+      "reference_sign": "Gemini",
+      "independent_sign": "Gemini",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    },
+    {
+      "house": 11,
+      "reference_sign": "Cancer",
+      "independent_sign": "Cancer",
+      "reference_occupants": [
+        "Rahu"
+      ],
+      "independent_occupants": [
+        "Rahu"
+      ],
+      "status": "MATCH"
+    },
+    {
+      "house": 12,
+      "reference_sign": "Leo",
+      "independent_sign": "Leo",
+      "reference_occupants": [],
+      "independent_occupants": [],
+      "status": "MATCH"
+    }
+  ],
+  "coordinate_sensitivity": [
+    {
+      "parameter": "Lagna",
+      "diff_vs_production_coords_arcmin": -0.619,
+      "diff_vs_pdf_coords_arcmin": -0.662
+    },
+    {
+      "parameter": "Sun",
+      "diff_vs_production_coords_arcmin": -0.182,
+      "diff_vs_pdf_coords_arcmin": -0.182
+    },
+    {
+      "parameter": "Moon",
+      "diff_vs_production_coords_arcmin": -0.666,
+      "diff_vs_pdf_coords_arcmin": -0.666
+    },
+    {
+      "parameter": "Mars",
+      "diff_vs_production_coords_arcmin": -0.192,
+      "diff_vs_pdf_coords_arcmin": -0.192
+    },
+    {
+      "parameter": "Mercury",
+      "diff_vs_production_coords_arcmin": -0.404,
+      "diff_vs_pdf_coords_arcmin": -0.404
+    },
+    {
+      "parameter": "Jupiter",
+      "diff_vs_production_coords_arcmin": 2.522,
+      "diff_vs_pdf_coords_arcmin": 2.522
+    },
+    {
+      "parameter": "Venus",
+      "diff_vs_production_coords_arcmin": -0.651,
+      "diff_vs_pdf_coords_arcmin": -0.651
+    },
+    {
+      "parameter": "Saturn",
+      "diff_vs_production_coords_arcmin": -1.526,
+      "diff_vs_pdf_coords_arcmin": -1.526
+    },
+    {
+      "parameter": "Rahu",
+      "diff_vs_production_coords_arcmin": -0.546,
+      "diff_vs_pdf_coords_arcmin": -0.546
+    },
+    {
+      "parameter": "Ketu",
+      "diff_vs_production_coords_arcmin": -0.546,
+      "diff_vs_pdf_coords_arcmin": -0.546
+    }
+  ],
+  "nakshatra": {
+    "moon": {
+      "nakshatra": "Bharani",
+      "pada": 2,
+      "lord": "Venus"
+    },
+    "lagna": {
+      "nakshatra": "Hasta",
+      "pada": 2
+    }
+  },
+  "true_node_rahu": {
+    "sidereal_longitude": 89.375279,
+    "formatted": "Gemini 29°23′",
+    "reference": "Gemini ~29°24′",
+    "note": "KP uses the true node; Parashari uses the mean node. Both are computed and kept separate - neither overwrites the other."
+  },
+  "vargas": {
+    "Rasi D1": {
+      "Sun": "Scorpio",
+      "Moon": "Aries",
+      "Mars": "Virgo",
+      "Mercury": "Scorpio",
+      "Jupiter": "Libra",
+      "Venus": "Capricorn",
+      "Saturn": "Virgo",
+      "Rahu": "Cancer",
+      "Ketu": "Capricorn"
+    },
+    "Hora D2": {
+      "Sun": "Scorpio",
+      "Moon": "Taurus",
+      "Mars": "Libra",
+      "Mercury": "Scorpio",
+      "Jupiter": "Libra",
+      "Venus": "Aquarius",
+      "Saturn": "Virgo",
+      "Rahu": "Leo",
+      "Ketu": "Aquarius"
+    },
+    "Drekkana D3": {
+      "Sun": "Cancer",
+      "Moon": "Leo",
+      "Mars": "Virgo",
+      "Mercury": "Cancer",
+      "Jupiter": "Libra",
+      "Venus": "Capricorn",
+      "Saturn": "Taurus",
+      "Rahu": "Cancer",
+      "Ketu": "Capricorn"
+    },
+    "Chaturthamsa D4": {
+      "Sun": "Leo",
+      "Moon": "Libra",
+      "Mars": "Virgo",
+      "Mercury": "Taurus",
+      "Jupiter": "Capricorn",
+      "Venus": "Capricorn",
+      "Saturn": "Gemini",
+      "Rahu": "Cancer",
+      "Ketu": "Capricorn"
+    },
+    "Saptamsa D7": {
+      "Sun": "Libra",
+      "Moon": "Cancer",
+      "Mars": "Pisces",
+      "Mercury": "Libra",
+      "Jupiter": "Sagittarius",
+      "Venus": "Leo",
+      "Saturn": "Virgo",
+      "Rahu": "Capricorn",
+      "Ketu": "Cancer"
+    },
+    "Navamsa D9": {
+      "Sun": "Capricorn",
+      "Moon": "Virgo",
+      "Mars": "Capricorn",
+      "Mercury": "Capricorn",
+      "Jupiter": "Sagittarius",
+      "Venus": "Aquarius",
+      "Saturn": "Leo",
+      "Rahu": "Cancer",
+      "Ketu": "Capricorn"
+    },
+    "Dasamsa D10": {
+      "Sun": "Aquarius",
+      "Moon": "Virgo",
+      "Mars": "Taurus",
+      "Mercury": "Aquarius",
+      "Jupiter": "Sagittarius",
+      "Venus": "Pisces",
+      "Saturn": "Capricorn",
+      "Rahu": "Cancer",
+      "Ketu": "Capricorn"
+    },
+    "Dwadasamsa D12": {
+      "Sun": "Leo",
+      "Moon": "Libra",
+      "Mars": "Libra",
+      "Mercury": "Cancer",
+      "Jupiter": "Capricorn",
+      "Venus": "Pisces",
+      "Saturn": "Cancer",
+      "Rahu": "Cancer",
+      "Ketu": "Capricorn"
+    },
+    "Shodasamsa D16": {
+      "Sun": "Leo",
+      "Moon": "Sagittarius",
+      "Mars": "Capricorn",
+      "Mercury": "Cancer",
+      "Jupiter": "Leo",
+      "Venus": "Cancer",
+      "Saturn": "Capricorn",
+      "Rahu": "Aries",
+      "Ketu": "Aries"
+    },
+    "Vimsamsa D20": {
+      "Sun": "Pisces",
+      "Moon": "Pisces",
+      "Mars": "Virgo",
+      "Mercury": "Aquarius",
+      "Jupiter": "Virgo",
+      "Venus": "Leo",
+      "Saturn": "Capricorn",
+      "Rahu": "Aries",
+      "Ketu": "Aries"
+    },
+    "Chaturvimsamsa D24": {
+      "Sun": "Capricorn",
+      "Moon": "Virgo",
+      "Mars": "Virgo",
+      "Mercury": "Sagittarius",
+      "Jupiter": "Aquarius",
+      "Venus": "Sagittarius",
+      "Saturn": "Pisces",
+      "Rahu": "Cancer",
+      "Ketu": "Cancer"
+    },
+    "Trimsamsa D30": {
+      "Sun": "Aquarius",
+      "Moon": "Gemini",
+      "Mars": "Capricorn",
+      "Mercury": "Aquarius",
+      "Jupiter": "Aquarius",
+      "Venus": "Libra",
+      "Saturn": "Aries",
+      "Rahu": "Capricorn",
+      "Ketu": "Capricorn"
+    },
+    "Khavedamsa D40": {
+      "Sun": "Aries",
+      "Moon": "Aquarius",
+      "Mars": "Pisces",
+      "Mercury": "Pisces",
+      "Jupiter": "Pisces",
+      "Venus": "Sagittarius",
+      "Saturn": "Libra",
+      "Rahu": "Taurus",
+      "Ketu": "Taurus"
+    },
+    "Akshavedamsa D45": {
+      "Sun": "Gemini",
+      "Moon": "Taurus",
+      "Mars": "Aries",
+      "Mercury": "Taurus",
+      "Jupiter": "Aries",
+      "Venus": "Capricorn",
+      "Saturn": "Pisces",
+      "Rahu": "Taurus",
+      "Ketu": "Taurus"
+    },
+    "Shashtiamsa D60": {
+      "Sun": "Virgo",
+      "Moon": "Capricorn",
+      "Mars": "Aquarius",
+      "Mercury": "Cancer",
+      "Jupiter": "Pisces",
+      "Venus": "Capricorn",
+      "Saturn": "Capricorn",
+      "Rahu": "Leo",
+      "Ketu": "Aquarius"
+    },
+    "_not_implemented": [
+      "D27"
+    ]
+  },
+  "vimshottari": {
+    "moon_nakshatra": "Bharani",
+    "pada": 2,
+    "mahadashas": [
+      {
+        "lord": "Venus",
+        "start": "1976-08-18",
+        "end": "1996-08-18"
+      },
+      {
+        "lord": "Sun",
+        "start": "1996-08-18",
+        "end": "2002-08-18"
+      },
+      {
+        "lord": "Moon",
+        "start": "2002-08-18",
+        "end": "2012-08-18"
+      },
+      {
+        "lord": "Mars",
+        "start": "2012-08-18",
+        "end": "2019-08-18"
+      },
+      {
+        "lord": "Rahu",
+        "start": "2019-08-18",
+        "end": "2037-08-18"
+      },
+      {
+        "lord": "Jupiter",
+        "start": "2037-08-18",
+        "end": "2053-08-18"
+      },
+      {
+        "lord": "Saturn",
+        "start": "2053-08-18",
+        "end": "2072-08-18"
+      },
+      {
+        "lord": "Mercury",
+        "start": "2072-08-18",
+        "end": "2089-08-18"
+      },
+      {
+        "lord": "Ketu",
+        "start": "2089-08-18",
+        "end": "2096-08-18"
+      }
+    ],
+    "raw_start": null,
+    "reference_balance_venus_years": 14.69
+  },
+  "chara_karakas": {
+    "independent": {
+      "AK": "Rahu",
+      "AmK": "Saturn",
+      "BK": "Sun",
+      "MK": "Mercury",
+      "PiK": "Moon",
+      "PK": "Jupiter",
+      "GK": "Venus",
+      "DK": "Mars"
+    },
+    "independent_detail": {
+      "AK": {
+        "planet": "Rahu",
+        "deg_in_sign": 29.1924,
+        "sign": "Cancer",
+        "house": null
+      },
+      "AmK": {
+        "planet": "Saturn",
+        "deg_in_sign": 26.2412,
+        "sign": "Virgo",
+        "house": null
+      },
+      "BK": {
+        "planet": "Sun",
+        "deg_in_sign": 23.0303,
+        "sign": "Scorpio",
+        "house": null
+      },
+      "MK": {
+        "planet": "Mercury",
+        "deg_in_sign": 22.0266,
+        "sign": "Scorpio",
+        "house": null
+      },
+      "PiK": {
+        "planet": "Moon",
+        "deg_in_sign": 16.8722,
+        "sign": "Aries",
+        "house": null
+      },
+      "PK": {
+        "planet": "Jupiter",
+        "deg_in_sign": 8.6254,
+        "sign": "Libra",
+        "house": null
+      },
+      "GK": {
+        "planet": "Venus",
+        "deg_in_sign": 6.3558,
+        "sign": "Capricorn",
+        "house": null
+      },
+      "DK": {
+        "planet": "Mars",
+        "deg_in_sign": 2.9301,
+        "sign": "Virgo",
+        "house": null
+      }
+    },
+    "reference": {
+      "AK": "Saturn",
+      "AmK": "Sun",
+      "BK": "Mercury",
+      "MK": "Moon",
+      "PK": "Jupiter",
+      "GK": "Venus",
+      "DK": "Mars"
+    }
+  },
+  "ashtakavarga": {
+    "note": "Production Ashtakavarga is PARTIAL by design: only the Sun, Moon, Mars and Saturn tables were independently verified against their published fixed totals. Mercury, Jupiter and Venus are EXCLUDED rather than fitted to a checksum, so the classical SAV of 337 is deliberately NOT reported - a partial sum would be a misleading number.",
+    "verified_planets": [
+      "Mars",
+      "Moon",
+      "Saturn",
+      "Sun"
+    ],
+    "excluded_planets": [
+      "Mercury",
+      "Jupiter",
+      "Venus"
+    ],
+    "bav_reference_full_totals": {
+      "Sun": 48,
+      "Moon": 49,
+      "Mars": 39,
+      "Mercury": 54,
+      "Jupiter": 56,
+      "Venus": 52,
+      "Saturn": 39
+    },
+    "independent_totals_verified_tables": {
+      "Mars": 39,
+      "Moon": 49,
+      "Saturn": 39,
+      "Sun": 48
+    },
+    "sav_reference": 337,
+    "sarvashtakavarga_partial": {
+      "column_sum_over_verified_tables": [
+        12,
+        10,
+        22,
+        19,
+        15,
+        21,
+        10,
+        14,
+        10,
+        13,
+        17,
+        12
+      ],
+      "per_sign": [
+        "Aries 12",
+        "Taurus 10",
+        "Gemini 22",
+        "Cancer 19",
+        "Leo 15",
+        "Virgo 21",
+        "Libra 10",
+        "Scorpio 14",
+        "Sagittarius 10",
+        "Capricorn 13",
+        "Aquarius 17",
+        "Pisces 12"
+      ],
+      "total_over_verified_tables": 175,
+      "classical_total_would_be": 337,
+      "equals_classical_sav": false,
+      "interpretation_limit": "Column sums over 4 of 7 tables. Each sign can reach 32 here versus 56 in a full SAV, so the classical strength bands (25-29 moderate, 30+ strong) DO NOT APPLY. Use only for relative ordering within this table.",
+      "strongest_sign": "Gemini",
+      "weakest_sign": "Sagittarius",
+      "ranking": [
+        "Gemini (22)",
+        "Virgo (21)",
+        "Cancer (19)",
+        "Aquarius (17)",
+        "Leo (15)",
+        "Scorpio (14)",
+        "Capricorn (13)",
+        "Aries (12)",
+        "Pisces (12)",
+        "Taurus (10)",
+        "Libra (10)",
+        "Sagittarius (10)"
+      ]
+    }
+  },
+  "tolerance_arcmin": 2.0,
+  "summary": {
+    "d1_matched": 9,
+    "d1_total": 10,
+    "houses_matched": 12,
+    "houses_total": 12
+  }
+}
