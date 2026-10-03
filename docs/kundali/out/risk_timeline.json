@@ -13,8 +13,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -22,8 +22,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -31,8 +31,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -41,8 +41,8 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         }
       },
@@ -860,8 +860,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -869,8 +869,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -878,9 +878,9 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "ketu": {
@@ -888,8 +888,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         }
       },
@@ -1814,8 +1814,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -1823,8 +1823,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -1832,9 +1832,9 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "ketu": {
@@ -1842,8 +1842,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         }
       },
@@ -2713,16 +2713,16 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "saturn": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -2730,17 +2730,17 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "ketu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         }
@@ -3647,16 +3647,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "saturn": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -3664,17 +3664,17 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "ketu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         }
@@ -4538,17 +4538,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "saturn": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -4556,17 +4556,17 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "ketu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         }
@@ -5481,17 +5481,17 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "saturn": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -5499,17 +5499,17 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "ketu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         }
@@ -6421,9 +6421,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "saturn": {
@@ -6431,25 +6431,25 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "rahu": {
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "ketu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         }
@@ -7305,9 +7305,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "saturn": {
@@ -7315,25 +7315,25 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "rahu": {
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "ketu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         }
@@ -8221,9 +8221,9 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "saturn": {
@@ -8231,8 +8231,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "rahu": {
@@ -8240,16 +8240,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "ketu": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         }
@@ -9087,8 +9087,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -9097,8 +9097,8 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "rahu": {
@@ -9106,17 +9106,17 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "ketu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         }
       },
@@ -9959,8 +9959,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -9969,8 +9969,8 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "rahu": {
@@ -9978,17 +9978,17 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "ketu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         }
       },
@@ -10913,8 +10913,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -10922,17 +10922,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "rahu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -10940,9 +10940,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         }
       },
@@ -11757,8 +11757,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -11766,17 +11766,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "rahu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -11784,9 +11784,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         }
       },
@@ -12689,8 +12689,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -12698,17 +12698,17 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "rahu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -12716,9 +12716,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         }
       },
@@ -13497,25 +13497,25 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "saturn": {
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "rahu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -13523,9 +13523,9 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         }
       },
@@ -14339,25 +14339,25 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "saturn": {
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "rahu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -14365,9 +14365,9 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         }
       },
@@ -15317,26 +15317,26 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "saturn": {
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "rahu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -15344,9 +15344,9 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         }
       },
@@ -16284,26 +16284,26 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "saturn": {
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "rahu": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -16312,8 +16312,8 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         }
       },
@@ -17147,26 +17147,26 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "saturn": {
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "rahu": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -17175,8 +17175,8 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         }
       },
@@ -18037,27 +18037,27 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "saturn": {
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "rahu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "ketu": {
@@ -18065,8 +18065,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         }
       },
@@ -18896,35 +18896,35 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "saturn": {
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "rahu": {
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "ketu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         }
@@ -19851,8 +19851,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -19860,26 +19860,26 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "rahu": {
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "ketu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         }
@@ -20695,8 +20695,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -20704,26 +20704,26 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "rahu": {
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "ketu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         }
@@ -21611,8 +21611,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -21620,8 +21620,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -21629,17 +21629,17 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "ketu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         }
@@ -22469,8 +22469,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -22478,8 +22478,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -22487,17 +22487,17 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "ketu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         }
@@ -23270,8 +23270,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -23279,8 +23279,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -23288,17 +23288,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "ketu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         }
@@ -24190,16 +24190,16 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "saturn": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -24208,16 +24208,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "ketu": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         }
@@ -25104,17 +25104,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "saturn": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -25123,16 +25123,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "ketu": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         }
@@ -25993,17 +25993,17 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "saturn": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -26012,17 +26012,17 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "ketu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         }
       },
@@ -26875,17 +26875,17 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "saturn": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -26893,8 +26893,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -26902,9 +26902,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         }
       },
@@ -27783,17 +27783,17 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "saturn": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -27801,8 +27801,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -27810,9 +27810,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         }
       },
@@ -28611,17 +28611,17 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "saturn": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -28629,8 +28629,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -28638,9 +28638,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         }
       },
@@ -29530,8 +29530,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -29539,8 +29539,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -29548,8 +29548,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -29557,9 +29557,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         }
       },
@@ -30467,8 +30467,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -30476,8 +30476,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -30485,8 +30485,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -30494,9 +30494,9 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         }
       },
@@ -31257,8 +31257,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -31266,8 +31266,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -31275,8 +31275,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -31284,9 +31284,9 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         }
       },
@@ -32251,8 +32251,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -32260,8 +32260,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -32269,8 +32269,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -32278,9 +32278,9 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         }
       },
@@ -33143,8 +33143,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -33153,16 +33153,16 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "rahu": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -33171,8 +33171,8 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         }
       },
@@ -34052,8 +34052,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -34062,17 +34062,17 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "rahu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "ketu": {
@@ -34080,8 +34080,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         }
       },
@@ -34874,8 +34874,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "saturn": {
@@ -34883,17 +34883,17 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "rahu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "ketu": {
@@ -34901,8 +34901,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         }
       },
@@ -35605,9 +35605,9 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "saturn": {
@@ -35615,25 +35615,25 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "rahu": {
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "ketu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         }
@@ -36318,35 +36318,35 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "saturn": {
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "rahu": {
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "ketu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         }
@@ -37137,35 +37137,35 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "saturn": {
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "rahu": {
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "ketu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         }
@@ -37961,35 +37961,35 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "saturn": {
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "rahu": {
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "ketu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         }
@@ -38764,35 +38764,35 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "saturn": {
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "rahu": {
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "ketu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         }
@@ -39747,8 +39747,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -39756,26 +39756,26 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "rahu": {
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "ketu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         }
@@ -40673,8 +40673,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -40682,9 +40682,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "rahu": {
@@ -40692,16 +40692,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "ketu": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         }
@@ -41613,8 +41613,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -41622,9 +41622,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "rahu": {
@@ -41632,17 +41632,17 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "ketu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         }
       },
@@ -42616,8 +42616,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -42625,9 +42625,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "rahu": {
@@ -42635,17 +42635,17 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "ketu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         }
       },
@@ -43517,8 +43517,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -43526,17 +43526,17 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "rahu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -43544,9 +43544,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         }
       },
@@ -44276,8 +44276,8 @@
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -44285,17 +44285,17 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "rahu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -44303,9 +44303,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         }
       },
@@ -45078,25 +45078,25 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "saturn": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "rahu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -45104,9 +45104,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         }
       },
@@ -45981,26 +45981,26 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "saturn": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "rahu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -46008,9 +46008,9 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         }
       },
@@ -46850,26 +46850,26 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "saturn": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "rahu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -46877,9 +46877,9 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         }
       },
@@ -47725,17 +47725,17 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "saturn": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -47743,8 +47743,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -47752,9 +47752,9 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         }
       },
@@ -48639,17 +48639,17 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "saturn": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -48657,8 +48657,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -48667,8 +48667,8 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         }
       },
@@ -49490,17 +49490,17 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "saturn": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -49508,8 +49508,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -49518,8 +49518,8 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         }
       },
@@ -50438,8 +50438,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -50447,8 +50447,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -50456,9 +50456,9 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "ketu": {
@@ -50466,8 +50466,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         }
       },
@@ -51249,8 +51249,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -51258,8 +51258,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -51267,17 +51267,17 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "ketu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         }
@@ -52042,8 +52042,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -52051,8 +52051,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -52060,17 +52060,17 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "ketu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         }
@@ -52776,8 +52776,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -52785,8 +52785,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -52794,17 +52794,17 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "ketu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         }
@@ -53574,8 +53574,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -53583,8 +53583,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -53592,17 +53592,17 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "ketu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         }
@@ -54437,16 +54437,16 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "saturn": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -54454,17 +54454,17 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "ketu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         }
@@ -55292,16 +55292,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "saturn": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -55309,17 +55309,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "ketu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         }
@@ -56174,17 +56174,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "saturn": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -56192,17 +56192,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "ketu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         }
@@ -56994,17 +56994,17 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         },
         "saturn": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -57013,16 +57013,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "ketu": {
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         }
@@ -57845,9 +57845,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         },
         "saturn": {
@@ -57855,8 +57855,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "rahu": {
@@ -57864,17 +57864,17 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "ketu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         }
       },
@@ -58725,9 +58725,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         },
         "saturn": {
@@ -58735,8 +58735,8 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "rahu": {
@@ -58744,17 +58744,17 @@
           "house": 4,
           "aspects": [
             1,
-            9,
-            11
+            6,
+            10
           ]
         },
         "ketu": {
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         }
       },
@@ -59560,9 +59560,9 @@
           "sign": "Gemini",
           "house": 10,
           "aspects": [
-            3,
-            5,
-            7
+            4,
+            7,
+            12
           ]
         },
         "saturn": {
@@ -59570,16 +59570,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "rahu": {
           "sign": "Scorpio",
           "house": 3,
           "aspects": [
-            8,
-            10,
+            5,
+            9,
             12
           ]
         },
@@ -59587,9 +59587,9 @@
           "sign": "Taurus",
           "house": 9,
           "aspects": [
-            2,
-            4,
-            6
+            3,
+            6,
+            11
           ]
         }
       },
@@ -60394,8 +60394,8 @@
           "sign": "Cancer",
           "house": 11,
           "aspects": [
-            4,
-            6,
+            1,
+            5,
             8
           ]
         },
@@ -60404,16 +60404,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "rahu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -60421,9 +60421,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         }
       },
@@ -61341,8 +61341,8 @@
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -61351,16 +61351,16 @@
           "house": 5,
           "aspects": [
             2,
-            10,
-            12
+            7,
+            11
           ]
         },
         "rahu": {
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -61368,9 +61368,9 @@
           "sign": "Aries",
           "house": 8,
           "aspects": [
-            1,
-            3,
-            5
+            2,
+            5,
+            10
           ]
         }
       },
@@ -62158,8 +62158,8 @@
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -62167,17 +62167,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "rahu": {
           "sign": "Virgo",
           "house": 1,
           "aspects": [
-            6,
-            8,
+            3,
+            7,
             10
           ]
         },
@@ -62185,9 +62185,9 @@
           "sign": "Pisces",
           "house": 7,
           "aspects": [
-            2,
+            1,
             4,
-            12
+            9
           ]
         }
       },
@@ -62923,8 +62923,8 @@
           "sign": "Libra",
           "house": 2,
           "aspects": [
-            7,
-            9,
+            4,
+            8,
             11
           ]
         },
@@ -62932,17 +62932,17 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         },
         "rahu": {
           "sign": "Leo",
           "house": 12,
           "aspects": [
-            5,
-            7,
+            2,
+            6,
             9
           ]
         },
@@ -62950,9 +62950,9 @@
           "sign": "Aquarius",
           "house": 6,
           "aspects": [
-            1,
             3,
-            11
+            8,
+            12
           ]
         }
       },

@@ -286,10 +286,26 @@ def main():
         for p in ("Jupiter", "Saturn", "Rahu", "Ketu"):
             lon = (t[p]["tropical"] - ay) % 360.0
             h = K.house_of(lon, asc_sign)
+            # Parashari graha drishti: the slow grahas aspect the 3rd, 7th and
+            # 10th SIGNS from their own position. An earlier version used whole-
+            # sign HOUSE DISTANCE (h+5, h+7, h+9), which is a different scheme
+            # and produced wrong targets - e.g. Saturn in Pisces gave [2,4,12]
+            # where drishti gives the 9th, 1st and 4th. Targets are converted
+            # from sign to house through the lagna, which is required for an
+            # accurate result. Scored as advisory metadata only: the risk engine
+            # emits occupancy indicators exclusively (never aspect indicators),
+            # so no classification depended on this field.
+            sidx = K.sign_of(lon)
+            aspects_houses = sorted({
+                ((K.SIGNS.index(K.SIGNS[(sidx + k - 1) % 12]) - asc_sign) % 12) + 1
+                for k in (3, 7, 10)})
+            aspects_signs = [K.SIGNS[(sidx + k - 1) % 12] for k in (3, 7, 10)]
             entry[p.lower()] = {
-                "sign": K.SIGNS[K.sign_of(lon)],
+                "sign": K.SIGNS[sidx],
                 "house_from_lagna": h,
-                "aspects_houses": sorted({((h - 1 + k) % 12) + 1 for k in (5, 7, 9)}),
+                "aspects_houses": aspects_houses,
+                "aspects_signs": aspects_signs,
+                "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)",
             }
         sat_lon = (t["Saturn"]["tropical"] - ay) % 360.0
         entry["sade_sati"] = K.sade_sati_phase(longitudes["Moon"], sat_lon)

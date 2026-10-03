@@ -1170,7 +1170,7 @@ CROSS = [
      "HIGH"),
     ("Contract/commitment focus", "Saturn rules the 6th; Darakaraka Mars in "
      "the 1st", "not separately indicated",
-     "Saturn transits the 7th, aspects 2/4/12", "HIGH"),
+     "Saturn transits the 7th, aspects the 9th, 1st and 4th", "HIGH"),
     ("Speculative restraint", "Saturn rules the 5th; Rahu MD",
      "not separately indicated",
      "Rahu in the 6th; Ketu aspects the 5th", "MEDIUM"),

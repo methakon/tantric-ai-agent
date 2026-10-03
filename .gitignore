@@ -22,3 +22,11 @@ tantric_gateway
 tests/test_gateway
 tests/test_kinship_nashta
 documents/
+
+# Extracted text from copyrighted reference books (BEHIN BEARI / CAMPION /
+# ASTR0-LOGICS / VENKY). Working copies live in /tmp/kundali-build/books/ and
+# must never be committed to this public repo. Only derived doctrine tables
+# and citations belong here, never verbatim source text.
+docs/kundali/_books/
+*_books/
+**/_books/

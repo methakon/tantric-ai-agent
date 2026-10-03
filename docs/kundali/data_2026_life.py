@@ -16,7 +16,7 @@ import data_2026 as D
 MONEY_AREAS = [
     ("INCOME",
      "The 11th house is activated three ways: natal Rahu occupies it and runs "
-     "the Mahadasha; transiting Jupiter enters it on 1 June; Saturn's transit "
+     "the Mahadasha; transiting Jupiter enters it on 2 June; Saturn's transit "
      "from the 7th aspects it.",
      "Gains, network income, secondary earnings.",
      "Jupiter on natal Rahu in the gains house is a classically favourable "
@@ -144,7 +144,7 @@ MONEY_AREAS = [
 
 MONEY_MAJOR_GAINS = (
     "The strongest income mechanism of 2026 is Jupiter transiting the 11th "
-    "house sign over natal Rahu in own sign, from 1 June. It is strengthened by "
+    "house sign over natal Rahu in own sign, from 2 June. It is strengthened by "
     "the coincidence of the Jupiter pratyantardasha (4 May – 20 Sep). Gains "
     "here are likely to arrive through professional relationships rather than "
     "through salary, and the 11th lord's 8th-house placement means they arrive "
@@ -289,7 +289,7 @@ FAMILY_LOSS_NOTICE = (
 PROPERTY_AREAS = [
     ("OWNED PROPERTY / HOME",
      "The 4th is aspected by Saturn from the 7th and by Jupiter from the 11th "
-     "from 1 June; its lord Jupiter sits in the 2nd in own sign.",
+     "from 2 June; its lord Jupiter sits in the 2nd in own sign.",
      "Two planets contact the 4th, one restrictive and one benefic — closer to "
      "balance than most years. The 4th lord in the 2nd in own sign is a "
      "supportive structural placement.",
@@ -374,7 +374,7 @@ CROSS_TABLE = [
      "Saturn AD — 5th/6th lord, functional benefic",
      "Jupiter in Gemini (10th) until 31 May", "career YELLOW, score 4",
      "HIGH"),
-    ("Income peaks from 1 June",
+    ("Income peaks from 2 June",
      "Rahu in the 11th; 11th lord Moon in the 8th", "not separately indicated",
      "Rahu MD + Jupiter PD (4 May – 20 Sep)",
      "Jupiter in Cancer (11th) over natal Rahu", "financial YELLOW, score 2",
@@ -386,7 +386,7 @@ CROSS_TABLE = [
      "HIGH"),
     ("Contract / commitment friction",
      "Saturn rules the 6th; Darakaraka Mars in the 1st", "not separately indicated",
-     "Saturn AD on the 6th lord", "Saturn transits the 7th, aspects 2/4/12",
+     "Saturn AD on the 6th lord", "Saturn transits the 7th, aspects the 9th, 1st and 4th",
      "property YELLOW, score 3", "HIGH"),
     ("Speculative restraint needed",
      "Saturn rules the 5th; Rahu MD", "not separately indicated",
@@ -468,7 +468,7 @@ PERIODS = [
 
     ("21 Sep – 31 Dec 2026",
      "SATURN PD begins 20 Sep",
-     "Jupiter in Cancer then Leo (12th) late in the year",
+     "Jupiter in Cancer then Leo (12th) on 31 October 2026, retrograding back to Cancer on 25 January 2027",
      "Character change. The sub-period of the antardasha lord arrives while Saturn "
      "transits the 7th and Ketu occupies the 12th. Documentation and handover "
      "replace expansion.",

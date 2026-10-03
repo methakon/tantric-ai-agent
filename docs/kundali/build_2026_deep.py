@@ -196,7 +196,7 @@ W(f"| Ketu | Capricorn {N['Ketu']['deg']:.4f}° ({N['Ketu']['nak']} p{N['Ketu'][
 W("")
 W("2026 transits (production values, sign changes located by bisection):")
 W("")
-W(f"| Saturn | Pisces, whole year | {h(7)} | Aspects 2/4/12; aspects natal "
+W(f"| Saturn | Pisces, whole year | {h(7)} | Aspects the 9th, 1st and 4th; aspects natal "
   f"Jupiter. Sade Sati phase 1 (Uday) |")
 W(f"| Jupiter | Gemini, 1 Jan – 31 May | {h(10)} | Aspects 3/5/7; touches "
   f"Sun, Mercury, Venus |")

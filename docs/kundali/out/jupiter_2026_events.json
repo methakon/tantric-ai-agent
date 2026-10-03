@@ -1,0 +1,55 @@
+{
+  "_note": "Exact Lahiri sidereal instants. A, B and C are DISTINCT events; the earlier report merged A and B as '1 June'.",
+  "node_convention": {
+    "used": "mean",
+    "natal_mean_rahu_deg": 90.807566,
+    "natal_true_rahu_deg": 89.375279,
+    "note": "The natal chart uses the MEAN node, so the conjunction is computed against the mean node. Against the TRUE (KP) node the degree would differ by 1.4323 deg."
+  },
+  "A_cancer_ingress": {
+    "ist": "2026-06-02 01:30:00",
+    "utc": "2026-06-01 20:00:00 UTC",
+    "jd_ut": 2461193.337552,
+    "sidereal_longitude_deg": 90.0,
+    "sign": "Gemini",
+    "degree_in_sign": 30.0,
+    "speed_deg_per_day": 0.0,
+    "event": "Jupiter Gemini -> Cancer"
+  },
+  "B_reaches_natal_rahu": {
+    "ist": "2026-06-06 06:30:00",
+    "utc": "2026-06-06 01:00:00 UTC",
+    "jd_ut": 2461197.542618,
+    "sidereal_longitude_deg": 90.807566,
+    "sign": "Cancer",
+    "degree_in_sign": 0.807566,
+    "speed_deg_per_day": 0.0,
+    "event": "Jupiter reaches natal Rahu longitude (mean node)",
+    "node": "mean",
+    "days_after_A": 4.205066
+  },
+  "C_leaves_cancer": {
+    "ist": "2026-10-31 11:30:00",
+    "utc": "2026-10-31 06:00:00 UTC",
+    "jd_ut": 2461344.753888,
+    "sidereal_longitude_deg": 120.0,
+    "sign": "Leo",
+    "degree_in_sign": 0.0,
+    "speed_deg_per_day": 0.0,
+    "event": "Jupiter Cancer -> Leo",
+    "days_after_B": 147.21127
+  },
+  "A_to_B_hours": 100.92,
+  "retrograde_stations": [],
+  "retrograde_reentry_into_cancer": {
+    "ist": "2027-01-25 11:30:00",
+    "utc": "2027-01-25 06:00:00 UTC",
+    "jd_ut": 2461430.753888,
+    "sidereal_longitude_deg": 119.953529,
+    "sign": "Cancer",
+    "degree_in_sign": 29.953529,
+    "speed_deg_per_day": 0.0,
+    "note": "Jupiter re-enters Cancer retrograde after its Leo ingress",
+    "days_after_C": 86.0
+  }
+}

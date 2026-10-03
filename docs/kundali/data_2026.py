@@ -75,7 +75,7 @@ PD_PHASES = [
 
 # ---------------------------------------------------------------- transits
 TRANSITS_2026 = {
-    "Saturn": dict(sign="Pisces", house=7, aspects=[2, 4, 12],
+    "Saturn": dict(sign="Pisces", house=7, aspects=[1, 4, 9],
                    aspects_natal=["Jupiter (H2)"],
                    window="entire year, no sign change"),
     "Jupiter": dict(phases=[
@@ -84,7 +84,7 @@ TRANSITS_2026 = {
              window="1 Jan – 31 May 2026"),
         dict(sign="Cancer", house=11, aspects=[4, 6, 8],
              aspects_natal=["Moon (H8)"],
-             window="1 June 2026 – late 2026"),
+             window="2 June 2026 – 31 October 2026"),
         dict(sign="Leo", house=12, aspects=[2, 4, 6],
              aspects_natal=["Jupiter (H2) via sign"],
              window="late 2026 into 2027"),
@@ -176,7 +176,7 @@ PD_PROFILE = {
     ),
     "Jupiter": (
         "The year's strongest stretch. Jupiter's pratyantardasha coincides "
-        "almost exactly with Jupiter transiting into the 11th house on 1 June.",
+        "almost exactly with Jupiter transiting into the 11th house on 2 June.",
         "The best visibility-to-income conversion window of 2026. Ask for the "
         "scope, present the work, make the commercial case.",
         "The clearest income opening of the year - Jupiter on natal Rahu in "
@@ -269,9 +269,9 @@ HOUSE_SECTIONS = [
         natal="Cancer with natal RAHU in own sign. Lord Moon in the 8th. "
               "Arudha A11 Libra.",
         act="STRONG. Natal Rahu occupies it and runs the Mahadasha; transiting "
-            "Jupiter enters it on 1 June.",
+            "Jupiter enters it on 2 June.",
         planets="Rahu (natal, Mahadasha lord), Moon (11th lord, in 8th), "
-                "Jupiter (transit from 1 June), Saturn (transit, aspects the "
+                "Jupiter (transit from 2 June), Saturn (transit, aspects the "
                 "11th from the 6th/12th house).",
         pos="The clearest financial channel of the year. Jupiter on natal Rahu in "
             "the gains house is a classically favourable combination for income, "
@@ -526,7 +526,7 @@ CAREER_ITEMS = [
      "Rahu in the 11th in own sign is the Mahadasha lord's placement. The 11th "
      "is the house of network and gains.",
      "The year's clearest income channel. Jupiter crossing natal Rahu in the "
-     "11th from 1 June is the single best opening.",
+     "11th from 2 June is the single best opening.",
      "Network demands can pull attention away from the 7th — the professional "
      "network is not a substitute for the personal one.",
      "Build deliberately in the second half. Make requests specific; people "
@@ -546,7 +546,7 @@ CAREER_ITEMS = [
 MONEY_ITEMS = [
     ("INCOME", [
         "The 11th is activated three ways: natal Rahu (Mahadasha lord), "
-        "transiting Jupiter from 1 June, and Saturn's transit aspect from the "
+        "transiting Jupiter from 2 June, and Saturn's transit aspect from the "
         "6th. That is the year's strongest financial channel.",
         "Best window: 4 May – 20 September, when the Jupiter pratyantardasha "
         "and the Jupiter transit coincide.",
@@ -619,7 +619,7 @@ OPPORTUNITIES = [
     ("Jupiter crossing natal Rahu in the 11th",
      "Jupiter transiting the 11th house sign over natal Rahu in own sign — a "
      "classically favourable combination for income.",
-     "1 June 2026 onward; strongest 4 May – 20 Sep.",
+     "2 June 2026 onward; strongest 4 May – 20 Sep.",
      "Make the commercial ask here. Convert professional relationships into "
      "revenue deliberately rather than waiting to be approached.",
      "Missing the window. Jupiter leaves the 11th during 2027."),
@@ -711,7 +711,7 @@ ATTENTION = [
      "Saturn Antardasha in the Lagna; Mars conjunct; Sade Sati phase 1",
      "MODERATE", "MEDIUM"),
     ("Visible-withdrawal misreading",
-     "Ketu transiting the 12th late in the year", "LOW-MODERATE", "MEDIUM"),
+     "Ketu transiting the 12th all year (it entered Leo in 2025)", "LOW-MODERATE", "MEDIUM"),
     ("Family resource friction",
      "Saturn aspects the 2nd from the 7th — money and home together",
      "MODERATE", "HIGH"),
@@ -777,7 +777,7 @@ MAXIMIZE = {
         "Put the scope, role or compensation conversation in writing — Mercury "
         "is combust, so verbal recognition carries less weight than documented "
         "terms.",
-        "Move the commercial conversation after 1 June, when Jupiter crosses "
+        "Move the commercial conversation after 2 June, when Jupiter crosses "
         "natal Rahu in the 11th.",
         "Keep a dated record of deliverables throughout; Saturn's aspect to the "
         "10th rewards substance, and evidence of it may need producing.",
@@ -872,7 +872,7 @@ REDUCE = [
      "Irritability arriving earlier in the day than physical tiredness does.",
      "Fix sleep as a commitment. Keep check-ups scheduled. Reduce optional load "
      "before fatigue forces the issue."),
-    ("Ketu transiting the 12th late in the year",
+    ("Ketu transiting the 12th all year (it entered Leo in 2025)",
      "Withdrawal that others read as disengagement; expense; disinterest in "
      "what previously held attention.",
      "Skipping a handover because the commitment feels finished internally "
@@ -966,7 +966,7 @@ TIMELINE2 = [
      "once Jupiter enters the 11th."),
     ("1 JUNE – 20 SEPTEMBER 2026",
      "Rahu MD / Saturn AD / Jupiter PD",
-     "Jupiter enters Cancer (11th) on 1 June, crossing natal Rahu, and aspects "
+     "Jupiter enters Cancer (11th) on 2 June, crossing natal Rahu, and aspects "
      "the 4th, 6th and 8th including natal Moon. Saturn unchanged.",
      "The year's best visibility-to-income conversion. Jupiter is on natal Rahu "
      "in the gains house, and Rahu in the 11th of D10 supports non-linear "
@@ -1007,7 +1007,7 @@ TIMELINE2 = [
 # (conclusion, supporting_methods, contradicting_methods, confidence)
 AGREEMENT = [
     ("Career visibility peaks in H1", 4, 0, "HIGH"),
-    ("Income peaks from 1 June", 5, 0, "HIGH"),
+    ("Income peaks from 2 June", 5, 0, "HIGH"),
     ("Effort-to-recognition gap", 3, 0, "HIGH"),
     ("Contract/commitment friction", 4, 0, "HIGH"),
     ("Speculative restraint needed", 2, 1, "MEDIUM"),
@@ -1040,7 +1040,7 @@ TOP_ACTIONS = [
     "pivot is executed rather than observed.",
     "Front-load every income initiative into 4 May – 20 September, when the "
     "Jupiter sub-period and transit coincide.",
-    "Move the commercial conversation after 1 June, when Jupiter crosses natal "
+    "Move the commercial conversation after 2 June, when Jupiter crosses natal "
     "Rahu in the 11th.",
     "Automate savings, and keep irregular income in a separate bucket rather "
     "than letting it raise the fixed baseline.",

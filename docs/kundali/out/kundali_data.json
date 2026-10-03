@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-10-03T20:51:49",
+    "generated": "2026-10-04T00:52:36",
     "engine": "pyswisseph (Swiss Ephemeris 2.10.03)",
     "ayanamsha": "Lahiri (Chitrapaksha)",
     "house_system": "Whole-sign (bhava-chalit) for D1 interpretation; Placidus computed for KP cusps only",
@@ -6684,37 +6684,61 @@
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -6731,37 +6755,61 @@
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -6778,37 +6826,61 @@
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -6826,36 +6898,60 @@
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -6873,36 +6969,60 @@
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -6919,37 +7039,61 @@
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -6966,37 +7110,61 @@
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7013,37 +7181,61 @@
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7060,37 +7252,61 @@
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7107,37 +7323,61 @@
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7154,37 +7394,61 @@
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7201,37 +7465,61 @@
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7248,37 +7536,61 @@
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7295,37 +7607,61 @@
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7342,37 +7678,61 @@
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Uday (Ascent / Dawn)",
@@ -7390,36 +7750,60 @@
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Uday (Ascent / Dawn)",
@@ -7437,36 +7821,60 @@
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Uday (Ascent / Dawn)",
@@ -7483,37 +7891,61 @@
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Chul (Peak / Zenith)",
@@ -7530,37 +7962,61 @@
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Chul (Peak / Zenith)",
@@ -7577,37 +8033,61 @@
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Astambhan (Descent / Closure)",
@@ -7624,37 +8104,61 @@
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Astambhan (Descent / Closure)",
@@ -7671,37 +8175,61 @@
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Astambhan (Descent / Closure)",
@@ -7718,37 +8246,61 @@
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7765,37 +8317,61 @@
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7812,37 +8388,61 @@
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7859,37 +8459,61 @@
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7906,37 +8530,61 @@
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -7954,36 +8602,60 @@
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8000,37 +8672,61 @@
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8047,37 +8743,61 @@
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8094,37 +8814,61 @@
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8141,37 +8885,61 @@
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8188,37 +8956,61 @@
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8235,37 +9027,61 @@
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8282,37 +9098,61 @@
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8329,37 +9169,61 @@
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8376,37 +9240,61 @@
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8423,37 +9311,61 @@
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8470,37 +9382,61 @@
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8518,36 +9454,60 @@
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8564,37 +9524,61 @@
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8611,37 +9595,61 @@
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8658,37 +9666,61 @@
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8705,37 +9737,61 @@
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -8752,37 +9808,61 @@
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Uday (Ascent / Dawn)",
@@ -8799,37 +9879,61 @@
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Uday (Ascent / Dawn)",
@@ -8846,37 +9950,61 @@
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Chul (Peak / Zenith)",
@@ -8893,37 +10021,61 @@
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Chul (Peak / Zenith)",
@@ -8940,37 +10092,61 @@
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Chul (Peak / Zenith)",
@@ -8987,37 +10163,61 @@
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Astambhan (Descent / Closure)",
@@ -9034,37 +10234,61 @@
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": "Astambhan (Descent / Closure)",
@@ -9082,36 +10306,60 @@
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9128,37 +10376,61 @@
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9175,37 +10447,61 @@
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9222,37 +10518,61 @@
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9269,37 +10589,61 @@
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9316,37 +10660,61 @@
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9363,37 +10731,61 @@
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9410,37 +10802,61 @@
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9457,37 +10873,61 @@
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9504,37 +10944,61 @@
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9551,37 +11015,61 @@
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9599,36 +11087,60 @@
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9646,36 +11158,60 @@
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9692,37 +11228,61 @@
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9739,37 +11299,61 @@
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9786,37 +11370,61 @@
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9833,37 +11441,61 @@
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Sagittarius",
         "house_from_lagna": 4,
         "aspects_houses": [
           1,
-          9,
-          11
-        ]
+          6,
+          10
+        ],
+        "aspects_signs": [
+          "Aquarius",
+          "Gemini",
+          "Virgo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9880,37 +11512,61 @@
         "sign": "Gemini",
         "house_from_lagna": 10,
         "aspects_houses": [
-          3,
-          5,
-          7
-        ]
+          4,
+          7,
+          12
+        ],
+        "aspects_signs": [
+          "Leo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Scorpio",
         "house_from_lagna": 3,
         "aspects_houses": [
-          8,
-          10,
+          5,
+          9,
           12
-        ]
+        ],
+        "aspects_signs": [
+          "Capricorn",
+          "Taurus",
+          "Leo"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Taurus",
         "house_from_lagna": 9,
         "aspects_houses": [
-          2,
-          4,
-          6
-        ]
+          3,
+          6,
+          11
+        ],
+        "aspects_signs": [
+          "Cancer",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9927,37 +11583,61 @@
         "sign": "Cancer",
         "house_from_lagna": 11,
         "aspects_houses": [
-          4,
-          6,
+          1,
+          5,
           8
-        ]
+        ],
+        "aspects_signs": [
+          "Virgo",
+          "Capricorn",
+          "Aries"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -9974,37 +11654,61 @@
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Capricorn",
         "house_from_lagna": 5,
         "aspects_houses": [
           2,
-          10,
-          12
-        ]
+          7,
+          11
+        ],
+        "aspects_signs": [
+          "Pisces",
+          "Cancer",
+          "Libra"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aries",
         "house_from_lagna": 8,
         "aspects_houses": [
-          1,
-          3,
-          5
-        ]
+          2,
+          5,
+          10
+        ],
+        "aspects_signs": [
+          "Gemini",
+          "Libra",
+          "Capricorn"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -10021,37 +11725,61 @@
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Virgo",
         "house_from_lagna": 1,
         "aspects_houses": [
-          6,
-          8,
+          3,
+          7,
           10
-        ]
+        ],
+        "aspects_signs": [
+          "Scorpio",
+          "Pisces",
+          "Gemini"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Pisces",
         "house_from_lagna": 7,
         "aspects_houses": [
-          2,
+          1,
           4,
-          12
-        ]
+          9
+        ],
+        "aspects_signs": [
+          "Taurus",
+          "Virgo",
+          "Sagittarius"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
@@ -10068,37 +11796,61 @@
         "sign": "Libra",
         "house_from_lagna": 2,
         "aspects_houses": [
-          7,
-          9,
+          4,
+          8,
           11
-        ]
+        ],
+        "aspects_signs": [
+          "Sagittarius",
+          "Aries",
+          "Cancer"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "saturn": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "rahu": {
         "sign": "Leo",
         "house_from_lagna": 12,
         "aspects_houses": [
-          5,
-          7,
+          2,
+          6,
           9
-        ]
+        ],
+        "aspects_signs": [
+          "Libra",
+          "Aquarius",
+          "Taurus"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "ketu": {
         "sign": "Aquarius",
         "house_from_lagna": 6,
         "aspects_houses": [
-          1,
           3,
-          11
-        ]
+          8,
+          12
+        ],
+        "aspects_signs": [
+          "Aries",
+          "Leo",
+          "Scorpio"
+        ],
+        "aspect_system": "Parashari graha drishti (3rd, 7th, 10th from the graha's sign)"
       },
       "sade_sati": {
         "phase": null,
