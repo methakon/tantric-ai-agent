@@ -432,3 +432,670 @@ HOUSE_SECTIONS = [
             "credentialing.",
         avoid="Waiting for a mentor or institution to supply direction this year.")),
 ]
+
+
+# ---------------------------------------------------------------- career items
+# (item, why, opportunity, risk, action)
+CAREER_ITEMS = [
+    ("JOB / CURRENT ROLE",
+     "The 6th is doubly activated — Saturn rules it and its antardasha runs, and "
+     "transiting Rahu occupies its sign. The 6th is the house of daily work, so "
+     "the role is where the year actually lives.",
+     "Rahu in the 6th favours success through labour and unconventional methods "
+     "inside a routine structure. Doing the work well and visibly is the "
+     "reliable route this year.",
+     "Overwork is the classical failure. Because both the dasha and the transit "
+     "touch the 6th, load accumulates without any single decision to point at.",
+     "Make workload visible and bounded. Review it in writing monthly rather "
+     "than sensing it."),
+    ("PROMOTION",
+     "Jupiter transiting the 10th house sign until 31 May is a genuinely "
+     "favourable visibility window; Saturn's aspect to the 10th from the Lagna "
+     "is the counterweight rewarding substance over presentation.",
+     "Ask in the first half. The 10th-house window is finite — it closes when "
+     "Jupiter leaves Gemini.",
+     "Mercury, the 10th lord, is combust. Recognition lags effort, and Saturn's "
+     "aspect can delay a decision that was already verbally agreed.",
+     "Make the ask in writing with specific scope and dates. Do not rely on a "
+     "verbal 'soon'."),
+    ("JOB CHANGE",
+     "Rahu in the 11th of D10 traditionally indicates non-linear career paths, "
+     "and transiting Rahu in the 6th increases dissatisfaction with routine.",
+     "A move that increases scope, autonomy or income is better supported than "
+     "a lateral one. Remote, consulting or technology-mediated work fits the "
+     "Rahu signature.",
+     "Saturn's antardasha is not a period for impulsive exits. A fast informal "
+     "departure is the expensive version of this.",
+     "If leaving, do it on written terms with a settled notice period. Do not "
+     "leave during the first half without a signed agreement in hand."),
+    ("TECHNICAL SKILLS",
+     "The 3rd house holds the combust Mercury and receives Saturn's aspect and "
+     "Rahu's transit aspect. The 3rd is effort and skill; both are activated.",
+     "Depth over breadth. Mercury being both lagna and 10th lord means skill "
+     "development IS career development in this chart.",
+     "Combustion dims legibility — the work is real and may not read as such. "
+     "Rahu's aspect adds assertiveness ahead of checking.",
+     "Build one capability to demonstrable depth this year. Keep a dated record "
+     "of deliverables."),
+    ("LEADERSHIP / AUTHORITY",
+     "Saturn occupies the 1st in own sign and is the antardasha lord; Mars is "
+     "conjunct it. Authority is being exercised rather than sought.",
+     "Personal authority and capacity for sustained responsibility are "
+     "strengthened. This is the year the reputation is actually built.",
+     "Mars conjunct Saturn gives stamina AND a tendency to push past a "
+     "reasonable limit. Authority can become bluntness.",
+     "Decide the outcome before the meeting. Make space for others' input "
+     "without surrendering the decision."),
+    ("WORKPLACE POLITICS",
+     "Rahu transiting the 6th is classically associated with disputes over "
+     "work allocation. Rahu also aspects natal Mars and Saturn in the 1st.",
+     "Not a year to avoid conflict — but a year to handle it structurally.",
+     "Escalation that feels justified in the moment. Rahu on a Mars–Saturn "
+     "Lagna produces escalations with high conviction.",
+     "Put disagreements in writing and respond after a pause. Do not escalate "
+     "verbally."),
+    ("REMOTE / HYBRID / FOREIGN",
+     "Rahu in the 11th of D10 supports non-standard working arrangements; Rahu "
+     "in the 6th supports unconventional methods inside a structure.",
+     "Remote, consulting, cross-border or non-standard arrangements are better "
+     "supported this year than a conventional office trajectory.",
+     "Transiting Ketu in the 12th is the house of retreat — the same "
+     "configuration that supports remote work can produce withdrawal that reads "
+     "as disengagement.",
+     "If working remotely, be deliberate about visibility. Choose presence "
+     "deliberately rather than by default."),
+    ("FREELANCE / CONSULTING",
+     "Saturn transiting the 7th favours work governed by negotiated terms. "
+     "The 7th house is where contracts live.",
+     "Consulting and client work fit this transit better than employment. Terms "
+     "and scope become the operating mechanism.",
+     "Commitments accepted on rapport bind tighter than expected. The Saturn "
+     "aspect to the 12th means cost follows commitment.",
+     "Put scope, fees, revision limits and exit terms in writing before "
+     "starting. Budget for the full cost, not the fee."),
+    ("SIDE INCOME",
+     "The 11th house is doubly activated (natal Rahu plus transiting Jupiter from "
+     "1 June) — the house of gains beyond primary income.",
+     "Side income and secondary streams are better supported in the second half "
+     "than the first.",
+     "Rahu's speculative association. Side income that behaves like income is "
+     "the danger, not side income itself.",
+     "Keep side income separate from fixed costs. Do not let it raise the "
+     "baseline."),
+    ("PROFESSIONAL NETWORK",
+     "Rahu in the 11th in own sign is the Mahadasha lord's placement. The 11th "
+     "is the house of network and gains.",
+     "The year's clearest income channel. Jupiter crossing natal Rahu in the "
+     "11th from 1 June is the single best opening.",
+     "Network demands can pull attention away from the 7th — the professional "
+     "network is not a substitute for the personal one.",
+     "Build deliberately in the second half. Make requests specific; people "
+     "respond better to a precise ask."),
+    ("LONG-TERM CAREER BUILDING",
+     "Saturn is the Atmakaraka and rules the 5th and 6th. Saturn's periods are "
+     "traditionally the ones where durable capability is built.",
+     "This is a building year. The 6th-house emphasis means the capability "
+     "gained is practical and portable rather than title-dependent.",
+     "Recognition may arrive well after the capability exists. The gap is the "
+     "central frustration of this period.",
+     "Finish one long project rather than starting three. Completion during a "
+     "Saturn period is what converts into standing later."),
+]
+
+# ---------------------------------------------------------------- money items
+MONEY_ITEMS = [
+    ("INCOME", [
+        "The 11th is activated three ways: natal Rahu (Mahadasha lord), "
+        "transiting Jupiter from 1 June, and Saturn's transit aspect from the "
+        "6th. That is the year's strongest financial channel.",
+        "Best window: 4 May – 20 September, when the Jupiter pratyantardasha "
+        "and the Jupiter transit coincide.",
+        "Shape will be irregular. The 11th lord is in the 8th, so income "
+        "arrives through other people and shared arrangements.",
+    ]),
+    ("SAVINGS", [
+        "The 2nd house is Libra with Jupiter in own sign — structurally strong. "
+        "But transiting Saturn aspects the 2nd from the 7th, which restricts "
+        "rather than generates.",
+        "Saturn's aspect to the 2nd supports discipline over accumulation. "
+        "Savings made structural will hold; savings merely intended will not.",
+        "Savings growth may lag income growth this year. That is the expected "
+        "shape, not a failure.",
+    ]),
+    ("EXPENSES", [
+        "Saturn's aspects to the 2nd and 12th from the 7th, plus transiting Ketu "
+        "in the 12th, plus Saturn ruling the 6th during its antardasha.",
+        "Expense pressure is real but its source is specific: commitments "
+        "already accepted, not lifestyle drift.",
+        "This distinction matters — a contractual cost is negotiated, a "
+        "lifestyle cost is only controlled.",
+    ]),
+    ("DEBT AND LOANS", [
+        "Saturn rules the 6th (debt, obligation) and is the antardasha lord, "
+        "while transiting the 7th and aspecting the 12th.",
+        "Existing obligations are likely to be felt more heavily this year. New "
+        "commitments should be taken deliberately rather than opportunistically.",
+        "Timing risk: a commitment entered in the first half in expectation of "
+        "second-half relief will not be relieved on that schedule.",
+    ]),
+    ("INVESTMENTS AND SPECULATION", [
+        "Saturn rules the 5th and runs its antardasha — a genuine moderating "
+        "factor. Against that, the Mahadasha lord Rahu carries the traditional "
+        "association with speculative appetite, and the 8th holds the 11th lord.",
+        "The honest reading: appetite is elevated while structure is protective. "
+        "The discipline must come from behaviour, not from the chart.",
+        "Rahu's association is not automatically offset by Saturn ruling the 5th "
+        "— the 5th's ruler does not govern appetite.",
+    ]),
+    ("UNEXPECTED MONEY", [
+        "Rahu in the 11th with transiting Jupiter over it supports income of "
+        "unpredictable shape — irregular work, commissions, unconventional "
+        "returns.",
+        "Real but not plannable. Treat as opportunity, not as baseline.",
+        "Do not scale fixed commitments against it.",
+    ]),
+    ("FAMILY FINANCIAL RESPONSIBILITIES", [
+        "The 2nd house is also the house of family of origin, and Saturn's "
+        "aspect to the 2nd lands there.",
+        "Family financial obligations are a live theme this year. Jupiter in the "
+        "11th income may help absorb them.",
+        "These are the obligations most likely to be accepted late or without "
+        "terms. Put family arrangements in writing too.",
+    ]),
+    ("LONG-TERM WEALTH", [
+        "The 11th lord in the 8th is the classic structure for wealth "
+        "accumulating through other people, partnerships and shared resources "
+        "rather than salary alone.",
+        "Jupiter transiting the 11th in the second half supports that channel "
+        "specifically. This is a long-term build, not a 2026 event.",
+        "Shared arrangements invite disputes. Document ownership from the start.",
+    ]),
+]
+
+
+# ---------------------------------------------------------------- opportunities
+# (name, basis, when, how_to_use, what_reduces_it)
+OPPORTUNITIES = [
+    ("Jupiter crossing natal Rahu in the 11th",
+     "Jupiter transiting the 11th house sign over natal Rahu in own sign — a "
+     "classically favourable combination for income.",
+     "1 June 2026 onward; strongest 4 May – 20 Sep.",
+     "Make the commercial ask here. Convert professional relationships into "
+     "revenue deliberately rather than waiting to be approached.",
+     "Missing the window. Jupiter leaves the 11th during 2027."),
+    ("The 10th-house Jupiter visibility window",
+     "Jupiter transiting Gemini, the 10th house sign — favourable for public "
+     "standing, teaching and advisory roles.",
+     "1 January – 31 May 2026 only.",
+     "Present, publish, teach, or make the case for a role. Saturn's aspect "
+     "to the 10th rewards substance, so pair visibility with documented work.",
+     "Deferring to the second half. The door is not open all year."),
+    ("Jupiter sub-period coinciding with the Jupiter transit",
+     "The Jupiter pratyantardasha (4 May – 20 Sep) overlaps almost exactly with "
+     "Jupiter's transit into the 11th (1 June) — the year's strongest dasha "
+     "mechanism and strongest transit coinciding.",
+     "4 May – 20 September 2026.",
+     "Front-load every income-related initiative into this window. This is the "
+     "single most actionable overlap of the year.",
+     "Spreading effort across the whole year instead of concentrating it."),
+    ("Contract-based and consulting work",
+     "Saturn transiting the 7th — the house of contracts and negotiated terms — "
+     "during its own antardasha.",
+     "Whole year.",
+     "Take work governed by explicit written terms. Scope, fees and exit "
+     "conditions settled before starting.",
+     "Accepting on rapport and filling in terms later."),
+    ("Settling obligations and shared-resource matters",
+     "Jupiter aspects the 8th from the 11th from June; the Moon in the 8th is "
+     "the 11th lord.",
+     "June 2026 onward.",
+     "Close outstanding debts, disputes and shared arrangements. This is the "
+     "year's clearest opportunity for reduction of complexity.",
+     "Leaving them open — they do not resolve themselves."),
+    ("Skill depth in the 3rd house",
+     "Mercury (lagna and 10th lord) sits in the 3rd house of effort; the 3rd "
+     "receives Saturn's aspect and Rahu's transit aspect.",
+     "Whole year, strongest in the first half alongside Jupiter's 10th transit.",
+     "Build one capability to demonstrable depth. Saturn rules the 6th, so "
+     "practical capability is what this period actually rewards.",
+     "Spreading across many shallow threads."),
+    ("Network-derived income",
+     "The 11th house is activated three ways — natal Rahu (Mahadasha), "
+     "transiting Jupiter from June, and Saturn's transit aspect.",
+     "Second half strongest.",
+     "Deepen a small number of professional ties rather than broadening the "
+     "list. The 11th lord in the 8th means gains arrive through people.",
+     "Confusing contacts with relationships — Saturn in the 7th separates "
+     "the two."),
+    ("Disciplined savings structure",
+     "Jupiter in the 2nd in own sign gives a strong 2nd house; Saturn's aspect "
+     "to the 2nd rewards structure.",
+     "Whole year.",
+     "Automate savings so the discipline survives a busy period. The 2nd is "
+     "structurally sound even though the transit restricts it.",
+     "Treating irregular income as a reason to raise the fixed baseline."),
+    ("Second-half inward focus",
+     "Transiting Ketu in the 12th; Jupiter moves into the 12th house sign late "
+     "in the year.",
+     "October – December 2026.",
+     "Use the closing months for handover, closure and deliberate rest rather "
+     "than opening anything new.",
+     "Reading the withdrawal as disengagement and letting it become a "
+     "reputational cost."),
+]
+
+# ---------------------------------------------------------------- attention map
+# (area, mechanism, severity, confidence)
+ATTENTION = [
+    ("Overwork / load accumulation",
+     "Saturn rules the 6th and runs its antardasha; transiting Rahu occupies "
+     "the 6th sign", "MODERATE", "HIGH"),
+    ("Contractual over-commitment",
+     "Saturn transits the 7th and aspects the 12th — cost follows commitment",
+     "MODERATE", "HIGH"),
+    ("Speculative overreach",
+     "Rahu Mahadasha with the 8th holding the 11th lord; Saturn's rule over "
+     "the 5th is only a partial counterweight", "MODERATE", "MEDIUM"),
+    ("Expense from obligations",
+     "Saturn aspects the 2nd and 12th; Ketu transits the 12th",
+     "MODERATE", "HIGH"),
+    ("Effort-to-recognition gap",
+     "Mercury combust 1.00° from the Sun in the 3rd; Saturn aspects the 10th",
+     "MODERATE", "HIGH"),
+    ("Workplace friction",
+     "Rahu transiting the 6th aspects natal Mars and Saturn in the 1st",
+     "MODERATE", "MEDIUM"),
+    ("Communication drift",
+     "Rahu aspects natal Mercury and Sun in the 3rd", "MODERATE", "MEDIUM"),
+    ("Fatigue accumulation",
+     "Saturn Antardasha in the Lagna; Mars conjunct; Sade Sati phase 1",
+     "MODERATE", "MEDIUM"),
+    ("Visible-withdrawal misreading",
+     "Ketu transiting the 12th late in the year", "LOW-MODERATE", "MEDIUM"),
+    ("Family resource friction",
+     "Saturn aspects the 2nd from the 7th — money and home together",
+     "MODERATE", "HIGH"),
+]
+
+# (area, mechanism, trigger, response, remedy)
+ATTENTION_DETAIL = [
+    ("Overwork / load accumulation",
+     "Saturn rules the 6th and runs its antardasha while transiting Rahu "
+     "occupies the 6th sign — a double activation of the house of daily work.",
+     "The tell is a week that felt full and a month that cannot be accounted "
+     "for. Load grows at the edges of the schedule, not in a single decision.",
+     "Review workload in writing monthly. If the same items are being carried "
+     "for more than one month, that is the signal — not the week that felt "
+     "worst.",
+     "TRADITIONAL: service to elders, and a written quarterly review of "
+     "commitments. No remedy substitutes for workload management."),
+    ("Contractual over-commitment",
+     "Saturn transiting the 7th while aspecting the 12th — the house of expense. "
+     "The cost of a commitment arrives after the commitment does.",
+     "The tell is accepting something quickly because the other party is "
+     "confident. Speed of agreement is the signal, not the size of the deal.",
+     "Put scope, cost and exit terms in writing before starting. Budget for "
+     "the full cost rather than the instalment.",
+     "TRADITIONAL: a deliberate written review of obligations once during the "
+     "year, corresponding to Saturn ruling the 6th."),
+    ("Speculative overreach",
+     "Rahu's traditional association with speculative appetite during its "
+     "Mahadasha, with the 8th house holding the 11th lord.",
+     "The tell is a position justified by the Mahadasha itself — 'this is a "
+     "Rahu period, so this is the time.' That reasoning is the risk.",
+     "Separate appetite from decision. Require that any speculative commitment "
+     "would have been made in a different dasha period.",
+     "TRADITIONAL: charity on the 11th lunar day, associated with the 11th "
+     "house. Optional and modest."),
+    ("Communication drift",
+     "Rahu transiting in the 6th aspects natal Mercury and Sun in the 3rd — "
+     "the effort and communication pair — inflating assertiveness ahead of "
+     "checking.",
+     "The tell is a message or reply composed quickly and regretted slightly "
+     "later, in writing.",
+     "Write the response, wait, then send. For contested matters, verify "
+     "before responding rather than after.",
+     "TRADITIONAL: a regular morning sit-down of 15-20 minutes. Restraint of "
+     "impulse is the traditional remedy for an excessive node."),
+    ("Fatigue accumulation",
+     "Saturn Antardasha with Saturn in the Lagna in own sign, Mars conjunct, "
+     "during Sade Sati phase 1.",
+     "The tell is reduced tolerance rather than reduced capacity — irritability "
+     "before tiredness. It arrives early and is easily misread as a mood.",
+     "Protect sleep as a fixed commitment rather than a consequence of "
+     "availability. Keep routine medical check-ups on schedule.",
+     "TRADITIONAL: recitation of the Shani mantra on Saturdays if meaningful "
+     "to the individual; free, optional, and culturally traditional."),
+]
+
+
+# ---------------------------------------------------------------- maximise
+MAXIMIZE = {
+    "CAREER": [
+        "Make one visible presentation, publication or proposal before 31 May, "
+        "while Jupiter transits the 10th house sign.",
+        "Put the scope, role or compensation conversation in writing — Mercury "
+        "is combust, so verbal recognition carries less weight than documented "
+        "terms.",
+        "Move the commercial conversation after 1 June, when Jupiter crosses "
+        "natal Rahu in the 11th.",
+        "Keep a dated record of deliverables throughout; Saturn's aspect to the "
+        "10th rewards substance, and evidence of it may need producing.",
+    ],
+    "MONEY": [
+        "Front-load every income initiative into 4 May – 20 September, when the "
+        "Jupiter sub-period and the Jupiter transit coincide.",
+        "Automate savings — Saturn's aspect to the 2nd restricts rather than "
+        "generates, so structure must be mechanical.",
+        "Allocate irregular income into a separate bucket rather than raising "
+        "the fixed baseline.",
+        "Settle outstanding obligations from June, when Jupiter's aspect to the "
+        "8th assists.",
+    ],
+    "RELATIONSHIP": [
+        "Name practical disagreements about money and home directly and early.",
+        "Put significant agreements in writing with dates and exit terms.",
+        "Protect shared time deliberately — the 11th-house Rahu pulls attention "
+        "outward to network and income.",
+        "Treat delay as information rather than as refusal.",
+    ],
+    "FAMILY": [
+        "Review family financial responsibilities before they become obligations.",
+        "Put family arrangements in writing too — the 2nd and the 8th are both "
+        "active.",
+        "Use the first half for learning and creative work involving children; "
+        "Jupiter aspects the 5th until 31 May.",
+    ],
+    "HEALTH / ROUTINE": [
+        "Protect sleep as a fixed commitment, not a consequence of availability.",
+        "Keep medical check-ups on schedule and do not postpone them.",
+        "Review workload in writing monthly; the 6th is doubly activated.",
+        "Use ordinary road and workplace safety practice without exception.",
+    ],
+    "LEARNING": [
+        "Build one capability to demonstrable depth — Mercury as lagna and 10th "
+        "lord in the 3rd makes craft the career route.",
+        "Self-directed study: the 9th is barely activated, so institutions are "
+        "unlikely to supply direction this year.",
+        "Write down what is learned. Combustion dims legibility.",
+    ],
+    "PERSONAL DEVELOPMENT": [
+        "Practise a 15-20 minute morning sit-down; Sade Sati phase 1 is "
+        "traditionally a period of mental unrest.",
+        "Complete one long-running project rather than starting three — Saturn "
+        "periods reward completion over initiation.",
+        "Reconcile the effort-to-recognition gap explicitly: write down what "
+        "was delivered, because the chart will not supply the credit.",
+    ],
+}
+
+# ---------------------------------------------------------------- reduce
+# (factor, expression, early_warning, response)
+REDUCE = [
+    ("Saturn transiting the 7th, aspecting the 2nd and 12th",
+     "Commitments that bind more tightly than intended; the cost of a promise "
+     "arriving after the promise; delays in resolving partnership questions.",
+     "Accepting something quickly because the other party sounds confident. "
+     "Speed of agreement is the signal, not the size of the deal.",
+     "Scope, cost and exit terms in writing before starting. Budget the full "
+     "cost rather than the instalment."),
+    ("Rahu Mahadasha in the 11th, dispositor Moon in the 8th",
+     "Overreach — committing to scale before the structure exists. Income "
+     "arriving entangled with claims or obligations attached.",
+     "A justification that cites the period itself: 'this is a Rahu period, so "
+     "this is the time.' That reasoning is the risk.",
+     "Require that any significant commitment would have been made in a "
+     "different dasha period. If not, defer it."),
+    ("Rahu transiting the 6th, aspecting natal Mars and Saturn in the 1st",
+     "Sustained overwork without a single visible decision to point at; "
+     "workplace friction over allocation; escalation that felt justified in the "
+     "moment.",
+     "A week that felt full and a month that cannot be accounted for. Load grows "
+     "at the edges of the schedule.",
+     "Review workload in writing monthly. Treat repeated multi-month carryover "
+     "as the signal, not the worst week."),
+    ("Rahu aspecting natal Mercury and Sun in the 3rd",
+     "Assertiveness ahead of checking; commitments made verbally; "
+     "communication that is clear but not consulted.",
+     "A written reply composed quickly and regretted slightly later.",
+     "Write the response, wait, then send. Verify before responding on "
+     "contested matters rather than after."),
+    ("Mercury combust at 1.00° from the Sun, as lagna and 10th lord",
+     "Real effort with slow recognition; the sense that capability and credit "
+     "are disconnected.",
+     "Work delivered and not seen, repeated across more than one quarter.",
+     "Produce the evidence rather than assume it is visible. This is a "
+     "structural feature of the period, not a temporary mood."),
+    ("Saturn Antardasha in the Lagna with Mars conjunct, Sade Sati phase 1",
+     "Fatigue that presents as irritability rather than tiredness; reduced "
+     "tolerance before reduced capacity.",
+     "Irritability arriving earlier in the day than physical tiredness does.",
+     "Fix sleep as a commitment. Keep check-ups scheduled. Reduce optional load "
+     "before fatigue forces the issue."),
+    ("Ketu transiting the 12th late in the year",
+     "Withdrawal that others read as disengagement; expense; disinterest in "
+     "what previously held attention.",
+     "Skipping a handover because the commitment feels finished internally "
+     "while nobody else has been told.",
+     "Hand over explicitly and in writing. Schedule the retreat rather than "
+     "drifting into it."),
+    ("Saturn ruling the 6th and 5th during its own antardasha",
+     "Obligations met on Saturn's timetable rather than the native's; creative "
+     "work tempered rather than discouraged.",
+     "Committing to a long obligation in the first half in expectation of "
+     "second-half relief.",
+     "Plan on the slower timetable explicitly. Do not promise relief dates you "
+     "do not control."),
+]
+
+# ---------------------------------------------------------------- remedies
+REMEDIES = {
+    "A. DAILY": [
+        "A regular morning sit-down of 15-20 minutes. Sade Sati phase 1 is "
+        "traditionally a period of mental unrest; this is the traditional answer "
+        "to restlessness rather than to any event.",
+        "Sleep treated as a fixed commitment. Practical, not spiritual, but it "
+        "is the single highest-value daily action in a Saturn antardasha.",
+    ],
+    "B. WEEKLY": [
+        "Verbal recitation of the Shani mantra on Saturdays, if the practice is "
+        "meaningful to the individual. Traditional, optional and free.",
+        "A weekly written review of what was actually agreed this week, as "
+        "against what was intended. This is the practical counterpart of Saturn "
+        "ruling the 6th.",
+    ],
+    "C. MONTHLY": [
+        "A written review of commitments and obligations. The practical "
+        "counterpart of a Saturn antardasha ruling the 6th.",
+        "Charity on the 11th lunar day, associated in tradition with the 11th "
+        "house and with Rahu's period. Modest and deliberate rather than "
+        "displayed.",
+    ],
+    "D. IMPORTANT TRANSIT PERIODS": [
+        "Before 1 June — Jupiter in the 10th: traditional practice is to make "
+        "the effort visible. The astrological action is the visible work; the "
+        "traditional framing is that Jupiter's period rewards declaration.",
+        "4 May – 20 September — Jupiter sub-period and transit coinciding: "
+        "service to others is the traditional parallel to the widest gain of the "
+        "year, and is the reason the period is traditionally considered "
+        "generous.",
+        "20 September onward — Saturn sub-period begins: service to elders, "
+        "particularly within the family, is the traditional remedy aligned with "
+        "Saturn as antardasha lord and Atmakaraka. It costs nothing.",
+        "Whole year — respect for teachers and elders, and honest dealing in "
+        "work. These are the traditional practices that cost nothing and require "
+        "nothing of the reader.",
+    ],
+}
+
+# ---------------------------------------------------------------- timeline
+# (period, dasha, transits, career, money, relationship, family, opportunity, risk, action)
+TIMELINE2 = [
+    ("1 JANUARY – 3 MAY 2026",
+     "Rahu MD / Saturn AD / Rahu PD (ends 4 May)",
+     "Jupiter in Gemini (10th). Saturn Pisces (7th). Rahu Aquarius (6th), Ketu "
+     "Leo (12th).",
+     "Maximum professional visibility. Jupiter in the 10th supports standing; "
+     "Saturn's aspect to the 10th rewards substance.",
+     "Visibility without income conversion — recognition arrives but is not yet "
+     "monetised. The 11th is not yet activated by transit.",
+     "Saturn in the 7th throughout. Settle practical arrangements early rather "
+     "than assuming they will resolve.",
+     "Jupiter aspects the 5th until 31 May — the better window for learning "
+     "and creative work involving children.",
+     "The visibility window. Use it — make the presentation, ask for the "
+     "conversation, get terms in writing.",
+     "Over-commitment on the strength of momentum. The 10th is the house of "
+     "status, not of settled income.",
+     "Make one visible presentation or proposal before 31 May. Ask for the "
+     "scope conversation in writing."),
+    ("4 MAY – 1 JUNE 2026",
+     "Rahu MD / Saturn AD / JUPITER PD begins 4 May",
+     "Jupiter still in Gemini (10th) — the sub-period has begun but the transit "
+     "has not yet moved.",
+     "A four-week overlap: the strongest dasha mechanism arrives before the "
+     "strongest transit does. Preparing here is what makes June work.",
+     "The commercial window is opening but not yet at full strength.",
+     "Unchanged — Saturn in the 7th.",
+     "Unchanged.",
+     "The preparation window. Have the proposal, the pricing and the ask ready "
+     "so the pivot is executed rather than merely observed.",
+     "Mistaking the sub-period's arrival for the transit's — the income effect "
+     "begins in June, not May.",
+     "Use late April and early May to prepare everything that should convert "
+     "once Jupiter enters the 11th."),
+    ("1 JUNE – 20 SEPTEMBER 2026",
+     "Rahu MD / Saturn AD / Jupiter PD",
+     "Jupiter enters Cancer (11th) on 1 June, crossing natal Rahu, and aspects "
+     "the 4th, 6th and 8th including natal Moon. Saturn unchanged.",
+     "The year's best visibility-to-income conversion. Jupiter is on natal Rahu "
+     "in the gains house, and Rahu in the 11th of D10 supports non-linear "
+     "routes.",
+     "The clearest income opening of 2026. The 8th aspect assists settling what "
+     "is owed.",
+     "The 7th lord Jupiter runs its own sub-period while transiting the 11th — "
+     "partnership benefits indirectly through income.",
+     "Jupiter as Putrakaraka in the 2nd in own sign — family material matters "
+     "are constructive.",
+     "The single most actionable window of the year. Both the strongest dasha "
+     "mechanism and the strongest transit coincide.",
+     "Both windows overlap and momentum is high — the easiest point in the year "
+     "to over-commit. The 12th aspect brings costs with the gains.",
+     "Front-load every income initiative into this window. Settle obligations "
+     "while Jupiter aspects the 8th."),
+    ("21 SEPTEMBER – 31 DECEMBER 2026",
+     "Rahu MD / Saturn AD / SATURN PD begins 20 September",
+     "Jupiter continues in Cancer (11th); moves into Leo (12th) late in the "
+     "year. Saturn unchanged.",
+     "Documentation, handover and finishing. New commitments are disfavoured; "
+     "completing existing ones is strongly supported.",
+     "Expense discipline and settling obligations — Saturn aspects the 12th so "
+     "costs come due. The 11th income channel is still open.",
+     "The 7th is doubly active: transiting Saturn and the pratyantardasha of "
+     "the same planet. Friction is structural and practical.",
+     "Steady handling rather than dramatic. Family matters requiring "
+     "consistency.",
+     "A clean close. Anything completed and documented now is durable, and the "
+     "12th-house Ketu makes deliberate letting go easier than it looks.",
+     "Fatigue and the temptation to disengage quietly. Withdrawal reads as "
+     "avoidance if it is not handed over properly.",
+     "Hand over cleanly, close the books, document what was done, and schedule "
+     "deliberate rest."),
+]
+
+# ---------------------------------------------------------------- agreement
+# (conclusion, supporting_methods, contradicting_methods, confidence)
+AGREEMENT = [
+    ("Career visibility peaks in H1", 4, 0, "HIGH"),
+    ("Income peaks from 1 June", 5, 0, "HIGH"),
+    ("Effort-to-recognition gap", 3, 0, "HIGH"),
+    ("Contract/commitment friction", 4, 0, "HIGH"),
+    ("Speculative restraint needed", 2, 1, "MEDIUM"),
+    ("Expense attaches to obligations", 3, 0, "HIGH"),
+    ("Overwork risk", 3, 0, "MEDIUM"),
+    ("Communication drift", 2, 0, "MEDIUM"),
+    ("Year closes better than it opens", 2, 1, "MEDIUM"),
+]
+
+
+# ---------------------------------------------------------------- scorecard
+# (area, activation, engine_level, reading_confidence)
+SCORECARD = [
+    ("Career",              "STRONGLY",  "YELLOW", "HIGH"),
+    ("Money",               "STRONGLY",  "YELLOW", "HIGH"),
+    ("Relationship",        "STRONGLY",  "YELLOW", "HIGH"),
+    ("Family",              "MODERATELY", "YELLOW", "MEDIUM"),
+    ("Learning",            "MODERATELY", "YELLOW", "HIGH"),
+    ("Health/Safety",       "MODERATELY", "YELLOW", "MEDIUM"),
+    ("Personal development", "STRONGLY", "YELLOW", "HIGH"),
+]
+
+# ---------------------------------------------------------------- top lists
+TOP_ACTIONS = [
+    "Make one visible presentation, publication or proposal before 31 May, "
+    "while Jupiter is in the 10th house sign.",
+    "Put the scope, role or compensation conversation in writing — Mercury is "
+    "combust, so verbal recognition carries less weight than documented terms.",
+    "Have the proposal, pricing and ask ready during late April, so the 1 June "
+    "pivot is executed rather than observed.",
+    "Front-load every income initiative into 4 May – 20 September, when the "
+    "Jupiter sub-period and transit coincide.",
+    "Move the commercial conversation after 1 June, when Jupiter crosses natal "
+    "Rahu in the 11th.",
+    "Automate savings, and keep irregular income in a separate bucket rather "
+    "than letting it raise the fixed baseline.",
+    "Put every significant agreement in writing with scope, cost and exit "
+    "terms.",
+    "Review workload in writing monthly; treat multi-month carryover as the "
+    "signal, not the worst week.",
+    "Settle outstanding obligations from June, when Jupiter's aspect to the 8th "
+    "assists.",
+    "Hand over cleanly after 20 September, and schedule deliberate rest rather "
+    "than drifting into it.",
+]
+
+TOP_AVOID = [
+    "Committing to scale because 'this is a Rahu period' — that reasoning is "
+    "itself the risk.",
+    "Deferring the visible career move to the second half; the 10th-house "
+    "window closes on 31 May.",
+    "Taking on extra obligations to avoid a decision.",
+    "Adding leverage to cover a slow period.",
+    "Committing fixed costs against variable income.",
+    "Accepting open-ended commitments on the strength of rapport.",
+    "Letting a written reply be composed and sent immediately on contested "
+    "matters.",
+    "Pushing through physical limits to meet a deadline — the indicator is load, "
+    "not fate.",
+    "Assuming good work will be noticed without documentation.",
+    "Abandoning a commitment in the final quarter without an explicit handover.",
+]
+
+TOP_USE = [
+    "1 January – 31 May — the 10th-house Jupiter visibility window. Make the "
+    "presentation, ask for the conversation, get terms in writing.",
+    "4 May – 20 September — the strongest window of the year: the Jupiter "
+    "sub-period and the Jupiter transit over natal Rahu in the 11th coincide. "
+    "Front-load every income initiative.",
+    "June onward — Jupiter's aspect to the 8th assists settling obligations and "
+    "shared-resource matters.",
+    "September – October — Saturn's aspect to the 2nd rewards automating "
+    "savings and structuring what is retained.",
+    "20 September onward — the Saturn sub-period supports completing and "
+    "documenting rather than opening anything new.",
+]
+
+TOP_CAREFUL = [
+    "Late April – early May — the dasha pivot arrives four weeks before its "
+    "matching transit. Mistaking the sub-period for the income effect leads to "
+    "acting a month early.",
+    "1 June onward — both windows overlap and momentum is high. The easiest "
+    "point in the year to over-commit.",
+    "The 6th house all year — Saturn rules it, transiting Rahu occupies it, and "
+    "overwork accumulates invisibly at the edges of the schedule.",
+    "The final quarter — Ketu in the 12th brings withdrawal that others may "
+    "read as disengagement if it is not handed over.",
+    "Any commitment involving property or shared assets — Saturn aspects the "
+    "2nd and 4th, and cost follows commitment. Verify documents and obtain "
+    "independent legal review.",
+]
