@@ -1,0 +1,357 @@
+{
+  "red_rows": [
+    {
+      "year": 1987,
+      "age": 5,
+      "risk_type": "LIFE / HEALTH / SAFETY ATTENTION",
+      "category": "health_safety",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "kp",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "health_self",
+      "main_indicators": [
+        "Mars, Saturn in the 1th house",
+        "Moon in the 8th house",
+        "1th lord Mercury sits in the 3th house",
+        "6th lord Saturn sits in the 1th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 1994,
+      "age": 12,
+      "risk_type": "LIFE / HEALTH / SAFETY ATTENTION",
+      "category": "health_safety",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "kp",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "health_self",
+      "main_indicators": [
+        "Mars, Saturn in the 1th house",
+        "Moon in the 8th house",
+        "1th lord Mercury sits in the 3th house",
+        "6th lord Saturn sits in the 1th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 1997,
+      "age": 15,
+      "risk_type": "LIFE / HEALTH / SAFETY ATTENTION",
+      "category": "health_safety",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "health_self",
+      "main_indicators": [
+        "Mars, Saturn in the 1th house",
+        "Moon in the 8th house",
+        "1th lord Mercury sits in the 3th house",
+        "6th lord Saturn sits in the 1th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house"
+      ],
+      "sade_sati": "PHASE 1"
+    },
+    {
+      "year": 2000,
+      "age": 18,
+      "risk_type": "MAJOR FINANCIAL LOSS / CAPITAL-PRESERVATION ATTENTION",
+      "category": "financial",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "duty_obligations",
+      "main_indicators": [
+        "Moon in the 8th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house",
+        "Sun MD rules the [12] house(s)",
+        "Mercury AD rules the [1, 10] house(s)",
+        "Venus PD rules the [2] house(s)"
+      ],
+      "sade_sati": "PHASE 3"
+    },
+    {
+      "year": 2002,
+      "age": 20,
+      "risk_type": "MAJOR FINANCIAL LOSS / CAPITAL-PRESERVATION ATTENTION",
+      "category": "financial",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "kp",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "duty_obligations",
+      "main_indicators": [
+        "Moon in the 8th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house",
+        "Sun MD rules the [12] house(s)",
+        "Venus AD rules the [2] house(s)",
+        "Mercury PD rules the [1, 10] house(s)"
+      ],
+      "sade_sati": "PHASE 3"
+    },
+    {
+      "year": 2014,
+      "age": 32,
+      "risk_type": "PROPERTY / ASSET ATTENTION",
+      "category": "property",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "encumbrance",
+      "main_indicators": [
+        "Moon in the 8th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house",
+        "Mars MD rules the [8] house(s)",
+        "Jupiter AD rules the [4, 7] house(s)",
+        "Saturn transiting the 2th house (Libra)"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 2016,
+      "age": 34,
+      "risk_type": "LIFE / HEALTH / SAFETY ATTENTION",
+      "category": "health_safety",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "health_self",
+      "main_indicators": [
+        "Mars, Saturn in the 1th house",
+        "Moon in the 8th house",
+        "1th lord Mercury sits in the 3th house",
+        "6th lord Saturn sits in the 1th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 2016,
+      "age": 34,
+      "risk_type": "LEGAL / ADMINISTRATIVE ATTENTION",
+      "category": "legal_admin",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "dispute",
+      "main_indicators": [
+        "Mars, Saturn in the 1th house",
+        "Moon in the 8th house",
+        "1th lord Mercury sits in the 3th house",
+        "6th lord Saturn sits in the 1th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 2038,
+      "age": 56,
+      "risk_type": "PROPERTY / ASSET ATTENTION",
+      "category": "property",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "home_land",
+      "main_indicators": [
+        "Jupiter MD rules the [4, 7] house(s)",
+        "Jupiter AD rules the [4, 7] house(s)",
+        "Mars PD rules the [8] house(s)",
+        "Saturn transiting the 12th house (Leo)",
+        "Ketu transiting the 4th house (Sagittarius)",
+        "Jupiter transiting the 11th house (Cancer)"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 2039,
+      "age": 57,
+      "risk_type": "LIFE / HEALTH / SAFETY ATTENTION",
+      "category": "health_safety",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "health_self",
+      "main_indicators": [
+        "Mars, Saturn in the 1th house",
+        "Moon in the 8th house",
+        "1th lord Mercury sits in the 3th house",
+        "6th lord Saturn sits in the 1th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 2042,
+      "age": 60,
+      "risk_type": "LIFE / HEALTH / SAFETY ATTENTION",
+      "category": "health_safety",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "health_self",
+      "main_indicators": [
+        "Mars, Saturn in the 1th house",
+        "Moon in the 8th house",
+        "1th lord Mercury sits in the 3th house",
+        "6th lord Saturn sits in the 1th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 2044,
+      "age": 62,
+      "risk_type": "LIFE / HEALTH / SAFETY ATTENTION",
+      "category": "health_safety",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "health_self",
+      "main_indicators": [
+        "Mars, Saturn in the 1th house",
+        "Moon in the 8th house",
+        "1th lord Mercury sits in the 3th house",
+        "6th lord Saturn sits in the 1th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house"
+      ],
+      "sade_sati": "NONE"
+    },
+    {
+      "year": 2050,
+      "age": 68,
+      "risk_type": "PROPERTY / ASSET ATTENTION",
+      "category": "property",
+      "level": "RED",
+      "icon": "🔴",
+      "convergence": "HIGH",
+      "n_families": 4,
+      "families": [
+        "d1",
+        "dasha",
+        "jaimini",
+        "strength",
+        "transit"
+      ],
+      "strongest_theme": "encumbrance",
+      "main_indicators": [
+        "Moon in the 8th house",
+        "8th lord Mars sits in the 1th house",
+        "12th lord Sun sits in the 3th house",
+        "Jupiter MD rules the [4, 7] house(s)",
+        "Mars AD rules the [8] house(s)",
+        "Venus PD rules the [2] house(s)"
+      ],
+      "sade_sati": "NONE"
+    }
+  ],
+  "disclaimer": "This is a traditional astrological risk-awareness analysis, NOT a prediction of death, diagnosis, or any specific financial loss. A RED period means several independently-computed indicators converge on a time window warranting heightened attention, prudence and professional advice - nothing more. Astrology does not replace medical, legal or financial counsel; consult qualified professionals about any concern.",
+  "safety_rule": "No death year, fatal event, medical diagnosis or rupee amount is asserted anywhere in this analysis. Categories are ATTENTION PERIODS derived from convergence of computed indicators."
+}
