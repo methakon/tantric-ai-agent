@@ -1,0 +1,47 @@
+{
+ "_note": "P1B Dosha registry. Specification layer only — this file contains no arithmetic and returns no numerical dosha result. Rules are never reconstructed from memory.",
+ "source_first_rule": "an executable rule requires an identified, INSPECTED source plus quotable text; otherwise the dosha returns NOT_IMPLEMENTED",
+ "counts": {
+  "REGISTERED": 1
+ },
+ "computable_now": [],
+ "doshas": {
+  "dosha.kuja": {
+   "dosha_id": "dosha.kuja",
+   "name": "Kuja Dosha (Manglik)",
+   "school": "UNRESOLVED — to be named once the source is identified. Kuja/Manglik dosha is described differently in different texts, and the differences are not cosmetic: they change which houses count and from which reference point.",
+   "source": {
+    "title": "",
+    "author": "",
+    "editor": "",
+    "translator": "",
+    "edition": "",
+    "year": "",
+    "chapter": "",
+    "verse": "",
+    "page": "",
+    "table": "",
+    "url": "",
+    "local_path": "",
+    "inspected": false,
+    "note": "No citable source identified. See methods/sources/dosha_source_search.json for the search that was performed."
+   },
+   "source_version": "",
+   "formation_rules": [],
+   "cancellation_rules": [],
+   "strength_rules": [],
+   "chart_scope": "D1 — TO BE CONFIRMED against the source",
+   "required_inputs": [],
+   "orb_tolerance": "TO BE CONFIRMED — orb width for a house-boundary conjunction is a convention and must be sourced, not assumed",
+   "interpretation": "NOT WRITTEN. An interpretation drafted before the rule is frozen would only rationalise whatever the code returned.",
+   "implementation_status": "REGISTERED",
+   "validation_status": "NOT_APPLICABLE",
+   "notes": "LEADS TO CHECK, NOT RULES. The commonly taught formation places Mars in certain houses counted from the ascendant; a competing account counts from Mars itself, and a further tradition counts from the Moon. These are different specifications with different answers, so none is encoded here. Cancellation (bhanga) is likewise left empty. Next step: obtain an identified edition, quote the passage, record chapter and verse, then freeze formation_rules.",
+   "id": "dosha.kuja",
+   "source_citable": false,
+   "blocked_reason": "no source identified; a dosha rule recalled from memory is not a specification",
+   "computable": false,
+   "result_state": "NOT_IMPLEMENTED"
+  }
+ }
+}

@@ -1,0 +1,74 @@
+{
+  "_record": "P1B SOURCE-FIRST GATE — Dosha. Search performed before any rule was encoded.",
+  "_date": "2026-10-05",
+  "_outcome": "NO DOSHA RULE SOURCE AVAILABLE. Kuja/Manglik Dosha is registered as REGISTERED / UNSOURCED with EMPTY formation rules and returns NOT_IMPLEMENTED.",
+
+  "search": {
+    "locations": [
+      "/home/swarna-sekhar-dhar/Downloads/tantra/",
+      "/home/swarna-sekhar-dhar/Downloads (maxdepth 2, all PDFs enumerated)",
+      "docs/kundali project documentation and source"
+    ],
+    "methods": [
+      "filename pattern search: *parashar*, *jyotish*, *jataak*, *jyotisha*, *horasastra*, *varshaphala*, *nadi*, *dosha*",
+      "content grep for manglik|kuja|dosha across Downloads/tantra and project docs",
+      "per-PDF text extraction with a romanised-Sanskrit term probe: manglik, kuja, dosha, varshaphala, parashara, jataak, nakshatra, jyotish, panchang"
+    ],
+    "result": "No dosha rule text exists in any available document."
+  },
+
+  "documents_examined_and_rejected": [
+    {
+      "path": "~/Downloads/tantra/ramani ke jononite porinata.pdf",
+      "pages": 3,
+      "chars": 5830,
+      "jyotish_term_hits": 0,
+      "verdict": "REJECTED as a rule source — Bengali popular astronomy, no rule content whatsoever"
+    },
+    {
+      "path": "~/Downloads/tantra/tantrokto jog o mukti.pdf",
+      "pages": 3,
+      "chars": 6364,
+      "jyotish_term_hits": 0,
+      "verdict": "REJECTED as a rule source — Bengali ritual practice, no rule content"
+    }
+  ],
+
+  "false_positives_explained": "A content grep for 'dosha' matched only files this project generated: methods/dosha_registry.py, methods/sources/ashtakavarga_source.json, the HTML/PDF report templates, and prior-year dossier scripts. None is a source. verify_reference_extended.py and reference_verification.json matched on the word appearing in a gap list, not on any rule being present.",
+
+  "kuja_manglik_dosha": {
+    "registered_as": "REGISTERED",
+    "school": "UNRESOLVED",
+    "formation_rules": [],
+    "cancellation_rules": [],
+    "strength_rules": [],
+    "chart_scope": "D1 — TO BE CONFIRMED against the source",
+    "orb_tolerance": "TO BE CONFIRMED",
+    "interpretation": "NOT WRITTEN",
+    "result_state": "NOT_IMPLEMENTED",
+    "why_rules_are_empty": "Kuja/Manglik Dosha is described differently across traditions in ways that change the ANSWER, not just the wording. The commonly taught account counts Mars's house from the ascendant; a competing account counts from Mars itself; a further tradition counts from the Moon. Encoding any one of these without a citation would present a contested specification as a settled one — which is the precise failure this registry exists to block. The leads are recorded in the spec's notes field, explicitly labelled as unverified leads rather than rules.",
+    "bhanga_not_encoded": "Cancellation rules are equally unsourced and are left empty. A cancelled dosha and an absent dosha are different findings and must be separate result states (CANCELLED vs NO_FORMATION), so cancellation cannot be folded into formation.",
+    "no_checksum_fitting": "No arithmetic target was used. Dosha has no fixed checksum to fit to even if one wished to; the prohibition is honoured by having no numerical code at all."
+  },
+
+  "what_is_NOT_claimed": [
+    "No dosha is computed for any chart.",
+    "No Kuja/Manglik verdict of any kind is produced.",
+    "No 'traditional' label is attached to any unsourced rule.",
+    "No chart values were examined while building the spec — evaluating an unsourced dosha would produce a boolean that reads as a finding while being a guess."
+  ],
+
+  "next_required_work": [
+    "Obtain an identifiable edition of a dosha-bearing text (for example a Brihat Parashara Hora Shastra edition, or a named later work on dosha) with author/editor/translator, edition and year.",
+    "Read the actual passage; record chapter, verse and page.",
+    "Record WHICH counting reference the source uses — ascendant, Moon or planet — because that choice determines the result.",
+    "Freeze formation_rules with exact_text and source_ref per rule.",
+    "Freeze cancellation rules separately.",
+    "Only then implement, and test positive / negative / boundary / bhanga / wrong-chart-scope."
+  ],
+
+  "astrology_values_changed": false,
+  "engine_modified": false,
+  "numerical_code_written": false,
+  "p1a_untouched": "Ashtakavarga Mercury/Jupiter/Venus remain excluded. AV_TABLES not altered. Shadbala Drik Bala remains a disclosed unavailable zero."
+}
