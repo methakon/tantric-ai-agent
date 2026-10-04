@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<title>Janma Kundali &amp; Life Dossier — Swarna Sekhar Dhar</title>
+<style>
+@page {
+  size: A4;
+  margin: 17mm 16mm 15mm 16mm;
+  @top-left  {
+    content: "SWARNA SEKHAR DHAR · JANMA KUNDALI";
+    font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 7.6pt; color: #777777;
+    letter-spacing: .09em; vertical-align: bottom; padding-bottom: 3mm;
+  }
+  /* Section name, taken from the most recent h1. It must be RESET on every
+     page-break: WeasyPrint keeps a running string until the assignment is
+     cleared, so without `string(section, "Validation Summary")` here the
+     header on all 73 year pages read "Validation Summary" — the last h1
+     before them. */
+  /* @top-right is intentionally LEFT EMPTY.
+     WeasyPrint accepted `content: string(...)` here but rendered the text at
+     the LEFT margin instead of the right, so the running section name appeared
+     as a stray line under the left header. The per-page year label is drawn
+     in-flow, right-aligned, by `.pageyear` instead. */
+  @top-right  {
+    content: "";
+    font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 7.6pt; color: #777777;
+    letter-spacing: 0; vertical-align: bottom; padding-bottom: 3mm;
+  }
+  @bottom-left {
+    content: "Swarna Sekhar Dhar · 1981–2053";
+    font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 7.6pt; color: #777777;
+    vertical-align: top; padding-top: 3mm;
+  }
+  @bottom-right {
+    content: counter(page);
+    font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 7.6pt; color: #B8862B;
+    vertical-align: top; padding-top: 3mm;
+  }
+}
+/* Named page for year sections. The footer names the year, so a year spanning
+   two pages shows the year on both. WeasyPrint renders @bottom-left
+   correctly and did NOT honour @top-right's horizontal placement, so the year
+   is carried in the footer rather than the header. */
+@page ypage {
+  @bottom-left {
+    content: string(yhdr);
+    font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 7.6pt; color: #777777;
+    letter-spacing: 0; vertical-align: top; padding-top: 3mm;
+  }
+  @bottom-right {
+    content: counter(page);
+    font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 7.6pt; color: #B8862B;
+    vertical-align: top; padding-top: 3mm;
+  }
+}
+@page :first {
+  margin: 0;
+  @top-left { content: ""; } @top-right { content: ""; }
+  @bottom-left { content: ""; } @bottom-right { content: ""; }
+}
+
+* { box-sizing: border-box; }
+html { font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; }
+body {
+  margin: 0; color: #333333; font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif;
+  font-size: 10pt; line-height: 1.28; text-align: left;
+}
+
+/* ---------- Level 1: reader layer ---------- */
+.doc-title {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 32pt; font-weight: 400;
+  color: #1F2A44; line-height: 1.1; letter-spacing: -.01em;
+}
+.doc-sub {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 17pt; color: #5A3B00;
+  margin-top: 2mm;
+}
+h1 {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 21pt; font-weight: 600;
+  color: #1F2A44; margin: 0 0 3.5mm 0; padding-bottom: 2mm;
+  border-bottom: 1.6pt solid #1F2A44; string-set: section content(text);
+  page-break-after: avoid; break-after: avoid;
+}
+h2 {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 14.5pt; font-weight: 600;
+  color: #1F2A44; margin: 5mm 0 2mm 0; page-break-after: avoid;
+}
+h3 {
+  font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 11.5pt; font-weight: 600;
+  color: #33405C; margin: 3.5mm 0 1.5mm 0; page-break-after: avoid;
+}
+.eyebrow {
+  font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 8pt; font-weight: 600;
+  color: #5A3B00; letter-spacing: .16em; text-transform: uppercase;
+  margin: 0 0 1.5mm 0;
+}
+p { margin: 0 0 2.1mm 0; }
+.lead { font-size: 11pt; color: #1F2A44; margin-bottom: 3.5mm; }
+.prose { text-indent: 5mm; }      /* continuous prose only */
+p.prose + p.prose { margin-top: 0; }
+
+/* ---------- cards ---------- */
+.card {
+  border: .8pt solid #CFC6A8; border-left: 2.6pt solid #B8862B;
+  padding: 3mm 3.4mm; margin: 0 0 3.2mm 0; background: #FFFFFF;
+  page-break-inside: avoid; break-inside: avoid;
+}
+.card.tight { padding: 2.4mm 3mm; margin-bottom: 2.4mm; }
+.card-title {
+  font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 11.5pt; font-weight: 600;
+  color: #1F2A44; margin: 0 0 1.6mm 0;
+}
+.card-title .hnum { color: #B8862B; margin-right: 1.6mm; }
+.card-sub { color: #667085; font-size: 8.2pt; margin: 0 0 1.8mm 0; }
+
+/* house headline used inside cards */
+.house-head {
+  border-bottom: .7pt solid #D9D2BE; padding-bottom: 1.6mm; margin-bottom: 2mm;
+}
+.house-name {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 13pt; color: #1F2A44; font-weight: 600;
+}
+.house-sign { color: #5A3B00; font-size: 8.2pt; }
+
+.grid { display: flex; gap: 3mm; margin-bottom: 3.2mm; }
+.grid > * { flex: 1 1 0; }
+.grid4 { display: flex; gap: 2.4mm; margin-bottom: 3mm; }
+.grid4 > * { flex: 1 1 0; }
+
+/* ---------- at-a-glance mini cards ---------- */
+.glance {
+  border: .7pt solid #D9D2BE; border-top: 2pt solid #B8862B;
+  padding: 2.4mm 2.8mm; background: #FFFFFF; page-break-inside: avoid;
+}
+.glance .g-label {
+  font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 7.4pt; letter-spacing: .13em;
+  color: #5A3B00; text-transform: uppercase; font-weight: 600;
+}
+.glance .g-value {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 15pt; color: #1F2A44; margin: .8mm 0 1.2mm 0;
+  line-height: 1.15;
+}
+.glance .g-note { font-size: 8.2pt; color: #667085; line-height: 1.3; }
+
+/* ---------- status: dot + word, never emoji, never colour alone ---------- */
+.status {
+  display: inline-block; border: 1pt solid; border-radius: 2px;
+  padding: 1.1mm 2.6mm; font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 8.2pt;
+  font-weight: 600; letter-spacing: .07em;
+}
+.status .dot {
+  display: inline-block; width: 2.1mm; height: 2.1mm; border-radius: 50%;
+  margin-right: 1.7mm; vertical-align: middle;
+}
+
+.badge {
+  display: inline-block; border: .8pt solid; border-radius: 2px;
+  padding: .8mm 2.2mm; font-size: 7.4pt; font-weight: 600;
+  letter-spacing: .08em;
+}
+
+/* ---------- tables ---------- */
+table.t {
+  width: 100%; border-collapse: collapse; font-size: 8.4pt;
+  page-break-inside: auto;
+}
+table.t thead { display: table-header-group; }
+table.t th {
+  background: #1F2A44; color: #FFFFFF; font-weight: 600; text-align: left;
+  padding: 1.7mm 2mm; font-size: 7.8pt; letter-spacing: .06em;
+  border: none;
+}
+table.t td {
+  padding: 1.5mm 2mm; border-bottom: .5pt solid #D9D2BE; vertical-align: top;
+}
+table.t tbody tr:nth-child(even) td { background: #FBF9F3; }
+table.t tbody tr { page-break-inside: avoid; }
+table.t td.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.t tr.hi td { background: #FAF6EA !important; font-weight: 600; }
+table.t caption {
+  caption-side: top; text-align: left; font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif;
+  font-size: 8pt; color: #5A3B00; letter-spacing: .13em;
+  padding-bottom: 1.6mm; text-transform: uppercase;
+}
+
+/* ---------- Level 2/3 blocks ---------- */
+.basis {
+  border: .6pt dashed #CFC6A8; background: #FAF6EA; padding: 2.4mm 3mm;
+  margin: 2.2mm 0; font-size: 8.2pt; color: #33405C;
+}
+.basis .b-head {
+  font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  font-size: 7.4pt; color: #5A3B00; margin-bottom: 1.2mm;
+}
+.data-line {
+  font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 8pt; color: #777777;
+  letter-spacing: .01em;
+}
+.kv { width: 100%; border-collapse: collapse; font-size: 8.2pt; }
+.kv td { padding: .8mm 0; vertical-align: top; }
+.kv td.k { color: #5A3B00; width: 34%; letter-spacing: .05em; }
+.kv td.v { color: #33405C; }
+
+.action {
+  border-left: 2.6pt solid #B8862B; background: #FAF6EA;
+  padding: 2.4mm 3mm; margin: 2.4mm 0; font-size: 9pt;
+}
+.callout {
+  border: 1pt solid #1F2A44; background: #FFFFFF; padding: 3mm 3.4mm;
+  margin: 3mm 0; page-break-inside: avoid;
+}
+.callout .co-title {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 12.5pt; color: #1F2A44; margin-bottom: 1.6mm;
+}
+
+/* ---------- bullets: hanging indent ---------- */
+ul.b { margin: 0 0 2.2mm 0; padding-left: 4.4mm; }
+ul.b li { margin-bottom: 1.1mm; padding-left: .6mm; }
+ul.b li::marker { color: #B8862B; }
+
+/* ---------- cover ---------- */
+.cover { height: 297mm; padding: 0; page-break-after: always; }
+.cover-band {
+  background: #1F2A44; color: #FFFFFF; padding: 26mm 20mm 18mm 20mm;
+  text-align: center;
+}
+.cover-band .c-eyebrow {
+  font-size: 8pt; letter-spacing: .30em; color: #CFC6A8;
+  text-transform: uppercase; margin-bottom: 9mm;
+}
+.cover-band h1 {
+  border: none; margin: 0; color: #FFFFFF; font-size: 34pt;
+  string-set: none; padding: 0;
+}
+.cover-band .c-name {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 34pt; color: #FFFFFF; letter-spacing: .01em;
+  margin: 0 0 3mm 0;
+}
+.cover-band .c-sub {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 20pt; color: #CFC6A8; margin: 0;
+}
+.cover-body { padding: 16mm 20mm 0 20mm; text-align: center; }
+.cover-chart { width: 62%; margin: 4mm auto 0 auto; display: block; }
+.cover-chart img { width: 100%; display: block; }
+.cover-rule {
+  height: 1.6pt; background: #CFC6A8; width: 34mm; margin: 0 auto 9mm auto;
+}
+.cover-foot {
+  position: running(coverfoot); text-align: center; padding: 0 20mm;
+  color: #667085; font-size: 8.4pt; line-height: 1.6;
+}
+
+/* ---------- TOC ---------- */
+.toc-num { font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 10pt; color: #B8862B; }
+.toc-row {
+  display: flex; align-items: baseline; padding: 1.5mm 0;
+  border-bottom: .4pt dotted #CFC6A8;
+}
+.toc-label { flex: 1 1 auto; }
+.toc-page { color: #B8862B; font-size: 9pt; }
+
+/* ---------- charts ---------- */
+.chartgrid { display: flex; flex-wrap: wrap; gap: 3.2mm; }
+.chartcell { width: 46%; page-break-inside: avoid; text-align: center; }
+.chartcell img {
+  width: 100%; display: block; margin: 0 auto;
+}
+.chart-cap {
+  font-size: 8.2pt; color: #33405C; margin-top: 1.4mm;
+}
+.chart-cap .cc-code { color: #5A3B00; font-weight: 600; letter-spacing: .1em; }
+.chart-fig {
+  width: 58%; margin: 3mm auto; text-align: center;
+}
+.chart-fig img { width: 100%; display: block; margin: 0 auto; }
+
+/* ---------- year banner ---------- */
+.banner {
+  background: #1F2A44; color: #FFFFFF; padding: 3.4mm 4mm; margin: 0 0 3.4mm 0;
+  page-break-inside: avoid; page-break-after: avoid;
+}
+/* Feeds the running header.
+   `string-set: yhdr content()` was tried and REJECTED: `content()` copies the
+   element's rendered text INCLUDING nested markup, which produced an empty
+   `@top-right` box on every page. A literal string renders correctly — an
+   isolated probe confirmed '2026 · YEAR-WISE' comes through intact with
+   `letter-spacing: 0`. The trade-off is that the header year is set per
+   section rather than per page; the visible banner remains the authority.
+   `letter-spacing: 0` is mandatory — inherited .07em printed
+   "Y E A R - W I S E". */
+.banner.yr-hdr { string-set: yhdr content(text); }
+.banner .b-eyebrow {
+  font-size: 7.6pt; letter-spacing: .2em; color: #CFC6A8; text-transform: uppercase;
+}
+.banner .b-year {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 27pt; color: #FFFFFF; line-height: 1.1;
+  margin: .8mm 0 1.6mm 0;
+}
+.banner .b-dasha {
+  font-size: 10pt; color: #CFC6A8; letter-spacing: .04em;
+}
+.banner .b-status { margin-top: 2.2mm; }
+.banner .b-sens {
+  display: inline-block; margin-top: 1.8mm; border: .8pt solid #CFC6A8;
+  color: #CFC6A8; font-size: 7.4pt; letter-spacing: .1em; padding: .7mm 2mm;
+}
+
+.bars { width: 100%; }
+.bars td { padding: 1.1mm 0; border-bottom: .4pt solid #D9D2BE; }
+.bars .b-label {
+  font-size: 8.2pt; color: #5A3B00; letter-spacing: .08em;
+  width: 30%;
+}
+.bars .b-track { width: 46%; }
+.bars .b-word {
+  font-size: 8.2pt; color: #33405C; text-align: right; width: 24%;
+}
+
+/* ---------- heatmap ---------- */
+.heat td {
+  width: 8mm; height: 6.4mm; text-align: center; font-size: 7.4pt;
+  border: .5pt solid #FFFFFF;
+}
+
+/* ---------- timeline ---------- */
+.tl { width: 100%; border-collapse: collapse; }
+.tl td { padding: 0; vertical-align: top; }
+.tl .tl-bar { height: 2.6mm; }
+.tl .tl-yr { font-size: 7pt; color: #667085; text-align: center; padding-top: .8mm; }
+.tl .tl-name {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; font-size: 9pt; color: #1F2A44; text-align: center;
+  padding-top: 1mm;
+}
+
+/* ---------- misc ---------- */
+.pagebreak { page-break-before: always; }
+.avoid { page-break-inside: avoid; break-inside: avoid; }
+/* Year identifier repeated on every page of a year, at the top RIGHT.
+   Implemented as a normal in-flow element rather than a `@top-right` margin
+   box: WeasyPrint accepted the margin box but did not honour its horizontal
+   alignment, so the running section string rendered at the LEFT margin
+   directly beneath the left header, reading as a stray line of text. An
+   in-flow right-aligned block is unambiguous and renders identically in
+   every engine. */
+.pageyear {
+  text-align: right; font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 7.4pt; color: #777777;
+  margin: -3mm 0 2.5mm 0; letter-spacing: 0; page-break-after: avoid;
+}
+.center { text-align: center; }
+.muted { color: #667085; }
+.small { font-size: 8.2pt; }
+.tiny { font-size: 7.4pt; color: #777777; }
+.pb { color: #5A3B00; }
+.k {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif; color: #1F2A44; font-weight: 600;
+}
+.divider { height: .8pt; background: #D9D2BE; margin: 3.5mm 0; }
+.warn {
+  border: 1pt solid #C79A2E;
+  background: #FCF6E3;
+  padding: 2.6mm 3.2mm; font-size: 8.2pt;
+}
+</style>
+</head><body>
+
+<div class="cover">
+  <div class="cover-band">
+    <div class="c-eyebrow">Vedic Astrology · Dasha · Transit · Life Themes</div>
+    <div class="c-name">SWARNA SEKHAR DHAR</div>
+    <div class="c-sub">Janma Kundali &amp; Life Dossier</div>
+    <div class="c-sub" style="font-size:14pt;margin-top:4mm;color:#CFC6A8">
+      1981 — 2053</div>
+  </div>
+  <div class="cover-body">
+    <div class="cover-rule"></div>
+    <table class="kv" style="width:74%;margin:0 auto;">
+      <tr><td class="k">Date of birth</td>
+          <td class="v">9 December 1981</td></tr>
+      <tr><td class="k">Time</td><td class="v">01:00 IST</td></tr>
+      <tr><td class="k">Place</td>
+          <td class="v">Berhampore, Murshidabad, West Bengal</td></tr>
+      <tr><td class="k">Lagna</td>
+          <td class="v">Virgo ascendant,
+          13.89°</td></tr>
+    </table>
+    <div class="cover-chart"><img src="d1.svg" alt="Birth chart"/></div>
+    <div class="cover-foot">
+      Lahiri sidereal · Parashari whole-sign · mean node<br/>
+      Independently verified computational framework<br/>
+      <span class="tiny">Traditional interpretation. Not a forecast.
+      See Interpretation &amp; Safety Notice.</span>
+    </div>
+  </div>
+</div>
+
+<h1>Introduction</h1>
+<p class="lead">This is a computationally derived Vedic chart and a
+year-wise reading of the period 1981–2053, together with the evidence and
+its limits.</p>
+
+<h2>The birth record</h2>
+<table class="kv">
+  <tr><td class="k">Date</td><td class="v">1981-12-09
+      · 01:00:00</td></tr>
+  <tr><td class="k">Place</td><td class="v">Berhampore, Murshidabad, West Bengal, India</td></tr>
+  <tr><td class="k">Coordinates</td>
+      <td class="v">,
+      </td></tr>
+  <tr><td class="k">Julian day (UT)</td>
+      <td class="v data-line">2444947.3125</td></tr>
+  <tr><td class="k">Ayanamsa</td>
+      <td class="v">Lahiri (Chitrapaksha)
+      (23.604776°)</td></tr>
+  <tr><td class="k">House system</td>
+      <td class="v">Whole-sign (bhava-chalit) for D1 interpretation; Placidus computed for KP cusps only</td></tr>
+  <tr><td class="k">Node</td><td class="v">Mean node</td></tr>
+  <tr><td class="k">Ephemeris</td>
+      <td class="v data-line">pyswisseph (Swiss Ephemeris 2.10.03)</td></tr>
+</table>
+
+<h2>How to read this report</h2>
+<p class="prose">Each subject has a reader-facing section that states what
+the tradition reads, followed by a compact astrological-basis box naming the
+mechanism, and — in the appendix — the exact scores and conventions behind
+it. Meaning comes before mechanics.</p>
+
+<div class="callout">
+  <div class="co-title">Interpretation &amp; Safety Notice</div>
+<p class="small"><b>This report separates three things that are easy to confuse.</b></p><p class="small"><b>DATA</b> — Placements, degrees, dasha periods and transit instants. These are computed from the birth record with the Swiss Ephemeris and are reproducible.</p><p class="small"><b>TRADITIONAL INTERPRETATION</b> — The readings in the reader-facing sections. They follow classical Jyotish doctrine — whole-sign houses, the significations of planets and houses — and are offered for consideration.</p><p class="small"><b>PRACTICAL FOCUS</b> — Suggestions for attention and effort. These are general considerations, not instructions or guarantees.</p><p class="small"><b>This is not a prediction of events.</b></p><p class="small"><b>NO EVENT-LEVEL VALIDATION</b> — The engine's per-year risk and mechanism readings were back-tested against 13 years of documented life events. That back-test found NO ability to distinguish event years from arbitrary years: the same verdict falls in 80.5% of arbitrary category-years, and a floor-independent rank test returned a median probability of 0.500 with 0 of 20 event years in the top decile of their own null distribution. Treat every yearly reading as traditional interpretation, not as a forecast.</p><p class="small"><b>No death, illness, or exact monetary loss is predicted.</b></p><p class="small"><b>Difficult periods are described as attention and sensitivity, never as certainty. Sade Sati is presented as a period of heightened emotional and family sensitivity, which is how the tradition reads it in practice.</b></p><p class="small"><b>Traditional remedies are cultural practice, not medical or financial advice. Nothing here substitutes for professional care.</b></p>
+</div>
+
+<h1>Chart at a Glance</h1>
+<p class="lead">Eight facts about this chart, and what each one carries.</p>
+<div class="grid4"><div class="glance"><div class="g-label">Lagna</div><div class="g-value">Virgo</div><div class="g-note">13.89° · ruler Mercury</div></div><div class="glance"><div class="g-label">Moon sign</div><div class="g-value">Aries</div><div class="g-note">Bharani · in the 8th house</div></div><div class="glance"><div class="g-label">Sun sign</div><div class="g-value">Scorpio</div><div class="g-note">Jyeshtha · in the 3th house</div></div><div class="glance"><div class="g-label">Current dasha</div><div class="g-value">Jupiter / Rahu</div><div class="g-note">As of 2053 · pratyantardasha Mercury</div></div></div>
+<div class="grid4"><div class="glance"><div class="g-label">Career signature</div><div class="g-value">Mercury-ruled, 10th in Aquarius</div><div class="g-note">Intellectual and technical work carries the most weight; gains arrive through networks rather than rank alone.</div></div><div class="glance"><div class="g-label">Money signature</div><div class="g-value">2nd lord in 5th</div><div class="g-note">Wealth builds through craft and creative output, not through inheritance alone.</div></div><div class="glance"><div class="g-label">Relationship signature</div><div class="g-value">7th lord in 6th</div><div class="g-note">Partnership works best through service and shared work rather than sentiment alone.</div></div><div class="glance"><div class="g-label">Life direction</div><div class="g-value">AK Rahu</div><div class="g-note">Karakamsha Cancer · AL —</div></div></div>
+
+<div class="basis">
+  <div class="b-head">Astrological basis</div>
+  <div class="data-line">Ascendant Virgo 13.8897° ·
+  Moon Aries 16.8722° ·
+  Sun Scorpio 23.0303° ·
+  AK Rahu · KP lagna sub ['Moon', 'Jupiter']</div>
+</div>
+
+<h1>Birth Charts</h1>
+<h2>Core charts</h2>
+<div class="chartgrid"><div class="chartcell"><img src="d1.svg" alt="D1 Rashi"/><div class="chart-cap"><span class="cc-code">D1</span> · The primary birth chart</div></div><div class="chartcell"><img src="d9.svg" alt="D9 Navamsa"/><div class="chart-cap"><span class="cc-code">D9</span> · Dharmamspada · strength and dharma</div></div><div class="chartcell"><img src="d10.svg" alt="D10 Dasamsa"/><div class="chart-cap"><span class="cc-code">D10</span> · Karmamspada · vocation</div></div><div class="chartcell"><img src="d7.svg" alt="D7 Saptamsa"/><div class="chart-cap"><span class="cc-code">D7</span> · Saptamsa · children</div></div></div>
+<div class="basis"><div class="b-head">Note</div>
+Whole-sign houses from the ascendant.
+</div>
+
+<h2>Supporting vargas</h2>
+<div class="chartgrid"><div class="chartcell"><img src="d2.svg" alt="D2 Hora D2"/><div class="chart-cap"><span class="cc-code">D2</span> · Calculated</div></div><div class="chartcell"><img src="d3.svg" alt="D3 Drekkana D3"/><div class="chart-cap"><span class="cc-code">D3</span> · Calculated</div></div><div class="chartcell"><img src="d12.svg" alt="D12 Dwadasamsa D12"/><div class="chart-cap"><span class="cc-code">D12</span> · Calculated</div></div><div class="chartcell"><img src="d16.svg" alt="D16 Shodasamsa D16"/><div class="chart-cap"><span class="cc-code">D16</span> · Calculated</div></div><div class="chartcell"><img src="d20.svg" alt="D20 Vimsamsa D20"/><div class="chart-cap"><span class="cc-code">D20</span> · Calculated</div></div><div class="chartcell"><img src="d24.svg" alt="D24 Chaturvimsamsa D24"/><div class="chart-cap"><span class="cc-code">D24</span> · Calculated</div></div><div class="chartcell"><img src="d30.svg" alt="D30 Trimsamsa D30"/><div class="chart-cap"><span class="cc-code">D30</span> · Calculated</div></div><div class="chartcell"><img src="d60.svg" alt="D60 Shashtiamsa D60"/><div class="chart-cap"><span class="cc-code">D60</span> · Calculated</div></div></div>
+<p class="small muted">D27 (Bhreshta) is not implemented — 15 of 16 vargas are computed. These charts are calculated and shown for
+completeness; each is interpreted only where it materially changes a reading
+elsewhere in this report.</p>
+
+<h1>Planetary Positions</h1>
+<table class="t">
+  <caption>D1 · sidereal longitudes, Lahiri</caption>
+  <thead><tr><th>Planet</th><th>Sign</th><th>Degree</th><th>House</th>
+  <th>Nakshatra</th><th>Pada</th><th>State</th><th>Key role</th></tr></thead>
+  <tbody><tr class=""><td><b>Sun</b></td><td>Scorpio</td><td class="data-line">23°01′</td><td>3</td><td>Jyeshtha 2</td><td class="num">2</td><td>Enemy's sign</td><td class="small">functional malefic</td></tr><tr class=""><td><b>Moon</b></td><td>Aries</td><td class="data-line">16°52′</td><td>8</td><td>Bharani 2</td><td class="num">2</td><td>Enemy's sign</td><td class="small">mixed / neutral functional status</td></tr><tr class="hi"><td><b>Mars</b></td><td>Virgo</td><td class="data-line">2°55′</td><td>1</td><td>Uttara Phalguni 2</td><td class="num">2</td><td>Enemy's sign</td><td class="small">Darakaraka</td></tr><tr class="hi"><td><b>Mercury</b></td><td>Scorpio</td><td class="data-line">22°01′</td><td>3</td><td>Jyeshtha 2</td><td class="num">2</td><td>Enemy's sign</td><td class="small">functional benefic</td></tr><tr class="hi"><td><b>Jupiter</b></td><td>Libra</td><td class="data-line">8°37′</td><td>2</td><td>Swati 1</td><td class="num">1</td><td>Enemy's sign</td><td class="small">functional benefic</td></tr><tr class=""><td><b>Venus</b></td><td>Capricorn</td><td class="data-line">6°21′</td><td>5</td><td>Uttara Ashadha 3</td><td class="num">3</td><td>Enemy's sign</td><td class="small">functional benefic</td></tr><tr class=""><td><b>Saturn</b></td><td>Virgo</td><td class="data-line">26°14′</td><td>1</td><td>Chitra 1</td><td class="num">1</td><td>Enemy's sign</td><td class="small">functional benefic</td></tr><tr class="hi"><td><b>Rahu</b></td><td>Cancer</td><td class="data-line">0°48′</td><td>11</td><td>Punarvasu 4</td><td class="num">4</td><td>n/a — lunar node has no classical dignity · Rx</td><td class="small">Atmakaraka</td></tr><tr class=""><td><b>Ketu</b></td><td>Capricorn</td><td class="data-line">0°48′</td><td>5</td><td>Uttara Ashadha 2</td><td class="num">2</td><td>n/a — lunar node has no classical dignity · Rx</td><td class="small">shadowy node - traditionally treated as a malefic agent</td></tr></tbody>
+</table>
+<p class="small muted">Shaded rows are the lagna lord, the 10th lord, the 7th
+lord, the Atmakaraka or the Darakaraka. Planets appear once; the ascendant is
+shown on the chart page.</p>
+<div class="basis"><div class="b-head">Astrological basis</div>
+<div class="data-line">lagna lord Mercury ·
+10th lord Mercury · 7th lord Jupiter ·
+AK Rahu · DK Mars</div></div>
+<h1>House-by-House</h1>
+<p class="lead">Twelve houses, read in whole-sign from the ascendant. Each
+house carries a meaning, a strength and a specific way to go wrong.</p>
+<div class="card">
+  <div class="house-head"><span class="house-name">1 · SELF</span><div class="house-sign">Virgo · Mercury · body, temperament, direction</div></div>
+  <p class="small muted" style="margin-bottom:2mm">Ascendant in Virgo, Mars in Virgo, Saturn in Virgo</p>
+  <h3>Core meaning</h3><p class="small">A person's manner and direction come from here. The sign and its occupants colour how the life is approached rather than what happens.</p>
+  <h3>Strength</h3><p class="small">The ascendant is the most personal point in the chart.</p>
+  <h3>Watch</h3><p class="small">Impulse can outrun judgement when the sign is fiery.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">2 · FAMILY &amp; MEANS</span><div class="house-sign">Libra · Venus · speech, savings, values</div></div>
+  <p class="small muted" style="margin-bottom:2mm">Jupiter in Libra</p>
+  <h3>Core meaning</h3><p class="small">Family, speech, savings and values.</p>
+  <h3>Strength</h3><p class="small">Accumulated resource and the voice that spends it.</p>
+  <h3>Watch</h3><p class="small">Speech that outruns intent costs more than it earns.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">3 · COURAGE &amp; SIBLINGS</span><div class="house-sign">Scorpio · Mars · effort, initiative, communication</div></div>
+  <p class="small muted" style="margin-bottom:2mm">Mercury in Scorpio, Sun in Scorpio</p>
+  <h3>Core meaning</h3><p class="small">Effort, initiative, communication, siblings.</p>
+  <h3>Strength</h3><p class="small">Where courage is applied and skill is built.</p>
+  <h3>Watch</h3><p class="small">Initiative without finish becomes scattered effort.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">4 · HOME &amp; MOTHER</span><div class="house-sign">Sagittarius · Jupiter · land, vehicle, inner peace, education</div></div>
+  <p class="small muted" style="margin-bottom:2mm">No planet occupies this house.</p>
+  <h3>Core meaning</h3><p class="small">Home, land, mother, vehicle, education, inner peace.</p>
+  <h3>Strength</h3><p class="small">The foundation the rest of the chart rests on.</p>
+  <h3>Watch</h3><p class="small">A restless home drains what the 10th earns.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">5 · INTELLECT &amp; CHILDREN</span><div class="house-sign">Capricorn · Saturn · learning, creativity, progeny</div></div>
+  <p class="small muted" style="margin-bottom:2mm">Ketu in Capricorn, Venus in Capricorn</p>
+  <h3>Core meaning</h3><p class="small">Intellect, creativity, children, purva punya.</p>
+  <h3>Strength</h3><p class="small">Where learning turns into output.</p>
+  <h3>Watch</h3><p class="small">Scattered interests dilute a strong fifth.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">6 · CONFLICT &amp; SERVICE</span><div class="house-sign">Aquarius · Saturn · health, debt, daily work, competitors</div></div>
+  <p class="small muted" style="margin-bottom:2mm">No planet occupies this house.</p>
+  <h3>Core meaning</h3><p class="small">Conflict, health, debt, service, competitors.</p>
+  <h3>Strength</h3><p class="small">Work done and obstacles met.</p>
+  <h3>Watch</h3><p class="small">Service without boundaries becomes self-neglect.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">7 · MARRIAGE &amp; PARTNERSHIP</span><div class="house-sign">Pisces · Jupiter · spouse, contracts, negotiation</div></div>
+  <p class="small muted" style="margin-bottom:2mm">No planet occupies this house.</p>
+  <h3>Core meaning</h3><p class="small">Marriage, partnership, contracts, negotiation.</p>
+  <h3>Strength</h3><p class="small">How partnership is formed and kept.</p>
+  <h3>Watch</h3><p class="small">A 7th lord in the 6th ties relationship to work and friction.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">8 · TRANSFORMATION</span><div class="house-sign">Aries · Mars · longevity, research, hidden matters, inheritance</div></div>
+  <p class="small muted" style="margin-bottom:2mm">Moon in Aries</p>
+  <h3>Core meaning</h3><p class="small">Transformation, longevity, research, inheritance, hidden things.</p>
+  <h3>Strength</h3><p class="small">What changes and what can be released.</p>
+  <h3>Watch</h3><p class="small">Intensity that reads as crisis is often just 8th-house work.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">9 · FATHER &amp; DHARMA</span><div class="house-sign">Taurus · Venus · fortune, higher study, teachers, belief</div></div>
+  <p class="small muted" style="margin-bottom:2mm">No planet occupies this house.</p>
+  <h3>Core meaning</h3><p class="small">Father, fortune, higher study, teachers, dharma.</p>
+  <h3>Strength</h3><p class="small">Meaning, teachers and the long road.</p>
+  <h3>Watch</h3><p class="small">Belief held rigidly narrows the 9th's benefit.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">10 · CAREER &amp; STATUS</span><div class="house-sign">Gemini · Mercury · vocation, public role, authority</div></div>
+  <p class="small muted" style="margin-bottom:2mm">No planet occupies this house.</p>
+  <h3>Core meaning</h3><p class="small">Career, status, authority, public role.</p>
+  <h3>Strength</h3><p class="small">What the world sees.</p>
+  <h3>Watch</h3><p class="small">Status pursued rather than earned becomes its own trap.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">11 · GAINS &amp; NETWORKS</span><div class="house-sign">Cancer · Moon · income, elder siblings, allies</div></div>
+  <p class="small muted" style="margin-bottom:2mm">Rahu in Cancer</p>
+  <h3>Core meaning</h3><p class="small">Gains, networks, elder siblings, fulfilment of hopes.</p>
+  <h3>Strength</h3><p class="small">Where returns arrive.</p>
+  <h3>Watch</h3><p class="small">Networks without follow-through produce contacts, not income.</p>
+</div><div class="card">
+  <div class="house-head"><span class="house-name">12 · LOSS &amp; RELEASE</span><div class="house-sign">Leo · Sun · expense, foreign lands, letting go, retreat</div></div>
+  <p class="small muted" style="margin-bottom:2mm">No planet occupies this house.</p>
+  <h3>Core meaning</h3><p class="small">Loss, expense, foreign lands, retreat, letting go.</p>
+  <h3>Strength</h3><p class="small">What is released, and the cost of it.</p>
+  <h3>Watch</h3><p class="small">The 12th is not only loss; it is also retreat and foreign ground.</p>
+</div>
+
+<h1>Strength &amp; Yogas</h1>
+<h2>Ashtakavarga — Moon</h2>
+<table class="t heat"><thead><tr><th>House</th><th>1</th><th>2</th><th>3</th>
+<th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+<th>11</th><th>12</th></tr></thead>
+<tbody><tr><td class="heat" style="background:#1F2A44;color:#fff">Bindu</td>
+<td class="heat" style="background:rgb(222,206,170);color:#1F2A44">4</td><td class="heat" style="background:rgb(215,196,154);color:#1F2A44">5</td><td class="heat" style="background:rgb(215,196,154);color:#1F2A44">5</td><td class="heat" style="background:rgb(215,196,154);color:#1F2A44">5</td><td class="heat" style="background:rgb(230,216,186);color:#1F2A44">3</td><td class="heat" style="background:rgb(215,196,154);color:#1F2A44">5</td><td class="heat" style="background:rgb(222,206,170);color:#1F2A44">4</td><td class="heat" style="background:rgb(215,196,154);color:#1F2A44">5</td><td class="heat" style="background:rgb(252,246,234);color:#1F2A44">0</td><td class="heat" style="background:rgb(208,186,138);color:#1F2A44">6</td><td class="heat" style="background:rgb(215,196,154);color:#1F2A44">5</td><td class="heat" style="background:rgb(237,226,202);color:#1F2A44">2</td></tr><tr><td class="heat" style="background:#FFFFFF"></td>
+<td class="heat" style="background:#FFFFFF;color:#667085">1</td><td class="heat" style="background:#FFFFFF;color:#667085">2</td><td class="heat" style="background:#FFFFFF;color:#667085">3</td><td class="heat" style="background:#FFFFFF;color:#667085">4</td><td class="heat" style="background:#FFFFFF;color:#667085">5</td><td class="heat" style="background:#FFFFFF;color:#667085">6</td><td class="heat" style="background:#FFFFFF;color:#667085">7</td><td class="heat" style="background:#FFFFFF;color:#667085">8</td><td class="heat" style="background:#FFFFFF;color:#667085">9</td><td class="heat" style="background:#FFFFFF;color:#667085">10</td><td class="heat" style="background:#FFFFFF;color:#667085">11</td><td class="heat" style="background:#FFFFFF;color:#667085">12</td></tr></tbody></table>
+<p class="small muted">Higher bindu = stronger supporting influence. The
+number is always printed; shade is a second channel, not the only one.
+Strongest sign Capricorn,
+weakest Sagittarius.</p>
+
+<h2>Shadbala — sixfold strength</h2>
+<table class="t">
+  <thead><tr><th>Planet</th><th>Total</th><th>Minimum</th><th>Result</th>
+  <th>Surplus</th></tr></thead>
+  <tbody><tr><td>Sun</td><td class="num">5.77</td><td class="num">6.5</td><td>below minimum</td><td class="num">-0.73</td></tr><tr><td>Moon</td><td class="num">8.88</td><td class="num">6.0</td><td>meets minimum</td><td class="num">+2.88</td></tr><tr><td>Mars</td><td class="num">7.43</td><td class="num">5.0</td><td>meets minimum</td><td class="num">+2.43</td></tr><tr><td>Mercury</td><td class="num">5.75</td><td class="num">7.0</td><td>below minimum</td><td class="num">-1.25</td></tr><tr><td>Jupiter</td><td class="num">8.02</td><td class="num">6.5</td><td>meets minimum</td><td class="num">+1.52</td></tr><tr><td>Venus</td><td class="num">7.76</td><td class="num">5.5</td><td>meets minimum</td><td class="num">+2.26</td></tr><tr><td>Saturn</td><td class="num">5.91</td><td class="num">5.0</td><td>meets minimum</td><td class="num">+0.91</td></tr></tbody>
+</table>
+
+<h2>Yogas detected</h2>
+<div class="card tight">
+  <div class="card-title">Gaja Kesari Yoga</div>
+  <p class="card-sub">Status: <b>PRESENT</b></p>
+  <h3>Formation</h3><p class="small">Jupiter in a kendra (1/4/7/10) from the Moon</p>
+  <p class="small"><b>As calculated:</b> Jupiter in Libra, 7th from the Moon (Moon in Aries)</p>
+  <h3>Reading</h3><p class="small"></p>
+</div><div class="card tight">
+  <div class="card-title">Dhana Yoga</div>
+  <p class="card-sub">Status: <b>PRESENT</b></p>
+  <h3>Formation</h3><p class="small">A planet ruling the 2nd or 11th, itself placed in a kendra or trikona</p>
+  <p class="small"><b>As calculated:</b> Venus rules [2] and sits in the 5th</p>
+  <h3>Reading</h3><p class="small"></p>
+</div><div class="card tight">
+  <div class="card-title">Dharma / Raj Yoga (Kendra-Trikona lord)</div>
+  <p class="card-sub">Status: <b>PRESENT</b></p>
+  <h3>Formation</h3><p class="small">A lord of the 5th or 9th placed in a kendra or trikona</p>
+  <p class="small"><b>As calculated:</b> Saturn (lord of the 5th) sits in the 1th; Venus (lord of the 9th) sits in the 5th</p>
+  <h3>Reading</h3><p class="small"></p>
+</div>
+<div class="basis"><div class="b-head">Astrological basis</div>
+<div class="data-line">Ashtakavarga status: PARTIALLY CALCULATED ·
+Shadbala in Rupas; Saptavargaja already in Rupas, not divided again.</div>
+</div>
+
+<h1>Jaimini &amp; KP Systems</h1>
+<p class="lead">These systems are kept separate from Parashari and from each
+other. They are not merged into a single score.</p>
+<h2>Jaimini</h2>
+<table class="t"><thead><tr><th>Factor</th><th>Value</th></tr></thead>
+<tbody><tr><td>Atmakaraka</td><td>Rahu</td></tr><tr><td>Darakaraka</td><td>Mars</td></tr><tr><td>Karakamsha Sign</td><td>Cancer</td></tr><tr><td>Upapada Lagna</td><td>{'house': 12, 'bhava_sign': 'Leo', 'lord': 'Sun', 'lord_sign': 'Scorpio', 'sign': 'Scorpio'}</td></tr><tr><td>Al</td><td>{'bhava': 1, 'bhava_sign': 'Virgo', 'lord': 'Mercury', 'lord_sign': 'Scorpio', 'sign': 'Capricorn', 'exception_applied': False, 'lord_placement_house': 3, 'from_lagna_house': 5}</td></tr><tr><td>A2</td><td>{'bhava': 2, 'bhava_sign': 'Libra', 'lord': 'Venus', 'lord_sign': 'Capricorn', 'sign': 'Capricorn', 'exception_applied': False, 'lord_placement_house': 5, 'from_lagna_house': 5}</td></tr><tr><td>A3</td><td>{'bhava': 3, 'bhava_sign': 'Scorpio', 'lord': 'Mars', 'lord_sign': 'Virgo', 'sign': 'Cancer', 'exception_applied': False, 'lord_placement_house': 1, 'from_lagna_house': 11}</td></tr><tr><td>A4</td><td>{'bhava': 4, 'bhava_sign': 'Sagittarius', 'lord': 'Jupiter', 'lord_sign': 'Libra', 'sign': 'Leo', 'exception_applied': False, 'lord_placement_house': 2, 'from_lagna_house': 12}</td></tr><tr><td>A5</td><td>{'bhava': 5, 'bhava_sign': 'Capricorn', 'lord': 'Saturn', 'lord_sign': 'Virgo', 'sign': 'Taurus', 'exception_applied': False, 'lord_placement_house': 1, 'from_lagna_house': 9}</td></tr><tr><td>A6</td><td>{'bhava': 6, 'bhava_sign': 'Aquarius', 'lord': 'Saturn', 'lord_sign': 'Virgo', 'sign': 'Aries', 'exception_applied': False, 'lord_placement_house': 1, 'from_lagna_house': 8}</td></tr><tr><td>A7</td><td>{'bhava': 7, 'bhava_sign': 'Pisces', 'lord': 'Jupiter', 'lord_sign': 'Libra', 'sign': 'Taurus', 'exception_applied': False, 'lord_placement_house': 2, 'from_lagna_house': 9}</td></tr><tr><td>A8</td><td>{'bhava': 8, 'bhava_sign': 'Aries', 'lord': 'Mars', 'lord_sign': 'Virgo', 'sign': 'Aquarius', 'exception_applied': False, 'lord_placement_house': 1, 'from_lagna_house': 6}</td></tr></tbody></table>
+<p class="small muted">8-karaka scheme with Rahu measured in reverse (30 - deg in sign).</p>
+<h2>KP</h2>
+<table class="t"><thead><tr><th>Factor</th><th>Value</th></tr></thead>
+<tbody><tr><td>Lagna Star Sublord</td><td>['Moon', 'Jupiter']</td></tr><tr><td>Dasha Lord Sublord</td><td>['Jupiter', 'Moon']</td></tr><tr><td>Cuspal sublords</td><td class="data-line">{&quot;1&quot;: [&quot;Moon&quot;, &quot;Jupiter&quot;], &quot;2&quot;: [&quot;Rahu&quot;, &quot;Mercury&quot;], &quot;3&quot;: [&quot;Saturn&quot;, &quot;Rahu&quot;], &quot;4&quot;: [&quot;Venus&quot;, &quot;Venus&quot;], &quot;5&quot;: [&quot;Moon&quot;, &quot;Jupiter&quot;], &quot;6&quot;: [&quot;Rahu&quot;, &quot;Venus&quot;], &quot;7&quot;: [&quot;Saturn&quot;, &quot;Rahu&quot;], &quot;8&quot;: [&quot;Ketu&quot;, &quot;Mercury&quot;], &quot;9&quot;: [&quot;Moon&quot;, &quot;Rahu&quot;], &quot;10&quot;: [&quot;Rahu&quot;, &quot;Mercury&quot;], &quot;11&quot;: [&quot;Saturn&quot;, &quot;Jupiter&quot;], &quot;12&quot;: [&quot;Venus&quot;, &quot;</td></tr></tbody></table>
+<p class="small muted">KP requires its own ayanamsha and its own cusps; it is a separate system and is never merged with the whole-sign Parashari houses.</p>
+
+<h1>Vimshottari Dasha</h1>
+<p class="lead">The 120-year Vimshottari cycle, divided by the Moon's
+nakshatra at birth. Every year in this report inherits its dasha context from
+this sequence.</p>
+<div class="chart-fig"><img src="dasha_timeline.svg" alt="Dasha timeline"/></div>
+<div class="grid"><div class="card tight"><div class="card-title"><span style="color:#1F2A44">Venus</span> Mahadasha</div><p class="card-sub">1976-08-18 — 1996-08-18</p><p class="small">20 years.</p></div><div class="card tight"><div class="card-title"><span style="color:#3E5079">Sun</span> Mahadasha</div><p class="card-sub">1996-08-18 — 2002-08-18</p><p class="small">6 years.</p></div><div class="card tight"><div class="card-title"><span style="color:#5A3B00">Moon</span> Mahadasha</div><p class="card-sub">2002-08-18 — 2012-08-18</p><p class="small">10 years.</p></div><div class="card tight"><div class="card-title"><span style="color:#8A6A2F">Mars</span> Mahadasha</div><p class="card-sub">2012-08-18 — 2019-08-18</p><p class="small">7 years.</p></div><div class="card tight"><div class="card-title"><span style="color:#6B5B8A">Rahu</span> Mahadasha</div><p class="card-sub">2019-08-18 — 2037-08-18</p><p class="small">18 years.</p></div><div class="card tight"><div class="card-title"><span style="color:#4E6B5A">Jupiter</span> Mahadasha</div><p class="card-sub">2037-08-18 — 2053-08-18</p><p class="small">16 years.</p></div><div class="card tight"><div class="card-title"><span style="color:#7A3E52">Saturn</span> Mahadasha</div><p class="card-sub">2053-08-18 — 2072-08-18</p><p class="small">19 years.</p></div></div>
+<div class="basis"><div class="b-head">Astrological basis</div>
+<div class="data-line">5.31 years of the Venus mahadasha already elapsed at birth; 14.69 years remain ·
+antardasha and pratyantardasha are reckoned from each mahadasha's own lord;
+balance is a fraction of the lord's own period, never of the 120-year
+cycle.</div></div>
+
+<h1>Life Themes</h1>
+<p class="lead">Six themes that run across the whole chart, stated once here
+so the year-wise sections can stay short.</p>
+<div class="card"><div class="card-title">Learning and credentials</div><p class="small">Mercury rules both the ascendant and the 6th; the 9th carries the long road. Study that ends in a usable skill travels further than study that ends in a credential.</p></div><div class="card"><div class="card-title">Work and vocation</div><p class="small">The 10th in Aquarius with Saturn rules it: results come through sustained technical work and networks, not through position alone.</p></div><div class="card"><div class="card-title">Money</div><p class="small">Venus rules the 2nd and sits in the 5th. Resource follows craft and creative output; speculative gain is the 11th's risk.</p></div><div class="card"><div class="card-title">Partnership</div><p class="small">The 7th lord in the 6th ties marriage to shared work and daily service. Partnership built alongside work holds better than partnership built apart from it.</p></div><div class="card"><div class="card-title">Children and learning</div><p class="small">Jupiter's placement links the 5th and the 9th, so teaching and children arrive together in this chart.</p></div><div class="card"><div class="card-title">Home and land</div><p class="small">A 4th-lord emphasis makes property and inner steadiness a measurable theme rather than an abstraction.</p></div>
+
+<h1>Money</h1>
+<p class="lead">Ten money areas. The reading is stated once here; the
+year-wise sections only note which areas move.</p>
+<div class="grid4"><div class="card tight">
+  <div class="card-title">INCOME</div>
+  <p class="small">Earnings follow skill applied consistently rather than a single breakthrough.</p>
+</div><div class="card tight">
+  <div class="card-title">LENDING</div>
+  <p class="small">Lending is best limited to amounts that do not need returning on schedule.</p>
+</div><div class="card tight">
+  <div class="card-title">BORROWING</div>
+  <p class="small">Borrowing against future income limits the freedom the 11th usually provides.</p>
+</div><div class="card tight">
+  <div class="card-title">DEBT</div>
+  <p class="small">Existing obligations tighten faster than new income widens them.</p>
+</div></div>
+<div class="grid4"><div class="card tight">
+  <div class="card-title">RECOVERY</div>
+  <p class="small">Deferred gains return when the 11th is genuinely activated, not on demand.</p>
+</div><div class="card tight">
+  <div class="card-title">INVESTMENT</div>
+  <p class="small">Speculation suits only what can be lost. Structured assets suit what must be preserved.</p>
+</div><div class="card tight">
+  <div class="card-title">PROPERTY MONEY</div>
+  <p class="small">Property is the classical 4th/12th pairing and is a real theme here.</p>
+</div><div class="card tight">
+  <div class="card-title">INHERITANCE</div>
+  <p class="small">Inheritance is an 8th-house subject; it is not a plan.</p>
+</div></div>
+<div class="grid4"><div class="card tight">
+  <div class="card-title">GAINS</div>
+  <p class="small">The 11th rewards networks that are maintained, not merely made.</p>
+</div><div class="card tight">
+  <div class="card-title">EXPENSE / LOSS</div>
+  <p class="small">Expense follows emotion and family obligation more than planned outlay.</p>
+</div></div>
+<div class="callout"><div class="co-title">Standing caution</div>
+<p class="small">No specific amount, gain or loss is predicted anywhere in
+this report. Money readings describe conditions and priorities, not
+quantities.</p></div>
+
+<h1>Career</h1>
+<p class="lead">Eight strategy verbs. A year-wise page promotes only the verbs
+that year's own mechanisms actually activate; the rest stay here.</p>
+<div class="grid4"><div class="card tight">
+  <div class="card-title">PUSH</div>
+  <p class="small">Advance where momentum already exists.</p>
+</div><div class="card tight">
+  <div class="card-title">WAIT</div>
+  <p class="small">Hold position rather than force a move.</p>
+</div><div class="card tight">
+  <div class="card-title">LEARN</div>
+  <p class="small">Skill acquisition pays back across a dasha, not a month.</p>
+</div><div class="card tight">
+  <div class="card-title">NETWORK</div>
+  <p class="small">Allies convert faster than applications.</p>
+</div></div>
+<div class="grid4"><div class="card tight">
+  <div class="card-title">NEGOTIATE</div>
+  <p class="small">Terms set early are cheaper than terms renegotiated late.</p>
+</div><div class="card tight">
+  <div class="card-title">DOCUMENT</div>
+  <p class="small">Written commitments are protective this period.</p>
+</div><div class="card tight">
+  <div class="card-title">CHANGE</div>
+  <p class="small">Structural change is supported where it removes a 6th-house drag.</p>
+</div><div class="card tight">
+  <div class="card-title">CONSOLIDATE</div>
+  <p class="small">Depth before breadth is the reliable return.</p>
+</div></div>
+<div class="callout"><div class="co-title">On employment periods</div>
+<p class="small">This chart's per-year engine has no demonstrated ability to
+identify employment events (see Validation Summary). No year in this report is
+presented as having predicted a job loss or a gain in employment.</p></div>
+
+<h1>Family &amp; Relationships</h1>
+<p class="lead">Seven family areas, kept separate so each is easy to find.</p>
+<div class="grid4"><div class="card tight">
+  <div class="card-title">SPOUSE</div>
+  <p class="small">Partnership is tested by workload as much as by compatibility.</p>
+</div><div class="card tight">
+  <div class="card-title">CHILDREN</div>
+  <p class="small">Children and study share the same emphasis in this period.</p>
+</div><div class="card tight">
+  <div class="card-title">PARENTS / ELDERS</div>
+  <p class="small">Elder responsibilities fall on the same period as property questions.</p>
+</div><div class="card tight">
+  <div class="card-title">HOME</div>
+  <p class="small">The home absorbs most of the pressure in this period.</p>
+</div></div>
+<div class="grid4"><div class="card tight">
+  <div class="card-title">SEPARATION / DISTANCE</div>
+  <p class="small">Distance between family members increases when the 12th is active.</p>
+</div><div class="card tight">
+  <div class="card-title">FAMILY RESPONSIBILITY</div>
+  <p class="small">Responsibility is real and should be scheduled, not absorbed silently.</p>
+</div><div class="card tight">
+  <div class="card-title">INHERITANCE</div>
+  <p class="small">Family assets and obligations need clarity in writing.</p>
+</div></div>
+
+<h1>Health &amp; Safety</h1>
+<p class="lead">A calm, non-alarming treatment. Traditional indicators of
+attention, never diagnosis.</p>
+<div class="callout">
+  <div class="co-title">Life &amp; safety attention</div>
+  <span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span>
+  <p class="small" style="margin-top:2.5mm">Traditional indicators suggest
+  attention to:</p>
+  <ul class="b small">
+    <li>routine — sleep, meals and exertion kept regular</li>
+    <li>elder responsibilities, which rise under 9th-house periods</li>
+    <li>family transitions and the 4th/12th pairing</li>
+    <li>health discipline during 6th-house activation</li>
+  </ul>
+  <p class="small"><b>This is not a death prediction and not a
+  diagnosis.</b> Nothing in this report should displace professional medical
+  advice.</p>
+</div>
+<h2>What the risk engine actually does</h2>
+<p class="small">The risk engine is a convergence counter: it counts how many
+independent mechanism families touch a theme in a year and compares the total
+against thresholds. It is a bookkeeping device for reading emphasis, not a
+probability of harm.</p>
+
+<h1>Ancestral Line</h1>
+<p class="lead">Genealogy as documentation, not as astrology. No chart is used
+to prove a relationship.</p>
+<div class="callout">
+  <div class="co-title">Paternal line</div>
+  <table class="t" style="width:100%">
+    <thead><tr><th>Generation</th><th>Name</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Subject</td><td>Swarna Sekhar Dhar</td>
+          <td><span class="badge" style="background:#EDF6EE;border-color:#3E7D4E;color:#3E7D4E">ROBUST</span></td></tr>
+      <tr><td>Father</td><td>Kusankur Dhar</td>
+          <td><span class="badge" style="background:#FBF3DC;
+            border-color:#C79A2E;color:#5A3B00">CONFLICT — death year
+            2018 vs 2019</span></td></tr>
+      <tr><td>Grandfather</td><td>Sisir Kumar</td>
+          <td><span class="badge" style="background:#F3EEDF;
+            border-color:#667085;color:#333333">UNCONFIRMED — generation
+            disputed by a source screenshot</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout">
+  <div class="co-title">Kula Devata / Kula Devi</div>
+  <span class="badge" style="background:#FBEBEA;border-color:#A83232;color:#A83232">LOW CONFIDENCE</span>
+  <p class="small" style="margin-top:2.5mm"><b>Status: NOT YET VERIFIED.</b>
+  A specific family deity cannot be established from planetary placements
+  alone. The chart does not name one, and this report does not guess.</p>
+  <p class="small"><b>Evidence that would settle it:</b></p>
+  <ul class="b small">
+    <li>family tradition recorded by a living elder</li>
+    <li>temple or shrine record</li>
+    <li>historical puja record or festival practice</li>
+  </ul>
+</div>
+<div class="basis"><div class="b-head">Status vocabulary</div>
+<div class="data-line">VERIFIED · UNCONFIRMED · CONFLICT · UNKNOWN — no
+status is upgraded on the strength of a chart.</div></div>
+
+<h1>Remedies</h1>
+<p class="lead">Two clearly separated kinds of advice, because they are not
+the same thing.</p>
+
+<h2>Practical action</h2>
+<div class="grid4">
+  <div class="card tight"><div class="card-title">DAILY</div>
+    <ul class="b small"><li>Wake and sleep at consistent times; the 6th responds to routine.</li><li>Keep one written account of commitments; the 2nd and 8th both reward clarity.</li><li>Thirty minutes of quiet before work decisions, not after.</li></ul>
+  </div>
+  <div class="card tight"><div class="card-title">WEEKLY</div>
+    <ul class="b small"><li>One evening a week without screens, to protect the 4th.</li><li>Review in-progress commitments once a week rather than daily.</li></ul>
+  </div>
+</div>
+<div class="grid"><div class="card tight"><div class="card-title">FINANCIAL DISCIPLINE</div><p class="small">Separate operating money from long-horizon money and review it monthly, not in a crisis.</p></div><div class="card tight"><div class="card-title">CAREER</div><p class="small">Write down what was delivered each week. The 10th is strengthened by record, not by impression.</p></div><div class="card tight"><div class="card-title">HEALTH</div><p class="small">Keep exertion regular rather than occasional and intense.</p></div><div class="card tight"><div class="card-title">FAMILY / ELDER</div><p class="small">Schedule elder obligations in advance; the 9th period asks for presence rather than money.</p></div></div>
+
+<h2>Traditional practice</h2>
+<div class="warn">
+  <p><b>Status of traditional remedies.</b> The practices below are part of the
+  cultural tradition this chart belongs to. They have no scientifically
+  established efficacy for changing events, and they are offered as
+  discipline, family observance and peace of mind — not as treatment and not
+  as a substitute for advice.</p>
+  <ul class="b">
+    <li>Daily recitation of the nakshatra lord's mantra, at a fixed hour.</li>
+    <li>Weekly Saturn or dasha-lord observance on its traditional day.</li>
+    <li>Charity or service on the 11th, timed to the gain period.</li>
+    <li>Respect for elders during a 9th-house period, especially around
+        medical care.</li>
+    <li>Conspicuous consumption avoided; the 12th is better served by letting
+        go than by spending.</li>
+  </ul>
+</div>
+
+<h1>Birth-Time Sensitivity</h1>
+<p class="lead">Five years depend materially on the birth minute. They are
+labelled everywhere they appear.</p>
+<div class="callout">
+  <div class="co-title">What this means</div>
+  <p class="small">Readings were re-derived across a ±15 minute sweep of the
+  birth time. Where a year changes, the change is labelled
+  TIME-SENSITIVE · LOW CONFIDENCE rather than presented at the same weight as
+  the rest.</p>
+  <p class="small">A stable chart is not the same as a validated one. This
+  section concerns calculation stability only — see Validation Summary for
+  what the engine can and cannot support.</p>
+</div>
+<table class="t">
+  <thead><tr><th>Year</th><th>Status</th><th>Reason</th></tr></thead>
+  <tbody><tr><td>1987</td><td><span class="badge" style="background:#FBF3DC;border-color:#C79A2E;color:#C79A2E">TIME-SENSITIVE · LOW CONFIDENCE</span></td><td class="small">Birth-time dependent. A ±15 minute sweep changes this year's readings.</td></tr><tr><td>1997</td><td><span class="badge" style="background:#FBF3DC;border-color:#C79A2E;color:#C79A2E">TIME-SENSITIVE · LOW CONFIDENCE</span></td><td class="small">Birth-time dependent. A ±15 minute sweep changes this year's readings.</td></tr><tr><td>2002</td><td><span class="badge" style="background:#FBF3DC;border-color:#C79A2E;color:#C79A2E">TIME-SENSITIVE · LOW CONFIDENCE</span></td><td class="small">Birth-time dependent. A ±15 minute sweep changes this year's readings.</td></tr><tr><td>2038</td><td><span class="badge" style="background:#FBF3DC;border-color:#C79A2E;color:#C79A2E">TIME-SENSITIVE · LOW CONFIDENCE</span></td><td class="small">Birth-time dependent. A ±15 minute sweep changes this year's readings.</td></tr><tr><td>2050</td><td><span class="badge" style="background:#FBF3DC;border-color:#C79A2E;color:#C79A2E">TIME-SENSITIVE · LOW CONFIDENCE</span></td><td class="small">Birth-time dependent. A ±15 minute sweep changes this year's readings.</td></tr><tr><td>2000</td><span class="badge" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E">MODERATE</span><td class="small">Partly birth-time dependent.</td></tr><tr><td>2039</td><span class="badge" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E">MODERATE</span><td class="small">Partly birth-time dependent.</td></tr><tr><td>2044</td><span class="badge" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E">MODERATE</span><td class="small">Partly birth-time dependent.</td></tr><tr><td>1994</td><span class="badge" style="background:#EDF6EE;border-color:#3E7D4E;color:#3E7D4E">ROBUST</span><td class="small">Stable across the tested sweep.</td></tr><tr><td>2014</td><span class="badge" style="background:#EDF6EE;border-color:#3E7D4E;color:#3E7D4E">ROBUST</span><td class="small">Stable across the tested sweep.</td></tr><tr><td>2016</td><span class="badge" style="background:#EDF6EE;border-color:#3E7D4E;color:#3E7D4E">ROBUST</span><td class="small">Stable across the tested sweep.</td></tr><tr><td>2042</td><span class="badge" style="background:#EDF6EE;border-color:#3E7D4E;color:#3E7D4E">ROBUST</span><td class="small">Stable across the tested sweep.</td></tr></tbody>
+</table>
+
+<h1>Validation Summary</h1>
+<p class="lead">The engine's per-year readings were back-tested against
+documented life events. The result was negative and is reported here rather
+than omitted.</p>
+
+<div class="callout">
+  <div class="co-title">Result: NO-GO for event-level prediction</div>
+  <table class="kv">
+    <tr><td class="k">Events tested</td>
+        <td class="v">20 testable (13 years; 3 events untestable for lack of
+        dates)</td></tr>
+    <tr><td class="k">Absolute verdict test</td>
+        <td class="v">MATCH+PARTIAL in <b>80.5%</b> of 1,022 arbitrary
+        category-years — uninformative by construction</td></tr>
+    <tr><td class="k">Floor-independent rank test</td>
+        <td class="v">median p = <b>0.500</b>; <b>0 of 20</b> event years in the
+        top decile; 3 of 20 in the bottom</td></tr>
+    <tr><td class="k">Best single result</td>
+        <td class="v">p = 0.167. Chance expects 2.0 hits at α = 0.10 over 20
+        tests; <b>0 found</b></td></tr>
+  </table>
+</div>
+
+<h2>Specific claims the back-test contradicts</h2>
+<table class="t">
+  <thead><tr><th>Claim a reader might assume</th><th>What the data shows</th>
+  </tr></thead>
+  <tbody>
+    <tr><td>2024 shows family separation</td>
+        <td>2nd house activation <b>0</b>, 12th <b>1</b> in that year</td></tr>
+    <tr><td>2026 shows career interruption</td>
+        <td>10th house activation <b>0</b> in that year</td></tr>
+    <tr><td>The 9th house tracks qualification</td>
+        <td>The year the qualification obstruction <i>ended</i> carries the
+        highest 9th score; the first-class year is among the weakest</td></tr>
+    <tr><td>The 9th house tracks the father</td>
+        <td>9th activation is <b>1</b> in the surgery year and in both
+        candidate death years alike</td></tr>
+  </tbody>
+</table>
+
+<div class="warn">
+  <p><b>How to read every year-wise section, then.</b> The chart and the
+  dasha are computed and reproducible. The yearly narrative is traditional
+  interpretation offered for reflection. It has not been shown to identify
+  real events, and it is not offered as a forecast.</p>
+</div>
+<div class="pagebreak"></div><h1>Year-Wise Dossier</h1>
+<p class="lead">A representative selection: one year per risk level, plus 2026 and a time-sensitive year. The full dossier renders all 73 years in the same form.</p>
+<div class="pagebreak"></div>
+<div style="page: ypage">
+<div class="banner yr-hdr">
+  <div class="b-eyebrow">Year-Wise Dossier</div>
+  <div class="b-year">1981 · birth year</div>
+  <div class="b-dasha">Venus Mahadasha ·
+    Moon Antardasha · Moon
+    Pratyantardasha</div>
+  <div class="b-status"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span>
+    <span class="tiny" style="color:#CFC6A8;margin-left:2mm">
+      CAUTION</span></div>
+  
+</div>
+<h2>Year at a glance</h2>
+<div class="grid4"><div class="glance">
+  <div class="g-label">Money</div>
+  <div class="g-value">MODERATE</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Career</div>
+  <div class="g-value">LIGHT</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Family</div>
+  <div class="g-value">LIGHT</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Safety</div>
+  <div class="g-value">MODERATE</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div></div>
+
+<p class="tiny">Bars are engine-derived activation intensity for the indicated
+house, 0–5, with the tag taken from the engine's own thresholds. They
+describe emphasis, not probability of an event.</p>
+<p class="tiny muted">Traditional interpretation · follows the global Interpretation &amp; Safety Notice</p>
+
+<h2>This year in one sentence</h2>
+<p class="lead">A Venus / Moon year carrying yellow attention, with wellbeing themes receiving the most activation (2 recorded mechanisms).</p>
+
+<h2>Overall life picture</h2>
+<p class="small">The year's emphasis falls on financial (2 mechanisms). Weight is placed where several independent mechanism families agree, not where a single one is loud.</p>
+
+<h2>Money</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Wealth &amp; speech</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Gains</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Expense</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Debt &amp; service</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">8</span>Deferred</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Property</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+<h2>Career</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">10</span>Vocation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Daily work</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Means</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Networks</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">3</span>Effort</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Specialisation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+<h2>Family &amp; relationships</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">7</span>Partnership</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Home</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Family</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Children</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">9</span>Elders</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Distance</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+
+<h2>Children</h2>
+<p class="small">The 5th house activation for this year is
+no frozen extraction — the per-year extraction for this year is not in the frozen set.</p>
+
+<h2>Property, inheritance & ancestral themes</h2>
+<p class="small">The 4th house activation is no frozen extraction and the 8th is
+no frozen extraction. Property questions are 4th-house subjects; deferred or inherited
+matters are 8th-house subjects.</p>
+
+<h2>Health &amp; safety attention</h2>
+<div class="warn"><p><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span>
+&nbsp; Traditional indicators suggest attention to routine, elder
+responsibilities and family transitions. This is not a diagnosis or a death
+prediction.</p></div>
+
+<h2>Major gains and opportunities</h2>
+<p class="small">No theme reached the escalation threshold for this section this year. This is a statement about the engine's own thresholds, not a promise that nothing arrives.</p>
+
+<h2>Major cautions</h2>
+<p class="small">No theme reached the escalation threshold for this section this year. This is a statement about the engine's own thresholds, not a promise that nothing arrives.</p>
+
+<h2>What to do</h2>
+<ul class="b small">
+  <li>Apply effort where the engine records a dasha-lord activation for this
+      year.</li>
+  <li>Convert networks into written commitments rather than intentions.</li>
+  <li>Keep financial decisions in writing during periods of 12th-house
+      activation.</li>
+</ul>
+
+<h2>What to avoid</h2>
+<ul class="b small">
+  <li>Expanding commitments faster than the 10th-house activation
+      supports.</li>
+  <li>Treating a favourable reading as a result that is already secured.</li>
+  <li>Deferring a family or elder obligation on the assumption it will
+      improve later.</li>
+</ul>
+
+<h2>How to maximise the period</h2>
+<p class="small">Concentrate effort in the houses the engine actually
+activates for this year, and treat the quietest as areas to protect rather
+than to push.</p>
+
+<h2>Traditional remedies</h2>
+<p class="small">See <b>Remedies</b> earlier in this report. Traditional
+practice is culture, not treatment.</p>
+
+
+
+<div class="basis">
+  <div class="b-head">Astrological basis · technical</div>
+  <div class="data-line">
+    dasha Venus/Moon/
+    Moon · sade_sati
+    NONE · risk
+    YELLOW ·
+    Jupiter Virgo in
+    1 ·
+    Saturn Virgo in
+    1 ·
+    Rahu Cancer ·
+    Ketu Capricorn ·
+    · activation source risk_timeline
+        · confidence MODERATE</div>
+    </div>
+    </div>
+<div class="pagebreak"></div>
+<div style="page: ypage">
+<div class="banner yr-hdr">
+  <div class="b-eyebrow">Year-Wise Dossier</div>
+  <div class="b-year">1986 · Age 4</div>
+  <div class="b-dasha">Venus Mahadasha ·
+    Rahu Antardasha · Mercury
+    Pratyantardasha</div>
+  <div class="b-status"><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span>
+    <span class="tiny" style="color:#CFC6A8;margin-left:2mm">
+      ELEVATED</span></div>
+  
+</div>
+<h2>Year at a glance</h2>
+<div class="grid4"><div class="glance">
+  <div class="g-label">Money</div>
+  <div class="g-value">ELEVATED</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Career</div>
+  <div class="g-value">LIGHT</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Family</div>
+  <div class="g-value">MODERATE</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Safety</div>
+  <div class="g-value">HIGH</div>
+  <div class="g-note"><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span></div>
+</div></div>
+
+<p class="tiny">Bars are engine-derived activation intensity for the indicated
+house, 0–5, with the tag taken from the engine's own thresholds. They
+describe emphasis, not probability of an event.</p>
+<p class="tiny muted">Traditional interpretation · follows the global Interpretation &amp; Safety Notice</p>
+
+<h2>This year in one sentence</h2>
+<p class="lead">A Venus / Rahu year carrying orange attention, with wellbeing themes receiving the most activation (4 recorded mechanisms).</p>
+
+<h2>Overall life picture</h2>
+<p class="small">The year's emphasis falls on financial (2 mechanisms), relational (3 mechanisms), property (2 mechanisms), administrative (2 mechanisms). Weight is placed where several independent mechanism families agree, not where a single one is loud.</p>
+
+<h2>Money</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Wealth &amp; speech</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Gains</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Expense</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Debt &amp; service</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">8</span>Deferred</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Property</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+<h2>Career</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">10</span>Vocation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Daily work</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Means</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Networks</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">3</span>Effort</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Specialisation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+<h2>Family &amp; relationships</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">7</span>Partnership</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Home</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Family</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Children</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">9</span>Elders</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Distance</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+
+<h2>Children</h2>
+<p class="small">The 5th house activation for this year is
+no frozen extraction — the per-year extraction for this year is not in the frozen set.</p>
+
+<h2>Property, inheritance & ancestral themes</h2>
+<p class="small">The 4th house activation is no frozen extraction and the 8th is
+no frozen extraction. Property questions are 4th-house subjects; deferred or inherited
+matters are 8th-house subjects.</p>
+
+<h2>Health &amp; safety attention</h2>
+<div class="warn"><p><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span>
+&nbsp; Traditional indicators suggest attention to routine, elder
+responsibilities and family transitions. This is not a diagnosis or a death
+prediction.</p></div>
+
+<h2>Major gains and opportunities</h2>
+<table class="t">
+  <thead><tr><th>Theme</th><th>Status</th><th>Mechanisms</th>
+  <th>Gate condition</th></tr></thead>
+  <tbody><tr><td>routine and wellbeing</td><td><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span></td><td class="num">4</td><td class="small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same them</td></tr></tbody>
+</table>
+
+<h2>Major cautions</h2>
+<p class="small">No theme reached the escalation threshold for this section this year. This is a statement about the engine's own thresholds, not a promise that nothing arrives.</p>
+
+<h2>What to do</h2>
+<ul class="b small">
+  <li>Apply effort where the engine records a dasha-lord activation for this
+      year.</li>
+  <li>Convert networks into written commitments rather than intentions.</li>
+  <li>Keep financial decisions in writing during periods of 12th-house
+      activation.</li>
+</ul>
+
+<h2>What to avoid</h2>
+<ul class="b small">
+  <li>Expanding commitments faster than the 10th-house activation
+      supports.</li>
+  <li>Treating a favourable reading as a result that is already secured.</li>
+  <li>Deferring a family or elder obligation on the assumption it will
+      improve later.</li>
+</ul>
+
+<h2>How to maximise the period</h2>
+<p class="small">Concentrate effort in the houses the engine actually
+activates for this year, and treat the quietest as areas to protect rather
+than to push.</p>
+
+<h2>Traditional remedies</h2>
+<p class="small">See <b>Remedies</b> earlier in this report. Traditional
+practice is culture, not treatment.</p>
+
+
+
+<div class="basis">
+  <div class="b-head">Astrological basis · technical</div>
+  <div class="data-line">
+    dasha Venus/Rahu/
+    Mercury · sade_sati
+    NONE · risk
+    ORANGE ·
+    Jupiter Aquarius in
+    6 ·
+    Saturn Scorpio in
+    3 ·
+    Rahu Aries ·
+    Ketu Libra ·
+    · activation source risk_timeline
+        · confidence MODERATE</div>
+    </div>
+    </div>
+<div class="pagebreak"></div>
+<div style="page: ypage">
+<div class="banner yr-hdr">
+  <div class="b-eyebrow">Year-Wise Dossier</div>
+  <div class="b-year">1987 · Age 5</div>
+  <div class="b-dasha">Venus Mahadasha ·
+    Jupiter Antardasha · Sun
+    Pratyantardasha</div>
+  <div class="b-status"><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span>
+    <span class="tiny" style="color:#CFC6A8;margin-left:2mm">
+      EXTREME ATTENTION</span></div>
+  <span class="b-sens">TIME-SENSITIVE · LOW CONFIDENCE</span>
+</div>
+<h2>Year at a glance</h2>
+<div class="grid4"><div class="glance">
+  <div class="g-label">Money</div>
+  <div class="g-value">MODERATE</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Career</div>
+  <div class="g-value">MODERATE</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Family</div>
+  <div class="g-value">HIGH</div>
+  <div class="g-note"><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Safety</div>
+  <div class="g-value">HIGH</div>
+  <div class="g-note"><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span></div>
+</div></div>
+
+<p class="tiny">Bars are engine-derived activation intensity for the indicated
+house, 0–5, with the tag taken from the engine's own thresholds. They
+describe emphasis, not probability of an event.</p>
+<p class="tiny muted">Traditional interpretation · follows the global Interpretation &amp; Safety Notice</p>
+
+<h2>This year in one sentence</h2>
+<p class="lead">A Venus / Jupiter year carrying red attention, with wellbeing themes receiving the most activation (4 recorded mechanisms).</p>
+
+<h2>Overall life picture</h2>
+<p class="small">The year's emphasis falls on professional (2 mechanisms), financial (2 mechanisms), relational (4 mechanisms), property (3 mechanisms), administrative (3 mechanisms). Weight is placed where several independent mechanism families agree, not where a single one is loud.</p>
+
+<h2>Money</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Wealth &amp; speech</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Gains</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Expense</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Debt &amp; service</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">8</span>Deferred</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Property</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+<h2>Career</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">10</span>Vocation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Daily work</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Means</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Networks</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">3</span>Effort</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Specialisation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+<h2>Family &amp; relationships</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">7</span>Partnership</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Home</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Family</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Children</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">9</span>Elders</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Distance</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+
+<h2>Children</h2>
+<p class="small">The 5th house activation for this year is
+no frozen extraction — the per-year extraction for this year is not in the frozen set.</p>
+
+<h2>Property, inheritance & ancestral themes</h2>
+<p class="small">The 4th house activation is no frozen extraction and the 8th is
+no frozen extraction. Property questions are 4th-house subjects; deferred or inherited
+matters are 8th-house subjects.</p>
+
+<h2>Health &amp; safety attention</h2>
+<div class="warn"><p><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span>
+&nbsp; Traditional indicators suggest attention to routine, elder
+responsibilities and family transitions. This is not a diagnosis or a death
+prediction.</p></div>
+
+<h2>Major gains and opportunities</h2>
+<table class="t">
+  <thead><tr><th>Theme</th><th>Status</th><th>Mechanisms</th>
+  <th>Gate condition</th></tr></thead>
+  <tbody><tr><td>routine and wellbeing</td><td><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span></td><td class="num">4</td><td class="small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same them</td></tr><tr><td>close relationships</td><td><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span></td><td class="num">4</td><td class="small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same them</td></tr></tbody>
+</table>
+
+<h2>Major cautions</h2>
+<table class="t">
+  <thead><tr><th>Theme</th><th>Status</th><th>Mechanisms</th>
+  <th>Gate condition</th></tr></thead>
+  <tbody><tr><td>routine and wellbeing</td><td><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span></td><td class="num">4</td><td class="small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same them</td></tr></tbody>
+</table>
+
+<h2>What to do</h2>
+<ul class="b small">
+  <li>Apply effort where the engine records a dasha-lord activation for this
+      year.</li>
+  <li>Convert networks into written commitments rather than intentions.</li>
+  <li>Keep financial decisions in writing during periods of 12th-house
+      activation.</li>
+</ul>
+
+<h2>What to avoid</h2>
+<ul class="b small">
+  <li>Expanding commitments faster than the 10th-house activation
+      supports.</li>
+  <li>Treating a favourable reading as a result that is already secured.</li>
+  <li>Deferring a family or elder obligation on the assumption it will
+      improve later.</li>
+</ul>
+
+<h2>How to maximise the period</h2>
+<p class="small">Concentrate effort in the houses the engine actually
+activates for this year, and treat the quietest as areas to protect rather
+than to push.</p>
+
+<h2>Traditional remedies</h2>
+<p class="small">See <b>Remedies</b> earlier in this report. Traditional
+practice is culture, not treatment.</p>
+
+
+
+<div class="basis">
+  <div class="b-head">Astrological basis · technical</div>
+  <div class="data-line">
+    dasha Venus/Jupiter/
+    Sun · sade_sati
+    NONE · risk
+    RED ·
+    Jupiter Aries in
+    8 ·
+    Saturn Scorpio in
+    3 ·
+    Rahu Pisces ·
+    Ketu Virgo ·
+    · activation source risk_timeline
+        · confidence TIME-SENSITIVE</div>
+    </div>
+    </div>
+<div class="pagebreak"></div>
+<div style="page: ypage">
+<div class="banner yr-hdr">
+  <div class="b-eyebrow">Year-Wise Dossier</div>
+  <div class="b-year">1997 · Age 15</div>
+  <div class="b-dasha">Sun Mahadasha ·
+    Mars Antardasha · Venus
+    Pratyantardasha</div>
+  <div class="b-status"><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span>
+    <span class="tiny" style="color:#CFC6A8;margin-left:2mm">
+      EXTREME ATTENTION</span></div>
+  <span class="b-sens">TIME-SENSITIVE · LOW CONFIDENCE</span>
+</div>
+<h2>Year at a glance</h2>
+<div class="grid4"><div class="glance">
+  <div class="g-label">Money</div>
+  <div class="g-value">HIGH</div>
+  <div class="g-note"><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Career</div>
+  <div class="g-value">LIGHT</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Family</div>
+  <div class="g-value">HIGH</div>
+  <div class="g-note"><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Safety</div>
+  <div class="g-value">HIGH</div>
+  <div class="g-note"><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span></div>
+</div></div>
+
+<p class="tiny">Bars are engine-derived activation intensity for the indicated
+house, 0–5, with the tag taken from the engine's own thresholds. They
+describe emphasis, not probability of an event.</p>
+<p class="tiny muted">Traditional interpretation · follows the global Interpretation &amp; Safety Notice</p>
+
+<h2>This year in one sentence</h2>
+<p class="lead">A Sun / Mars year carrying red attention, with wellbeing themes receiving the most activation (4 recorded mechanisms).</p>
+
+<h2>Overall life picture</h2>
+<p class="small">The year's emphasis falls on professional (2 mechanisms), financial (4 mechanisms), relational (4 mechanisms), property (3 mechanisms), administrative (4 mechanisms). Weight is placed where several independent mechanism families agree, not where a single one is loud.</p>
+
+<h2>Money</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Wealth &amp; speech</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Gains</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Expense</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Debt &amp; service</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">8</span>Deferred</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Property</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+<h2>Career</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">10</span>Vocation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Daily work</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Means</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Networks</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">3</span>Effort</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Specialisation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+<h2>Family &amp; relationships</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">7</span>Partnership</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Home</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Family</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Children</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">9</span>Elders</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Distance</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div></div>
+
+<h2>Children</h2>
+<p class="small">The 5th house activation for this year is
+no frozen extraction — the per-year extraction for this year is not in the frozen set.</p>
+
+<h2>Property, inheritance & ancestral themes</h2>
+<p class="small">The 4th house activation is no frozen extraction and the 8th is
+no frozen extraction. Property questions are 4th-house subjects; deferred or inherited
+matters are 8th-house subjects.</p>
+
+<h2>Health &amp; safety attention</h2>
+<div class="warn"><p><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span>
+&nbsp; Traditional indicators suggest attention to routine, elder
+responsibilities and family transitions. This is not a diagnosis or a death
+prediction.</p></div>
+
+<h2>Major gains and opportunities</h2>
+<table class="t">
+  <thead><tr><th>Theme</th><th>Status</th><th>Mechanisms</th>
+  <th>Gate condition</th></tr></thead>
+  <tbody><tr><td>routine and wellbeing</td><td><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span></td><td class="num">4</td><td class="small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same them</td></tr><tr><td>money and resources</td><td><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span></td><td class="num">4</td><td class="small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same them</td></tr><tr><td>close relationships</td><td><span class="status" style="background:#FCEFE2;border-color:#C9762F;color:#C9762F"><span class="dot" style="background:#DD8034"></span>ATTENTION</span></td><td class="num">4</td><td class="small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same them</td></tr></tbody>
+</table>
+
+<h2>Major cautions</h2>
+<table class="t">
+  <thead><tr><th>Theme</th><th>Status</th><th>Mechanisms</th>
+  <th>Gate condition</th></tr></thead>
+  <tbody><tr><td>routine and wellbeing</td><td><span class="status" style="background:#FBEBEA;border-color:#A83232;color:#A83232"><span class="dot" style="background:#C0392B"></span>EXTREME ATTENTION</span></td><td class="num">4</td><td class="small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same them</td></tr></tbody>
+</table>
+
+<h2>What to do</h2>
+<ul class="b small">
+  <li>Apply effort where the engine records a dasha-lord activation for this
+      year.</li>
+  <li>Convert networks into written commitments rather than intentions.</li>
+  <li>Keep financial decisions in writing during periods of 12th-house
+      activation.</li>
+</ul>
+
+<h2>What to avoid</h2>
+<ul class="b small">
+  <li>Expanding commitments faster than the 10th-house activation
+      supports.</li>
+  <li>Treating a favourable reading as a result that is already secured.</li>
+  <li>Deferring a family or elder obligation on the assumption it will
+      improve later.</li>
+</ul>
+
+<h2>How to maximise the period</h2>
+<p class="small">Concentrate effort in the houses the engine actually
+activates for this year, and treat the quietest as areas to protect rather
+than to push.</p>
+
+<h2>Traditional remedies</h2>
+<p class="small">See <b>Remedies</b> earlier in this report. Traditional
+practice is culture, not treatment.</p>
+
+
+
+<div class="basis">
+  <div class="b-head">Astrological basis · technical</div>
+  <div class="data-line">
+    dasha Sun/Mars/
+    Venus · sade_sati
+    PHASE 1 · risk
+    RED ·
+    Jupiter Capricorn in
+    5 ·
+    Saturn Pisces in
+    7 ·
+    Rahu Leo ·
+    Ketu Aquarius ·
+    · activation source risk_timeline
+        · confidence TIME-SENSITIVE</div>
+    </div>
+    </div>
+<div class="pagebreak"></div>
+<div style="page: ypage">
+<div class="banner yr-hdr">
+  <div class="b-eyebrow">Year-Wise Dossier</div>
+  <div class="b-year">2026 · Age 44</div>
+  <div class="b-dasha">Rahu Mahadasha ·
+    Saturn Antardasha · Jupiter
+    Pratyantardasha</div>
+  <div class="b-status"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span>
+    <span class="tiny" style="color:#CFC6A8;margin-left:2mm">
+      CAUTION</span></div>
+  
+</div>
+<h2>Year at a glance</h2>
+<div class="grid4"><div class="glance">
+  <div class="g-label">Money</div>
+  <div class="g-value">LIGHT</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Career</div>
+  <div class="g-value">MODERATE</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Family</div>
+  <div class="g-value">MODERATE</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div><div class="glance">
+  <div class="g-label">Safety</div>
+  <div class="g-value">MODERATE</div>
+  <div class="g-note"><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span></div>
+</div></div>
+<table class="bars"><tr><td class="b-label">Money</td><td class="b-track"><div style="background:#F3EEDF;height:2.4mm;width:100%;"><div style="background:#B8862B;height:2.4mm;width:20.0%;"></div></div></td><td class="b-word">LIGHT</td></tr><tr><td class="b-label">Career</td><td class="b-track"><div style="background:#F3EEDF;height:2.4mm;width:100%;"><div style="background:#B8862B;height:2.4mm;width:0.0%;"></div></div></td><td class="b-word">QUIET</td></tr><tr><td class="b-label">Relationships</td><td class="b-track"><div style="background:#F3EEDF;height:2.4mm;width:100%;"><div style="background:#B8862B;height:2.4mm;width:60.0%;"></div></div></td><td class="b-word">ELEVATED</td></tr><tr><td class="b-label">Family</td><td class="b-track"><div style="background:#F3EEDF;height:2.4mm;width:100%;"><div style="background:#B8862B;height:2.4mm;width:40.0%;"></div></div></td><td class="b-word">MODERATE</td></tr></table>
+<p class="tiny">Bars are engine-derived activation intensity for the indicated
+house, 0–5, with the tag taken from the engine's own thresholds. They
+describe emphasis, not probability of an event.</p>
+<p class="tiny muted">Traditional interpretation · follows the global Interpretation &amp; Safety Notice</p>
+
+<h2>This year in one sentence</h2>
+<p class="lead">A Rahu / Saturn year carrying yellow attention, with relational themes receiving the most activation (3 recorded mechanisms).</p>
+
+<h2>Overall life picture</h2>
+<p class="small">The year's emphasis falls on professional (2 mechanisms), financial (2 mechanisms), relational (3 mechanisms), property (2 mechanisms), administrative (2 mechanisms). Weight is placed where several independent mechanism families agree, not where a single one is loud.</p>
+
+<h2>Money</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Wealth &amp; speech</div>
+  <div class="g-note" style="margin-bottom:1.4mm">LIGHT</div>
+  <p class="tiny">transiting Ketu aspects the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Gains</div>
+  <div class="g-note" style="margin-bottom:1.4mm">MODERATE</div>
+  <p class="tiny">transiting Jupiter occupies the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Expense</div>
+  <div class="g-note" style="margin-bottom:1.4mm">ELEVATED</div>
+  <p class="tiny">transiting Rahu aspects the house; transiting Ketu occupies the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Debt &amp; service</div>
+  <div class="g-note" style="margin-bottom:1.4mm">HIGH</div>
+  <p class="tiny">transiting Rahu occupies the house; transiting Ketu aspects the house; dasha lord Saturn rules the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">8</span>Deferred</div>
+  <div class="g-note" style="margin-bottom:1.4mm">MODERATE</div>
+  <p class="tiny">transiting Jupiter aspects the house; transiting Rahu aspects the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Property</div>
+  <div class="g-note" style="margin-bottom:1.4mm">MODERATE</div>
+  <p class="tiny">transiting Saturn aspects the house; dasha lord Jupiter rules the house</p>
+</div></div>
+<h2>Career</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">10</span>Vocation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">QUIET</div>
+  <p class="tiny">no mechanism recorded</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">6</span>Daily work</div>
+  <div class="g-note" style="margin-bottom:1.4mm">HIGH</div>
+  <p class="tiny">transiting Rahu occupies the house; transiting Ketu aspects the house; dasha lord Saturn rules the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Means</div>
+  <div class="g-note" style="margin-bottom:1.4mm">LIGHT</div>
+  <p class="tiny">transiting Ketu aspects the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">11</span>Networks</div>
+  <div class="g-note" style="margin-bottom:1.4mm">MODERATE</div>
+  <p class="tiny">transiting Jupiter occupies the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">3</span>Effort</div>
+  <div class="g-note" style="margin-bottom:1.4mm">LIGHT</div>
+  <p class="tiny">transiting Rahu aspects the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Specialisation</div>
+  <div class="g-note" style="margin-bottom:1.4mm">MODERATE</div>
+  <p class="tiny">transiting Jupiter aspects the house; dasha lord Saturn rules the house</p>
+</div></div>
+<h2>Family &amp; relationships</h2><div class='grid4'><div class="card tight">
+  <div class="card-title"><span class="hnum">7</span>Partnership</div>
+  <div class="g-note" style="margin-bottom:1.4mm">ELEVATED</div>
+  <p class="tiny">transiting Saturn occupies the house; dasha lord Jupiter rules the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">4</span>Home</div>
+  <div class="g-note" style="margin-bottom:1.4mm">MODERATE</div>
+  <p class="tiny">transiting Saturn aspects the house; dasha lord Jupiter rules the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">2</span>Family</div>
+  <div class="g-note" style="margin-bottom:1.4mm">LIGHT</div>
+  <p class="tiny">transiting Ketu aspects the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">5</span>Children</div>
+  <div class="g-note" style="margin-bottom:1.4mm">MODERATE</div>
+  <p class="tiny">transiting Jupiter aspects the house; dasha lord Saturn rules the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">9</span>Elders</div>
+  <div class="g-note" style="margin-bottom:1.4mm">MODERATE</div>
+  <p class="tiny">transiting Saturn aspects the house; transiting Ketu aspects the house</p>
+</div><div class="card tight">
+  <div class="card-title"><span class="hnum">12</span>Distance</div>
+  <div class="g-note" style="margin-bottom:1.4mm">ELEVATED</div>
+  <p class="tiny">transiting Rahu aspects the house; transiting Ketu occupies the house</p>
+</div></div>
+
+<h2>Children</h2>
+<p class="small">The 5th house activation for this year is
+activation 2 — transiting Jupiter aspects the house; dasha lord Saturn rules the house</p>
+
+<h2>Property, inheritance & ancestral themes</h2>
+<p class="small">The 4th house activation is activation 2 and the 8th is
+activation 2. Property questions are 4th-house subjects; deferred or inherited
+matters are 8th-house subjects.</p>
+
+<h2>Health &amp; safety attention</h2>
+<div class="warn"><p><span class="status" style="background:#FCF6E3;border-color:#C79A2E;color:#C79A2E"><span class="dot" style="background:#D9A62B"></span>CAUTION</span>
+&nbsp; Traditional indicators suggest attention to routine, elder
+responsibilities and family transitions. This is not a diagnosis or a death
+prediction.</p></div>
+
+<h2>Major gains and opportunities</h2>
+<p class="small">No theme reached the escalation threshold for this section this year. This is a statement about the engine's own thresholds, not a promise that nothing arrives.</p>
+
+<h2>Major cautions</h2>
+<p class="small">No theme reached the escalation threshold for this section this year. This is a statement about the engine's own thresholds, not a promise that nothing arrives.</p>
+
+<h2>What to do</h2>
+<ul class="b small">
+  <li>Apply effort where the engine records a dasha-lord activation for this
+      year.</li>
+  <li>Convert networks into written commitments rather than intentions.</li>
+  <li>Keep financial decisions in writing during periods of 12th-house
+      activation.</li>
+</ul>
+
+<h2>What to avoid</h2>
+<ul class="b small">
+  <li>Expanding commitments faster than the 10th-house activation
+      supports.</li>
+  <li>Treating a favourable reading as a result that is already secured.</li>
+  <li>Deferring a family or elder obligation on the assumption it will
+      improve later.</li>
+</ul>
+
+<h2>How to maximise the period</h2>
+<p class="small">Concentrate effort in the houses the engine actually
+activates for this year, and treat the quietest as areas to protect rather
+than to push.</p>
+
+<h2>Traditional remedies</h2>
+<p class="small">See <b>Remedies</b> earlier in this report. Traditional
+practice is culture, not treatment.</p>
+
+<h2>Exact transit events in this year</h2>
+<table class="t">
+  <thead><tr><th>Instant (IST)</th><th>Graha</th><th>Sign change</th>
+  <th>Degree</th></tr></thead>
+  <tbody><tr><td>2026-06-02 01:30</td><td>Jupiter</td><td>Gemini → Cancer</td><td class="num">0°00'00&quot;</td></tr><tr><td>2026-10-31 11:30</td><td>Jupiter</td><td>Cancer → Leo</td><td class="num">0°00'00&quot;</td></tr><tr><td>2026-12-05 23:30</td><td>Rahu</td><td>Aquarius → Capricorn</td><td class="num">30°00'00&quot;</td></tr></tbody>
+</table>
+
+<div class="basis">
+  <div class="b-head">Astrological basis · technical</div>
+  <div class="data-line">
+    dasha Rahu/Saturn/
+    Jupiter · sade_sati
+    PHASE 1 · risk
+    YELLOW ·
+    Jupiter Cancer in
+    11 ·
+    Saturn Pisces in
+    7 ·
+    Rahu Aquarius ·
+    Ketu Leo ·
+    · activation source frozen extraction
+        · confidence MODERATE</div>
+    </div>
+    </div>
+<div class="pagebreak"></div>
+
+<h1>Technical Appendix</h1>
+<p class="lead">The full audit trail. Nothing is removed from the dataset by
+moving it here.</p>
+
+<h2>Calculation conventions</h2>
+<table class="kv">
+  <tr><td class="k">Ephemeris</td><td class="v data-line">
+      pyswisseph (Swiss Ephemeris 2.10.03)</td></tr>
+  <tr><td class="k">Ayanamsa</td>
+      <td class="v">Lahiri (Chitrapaksha)
+      (23.604776°)</td></tr>
+  <tr><td class="k">Node</td><td class="v">Mean node
+      — Ketu is computed as mean node + 180°, never the true/KP node</td></tr>
+  <tr><td class="k">House system</td>
+      <td class="v">Whole-sign (bhava-chalit) for D1 interpretation; Placidus computed for KP cusps only</td></tr>
+  <tr><td class="k">D10 convention</td>
+      <td class="v">R1 (class-based: movable from itself, fixed/dual from the 9th)</td></tr>
+  <tr><td class="k">Julian day (UT)</td>
+      <td class="v data-line">2444947.3125</td></tr>
+  <tr><td class="k">Engine version</td>
+      <td class="v data-line">kundali-calc 1.0</td></tr>
+  <tr><td class="k">Dataset generated</td>
+      <td class="v data-line">2026-10-04T00:52:36</td></tr>
+</table>
+
+<h2>Risk distribution across 1981–2053</h2>
+<table class="t"><thead><tr><th>Level</th><th>Years</th></tr></thead>
+<tbody><tr><td>ORANGE</td><td class="num">9</td></tr><tr><td>RED</td><td class="num">12</td></tr><tr><td>YELLOW</td><td class="num">52</td></tr></tbody></table>
+
+<h2>Ashtakavarga method</h2>
+<p class="small">4 of 7 planetary tables are verified against their published totals (Mars=39, Moon=49, Saturn=39, Sun=48). Remaining tables (Mercury, Jupiter, Venus) are not confirmed and were not fitted to their checksums, so the Sarvashtakavarga total is NOT reported: a partial sum is not the classical 337 and would be misleading.</p>
+<p class="small">Charts computed: Mars, Moon, Saturn, Sun.
+Not computed: Mercury, Jupiter, Venus.</p>
+
+<h2>Notation and units</h2>
+<table class="kv">
+  <tr><td class="k">Degree / minute / second</td>
+      <td class="v data-line">23° 02′ 18″ — degree °, arcminute ′,
+      arcsecond ″</td></tr>
+  <tr><td class="k">Sign ingress</td>
+      <td class="v data-line">Gemini → Cancer (forward, direct motion)</td></tr>
+  <tr><td class="k">Retrograde ingress</td>
+      <td class="v data-line">Cancer → Gemini ← direct motion resumes
+      later in the year</td></tr>
+  <tr><td class="k">Currency</td>
+      <td class="v data-line">₹ — amounts are never predicted; the symbol
+      marks the money sections only</td></tr>
+  <tr><td class="k">Tolerance notation</td>
+      <td class="v data-line">agreement is asserted where the difference is
+      ≤ 1e-6° on longitudes and ≤ 0.001 y on dasha balance; a
+      threshold gate is met at ≥ RED</td></tr>
+  <tr><td class="k">Long-range arrow</td>
+      <td class="v data-line">1981 → 2053 — the dossier span</td></tr>
+  <tr><td class="k">Verification mark</td>
+      <td class="v data-line">✓ independently verified ·
+      — disclosed gap · ? unconfirmed transcription</td></tr>
+</table>
+
+<h2>Risk engine thresholds</h2>
+<table class="kv">
+  <tr><td class="k">RED gate</td>
+      <td class="v data-line">weighted score ≥ 8 AND
+      ≥ 4 distinct mechanisms AND ≥ 2 dasha lords AND
+      ≥ 2 transit grahas</td></tr>
+  <tr><td class="k">ORANGE gate</td>
+      <td class="v data-line">weighted score ≥ 7 AND
+      ≥ 3 distinct mechanisms</td></tr>
+  <tr><td class="k">Engine wording</td>
+      <td class="v small">2+ distinct dasha lords AND 2+ distinct transit grahas AND &gt;=4 mechanisms on the same theme</td></tr>
+</table>
+<p class="small">These gates are bookkeeping for reading emphasis. They are
+not probabilities of any event, and the back-test in Validation Summary shows
+they do not identify real events.</p>
+
+<h2>Test status</h2>
+<table class="t"><thead><tr><th>Suite</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>kundali_core</td><td class="data-line">101 passed, 0 failed</td></tr>
+<tr><td>second-pass independent re-derivation</td>
+    <td class="data-line">24 passed, 0 failed</td></tr>
+<tr><td>birth-time sensitivity</td>
+    <td class="data-line">27 passed, 0 failed</td></tr>
+<tr><td>final risk report</td>
+    <td class="data-line">52 passed, 0 failed</td></tr>
+<tr><td>reference dataset verification</td>
+    <td class="data-line">60 passed, 0 failed</td></tr>
+<tr><td>transit aspects</td><td class="data-line">30 passed, 0 failed</td></tr>
+<tr><td>73-year generation</td>
+    <td class="data-line">92 passed, 0 failed</td></tr>
+<tr><td>PDF layout</td><td class="data-line">36 passed, 0 failed</td></tr>
+<tr><td><b>total</b></td>
+    <td class="data-line"><b>398 passed, 0 failed</b></td></tr>
+</tbody></table>
+<p class="small">Test counts cover computation and formatting. They do
+<b>not</b> cover event-level accuracy, which was tested separately and
+failed — see Validation Summary.</p>
+
+<h2>Known limitations</h2>
+<ul class="b small">
+  <li><b>D27 (Bhreshta)</b> is not implemented — 15 of 16 vargas are
+      computed.</li>
+  <li><b>KP house cusps and sub-lords</b>, Tajika beyond Muntha, and Nadi are
+      not computed.</li>
+  <li><b>Vedha</b> (planetary obstruction of a transit) is not implemented,
+      so transit benefits are computed incompletely.</li>
+  <li><b>Historical source transcription</b> is
+      PENDING — HISTORICAL IMAGE VISION VALIDATION</li>
+  <li><b>Event-level predictive validity: NO-GO</b>, measured and reported.</li>
+  <li><b>Visual page inspection: NOT VERIFIED</b> — the vision provider
+      returns an authentication error, so validation is structural and
+      geometric only.</li>
+</ul>
+
+<div class="basis"><div class="b-head">Provenance</div>
+<div class="data-line">Source data: out/kundali_data.json,
+out/risk_timeline.json, out/blind_predictions_frozen_v2.json. The astrology
+engine was not modified for this presentation build.</div></div>
+<h1>Contents</h1>
+<div id="toc">
+<div class="toc-row">
+  <span class="toc-num">01</span>&nbsp;&nbsp;
+  <span class="toc-label">Introduction</span>
+  <span class="toc-page" data-sec="Introduction">2</span>
+</div><div class="toc-row">
+  <span class="toc-num">02</span>&nbsp;&nbsp;
+  <span class="toc-label">Chart at a Glance</span>
+  <span class="toc-page" data-sec="Chart at a Glance">2</span>
+</div><div class="toc-row">
+  <span class="toc-num">03</span>&nbsp;&nbsp;
+  <span class="toc-label">Birth Charts</span>
+  <span class="toc-page" data-sec="Birth Charts">3</span>
+</div><div class="toc-row">
+  <span class="toc-num">04</span>&nbsp;&nbsp;
+  <span class="toc-label">Planetary Positions</span>
+  <span class="toc-page" data-sec="Planetary Positions">3</span>
+</div><div class="toc-row">
+  <span class="toc-num">05</span>&nbsp;&nbsp;
+  <span class="toc-label">House-by-House</span>
+  <span class="toc-page" data-sec="House-by-House">4</span>
+</div><div class="toc-row">
+  <span class="toc-num">06</span>&nbsp;&nbsp;
+  <span class="toc-label">Strength &amp; Yogas</span>
+  <span class="toc-page" data-sec="Strength &amp; Yogas">8</span>
+</div><div class="toc-row">
+  <span class="toc-num">07</span>&nbsp;&nbsp;
+  <span class="toc-label">Jaimini &amp; KP Systems</span>
+  <span class="toc-page" data-sec="Jaimini &amp; KP Systems">9</span>
+</div><div class="toc-row">
+  <span class="toc-num">08</span>&nbsp;&nbsp;
+  <span class="toc-label">Vimshottari Dasha</span>
+  <span class="toc-page" data-sec="Vimshottari Dasha">10</span>
+</div><div class="toc-row">
+  <span class="toc-num">09</span>&nbsp;&nbsp;
+  <span class="toc-label">Life Themes</span>
+  <span class="toc-page" data-sec="Life Themes">10</span>
+</div><div class="toc-row">
+  <span class="toc-num">10</span>&nbsp;&nbsp;
+  <span class="toc-label">Money</span>
+  <span class="toc-page" data-sec="Money">11</span>
+</div><div class="toc-row">
+  <span class="toc-num">11</span>&nbsp;&nbsp;
+  <span class="toc-label">Career</span>
+  <span class="toc-page" data-sec="Career">12</span>
+</div><div class="toc-row">
+  <span class="toc-num">12</span>&nbsp;&nbsp;
+  <span class="toc-label">Family &amp; Relationships</span>
+  <span class="toc-page" data-sec="Family &amp; Relationships">12</span>
+</div><div class="toc-row">
+  <span class="toc-num">13</span>&nbsp;&nbsp;
+  <span class="toc-label">Health &amp; Safety</span>
+  <span class="toc-page" data-sec="Health &amp; Safety">12</span>
+</div><div class="toc-row">
+  <span class="toc-num">14</span>&nbsp;&nbsp;
+  <span class="toc-label">Ancestral Line</span>
+  <span class="toc-page" data-sec="Ancestral Line">13</span>
+</div><div class="toc-row">
+  <span class="toc-num">15</span>&nbsp;&nbsp;
+  <span class="toc-label">Remedies</span>
+  <span class="toc-page" data-sec="Remedies">13</span>
+</div><div class="toc-row">
+  <span class="toc-num">16</span>&nbsp;&nbsp;
+  <span class="toc-label">Birth-Time Sensitivity</span>
+  <span class="toc-page" data-sec="Birth-Time Sensitivity">14</span>
+</div><div class="toc-row">
+  <span class="toc-num">17</span>&nbsp;&nbsp;
+  <span class="toc-label">Validation Summary</span>
+  <span class="toc-page" data-sec="Validation Summary">15</span>
+</div><div class="toc-row">
+  <span class="toc-num">18</span>&nbsp;&nbsp;
+  <span class="toc-label">Year-Wise Dossier</span>
+  <span class="toc-page" data-sec="Year-Wise Dossier">16</span>
+</div><div class="toc-row">
+  <span class="toc-num">19</span>&nbsp;&nbsp;
+  <span class="toc-label">Technical Appendix</span>
+  <span class="toc-page" data-sec="Technical Appendix">37</span>
+</div>
+</div>
+</body></html>
