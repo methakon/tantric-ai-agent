@@ -1,0 +1,45 @@
+{
+  "_record": "Birth-year discrepancy noticed during the P0 search. USER-DIRECTED: 1981 stands as the authoritative birth year. This record exists so the finding is not rediscovered and acted on by a later session.",
+  "_decision_authority": "USER",
+  "_decided": "2026-10-04",
+  "authoritative_birth_data": {
+    "date": "1981-12-09",
+    "time": "01:00:00 IST",
+    "status": "USER-CONFIRMED",
+    "note": "Confirmed by the subject after the 1982 discrepancy below was reported."
+  },
+  "discrepancy_found": {
+    "summary": "Two documents in an employer archive state a date of birth of 9 December 1982; the chart is built on 9 December 1981. Day and month agree; the year differs by one.",
+    "documents": [
+      {
+        "source": "ids/IDcards_and_dobc/aadhar_date_of_birth.pdf",
+        "authority": "Unique Identification Authority of India, digitally signed letter",
+        "generation_date": "2017-08-05",
+        "download_date": "2019-09-23",
+        "field_as_printed": "জ'তািরখ/DOB: 09/12/1982",
+        "reading": "9 December 1982 (unambiguous: the date field is DD/MM/YYYY and the value cannot be read as MM/DD because 09 <= 12 and 12 <= 12; in UIDAI format the day is first)",
+        "supports_1982": true,
+        "supports_1981": false,
+        "confidence": "HIGH — the document is digitally signed by UIDAI"
+      },
+      {
+        "source": "final/salaryslip/PaySlip-ESPSD323(SWARNA SEKHAR DHAR)_NOV_2020.pdf",
+        "authority": "Employer payroll record, Espirit Technologies Pvt Ltd, employee code ESPSD323",
+        "field_as_printed": "DOB : 09/12/1982",
+        "supports_1982": true,
+        "supports_1981": false,
+        "confidence": "MEDIUM — an employer-entered field, not a primary identity record"
+      }
+    ],
+    "documents_consistent_with_1981": [],
+    "why_it_matters": "A one-year birth error places the Moon in a different nakshatra, which changes the dasha lord, the dasha balance and every mahadasha boundary. It would invalidate both the chart and the NO-GO baseline, which were computed on 1981.",
+    "resolution": "NOT ADOPTED — the subject was shown this evidence and directed that 1981 stands.",
+    "plausible_benign_explanation": "An employer-entered and a UIDAI-entered year can both carry a transcription error; the subject's own recollection is the tiebreak the subject chose to exercise.",
+    "action_required_of_future_sessions": "DO NOT change the birth year on the strength of these two documents alone. They are recorded, not adopted. If a THIRD independent primary document states 1981, this record should be updated to show the conflict resolved."
+  },
+  "do_not": [
+    "Do not alter calculate_kundali.py's birth input from this record.",
+    "Do not regenerate v5 or the frozen datasets on the basis of this record.",
+    "Do not cite this record as evidence that 1981 is documentarily confirmed — it is USER-CONFIRMED, which is a different and weaker kind of claim."
+  ]
+}

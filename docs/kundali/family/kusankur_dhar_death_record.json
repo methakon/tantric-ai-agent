@@ -1,0 +1,75 @@
+{
+  "person": "Kusankur Dhar",
+  "death_date": null,
+  "death_date_status": "NOT YET VERIFIED — primary document not located; the 2019 date exists only as an uninspected transcription",
+  "age": null,
+  "registration_number": "D-2019:19-90044-000494",
+  "registration_number_status": "USER-SUPPLIED — transcribed in conversation, not read from the document",
+  "registration_date": "2019-07-09",
+  "registration_date_status": "USER-SUPPLIED — not inspected",
+  "issuing_authority": "Registrar (Birth & Death), Berhampore Municipality, West Bengal",
+  "issuing_authority_status": "USER-SUPPLIED — not inspected",
+  "father": "Sisir Kumar Dhar",
+  "father_status": "PARTIALLY CORROBORATED — the subject's Aadhaar letter names his own father as Kusankur; the paternal grandfather is recorded elsewhere in this project",
+  "mother": "",
+  "mother_status": "UNKNOWN — not transcribed, not inspected",
+  "spouse": "",
+  "spouse_status": "UNKNOWN — not transcribed, not inspected",
+  "address": "11 Pound Road, P.O. Khagra, Berhampore, Murshidabad, West Bengal 742103",
+  "address_status": "CORROBORATED — matches the subject's UIDAI Aadhaar letter as printed, including the PIN",
+  "primary_document": "",
+  "primary_document_status": "NOT LOCATED — searched ~/Downloads, ~/Documents, ~/Desktop, ~/Pictures, the project tree and the agent cache on 2026-10-04 for *death*, *kusankur*, *mrityu*, *certificate*, *cert*, *reg* to depth 5; no certificate present",
+  "document_required_to_verify": [
+    "deceased's full name as printed",
+    "date of death",
+    "age or date of birth",
+    "registration number",
+    "date of registration or issue",
+    "issuing authority with office and seal",
+    "father's and mother's names",
+    "spouse's name",
+    "permanent address",
+    "informant's name and relationship",
+    "sex, religion, nationality, occupation",
+    "cause of death (to be recorded, never interpreted)"
+  ],
+  "official_route": "Berhampore Municipality, Registrar (Birth & Death), 11 Pound Road / Khagra, Berhampore, Murshidabad, WB 742103. Certified copy of Death Registration D-2019:19-90044-000494 under the West Bengal Birth and Death Registration Act; in person with ID, or via edistrict.wb.gov.in -> Birth & Death Certificate.",
+  "sources_not_used": "No unofficial or leaked database was consulted. No access control, CAPTCHA or authentication was bypassed. Company and shareholder records were excluded as proof of a death date, per instruction.",
+  "secondary_sources": [
+    {
+      "source": "~/Downloads/myids-20171212T213400Z-001/myids/CITYTECH/ids/IDcards_and_dobc/aadhar_date_of_birth.pdf",
+      "authority": "Unique Identification Authority of India, digitally signed",
+      "generation_date": "2017-08-05",
+      "download_date": "2019-09-23",
+      "establishes": [
+        "subject's name as Swarna Sekhar Dhar",
+        "relationship S/O Kusankur Dhaar (spelling variant)",
+        "address 11 Pound Road, Khagra, Berhampore, Murshidabad, West Bengal - 742103"
+      ],
+      "does_not_establish": [
+        "date of death",
+        "the year 2018 or 2019"
+      ]
+    },
+    {
+      "source": "~/Downloads/myids-20171212T213400Z-001/mids/CITYTECH/final/salaryslip/PaySlip-ESPSD323(SWARNA SEKHAR DHAR)_NOV_2020.pdf",
+      "authority": "Espirit Technologies Pvt Ltd payroll record, employee code ESPSD323",
+      "establishes": [
+        "employer-emitted field: Father's Name : KUSUNAKAR DHAR (further spelling variant of the father's name)"
+      ],
+      "does_not_establish": [
+        "date of death"
+      ]
+    }
+  ],
+  "2018_claim_status": "USER-SUPPLIED family recollection. Preserved as a legitimate historical statement. Not contradicted by any located document. Not documentary evidence.",
+  "2019_claim_status": "USER-SUPPLIED transcription of a registration record. Internally consistent (death 21 Jun 2019, issued 9 Jul 2019, registration number year segment 2019 all agreeing), but the document has not been inspected. Plausible, unverified.",
+  "conflict_status": "UNRESOLVED — two years in conflict, neither documentarily established",
+  "astrology_used_to_adjudicate": false,
+  "astrology_note": "The engine's readings for 2018 and 2019 were computed and marginally favour 2019 on the 10th house at p=0.389, a probability chance explains. That result was NOT used. The NO-GO baseline already establishes that the engine cannot distinguish these years. Selecting the better-fitting year is the exact failure mode this project is built to avoid.",
+  "documentary_confidence": "LOW — identity and address are corroborated by a digitally signed primary record; the date of death rests entirely on an uninspected transcription",
+  "blocks": "E08 cannot serve as a pass/fail endpoint in the P4 historical validation until the year is established, because the label itself is uncertain. E08 is carried as UNTESTABLE on documentary grounds.",
+  "astrology_altered_to_fit": false,
+  "calculation_altered_to_fit": false,
+  "notes": "P0 instructed changing the status to VERIFIED conditional on the supplied certificate confirming 21 June 2019. That condition is NOT met: the certificate is not present on this system. Status is therefore NOT YET VERIFIED rather than VERIFIED, because asserting VERIFIED would claim inspection of a document that does not exist. Two images in ~/Downloads/ME were previously assumed to be the certificate; both are steeply angled and glared, local OCR returned noise, and no field was transcribed from them. A death record must not be reconstructed from unreadable OCR."
+}
