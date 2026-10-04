@@ -1,0 +1,73 @@
+{#- timeline.html — §23. The full-span visual timeline. -#}
+<section class="section-opener">
+  <h1>23 · Timeline {{ meta.span }}</h1>
+  <p class="lead">
+    The whole span at a glance: dasha periods above, engine risk levels below,
+    and the birth-time-sensitive years marked.
+  </p>
+
+  {%- if dasha_chart_available %}
+  <div class="chart-fig">
+    <img src="dasha_timeline.svg" alt="Mahadasha timeline"/>
+    <div class="chart-cap">
+      <span class="cc-code">DASHA</span> · Mahadasha span<br/>
+      <span class="cc-note">Block width is a linear share of
+      {{ meta.span_first }}–{{ meta.span_last }}.</span>
+    </div>
+  </div>
+  {%- endif %}
+
+  <h2>Risk level by year</h2>
+  <table class="t matrix">
+    <thead>
+      <tr><th>Year</th><th>Level</th><th>Dasha</th>
+      <th>Category levels</th><th>Confidence</th></tr>
+    </thead>
+    <tbody>
+      {%- for r in timeline.rows %}
+      <tr class="{{ 'hi' if r.time_sensitive else '' }}">
+        <td class="year">{{ r.year }}</td>
+        <td class="lvl">{{ risk_chip(r.level, risk_word) }}</td>
+        <td class="dasha small">{{ r.dasha }}</td>
+        <td class="small">{{ r.cats }}</td>
+        <td>
+          {%- if r.time_sensitive %}
+          <span class="badge warn">TIME-SENSITIVE</span>
+          {%- else %}
+          <span class="badge {{ r.conf_badge }}">{{ r.confidence }}</span>
+          {%- endif %}
+        </td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Distribution</h2>
+  <table class="t">
+    <thead><tr><th>Level</th><th class="num">Years</th><th>Meaning</th></tr></thead>
+    <tbody>
+      {%- for lvl, n, word in timeline.distribution %}
+      <tr>
+        <td>{{ risk_chip(lvl, risk_word) }}</td>
+        <td class="num">{{ n }}</td>
+        <td class="small">{{ word }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="warn">
+    <p>
+      A RED or ORANGE year is <b>not</b> a prediction of misfortune. These are
+      the engine's own emphasis thresholds, reached when several independent
+      mechanism families touch one theme. The validation found the engine cannot
+      distinguish event years from ordinary ones, so a RED year is a year of
+      concentrated attention in the calculation — nothing more.
+    </p>
+    <p>
+      Shaded rows are birth-time sensitive: their readings move when the birth
+      minute is uncertain. That is a statement about arithmetic stability, not
+      about severity.
+    </p>
+  </div>
+</section>

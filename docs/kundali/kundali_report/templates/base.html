@@ -1,0 +1,64 @@
+{#-
+  base.html — LAYER E: the only layout template.
+
+  Responsibilities: shell, stylesheet links, cover, TOC, and the ordered
+  emission of every section from structure.SECTIONS.
+
+  It contains NO report logic. It iterates a prepared section list; each
+  section's content comes from its own template via a macro call.
+-#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>{{ meta.title }}</title>
+<meta name="author" content="{{ meta.author }}"/>
+<meta name="description" content="{{ meta.description }}"/>
+<style>{{ css }}</style>
+</head>
+<body>
+
+{%- include "cover.html" -%}
+
+{#- TOC: page numbers resolved by a second render pass, never guessed -#}
+{%- include "toc.html" -%}
+
+{#- Executive summary first: the NO-GO result is stated before any reading -#}
+{% include "exec_summary.html" %}
+{% include "methodology.html" %}
+{% include "birth_data.html" %}
+{% include "chart_at_glance.html" %}
+{% include "chart_d1.html" %}
+{% include "chart_divisional.html" %}
+{% include "planetary.html" %}
+{% include "panchanga.html" %}
+{% include "houses.html" %}
+{% include "yogas.html" %}
+{% include "strength.html" %}
+{% include "dasha.html" %}
+{% include "life_themes.html" %}
+
+{#- The validation block. NO-GO is presented in full. -#}
+{% include "validation.html" %}
+{% include "education_validation.html" %}
+{% include "career_validation.html" %}
+{% include "marriage_validation.html" %}
+{% include "family_validation.html" %}
+{% include "children.html" %}
+
+{% include "ancestry.html" %}
+{% include "money.html" %}
+{% include "property.html" %}
+{% include "timeline.html" %}
+
+{#- Year-by-year. In preview mode this renders the representative subset. -#}
+{% include "years_block.html" %}
+
+{% include "remedies.html" %}
+{% include "technical_appendix.html" %}
+{% include "limitations.html" %}
+{% include "data_sources.html" %}
+{% include "audit_trail.html" %}
+
+</body>
+</html>

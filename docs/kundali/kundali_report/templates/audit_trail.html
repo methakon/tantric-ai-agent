@@ -1,0 +1,59 @@
+{#- audit_trail.html — §29. What was done, in order, with commits. -#}
+<section class="section-opener">
+  <h1>29 · Audit Trail</h1>
+  <p class="lead">
+    The sequence of work, so a reader can see what was checked and when. This
+    is a working record, not a certificate.
+  </p>
+
+  <h2>This build</h2>
+  <table class="kv">
+    <tr><td class="k">Generated</td>
+        <td class="v mono">{{ audit.generated }}</td></tr>
+    <tr><td class="k">Build type</td>
+        <td class="v">{{ audit.build_type }}</td></tr>
+    <tr><td class="k">Renderer</td>
+        <td class="v">{{ audit.renderer }}</td></tr>
+    <tr><td class="k">Years rendered</td>
+        <td class="v">{{ audit.years_rendered }}</td></tr>
+    <tr><td class="k">Sections</td>
+        <td class="v">{{ audit.sections }}</td></tr>
+    <tr><td class="k">Pages</td>
+        <td class="v">{{ audit.pages }}</td></tr>
+    <tr><td class="k">TOC resolution</td>
+        <td class="v">{{ audit.toc }}</td></tr>
+  </table>
+
+  <h2>Documents produced by this project</h2>
+  <table class="t">
+    <thead><tr><th>Artifact</th><th>Purpose</th></tr></thead>
+    <tbody>
+      {%- for a in audit.artifacts %}
+      <tr>
+        <td class="small mono">{{ a.name }}</td>
+        <td class="small">{{ a.purpose }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Validation history</h2>
+  <table class="t">
+    <thead><tr><th>Step</th><th>Outcome</th></tr></thead>
+    <tbody>
+      {%- for s in audit.steps %}
+      <tr>
+        <td>{{ s.step }}</td>
+        <td class="small">{{ s.outcome }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="basis">
+    <div class="b-head">Standing statement</div>
+    <div class="t-data">
+      {{ audit.statement }}
+    </div>
+  </div>
+</section>

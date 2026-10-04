@@ -1,0 +1,101 @@
+/* ==========================================================================
+   tables.css — research-grade tables.
+
+   Large tables repeat their header on every printed page (`thead` is
+   table-header-group, set in print.css). Row borders are hairline and the
+   zebra shading is very light, so a 73-row table reads as a table rather than
+   as a striped block.
+   ========================================================================== */
+
+table.t {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-table);
+  margin: 0 0 var(--sp-3) 0;
+  page-break-inside: auto;
+}
+
+table.t caption {
+  caption-side: top;
+  text-align: left;
+  font-size: var(--fs-badge);
+  color: var(--gold-deep);
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  padding-bottom: 1.6mm;
+  font-weight: 600;
+}
+
+table.t thead { display: table-header-group; }
+
+table.t th {
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 600;
+  text-align: left;
+  padding: 1.7mm 2mm;
+  font-size: 7.8pt;
+  letter-spacing: .05em;
+  border: none;
+  vertical-align: bottom;
+}
+
+table.t td {
+  padding: 1.5mm 2mm;
+  border-bottom: var(--hairline) solid var(--rule);
+  vertical-align: top;
+  line-height: 1.25;
+}
+
+/* zebra: very light, applied only to alternate rows */
+table.t tbody tr:nth-child(even) td { background: #FBF9F3; }
+
+/* a highlighted row — lagna lord, 10th lord, 7th lord, AK, DK */
+table.t tr.hi td {
+  background: var(--ivory) !important;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* numeric alignment */
+table.t td.num, table.t th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.t td.ctr, table.t th.ctr { text-align: center; }
+
+/* a mono-ish technical cell: values an auditor compares */
+table.t td.mono {
+  font-size: var(--fs-data);
+  color: var(--grey);
+  font-variant-numeric: tabular-nums;
+}
+
+/* key/value pairs (conventions, metadata) — no header row */
+table.kv { width: 100%; border-collapse: collapse; font-size: var(--fs-note); }
+table.kv td { padding: .9mm 0; vertical-align: top; border-bottom: var(--hairline) solid var(--rule); }
+table.kv tr:last-child td { border-bottom: none; }
+table.kv td.k {
+  color: var(--gold-deep);
+  width: 34%;
+  letter-spacing: .05em;
+  padding-right: 3mm;
+}
+table.kv td.v { color: var(--ink-soft); }
+table.kv td.v.mono { font-size: var(--fs-data); font-variant-numeric: tabular-nums; }
+
+/* ---------- the 1981-2053 risk matrix ---------- */
+/* Year column is narrow and fixed so the grid stays aligned down 73 rows. */
+table.matrix td.year {
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-size: 10pt;
+  color: var(--ink);
+  white-space: nowrap;
+  width: 14mm;
+}
+table.matrix td.lvl { width: 20mm; white-space: nowrap; }
+table.matrix td.dasha { white-space: nowrap; }
+
+/* ---------- verification dashboard ---------- */
+table.verify td.metric { color: var(--gold-deep); width: 30%; letter-spacing: .05em; }
+table.verify td.value  { color: var(--ink); font-weight: 600; }
+
+/* ---------- a note row under a table ---------- */
+table.t + .note { margin-top: calc(-1 * var(--sp-2)); }

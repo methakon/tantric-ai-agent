@@ -1,0 +1,70 @@
+{#- marriage_validation.html — §17.
+
+  The critical structural point: 2015 contains a marriage AND a separation four
+  months later. An annual engine returns one state per year, so it cannot
+  represent these as two events at all. That limit is reported as a limit. -#}
+<section class="section-opener">
+  <h1>17 · Marriage &amp; Relationship Validation</h1>
+  <p class="lead">
+    Five distinct relationship events across ten years, tested separately:
+    formation, instability, a prolonged legal dispute, a second marriage, and
+    the end of that dispute.
+  </p>
+
+  <table class="t">
+    <thead><tr><th>Event</th><th>Year</th><th>Houses tested</th>
+      <th class="num">H7</th><th class="num">H11</th>
+      <th>Verdict</th><th>p</th></tr></thead>
+    <tbody>
+      {%- for r in marriage.rows %}
+      <tr>
+        <td>{{ r.event }}</td>
+        <td>{{ r.year }}</td>
+        <td class="small mono">{{ r.houses }}</td>
+        <td class="num">{{ r.h7 }}</td>
+        <td class="num">{{ r.h11 }}</td>
+        <td><span class="badge {{ r.badge }}">{{ r.verdict }}</span></td>
+        <td class="num mono">{{ r.p }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>The structural limit</h2>
+  <div class="callout">
+    <div class="co-title">One year cannot hold two events</div>
+    <p class="small">
+      The first marriage and its dissolution both fall in 2015, in the same
+      dasha, from the same 7th-house state. The engine returned two different
+      verdicts for them — MATCH and WEAK — differing only in which house list
+      was applied to the same annual state.
+    </p>
+    <p class="small">
+      This is not a tuning failure that better parameters would fix. <b>An
+      annual-resolution engine structurally cannot represent a marriage and its
+      separation four months apart as distinct events.</b> The same limit
+      applies to the nine-year dispute, which is scored from its single start
+      year.
+    </p>
+    <p class="small">
+      Three of the five career interruptions are untestable for the same reason.
+      This ceiling bounds what any annual engine can be asked to validate,
+      independently of whether the astrology carries signal.
+    </p>
+  </div>
+
+  <h2>What this rules out</h2>
+  <ul class="b small">
+    <li>No claim that the chart indicated the marriage.</li>
+    <li>No claim that the chart indicated the separation.</li>
+    <li>No claim about the legal dispute, which was scored from one year of a
+        nine-year period.</li>
+    <li>No single-year verdict is presented as more than coincidence-consistent
+        at best; the best result in the set sits well inside the null.</li>
+  </ul>
+
+  <div class="basis">
+    <div class="b-head">Frames tested</div>
+    <div class="t-data">{{ marriage.frames }}</div>
+  </div>
+</section>

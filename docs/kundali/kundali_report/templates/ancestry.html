@@ -1,0 +1,83 @@
+{#- ancestry.html — §20 and §26 of the architecture brief.
+
+  Genealogy is DOCUMENTATION, not astrology. No name is guessed, no generation
+  inferred from a chart, and Kula Devata is never derived from planets. -#}
+<section class="section-opener">
+  <h1>20 · Ancestry &amp; Pitru Themes</h1>
+  <p class="lead">
+    A documentary record with explicit status on every line. The chart is not
+    used to prove a relationship.
+  </p>
+
+  <h2>Paternal line</h2>
+  <table class="tree">
+    <tbody>
+      {%- for n in ancestry.tree %}
+      <tr>
+        <td class="gen-label">{{ n.generation }}</td>
+      </tr>
+      <tr><td>
+        <span class="node {{ 'unknown' if n.unverified else '' }}">
+          <span class="n-name">{{ n.name }}</span><br/>
+          <span class="badge {{ n.badge }}">{{ n.status }}</span>
+        </span>
+      </td></tr>
+      {%- if not loop.last %}
+      <tr><td class="connector">&#9660;</td></tr>
+      {%- endif %}
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <p class="note muted">
+    Status vocabulary: VERIFIED (documentary), PROBABLE (strong but
+    uncorroborated), UNCONFIRMED (asserted, not evidenced), CONFLICT (sources
+    disagree), UNKNOWN. No status is upgraded on the strength of a chart.
+  </p>
+
+  <h2>Unresolved items</h2>
+  <table class="t">
+    <thead><tr><th>Item</th><th>Status</th><th>What would settle it</th></tr></thead>
+    <tbody>
+      {%- for u in ancestry.unresolved %}
+      <tr>
+        <td>{{ u.item }}</td>
+        <td><span class="badge {{ u.badge }}">{{ u.status }}</span></td>
+        <td class="small">{{ u.needed }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Kula Devata / Kula Devi</h2>
+  <div class="callout">
+    <div class="co-title">Status — not verified</div>
+    <p class="small">
+      A specific family deity <b>cannot</b> be established from planetary
+      placements. The chart does not name one and this document does not guess.
+      Inferring a family deity from a horoscope would be an invention dressed
+      as a finding.
+    </p>
+    <p class="small"><b>Evidence that would settle it:</b></p>
+    <ul class="b small">
+      <li>family tradition recorded by a living elder</li>
+      <li>temple or shrine record</li>
+      <li>historical puja record or festival practice</li>
+    </ul>
+    <p class="tiny muted">
+      This box is deliberate rather than missing data. An unverified item that
+      says so is more useful than a confident guess.
+    </p>
+  </div>
+
+  <div class="basis">
+    <div class="b-head">Method discipline</div>
+    <div class="t-data">
+      Genealogy is treated as documentation. A chart cannot establish that two
+      people were related, and a relationship cannot be inferred from a shared
+      sign or a matching naksatra. Where two independent father-son links
+      showed zero shared D12 signs, that null result was reported as a null
+      rather than dressed up as an inherited signature.
+    </div>
+  </div>
+</section>

@@ -1,0 +1,219 @@
+/* ==========================================================================
+   main.css — the design system. LAYER F.
+
+   Tokens live here and NOWHERE else. Every other stylesheet and every
+   template reads these variables, so a palette change is a one-file change.
+
+   Colour provenance: the four core values are the ones named in the design
+   brief. They were also independently confirmed as the reference Kundli's own
+   measured palette (#1F2A44 indigo, #B08A3E/B8862B gold, #FAF7F0 ivory), so
+   the report and the reference share an identity rather than merely resembling
+   one. See references/visual-reference.md for the measurements.
+   ========================================================================== */
+
+:root {
+  /* --- core palette */
+  --ink:            #1F2A44;   /* deep indigo — headings, rules */
+  --ink-soft:       #33405C;
+  --ink-faint:      #5A6B8C;
+  --gold:           #B08A3E;   /* warm gold — accents */
+  --gold-deep:      #8F6F2E;
+  --gold-light:     #D8C89A;
+  --ivory:          #FAF7F0;   /* warm ivory — page wash */
+  --ivory-deep:     #F2EDE1;
+  --charcoal:       #252525;   /* body */
+  --body:           #333333;
+  --grey:           #667085;   /* blue-grey, secondary */
+  --grey-light:     #9AA3B0;
+  --rule:           #DDD6C6;
+  --white:          #FFFFFF;
+
+  /* --- risk families. Pale fill + dark border + dot. The WORD is always
+         rendered too: colour is never the only channel (WCAG, brief §6/§11). */
+  --risk-green-fill:   #EDF6EE;  --risk-green-line:  #3E7D4E;  --risk-green-dot:  #3E7D4E;
+  --risk-yellow-fill:  #FCF6E3;  --risk-yellow-line: #C79A2E;  --risk-yellow-dot: #D9A62B;
+  --risk-orange-fill:  #FCEFE2;  --risk-orange-line: #C9762F;  --risk-orange-dot: #DD8034;
+  --risk-red-fill:     #FBEBEA;  --risk-red-line:    #A83232;  --risk-red-dot:    #C0392B;
+
+  /* --- confidence / evidence badges */
+  --ok-fill:      #EDF6EE;   --ok-line:   #3E7D4E;
+  --warn-fill:    #FBF3DC;   --warn-line: #C79A2E;
+  --alert-fill:   #FBEBEA;   --alert-line:#A83232;
+  --info-fill:    #EEF2F8;   --info-line: #46618C;
+
+  /* --- type scale (A4). Ranges from the design brief.
+         Body floor is 9.5pt: the reference Kundli's body runs 7.8-8.7pt, which
+         is below that floor, so its scale is deliberately NOT copied. */
+  --fs-doc-title:  32pt;
+  --fs-h1:         21pt;
+  --fs-h2:         14.5pt;
+  --fs-h3:         11.5pt;
+  --fs-lead:       11pt;
+  --fs-body:       10pt;
+  --fs-small:      9pt;
+  --fs-note:       8.2pt;
+  --fs-table:      8.4pt;
+  --fs-data:       8pt;
+  --fs-footer:     7.6pt;
+  --fs-badge:      7.4pt;
+
+  --lh-body:  1.28;
+  --lh-tight: 1.18;
+
+  /* --- spacing scale */
+  --sp-1: 1.4mm;
+  --sp-2: 2.4mm;
+  --sp-3: 3.4mm;
+  --sp-4: 4.6mm;
+  --sp-5: 6mm;
+  --sp-6: 8mm;
+
+  --radius: 2px;
+  --hairline: .5pt;
+  --rule-w: .8pt;
+}
+
+/* ---------- reset ---------- */
+* { box-sizing: border-box; }
+
+html {
+  font-family: "Noto Sans", "DejaVu Sans", "Liberation Sans", sans-serif;
+  -weasy-hyphens: none;
+}
+
+body {
+  margin: 0;
+  color: var(--body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  text-align: left;          /* never justified: narrow columns + justify
+                                produces rivers of white space */
+}
+
+/* ---------- serif display family ---------- */
+.serif,
+h1, h2, .doc-title, .card-title, .callout .co-title, .g-value,
+.house-name, .toc-num, .chart-cap .cc-code {
+  font-family: "Noto Serif Display", "Noto Serif", "DejaVu Serif", serif;
+}
+
+/* ---------- headings ---------- */
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 var(--sp-3) 0;
+  padding-bottom: var(--sp-2);
+  border-bottom: 1.6pt solid var(--ink);
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: var(--ink);
+  margin: var(--sp-5) 0 var(--sp-2) 0;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+h3 {
+  font-family: "Noto Sans", "DejaVu Sans", sans-serif;
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin: var(--sp-3) 0 var(--sp-1) 0;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.doc-title { font-size: var(--fs-doc-title); color: var(--ink); line-height: 1.1; }
+
+/* the small tracked label above a block */
+.eyebrow {
+  font-size: var(--fs-badge);
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0 0 var(--sp-1) 0;
+}
+
+.lead { font-size: var(--fs-lead); color: var(--ink); margin-bottom: var(--sp-3); }
+p { margin: 0 0 var(--sp-2) 0; }
+
+/* first-line indent for CONTINUOUS PROSE ONLY — never on headings, cards,
+   tables or lists (brief §32) */
+.prose { text-indent: 5mm; }
+p.prose + p.prose { margin-top: 0; }
+
+/* ---------- text hierarchy: DATA / INTERPRETATION / PRACTICAL ---------- */
+.t-data {
+  font-size: var(--fs-data);
+  color: var(--grey);
+  line-height: var(--lh-tight);
+}
+
+/* ---------- cards ---------- */
+.card {
+  border: var(--rule-w) solid var(--rule);
+  border-left: 2.6pt solid var(--gold);
+  padding: var(--sp-3);
+  margin: 0 0 var(--sp-3) 0;
+  background: var(--white);
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.card.tight { padding: var(--sp-2) 3mm; margin-bottom: var(--sp-2); }
+.card.flush { border-left: none; border-top: 2pt solid var(--gold); }
+
+.card-title {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 var(--sp-1) 0;
+}
+.card-title .hnum { color: var(--gold-deep); margin-right: 1.6mm; }
+.card-sub { color: var(--grey); font-size: var(--fs-note); margin: 0 0 var(--sp-2) 0; }
+
+/* ---------- grids ---------- */
+.grid    { display: flex; gap: var(--sp-3); margin-bottom: var(--sp-3); }
+.grid > * { flex: 1 1 0; min-width: 0; }      /* min-width:0 stops flex items
+                                                overflowing their column */
+.grid-2  > * { flex: 1 1 48%; }
+.grid-4  { display: flex; gap: var(--sp-2); margin-bottom: var(--sp-3); }
+.grid-4 > * { flex: 1 1 0; min-width: 0; }
+
+/* ---------- at-a-glance cards ---------- */
+.glance {
+  border: var(--hairline) solid var(--rule);
+  border-top: 2pt solid var(--gold);
+  padding: var(--sp-2) 2.8mm;
+  background: var(--white);
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.glance .g-label {
+  font-size: 7.4pt; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--gold-deep); font-weight: 600;
+}
+.glance .g-value {
+  font-size: 15pt; color: var(--ink); margin: .8mm 0 1.2mm 0;
+  line-height: 1.15;
+}
+.glance .g-note { font-size: var(--fs-note); color: var(--grey); line-height: 1.3; }
+
+/* ---------- misc ---------- */
+.pagebreak { page-break-before: always; break-before: page; }
+.avoid     { page-break-inside: avoid; break-inside: avoid; }
+.center    { text-align: center; }
+.right     { text-align: right; }
+.muted     { color: var(--grey); }
+.small     { font-size: var(--fs-small); }
+.note      { font-size: var(--fs-note); }
+.tiny      { font-size: var(--fs-badge); color: var(--grey); }
+.pb        { color: var(--gold-deep); }
+.ink       { color: var(--ink); }
+.nowrap    { white-space: nowrap; }
+.divider   { height: var(--hairline); background: var(--rule); margin: var(--sp-3) 0; }

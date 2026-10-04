@@ -1,0 +1,46 @@
+{#- data_sources.html — §28. Provenance of every input, and what kind of
+    evidence each one is. -#}
+<section class="section-opener">
+  <h1>28 · Data Sources</h1>
+  <p class="lead">
+    Every input this document was built from, with its kind and its
+    limitations. A reader who wants to check a figure can find its origin here.
+  </p>
+
+  <table class="t">
+    <thead><tr><th>Input</th><th>Kind</th><th>Use</th>
+      <th>Limitation</th></tr></thead>
+    <tbody>
+      {%- for s in sources.rows %}
+      <tr>
+        <td><b>{{ s.name }}</b></td>
+        <td><span class="evidence ev-{{ s.evidence_key }}">{{ s.evidence }}</span></td>
+        <td class="small">{{ s.use }}</td>
+        <td class="small">{{ s.limitation }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>What was deliberately not used</h2>
+  <ul class="b small">
+    <li><b>No authenticated or private profile.</b> A professional profile was
+        not accessed through any logged-in session. Automated retrieval of such
+        a profile is against its terms of service, and driving the subject's own
+        authenticated session is not a step taken here without explicit
+        instruction.</li>
+    <li><b>No unofficial or leaked databases.</b> Only public API responses and
+        public index pages were consulted.</li>
+    <li><b>No invented employment dates.</b> Absence of a public record is
+        recorded as absence.</li>
+  </ul>
+
+  <div class="basis">
+    <div class="b-head">Separation of evidence kinds</div>
+    <div class="t-data">
+      A value transcribed from a source is agreement with that source, not
+      independent corroboration. "Independently verified" in this document
+      always names the second computation.
+    </div>
+  </div>
+</section>

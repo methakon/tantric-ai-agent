@@ -1,0 +1,47 @@
+{#- cover.html — a premium cover. Not a metadata table, not a debug dump. -#}
+<section class="cover">
+  <div class="cover-band">
+    <div class="c-eyebrow">Vedic Astrology · Dasha · Transit · Life Themes</div>
+    <div class="c-name">SWARNA SEKHAR DHAR</div>
+    <div class="c-title">JANMA KUNDALI</div>
+    <div class="c-amp">&amp;</div>
+    <div class="c-title">LIFE DOSSIER</div>
+    <div class="c-span">{{ meta.span }}</div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-rule"></div>
+
+    <table class="kv cover-birth">
+      <tr><td class="k">Birth</td><td class="v">09 December 1981</td></tr>
+      <tr><td class="k">Time</td><td class="v">01:00 AM IST</td></tr>
+      <tr><td class="k">Place</td>
+          <td class="v">Berhampore, Murshidabad<br/>West Bengal, India</td></tr>
+      <tr><td class="k">Lagna</td>
+          <td class="v">{{ birth.lagna }} {{ birth.lagna_dms }}</td></tr>
+    </table>
+
+    {% if birth.chart_available %}
+    <div class="cover-chart">
+      <img src="{{ birth.chart }}" alt="D1 rasi chart"/>
+    </div>
+    {% endif %}
+
+    {#- The NO-GO statement appears on the cover, before any reading. -#}
+    <div class="cover-verdict">
+      <div class="cv-title">Evidence status — read first</div>
+      <div class="cv-text">{{ validation.statement }}</div>
+    </div>
+
+    <p class="cover-subtitle">
+      Traditional Jyotish analysis with computational verification,
+      historical event back-testing, and explicit uncertainty controls.
+    </p>
+  </div>
+
+  <div class="cover-foot">
+    {{ birth.ayanamsa }} · {{ birth.house_system }} · {{ birth.node }}<br/>
+    <span class="tiny">Swiss Ephemeris {{ birth.ephemeris }} ·
+      JD UT {{ birth.jd }}</span>
+  </div>
+</section>

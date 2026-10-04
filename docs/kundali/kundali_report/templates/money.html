@@ -1,0 +1,48 @@
+{#- money.html — §21. Dashboard of money areas, conclusion first.
+
+  No amount is ever predicted. Practical safeguards are stated separately from
+  the astrological layer so neither is mistaken for the other. -#}
+<section class="section-opener">
+  <h1>21 · Money, Debt, Lending &amp; Borrowing</h1>
+  <p class="lead">
+    Ten money areas. Each states its condition and its practical safeguard. No
+    figure, amount or date is predicted anywhere in this document.
+  </p>
+
+  <table class="t">
+    <thead><tr><th>Area</th><th>Condition</th><th>Practical safeguard</th></tr></thead>
+    <tbody>
+      {%- for a in money.areas %}
+      <tr>
+        <td><b>{{ a.name }}</b></td>
+        <td class="small">{{ a.condition }}</td>
+        <td class="small">{{ a.safeguard }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Standing safeguards</h2>
+  <div class="practical">
+    <div class="p-label">Practical guidance — not financial advice</div>
+    <ul class="b small">
+      {%- for s in money.safeguards %}
+      <li>{{ s }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+
+  <div class="warn">
+    <p>
+      <b>No financial assurance is given.</b> Nothing in this document promises
+      an income, a gain, a recovery or a loss. Astrological interpretation does
+      not replace financial advice, and a reading is not a reason to enter or
+      avoid a transaction.
+    </p>
+    <p>
+      The validation tested whether the engine identifies money events and found
+      no ability to do so. Where a money reading is given here it describes the
+      significations of the houses involved, nothing more.
+    </p>
+  </div>
+</section>

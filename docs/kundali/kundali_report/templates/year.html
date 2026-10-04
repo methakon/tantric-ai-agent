@@ -1,0 +1,162 @@
+{#- year.html — the per-year page. THE most repeated component in the document.
+
+  Order is fixed by the brief and must not vary between years, because a
+  reader who learns the order once can then skip to the part they want.
+
+  Every activation figure shown is the engine's own score. The descriptive tag
+  beside it is derived from the validated thresholds. Nothing is invented. -#}
+<section class="page-year">
+  <div class="banner" style="string-set: yearhdr content()">
+    <div class="b-eyebrow">Year-wise Dossier</div>
+    <div class="b-year">{{ y.year }} · Age {{ y.age }}</div>
+    <div class="b-dasha">{{ y.mahadasha }} Mahadasha ·
+      {{ y.antardasha }} Antardasha ·
+      {{ y.pratyantardasha }} Pratyantardasha</div>
+    <div class="b-status">
+      {{ risk_chip(y.level, risk_word) }}
+      <span class="badge grey" style="margin-left:2mm">{{ y.level_word }}</span>
+    </div>
+    <div>
+      {%- if y.time_sensitive %}
+      <span class="b-sens">TIME-SENSITIVE · LOW CONFIDENCE</span>
+      {%- else %}
+      <span class="b-sens">Calculation confidence: {{ y.confidence }}</span>
+      {%- endif %}
+    </div>
+  </div>
+
+  <h2>Year at a glance</h2>
+  <div class="grid-4">
+    {%- for g in y.glance %}
+    <div class="glance">
+      <div class="g-label">{{ g.label }}</div>
+      <div class="g-value">{{ g.level|capitalize }}</div>
+      <div class="g-note">{{ risk_chip(g.level, risk_word) }}</div>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <table class="bars">
+    {%- for b in y.bars %}
+    <tr>
+      <td class="b-label">{{ b.name }} · H{{ b.house }}</td>
+      <td class="b-track">
+        <div class="bar-outer">
+          <div class="bar-inner"
+               style="width: {{ (b.score / 5.0 * 100)|round(1) }}%"></div>
+        </div>
+      </td>
+      <td class="b-word">{{ b.intensity }} · {{ b.score }}</td>
+    </tr>
+    {%- endfor %}
+  </table>
+  <p class="tiny">
+    Bars are engine-derived activation intensity for the indicated house on a
+    0–5 scale, with the tag taken from the engine's own thresholds. They
+    describe emphasis, not probability of an event.
+  </p>
+
+  <h2>This year in one sentence</h2>
+  <p class="lead">{{ y.one_sentence }}</p>
+
+  <h2>Overall life picture</h2>
+  <p class="prose">{{ y.overall }}</p>
+
+  <h2>Money &amp; finances</h2>
+  {{ domain_cards(y.money) }}
+
+  <h2>Career</h2>
+  {{ domain_cards(y.career) }}
+
+  <h2>Family &amp; relationships</h2>
+  {{ domain_cards(y.family) }}
+
+  <h2>Children</h2>
+  <div class="card tight">
+    <div class="card-title"><span class="hnum">5</span>Progeny ·
+      {{ y.children_h5.intensity }}</div>
+    <p class="small">{{ y.children_h5.why }}</p>
+  </div>
+
+  <h2>Property, inheritance &amp; ancestral themes</h2>
+  <div class="grid grid-2">
+    <div class="card tight">
+      <div class="card-title"><span class="hnum">4</span>Home &amp; property</div>
+      <p class="small">Activation {{ y.property_h4_h8.h4 }} ·
+        {{ y.property_h4_h8.h4_why }}</p>
+    </div>
+    <div class="card tight">
+      <div class="card-title"><span class="hnum">8</span>Deferred &amp; inherited</div>
+      <p class="small">Activation {{ y.property_h4_h8.h8 }} ·
+        {{ y.property_h4_h8.h8_why }}</p>
+    </div>
+  </div>
+
+  <h2>Health &amp; safety attention</h2>
+  <div class="risk-panel risk-{{ y.health_level|upper }}">
+    <span class="rp-dot"></span>
+    <div class="rp-body">
+      <div class="rp-level">{{ y.health_level }}</div>
+      <div class="rp-word">Heightened attention, not a diagnosis</div>
+      <p>Traditional indicators suggest attention to routine, elder
+         responsibilities and family transitions. Nothing here diagnoses a
+         condition or predicts death. For a real health concern, use a
+         qualified clinician.</p>
+    </div>
+  </div>
+
+  <h2>Major gains and opportunities</h2>
+  {{ gain_table(y.cats) }}
+
+  <h2>Major cautions</h2>
+  {{ caution_table(y.cats) }}
+
+  <div class="grid grid-2">
+    <div class="card tight">
+      <div class="card-title">What to do</div>
+      <ul class="b small">
+        {%- for d in y.do_list %}<li>{{ d }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="card tight">
+      <div class="card-title">What to avoid</div>
+      <ul class="b small">
+        {%- for d in y.dont_list %}<li>{{ d }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <h2>How to maximise the period</h2>
+  <p class="small">
+    Concentrate effort in the houses the engine actually activates this year,
+    and treat the quietest as areas to protect rather than to push. A low score
+    is not an instruction to act there.
+  </p>
+
+  <h2>Traditional remedies</h2>
+  <p class="small">
+    See <b>Remedies and Practical Actions</b>. Traditional practice is culture
+    and personal discipline, not medical or financial advice.
+  </p>
+
+  <h2>Astrological basis</h2>
+  <div class="basis">
+    <div class="b-head">Calculation detail · interpretation above</div>
+    <div class="t-data">
+      dasha {{ y.mahadasha }}/{{ y.antardasha }}/{{ y.pratyantardasha }} ·
+      sade sati {{ y.sade_sati }} ·
+      Jupiter {{ y.transit.Jupiter }} ·
+      Saturn {{ y.transit.Saturn }} ·
+      Rahu {{ y.transit.Rahu }} ·
+      Ketu {{ y.transit.Ketu }} ·
+      activation source: {{ y.activation_source }} ·
+      calculation confidence {{ y.confidence }}
+    </div>
+  </div>
+
+  <p class="tiny muted">
+    Traditional interpretation. Follows the global Interpretation and Safety
+    Notice. Event-level predictive validity is not established — see
+    section 14.
+  </p>
+</section>

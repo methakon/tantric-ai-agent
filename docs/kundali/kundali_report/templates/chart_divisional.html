@@ -1,0 +1,38 @@
+{#- chart_divisional.html — §6. Core vargas on one grid, supporting vargas
+    compact. No varga gets a full page merely because it was calculated. -#}
+<section class="section-opener">
+  <h1>06 · Divisional Charts</h1>
+  <p class="lead">
+    Fifteen of sixteen classical vargas are computed. The four core charts carry
+    most of the interpretive weight; the rest are shown compactly and used only
+    where they materially change a reading.
+  </p>
+
+  <h2>Core charts</h2>
+  <div class="chartgrid">
+    {%- for v in varga_core %}
+    {{ chart_cell(v.code, v.name, v.purpose, v.file, v.available) }}
+    {%- endfor %}
+  </div>
+
+  <h2>Supporting vargas</h2>
+  <div class="chartgrid">
+    {%- for v in varga_support %}
+    {{ chart_cell(v.code, v.name, "Calculated", v.file, v.available) }}
+    {%- endfor %}
+  </div>
+
+  <div class="warn">
+    <p>
+      <b>D27 (Bhreshta) is not implemented.</b> Fifteen of sixteen vargas are
+      computed; the sixteenth is disclosed as a gap rather than filled with an
+      invented value.
+    </p>
+    <p>
+      Each divisional chart is birth-time sensitive in a different degree. D9
+      and D7 in particular can change with a small shift in the birth minute, so
+      no relationship or children conclusion in this document rests on a
+      divisional lagna alone.
+    </p>
+  </div>
+</section>

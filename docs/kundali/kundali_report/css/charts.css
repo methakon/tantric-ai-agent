@@ -1,0 +1,138 @@
+/* ==========================================================================
+   charts.css — SVG chart presentation.
+
+   Charts are SVG and stay vector in the PDF. Their width is constrained HERE,
+   in CSS, and never left to the SVG's own bounding box — the original defect
+   was an unconstrained chart consuming 86% of the page width because its
+   intrinsic box allowed it.
+
+   Sizes follow the brief: roughly 55-65% of the usable width for a chart in a
+   text column, never a full-page chart unless the page is genuinely about it.
+   ========================================================================== */
+
+/* ---------- the cover chart ---------- */
+.cover-chart {
+  width: 58%;
+  margin: var(--sp-4) auto 0 auto;
+}
+.cover-chart img { width: 100%; display: block; }
+
+/* ---------- a dedicated chart figure (chart page) ---------- */
+.chart-fig {
+  width: 62%;
+  margin: var(--sp-3) auto;
+  text-align: center;
+  page-break-inside: avoid;
+}
+.chart-fig img { width: 100%; display: block; margin: 0 auto; }
+
+/* ---------- the compact varga grid ----------
+   Two per row. Each cell is ~46% of the text column, so four core vargas fill
+   a page comfortably without any chart swallowing it. */
+.chartgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+.chartcell {
+  width: 46%;
+  text-align: center;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.chartcell img { width: 100%; display: block; margin: 0 auto; }
+
+/* caption under every chart: code in gold, purpose in body colour */
+.chart-cap {
+  font-size: var(--fs-note);
+  color: var(--ink-soft);
+  margin-top: 1.4mm;
+  line-height: 1.3;
+}
+.chart-cap .cc-code {
+  color: var(--gold-deep);
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+.chart-cap .cc-note { color: var(--grey); }
+
+/* a missing chart must LOOK missing, not silently collapse */
+.chart-missing {
+  border: 1pt dashed var(--grey-light);
+  padding: var(--sp-4);
+  text-align: center;
+  color: var(--grey);
+  font-size: var(--fs-note);
+}
+
+/* ---------- dasha timeline ---------- */
+.tl { width: 100%; border-collapse: collapse; }
+.tl td { padding: 0; vertical-align: top; }
+.tl .tl-bar { height: 2.6mm; }
+.tl .tl-yr { font-size: 7pt; color: var(--grey); text-align: center; padding-top: .8mm; }
+.tl .tl-name {
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-size: 9pt;
+  color: var(--ink);
+  text-align: center;
+  padding-top: 1mm;
+}
+
+/* ---------- Ashtakavarga heatmap ----------
+   Higher bindu = stronger visual intensity. The NUMBER is always printed, so
+   shade is a second channel and never the only one. */
+table.heat td.heat-cell {
+  width: 8.4mm;
+  height: 6.6mm;
+  text-align: center;
+  font-size: 7.4pt;
+  border: var(--hairline) solid var(--white);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+table.heat th.heat-head {
+  background: var(--ink);
+  color: var(--white);
+  font-size: 7.4pt;
+  text-align: center;
+  padding: 1.2mm 0;
+}
+table.heat td.heat-rowlabel {
+  background: var(--ink);
+  color: var(--white);
+  font-size: 7.2pt;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+table.heat td.heat-axis {
+  background: var(--white);
+  color: var(--grey);
+  font-size: 7.4pt;
+  text-align: center;
+  border: var(--hairline) solid var(--rule);
+}
+
+/* ---------- annual timeline (full-width, 1981-2053) ---------- */
+.timeline-wide { width: 100%; margin: var(--sp-3) 0; }
+.timeline-wide .tl-track { height: 3mm; background: var(--ivory-deep); }
+.timeline-wide .tl-mark { position: relative; height: 2.2mm; }
+
+/* ---------- family tree ---------- */
+.tree { width: 100%; border-collapse: collapse; }
+.tree td { text-align: center; vertical-align: top; padding: 1mm; }
+.tree .node {
+  border: var(--rule-w) solid var(--gold);
+  background: var(--white);
+  padding: 1.6mm 2.4mm;
+  display: inline-block;
+  min-width: 34mm;
+}
+.tree .node.unknown { border-style: dashed; border-color: var(--grey-light); }
+.tree .node .n-name { font-size: var(--fs-note); color: var(--ink); font-weight: 600; }
+.tree .connector { color: var(--gold-deep); font-size: 11pt; line-height: 1; }
+.tree .gen-label {
+  font-size: 7pt; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold-deep); font-weight: 600;
+}

@@ -1,0 +1,90 @@
+{#- strength.html — §11. Ashtakavarga heatmap + shadbala table.
+
+  The heatmap always prints the number, so shade is a second channel and never
+  the only one (brief §16, accessibility). -#}
+<section class="section-opener">
+  <h1>11 · Ashtakavarga &amp; Strength</h1>
+  <p class="lead">
+    Supporting influence per house. Higher bindu means stronger support; the
+    number is always shown, so the shading is never the only information.
+  </p>
+
+  <h2>Ashtakavarga — Moon</h2>
+  <table class="heat">
+    <thead>
+      <tr>
+        <th class="heat-head"></th>
+        {%- for s in strength.houses %}
+        <th class="heat-head">{{ s }}</th>
+        {%- endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {{ heat_row("Bindu", strength.moon_bindus, 0, strength.max_bindu, heat_bg) }}
+      <tr>
+        {%- for s in strength.houses %}
+        <td class="heat-axis">{{ loop.index }}</td>
+        {%- endfor %}
+      </tr>
+    </tbody>
+  </table>
+  <p class="note muted">
+    Strongest sign {{ strength.strongest }}, weakest {{ strength.weakest }},
+    total {{ strength.moon_total }} against a classical total of
+    {{ strength.moon_expected }}.
+  </p>
+
+  <h2>Ashtakavarga — all charts</h2>
+  <table class="t">
+    <thead><tr><th>Chart</th><th class="num">Total</th>
+      <th class="num">Classical</th><th>Agreement</th>
+      <th>Strongest sign</th></tr></thead>
+    <tbody>
+      {%- for r in strength.chart_rows %}
+      <tr>
+        <td>{{ r.body }}</td>
+        <td class="num">{{ r.total }}</td>
+        <td class="num">{{ r.expected }}</td>
+        <td>
+          {%- if r.matches %}
+          <span class="badge ok">matches</span>
+          {%- else %}
+          <span class="badge warn">differs</span>
+          {%- endif %}
+        </td>
+        <td class="small">{{ r.strongest }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="warn">
+    <p>{{ strength.status }}</p>
+    <p>{{ strength.status_reason }}</p>
+  </div>
+
+  <h2>Shadbala — sixfold strength</h2>
+  <table class="t">
+    <thead><tr><th>Planet</th><th class="num">Total (rupas)</th>
+      <th class="num">Minimum</th><th>Result</th>
+      <th class="num">Surplus</th></tr></thead>
+    <tbody>
+      {%- for r in strength.shadbala %}
+      <tr class="{{ 'hi' if r.meets else '' }}">
+        <td>{{ r.planet }}</td>
+        <td class="num">{{ r.total }}</td>
+        <td class="num">{{ r.minimum }}</td>
+        <td>
+          {%- if r.meets %}
+          <span class="badge ok">meets</span>
+          {%- else %}
+          <span class="badge warn">below</span>
+          {%- endif %}
+        </td>
+        <td class="num">{{ r.surplus }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  <p class="note muted">{{ strength.shadbala_note }}</p>
+</section>

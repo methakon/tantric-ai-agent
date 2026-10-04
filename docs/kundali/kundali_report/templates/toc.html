@@ -1,0 +1,23 @@
+{#- toc.html — professional contents with leader dots.
+
+  Page numbers are written by resolve.py in a SECOND render pass, read from the
+  first pass's PDF. They are never estimated here: a contents page that looks
+  authoritative while being wrong is worse than one with no numbers.
+  Placeholder is an em dash until pass 2 substitutes a measured value. -#}
+<section class="section-opener">
+  <h1>Contents</h1>
+  <div class="toc-list">
+  {%- for s in sections %}
+    <div class="toc-row">
+      <span class="toc-num">{{ "%02d"|format(s.number) }}</span>
+      <span class="toc-label">{{ s.title }}</span>
+      <span class="toc-leader"></span>
+      <span class="toc-page" data-sec="{{ s.title }}">—</span>
+    </div>
+  {%- endfor %}
+  </div>
+  <p class="note muted" style="margin-top:5mm">
+    Page numbers are resolved from the rendered document itself and verified
+    stable across two consecutive passes.
+  </p>
+</section>

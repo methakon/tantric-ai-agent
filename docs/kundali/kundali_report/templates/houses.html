@@ -1,0 +1,50 @@
+{#- houses.html — §9. Twelve cards: meaning, strength, watch. Far more readable
+    than a dense raw table, and each house states its own basis. -#}
+<section class="section-opener">
+  <h1>09 · House Analysis</h1>
+  <p class="lead">
+    Twelve houses read in whole-sign from the ascendant. Each carries a
+    meaning, a strength and a specific way to go wrong. The sign and occupants
+    shown are
+    <span class="evidence ev-CALCULATION">CALCULATION</span>; the reading is
+    <span class="evidence ev-TRADITIONAL_INTERPRETATION">TRADITIONAL
+    INTERPRETATION</span>.
+  </p>
+
+  <div class="grid grid-2">
+    {%- for h in houses %}
+    <div class="card">
+      <div class="house-head">
+        <span class="house-name">{{ h.number }} · {{ h.name }}</span>
+        <div class="house-sign">{{ h.sign }} · lord {{ h.lord }}</div>
+      </div>
+      <p class="small muted" style="margin-bottom:2mm">
+        {{ h.theme }}<br/>
+        {%- if h.occupants %}Occupied by {{ h.occupants }}
+        {%- else %}No planet occupies this house{% endif %}
+      </p>
+      <div class="reading">
+        <div class="r-label">Core meaning</div>
+        <div class="r-text">{{ h.core }}</div>
+      </div>
+      <div class="reading">
+        <div class="r-label">Strength</div>
+        <div class="r-text">{{ h.strength }}</div>
+      </div>
+      <div class="reading">
+        <div class="r-label">Watch</div>
+        <div class="r-text">{{ h.watch }}</div>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <div class="basis">
+    <div class="b-head">Method</div>
+    <div class="t-data">
+      Whole-sign houses from the ascendant; the house lord is the occupant of
+      the sign {{ houses.lord_offset }} places from the ascendant. No
+      bhava-sect or Sripati correction is applied, and none is implied.
+    </div>
+  </div>
+</section>

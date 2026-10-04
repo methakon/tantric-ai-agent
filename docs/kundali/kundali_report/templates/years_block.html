@@ -1,0 +1,33 @@
+{#- years_block.html — §24. The year-by-year section.
+
+  In preview mode this renders a representative subset chosen by
+  structure.preview_years(); in a full build it renders every year. The same
+  template and the same component produce both, so the preview is a faithful
+  sample of the real document rather than a mock-up. -#}
+<section class="section-opener">
+  <h1>24 · Year-by-Year Analysis</h1>
+  <p class="lead">
+    Each year follows an identical order: at a glance, overall picture, money,
+    career, family, children, property, health, gains, cautions, what to do,
+    what to avoid, how to maximise, remedies, and the astrological basis.
+  </p>
+
+  <div class="warn">
+    <p>
+      <b>Interpretation follows the global Interpretation and Safety
+      Notice.</b> Event-level predictive validity is <b>not established</b>
+      — see section 14. These are traditional readings, not forecasts.
+    </p>
+    <p>{{ years_preview_note }}</p>
+  </div>
+</section>
+
+{%- for y in years_to_render %}
+{#- NO separate .pagebreak div here. The year block is itself a
+    `page: year` named-page section, which already starts on a fresh page; the
+    extra empty break element produced a completely BLANK page between years
+    (pages carrying only a page number). -#}
+{% with y = year_contexts[y] %}
+{% include "year.html" %}
+{% endwith %}
+{%- endfor %}

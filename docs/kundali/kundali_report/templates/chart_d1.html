@@ -1,0 +1,43 @@
+{#- chart_d1.html — §5. The primary chart, on a dedicated page.
+
+  Size is constrained by CSS (.chart-fig = 62% of the text column). The
+  original defect was an unconstrained SVG consuming 86% of the page width
+  because its intrinsic box allowed it; the constraint now lives in the
+  stylesheet, not in the markup. -#}
+<section class="section-opener">
+  <h1>05 · D1 / Rashi Chart</h1>
+  <p class="lead">
+    {{ birth.lagna }} lagna at {{ birth.lagna_dms }}. The primary chart: every
+    other divisional chart refines it.
+  </p>
+
+  {%- if varga_core[0].available %}
+  <div class="chart-fig">
+    <img src="{{ varga_core[0].file }}" alt="D1 rasi chart"/>
+    <div class="chart-cap">
+      <span class="cc-code">D1</span> · Rashi ·
+      <span class="cc-note">North-Indian style. Whole-sign houses from the
+      ascendant.</span>
+    </div>
+  </div>
+  {%- else %}
+  <div class="chart-missing">D1 chart not rendered</div>
+  {%- endif %}
+
+  <h2>What the chart shows</h2>
+  <div class="grid grid-2">
+    <div class="card tight">
+      <div class="card-title">Occupancy</div>
+      <p class="small">{{ glance.occupancy }}</p>
+    </div>
+    <div class="card tight">
+      <div class="card-title">Lordships that matter most</div>
+      <p class="small">{{ glance.key_lords }}</p>
+    </div>
+  </div>
+
+  <div class="basis">
+    <div class="b-head">Calculation detail</div>
+    <div class="t-data">{{ glance.basis }}</div>
+  </div>
+</section>

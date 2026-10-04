@@ -1,0 +1,80 @@
+{#- birth_data.html — §3. -#}
+<section class="section-opener">
+  <h1>03 · Birth Data</h1>
+  <p class="lead">
+    The single input every number in this document derives from. It is stated
+    in full because a chart is only as good as this record.
+  </p>
+
+  <div class="grid grid-2">
+    <div class="callout">
+      <div class="co-title">Given</div>
+      <table class="kv">
+        <tr><td class="k">Name</td><td class="v">Swarna Sekhar Dhar</td></tr>
+        <tr><td class="k">Date</td><td class="v">09 December 1981</td></tr>
+        <tr><td class="k">Time</td><td class="v">01:00:00 IST</td></tr>
+        <tr><td class="k">Place</td>
+            <td class="v">Berhampore, Murshidabad<br/>West Bengal, India</td></tr>
+        <tr><td class="k">Time zone</td>
+            <td class="v">Asia/Kolkata, UTC+05:30<br/>
+              <span class="tiny">No daylight-saving adjustment applied;
+              India observed none in 1981.</span></td></tr>
+      </table>
+    </div>
+    <div class="callout">
+      <div class="co-title">Derived</div>
+      <table class="kv">
+        <tr><td class="k">Coordinates</td>
+            <td class="v mono">{{ birth.lat }}, {{ birth.lon }}</td></tr>
+        <tr><td class="k">Julian day (UT)</td>
+            <td class="v mono">{{ birth.jd }}</td></tr>
+        <tr><td class="k">UTC instant</td>
+            <td class="v mono">{{ birth.utc }}</td></tr>
+        <tr><td class="k">Ayanamsa</td>
+            <td class="v">{{ birth.ayanamsa }} · {{ birth.ayanamsa_deg }}°</td></tr>
+        <tr><td class="k">Node</td><td class="v">{{ birth.node }}</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h2>Source of the coordinates</h2>
+  <p class="small">
+    {{ birth.location_source }}. A previous report used
+    24.104727 N, 88.251551 E with no stated source; that point lies about
+    0.28 km away, which is roughly 0.001° of arc — immaterial for chart
+    computation, about four seconds of local mean time. The sourced point is
+    used here.
+  </p>
+
+  <h2>Birth-time sensitivity</h2>
+  <p class="small">
+    Readings were re-derived across a sweep of the birth minute. Where a year
+    changes materially across that sweep it is labelled
+    <span class="badge warn">TIME-SENSITIVE</span> wherever it appears — five
+    years in this range. This concerns calculation
+    <em>stability</em>, not accuracy: a stable reading is still not a validated
+    one.
+  </p>
+  <table class="t">
+    <thead><tr><th>Years</th><th>Status</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td>{{ sens.time_sensitive }}</td>
+          <td><span class="badge warn">TIME-SENSITIVE</span></td>
+          <td class="small">Birth-time dependent. Readings carry a visible
+              warning wherever they appear.</td></tr>
+      <tr><td>{{ sens.moderate }}</td>
+          <td><span class="badge info">MODERATE</span></td>
+          <td class="small">Partly birth-time dependent.</td></tr>
+      <tr><td>{{ sens.robust }}</td>
+          <td><span class="badge ok">ROBUST</span></td>
+          <td class="small">Stable across the tested sweep.</td></tr>
+    </tbody>
+  </table>
+  <div class="warn">
+    <p>
+      A time-sensitive year is not a difficult year and a robust year is not a
+      good one. These labels describe only how much the arithmetic moves when
+      the birth minute is uncertain.
+    </p>
+  </div>
+</section>

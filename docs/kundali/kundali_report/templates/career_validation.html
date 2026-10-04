@@ -1,0 +1,99 @@
+{#- career_validation.html — §10 and §16.
+
+  The honest finding here is that most of it is UNTESTABLE, because the
+  employment dates could not be verified from public sources. An untested
+  event is not a passed event, and this section must not read as though the
+  career history validated. -#}
+<section class="section-opener">
+  <h1>16 · Career Validation</h1>
+  <p class="lead">
+    Career evidence has two halves: what could be established from public
+    sources, and what could not. The second half is larger than the first.
+  </p>
+
+  <h2>Publicly established</h2>
+  <table class="t">
+    <thead><tr><th>Anchor</th><th>Date</th><th>Source</th>
+      <th>Confidence</th></tr></thead>
+    <tbody>
+      {%- for a in career.anchors %}
+      <tr>
+        <td>{{ a.what }}</td>
+        <td class="mono">{{ a.when }}</td>
+        <td class="small">{{ a.source }}</td>
+        <td>
+          <span class="badge {{ a.badge }}">{{ a.confidence }}</span>
+        </td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="warn">
+    <p>
+      <b>No employment interval is established.</b> No employer, title, start
+      date or end date is supported by any public source consulted. A company
+      name appearing in a self-declared profile field is a self-report, not an
+      employer record.
+    </p>
+    <p>{{ career.linkedin_status }}</p>
+  </div>
+
+  <h2>The five reported interruptions</h2>
+  <table class="t">
+    <thead><tr><th>Event</th><th>Year</th><th>Date precision</th>
+      <th>Testable?</th><th>Why</th></tr></thead>
+    <tbody>
+      {%- for r in career.interruptions %}
+      <tr>
+        <td>{{ r.label }}</td>
+        <td>{{ r.year }}</td>
+        <td>{{ r.precision }}</td>
+        <td>
+          <span class="badge {{ r.badge }}">{{ r.verdict }}</span>
+        </td>
+        <td class="small">{{ r.why }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>The one readable year points the wrong way</h2>
+  <div class="card">
+    <div class="card-title">{{ career.readable_year.year }} house state</div>
+    <table class="t">
+      <thead><tr><th>House</th><th>Meaning</th><th class="num">Activation</th>
+      </tr></thead>
+      <tbody>
+        {%- for h in career.readable_year.houses %}
+        <tr>
+          <td class="num">{{ h.house }}</td>
+          <td>{{ h.name }}</td>
+          <td class="num">{{ h.score }}</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <p class="small">{{ career.readable_year.reading }}</p>
+  </div>
+
+  <div class="callout">
+    <div class="co-title">Career milestones are not validated either</div>
+    <p class="small">
+      It would be as much an error to test only failures as it would to test
+      only successes. Public sources establish that the software career spans
+      at least 2013–2026; they do not establish promotions, role changes or
+      senior transitions. Those remain <b>not established</b> rather than
+      tested-and-passed.
+    </p>
+  </div>
+
+  <div class="warn">
+    <p>
+      <b>No year in this document is presented as having predicted a job loss
+      or a job gain.</b> The back-test could not identify employment events, and
+      in the one year with a stated interruption the 10th house of vocation was
+      not activated at all.
+    </p>
+  </div>
+</section>

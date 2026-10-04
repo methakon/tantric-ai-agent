@@ -1,0 +1,58 @@
+{#- planetary.html — §7. Styled table, key rows highlighted. -#}
+<section class="section-opener">
+  <h1>07 · Planetary Positions</h1>
+  <p class="lead">
+    Sidereal longitudes on the Lahiri ayanamsa, mean node. Highlighted rows are
+    the lagna lord, the 10th lord, the 7th lord, the Atmakaraka and the
+    Darakaraka.
+  </p>
+
+  <table class="t">
+    <caption>D1 · Rashi · sidereal, Lahiri</caption>
+    <thead>
+      <tr>
+        <th>Planet</th><th>Sign</th><th>Degree</th><th>House</th>
+        <th>Nakshatra</th><th class="ctr">Pada</th><th>State</th>
+        <th>Functional role</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for p in planetary.rows %}
+      <tr class="{{ 'hi' if p.highlight else '' }}">
+        <td><b>{{ p.body }}</b></td>
+        <td>{{ p.sign }}</td>
+        <td class="mono">{{ p.degree }}</td>
+        <td class="num">{{ p.house }}</td>
+        <td>{{ p.nakshatra }}</td>
+        <td class="ctr">{{ p.pada }}</td>
+        <td>{{ p.state }}</td>
+        <td class="small">{{ p.role }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <p class="note muted">
+    A dash in the state column means no dignity rule was triggered. Nodes carry
+    no dignity in the classical scheme and are shown without one.
+  </p>
+
+  <h2>Jaimini significators</h2>
+  <table class="kv">
+    {%- for k, v in planetary.jaimini %}
+    <tr><td class="k">{{ k }}</td><td class="v mono">{{ v }}</td></tr>
+    {%- endfor %}
+  </table>
+  <p class="note muted">
+    Jaimini is reported separately from Parashari and is not merged into any
+    combined score. {{ planetary.jaimini_note }}
+  </p>
+
+  <div class="basis">
+    <div class="b-head">Calculation detail</div>
+    <div class="t-data">
+      Tropical longitude minus the ayanamsa, once. Ayanamsa at this instant
+      {{ birth.ayanamsa_deg }}°.
+    </div>
+  </div>
+</section>

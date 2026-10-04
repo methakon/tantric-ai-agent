@@ -1,0 +1,102 @@
+{#- remedies.html — §25.
+
+  THREE separate categories, visibly distinct, because conflating them is how a
+  cultural practice gets presented as a treatment. No remedy is invented
+  because a period was difficult. -#}
+<section class="section-opener">
+  <h1>25 · Remedies &amp; Practical Actions</h1>
+  <p class="lead">
+    Three things that are often lumped together and should not be: practical
+    discipline, cultural practice, and what is actually known about efficacy.
+  </p>
+
+  <h2>Practical actions</h2>
+  <div class="practical">
+    <div class="p-label">Behavioural — these have an ordinary, non-mystical
+      rationale</div>
+    <div class="grid grid-2">
+      <div>
+        <h3>Daily</h3>
+        <ul class="b small">
+          {%- for r in remedies.practical.daily %}<li>{{ r }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>Weekly</h3>
+        <ul class="b small">
+          {%- for r in remedies.practical.weekly %}<li>{{ r }}</li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="grid grid-2">
+      {%- for block in remedies.practical.blocks %}
+      <div>
+        <h3>{{ block.title }}</h3>
+        <ul class="b small">
+          {%- for r in block.lines %}<li>{{ r }}</li>{% endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+
+  <h2>Traditional and cultural practice</h2>
+  <div class="warn">
+    <p>
+      <b>What these are.</b> The practices below belong to the cultural
+      tradition this chart sits inside. They have <b>no scientifically
+      established efficacy</b> for changing events. They are offered as
+      discipline, family observance and peace of mind — not as treatment, and
+      not as a substitute for professional advice.
+    </p>
+    <p>
+      <b>Why they are listed at all.</b> Only where a mechanism has been
+      <em>repeatedly validated</em> should a corresponding remedy be
+      investigated. Since the event-level validation returned NO-GO, no
+      mechanism is repeatedly validated, so these are traditional observances
+      of general applicability rather than targeted prescriptions.
+    </p>
+  </div>
+  <table class="t">
+    <thead><tr><th>Practice</th><th>Targeted principle</th>
+      <th>Type</th><th>Practical risk</th></tr></thead>
+    <tbody>
+      {%- for r in remedies.traditional %}
+      <tr>
+        <td>{{ r.practice }}</td>
+        <td class="small">{{ r.target }}</td>
+        <td>
+          <span class="badge grey">{{ r.kind }}</span>
+        </td>
+        <td class="small">{{ r.risk }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Explicitly not recommended</h2>
+  <div class="callout">
+    <div class="co-title">Deliberate omissions</div>
+    <ul class="b small">
+      <li><b>No gemstones.</b> No stone has been recommended. None is required,
+          and a costly prescription is not a finding.</li>
+      <li><b>No tantric or ritual practice.</b> Nothing dangerous, coercive or
+          expensive is suggested, and nothing here should displace medical or
+          psychological care.</li>
+      <li><b>No remedy invented for a difficult period.</b> A difficult year is
+          not itself evidence that a remedy is indicated.</li>
+      <li><b>No effort beyond ordinary observance.</b> Traditional practice
+          that demands significant time or money is out of proportion to what is
+          actually known about it.</li>
+    </ul>
+  </div>
+
+  <div class="basis">
+    <div class="b-head">Safety</div>
+    <div class="t-data">
+      No practice here is medical or financial advice. No health condition is
+      treated. No investment is recommended. For a real health or financial
+      concern, use a qualified clinician or adviser.
+    </div>
+  </div>
+</section>

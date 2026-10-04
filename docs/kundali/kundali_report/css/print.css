@@ -1,0 +1,133 @@
+/* ==========================================================================
+   print.css — paged media. LAYER F.
+
+   Everything page-specific lives here: margins, running header/footer, page
+   counters, named pages, break control.
+
+   RENDERER NOTES (measured on WeasyPrint 70.0, not assumed):
+   - `@top-right { content: string(...) }` is ACCEPTED but its horizontal
+     placement is NOT honoured: the text renders at the LEFT margin, reading as
+     a stray line under the left header. The per-page year label is therefore
+     drawn in-flow, right-aligned, by `.pageyear`, and `@top-right` is left
+     empty on purpose.
+   - `string-set: x content()` copies nested markup and produced an EMPTY
+     margin box. Avoided in favour of a plain in-flow element.
+   - `letter-spacing` is inherited into margin boxes, so a tracked value
+     printed "YEAR-WISE" as "Y E A R - W I S E". Margin boxes force 0.
+   ========================================================================== */
+
+/* ---------- default page: margins + running header/footer ---------- */
+@page {
+  size: A4 portrait;
+  margin: 18mm 16mm 16mm 16mm;
+
+  @top-left {
+    content: "SWARNA SEKHAR DHAR · JANMA KUNDALI";
+    font-family: "Noto Sans", sans-serif;
+    font-size: var(--fs-footer);
+    color: var(--grey);
+    letter-spacing: .09em;
+    vertical-align: bottom;
+    padding-bottom: 3mm;
+  }
+
+  /* Intentionally empty — see RENDERER NOTES above. */
+  @top-right { content: ""; }
+
+  @bottom-left {
+    content: "Swarna Sekhar Dhar · Janma Kundali & Life Dossier";
+    font-family: "Noto Sans", sans-serif;
+    font-size: var(--fs-footer);
+    color: var(--grey);
+    vertical-align: top;
+    padding-top: 3.5mm;
+  }
+
+  @bottom-right {
+    content: counter(page);
+    font-family: "Noto Sans", sans-serif;
+    font-size: var(--fs-footer);
+    color: var(--gold-deep);
+    vertical-align: top;
+    padding-top: 3.5mm;
+  }
+}
+
+/* ---------- cover: no running header/footer, full-bleed ---------- */
+@page cover {
+  margin: 0;
+  @top-left    { content: ""; }
+  @top-right   { content: ""; }
+  @bottom-left { content: ""; }
+  @bottom-right{ content: ""; }
+}
+
+/* ---------- year pages: the footer names the year, so a year spanning
+              several pages shows the year on every one ---------- */
+@page year {
+  @bottom-left {
+    content: string(yearhdr);
+    font-family: "Noto Sans", sans-serif;
+    font-size: var(--fs-footer);
+    color: var(--grey);
+    letter-spacing: 0;
+    vertical-align: top;
+    padding-top: 3.5mm;
+  }
+  @bottom-right {
+    content: counter(page);
+    font-family: "Noto Sans", sans-serif;
+    font-size: var(--fs-footer);
+    color: var(--gold-deep);
+    vertical-align: top;
+    padding-top: 3.5mm;
+  }
+}
+
+/* ---------- section-opening pages: generous top space ---------- */
+@page opener {
+  margin: 26mm 16mm 16mm 16mm;
+}
+
+/* ---------- named page activation ----------
+   `page: <name>` in inline style applies the named @page from the first page
+   the element lands on. Used by the section templates and by year.html. */
+.page-cover  { page: cover; }
+.page-year   { page: year; }
+.page-opener { page: opener; }
+
+/* ---------- widow / orphan control ---------- */
+p, li, td, th, .card, .glance, .callout, .warn, .basis, tr {
+  orphans: 2;
+  widows: 2;
+}
+
+/* a table header must never be the last thing on a page */
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+tr    { page-break-inside: avoid; break-inside: avoid; }
+
+/* cards and callouts are atomic */
+.card, .glance, .callout, .warn, .basis, .risk-panel, .badge,
+.banner, figure, .tc-block, .evidence-block {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* keep a heading attached to what follows it */
+h1, h2, h3, h4, .eyebrow, .section-opener {
+  page-break-after: avoid;
+  break-after: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* an intentional break before a major section */
+.section-opener { page-break-before: always; break-before: page; }
+.section-opener.first { page-break-before: avoid; break-before: auto; }
+
+/* ---------- print colour ---------- */
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}

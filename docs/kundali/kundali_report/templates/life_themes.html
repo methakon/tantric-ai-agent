@@ -1,0 +1,34 @@
+{#- life_themes.html — §13. Six themes stated once, so the year sections stay
+    short. -#}
+<section class="section-opener">
+  <h1>13 · Life Themes</h1>
+  <p class="lead">
+    Six themes that run across the whole chart. Stated once here so the
+    year-by-year pages can stay short.
+  </p>
+  <p class="small muted">
+    Everything on this page is
+    <span class="evidence ev-TRADITIONAL_INTERPRETATION">traditional
+    interpretation</span>. The placements it rests on are shown in section 07
+    and the house detail in section 09.
+  </p>
+
+  <div class="grid grid-2">
+    {%- for t in themes %}
+    <div class="card">
+      <div class="card-title">{{ t.title }}</div>
+      <p class="small">{{ t.body }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <div class="callout">
+    <div class="co-title">How these themes are used</div>
+    <p class="small">
+      A theme is a standing characteristic of the chart. It is not a
+      prediction, and it carries no score. The year pages show which houses the
+      engine activated in a given year; this page explains what those houses
+      mean when they are active.
+    </p>
+  </div>
+</section>

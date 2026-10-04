@@ -1,0 +1,172 @@
+{#- validation.html — §14. The NO-GO result in full.
+
+  This is the section the architecture brief calls "Historical Validation —
+  NO-GO". It shows sample size, the null control, the rank test, the specific
+  contradicted examples, engine defects, harness defects, and the protocol
+  caveat. None of it is summarised away. -#}
+<section class="section-opener">
+  <h1>14 · Historical Life-Event Validation</h1>
+
+  <div class="verdict-panel">
+    <div class="vp-verdict">{{ validation.verdict }}</div>
+    <div class="vp-text">{{ validation.statement }}</div>
+  </div>
+
+  <p class="lead">
+    The engine's per-year readings were back-tested against documented life
+    events. The design was falsifiable and it falsified the model's
+    event-detection claim. What follows is the measurement, not a defence of it.
+  </p>
+
+  <h2>Sample size</h2>
+  <table class="kv">
+    <tr><td class="k">Events recorded</td>
+        <td class="v">{{ sample.total }} events</td></tr>
+    <tr><td class="k">Testable</td>
+        <td class="v">{{ sample.testable }} — the remainder lack the date
+            precision an annual-resolution engine needs</td></tr>
+    <tr><td class="k">Event years</td>
+        <td class="v">{{ sample.years }}</td></tr>
+    <tr><td class="k">Verdict distribution</td>
+        <td class="v">{{ sample.tally }}</td></tr>
+  </table>
+
+  <h2>Why the null control is the whole argument</h2>
+  <div class="ev-block ev-TRADITIONAL_INTERPRETATION">
+    <span class="ev-block-label">Method</span>
+    <p>{{ validation.null_control.test }}</p>
+    <p><b>{{ validation.null_control.category_years_tested }}</b>
+      category-years tested.</p>
+    <p>{{ validation.null_control.why }}</p>
+  </div>
+  <p>
+    MATCH or PARTIAL — the two verdicts that look like confirmation — occur in
+    <b>{{ validation.null_control.base_rate_match_or_partial_pct }}%</b> of
+    arbitrary years. A rule that approves four years in five has not
+    distinguished anything, so its per-year verdicts cannot be evidence for or
+    against any event.
+  </p>
+
+  <h2>The floor-independent test</h2>
+  <p>
+    Removing that artifact requires a different statistic: rank the twelve
+    houses by activation <em>within</em> each year and ask whether the event's
+    houses rank unusually high. That is invariant to the global level shift.
+  </p>
+  <table class="t verify">
+    <thead><tr><th>Measure</th><th>Value</th><th>Reading</th></tr></thead>
+    <tbody>
+      <tr><td class="metric">Median p</td>
+          <td class="value">{{ validation.rank_test.median_p }}</td>
+          <td class="small">exactly chance</td></tr>
+      <tr><td class="metric">Top decile</td>
+          <td class="value">{{ validation.rank_test.top_decile }} of
+              {{ validation.rank_test.events_tested }}</td>
+          <td class="small">no event year is unusual</td></tr>
+      <tr><td class="metric">Bottom decile</td>
+          <td class="value">{{ validation.rank_test.bottom_decile }}</td>
+          <td class="small">three years point mildly <em>away</em> from what
+              happened</td></tr>
+      <tr><td class="metric">Best single result</td>
+          <td class="value">p = {{ validation.rank_test.best_single_p }}</td>
+          <td class="small">across all events</td></tr>
+      <tr><td class="metric">Expected by chance</td>
+          <td class="value">{{ validation.rank_test.expected_hits_by_chance }}</td>
+          <td class="small">at α = 0.10 over
+              {{ validation.rank_test.events_tested }} tests</td></tr>
+      <tr><td class="metric">Observed</td>
+          <td class="value">{{ validation.rank_test.observed_hits }}</td>
+          <td class="small">fewer than chance</td></tr>
+    </tbody>
+  </table>
+  <p class="small">{{ validation.rank_test.reading }}</p>
+
+  <h2>Claims the back-test contradicts</h2>
+  <p>
+    These matter more than the no-match tally. A reader is far likelier to
+    assume these particular readings are supported, so each is stated with the
+    measurement that breaks it.
+  </p>
+  <table class="t">
+    <thead><tr><th>A reader might assume</th><th>What the data shows</th>
+      <th>Status</th></tr></thead>
+    <tbody>
+      {%- for c in validation.contradicted %}
+      <tr>
+        <td>{{ c.claim }}</td>
+        <td class="small">{{ c.evidence }}</td>
+        <td><span class="evidence ev-NOT_VALIDATED">{{ c.status }}</span></td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Defects found during validation</h2>
+  <p>
+    Two classes, kept separate on purpose. An <b>engine</b> defect invalidates a
+    number. A <b>harness</b> defect invalidates a conclusion drawn from a number
+    that may itself be fine. Conflating them would let a real engine bug be
+    dismissed as a test artefact.
+  </p>
+
+  <h3>Engine defects</h3>
+  {%- for d in validation.engine_defects %}
+  <div class="card tight">
+    <div class="card-title">{{ d.defect }}</div>
+    <p class="small">{{ d.detail }}</p>
+    <div class="kv-inline"><span class="k">Impact</span>
+      <span class="v">{{ d.impact }}</span></div>
+    <div class="kv-inline"><span class="k">Blast radius</span>
+      <span class="v">{{ d.blast_radius }}</span></div>
+    <div class="kv-inline"><span class="k">Fixed</span>
+      <span class="v">{{ "yes" if d.fixed else "no" }}</span></div>
+  </div>
+  {%- endfor %}
+
+  <h3>Harness defects — bugs in the test, not the chart</h3>
+  <table class="t">
+    <thead><tr><th>Defect</th><th>Why it mattered</th><th>Fix</th></tr></thead>
+    <tbody>
+      {%- for d in validation.harness_defects %}
+      <tr>
+        <td>{{ d.defect }}</td>
+        <td class="small">{{ d.detail }}</td>
+        <td class="small">{{ d.fix }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Protocol caveat</h2>
+  <div class="warn">
+    <p>{{ validation.protocol_caveat }}</p>
+  </div>
+
+  <h2>What could not be tested at all</h2>
+  <table class="t">
+    <thead><tr><th>Item</th><th>Why</th></tr></thead>
+    <tbody>
+      {%- for item, why in validation.untestable %}
+      <tr><td>{{ item }}</td><td class="small">{{ why }}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="co-title">What a NO-GO does and does not mean</div>
+    <p class="small">
+      It does <b>not</b> mean the chart is meaningless, and it is not a
+      statement about the life it describes. It means this engine, tested this
+      way, produced no evidence of event-level predictive validity — so its
+      yearly readings must be read as traditional interpretation and never as
+      validated prediction.
+    </p>
+    <p class="small">
+      Three changes would make a re-test meaningful, none of them a threshold
+      adjustment: monthly or daily resolution, so that a marriage and its
+      separation four months later become two events rather than one; a
+      mechanism model sparse by construction, since counting transit touches
+      saturates; and thresholds fixed in advance on events not yet seen.
+    </p>
+  </div>
+</section>

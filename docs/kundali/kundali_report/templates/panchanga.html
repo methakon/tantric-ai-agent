@@ -1,0 +1,62 @@
+{#- panchanga.html — §8. Pure astronomy: tithi, nakshatra, yoga, karana. -#}
+<section class="section-opener">
+  <h1>08 · Panchanga</h1>
+  <p class="lead">
+    The five limbs of the Vedic calendar at the moment of birth. These are
+    astronomical quantities, not interpretation.
+  </p>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">Vara · weekday</div>
+      <p class="small">
+        Civil weekday: <b>{{ panchanga.vara }}</b><br/>
+        <span class="tiny">Ephemeris division:
+        {{ panchanga.vara_ephemeris }}</span>
+      </p>
+      <div class="basis">
+        <div class="b-head">Note</div>
+        <div class="t-data">{{ panchanga.vara_note }}</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tithi</div>
+      <p class="small">
+        <b>{{ panchanga.tithi }}</b> · index {{ panchanga.tithi_index }}
+      </p>
+      <p class="small">
+        <b>Nakshatra:</b> {{ panchanga.nakshatra }}
+        pada {{ panchanga.nakshatra_pada }}
+        (lord {{ panchanga.nakshatra_lord }})
+      </p>
+      <p class="small">
+        <b>Yoga:</b> {{ panchanga.yoga }} ·
+        <b>Karana:</b> {{ panchanga.karana }}
+      </p>
+    </div>
+  </div>
+
+  <h2>Sun and Moon</h2>
+  <table class="kv">
+    <tr><td class="k">Sun sign</td>
+        <td class="v">{{ panchanga.sun_sign }}</td></tr>
+    <tr><td class="k">Moon sign</td>
+        <td class="v">{{ panchanga.moon_sign }}</td></tr>
+    <tr><td class="k">Sunrise</td>
+        <td class="v">{{ panchanga.sunrise }}
+        <span class="tiny">{{ panchanga.sunrise_method }}</span></td></tr>
+    <tr><td class="k">Sunset</td>
+        <td class="v muted">{{ panchanga.sunset }}</td></tr>
+  </table>
+
+  <div class="warn">
+    <p>
+      <b>Sunset is not computed.</b> The rise/set calculation in the available
+      ephemeris binding is unreliable here, so the value is disclosed as a gap
+      rather than estimated. Sunrise is approximate for the same reason. Neither
+      figure is used in any reading in this document.
+    </p>
+    <p>{{ panchanga.vara_note }}</p>
+  </div>
+</section>

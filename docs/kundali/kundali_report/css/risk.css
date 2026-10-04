@@ -1,0 +1,236 @@
+/* ==========================================================================
+   risk.css — status panels, confidence and evidence badges.
+
+   Design rule enforced here: colour is NEVER the only channel. Every risk
+   panel renders a DOT plus the WORD plus an optional descriptor. A reader who
+   cannot distinguish the hues still reads the status correctly, and so does a
+   monochrome printout.
+   ========================================================================== */
+
+/* ---------- risk panel (RED / ORANGE / YELLOW / GREEN) ---------- */
+.risk-panel {
+  border: 1pt solid var(--risk-line, var(--risk-yellow-line));
+  background: var(--risk-fill, var(--risk-yellow-fill));
+  padding: var(--sp-2) 3.2mm;
+  margin: var(--sp-3) 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 3mm;
+}
+.risk-panel .rp-dot {
+  flex: 0 0 auto;
+  width: 3.4mm; height: 3.4mm;
+  border-radius: 50%;
+  background: var(--risk-dot, var(--risk-yellow-dot));
+  margin-top: .6mm;
+}
+.risk-panel .rp-body { flex: 1 1 auto; }
+.risk-panel .rp-level {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 10.5pt;
+  font-weight: 700;
+  letter-spacing: .09em;
+  color: var(--risk-line, var(--risk-yellow-line));
+  line-height: 1.2;
+}
+.risk-panel .rp-word {
+  font-size: var(--fs-note);
+  color: var(--ink-soft);
+  margin-top: .4mm;
+}
+.risk-panel p { font-size: var(--fs-note); margin: var(--sp-1) 0 0 0; }
+
+.risk-RED    { --risk-fill: var(--risk-red-fill);    --risk-line: var(--risk-red-line);    --risk-dot: var(--risk-red-dot); }
+.risk-ORANGE { --risk-fill: var(--risk-orange-fill); --risk-line: var(--risk-orange-line); --risk-dot: var(--risk-orange-dot); }
+.risk-YELLOW { --risk-fill: var(--risk-yellow-fill); --risk-line: var(--risk-yellow-line); --risk-dot: var(--risk-yellow-dot); }
+.risk-GREEN  { --risk-fill: var(--risk-green-fill);  --risk-line: var(--risk-green-line);  --risk-dot: var(--risk-green-dot); }
+
+/* ---------- compact status chip ---------- */
+.status {
+  display: inline-block;
+  border: 1pt solid var(--risk-line, var(--risk-yellow-line));
+  background: var(--risk-fill, var(--risk-yellow-fill));
+  padding: 1mm 2.4mm;
+  font-size: var(--fs-note);
+  font-weight: 600;
+  letter-spacing: .07em;
+  color: var(--risk-line, var(--risk-yellow-line));
+  white-space: nowrap;
+}
+.status .dot {
+  display: inline-block;
+  width: 2.1mm; height: 2.1mm;
+  border-radius: 50%;
+  background: var(--risk-dot, var(--risk-yellow-dot));
+  margin-right: 1.6mm;
+  vertical-align: middle;
+}
+
+/* ---------- generic badge ---------- */
+.badge {
+  display: inline-block;
+  border: .8pt solid var(--badge-line, var(--grey-light));
+  background: var(--badge-fill, var(--ivory-deep));
+  color: var(--badge-text, var(--ink-soft));
+  border-radius: var(--radius);
+  padding: .7mm 2mm;
+  font-size: var(--fs-badge);
+  font-weight: 600;
+  letter-spacing: .07em;
+  white-space: nowrap;
+}
+.badge.ok    { --badge-fill: var(--ok-fill);    --badge-line: var(--ok-line);    --badge-text: var(--ok-line); }
+.badge.warn  { --badge-fill: var(--warn-fill);  --badge-line: var(--warn-line);  --badge-text: var(--warn-line); }
+.badge.alert { --badge-fill: var(--alert-fill); --badge-line: var(--alert-line); --badge-text: var(--alert-line); }
+.badge.info  { --badge-fill: var(--info-fill);  --badge-line: var(--info-line);  --badge-text: var(--info-line); }
+.badge.grey  { --badge-fill: var(--ivory-deep); --badge-line: var(--grey-light); --badge-text: var(--grey); }
+
+/* ---------- confidence badge ----------
+   Calculation STABILITY, never event probability. The label says so where it
+   is used in a year banner. */
+.conf-TIME-SENSITIVE { --badge-fill: var(--warn-fill);  --badge-line: var(--warn-line);  --badge-text: var(--warn-line); }
+.conf-MODERATE       { --badge-fill: var(--info-fill);  --badge-line: var(--info-line);  --badge-text: var(--info-line); }
+.conf-ROBUST         { --badge-fill: var(--ok-fill);    --badge-line: var(--ok-line);    --badge-text: var(--ok-line); }
+
+/* ---------- evidence label (brief §13) ----------
+   Every major claim is visually distinguishable by kind. Fact and
+   documentation read as settled; interpretation reads as interpretive and is
+   therefore always visibly different from a calculation. */
+.evidence {
+  display: inline-block;
+  font-size: 7.2pt;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: .5mm 1.6mm;
+  border: .6pt solid;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.ev-FACT,
+.ev-CALCULATION,
+.ev-VALIDATED,
+.ev-DOCUMENTARY_EVIDENCE {
+  --ev-fill: var(--ok-fill);   --ev-line: var(--ok-line);   --ev-text: var(--ok-line);
+}
+.ev-TRADITIONAL_INTERPRETATION,
+.ev-PRACTICAL_GUIDANCE,
+.ev-INFERENCE {
+  --ev-fill: var(--info-fill); --ev-line: var(--info-line); --ev-text: var(--info-line);
+}
+.ev-NOT_VALIDATED,
+.ev-UNCERTAIN,
+.ev-USER_SUPPLIED {
+  --ev-fill: var(--alert-fill); --ev-line: var(--alert-line); --ev-text: var(--alert-line);
+}
+.evidence {
+  background: var(--ev-fill); border-color: var(--ev-line); color: var(--ev-text);
+}
+
+.ev-block {
+  border-left: 2.4pt solid var(--ev-line, var(--grey-light));
+  background: var(--ev-fill, var(--ivory-deep));
+  padding: var(--sp-2) 3mm;
+  margin: var(--sp-2) 0;
+  page-break-inside: avoid;
+}
+.ev-block .ev-block-label {
+  display: inline-block;
+  font-size: 7.2pt; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ev-text, var(--ink-soft));
+  margin-bottom: 1.2mm;
+}
+.ev-block p { font-size: var(--fs-note); margin: 0 0 1.2mm 0; }
+
+/* ---------- warn / callout ---------- */
+.warn {
+  border: 1pt solid var(--warn-line);
+  background: var(--warn-fill);
+  padding: var(--sp-2) 3.2mm;
+  margin: var(--sp-3) 0;
+}
+.warn > :first-child { margin-top: 0; }
+.warn > :last-child  { margin-bottom: 0; }
+
+.callout {
+  border: 1pt solid var(--ink);
+  background: var(--white);
+  padding: var(--sp-3) 3.4mm;
+  margin: var(--sp-3) 0;
+  page-break-inside: avoid;
+}
+.callout .co-title {
+  font-size: 12.5pt;
+  color: var(--ink);
+  margin-bottom: 1.6mm;
+}
+.callout .co-title:first-child { margin-top: 0; }
+
+/* ---------- astrological basis: the Layer-2 audit box ---------- */
+.basis {
+  border: var(--hairline) dashed var(--gold);
+  background: var(--ivory);
+  padding: var(--sp-2) 3mm;
+  margin: var(--sp-2) 0;
+  font-size: var(--fs-note);
+  color: var(--ink-soft);
+}
+.basis .b-head {
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 7.4pt;
+  color: var(--gold-deep);
+  margin-bottom: 1.2mm;
+}
+
+/* ---------- a validated NOT-VALIDATED statement, given visual weight ----------
+   The back-test result must be impossible to miss and impossible to soften. */
+.verdict-panel {
+  border: 1.4pt solid var(--alert-line);
+  background: var(--alert-fill);
+  padding: var(--sp-4);
+  margin: var(--sp-4) 0;
+}
+.verdict-panel .vp-verdict {
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-size: 19pt;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--alert-line);
+  line-height: 1.1;
+  margin-bottom: var(--sp-2);
+}
+.verdict-panel .vp-text {
+  font-size: var(--fs-body);
+  color: var(--charcoal);
+  line-height: 1.35;
+}
+
+/* ---------- engine-derived intensity bar ----------
+   The fill is a real share of the engine's own score on a 0..5 visual scale.
+   The numeric word is always present, so the bar is never the only channel. */
+.bars { width: 100%; border-collapse: collapse; }
+.bars td { padding: 1.1mm 0; border-bottom: var(--hairline) solid var(--rule); }
+.bars .b-label {
+  font-size: var(--fs-note);
+  color: var(--gold-deep);
+  letter-spacing: .08em;
+  width: 30%;
+}
+.bars .b-track { width: 46%; }
+.bars .b-track .bar-outer {
+  background: var(--ivory-deep);
+  height: 2.4mm;
+  width: 100%;
+}
+.bars .b-track .bar-inner {
+  background: var(--gold);
+  height: 2.4mm;
+}
+.bars .b-word {
+  font-size: var(--fs-note);
+  color: var(--ink-soft);
+  text-align: right;
+  width: 24%;
+}

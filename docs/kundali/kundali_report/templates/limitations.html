@@ -1,0 +1,74 @@
+{#- limitations.html — §27. -#}
+<section class="section-opener">
+  <h1>27 · Validation &amp; Limitations</h1>
+  <p class="lead">
+    Consolidated in one place so a reader who reads nothing else still
+    encounters the constraints.
+  </p>
+
+  <h2>Method limitations</h2>
+  <div class="warn">
+    {%- for l in limitations.method %}
+    <p><b>{{ l.what }}</b> — {{ l.detail }}</p>
+    {%- endfor %}
+  </div>
+
+  <h2>Untestable events</h2>
+  <table class="t">
+    <thead><tr><th>Event</th><th>Why it could not be tested</th></tr></thead>
+    <tbody>
+      {%- for item, why in limitations.untestable %}
+      <tr><td>{{ item }}</td><td class="small">{{ why }}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  <p class="small">
+    An untested event is not a passed event. These are absent from the tally
+    because they could not be tested, not because the model did well on them.
+  </p>
+
+  <h2>Known counterexamples</h2>
+  <table class="t">
+    <thead><tr><th>Case</th><th>What the data shows</th></tr></thead>
+    <tbody>
+      {%- for c in limitations.counterexamples %}
+      <tr>
+        <td>{{ c.case }}</td>
+        <td class="small">{{ c.data }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>What would make a re-test meaningful</h2>
+  <div class="card">
+    <div class="card-title">Three changes, none a threshold adjustment</div>
+    <ul class="b small">
+      <li><b>Monthly or daily resolution.</b> A marriage and its separation four
+          months later must become two events. Until then, same-year pairs and
+          multi-year periods are structurally untestable.</li>
+      <li><b>A sparse mechanism model.</b> Activation currently counts transit
+          touches, which saturates — 57.9% of house-years sit above the floor,
+          so the base rate approaches the interesting outcome. A natal
+          conjunction, or a graha owning and occupying the same house, is rare
+          by construction and therefore testable.</li>
+      <li><b>Pre-registration.</b> Thresholds fixed and recorded before the
+          events are seen. That is the single strongest control against exactly
+          the kind of fitting this validation was designed to catch.</li>
+    </ul>
+    <p class="small">
+      Loosening the activation threshold to make a particular year read as a
+      match would improve the score and prove nothing.
+    </p>
+  </div>
+
+  <h2>Safety boundaries held in this document</h2>
+  <table class="t">
+    <thead><tr><th>Not done</th><th>Why</th></tr></thead>
+    <tbody>
+      {%- for n, why in limitations.safety %}
+      <tr><td>{{ n }}</td><td class="small">{{ why }}</td></tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</section>

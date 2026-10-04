@@ -1,0 +1,127 @@
+{#- _macros.html — reusable components. Imported once in base.html.
+
+  Macros rather than `include ... with context`: an include cannot rebind a
+  local variable, so `{% with cells = ... %}{% include %}{% endwith %}` does
+  not reliably pass the cell list into the included template. A macro takes it
+  as an argument, which is both correct and readable. -#}
+
+{#- BOTH macros below take their formatter as an ARGUMENT. A Jinja macro's scope
+    is fixed at definition time, so a global injected at render time is not
+    visible inside the macro body — calling risk_word() from within risk_chip
+    raises "risk_word is undefined" even though it resolves in a template body.
+    Passing it in keeps every macro self-contained and the failure impossible. -#}
+{%- macro risk_chip(level, wordfn, extra="") -%}
+  {%- set L = (level or "YELLOW")|upper -%}
+  <span class="status risk-{{ L }}">
+    <span class="dot"></span>{{ extra or wordfn(L) }}
+  </span>
+{%- endmacro -%}
+
+{%- macro risk_panel(level, wordfn, title, word, body) -%}
+  {%- set L = (level or "YELLOW")|upper -%}
+  <div class="risk-panel risk-{{ L }}">
+    <span class="rp-dot"></span>
+    <div class="rp-body">
+      <div class="rp-level">{{ L }}</div>
+      <div class="rp-word">{{ word }}</div>
+      {%- if body %}<p>{{ body }}</p>{% endif %}
+    </div>
+  </div>
+{%- endmacro -%}
+
+{%- macro domain_cards(cells) -%}
+  <div class="grid-4">
+    {%- for c in cells %}
+    <div class="card tight">
+      <div class="card-title"><span class="hnum">{{ c.house }}</span>{{ c.name }}</div>
+      <p class="small" style="margin-bottom:1mm">
+        <b>{{ c.intensity }}</b> · activation {{ c.score }}
+      </p>
+      <p class="tiny">{{ c.why }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+{%- endmacro -%}
+
+{%- macro gain_table(cats) -%}
+  {%- set hits = cats|selectattr("level", "in", ["RED","ORANGE"])|list -%}
+  {%- if hits %}
+  <table class="t">
+    <thead><tr><th>Theme</th><th>Status</th><th>Mechanisms</th></tr></thead>
+    <tbody>
+      {%- for k, v in hits %}
+      <tr>
+        <td>{{ area_name(k) }}</td>
+        <td>{{ risk_chip(v.level) }}</td>
+        <td class="num">{{ v.mechanism_count }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  <p class="note muted">
+    A theme appears here when it reaches the engine's ORANGE or RED gate.
+    That is a statement about emphasis thresholds, not about what will occur.
+  </p>
+  {%- else %}
+  <p class="small">
+    No theme reached the escalation threshold for gains or opportunities this
+    year. That is a statement about the engine's own thresholds, not a
+    promise that nothing arrives.
+  </p>
+  {%- endif %}
+{%- endmacro -%}
+
+{%- macro caution_table(cats) -%}
+  {%- set hits = cats|selectattr("level", "in", ["RED"])|list -%}
+  {%- if hits %}
+  <table class="t">
+    <thead><tr><th>Theme</th><th>Status</th><th>Gate condition</th></tr></thead>
+    <tbody>
+      {%- for k, v in hits %}
+      <tr>
+        <td>{{ area_name(k) }}</td>
+        <td>{{ risk_chip(v.level) }}</td>
+        <td class="tiny">{{ v.red_requires }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  {%- else %}
+  <p class="small">
+    No theme reached the RED gate this year. Difficult periods can still occur;
+    the engine simply did not flag this one.
+  </p>
+  {%- endif %}
+{%- endmacro -%}
+
+{%- macro chart_cell(code, name, purpose, file, available=true) -%}
+  <div class="chartcell">
+    {%- if available %}
+    <img src="{{ file }}" alt="{{ code }} {{ name }} chart"/>
+    <div class="chart-cap">
+      <span class="cc-code">{{ code }}</span> · {{ name }}<br/>
+      <span class="cc-note">{{ purpose }}</span>
+    </div>
+    {%- else %}
+    <div class="chart-missing">{{ code }} chart not rendered</div>
+    {%- endif %}
+  </div>
+{%- endmacro -%}
+
+{#- heat_row takes the colour function as an ARGUMENT. A Jinja macro cannot see
+    globals that are injected at render time (they are not in the macro's own
+    scope at definition), so calling `heat_bg()` from inside the macro fails
+    with "heat_bg is undefined" even though it works in a template body.
+    Passing it in keeps the macro self-contained. -#}
+{%- macro heat_row(label, values, lo, hi, bgfn) -%}
+  <tr>
+    <td class="heat-rowlabel">{{ label }}</td>
+    {%- for v in values %}
+    <td class="heat-cell" style="background: {{ bgfn(v, lo, hi) }}">{{ v }}</td>
+    {%- endfor %}
+  </tr>
+{%- endmacro -%}
+
+{%- macro section_head(number, title) -%}
+  <h1>{{ "%02d"|format(number) }} · {{ title }}</h1>
+{%- endmacro -%}

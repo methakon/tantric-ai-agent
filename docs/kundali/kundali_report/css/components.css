@@ -1,0 +1,264 @@
+/* ==========================================================================
+   components.css — cover, TOC, year banner, lists, and the remaining
+   structural components shared by many templates.
+
+   Split out from main.css so that a component change touches one file, and so
+   the "consistent styling across hundreds of pages" requirement is met by a
+   single definition of each component rather than by repeated markup.
+   ========================================================================== */
+
+/* ==========================================================================
+   COVER — a premium cover, not a metadata table
+   ========================================================================== */
+.cover {
+  page: cover;
+  height: 297mm;
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+}
+.cover-band {
+  background: var(--ink);
+  color: var(--white);
+  padding: 26mm 20mm 16mm 20mm;
+  text-align: center;
+}
+.cover-band .c-eyebrow {
+  font-size: 8pt;
+  letter-spacing: .3em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: 8mm;
+}
+.cover-band .c-name {
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-size: 34pt;
+  color: var(--white);
+  margin: 0 0 3mm 0;
+  line-height: 1.08;
+}
+.cover-band .c-title {
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-size: 21pt;
+  color: var(--gold);
+  margin: 0;
+  line-height: 1.2;
+}
+.cover-band .c-amp { color: var(--gold); font-size: 15pt; margin: 2mm 0; }
+.cover-band .c-span {
+  font-size: 14pt;
+  color: var(--gold-light);
+  margin-top: 4mm;
+  letter-spacing: .06em;
+}
+.cover-rule {
+  height: 1.6pt;
+  background: var(--gold);
+  width: 32mm;
+  margin: 0 auto;
+}
+.cover-body {
+  padding: 10mm 20mm 0 20mm;
+  text-align: center;
+  flex: 1 1 auto;
+}
+.cover-birth { width: 72%; margin: 0 auto; }
+.cover-birth .cv {
+  font-size: 10.5pt;
+  color: var(--charcoal);
+  text-align: left;
+}
+.cover-subtitle {
+  font-size: var(--fs-note);
+  color: var(--grey);
+  line-height: 1.45;
+  max-width: 128mm;
+  margin: 6mm auto 0 auto;
+  text-align: center;
+}
+.cover-foot {
+  padding: 0 20mm 12mm 20mm;
+  text-align: center;
+  color: var(--grey);
+  font-size: var(--fs-note);
+  line-height: 1.5;
+}
+
+/* the NO-GO statement on the cover: present, restrained, unmissable */
+.cover-verdict {
+  border: 1pt solid var(--alert-line);
+  background: var(--alert-fill);
+  padding: var(--sp-2) 3.2mm;
+  margin: var(--sp-4) auto 0 auto;
+  max-width: 128mm;
+  text-align: left;
+}
+.cover-verdict .cv-title {
+  font-size: var(--fs-badge);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--alert-line);
+  margin-bottom: 1.2mm;
+}
+.cover-verdict .cv-text { font-size: var(--fs-note); color: var(--charcoal); }
+
+/* ==========================================================================
+   TOC
+   ========================================================================== */
+.toc-row {
+  display: flex;
+  align-items: baseline;
+  padding: 1.4mm 0;
+  border-bottom: var(--hairline) dotted var(--gold);
+  page-break-inside: avoid;
+}
+.toc-num {
+  font-size: 10pt;
+  color: var(--gold-deep);
+  width: 9mm;
+  flex: 0 0 auto;
+}
+.toc-label { flex: 1 1 auto; font-size: 10pt; color: var(--ink); }
+.toc-leader {
+  flex: 0 1 auto;
+  border-bottom: var(--hairline) dotted var(--gold-light);
+  margin: 0 2mm;
+  /* the leader is the dotted flex item that fills the gap */
+  align-self: baseline;
+}
+.toc-page {
+  color: var(--gold-deep);
+  font-size: 9pt;
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+}
+.toc-row.is-sub .toc-label { padding-left: 6mm; color: var(--ink-soft); font-size: var(--fs-note); }
+.toc-row.is-sub .toc-num { width: 9mm; }
+
+/* ==========================================================================
+   YEAR BANNER — the reader's anchor. Year, age, dasha, risk, confidence.
+   ========================================================================== */
+.banner {
+  background: var(--ink);
+  color: var(--white);
+  padding: var(--sp-3) 4mm;
+  margin: 0 0 var(--sp-3) 0;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+.banner .b-eyebrow {
+  font-size: 7.6pt;
+  letter-spacing: .2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.banner .b-year {
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-size: 27pt;
+  color: var(--white);
+  line-height: 1.1;
+  margin: .8mm 0 1.6mm 0;
+}
+.banner .b-dasha {
+  font-size: 10pt;
+  color: var(--gold-light);
+  letter-spacing: .03em;
+}
+/* the status chip must remain legible on the dark band */
+.banner .b-status { margin-top: var(--sp-2); }
+.banner .b-sens {
+  display: inline-block;
+  margin-top: 1.8mm;
+  border: .8pt solid var(--gold);
+  color: var(--gold);
+  font-size: 7.4pt;
+  letter-spacing: .1em;
+  padding: .7mm 2mm;
+}
+
+/* the running year label, right-aligned, on continuation pages */
+.pageyear {
+  text-align: right;
+  font-size: 7.4pt;
+  color: var(--grey);
+  margin: -3mm 0 2.5mm 0;
+  letter-spacing: 0;
+  page-break-after: avoid;
+}
+
+/* ==========================================================================
+   LISTS — hanging indent so wrapped lines align under the text, not the
+   bullet (brief §32)
+   ========================================================================== */
+ul.b { margin: 0 0 var(--sp-2) 0; padding-left: 4.4mm; }
+ul.b li { margin-bottom: 1.1mm; padding-left: .6mm; }
+ul.b li::marker { color: var(--gold-deep); }
+
+ul.b.checklist { list-style: none; padding-left: 0; }
+ul.b.checklist li {
+  position: relative;
+  padding-left: 5mm;
+}
+ul.b.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 1.5mm;
+  width: 2.6mm; height: 2.6mm;
+  border: .8pt solid var(--gold);
+  border-radius: 50%;
+}
+
+/* plain dash list for the technical appendix */
+ul.plain { list-style: none; padding-left: 0; margin: 0 0 var(--sp-2) 0; }
+ul.plain li {
+  position: relative;
+  padding-left: 4mm;
+  margin-bottom: 1.1mm;
+}
+ul.plain li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--gold-deep);
+}
+
+/* definition-style label/value inside a card */
+.kv-inline { display: flex; margin-bottom: 1.2mm; }
+.kv-inline .k {
+  color: var(--gold-deep);
+  font-size: var(--fs-note);
+  width: 34mm;
+  flex: 0 0 auto;
+  letter-spacing: .05em;
+}
+.kv-inline .v { font-size: var(--fs-note); color: var(--ink-soft); }
+
+/* a labelled reading block: MEANING before MECHANICS */
+.reading { margin: var(--sp-2) 0; }
+.reading .r-label {
+  font-size: 7.4pt;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: .8mm;
+}
+.reading .r-text { font-size: var(--fs-small); color: var(--charcoal); }
+
+/* practical focus block — visually distinct from interpretation */
+.practical {
+  border-left: 2.6pt solid var(--gold);
+  background: var(--ivory);
+  padding: var(--sp-2) 3mm;
+  margin: var(--sp-2) 0;
+}
+.practical .p-label {
+  font-size: 7.4pt;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 1mm;
+}
+.practical ul.b { margin-bottom: 0; }

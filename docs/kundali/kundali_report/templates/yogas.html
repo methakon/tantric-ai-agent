@@ -1,0 +1,68 @@
+{#- yogas.html — §10. Individual cards. Not every yoga gets the same visual
+    weight: a confirmed formation and a school-dependent one must not look
+    identical. -#}
+<section class="section-opener">
+  <h1>10 · Yogas &amp; Doshas</h1>
+  <p class="lead">
+    {{ yogas.found }} formations detected. Each shows its formation rule, the
+    arithmetic as computed, and its standing — confirmed, partial, or dependent
+    on a school of interpretation.
+  </p>
+
+  {%- for y in yogas.cards %}
+  <div class="card">
+    <div class="card-title">{{ y.name }}
+      <span class="badge {{ y.badge_class }}"
+            style="margin-left:2mm">{{ y.status }}</span>
+    </div>
+    <p class="card-sub">{{ y.formulation }}</p>
+    <div class="grid grid-2">
+      <div>
+        <div class="reading">
+          <div class="r-label">Formation rule</div>
+          <div class="r-text">{{ y.formation }}</div>
+        </div>
+        <div class="reading">
+          <div class="r-label">As computed</div>
+          <div class="r-text">{{ y.calculation }}</div>
+        </div>
+      </div>
+      <div>
+        <div class="reading">
+          <div class="r-label">Traditional reading</div>
+          <div class="r-text">{{ y.interpretation }}</div>
+        </div>
+        {%- if y.limitation %}
+        <div class="reading">
+          <div class="r-label">Limitation</div>
+          <div class="r-text">{{ y.limitation }}</div>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+    <div class="basis">
+      <div class="b-head">Standing</div>
+      <div class="t-data">{{ y.confidence }}</div>
+    </div>
+  </div>
+  {%- endfor %}
+
+  <h2>Doshas</h2>
+  {%- if yogas.doshas %}
+  <p class="small">No dosha was computed as present. The engine records dosha
+  checks explicitly rather than leaving them implied.</p>
+  {%- else %}
+  <div class="warn">
+    <p>
+      <b>Dosha analysis is not implemented.</b> Rather than infer absence from a
+      calculation that was never performed, the gap is stated here. A reader
+      should not read this section as a clean result.
+    </p>
+  </div>
+  {%- endif %}
+
+  <div class="basis">
+    <div class="b-head">Method</div>
+    <div class="t-data">{{ yogas.method_note }}</div>
+  </div>
+</section>

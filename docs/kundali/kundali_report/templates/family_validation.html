@@ -1,0 +1,99 @@
+{#- family_validation.html — §18, plus the 2024 events.
+
+  Wording discipline: "parental and family life-transition activation", never
+  "death was predicted". And the 2018-vs-2019 documentary conflict is reported
+  as unresolved, never adjudicated. -#}
+<section class="section-opener">
+  <h1>18 · Family &amp; Parents Validation</h1>
+  <p class="lead">
+    A father's major surgery and a father's death, tested as two independent
+    events — plus two household events in 2024.
+  </p>
+
+  <div class="warn">
+    <p>
+      This section reports <b>family and life-transition activation</b>. It does
+      not predict, explain or attribute any medical condition, and no claim is
+      made that a chart indicated a death.
+    </p>
+  </div>
+
+  <h2>Parental events, tested independently</h2>
+  <table class="t">
+    <thead><tr><th>Year</th><th>Reported event</th><th>Dasha</th>
+      <th class="num">H9</th><th class="num">H10</th>
+      <th>Reading</th></tr></thead>
+    <tbody>
+      {%- for r in family.parental %}
+      <tr>
+        <td>{{ r.year }}</td>
+        <td>{{ r.event }}</td>
+        <td class="small">{{ r.dasha }}</td>
+        <td class="num">{{ r.h9 }}</td>
+        <td class="num">{{ r.h10 }}</td>
+        <td class="small">{{ r.reading }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="verdict-panel">
+    <div class="vp-verdict" style="font-size:15pt">The father's house does not move</div>
+    <div class="vp-text">
+      The 9th house is at the activation floor in the surgery year and in both
+      candidate years of the death. The engine does not distinguish a
+      life-threatening cardiac operation from a death, and does not separate
+      one candidate year from the other.
+    </div>
+  </div>
+
+  <h2>The 2018 / 2019 documentary conflict</h2>
+  <div class="callout">
+    <div class="co-title">{{ family.conflict.status }}</div>
+    <p class="small">{{ family.conflict.summary }}</p>
+    <table class="kv">
+      <tr><td class="k">Family recollection</td>
+          <td class="v">{{ family.conflict.claim_2018 }}</td></tr>
+      <tr><td class="k">Official registration</td>
+          <td class="v">{{ family.conflict.record_2019 }}</td></tr>
+      <tr><td class="k">Registration number</td>
+          <td class="v mono">{{ family.conflict.reg_no }}</td></tr>
+      <tr><td class="k">Document inspected?</td>
+          <td class="v">{{ family.conflict.document_inspected }}</td></tr>
+      <tr><td class="k">How it was handled here</td>
+          <td class="v">{{ family.conflict.how_resolved }}</td></tr>
+    </table>
+    <p class="small">
+      <b>The chart was not used to settle this, and will not be.</b> The engine
+      marginally favours one year over the other on a single house at a
+      probability that chance explains; that is not sufficient to adjudicate a
+      death registration, and no year is preferred here for fitting the
+      astrology.
+    </p>
+  </div>
+
+  <h2>2024 — the clearest counterexample in the validation</h2>
+  <table class="t">
+    <thead><tr><th>House</th><th>Carries</th><th class="num">Activation</th>
+    </tr></thead>
+    <tbody>
+      {%- for h in family.house_2024 %}
+      <tr class="{{ 'hi' if h.quiet else '' }}">
+        <td class="num">{{ h.house }}</td>
+        <td>{{ h.name }}</td>
+        <td class="num">{{ h.score }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  <p class="small">{{ family.counterexample_reading }}</p>
+
+  <div class="basis">
+    <div class="b-head">What is not claimed</div>
+    <div class="t-data">
+      No medical condition is diagnosed or attributed. No death is predicted.
+      No lifespan is stated. Family transition readings describe emphasis in a
+      period, and the validation shows that emphasis does not track events.
+    </div>
+  </div>
+</section>

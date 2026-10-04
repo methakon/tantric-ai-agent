@@ -1,0 +1,101 @@
+{#- methodology.html — §2. How the document was produced and what may be
+    trusted at each layer. -#}
+<section class="section-opener">
+  <h1>02 · Methodology &amp; Evidence Status</h1>
+  <p class="lead">
+    Three separate layers produce this document, and they are kept apart on
+    purpose. Confusing them is how a computed value comes to be read as a
+    prediction.
+  </p>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">1 · Calculation</div>
+      <p class="small">
+        Placements, divisional charts, dasha periods and transit instants are
+        computed from the birth record using the Swiss Ephemeris with the
+        Lahiri ayanamsa and the mean node. This layer is reproducible: the same
+        inputs give the same outputs.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-title">2 · Interpretation</div>
+      <p class="small">
+        Readings apply classical Jyotish doctrine — whole-sign houses, the
+        significations of planets and houses — to the computed chart. This is
+        tradition, not measurement. It is labelled
+        <span class="evidence ev-TRADITIONAL_INTERPRETATION">TRADITIONAL
+        INTERPRETATION</span> wherever it appears.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-title">3 · Validation</div>
+      <p class="small">
+        The engine's yearly readings were tested against documented life
+        events. They failed to distinguish event years from arbitrary years.
+        That result is reported in full in section 14 and is not softened
+        anywhere in this document.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-title">4 · Practical guidance</div>
+      <p class="small">
+        Suggestions about routine, documentation and financial discipline are
+        general considerations. They are not financial, medical or legal
+        advice, and no professional consultation is displaced by this report.
+      </p>
+    </div>
+  </div>
+
+  <h2>Evidence labels used in this document</h2>
+  <table class="t">
+    <thead><tr><th>Label</th><th>Meaning</th></tr></thead>
+    <tbody>
+      {%- for label, meaning in validation.evidence_labels.items() %}
+      <tr>
+        <td><span class="evidence ev-{{ label }}">{{ label }}</span></td>
+        <td class="small">{{ meaning }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Reproducibility</h2>
+  <table class="kv">
+    <tr><td class="k">Ephemeris</td><td class="v">{{ birth.ephemeris }}</td></tr>
+    <tr><td class="k">Ayanamsa</td><td class="v">{{ birth.ayanamsa }}</td></tr>
+    <tr><td class="k">Node convention</td>
+        <td class="v">{{ birth.node }} — Ketu computed as mean node + 180°,
+            never the true/KP node</td></tr>
+    <tr><td class="k">House system</td>
+        <td class="v">{{ birth.house_system }}</td></tr>
+    <tr><td class="k">Julian day (UT)</td>
+        <td class="v mono">{{ birth.jd }}</td></tr>
+    <tr><td class="k">Coverage</td>
+        <td class="v">{{ meta.span }} · {{ years_to_render|length }} years
+            rendered in this build</td></tr>
+  </table>
+
+  {%- if audit.results %}
+  <h2>Technical audit</h2>
+  <p class="small">
+    Ten checks were run against the production values before this document was
+    built. Each states the value read from production rather than an
+    assumption.
+  </p>
+  <table class="t verify">
+    <thead><tr><th>Check</th><th>Result</th></tr></thead>
+    <tbody>
+      {%- for r in audit.results %}
+      <tr>
+        <td>{{ r.item }}</td>
+        <td>
+          <span class="badge {{ 'ok' if r.status == 'PASS' else 'alert' }}">
+            {{ r.status }}</span>
+        </td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  {%- endif %}
+</section>

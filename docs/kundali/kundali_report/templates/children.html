@@ -1,0 +1,63 @@
+{#- children.html — §19.
+
+  The two children's charts exist as INDEPENDENT fixtures. They are not used to
+  strengthen the parent's chart, which would be circular. D7 is birth-time
+  sensitive and is labelled accordingly. -#}
+<section class="section-opener">
+  <h1>19 · Children</h1>
+  <p class="lead">
+    Two documented births, tested against the father's chart. The children's own
+    charts are independent fixtures and are not used here.
+  </p>
+
+  <table class="t">
+    <thead><tr><th>Child</th><th>Born</th><th>Time</th><th>Place</th>
+      <th class="num">H5</th><th class="num">H4</th><th class="num">H9</th>
+      <th>Verdict</th></tr></thead>
+    <tbody>
+      {%- for r in children.rows %}
+      <tr>
+        <td><b>{{ r.name }}</b></td>
+        <td class="mono">{{ r.date }}</td>
+        <td class="mono">{{ r.time }}</td>
+        <td>{{ r.place }}</td>
+        <td class="num">{{ r.h5 }}</td>
+        <td class="num">{{ r.h4 }}</td>
+        <td class="num">{{ r.h9 }}</td>
+        <td><span class="badge {{ r.badge }}">{{ r.verdict }}</span></td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="warn">
+    <p>{{ children.reading }}</p>
+  </div>
+
+  <h2>Progeny significators</h2>
+  <table class="kv">
+    {%- for k, v in children.significators %}
+    <tr><td class="k">{{ k }}</td><td class="v">{{ v }}</td></tr>
+    {%- endfor %}
+  </table>
+
+  <div class="warn">
+    <p>
+      <b>D7 is birth-time sensitive.</b> A small shift in the birth minute can
+      move the D7 lagna, so no children conclusion here rests on D9 or D7
+      alone. The D1 fifth house and the Jupiter relationship carry the reading
+      instead, and are reported separately from any divisional result.
+    </p>
+  </div>
+
+  <div class="basis">
+    <div class="b-head">Method discipline</div>
+    <div class="t-data">
+      The children's charts were computed independently and are available as
+      separate datasets. They are deliberately NOT used to confirm the father's
+      chart: a parent-to-child inference derived from the event being explained
+      would be circular, and this project has been bitten by that class of
+      error before.
+    </div>
+  </div>
+</section>

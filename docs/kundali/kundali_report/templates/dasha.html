@@ -1,0 +1,62 @@
+{#- dasha.html — §12. Horizontal timeline + period cards. -#}
+<section class="section-opener">
+  <h1>12 · Vimshottari Dasha</h1>
+  <p class="lead">
+    The 120-year cycle divided by the Moon's nakshatra at birth. Every year in
+    this report inherits its dasha context from this sequence, which makes it
+    the spine of the whole document.
+  </p>
+
+  {%- if dasha_chart_available %}
+  <div class="chart-fig">
+    <img src="dasha_timeline.svg" alt="Mahadasha timeline 1981-2053"/>
+    <div class="chart-cap">
+      <span class="cc-code">DASHA</span> · Mahadasha span ·
+      <span class="cc-note">Block width is a linear share of
+      {{ meta.span_first }}–{{ meta.span_last }}.</span>
+    </div>
+  </div>
+  {%- endif %}
+
+  <h2>At birth</h2>
+  <table class="kv">
+    <tr><td class="k">Nakshatra lord</td>
+        <td class="v">{{ dasha.nakshatra_lord }}</td></tr>
+    <tr><td class="k">Balance</td>
+        <td class="v">{{ dasha.balance }}</td></tr>
+    <tr><td class="k">First mahadasha</td>
+        <td class="v">{{ dasha.first }}</td></tr>
+  </table>
+
+  <h2>Mahadasha periods</h2>
+  <div class="grid grid-4">
+    {%- for p in dasha.periods %}
+    <div class="card tight">
+      <div class="card-title">
+        <span style="color: {{ p.colour }}">{{ p.lord }}</span> Mahadasha
+      </div>
+      <p class="card-sub">{{ p.start }} — {{ p.end }}</p>
+      <p class="small">{{ p.span }}</p>
+      <p class="tiny">{{ p.reading }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h2>Reading a dasha</h2>
+  <p class="small">
+    A mahadasha sets the background conditions for twenty years or so; the
+    antardasha inside it decides which background is foreground; the
+    pratyantardasha does the same at a finer grain. Nothing in that sequence
+    identifies a specific event — the validation in section 14 tested exactly
+    that and found no ability to do so.
+  </p>
+
+  <div class="basis">
+    <div class="b-head">Calculation detail</div>
+    <div class="t-data">
+      Balance is a fraction of the lord's own period, never of the 120-year
+      cycle. Antardasha and pratyantardasha are reckoned from each
+      mahadasha's own lord sequence. {{ dasha.balance }}
+    </div>
+  </div>
+</section>

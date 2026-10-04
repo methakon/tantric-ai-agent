@@ -1,0 +1,46 @@
+{#- chart_at_glance.html — §4. Six to eight cards, meaning not raw fields. -#}
+<section class="section-opener">
+  <h1>04 · Chart at a Glance</h1>
+  <p class="lead">
+    Eight facts about this chart and what each one carries. Interpretation
+    first; the exact degrees are in section 07.
+  </p>
+
+  <div class="grid-4">
+    {%- for c in glance.cards[:4] %}
+    <div class="glance">
+      <div class="g-label">{{ c.label }}</div>
+      <div class="g-value">{{ c.value }}</div>
+      <div class="g-note">
+        <span class="evidence ev-{{ c.evidence_key }}">{{ c.evidence }}</span>
+        {{ c.note }}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+  <div class="grid-4">
+    {%- for c in glance.cards[4:] %}
+    <div class="glance">
+      <div class="g-label">{{ c.label }}</div>
+      <div class="g-value">{{ c.value }}</div>
+      <div class="g-note">
+        <span class="evidence ev-{{ c.evidence_key }}">{{ c.evidence }}</span>
+        {{ c.note }}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h2>Signatures</h2>
+  <p class="small muted">
+    The four signature cards above are
+    <span class="evidence ev-TRADITIONAL_INTERPRETATION">traditional
+    interpretation</span> derived from the placements shown in section 07.
+    They are not engine outputs and carry no score.
+  </p>
+
+  <div class="basis">
+    <div class="b-head">Calculation detail</div>
+    <div class="t-data">{{ glance.basis }}</div>
+  </div>
+</section>

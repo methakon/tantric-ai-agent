@@ -1,0 +1,98 @@
+{#- education_validation.html — §15.
+
+  The most instructive result in the validation, because the model inverts:
+  the year a qualification obstruction ENDED carries the strongest
+  qualification-house reading, and the first-class year is among the weakest. -#}
+<section class="section-opener">
+  <h1>15 · Education Validation</h1>
+  <p class="lead">
+    Five documented education events, tested against the same model. The
+    requirement was that one model explain both the failures and the
+    successes. It does not.
+  </p>
+
+  <table class="t">
+    <thead>
+      <tr><th>Year</th><th>Outcome</th><th>Dasha</th>
+      <th class="num">H4</th><th class="num">H5</th><th class="num">H9</th>
+      <th class="num">H12</th><th>Reading</th></tr>
+    </thead>
+    <tbody>
+      {%- for r in education.rows %}
+      <tr>
+        <td>{{ r.year }}</td>
+        <td>{{ r.outcome }}</td>
+        <td class="small">{{ r.dasha }}</td>
+        <td class="num">{{ r.h4 }}</td>
+        <td class="num">{{ r.h5 }}</td>
+        <td class="num">{{ r.h9 }}</td>
+        <td class="num">{{ r.h12 }}</td>
+        <td>
+          <span class="evidence ev-{{ r.evidence_key }}">{{ r.evidence }}</span>
+          <span class="tiny">{{ r.note }}</span>
+        </td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>The repeated-pattern test: 1998 against 2021</h2>
+  <p>
+    Both are examination failures twenty-three years apart. If the engine
+    carries real signal, the two years should be more similar to each other
+    than two random years of the same category are to each other.
+  </p>
+  <table class="kv">
+    <tr><td class="k">Shared mechanisms</td>
+        <td class="v">{{ education.repeat.shared }} of the category's
+            mechanisms</td></tr>
+    <tr><td class="k">Similarity</td>
+        <td class="v mono">{{ education.repeat.jaccard }}
+            (control mean {{ education.repeat.control_mean }})</td></tr>
+    <tr><td class="k">Percentile</td>
+        <td class="v">{{ education.repeat.percentile }}</td></tr>
+    <tr><td class="k">Same mahadasha lord</td>
+        <td class="v">{{ education.repeat.same_md }}</td></tr>
+    <tr><td class="k">Same antardasha lord</td>
+        <td class="v">{{ education.repeat.same_ad }}</td></tr>
+    <tr><td class="k">Verdict</td>
+        <td class="v"><span class="badge warn">{{ education.repeat.verdict }}</span></td></tr>
+  </table>
+  <p class="small">
+    The two years share {{ education.repeat.shared }} mechanisms, but they are
+    only moderately more similar than random pairs of the same category. The
+    antardasha lord happens to be the same in both; an antardasha is long
+    enough for that to be unremarkable. A STRONG REPEAT verdict was available
+    and was <b>not</b> taken.
+  </p>
+
+  <div class="verdict-panel">
+    <div class="vp-verdict" style="font-size:15pt">No single model explains both</div>
+    <div class="vp-text">
+      The 9th house — the house of qualification — is <b>highest in 2011</b>,
+      the year the obstruction <em>ended</em>. The first-class completion year
+      2005 is among the weakest of the five. A model with real signal should
+      find its successes at least as activated as its failures; this one finds
+      the reverse.
+    </div>
+  </div>
+
+  <h2>Real-world causes are not displaced</h2>
+  <p class="small">
+    The 2008–2011 qualification delay was, by the subject's own account,
+    administrative: repeated applications, bureaucracy, and help from a friend.
+    That is the cause. Any astrological reading of that period is a
+    <em>description</em> of the period, not an explanation of the delay, and it
+    does not replace the administrative reality of it.
+  </p>
+
+  <h2>On the two failed subjects</h2>
+  <p class="small">
+    The 1998 failure was in two named subjects. There is no established
+    traditional Jyotish correspondence that maps History and Geography onto
+    particular houses or grahas, and none has been invented here to fit the
+    outcome. Testing whether the standard education mechanisms account for the
+    examination pressure is legitimate; inventing a subject-specific rule
+    because two subjects were failed is not.
+  </p>
+</section>

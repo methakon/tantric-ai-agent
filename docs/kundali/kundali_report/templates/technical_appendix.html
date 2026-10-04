@@ -1,0 +1,159 @@
+{#- technical_appendix.html — §26. The full audit trail, available but not
+    in the reader's way. -#}
+<section class="section-opener">
+  <h1>26 · Technical Appendix</h1>
+  <p class="lead">
+    Conventions, method and the complete evidence trail. Everything here is
+    available to a reader who wants to check a number, and none of it is needed
+    to read the document.
+  </p>
+
+  <h2>Birth instant and conventions</h2>
+  <table class="kv">
+    <tr><td class="k">Julian day (UT)</td>
+        <td class="v mono">{{ birth.jd }}</td></tr>
+    <tr><td class="k">UTC instant</td>
+        <td class="v mono">{{ birth.utc }}</td></tr>
+    <tr><td class="k">Time zone</td>
+        <td class="v">{{ birth.tz }} — no daylight saving in 1981</td></tr>
+    <tr><td class="k">Coordinates</td>
+        <td class="v mono">{{ birth.lat }}, {{ birth.lon }}
+          <span class="tiny">(sourced)</span></td></tr>
+    <tr><td class="k">Ephemeris</td>
+        <td class="v">{{ birth.ephemeris }}</td></tr>
+    <tr><td class="k">Ayanamsa</td>
+        <td class="v">{{ birth.ayanamsa }} · {{ birth.ayanamsa_deg }}°</td></tr>
+    <tr><td class="k">Node convention</td>
+        <td class="v">{{ birth.node }}; Ketu = mean node + 180°, never the
+            true/KP node ({{ birth.true_node_note }})</td></tr>
+    <tr><td class="k">House system</td>
+        <td class="v">{{ birth.house_system }}</td></tr>
+    <tr><td class="k">D10 convention</td>
+        <td class="v">{{ birth.d10_convention }}</td></tr>
+    <tr><td class="k">Engine version</td>
+        <td class="v mono">{{ birth.version }}</td></tr>
+    <tr><td class="k">Dataset generated</td>
+        <td class="v mono">{{ birth.generated }}</td></tr>
+  </table>
+
+  <h2>Rules applied</h2>
+  <table class="t">
+    <thead><tr><th>Rule</th><th>Implementation</th></tr></thead>
+    <tbody>
+      {%- for r in appendix.rules %}
+      <tr>
+        <td>{{ r.rule }}</td>
+        <td class="small">{{ r.how }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Method limitations</h2>
+  <div class="warn">
+    {%- for l in appendix.limitations %}
+    <p><b>{{ l.what }}</b> — {{ l.detail }}</p>
+    {%- endfor %}
+  </div>
+
+  <h2>Risk engine</h2>
+  <p class="small">{{ appendix.risk_engine }}</p>
+  <table class="t">
+    <thead><tr><th>Gate</th><th>Condition</th></tr></thead>
+    <tbody>
+      {%- for r in appendix.thresholds %}
+      <tr>
+        <td><b>{{ r.name }}</b></td>
+        <td class="small mono">{{ r.condition }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <h2>Validation methodology</h2>
+  <p class="small">{{ appendix.validation_method }}</p>
+
+  <h2>Risk engine thresholds</h2>
+  <table class="kv">
+    <tr><td class="k">RED gate</td>
+        <td class="v mono">weighted score &ge; 8 AND &ge; 4 distinct
+            mechanisms AND &ge; 2 dasha lords AND &ge; 2 transit grahas</td></tr>
+    <tr><td class="k">ORANGE gate</td>
+        <td class="v mono">weighted score &ge; 7 AND &ge; 3 distinct
+            mechanisms</td></tr>
+    <tr><td class="k">Agreement tolerance</td>
+        <td class="v mono">&le; 1e-6&deg; on longitudes,
+            &le; 0.001 y on dasha balance</td></tr>
+  </table>
+
+  <h2>Notation and units</h2>
+  <table class="kv">
+    <tr><td class="k">Angle</td>
+        <td class="v mono">23&deg; 02&prime; 18&Prime; &mdash; degree, arcminute,
+            arcsecond</td></tr>
+    <tr><td class="k">Sign ingress</td>
+        <td class="v mono">Gemini &rarr; Cancer (direct) &middot;
+            Cancer &larr; Gemini (retrograde)</td></tr>
+    <tr><td class="k">Tolerance notation</td>
+        <td class="v mono">&plusmn; 1e-6&deg; &middot;
+            &ge; threshold &middot; &le; bound</td></tr>
+    <tr><td class="k">Currency</td>
+        <td class="v mono">&#8377; &mdash; no amount is predicted anywhere in
+            this document</td></tr>
+    <tr><td class="k">Verification mark</td>
+        <td class="v mono">&check; independently verified</td></tr>
+    <tr><td class="k">Bulleted list</td>
+        <td class="v mono">&bull; rendered with a hanging indent</td></tr>
+    <tr><td class="k">Coverage span</td>
+        <td class="v mono">{{ meta.span_first }} &rarr; {{ meta.span_last }}</td></tr>
+  </table>
+
+  <h2>Test status</h2>
+  <table class="t verify">
+    <thead><tr><th>Suite</th><th class="num">Passed</th><th class="num">Failed</th>
+    </tr></thead>
+    <tbody>
+      {%- for t in appendix.tests %}
+      <tr>
+        <td>{{ t.name }}</td>
+        <td class="num">{{ t.passed }}</td>
+        <td class="num {{ 'ink' if t.failed else '' }}">{{ t.failed }}</td>
+      </tr>
+      {%- endfor %}
+      <tr class="hi">
+        <td><b>Total</b></td>
+        <td class="num"><b>{{ appendix.total_passed }}</b></td>
+        <td class="num"><b>{{ appendix.total_failed }}</b></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="small">
+    These counts cover <b>computation and formatting</b>. They do not cover
+    event-level accuracy, which was tested separately and failed — see
+    section 14.
+  </p>
+
+  {%- if audit.results %}
+  <h2>Technical audit</h2>
+  <table class="t">
+    <thead><tr><th>Check</th><th>Result</th><th>Detail</th></tr></thead>
+    <tbody>
+      {%- for r in audit.results %}
+      <tr>
+        <td>{{ r.item }}</td>
+        <td><span class="badge {{ 'ok' if r.status == 'PASS' else 'alert' }}">
+          {{ r.status }}</span></td>
+        <td class="tiny">{{ r.detail }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  {%- endif %}
+
+  <div class="basis">
+    <div class="b-head">Reproducibility</div>
+    <div class="t-data">
+      {{ appendix.reproducibility }}
+    </div>
+  </div>
+</section>

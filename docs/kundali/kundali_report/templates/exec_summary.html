@@ -1,0 +1,91 @@
+{#- exec_summary.html — the reader's first page after the contents.
+
+  The order matters: WHAT THIS IS, WHAT WAS TESTED, WHAT THE TEST FOUND, WHAT
+  TO READ NEXT. The negative result comes before any interpretation so a reader
+  never meets a reading before meeting its evidence status. -#}
+<section class="section-opener">
+  <h1>01 · Executive Summary</h1>
+
+  <p class="lead">
+    This is a computationally derived Vedic chart for a single life, covering
+    {{ meta.span_first }} to {{ meta.span_last }}, together with the evidence
+    for its own reliability — including a historical back-test that failed.
+  </p>
+
+  {#- 1. the finding, stated first and unmissably -#}
+  <div class="verdict-panel">
+    <div class="vp-verdict">{{ validation.verdict }}</div>
+    <div class="vp-text">{{ validation.statement }}</div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-title">What was tested</div>
+      <p class="small">
+        The engine's per-year readings were compared against
+        {{ validation.rank_test.events_tested }} documented life events across
+        13 years. Each event was scored by the same house-activation rule used
+        everywhere else in this report.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card-title">What the test found</div>
+      <p class="small">
+        That same rule returns MATCH or PARTIAL in
+        {{ validation.null_control.base_rate_match_or_partial_pct }}% of
+        {{ validation.null_control.category_years_tested }} arbitrary
+        category-years, so a verdict on any single year carries no
+        information. A floor-independent test then returned a median
+        p of {{ validation.rank_test.median_p }} with
+        {{ validation.rank_test.top_decile }} of
+        {{ validation.rank_test.events_tested }} event years in its top
+        decile.
+      </p>
+    </div>
+  </div>
+
+  {#- 2. what remains sound -#}
+  <h2>What this document can be relied on for</h2>
+  <table class="t">
+    <thead>
+      <tr><th>Layer</th><th>Status</th><th>Basis</th></tr>
+    </thead>
+    <tbody>
+      {%- for row in reliability %}
+      <tr>
+        <td><b>{{ row.layer }}</b></td>
+        <td><span class="evidence ev-{{ row.evidence_key }}">{{ row.evidence }}</span></td>
+        <td class="small">{{ row.basis }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="co-title">How to read the year-by-year sections</div>
+    <p class="small">
+      Each year gives a dasha, the transits in force, the houses the engine
+      activated, and a traditional interpretation. The computation is sound; the
+      interpretation is doctrine, not prediction. No year in this document
+      claims to have predicted an event, and the validation section shows
+      several cases where the engine pointed away from an event that occurred.
+    </p>
+    <p class="small">
+      Nothing here is a diagnosis, a death prediction, or a financial
+      assurance. Where the traditional material is uncertain, it says so.
+    </p>
+  </div>
+
+  <h2>Open items a reader should know about</h2>
+  <ul class="b small">
+    <li>One documentary conflict is unresolved: a death registration recorded in
+        2019 against a family recollection of 2018. It is reported as
+        unresolved in the family section. It has not been settled astrologically
+        and will not be.</li>
+    <li>Employment dates could not be independently verified from public
+        sources, so three historical career interruptions remain untestable
+        rather than tested-and-failed.</li>
+    <li>Five years are birth-time sensitive and are labelled as such wherever
+        they appear.</li>
+  </ul>
+</section>
