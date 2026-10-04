@@ -1,11 +1,13 @@
 # PENDING TASK LIST — Kundali
 
-Branch `feat/professional-kundali-pdf` · HEAD `fc669df`
+Branch `feat/kundali-html-render-architecture` · HEAD `3b8d06f`
 Companion to `SESSION_CHECKPOINT.md`, `TASK_QUEUE.md`, `RESUME_NEXT_SESSION.md`.
 
 **Workstream A is COMPLETE with verdict NO-GO.** Do not re-run it.
-**Workstream B (v6 presentation) is paused and must not resume until the NO-GO
-consequences in §2 are applied.**
+**Workstream C — HTML→PDF architecture — is COMPLETE: preview built and gated.**
+**STOPPED pending human review of `docs/kundali/output/preview.pdf`.**
+**The full 1981–2053 edition is NOT generated. Do not generate it without
+explicit instruction.**
 
 ---
 
@@ -57,7 +59,60 @@ never affected** — verified, not assumed. **398 tests pass** after the fix.
 
 ---
 
-## 2. WORKSTREAM A2 — APPLY THE NO-GO CONSEQUENCES ◀ NEXT
+## 1B. WORKSTREAM C — HTML→PDF ARCHITECTURE ✅ COMPLETE (preview only)
+
+**Branch `feat/kundali-html-render-architecture` · HEAD `3b8d06f`.**
+
+**Built:** `docs/kundali/output/preview.html` and `preview.pdf` — **76 pages,
+5 representative years**, **18/18 QA checks pass**.
+
+```
+kundali_report/
+  data/loader.py        layer A — reads frozen JSON, computes nothing
+  data/validation.py    layer B — the NO-GO result as typed data
+  sections/             layer C — interpretation + prepared view context
+  structure.py          layer D — the 29-section manifest (drives TOC + QA)
+  templates/*.html      layer E — Jinja2, no business logic
+  css/*.css             layer F — 6 stylesheets, tokens in main.css only
+  render.py             layer G — assembly, WeasyPrint, TOC resolution
+build_report.py         entry point (--preview / --full / --qa)
+test_render_report.py   18-check render gate
+```
+
+Rebuild: `python3 build_report.py --qa`
+
+### WAITING ON: human visual review of preview.pdf
+
+`VISUAL = NOT VERIFIED` — the vision provider returns 401, so only structural
+and geometric checks have run. Do **not** run `--full` until the preview is
+approved.
+
+### Renderer behaviour measured on WeasyPrint 70.0 — do not re-derive
+- `@top-right { content: string(...) }` is accepted but its **horizontal
+  placement is not honoured**; the running header is left empty on purpose.
+- `string-set: x content()` copies nested markup → **empty margin box**. Avoid.
+- `letter-spacing` is inherited into margin boxes; force `0` or a tracked
+  string prints as `Y E A R - W I S E`.
+- A **Jinja macro cannot see globals injected at render time** — pass helper
+  functions as macro arguments or they raise `undefined`.
+- A dict key named `items` resolves to the dict's `items()` method inside a
+  template. Avoid the name.
+
+### Six defects found and fixed during the architecture build
+1. `data/loader.py` resolved ROOT one level short → import-time assert added.
+2. `risk_word()`/`heat_bg()` invisible inside macro bodies → passed as args.
+3. dict key `items` collided with the method → renamed `lines`.
+4. TOC lookup keyed on the bare title while headings render numbered → **29 of
+   29 entries unresolved while the build still reported success**. Now a hard
+   build failure.
+5. The audit-trail re-render reset every TOC span to its placeholder and that
+   PDF shipped → final write re-substituted and re-verified.
+6. `.pagebreak` before each year + `page: year` → **completely blank pages**
+   carrying only a page number. Removed.
+
+---
+
+## 2. WORKSTREAM A2 — APPLY THE NO-GO CONSEQUENCES ◀ DONE IN WORKSTREAM C
 
 The validation is not finished until the dossier reflects it.
 

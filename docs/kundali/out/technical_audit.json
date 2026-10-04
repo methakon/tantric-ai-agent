@@ -1,0 +1,57 @@
+{
+ "_note": "§26 technical audit. Each detail states the value read from production, not an assumption.",
+ "results": [
+  {
+   "item": "ephemeris",
+   "status": "PASS",
+   "detail": "production meta: pyswisseph (Swiss Ephemeris 2.10.03); linked swisseph: 2.10.03"
+  },
+  {
+   "item": "ayanamsa",
+   "status": "PASS",
+   "detail": "Lahiri at JD = 23.604776 deg; implied by stored Sun = 23.604775; agreement 0.0010 arcsec. Single subtraction (tropical - ayanamsa = sidereal)."
+  },
+  {
+   "item": "timezone / DST / time conversion",
+   "status": "PASS",
+   "detail": "01:00 IST -> 1981-12-08 19:30:00 UTC -> JD 2444947.312500; production 2444947.3125; difference 0.000000 min. UTC offset 5.5h (no DST — India observed no DST in 1981; No Indian daylight-saving adjustment applied for 1981.)"
+  },
+  {
+   "item": "house system",
+   "status": "PASS",
+   "detail": "ascendant recomputed 163.889678 -> Virgo 13.8897 deg (stored 163.889678); all 10 bodies consistent with whole-sign: True. Placidus computed but NOT used for D1 interpretation (KP cusps only)."
+  },
+  {
+   "item": "node convention",
+   "status": "PASS",
+   "detail": "Rahu (mean) 90.807566; Ketu 270.807566; Ketu-Rahu = 180.000000 deg (must be 180). TRUE/KP node is 89.3753 — 1.4323 deg away, and NOT used."
+  },
+  {
+   "item": "dasha balance",
+   "status": "PASS",
+   "detail": "nakshatra lord Venus (20 y); 5.3084 y elapsed = 26.54% of the LORD's own period (label: 5.31 years of the Venus mahadasha already elapsed at birth; 14.69 years remain). A 120-year denominator would have produced an impossible balance."
+  },
+  {
+   "item": "antardasha reckoning",
+   "status": "PASS",
+   "detail": "63 antardashas across 7 mahadashas. Each stored span re-derives from its own calendar dates to within 0.0024 y — that residual is the difference between a 365.25-day year and the engine's Julian-year arithmetic, not a reckoning error, so the tolerance is 0.01 y. Each span equals md_years x lord_years / 120: True. Within each mahadasha the antardasha order follows that mahadasha's OWN lord sequence: True — e.g. ['Venus', 'Sun', 'Moon', 'Mars'] inside Venus, ['Mars', 'Rahu', 'Jupiter', 'Saturn'] inside Mars. Deriving from the first mahadasha's lord would mislabel every period after the first."
+  },
+  {
+   "item": "transit timestamp",
+   "status": "PASS",
+   "detail": "Jupiter enters Cancer at 2026-06-02 01:30:00 IST, longitude 90.000002 = 0°00'00\" (exactly 0 deg 00'). The +1 s forward step after bisection is what makes the degree read the NEW sign's 0 deg rather than the pre-ingress value."
+  },
+  {
+   "item": "aspect implementation",
+   "status": "PASS",
+   "detail": "Saturn in Pisces aspects houses [1, 4, 9] (Parashari 3rd/7th/10th from the SIGN, converted to houses via lagna). Independent recomputation gives [1, 4, 9]. Note: house_from_lagna is whole-sign; sade_sati is Moon-relative — a documented mixed-frame convention, not a bug."
+  },
+  {
+   "item": "event-date precision",
+   "status": "PASS",
+   "detail": "21 events: 2 with an exact date/time, 5 YEAR_ONLY, 3 PERIOD (start/end unknown), 11 unclassified including the non-integer 'historical' value. An annual-resolution engine can only test a YEAR_ONLY event."
+  }
+ ],
+ "passed": 10,
+ "failed": 0
+}

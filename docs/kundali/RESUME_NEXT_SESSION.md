@@ -1,92 +1,140 @@
 # RESUME NEXT SESSION — Kundali
 
-Read this first, then `SESSION_CHECKPOINT.md`, then `TASK_QUEUE.md`.
+Read this first, then `SESSION_CHECKPOINT.md`, `TASK_QUEUE.md`,
+`PENDING_TASKS.md`.
 
 ## Objective
 Professional Janma Kundali + Life Dossier for **Swarna Sekhar Dhar**, born
 **09 Dec 1981, 01:00:00 IST**, Berhampore, Murshidabad, West Bengal.
-Coverage **1981–2053**. Three layers stay separate: astrology engine → analysis
-dataset → PDF presentation.
-
-## Current phase
-```
-V6 PRESENTATION DESIGN OVERHAUL
-```
-Computational baseline (v5) is **frozen**. Presentation only — **no astrology
-value may change.**
+Coverage **1981–2053**. Four layers kept separate: astrology engine →
+analysis dataset → interpretation → HTML/CSS → PDF.
 
 ## Authoritative birth data
 `1981-12-09` `01:00:00` IST · `24.1044927 N, 88.2510635 E` · JD UT
 `2444947.3125` · Lahiri/Chitrapaksha · **mean node** · whole-sign Parashari.
 
+## Current phase
+```
+LIFE-EVENT VALIDATION = COMPLETE, VERDICT NO-GO
+HTML → PDF ARCHITECTURE = COMPLETE, PREVIEW BUILT AND GATED
+STOPPED AWAITING HUMAN REVIEW OF THE PREVIEW
+```
+
+## Branch and HEAD
+Branch `feat/kundali-html-render-architecture` · HEAD `3b8d06f`.
+The earlier v6 work is on `feat/professional-kundali-pdf` at `150f7bd`.
+
+## THE ONE THING THAT MATTERS MOST
+**Event-level predictive validity is NOT ESTABLISHED.** The back-test could
+not distinguish event years from arbitrary years: the same activation rule
+returns MATCH+PARTIAL in 80.5% of 1,022 arbitrary category-years, and a
+floor-independent rank test gave median p = 0.500 with **0 of 20** event years
+in its top decile.
+
+This is carried into the document on the cover, in the executive summary and
+in section 14. **Do not soften it, do not drop it, do not turn traditional
+interpretation into "validated prediction".** Two automated checks fail the
+build if the verdict text disappears.
+
 ## Last completed work
-- Commits `b89cf35` (aspect fix + Jupiter events) and `31bff1d` (73-year
-  generation + 343-page v5 PDF).
-- v5 post-generation validation → 7 issues in
-  `out/kundali_1981_2053_v5_validation_report.md`.
-- v6 groundwork: `render_v6.py`, `build_qa_v6.py`,
-  `test_render_qa_v6.py` → **56/56 render checks pass**, all 13 glyphs drawn,
-  zero mojibake.
+- Workstream A validation → NO-GO, full report + 5 topic reports + matrix.
+- Two engine defects found and fixed (oppositions filed as conjunctions;
+  first-event-only loops). 422 computational tests pass.
+- Ten-check technical audit, all passing.
+- Workstream C: modular HTML→PDF pipeline. **76-page preview, 18/18 QA pass.**
 
 ## Exact next task
-Apply three chart fixes to `render_v6.py`:
-1. Cell geometry — `cell_xy(col,row) = (col*cw+9, row*ch+20)`. Current code
-   places labels on cell boundaries, so only **5 of 9 planets render**.
-2. Chart title at `y=H-24` / subtitle `H-8` (currently `H+26`/`H+44`, outside
-   the 600px viewBox).
-3. `figure.chart { width: 300px; max-width:100% }` and
-   `img { display:block; margin:0 auto }` — charts currently span **86%** of
-   page width.
+**Read `docs/kundali/output/preview.pdf` and give visual feedback.** That is
+the whole next task. The brief requires human visual approval before the full
+edition, and the vision provider returns 401 so automated checks cannot
+substitute.
 
-Then rebuild the QA PDF and assert: 9 grahas visible per chart, chart ≤65% page
-width. Then build `kundali_design_preview_v6.pdf` (20–30 pages) per
-`TASK_QUEUE.md`.
+Once approved:
+```bash
+cd docs/kundali && python3 build_report.py --full --qa
+```
 
 ## Files to inspect first
 ```
-docs/kundali/render_v6.py              ← chart bugs to fix
-docs/kundali/build_qa_v6.py
-docs/kundali/test_render_qa_v6.py
-docs/kundali/SESSION_CHECKPOINT.md     §F has all three bugs written out
-docs/kundali/out/kundali_1981_2053_v5_validation_report.md
+docs/kundali/output/preview.pdf          ← REVIEW THIS FIRST
+docs/kundali/PENDING_TASKS.md            §1B has the architecture map
+docs/kundali/Life_Event_Validation_Report.md
+docs/kundali/kundali_report/structure.py   the 29-section manifest
+docs/kundali/kundali_report/render.py     TOC resolution + build
 ```
 
-## Tests currently passing — 423 total, 0 failing
-101 core · 24 second-pass · 27 sensitivity · 52 final-risk · 60 reference ·
-30 aspects · 92 generation · 36 PDF layout.
+## Rebuild commands
+```bash
+cd docs/kundali
+python3 build_report.py            # preview (5 representative years)
+python3 build_report.py --qa       # preview + the 18-check gate
+python3 build_report.py --full     # the complete 1981-2053 edition
+python3 test_render_report.py      # QA only
+python3 technical_audit.py         # ten production-value checks
+```
+
+## Tests currently passing
+- Computational: **422 passed, 0 failed** (101 core · 24 second-pass ·
+  27 sensitivity · 52 final-risk · 60 reference · 30 aspects · 92 generation ·
+  36 PDF layout).
+- Render gate: **18 passed, 0 failed** on the preview.
+- Technical audit: **10 passed, 0 failed**.
 
 ## MUST NOT repeat
-Saturn aspect audit (done, regression-tested) · Jupiter 2026 event separation
-(done) · 73-year generation (done) · v5 validation (done) · reference-PDF
-verification (done) · Kusankur DOB backtracking (done, negative result).
+- Life-event back-testing — done, NO-GO. Re-running cannot change it.
+- Saturn aspect audit — done, regression-tested.
+- Jupiter 2026 event separation — done.
+- 73-year generation — done, frozen at `31bff1d`.
+- Reference-PDF verification — done.
+- Kusankur DOB backtracking — done, negative result.
+- v6 chart bugs (cell geometry, title outside viewBox, unconstrained width) —
+  all three fixed and measured in `chart_svg.py`.
 
 ## MUST NOT lose
-v5 artifacts + v1–v4 intermediates · the 7 v5 issues · the 3 v6 chart bugs ·
-the measured font-capability table (constrains all v6 design) · the v5 PDF
-deletion incident.
+- v5 artifacts + v1–v4 intermediates; v5 sha256
+  `bdecf2a6bcb2884d575c9f817312eaa5f14bff7aeba436536362b495614d4ca3`.
+- `blind_predictions_frozen.ORIGINAL.json` — the pre-fix file, kept so the
+  detector defect stays auditable.
+- The NO-GO result and its artifacts (`null_control.json`,
+  `selectivity_probe.json`, `technical_audit.json`, `event_match_matrix.csv`).
+- The five time-sensitive year labels: 1987 · 1997 · 2002 · 2038 · 2050.
 
-## Known bugs
-1. **v5 PDF was deleted mid-session and restored from `31bff1d`**; hash
-   re-verified. Cause unknown — **re-verify the v5 hash before and after any
-   rendering work.**
-2. **PIL shadowing**: a Python 3.14 site-packages on PATH intermittently
-   shadows the venv's PIL and breaks WeasyPrint/cairosvg. Fix:
-   `pip install --force-reinstall Pillow`.
-3. **No installed font has emoji glyphs**, and none covers all required
-   glyphs → font-stack + fallback, **no emoji anywhere**.
+## Known bugs and traps
+1. **v5 PDF was deleted mid-session once** and restored from `31bff1d`; cause
+   unknown. **Re-verify the v5 hash before and after any rendering work.**
+2. **Activation dicts are int-keyed from the engine, str-keyed from JSON.** A
+   str-only lookup reports zero activations everywhere — indistinguishable from
+   a real negative. Bit three times across two sessions.
+3. **A verdict without a null is not a result.** Any future "match" claim needs
+   the same null-control treatment.
+4. **Separation wrapped to ±180 has roots at both 0 and ±180** — a sign-change
+   test on it fires on oppositions too.
+5. **Jinja macros cannot see render-time globals** — pass helpers as arguments.
+6. **A dict key named `items` collides with the dict method inside templates.**
+7. **Never overwrite a frozen prediction file silently** — write a new path,
+   diff, keep both.
+8. **A TOC that cannot resolve must fail the build.** It did not, once, and a
+   PDF shipped with dashes where page numbers belonged.
+9. `PIL shadowing`: a Python 3.14 site-packages can shadow the venv's PIL.
+   Fix: `pip install --force-reinstall Pillow`.
 
 ## Important factual conflicts — do NOT resolve silently
-- **Father's death: 2018 (user) vs 21 June 2019 (official record).** Needs the
-  user. Never infer from astrology.
-- **Kusankur DOB unresolved** — verdict: insufficient information.
-- **Sisir Kumar genealogy conflict** — supplied chain authoritative, screenshot
-  branch unconfirmed and conflicting.
-- The "save everything" paste that triggered this checkpoint was **stale**; its
-  headline claims were verified false against the repo. See checkpoint §9.
+- **Father's death: 2018 (family recollection) vs 21 June 2019 (registration
+  `D-2019:19-90044-000494`, issued 9 July 2019).** UNRESOLVED. The certificate
+  image was NOT located and the transcription was never inspected. The chart
+  was not used and will not be. Needs the document, or your statement.
+- **Kusankur DOB** — insufficient information; the blind multi-candidate scan
+  was non-discriminating.
+- **Sisir Kumar generation** — unconfirmed; the available screenshot conflicts
+  with the supplied chain.
+- **LinkedIn career evidence** — could not be accessed; every unauthenticated
+  route returns an auth wall. Recorded as not directly verified. No employment
+  interval is established, so three job-loss events remain UNTESTABLE.
 
 ## FINAL PDF
-The v5 PDF exists (343 pages) and is the frozen baseline. **A v6 presentation
-preview must be visually approved before any full v6 generation.**
+**Not generated, and must not be until the preview is visually approved.**
+The v5 PDF (343 pages) remains the frozen computational baseline; this work is
+presentation only.
 
 ---
 
@@ -94,6 +142,7 @@ preview must be visually approved before any full v6 generation.**
 1. Read `SESSION_CHECKPOINT.md`
 2. Read `TASK_QUEUE.md`
 3. Read this file
-4. Verify the v5 PDF hash, then `git status` and `git log`
-5. Apply the three `render_v6.py` chart fixes and rebuild the QA PDF
-6. Do not regenerate already-verified calculations unless required by the audit
+4. Read `docs/kundali/output/preview.pdf` and give visual feedback
+5. Inspect current Git status and latest commits
+6. Only after approval: `python3 build_report.py --full --qa`
+7. Do not regenerate already-verified calculations unless required by the audit
