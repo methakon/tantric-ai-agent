@@ -103,14 +103,17 @@ def transit_precisions(year: int) -> dict:
     ctx = YE.load_context()
     by_body = ctx["by_body"]
     entries = []
+    # ALL sign changes in the year, not just the first per graha. A graha
+    # entering a sign directly, retrograding back out, and re-entering gives
+    # THREE events in one year; the previous `break`-after-first loop reported
+    # only the first, hiding two dated transits per retrograde year.
     for nm, pid in (("Jupiter", swe.JUPITER), ("Saturn", swe.SATURN),
                     ("Rahu", swe.MEAN_NODE)):
         for si in range(12):
             e = sign_entry(year, nm, pid, si)
             if e:
                 entries.append(e)
-                break
-    # Ketu = mean node + 180
+    # Ketu = mean node + 180 (NEVER the KP/true node)
     jan = swe.julday(year, 1, 1, 0.0)
     end = swe.julday(year, 12, 31, 0.0)
     j = jan
@@ -124,11 +127,28 @@ def transit_precisions(year: int) -> dict:
             if e:
                 e["planet"] = "Ketu"
                 entries.append(e)
-                break
         j += 1
 
-    # conjunctions: slow graha crossing a NATAL body longitude
-    conj = []
+    # Aspected natal longitude crossings: a slow graha crossing a NATAL body's
+    # exact longitude. See the geometry note below — a "crossing" is EITHER a
+    # conjunction or an opposition, and the two must never be conflated.
+    #
+    # GEOMETRY (defect fixed 2026-10-04). The root test used the WRAPPED
+    # separation d = (lon - target) folded into [-180, 180). That function has
+    # roots at BOTH d = 0 (conjunction) and d = +/-180 (opposition), so the
+    # sign-change test `d1 * d2 <= 0` fired on both and every row was filed
+    # under "natal_conjunctions". Measured on the pre-fix frozen file: 21 rows,
+    # of which 14 were exact 180-degree OPPOSITIONS and only 7 true
+    # conjunctions. Calling an opposition a conjunction overstates the
+    # mechanism count, which is precisely the quantity the validation weighs.
+    # The root solve is unchanged (it is correct for both); only the
+    # CLASSIFICATION is added, taken from the geometry at the solved instant.
+    #
+    # The previous code also `break`ed after the first crossing per pair, so a
+    # retrograde graha crossing the same natal longitude three times in a year
+    # (direct, retrograde, direct) reported only the first. All crossings are
+    # now recorded and labelled, with the direction from the ephemeris speed.
+    asp = []
     bodies = [("Sun", swe.SUN), ("Moon", swe.MOON), ("Mars", swe.MARS),
               ("Mercury", swe.MERCURY), ("Jupiter", swe.JUPITER),
               ("Venus", swe.VENUS), ("Saturn", swe.SATURN),
@@ -139,8 +159,12 @@ def transit_precisions(year: int) -> dict:
                 continue
             nb = by_body[bname]
             target = nb["longitude_sidereal"]
+            label = bname
             if gname == "Saturn" and bname == "Rahu":
+                # Ketu = mean node + 180, NEVER the KP/true node. Reading the
+                # mean node as Ketu would collapse Ketu onto Rahu.
                 target = ((target + 180.0) % 360.0)
+                label = "Ketu"
             jj = jan
             while jj <= end:
                 g1 = ((swe.calc_ut(jj, gpid, swe.FLG_SWIEPH)[0][0]
@@ -156,18 +180,28 @@ def transit_precisions(year: int) -> dict:
                     x = _bisect(f, jj, jj + 1)
                     lon = ((swe.calc_ut(x, gpid, swe.FLG_SWIEPH)[0][0]
                             - swe.get_ayanamsa_ut(x)) % 360.0)
-                    conj.append({
-                        "transit": gname, "natal_body": bname,
+                    spd = swe.calc_ut(x, gpid, swe.FLG_SWIEPH)[0][3]
+                    sep = abs((lon - target + 180) % 360 - 180)
+                    asp.append({
+                        "transit": gname, "natal_body": label,
+                        "kind": "CONJUNCTION" if sep < 90.0 else "OPPOSITION",
+                        "direction": "DIRECT" if spd >= 0 else "RETROGRADE",
                         "ist": _to_ist(x).isoformat(sep=" "),
                         "transit_longitude": round(lon, 6),
+                        "transit_dms": dms(lon),
                         "natal_longitude": round(target, 6),
                         "natal_dms": dms(target),
-                        "separation_deg": round(abs((lon - target + 180) % 360 - 180), 6),
+                        "separation_deg": round(sep, 6),
                     })
-                    break
                 jj += 1
     return {"sign_entries": sorted(entries, key=lambda e: e["ist"]),
-            "natal_conjunctions": sorted(conj, key=lambda c: c["ist"])}
+            "natal_aspects_crossings": sorted(asp, key=lambda c: c["ist"]),
+            "natal_conjunctions": [c for c in
+                                   sorted(asp, key=lambda c: c["ist"])
+                                   if c["kind"] == "CONJUNCTION"],
+            "natal_oppositions": [c for c in
+                                  sorted(asp, key=lambda c: c["ist"])
+                                  if c["kind"] == "OPPOSITION"]}
 
 
 def extract(year: int) -> dict:
@@ -227,15 +261,34 @@ if __name__ == "__main__":
     YEARS = [1998, 2005, 2006, 2008, 2009, 2010, 2011, 2015, 2018, 2019,
              2021, 2024, 2026]
     out = extract_many(YEARS)
-    p = os.path.join(OUT, "blind_predictions_frozen.json")
+
+    # NEVER overwrite a frozen file silently. The blind protocol depends on
+    # knowing which file was written before the event data was known. When the
+    # extractor changes, write to a NEW path, diff it against the previous
+    # frozen file, and keep both. The pre-fix file is retained as
+    # blind_predictions_frozen.ORIGINAL.json (sha256 66d3afed...) so the
+    # defect and its correction stay auditable.
+    p = os.path.join(OUT, "blind_predictions_frozen_v2.json")
     with open(p, "w", encoding="utf-8") as fh:
-        json.dump({"_frozen_note": "Generated BEFORE any event data was "
-                                   "loaded. Do not regenerate after comparing.",
-                   "years": out}, fh, indent=1, ensure_ascii=False)
+        json.dump({"_frozen_note": (
+            "Generated by life_event_engine after fixing the conjunction/"
+            "opposition misclassification and the first-event-only loops. "
+            "PROTOCOL CAVEAT: the ORIGINAL frozen file "
+            "(blind_predictions_frozen.json, sha256 66d3afed...) was written "
+            "before any event data existed; this regeneration happened AFTER "
+            "the event file was read, so it does NOT carry that guarantee "
+            "independently. Its correctness rests on the diff being confined "
+            "to the two documented detector defects (see DIFF_FINDINGS in "
+            "Life_Event_Validation_Report.md) with no value changing for a "
+            "reason that could know the outcome. Both files are retained."),
+            "supersedes": "blind_predictions_frozen.json",
+            "years": out}, fh, indent=1, ensure_ascii=False)
     print(f"frozen {len(out)} years -> {p}")
     for y in YEARS:
         r = out[str(y)]
+        pe = r["precise_events"]
         print(f"  {y}: {r['dasha']['MD']}/{r['dasha']['AD']}/{r['dasha']['PD']}"
               f"  risk={r['risk']['level']}"
-              f"  events={len(r['precise_events']['sign_entries'])}"
-              f"  conj={len(r['precise_events']['natal_conjunctions'])}")
+              f"  sign_entries={len(pe['sign_entries'])}"
+              f"  conj={len(pe['natal_conjunctions'])}"
+              f"  opp={len(pe['natal_oppositions'])}")

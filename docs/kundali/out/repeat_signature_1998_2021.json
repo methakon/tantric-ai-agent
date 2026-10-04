@@ -1,0 +1,52 @@
+{
+ "_note": "Paired repeat-pattern test. The category base rate cancels, so this tests something the absolute activation test cannot.",
+ "houses": [
+  4,
+  5,
+  9,
+  12
+ ],
+ "mechanisms": {
+  "E01": [
+   "dasha lord Saturn rules",
+   "dasha lord Sun rules",
+   "transiting Jupiter aspects",
+   "transiting Ketu aspects",
+   "transiting Rahu aspects",
+   "transiting Rahu occupies",
+   "transiting Saturn aspects"
+  ],
+  "E11": [
+   "transiting Jupiter aspects",
+   "transiting Ketu aspects",
+   "transiting Rahu occupies",
+   "transiting Saturn occupies"
+  ]
+ },
+ "shared": [
+  "transiting Jupiter aspects",
+  "transiting Ketu aspects",
+  "transiting Rahu occupies"
+ ],
+ "shared_count": 3,
+ "jaccard_observed": 0.375,
+ "control_pairs": 2485,
+ "control_mean_jaccard": 0.2937,
+ "control_median_jaccard": 0.2857,
+ "percentile": 70.66,
+ "dasha_1998": {
+  "MD": "Sun",
+  "AD": "Rahu",
+  "PD": "Saturn",
+  "spans_year": true
+ },
+ "dasha_2021": {
+  "MD": "Rahu",
+  "AD": "Rahu",
+  "PD": "Jupiter",
+  "spans_year": false
+ },
+ "same_mahadasha_lord": false,
+ "same_antardasha_lord": true,
+ "verdict": "PARTIAL REPEAT"
+}

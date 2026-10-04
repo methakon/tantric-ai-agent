@@ -1,0 +1,3169 @@
+{
+ "_frozen_note": "Generated BEFORE any event data was loaded. Do not regenerate after comparing.",
+ "years": {
+  "1998": {
+   "year": 1998,
+   "age": 16,
+   "dasha": {
+    "MD": "Sun",
+    "AD": "Rahu",
+    "PD": "Saturn",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Pisces",
+     "dms": "3°45'17\"",
+     "house_from_lagna": 7,
+     "house_from_moon": 12,
+     "aspects_houses": [
+      1,
+      4,
+      9
+     ],
+     "aspects_signs": [
+      "Taurus",
+      "Virgo",
+      "Sagittarius"
+     ]
+    },
+    "Saturn": {
+     "sign": "Aries",
+     "dms": "8°02'34\"",
+     "house_from_lagna": 8,
+     "house_from_moon": 1,
+     "aspects_houses": [
+      2,
+      5,
+      10
+     ],
+     "aspects_signs": [
+      "Gemini",
+      "Libra",
+      "Capricorn"
+     ]
+    },
+    "Rahu": {
+     "sign": "Leo",
+     "dms": "10°18'16\"",
+     "house_from_lagna": 12,
+     "house_from_moon": 5,
+     "aspects_houses": [
+      2,
+      6,
+      9
+     ],
+     "aspects_signs": [
+      "Libra",
+      "Aquarius",
+      "Taurus"
+     ]
+    },
+    "Ketu": {
+     "sign": "Aquarius",
+     "dms": "10°18'16\"",
+     "house_from_lagna": 6,
+     "house_from_moon": 11,
+     "aspects_houses": [
+      3,
+      8,
+      12
+     ],
+     "aspects_signs": [
+      "Aries",
+      "Leo",
+      "Scorpio"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Capricorn",
+      "to_sign": "Aquarius",
+      "ist": "1998-01-08 15:30:00",
+      "longitude_deg": 300.000003,
+      "dms": "0°00'00\""
+     },
+     {
+      "planet": "Saturn",
+      "from_sign": "Pisces",
+      "to_sign": "Aries",
+      "ist": "1998-04-17 13:30:00",
+      "longitude_deg": 1e-06,
+      "dms": "0°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Jupiter",
+      "natal_body": "Mars",
+      "ist": "1998-06-19 16:30:00",
+      "transit_longitude": 332.930133,
+      "natal_longitude": 152.930133,
+      "natal_dms": "152°55'48\"",
+      "separation_deg": 180.0
+     },
+     {
+      "transit": "Saturn",
+      "natal_body": "Jupiter",
+      "ist": "1998-07-09 21:30:00",
+      "transit_longitude": 8.625369,
+      "natal_longitude": 188.625369,
+      "natal_dms": "188°37'31\"",
+      "separation_deg": 180.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 1,
+     "reasons": [
+      "transiting Jupiter aspects the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 1,
+     "reasons": [
+      "transiting Jupiter aspects the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter occupies the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 3,
+     "reasons": [
+      "transiting Saturn occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "12": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Sun rules the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "PHASE 2 / JANMA"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 17
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 12
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 5
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 15
+    }
+   }
+  },
+  "2005": {
+   "year": 2005,
+   "age": 23,
+   "dasha": {
+    "MD": "Moon",
+    "AD": "Rahu",
+    "PD": "Mercury",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Virgo",
+     "dms": "15°57'43\"",
+     "house_from_lagna": 1,
+     "house_from_moon": 6,
+     "aspects_houses": [
+      3,
+      7,
+      10
+     ],
+     "aspects_signs": [
+      "Scorpio",
+      "Pisces",
+      "Gemini"
+     ]
+    },
+    "Saturn": {
+     "sign": "Cancer",
+     "dms": "4°05'31\"",
+     "house_from_lagna": 11,
+     "house_from_moon": 4,
+     "aspects_houses": [
+      1,
+      5,
+      8
+     ],
+     "aspects_signs": [
+      "Virgo",
+      "Capricorn",
+      "Aries"
+     ]
+    },
+    "Rahu": {
+     "sign": "Pisces",
+     "dms": "24°48'16\"",
+     "house_from_lagna": 7,
+     "house_from_moon": 12,
+     "aspects_houses": [
+      1,
+      4,
+      9
+     ],
+     "aspects_signs": [
+      "Taurus",
+      "Virgo",
+      "Sagittarius"
+     ]
+    },
+    "Ketu": {
+     "sign": "Virgo",
+     "dms": "24°48'16\"",
+     "house_from_lagna": 1,
+     "house_from_moon": 6,
+     "aspects_houses": [
+      3,
+      7,
+      10
+     ],
+     "aspects_signs": [
+      "Scorpio",
+      "Pisces",
+      "Gemini"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Saturn",
+      "from_sign": "Cancer",
+      "to_sign": "Gemini",
+      "ist": "2005-01-13 14:30:00",
+      "longitude_deg": 89.999999,
+      "dms": "30°00'00\""
+     },
+     {
+      "planet": "Rahu",
+      "from_sign": "Aries",
+      "to_sign": "Pisces",
+      "ist": "2005-03-25 03:30:00",
+      "longitude_deg": 359.999999,
+      "dms": "30°00'00\""
+     },
+     {
+      "planet": "Jupiter",
+      "from_sign": "Virgo",
+      "to_sign": "Libra",
+      "ist": "2005-09-28 05:30:00",
+      "longitude_deg": 180.000002,
+      "dms": "0°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Saturn",
+      "natal_body": "Rahu",
+      "ist": "2005-01-03 16:30:00",
+      "transit_longitude": 90.807566,
+      "natal_longitude": 270.807566,
+      "natal_dms": "270°48'27\"",
+      "separation_deg": 180.0
+     },
+     {
+      "transit": "Saturn",
+      "natal_body": "Venus",
+      "ist": "2005-07-18 23:30:00",
+      "transit_longitude": 96.355823,
+      "natal_longitude": 276.355823,
+      "natal_dms": "276°21'21\"",
+      "separation_deg": 180.0
+     },
+     {
+      "transit": "Jupiter",
+      "natal_body": "Saturn",
+      "ist": "2005-09-09 20:30:00",
+      "transit_longitude": 176.241229,
+      "natal_longitude": 176.241229,
+      "natal_dms": "176°14'28\"",
+      "separation_deg": 0.0
+     },
+     {
+      "transit": "Jupiter",
+      "natal_body": "Moon",
+      "ist": "2005-12-17 19:30:00",
+      "transit_longitude": 196.872238,
+      "natal_longitude": 16.872238,
+      "natal_dms": "16°52'20\"",
+      "separation_deg": 180.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 7,
+     "reasons": [
+      "transiting Jupiter occupies the house",
+      "transiting Saturn aspects the house",
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house",
+      "dasha lord Mercury rules the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "3": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "7": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Mercury rules the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 3,
+     "reasons": [
+      "transiting Saturn occupies the house",
+      "dasha lord Moon rules the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 17
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 10
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 4
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 5
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 7
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 14
+    }
+   }
+  },
+  "2006": {
+   "year": 2006,
+   "age": 24,
+   "dasha": {
+    "MD": "Moon",
+    "AD": "Jupiter",
+    "PD": "Saturn",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Libra",
+     "dms": "15°04'24\"",
+     "house_from_lagna": 2,
+     "house_from_moon": 7,
+     "aspects_houses": [
+      4,
+      8,
+      11
+     ],
+     "aspects_signs": [
+      "Sagittarius",
+      "Aries",
+      "Cancer"
+     ]
+    },
+    "Saturn": {
+     "sign": "Cancer",
+     "dms": "16°14'21\"",
+     "house_from_lagna": 11,
+     "house_from_moon": 4,
+     "aspects_houses": [
+      1,
+      5,
+      8
+     ],
+     "aspects_signs": [
+      "Virgo",
+      "Capricorn",
+      "Aries"
+     ]
+    },
+    "Rahu": {
+     "sign": "Pisces",
+     "dms": "5°27'51\"",
+     "house_from_lagna": 7,
+     "house_from_moon": 12,
+     "aspects_houses": [
+      1,
+      4,
+      9
+     ],
+     "aspects_signs": [
+      "Taurus",
+      "Virgo",
+      "Sagittarius"
+     ]
+    },
+    "Ketu": {
+     "sign": "Virgo",
+     "dms": "5°27'51\"",
+     "house_from_lagna": 1,
+     "house_from_moon": 6,
+     "aspects_houses": [
+      3,
+      7,
+      10
+     ],
+     "aspects_signs": [
+      "Scorpio",
+      "Pisces",
+      "Gemini"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Rahu",
+      "from_sign": "Pisces",
+      "to_sign": "Aquarius",
+      "ist": "2006-10-12 07:30:00",
+      "longitude_deg": 329.999999,
+      "dms": "30°00'00\""
+     },
+     {
+      "planet": "Jupiter",
+      "from_sign": "Libra",
+      "to_sign": "Scorpio",
+      "ist": "2006-10-27 21:30:00",
+      "longitude_deg": 210.000002,
+      "dms": "0°00'00\""
+     },
+     {
+      "planet": "Saturn",
+      "from_sign": "Cancer",
+      "to_sign": "Leo",
+      "ist": "2006-11-01 06:30:00",
+      "longitude_deg": 120.000001,
+      "dms": "0°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Jupiter",
+      "natal_body": "Moon",
+      "ist": "2006-05-31 20:30:00",
+      "transit_longitude": 196.872238,
+      "natal_longitude": 16.872238,
+      "natal_dms": "16°52'20\"",
+      "separation_deg": 180.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 4,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter occupies the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu aspects the house",
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn occupies the house",
+      "dasha lord Moon rules the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 15
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 7
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 5
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 5
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 8
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 11
+    }
+   }
+  },
+  "2008": {
+   "year": 2008,
+   "age": 26,
+   "dasha": {
+    "MD": "Moon",
+    "AD": "Mercury",
+    "PD": "Ketu",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "dms": "24°33'25\"",
+     "house_from_lagna": 4,
+     "house_from_moon": 9,
+     "aspects_houses": [
+      1,
+      6,
+      10
+     ],
+     "aspects_signs": [
+      "Aquarius",
+      "Gemini",
+      "Virgo"
+     ]
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "dms": "10°32'14\"",
+     "house_from_lagna": 12,
+     "house_from_moon": 5,
+     "aspects_houses": [
+      2,
+      6,
+      9
+     ],
+     "aspects_signs": [
+      "Libra",
+      "Aquarius",
+      "Taurus"
+     ]
+    },
+    "Rahu": {
+     "sign": "Capricorn",
+     "dms": "26°43'47\"",
+     "house_from_lagna": 5,
+     "house_from_moon": 10,
+     "aspects_houses": [
+      2,
+      7,
+      11
+     ],
+     "aspects_signs": [
+      "Pisces",
+      "Cancer",
+      "Libra"
+     ]
+    },
+    "Ketu": {
+     "sign": "Cancer",
+     "dms": "26°43'47\"",
+     "house_from_lagna": 11,
+     "house_from_moon": 4,
+     "aspects_houses": [
+      1,
+      5,
+      8
+     ],
+     "aspects_signs": [
+      "Virgo",
+      "Capricorn",
+      "Aries"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Rahu",
+      "from_sign": "Aquarius",
+      "to_sign": "Capricorn",
+      "ist": "2008-04-30 11:30:00",
+      "longitude_deg": 299.999999,
+      "dms": "30°00'00\""
+     },
+     {
+      "planet": "Jupiter",
+      "from_sign": "Sagittarius",
+      "to_sign": "Capricorn",
+      "ist": "2008-12-09 22:30:00",
+      "longitude_deg": 270.000002,
+      "dms": "0°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Jupiter",
+      "natal_body": "Rahu",
+      "ist": "2008-12-13 17:30:00",
+      "transit_longitude": 270.807566,
+      "natal_longitude": 90.807566,
+      "natal_dms": "90°48'27\"",
+      "separation_deg": 180.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Mercury rules the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "4": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter occupies the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 3,
+     "reasons": [
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "dasha lord Mercury rules the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house",
+      "dasha lord Moon rules the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn occupies the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 14
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 13
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 4
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 8
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 13
+    }
+   }
+  },
+  "2009": {
+   "year": 2009,
+   "age": 27,
+   "dasha": {
+    "MD": "Moon",
+    "AD": "Mercury",
+    "PD": "Saturn",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Aquarius",
+     "dms": "2°38'04\"",
+     "house_from_lagna": 6,
+     "house_from_moon": 11,
+     "aspects_houses": [
+      3,
+      8,
+      12
+     ],
+     "aspects_signs": [
+      "Aries",
+      "Leo",
+      "Scorpio"
+     ]
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "dms": "22°35'45\"",
+     "house_from_lagna": 12,
+     "house_from_moon": 5,
+     "aspects_houses": [
+      2,
+      6,
+      9
+     ],
+     "aspects_signs": [
+      "Libra",
+      "Aquarius",
+      "Taurus"
+     ]
+    },
+    "Rahu": {
+     "sign": "Capricorn",
+     "dms": "7°23'20\"",
+     "house_from_lagna": 5,
+     "house_from_moon": 10,
+     "aspects_houses": [
+      2,
+      7,
+      11
+     ],
+     "aspects_signs": [
+      "Pisces",
+      "Cancer",
+      "Libra"
+     ]
+    },
+    "Ketu": {
+     "sign": "Cancer",
+     "dms": "7°23'20\"",
+     "house_from_lagna": 11,
+     "house_from_moon": 4,
+     "aspects_houses": [
+      1,
+      5,
+      8
+     ],
+     "aspects_signs": [
+      "Virgo",
+      "Capricorn",
+      "Aries"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Aquarius",
+      "to_sign": "Capricorn",
+      "ist": "2009-07-30 20:30:00",
+      "longitude_deg": 299.999999,
+      "dms": "30°00'00\""
+     },
+     {
+      "planet": "Saturn",
+      "from_sign": "Leo",
+      "to_sign": "Virgo",
+      "ist": "2009-09-09 22:30:00",
+      "longitude_deg": 150.000001,
+      "dms": "0°00'00\""
+     },
+     {
+      "planet": "Rahu",
+      "from_sign": "Capricorn",
+      "to_sign": "Sagittarius",
+      "ist": "2009-11-17 15:30:00",
+      "longitude_deg": 269.999999,
+      "dms": "30°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Jupiter",
+      "natal_body": "Venus",
+      "ist": "2009-01-07 07:30:00",
+      "transit_longitude": 276.355823,
+      "natal_longitude": 276.355823,
+      "natal_dms": "276°21'21\"",
+      "separation_deg": 0.0
+     },
+     {
+      "transit": "Saturn",
+      "natal_body": "Mars",
+      "ist": "2009-10-03 13:30:00",
+      "transit_longitude": 152.930133,
+      "natal_longitude": 152.930133,
+      "natal_dms": "152°55'48\"",
+      "separation_deg": 0.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 2,
+     "reasons": [
+      "transiting Ketu aspects the house",
+      "dasha lord Mercury rules the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 1,
+     "reasons": [
+      "transiting Jupiter aspects the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "5": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter occupies the house",
+      "transiting Saturn aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Mercury rules the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house",
+      "dasha lord Moon rules the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn occupies the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 15
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 13
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 4
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 6
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 7
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 13
+    }
+   }
+  },
+  "2010": {
+   "year": 2010,
+   "age": 28,
+   "dasha": {
+    "MD": "Moon",
+    "AD": "Venus",
+    "PD": "Ketu",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Pisces",
+     "dms": "8°35'11\"",
+     "house_from_lagna": 7,
+     "house_from_moon": 12,
+     "aspects_houses": [
+      1,
+      4,
+      9
+     ],
+     "aspects_signs": [
+      "Taurus",
+      "Virgo",
+      "Sagittarius"
+     ]
+    },
+    "Saturn": {
+     "sign": "Virgo",
+     "dms": "4°38'37\"",
+     "house_from_lagna": 1,
+     "house_from_moon": 6,
+     "aspects_houses": [
+      3,
+      7,
+      10
+     ],
+     "aspects_signs": [
+      "Scorpio",
+      "Pisces",
+      "Gemini"
+     ]
+    },
+    "Rahu": {
+     "sign": "Sagittarius",
+     "dms": "18°02'51\"",
+     "house_from_lagna": 4,
+     "house_from_moon": 9,
+     "aspects_houses": [
+      1,
+      6,
+      10
+     ],
+     "aspects_signs": [
+      "Aquarius",
+      "Gemini",
+      "Virgo"
+     ]
+    },
+    "Ketu": {
+     "sign": "Gemini",
+     "dms": "18°02'51\"",
+     "house_from_lagna": 10,
+     "house_from_moon": 3,
+     "aspects_houses": [
+      4,
+      7,
+      12
+     ],
+     "aspects_signs": [
+      "Leo",
+      "Sagittarius",
+      "Pisces"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Pisces",
+      "to_sign": "Aquarius",
+      "ist": "2010-11-01 14:30:00",
+      "longitude_deg": 329.999999,
+      "dms": "30°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Jupiter",
+      "natal_body": "Mars",
+      "ist": "2010-05-17 20:30:00",
+      "transit_longitude": 332.930133,
+      "natal_longitude": 152.930133,
+      "natal_dms": "152°55'48\"",
+      "separation_deg": 180.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn occupies the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Venus rules the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "6": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter occupies the house",
+      "transiting Saturn aspects the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "9": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "dasha lord Venus rules the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 4,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Moon rules the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 15
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 11
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 3
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 12
+    }
+   }
+  },
+  "2011": {
+   "year": 2011,
+   "age": 29,
+   "dasha": {
+    "MD": "Moon",
+    "AD": "Venus",
+    "PD": "Jupiter",
+    "spans_year": false
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Aries",
+     "dms": "10°54'28\"",
+     "house_from_lagna": 8,
+     "house_from_moon": 1,
+     "aspects_houses": [
+      2,
+      5,
+      10
+     ],
+     "aspects_signs": [
+      "Gemini",
+      "Libra",
+      "Capricorn"
+     ]
+    },
+    "Saturn": {
+     "sign": "Virgo",
+     "dms": "16°41'28\"",
+     "house_from_lagna": 1,
+     "house_from_moon": 6,
+     "aspects_houses": [
+      3,
+      7,
+      10
+     ],
+     "aspects_signs": [
+      "Scorpio",
+      "Pisces",
+      "Gemini"
+     ]
+    },
+    "Rahu": {
+     "sign": "Scorpio",
+     "dms": "28°42'19\"",
+     "house_from_lagna": 3,
+     "house_from_moon": 8,
+     "aspects_houses": [
+      5,
+      9,
+      12
+     ],
+     "aspects_signs": [
+      "Capricorn",
+      "Taurus",
+      "Leo"
+     ]
+    },
+    "Ketu": {
+     "sign": "Taurus",
+     "dms": "28°42'19\"",
+     "house_from_lagna": 9,
+     "house_from_moon": 2,
+     "aspects_houses": [
+      3,
+      6,
+      11
+     ],
+     "aspects_signs": [
+      "Cancer",
+      "Scorpio",
+      "Aquarius"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Pisces",
+      "to_sign": "Aries",
+      "ist": "2011-05-08 13:30:00",
+      "longitude_deg": 3e-06,
+      "dms": "0°00'00\""
+     },
+     {
+      "planet": "Rahu",
+      "from_sign": "Sagittarius",
+      "to_sign": "Scorpio",
+      "ist": "2011-06-06 18:30:00",
+      "longitude_deg": 239.999999,
+      "dms": "30°00'00\""
+     },
+     {
+      "planet": "Saturn",
+      "from_sign": "Virgo",
+      "to_sign": "Libra",
+      "ist": "2011-11-15 08:30:00",
+      "longitude_deg": 180.000001,
+      "dms": "0°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Jupiter",
+      "natal_body": "Mars",
+      "ist": "2011-01-04 00:30:00",
+      "transit_longitude": 332.930133,
+      "natal_longitude": 152.930133,
+      "natal_dms": "152°55'48\"",
+      "separation_deg": 180.0
+     },
+     {
+      "transit": "Jupiter",
+      "natal_body": "Saturn",
+      "ist": "2011-04-22 14:30:00",
+      "transit_longitude": 356.241229,
+      "natal_longitude": 176.241229,
+      "natal_dms": "176°14'28\"",
+      "separation_deg": 180.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn occupies the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "dasha lord Venus rules the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 4,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter occupies the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house",
+      "dasha lord Venus rules the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 2,
+     "reasons": [
+      "transiting Ketu aspects the house",
+      "dasha lord Moon rules the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 16
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 12
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 1
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 14
+    }
+   }
+  },
+  "2015": {
+   "year": 2015,
+   "age": 33,
+   "dasha": {
+    "MD": "Mars",
+    "AD": "Saturn",
+    "PD": "Rahu",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Cancer",
+     "dms": "27°29'27\"",
+     "house_from_lagna": 11,
+     "house_from_moon": 4,
+     "aspects_houses": [
+      1,
+      5,
+      8
+     ],
+     "aspects_signs": [
+      "Virgo",
+      "Capricorn",
+      "Aries"
+     ]
+    },
+    "Saturn": {
+     "sign": "Scorpio",
+     "dms": "5°00'55\"",
+     "house_from_lagna": 3,
+     "house_from_moon": 8,
+     "aspects_houses": [
+      5,
+      9,
+      12
+     ],
+     "aspects_signs": [
+      "Capricorn",
+      "Taurus",
+      "Leo"
+     ]
+    },
+    "Rahu": {
+     "sign": "Virgo",
+     "dms": "11°16'47\"",
+     "house_from_lagna": 1,
+     "house_from_moon": 6,
+     "aspects_houses": [
+      3,
+      7,
+      10
+     ],
+     "aspects_signs": [
+      "Scorpio",
+      "Pisces",
+      "Gemini"
+     ]
+    },
+    "Ketu": {
+     "sign": "Pisces",
+     "dms": "11°16'47\"",
+     "house_from_lagna": 7,
+     "house_from_moon": 12,
+     "aspects_houses": [
+      1,
+      4,
+      9
+     ],
+     "aspects_signs": [
+      "Taurus",
+      "Virgo",
+      "Sagittarius"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Cancer",
+      "to_sign": "Leo",
+      "ist": "2015-07-14 05:30:00",
+      "longitude_deg": 120.000002,
+      "dms": "0°00'00\""
+     }
+    ],
+    "natal_conjunctions": []
+   },
+   "house_activation": {
+    "1": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "3": {
+     "score": 4,
+     "reasons": [
+      "transiting Saturn occupies the house",
+      "transiting Rahu aspects the house",
+      "dasha lord Mars rules the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 3,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "dasha lord Mars rules the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter occupies the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 15
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 6
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 2
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 6
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 8
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 12
+    }
+   }
+  },
+  "2018": {
+   "year": 2018,
+   "age": 36,
+   "dasha": {
+    "MD": "Mars",
+    "AD": "Venus",
+    "PD": "Saturn",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Libra",
+     "dms": "19°22'17\"",
+     "house_from_lagna": 2,
+     "house_from_moon": 7,
+     "aspects_houses": [
+      4,
+      8,
+      11
+     ],
+     "aspects_signs": [
+      "Sagittarius",
+      "Aries",
+      "Cancer"
+     ]
+    },
+    "Saturn": {
+     "sign": "Sagittarius",
+     "dms": "11°29'12\"",
+     "house_from_lagna": 4,
+     "house_from_moon": 9,
+     "aspects_houses": [
+      1,
+      6,
+      10
+     ],
+     "aspects_signs": [
+      "Aquarius",
+      "Gemini",
+      "Virgo"
+     ]
+    },
+    "Rahu": {
+     "sign": "Cancer",
+     "dms": "13°11'47\"",
+     "house_from_lagna": 11,
+     "house_from_moon": 4,
+     "aspects_houses": [
+      1,
+      5,
+      8
+     ],
+     "aspects_signs": [
+      "Virgo",
+      "Capricorn",
+      "Aries"
+     ]
+    },
+    "Ketu": {
+     "sign": "Capricorn",
+     "dms": "13°11'47\"",
+     "house_from_lagna": 5,
+     "house_from_moon": 10,
+     "aspects_houses": [
+      2,
+      7,
+      11
+     ],
+     "aspects_signs": [
+      "Pisces",
+      "Cancer",
+      "Libra"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Libra",
+      "to_sign": "Scorpio",
+      "ist": "2018-10-11 19:30:00",
+      "longitude_deg": 210.000002,
+      "dms": "0°00'00\""
+     }
+    ],
+    "natal_conjunctions": []
+   },
+   "house_activation": {
+    "1": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter occupies the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Venus rules the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Mars rules the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn occupies the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu aspects the house",
+      "dasha lord Mars rules the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Venus rules the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    }
+   },
+   "risk": {
+    "level": "ORANGE",
+    "icon": "🟠",
+    "word": "ELEVATED",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 14
+    },
+    "financial": {
+     "score": null,
+     "level": "ORANGE",
+     "evidence_count": 10
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 1
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 10
+    },
+    "property": {
+     "score": null,
+     "level": "ORANGE",
+     "evidence_count": 14
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 12
+    }
+   }
+  },
+  "2019": {
+   "year": 2019,
+   "age": 37,
+   "dasha": {
+    "MD": "Mars",
+    "AD": "Moon",
+    "PD": "Saturn",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Scorpio",
+     "dms": "22°52'15\"",
+     "house_from_lagna": 3,
+     "house_from_moon": 8,
+     "aspects_houses": [
+      5,
+      9,
+      12
+     ],
+     "aspects_signs": [
+      "Capricorn",
+      "Taurus",
+      "Leo"
+     ]
+    },
+    "Saturn": {
+     "sign": "Sagittarius",
+     "dms": "23°43'30\"",
+     "house_from_lagna": 4,
+     "house_from_moon": 9,
+     "aspects_houses": [
+      1,
+      6,
+      10
+     ],
+     "aspects_signs": [
+      "Aquarius",
+      "Gemini",
+      "Virgo"
+     ]
+    },
+    "Rahu": {
+     "sign": "Gemini",
+     "dms": "23°51'12\"",
+     "house_from_lagna": 10,
+     "house_from_moon": 3,
+     "aspects_houses": [
+      4,
+      7,
+      12
+     ],
+     "aspects_signs": [
+      "Leo",
+      "Sagittarius",
+      "Pisces"
+     ]
+    },
+    "Ketu": {
+     "sign": "Sagittarius",
+     "dms": "23°51'12\"",
+     "house_from_lagna": 4,
+     "house_from_moon": 9,
+     "aspects_houses": [
+      1,
+      6,
+      10
+     ],
+     "aspects_signs": [
+      "Aquarius",
+      "Gemini",
+      "Virgo"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Rahu",
+      "from_sign": "Cancer",
+      "to_sign": "Gemini",
+      "ist": "2019-03-07 05:30:00",
+      "longitude_deg": 89.999999,
+      "dms": "30°00'00\""
+     },
+     {
+      "planet": "Jupiter",
+      "from_sign": "Sagittarius",
+      "to_sign": "Scorpio",
+      "ist": "2019-04-22 21:30:00",
+      "longitude_deg": 240.0,
+      "dms": "30°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Jupiter",
+      "natal_body": "Mercury",
+      "ist": "2019-01-23 04:30:00",
+      "transit_longitude": 232.026607,
+      "natal_longitude": 232.026607,
+      "natal_dms": "232°01'36\"",
+      "separation_deg": 0.0
+     },
+     {
+      "transit": "Jupiter",
+      "natal_body": "Sun",
+      "ist": "2019-01-28 16:30:00",
+      "transit_longitude": 233.030297,
+      "natal_longitude": 233.030297,
+      "natal_dms": "233°01'49\"",
+      "separation_deg": 0.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "3": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter occupies the house",
+      "dasha lord Mars rules the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 5,
+     "reasons": [
+      "transiting Saturn occupies the house",
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 3,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Mars rules the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 1,
+     "reasons": [
+      "transiting Jupiter aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 4,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Moon rules the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 13
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 8
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 2
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 12
+    }
+   }
+  },
+  "2021": {
+   "year": 2021,
+   "age": 39,
+   "dasha": {
+    "MD": "Rahu",
+    "AD": "Rahu",
+    "PD": "Jupiter",
+    "spans_year": false
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Aquarius",
+     "dms": "7°51'19\"",
+     "house_from_lagna": 6,
+     "house_from_moon": 11,
+     "aspects_houses": [
+      3,
+      8,
+      12
+     ],
+     "aspects_signs": [
+      "Aries",
+      "Leo",
+      "Scorpio"
+     ]
+    },
+    "Saturn": {
+     "sign": "Capricorn",
+     "dms": "18°13'14\"",
+     "house_from_lagna": 5,
+     "house_from_moon": 10,
+     "aspects_houses": [
+      2,
+      7,
+      11
+     ],
+     "aspects_signs": [
+      "Pisces",
+      "Cancer",
+      "Libra"
+     ]
+    },
+    "Rahu": {
+     "sign": "Taurus",
+     "dms": "15°06'59\"",
+     "house_from_lagna": 9,
+     "house_from_moon": 2,
+     "aspects_houses": [
+      3,
+      6,
+      11
+     ],
+     "aspects_signs": [
+      "Cancer",
+      "Scorpio",
+      "Aquarius"
+     ]
+    },
+    "Ketu": {
+     "sign": "Scorpio",
+     "dms": "15°06'59\"",
+     "house_from_lagna": 3,
+     "house_from_moon": 8,
+     "aspects_houses": [
+      5,
+      9,
+      12
+     ],
+     "aspects_signs": [
+      "Capricorn",
+      "Taurus",
+      "Leo"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Aquarius",
+      "to_sign": "Capricorn",
+      "ist": "2021-09-14 12:30:00",
+      "longitude_deg": 299.999999,
+      "dms": "30°00'00\""
+     }
+    ],
+    "natal_conjunctions": []
+   },
+   "house_activation": {
+    "1": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "2": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 4,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 1,
+     "reasons": [
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 3,
+     "reasons": [
+      "transiting Saturn occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter occupies the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 1,
+     "reasons": [
+      "transiting Jupiter aspects the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 3,
+     "reasons": [
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "11": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 13
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 4
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 2
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 5
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 11
+    }
+   }
+  },
+  "2024": {
+   "year": 2024,
+   "age": 42,
+   "dasha": {
+    "MD": "Rahu",
+    "AD": "Jupiter",
+    "PD": "Mercury",
+    "spans_year": true
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Taurus",
+     "dms": "14°01'03\"",
+     "house_from_lagna": 9,
+     "house_from_moon": 2,
+     "aspects_houses": [
+      3,
+      6,
+      11
+     ],
+     "aspects_signs": [
+      "Cancer",
+      "Scorpio",
+      "Aquarius"
+     ]
+    },
+    "Saturn": {
+     "sign": "Aquarius",
+     "dms": "25°13'39\"",
+     "house_from_lagna": 6,
+     "house_from_moon": 11,
+     "aspects_houses": [
+      3,
+      8,
+      12
+     ],
+     "aspects_signs": [
+      "Aries",
+      "Leo",
+      "Scorpio"
+     ]
+    },
+    "Rahu": {
+     "sign": "Pisces",
+     "dms": "17°02'27\"",
+     "house_from_lagna": 7,
+     "house_from_moon": 12,
+     "aspects_houses": [
+      1,
+      4,
+      9
+     ],
+     "aspects_signs": [
+      "Taurus",
+      "Virgo",
+      "Sagittarius"
+     ]
+    },
+    "Ketu": {
+     "sign": "Virgo",
+     "dms": "17°02'27\"",
+     "house_from_lagna": 1,
+     "house_from_moon": 6,
+     "aspects_houses": [
+      3,
+      7,
+      10
+     ],
+     "aspects_signs": [
+      "Scorpio",
+      "Pisces",
+      "Gemini"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Aries",
+      "to_sign": "Taurus",
+      "ist": "2024-05-01 12:30:00",
+      "longitude_deg": 30.000003,
+      "dms": "0°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Jupiter",
+      "natal_body": "Moon",
+      "ist": "2024-02-28 17:30:00",
+      "transit_longitude": 16.872238,
+      "natal_longitude": 16.872238,
+      "natal_dms": "16°52'20\"",
+      "separation_deg": 0.0
+     },
+     {
+      "transit": "Jupiter",
+      "natal_body": "Mercury",
+      "ist": "2024-08-11 23:30:00",
+      "transit_longitude": 52.026607,
+      "natal_longitude": 232.026607,
+      "natal_dms": "232°01'36\"",
+      "separation_deg": 180.0
+     },
+     {
+      "transit": "Jupiter",
+      "natal_body": "Sun",
+      "ist": "2024-08-18 13:30:00",
+      "transit_longitude": 53.030297,
+      "natal_longitude": 233.030297,
+      "natal_dms": "233°01'49\"",
+      "separation_deg": 180.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house",
+      "dasha lord Mercury rules the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "3": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn aspects the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 2,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "6": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn occupies the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 3,
+     "reasons": [
+      "transiting Jupiter occupies the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 2,
+     "reasons": [
+      "transiting Ketu aspects the house",
+      "dasha lord Mercury rules the house"
+     ],
+     "activated": true
+    },
+    "11": {
+     "score": 1,
+     "reasons": [
+      "transiting Jupiter aspects the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 1,
+     "reasons": [
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "NONE"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 16
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 5
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 3
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 6
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 12
+    }
+   }
+  },
+  "2026": {
+   "year": 2026,
+   "age": 44,
+   "dasha": {
+    "MD": "Rahu",
+    "AD": "Saturn",
+    "PD": "Jupiter",
+    "spans_year": false
+   },
+   "transit_1july": {
+    "Jupiter": {
+     "sign": "Cancer",
+     "dms": "5°56'04\"",
+     "house_from_lagna": 11,
+     "house_from_moon": 4,
+     "aspects_houses": [
+      1,
+      5,
+      8
+     ],
+     "aspects_signs": [
+      "Virgo",
+      "Capricorn",
+      "Aries"
+     ]
+    },
+    "Saturn": {
+     "sign": "Pisces",
+     "dms": "19°57'34\"",
+     "house_from_lagna": 7,
+     "house_from_moon": 12,
+     "aspects_houses": [
+      1,
+      4,
+      9
+     ],
+     "aspects_signs": [
+      "Taurus",
+      "Virgo",
+      "Sagittarius"
+     ]
+    },
+    "Rahu": {
+     "sign": "Aquarius",
+     "dms": "8°21'35\"",
+     "house_from_lagna": 6,
+     "house_from_moon": 11,
+     "aspects_houses": [
+      3,
+      8,
+      12
+     ],
+     "aspects_signs": [
+      "Aries",
+      "Leo",
+      "Scorpio"
+     ]
+    },
+    "Ketu": {
+     "sign": "Leo",
+     "dms": "8°21'35\"",
+     "house_from_lagna": 12,
+     "house_from_moon": 5,
+     "aspects_houses": [
+      2,
+      6,
+      9
+     ],
+     "aspects_signs": [
+      "Libra",
+      "Aquarius",
+      "Taurus"
+     ]
+    }
+   },
+   "precise_events": {
+    "sign_entries": [
+     {
+      "planet": "Jupiter",
+      "from_sign": "Gemini",
+      "to_sign": "Cancer",
+      "ist": "2026-06-02 01:30:00",
+      "longitude_deg": 90.000002,
+      "dms": "0°00'00\""
+     },
+     {
+      "planet": "Rahu",
+      "from_sign": "Aquarius",
+      "to_sign": "Capricorn",
+      "ist": "2026-12-05 23:30:00",
+      "longitude_deg": 299.999999,
+      "dms": "30°00'00\""
+     }
+    ],
+    "natal_conjunctions": [
+     {
+      "transit": "Saturn",
+      "natal_body": "Mars",
+      "ist": "2026-01-15 11:30:00",
+      "transit_longitude": 332.930133,
+      "natal_longitude": 152.930133,
+      "natal_dms": "152°55'48\"",
+      "separation_deg": 180.0
+     },
+     {
+      "transit": "Jupiter",
+      "natal_body": "Rahu",
+      "ist": "2026-06-06 06:30:00",
+      "transit_longitude": 90.807566,
+      "natal_longitude": 90.807566,
+      "natal_dms": "90°48'27\"",
+      "separation_deg": 0.0
+     },
+     {
+      "transit": "Jupiter",
+      "natal_body": "Venus",
+      "ist": "2026-07-03 04:30:00",
+      "transit_longitude": 96.355823,
+      "natal_longitude": 276.355823,
+      "natal_dms": "276°21'21\"",
+      "separation_deg": 180.0
+     }
+    ]
+   },
+   "house_activation": {
+    "1": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Saturn aspects the house"
+     ],
+     "activated": true
+    },
+    "2": {
+     "score": 1,
+     "reasons": [
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "3": {
+     "score": 1,
+     "reasons": [
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "4": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "5": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "6": {
+     "score": 4,
+     "reasons": [
+      "transiting Rahu occupies the house",
+      "transiting Ketu aspects the house",
+      "dasha lord Saturn rules the house"
+     ],
+     "activated": true
+    },
+    "7": {
+     "score": 3,
+     "reasons": [
+      "transiting Saturn occupies the house",
+      "dasha lord Jupiter rules the house"
+     ],
+     "activated": true
+    },
+    "8": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter aspects the house",
+      "transiting Rahu aspects the house"
+     ],
+     "activated": true
+    },
+    "9": {
+     "score": 2,
+     "reasons": [
+      "transiting Saturn aspects the house",
+      "transiting Ketu aspects the house"
+     ],
+     "activated": true
+    },
+    "10": {
+     "score": 0,
+     "reasons": [],
+     "activated": false
+    },
+    "11": {
+     "score": 2,
+     "reasons": [
+      "transiting Jupiter occupies the house"
+     ],
+     "activated": true
+    },
+    "12": {
+     "score": 3,
+     "reasons": [
+      "transiting Rahu aspects the house",
+      "transiting Ketu occupies the house"
+     ],
+     "activated": true
+    }
+   },
+   "risk": {
+    "level": "YELLOW",
+    "icon": "🟡",
+    "word": "CAUTION",
+    "sade_sati": "PHASE 1"
+   },
+   "sensitivity": null,
+   "risk_categories": {
+    "health_safety": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 17
+    },
+    "financial": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 10
+    },
+    "career": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 10
+    },
+    "relationship": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 5
+    },
+    "property": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 9
+    },
+    "legal_admin": {
+     "score": null,
+     "level": "YELLOW",
+     "evidence_count": 13
+    }
+   }
+  }
+ }
+}

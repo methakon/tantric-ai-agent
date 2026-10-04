@@ -1,0 +1,35 @@
+{
+ "_note": "Remaining Workstream A comparisons, each scored against the null established by null_control.py (median rank p = 0.500, 0/20 in the top decile).",
+ "findings": {
+  "a4_father": {
+   "2006": {
+    "label": "open-heart surgery",
+    "dasha": "Moon/Jupiter/Saturn",
+    "H9": 1,
+    "H10": 1,
+    "rank_p": 1.0,
+    "other_year_mean_rank_sum": 13.8
+   },
+   "2018": {
+    "label": "death (subject)",
+    "dasha": "Mars/Venus/Saturn",
+    "H9": 1,
+    "H10": 1,
+    "rank_p": 1.0,
+    "other_year_mean_rank_sum": 13.8
+   },
+   "2019": {
+    "label": "death (official record)",
+    "dasha": "Mars/Moon/Saturn",
+    "H9": 1,
+    "H10": 4,
+    "rank_p": 0.389,
+    "other_year_mean_rank_sum": 13.9
+   }
+  },
+  "a9": {
+   "event_years_in_time_sensitive": [],
+   "cross_method": "NOT DONE — would break the blind protocol"
+  }
+ }
+}

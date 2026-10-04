@@ -1,0 +1,201 @@
+{
+ "_note": "Null distribution of the SAME house-activation test across all 73 dossier years, used to test whether event years are distinguishable from arbitrary years.",
+ "active_score_floor": 2,
+ "null_tally": {
+  "WEAK": 126,
+  "MATCH": 185,
+  "PARTIAL": 638,
+  "NO MATCH": 73
+ },
+ "null_total": 1022,
+ "null_pct": {
+  "WEAK": 12.33,
+  "MATCH": 18.1,
+  "PARTIAL": 62.43,
+  "NO MATCH": 7.14
+ },
+ "event_rows": [
+  {
+   "id": "E01",
+   "year": 1998,
+   "category": "EDUCATION_NEGATIVE",
+   "verdict": "PARTIAL",
+   "activated": "3/4",
+   "p_at_least_this_strong": 0.875,
+   "mean_strength_same_cat": 1.944
+  },
+  {
+   "id": "E02",
+   "year": 2005,
+   "category": "EDUCATION_POSITIVE",
+   "verdict": "WEAK",
+   "activated": "1/4",
+   "p_at_least_this_strong": 1.0,
+   "mean_strength_same_cat": 1.958
+  },
+  {
+   "id": "E03",
+   "year": 2006,
+   "category": "PARENTAL_HEALTH",
+   "verdict": "WEAK",
+   "activated": "1/3",
+   "p_at_least_this_strong": 0.9722,
+   "mean_strength_same_cat": 1.819
+  },
+  {
+   "id": "E04",
+   "year": 2008,
+   "category": "EDUCATION_MIXED",
+   "verdict": "PARTIAL",
+   "activated": "3/4",
+   "p_at_least_this_strong": 0.875,
+   "mean_strength_same_cat": 1.944
+  },
+  {
+   "id": "E05a",
+   "year": 2008,
+   "category": "EDUCATION_OBSTRUCTION",
+   "verdict": "PARTIAL",
+   "activated": "1/2",
+   "p_at_least_this_strong": 0.7083,
+   "mean_strength_same_cat": 1.806
+  },
+  {
+   "id": "E05b",
+   "year": 2009,
+   "category": "EDUCATION_OBSTRUCTION",
+   "verdict": "PARTIAL",
+   "activated": "1/2",
+   "p_at_least_this_strong": 0.7083,
+   "mean_strength_same_cat": 1.806
+  },
+  {
+   "id": "E05c",
+   "year": 2010,
+   "category": "EDUCATION_OBSTRUCTION",
+   "verdict": "PARTIAL",
+   "activated": "1/2",
+   "p_at_least_this_strong": 0.7083,
+   "mean_strength_same_cat": 1.806
+  },
+  {
+   "id": "E05d",
+   "year": 2011,
+   "category": "EDUCATION_RESOLUTION",
+   "verdict": "MATCH",
+   "activated": "2/2",
+   "p_at_least_this_strong": 0.25,
+   "mean_strength_same_cat": 2
+  },
+  {
+   "id": "E06a",
+   "year": 2015,
+   "category": "MARRIAGE_FORMATION",
+   "verdict": "MATCH",
+   "activated": "2/2",
+   "p_at_least_this_strong": 0.2917,
+   "mean_strength_same_cat": 2.014
+  },
+  {
+   "id": "E06b",
+   "year": 2015,
+   "category": "MARRIAGE_SEPARATION",
+   "verdict": "WEAK",
+   "activated": "1/3",
+   "p_at_least_this_strong": 0.9861,
+   "mean_strength_same_cat": 1.778
+  },
+  {
+   "id": "E06c",
+   "year": 2015,
+   "category": "LEGAL_DISPUTE",
+   "verdict": "NO MATCH",
+   "activated": "0/3",
+   "p_at_least_this_strong": 1.0,
+   "mean_strength_same_cat": 1.792
+  },
+  {
+   "id": "E07",
+   "year": 2018,
+   "category": "MARRIAGE_FORMATION",
+   "verdict": "PARTIAL",
+   "activated": "1/2",
+   "p_at_least_this_strong": 0.8611,
+   "mean_strength_same_cat": 2.028
+  },
+  {
+   "id": "E08",
+   "year": 2018,
+   "category": "PARENTAL_TRANSITION",
+   "verdict": "NO MATCH",
+   "activated": "0/2",
+   "p_at_least_this_strong": 1.0,
+   "mean_strength_same_cat": 2.083
+  },
+  {
+   "id": "E09",
+   "year": 2019,
+   "category": "CHILDBIRTH",
+   "verdict": "PARTIAL",
+   "activated": "2/3",
+   "p_at_least_this_strong": 0.6944,
+   "mean_strength_same_cat": 1.792
+  },
+  {
+   "id": "E10",
+   "year": 2021,
+   "category": "CHILDBIRTH",
+   "verdict": "PARTIAL",
+   "activated": "2/3",
+   "p_at_least_this_strong": 0.6944,
+   "mean_strength_same_cat": 1.792
+  },
+  {
+   "id": "E11",
+   "year": 2021,
+   "category": "EDUCATION_NEGATIVE",
+   "verdict": "PARTIAL",
+   "activated": "3/4",
+   "p_at_least_this_strong": 0.875,
+   "mean_strength_same_cat": 1.944
+  },
+  {
+   "id": "E12",
+   "year": 2024,
+   "category": "ELDER_FAMILY_TRANSITION",
+   "verdict": "MATCH",
+   "activated": "2/2",
+   "p_at_least_this_strong": 0.2639,
+   "mean_strength_same_cat": 2.042
+  },
+  {
+   "id": "E13",
+   "year": 2024,
+   "category": "FAMILY_RESTRUCTURING",
+   "verdict": "PARTIAL",
+   "activated": "2/4",
+   "p_at_least_this_strong": 0.875,
+   "mean_strength_same_cat": 1.958
+  },
+  {
+   "id": "E14a",
+   "year": 2026,
+   "category": "CAREER_INTERRUPTION",
+   "verdict": "PARTIAL",
+   "activated": "2/4",
+   "p_at_least_this_strong": 0.8472,
+   "mean_strength_same_cat": 1.917
+  },
+  {
+   "id": "E14b",
+   "year": 2026,
+   "category": "CAREER_INTERRUPTION",
+   "verdict": "PARTIAL",
+   "activated": "2/4",
+   "p_at_least_this_strong": 0.8472,
+   "mean_strength_same_cat": 1.917
+  }
+ ],
+ "median_p": 0.8541,
+ "events_in_top_decile": 0
+}
