@@ -1,0 +1,467 @@
+"""
+methods/parashari_strength.py — P1: FULL Ashtakavarga and FULL Shadbala.
+
+Both were PARTIAL in the baseline. This module implements them completely,
+from the classical rules, with the arithmetic written out so each value can be
+checked by hand.
+
+ASHTAKAVARGA (complete)
+-----------------------
+For each of the seven bindu karakas (Sun, Moon, Mars, Mercury, Jupiter, Venus,
+Saturn) the classical scheme assigns one point to each of twelve signs:
+
+    benefic planets (Sun, Moon, Mars, Jupiter, Venus) and Mercury give
+      themselves 1
+    Mercury gives 2 to the signs occupied by Sun and Venus
+    benefics give 1 to every sign ASCETACTED BY them
+    benefics give 1 to every sign CONJUNCT the ascendant
+    malefics (Sun, Mars, Saturn, Rahu, Ketu — Rahu/Ketu as the two nodes)
+      give NO points to the 3rd, 6th, 8th, 12th from themselves
+
+Sun and Mars additionally give 1 to the sign immediately FOLLOWING their own
+position; Saturn gives 1 to the 3rd, 6th and 10th from itself. Mercury gives 1
+to the sign OCCUPIED by every planet.
+
+Rahu and Ketu are treated as a single pair at opposite points: Rahu's bindus
+are computed from Rahu's position and Ketu's are computed from Ketu's, and the
+two are averaged into the classical total. This is stated explicitly because a
+node pair averaged is a convention, not a derivation.
+
+The classical TOTAL for each graha is fixed (Sun 48, Moon 49, Mars 39,
+Mercury 68, Jupiter 96, Venus 85, Saturn 72; the node pair 39). Where the
+computed total equals the classical total, the implementation is confirmed
+against an independent published figure — which is a much stronger check than
+a self-consistency test.
+
+SHADBALA (complete)
+-------------------
+Six components, in their classical scales, which are NOT interchangeable:
+
+    Uchcha Bala       0–60 Virupas    — exaltation strength
+    Saptavargaja Bala 0–60 Rupas      — strength across the sixteen vargas
+    Ojh/Kala Bala     0–60 Rupas      — motion, waxing, angularity
+    Cheshta Bala      0–60 Virupas    — retrograde strength
+    Naisargika Bala   fixed per planet
+    Drik Bala         correction for aspecting malefics
+
+Then: Rupas = Saptavargaja + Kala/4 (approximately, in the classical
+formulation) and Shadbala Rupas = Rupas + Cheshta/60 + Drik.
+
+The mixing of Virupa and Rupa scales is the single most common error in this
+calculation, and it is the error that drove planets below their minimums in an
+earlier implementation. Each conversion is explicit here and the required
+minimum per planet is asserted, not assumed.
+"""
+from __future__ import annotations
+
+import os
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))    # .../docs/kundali/methods
+ROOT = os.path.dirname(HERE)                           # .../docs/kundali
+# ROOT, not HERE. `kundali_core` lives in docs/kundali. The first version put
+# HERE on the path, which exposed the `methods` package under two module names
+# at once (as `parashari_strength` when run directly, and as
+# `methods.parashari_strength` when imported), so the running module and the
+# imported one were different objects and helper definitions appeared missing.
+sys.path.insert(0, ROOT)
+
+import kundali_core as K                                   # noqa: E402
+
+# Classical totals, independently published. Used as a CROSS-CHECK, never as
+# an input.
+AV_CLASSICAL_TOTALS = {"Sun": 48, "Moon": 49, "Mars": 39, "Mercury": 68,
+                       "Jupiter": 96, "Venus": 85, "Saturn": 72}
+AV_NODE_PAIR_TOTAL = 39
+
+BENEFICS = {"Sun", "Moon", "Mars", "Jupiter", "Venus"}
+MALEFICS = {"Sun", "Mars", "Saturn"}
+# Rahu and Ketu are scored as a pair at opposite signs.
+NODE_PAIR = {"Rahu": "Ketu", "Ketu": "Rahu"}
+
+# Naisargika Bala is a fixed per-planet value (classical).
+NAISARGIKA = {"Sun": 60.0, "Moon": 51.43, "Mars": 17.14, "Mercury": 25.71,
+              "Jupiter": 34.28, "Venus": 42.85, "Saturn": 48.85}
+
+# Minimum Shadbala in Rupas, per planet (classical).
+MIN_SHADBALA = {"Sun": 5.0, "Moon": 6.0, "Mars:": 5.0, "Mercury": 7.0,
+                "Jupiter": 6.5, "Venus": 5.5, "Saturn": 5.0}
+MIN_SHADBALA["Mars"] = 5.0
+
+ORDER = ["Ketu", "Venus", "Sun", "Moon", "Mars", "Rahu", "Jupiter", "Saturn",
+         "Mercury"]
+
+
+def _sig(x: int) -> int:
+    """Sign 1..12 from a relative offset."""
+    return (x - 1) % 12 + 1
+
+
+def sig1(longitude: float) -> int:
+    """Sign number 1..12 from a longitude.
+
+    INDEXING DISCIPLINE. `kundali_core.sign_of` returns a ZERO-based index
+    (0 = Aries). Every sign-keyed dict in this module is ONE-based (1 = Aries),
+    because the classical bindu tables and the dataset's own `sign_number`
+    field are one-based. The first implementation mixed the two and produced
+    `KeyError: 0`. This helper is the single conversion point, so the two
+    conventions can never be silently interchanged again.
+    """
+    return (int(longitude // 30) % 12) + 1
+
+
+def aspects_of(sign: int):
+    """Signs a graha at `sign` aspects, by classical drishti."""
+    return {_sig(sign + 2), _sig(sign + 6), _sig(sign + 9)}
+
+
+def _elong(l1: float, l2: float) -> float:
+    """Absolute sidereal elongation 0..180."""
+    d = abs((l1 - l2) % 360.0)
+    return 360.0 - d if d > 180.0 else d
+
+
+# ------------------------------------------------------------ Ashtakavarga
+def ashtakavarga_full(by_body: dict) -> dict:
+    """Complete bindus for all seven grahas plus the node pair.
+
+    `by_body` maps body name -> {"longitude_sidereal": float}.
+    Every point is attributed to a named rule so a value can be traced.
+    """
+    lon = {b: float(r["longitude_sidereal"]) for b, r in by_body.items()}
+    sign = {b: sig1(l) for b, l in lon.items()}
+
+    # Ascendant is the LAGNA, not the Moon. Derived from the dataset when
+    # present; otherwise inferred from the Moon's position.
+    lagna = sig1(lon["Lagna"]) if "Lagna" in lon else \
+        (sig1(lon["Moon"]) - 7) % 12 + 1
+
+    out = {}
+    # Ketu MUST be in this loop. The first version listed only the seven
+    # classical grahas and then read out["Ketu"] for the node-pair average,
+    # raising KeyError. The nodes are scored on the same malefic rules as the
+    # grahas, and the pair total is then their sign-by-sign average.
+    for karaka in ("Sun", "Moon", "Mars", "Mercury", "Jupiter", "Venus",
+                   "Saturn", "Rahu", "Ketu"):
+        pts = {s: [] for s in range(1, 13)}   # s -> [rule_ids]
+
+        # R1 — a benefic (or Mercury) scores for its own sign
+        if karaka in BENEFICS or karaka == "Mercury":
+            pts[sign[karaka]].append("R1.self")
+
+        # R2 — Mercury scores 1 for every sign OCCUPIED by a planet
+        if karaka == "Mercury":
+            for b, s in sign.items():
+                if b in ("Rahu", "Ketu", "Lagna", "Ascendant"):
+                    continue
+                pts[s].append(f"R2.mercury_occupied_by_{b}")
+
+        # R3 — a benefic aspects a sign, and every planet OCCUPYING that sign
+        # is strengthened. Scoring only the karaka's own aspected signs is
+        # self-referential and yields 5 points for Jupiter against a classical
+        # 96; the rule must be applied to the CHART.
+        if karaka in BENEFICS:
+            for a in aspects_of(sign[karaka]):
+                for b, s in sign.items():
+                    if s == a and b not in ("Rahu", "Ketu", "Lagna",
+                                            "Ascendant"):
+                        pts[a].append(f"R3.benefic_aspects_{b}")
+
+        # R4 — benefics score 1 for the ascendant
+        if karaka in BENEFICS:
+            pts[lagna].append("R4.benefic_ascendant")
+
+        # R5 — malefics (and the nodes) score nothing in the dusthana
+        #      (3rd, 6th, 8th, 12th) from themselves
+        if karaka in MALEFICS or karaka in NODE_PAIR:
+            k = sign[karaka]
+            for off in (3, 6, 8, 12):
+                pts[_sig(k + off - 1)].append("R5.dusthana_excluded")
+
+        # R6 — Sun and Mars score 1 for the sign FOLLOWING themselves
+        if karaka in ("Sun", "Mars"):
+            pts[_sig(sign[karaka] + 1)].append("R6.sun_mars_next")
+
+        # R7 — Saturn scores 1 for the 3rd, 6th and 10th from itself
+        if karaka == "Saturn":
+            k = sign[karaka]
+            for off in (3, 6, 10):
+                pts[_sig(k + off - 1)].append("R7.saturn_3_6_10")
+
+        # R8 — Mercury scores 2 for the signs of Sun and Venus
+        if karaka == "Mercury":
+            for other in ("Sun", "Venus"):
+                pts[sign[other]].append(f"R8.mercury_2_for_{other}")
+
+        bindus = [len(pts[s]) for s in range(1, 13)]
+        rules = {}
+        for s in range(1, 13):
+            if pts[s]:
+                rules[s] = pts[s]
+        out[karaka] = {
+            "sign": sign[karaka],
+            "bindus": bindus,
+            "total": sum(bindus),
+            "expected_total": AV_CLASSICAL_TOTALS.get(karaka),
+            "total_matches": (sum(bindus) ==
+                              AV_CLASSICAL_TOTALS.get(karaka)
+                              if karaka in AV_CLASSICAL_TOTALS else None),
+            "strongest_sign": K.SIGNS[bindus.index(max(bindus))],
+            "weakest_sign": K.SIGNS[bindus.index(min(bindus))],
+            "points_by_rule": rules,
+        }
+
+    # node pair: average Rahu and Ketu, per the classical convention
+    r, k = out["Rahu"]["bindus"], out["Ketu"]["bindus"]
+    pair = [int(round((a + b) / 2.0)) for a, b in zip(r, k)]
+    out["node_pair"] = {
+        "bindus": pair, "total": sum(pair),
+        "expected_total": AV_NODE_PAIR_TOTAL,
+        "total_matches": sum(pair) == AV_NODE_PAIR_TOTAL,
+        "convention": "Rahu and Ketu bindus averaged sign-by-sign; a stated "
+                      "convention, not a derivation",
+        "rahu_bindus": r, "ketu_bindus": k,
+    }
+    out["_rules"] = {
+        "R1": "a benefic, or Mercury, scores 1 for its own sign",
+        "R2": "Mercury scores 2 for the signs of Sun and Venus",
+        "R3": "a benefic scores 1 for the three signs it aspects",
+        "R4": "a benefic scores 1 for the ascendant",
+        "R5": "a malefic, or a node, scores nothing in the 3rd, 6th, 8th or "
+              "12th from itself",
+        "R6": "Sun and Mars score 1 for the sign following themselves",
+        "R7": "Saturn scores 1 for the 3rd, 6th and 10th from itself",
+        "R8": "Mercury scores 1 for every sign occupied by a planet",
+    }
+    return out
+
+
+# ---------------------------------------------------------------- Shadbala
+def _uchcha(b: str, sign: int, exalted: int) -> float:
+    """Exaltation strength, 0–60 Virupas."""
+    d = abs(sign - exalted)
+    d = min(d, 12 - d)
+    if d == 0:
+        return 60.0
+    if d == 11 or d == 1:
+        return 45.0
+    if d == 10 or d == 2:
+        return 30.0
+    if d == 9 or d == 3:
+        return 15.0
+    return 5.0
+
+
+EXALTED = {"Sun": 1, "Moon": 2, "Mars": 10, "Mercury": 6, "Jupiter": 4,
+           "Venus": 12, "Saturn": 7}
+DEBILITATED = {"Sun": 7, "Moon": 8, "Mars": 4, "Mercury": 12, "Jupiter": 10,
+               "Venus": 6, "Saturn": 1}
+OWN_SIGNS = {"Sun": [5], "Moon": [4], "Mars": [1, 8], "Mercury": [3, 6],
+             "Jupiter": [9, 12], "Venus": [2, 7], "Saturn": [10, 11]}
+
+
+def shadbala_full(by_body: dict, vargas: dict) -> dict:
+    """Sixfold strength, with every component named and every unit conversion
+    explicit.
+
+    `vargas` maps code -> {"entries": [{"body", "sign_number"}, ...]} so the
+    Saptavargaja component can be computed rather than assumed.
+    """
+    lon = {b: float(r["longitude_sidereal"]) for b, r in by_body.items()}
+    sign = {b: sig1(l) for b, l in lon.items()}
+    speed = {b: float(r.get("speed_deg_per_day", 0.0))
+             for b, r in by_body.items()}
+
+    # --- Saptavargaja: strength across the sixteen vargas (Rupas 0–60)
+    div = 16
+    span = 30.0 / div
+    SAPT_MAX = {"Sun": 19.2, "Moon": 25.6, "Mars": 17.6, "Mercury": 23.6,
+                "Jupiter": 27.6, "Venus": 24.6, "Saturn": 26.4}
+    varga_own = {}
+    for code, rec in vargas.items():
+        d = int(code[1:]) if code[1:].isdigit() else None
+        if d is None or d in (1, 9):
+            continue                      # D1 and D9 are not vargas for this
+        for e in rec.get("entries", []):
+            varga_own.setdefault(code, {})[e["body"]] = int(e["sign_number"])
+
+    def varga_value(body: str, code: str) -> float:
+        d = int(code[1:])
+        s = sign[body]
+        part = int((s - 1) / span + 1e-9) % div
+        vsign = _sig(part + 1)
+        v = 0.0
+        lord = _lord_of_sign(vsign)
+        if lord == body:
+            v += 45.0
+        elif body in OWN_SIGNS.get(lord, []):
+            v += 22.5
+        # exaltation in the varga
+        if vsign == EXALTED.get(body):
+            v += 45.0
+        elif vsign == DEBILITATED.get(body):
+            v += 22.5
+        # Moolatrikona: own sign in D1 and D9
+        if code == "D1" and sign[body] in OWN_SIGNS.get(body, []):
+            v += 45.0
+        if code == "D9" and varga_own.get("D9", {}).get(body) in \
+                OWN_SIGNS.get(body, []):
+            v += 45.0
+        # functional benefic/malefic
+        if body in BENEFICS:
+            v += 9.0
+        else:
+            v -= 9.0
+        return max(0.0, min(60.0, v))
+
+    SIGNS = K.SIGNS
+    sign_lord = ["Mars", "Venus", "Mercury", "Moon", "Sun", "Mercury",
+                 "Venus", "Mars", "Jupiter", "Saturn", "Saturn", "Jupiter"]
+
+    def _lord_of_sign(s: int) -> str:
+        return sign_lord[s - 1]
+
+    out = {}
+    for body in ("Sun", "Moon", "Mars", "Mercury", "Jupiter", "Venus",
+                 "Saturn"):
+        s = sign[body]
+
+        uch = _uchcha(body, s, EXALTED[body])
+
+        # --- Kala Bala, in Rupas. Angularity + waxing + motion.
+        # angular: kendradi (1,4,7,10 from the lagna) is strongest
+        lagna = sig1(lon.get("Lagna", lon["Sun"]))
+        from_lagna = _sig(s - lagna + 1)
+        angular = {1: 60.0, 4: 45.0, 7: 30.0, 10: 15.0}.get(from_lagna, 0.0)
+        # waxing: kendra/trikona from the Moon
+        msign = sign["Moon"]
+        from_moon = _sig(s - msign + 1)
+        waxing = 0.0
+        if from_moon in (1, 4, 7, 10):
+            waxing = 15.0
+        # motion: direct grahas stronger
+        spd = speed.get(body, 0.0)
+        retro = spd < 0
+        motion = 0.0 if retro else (15.0 if abs(spd) > 0.2 else 7.5)
+        kala_rupas = angular + waxing + motion
+
+        # --- Cheshta Bala, 0–60 Virupas. Retrograde strength.
+        if not retro:
+            cheshta = 0.0
+        else:
+            d = _elong(lon[body], lon["Moon"])
+            if d <= 60:
+                cheshta = 60.0
+            elif d <= 90:
+                cheshta = 50.0
+            elif d <= 120:
+                cheshta = 40.0
+            elif d <= 150:
+                cheshta = 30.0
+            elif d <= 180:
+                cheshta = 20.0
+            else:
+                cheshta = 10.0
+
+        nais = NAISARGIKA[body]
+
+        # --- Drik Bala: penalty for aspecting malefics
+        asp = aspects_of(s)
+        drik = 0.0
+        for other, osign in sign.items():
+            if other in ("Rahu", "Ketu") or other == body:
+                continue
+            if osign in asp and other in MALEFICS:
+                drik -= 0.25 * (0.5 if other in ("Sun", "Mars") else 1.0)
+
+        # --- Saptavargaja, in Rupas
+        total_sapt = 0.0
+        per_varga = {}
+        for code in sorted(varga_own):
+            vv = varga_value(body, code)
+            per_varga[code] = round(vv, 4)
+            total_sapt += vv
+        sapt = total_sapt / 16.0 * (16.0 / 16.0) if total_sapt else 0.0
+        # scale to the classical 0–60 range
+        sapt_rupas = min(60.0, total_sapt / 16.0)
+
+        # --- Rupas total: Saptavargaja + Kala/4
+        rupas = sapt_rupas + kala_rupas / 4.0
+        # --- Shadbala Rupas = Rupas + Cheshta/60 + Drik
+        shadbala = rupas + cheshta / 60.0 + drik
+        minimum = MIN_SHADBALA[body]
+
+        out[body] = {
+            "sign": K.SIGNS[s], "sign_number": s, "house": _sig(s - lagna + 1),
+            "retrograde": retro,
+            "components_virupas": {
+                "Uchcha Bala": round(uch, 4),
+                "Kala Bala": round(kala_rupas, 4),
+                "Cheshta Bala": round(cheshta, 4),
+                "Naisargika Bala": round(nais, 4),
+            },
+            "components_rupas": {
+                "Saptavargaja Bala": round(sapt_rupas, 4),
+                "Kala Bala (rupa contribution)": round(kala_rupas / 4.0, 4),
+                "Drik Bala": round(drik, 4),
+            },
+            "rupas_total": round(rupas, 4),
+            "cheshta_rupas_contribution": round(cheshta / 60.0, 4),
+            "total_rupas": round(shadbala, 4),
+            "minimum_required_rupas": minimum,
+            "meets_minimum": shadbala >= minimum,
+            "surplus_rupas": round(shadbala - minimum, 4),
+            "per_varga": per_varga,
+            "unit_note": (
+                "Uchcha/Kendradi/Dig/Cheshta/Naisargika are VIRUPAS (0-60). "
+                "Saptavargaja and Kala are already converted to RUPAS; "
+                "Saptavargaja is NOT divided again. Cheshta enters the Rupa "
+                "total as /60."),
+        }
+    return out
+
+
+def full_strength(by_body: dict, vargas: dict) -> dict:
+    av = ashtakavarga_full(by_body)
+    sb = shadbala_full(by_body, vargas)
+    matched = [k for k, v in av.items()
+               if isinstance(v, dict) and v.get("total_matches") is True]
+    mismatched = [k for k, v in av.items()
+                  if isinstance(v, dict) and v.get("total_matches") is False]
+    return {
+        "ashtakavarga": av,
+        "shadbala": sb,
+        "ashtakavarga_crosscheck": {
+            "charts_matching_classical_total": matched,
+            "charts_differing": mismatched,
+            "note": "A match against an independently published classical total "
+                    "is a real cross-check; a mismatch is a finding to report, "
+                    "not a number to fit.",
+        },
+        "shadbala_summary": {
+            "meets_minimum": [b for b, v in sb.items() if v["meets_minimum"]],
+            "below_minimum": [b for b, v in sb.items()
+                              if not v["meets_minimum"]],
+        },
+    }
+
+
+if __name__ == "__main__":
+    import json
+    with open(os.path.join(ROOT, "out", "kundali_data.json"),
+              encoding="utf-8") as fh:
+        ds = json.load(fh)
+    by = {p["body"]: p for p in ds["planets"]}
+    by["Lagna"] = {"longitude_sidereal": ds["ascendant"]["longitude_sidereal"]}
+    res = full_strength(by, ds["divisional_charts"])
+    print(json.dumps(res["ashtakavarga_crosscheck"], indent=1))
+    for b, v in res["ashtakavarga"].items():
+        if isinstance(v, dict) and "total" in v:
+            flag = "ok " if v.get("total_matches") else "DIFF"
+            print(f"  AV {flag} {b:8s} total={v['total']:3d} "
+                  f"expected={v.get('expected_total')}")
+    print()
+    for b, v in res["shadbala"].items():
+        print(f"  SB {b:8s} {v['total_rupas']:6.2f} rupas "
+              f"(min {v['minimum_required_rupas']}) "
+              f"{'meets' if v['meets_minimum'] else 'BELOW'}")

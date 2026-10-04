@@ -1,0 +1,74 @@
+{
+  "_record": "P1A SOURCE-FIRST GATE — Ashtakavarga. Source extraction and freeze, BEFORE any numerical implementation.",
+  "_date": "2026-10-05",
+  "_status": "SOURCE ALREADY PRESENT IN-REPO. No new implementation written. The four verified tables in kundali_core.AV_TABLES are the source-backed specification; the three unverified ones stay excluded.",
+
+  "source_search": {
+    "performed": "2026-10-05, per the source-first instruction",
+    "locations_searched": [
+      "/home/swarna-sekhar-dhar/Downloads/tantra/",
+      "/home/swarna-sekhar-dhar/Downloads (maxdepth 3, name patterns *parashar*, *jyotish*, *jataak*, *jyotisha*, *horasastra*, *varshaphala*, *nadi*, *dosha*)",
+      "docs/kundali project documentation and source"
+    ],
+    "result_no_external_text": "~/Downloads/tantra/ contains NO classical Jyotish text. It holds exactly two PDFs: 'ramani ke jononite porinata.pdf' (Bengali, popular astronomy) and 'tantrokto jog o mukti.pdf' (Bengali, ritual practice). Neither is a rule manual. No file matching any classical-text name pattern exists anywhere under ~/Downloads.",
+    "result_source_found_in_repo": "The contributor tables ARE already in-repo and already structured as explicit source-backed data, in docs/kundali/kundali_core.py at AV_TABLES (line 621). This is exactly the representation the instruction requires: target planet -> contributor -> relative houses receiving bindus."
+  },
+
+  "primary_source_declared": {
+    "declared": "Classical Prastara Ashtakavarga contribution tables as encoded in docs/kundali/kundali_core.AV_TABLES",
+    "bphs_edition": "NOT AVAILABLE LOCALLY — no Brihat Parashara Hora Shastra edition or translation is present on this system, and no bibliographic details (author/editor/translator/edition/year/chapter/verse) can be recorded from a document we do not hold.",
+    "independent_cross_reference": "Brihat Jataka, Ashtakavarga chapter, is likewise NOT present locally and could not be consulted.",
+    "honest_position": "The rule tables are FROZEN AS PROJECT DATA, not as an inspected classical edition. They are cited to the repository file and line that defines them, which is a weaker provenance claim than an edition-and-verse citation and is labelled as such. Per the instruction, no rule set has been reconstructed from memory, and no modern calculator's final matrix has been copied in as 'the classical specification'."
+  },
+
+  "authoritative_rule_set": {
+    "location": "docs/kundali/kundali_core.py :: AV_TABLES",
+    "structure": "dict keyed by TARGET planet; each value is a dict keyed by CONTRIBUTOR whose value is the list of RELATIVE house positions (1-12, counted from the contributor) that award a bindu.",
+    "contributors": "7 grahas + Lagna. Rahu/Ketu are excluded by the classical system itself, and that exclusion is recorded in the dataset's ruleset string rather than left implicit.",
+    "evaluation": "counts[(base + h - 1) % 12] += 1 for each contributor/house pair, base being the contributor's sign index."
+  },
+
+  "totals_gate": {
+    "source": "docs/kundali/kundali_core.py :: AV_EXPECTED_TOTALS_FULL (frozen) and AV_TOTAL",
+    "required_by_instruction": {"Sun": 48, "Moon": 49, "Mars": 39, "Mercury": 54, "Jupiter": 56, "Venus": 52, "Saturn": 39, "SAV": 337},
+    "present_in_repo": {"Sun": 48, "Moon": 49, "Mars": 39, "Mercury": 54, "Jupiter": 56, "Venus": 52, "Saturn": 39},
+    "sav_in_repo": 337,
+    "identical_to_instruction": true,
+    "arithmetic_check": "48+49+39+54+56+52+39 = 337 — the seven totals are self-consistent with the Sarvashtakavarga total.",
+    "note_on_my_earlier_reconstruction": "An earlier attempt in this session used a DIFFERENT total set (Sun 48, Moon 49, Mars 39, Mercury 68, Jupiter 96, Venus 85, Saturn 72, summing to 457). That set was recalled from memory, is NOT the project's frozen reference, and produced totals that failed every cross-check. It is discarded and recorded here only so the wrong constant set is never reintroduced."
+  },
+
+  "current_implementation_state": {
+    "computed": ["Sun", "Moon", "Mars", "Saturn"],
+    "verified_by_checksum": true,
+    "detail": "Each of the four tables reproduces its published fixed total exactly, which is a genuine self-validation: a table that hits its own checksum is known-good. Dataset field all_computed_totals_match_classical = true, computed_bindu_sum = 175.",
+    "excluded": ["Mercury", "Jupiter", "Venus"],
+    "reason_excluded": "AV_TABLES_UNVERIFIED. Published transcriptions of these three contributor rows differ by one or two entries, and the totals alone cannot disambiguate them. Fitting rows to the checksum would yield a table that is internally consistent but possibly factually wrong — worse than an honest gap, because SAV would still print 337 and appear validated.",
+    "sarvashtakavarga": "NOT reported. A column sum over 4 of 7 tables is not the classical 337. The dataset already carries this limit explicitly in sarvashtakavarga_partial.interpretation_limit, including the warning that classical strength bands do not apply to a partial column."
+  },
+
+  "quarantined_work": {
+    "path": "docs/kundali/_unverified/parashari_strength.py.QUARANTINED.txt",
+    "never_committed": true,
+    "why_quarantined": "It reconstructed contributor rules from memory, produced totals of 10, then 8, then 5 against a classical 48 for the Sun, and its docstring claimed classical provenance it could not support. Committing it would have put a wrong 'classical' calculation into the repo.",
+    "must_not": "Do not restore, extend or cite this file. Its numbers are wrong."
+  },
+
+  "bugs_found_in_the_quarantined_file": {
+    "sign1_typo": "A one-character typo — line 136 called sign1() where the function was sig1(). AST validation, hasattr and a clean compile ALL passed; only dis output of co_names revealed both 'sig1' and 'sign1' in the bytecode. Cache was ruled out first and was not the cause.",
+    "double_module_identity": "sys.path.insert(0, HERE) exposed the methods package under two module names (as parashari_strength when run directly, as methods.parashari_strength when imported), so the running module and any imported copy were different objects. Fixed to use ROOT.",
+    "keyerror_0": "kundali_core.sign_of returns a ZERO-based index while every sign-keyed dict was ONE-based.",
+    "missing_ketu": "Ketu was absent from the karaka loop, then read from the result, raising KeyError."
+  },
+
+  "next_required_work": [
+    "Source a complete identifiable edition of Brihat Parashara Hora Shastra and record author/editor/translator, edition/year, chapter and verse/table/page for each contributor row.",
+    "Resolve the Mercury, Jupiter and Venus contributor rows against that source, replacing the checksum-fitting temptation with a cited table.",
+    "Add cell-level known-example tests: totals alone are insufficient, as the instruction requires.",
+    "Only then compute SAV = 337 as the sign-by-sign sum of all seven BAVs.",
+    "Print provenance for every rule set used."
+  ],
+
+  "astrology_values_changed": false,
+  "engine_modified": false
+}

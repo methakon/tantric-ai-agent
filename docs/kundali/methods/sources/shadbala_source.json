@@ -1,0 +1,93 @@
+{
+  "_record": "P1A SOURCE-FIRST GATE — Shadbala. Source extraction and freeze BEFORE any numerical implementation.",
+  "_date": "2026-10-05",
+  "_status": "PARTIALLY SOURCED IN-REPO. Components implemented to differing completeness. No new implementation written this session. No formula may be extended without a cited source.",
+
+  "source_search": {
+    "performed": "2026-10-05",
+    "result": "No BPHS or other classical rule manual is present locally (see ashtakavarga_source.json :: source_search). No local text states Shadbala component formulas, minimums or Naisargika values with a citable edition/chapter/verse."
+  },
+
+  "declared_source": {
+    "source": "docs/kundali/kundali_core.py :: shadbala() and its component helpers",
+    "provenance_claim": "PROJECT DATA, not an inspected classical edition. Cited to file and function. Weaker than an edition-and-verse citation, and labelled so.",
+    "no_label_abuse": "No formula in this project carries a 'traditional' or 'classical' label that is not backed by either a cited local source or an explicitly recorded convention. Conventions that vary between traditions are NAMED in the method matrix rather than presented as the single reading."
+  },
+
+  "components_and_status": {
+    "Uchcha Bala": {
+      "status": "IMPLEMENTED",
+      "source": "kundali_core._uchcha_bala",
+      "scale": "Virupas (0-60)",
+      "note": "Exaltation strength by distance from the exaltation degree."
+    },
+    "Kendradi Bala": {
+      "status": "IMPLEMENTED",
+      "source": "kundali_core._kendradi_bala",
+      "scale": "Virupas",
+      "note": "Angular strength from the whole-sign house."
+    },
+    "Dig Bala": {
+      "status": "IMPLEMENTED",
+      "source": "kundali_core._dig_bala",
+      "scale": "Virupas",
+      "note": "Directional strength from the house."
+    },
+    "Naisargika Bala": {
+      "status": "IMPLEMENTED_AS_CONSTANT_TABLE",
+      "source": "kundali_core.NAISARGIKA",
+      "scale": "Virupas",
+      "note": "Fixed per-planet natural strength. PROVENANCE WEAKEST OF ALL COMPONENTS: these are classical constants but no local source states them, so they are frozen project data."
+    },
+    "Cheshta Bala": {
+      "status": "IMPLEMENTED_VIA_PAKSHA",
+      "source": "kundali_core._paksha_bala(p, elong) where elong = norm360(moon - sun)",
+      "scale": "Virupas",
+      "note": "Retrograde strength via paksha (angular separation from the Moon). CONVENTION NAMED: the elongation basis is stated in the docstring rather than presented as the only reading."
+    },
+    "Saptavargaja Bala": {
+      "status": "IMPLEMENTED",
+      "source": "kundali_core._saptavargaja_bala",
+      "scale": "ALREADY RUPAS — must not be divided again",
+      "note": "The unit-mix trap: Saptavargaja enters the total as a Rupa figure. A previous error divided it again and drove every planet below its minimum."
+    },
+    "Kala Bala": {
+      "status": "IMPLEMENTED",
+      "source": "kundali_core._kala_bala(p, moon_nak)",
+      "scale": "RUPAS, computed directly",
+      "note": "Computed in Rupas directly, not converted from Virupas."
+    },
+    "Drik Bala": {
+      "status": "NOT_IMPLEMENTED",
+      "source": "none",
+      "value": "0.0 with an explicit note",
+      "note": "Reported as zero WITH a disclosure, not invented. Every Shadbala total in this project therefore omits the Drik correction, so a planet near its minimum is reported optimistically. This is a known, stated upward bias and must be carried into any interpretation that uses Shadbala."
+    }
+  },
+
+  "unit_discipline_frozen": {
+    "virupas": ["Uchcha", "Kendradi", "Dig", "Cheshta", "Naisargika"],
+    "rupas": ["Saptavargaja", "Kala"],
+    "combination": "total_rupas = (sum of the five Virupa components) / 60 + Saptavargaja + Kala",
+    "drik": "excluded from the sum; reported separately as 0.0 with disclosure",
+    "minimums": "kundali_core.SHADBALA_MIN, frozen project constants"
+  },
+
+  "known_open_problems": [
+    "No local source for any component formula, minimum, or the Naisargika table.",
+    "Saptavargaja and Kala conventions vary between traditions; the specific convention used here is named in the method matrix but not cited to an edition.",
+    "Drik Bala is absent, biasing totals upward near the minimum.",
+    "Cheshta Bala is computed through paksha; whether that matches the intended tradition is not established from a source."
+  ],
+
+  "next_required_work": [
+    "Obtain a citable edition for the component formulas, the Naisargika constants and the per-planet minimums.",
+    "Implement Drik Bala, or continue reporting it as a disclosed zero.",
+    "Test each of the six components independently, as the instruction requires, rather than only the combined total.",
+    "Print provenance per component."
+  ],
+
+  "astrology_values_changed": false,
+  "engine_modified": false,
+  "new_numerical_code_written": false
+}

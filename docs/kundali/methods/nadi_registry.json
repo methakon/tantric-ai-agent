@@ -1,0 +1,113 @@
+{
+ "_note": "NADI_METHOD_REGISTRY. Default-deny. Nadi is NOT implemented and may not be until a named tradition supplies a deterministic procedure, a citable source and declared rules. This is a gate, not a to-do list.",
+ "nadi_implemented": false,
+ "any_variant_permitted": false,
+ "traditions": {
+  "nadi.lineage_deity": {
+   "tradition_id": "nadi.lineage_deity",
+   "name": "Nadi Devata (lineage deity)",
+   "lineage": "",
+   "computable": false,
+   "deterministic": false,
+   "grain": "none",
+   "yields": "An association between a graha and a lineage or clan deity, derived in practice from birth asterism and hereditary tradition, not from a fixed published procedure.",
+   "citation": "",
+   "rules": [],
+   "notes": "Widely practised, but the deity assignment varies by lineage and is not given by a single published algorithm. Ishta Devata is handled separately in this project and must not be conflated with Kula Devata, which is a family fact rather than a chart output. See P8.",
+   "gates_met": {
+    "named": false,
+    "deterministic": false,
+    "evidenced": false,
+    "has_rules": false,
+    "computable": false
+   },
+   "unmet": [
+    "named lineage/author",
+    "deterministic procedure",
+    "citable source",
+    "declared rules",
+    "computable output"
+   ],
+   "permitted": false
+  },
+  "nadi.ayanamsa_variant": {
+   "tradition_id": "nadi.ayanamsa_variant",
+   "name": "Nadi Ayanamsa variants",
+   "lineage": "",
+   "computable": true,
+   "deterministic": true,
+   "grain": "natal",
+   "yields": "A sidereal zero-point variant.",
+   "citation": "",
+   "rules": [],
+   "notes": "Computable in principle, but no specific variant is named here. An ayanamsa must be pinned to a published epoch and source; otherwise a 'Nadi ayanamsa' is an undeclared numeric offset. Until named, implementing one would be inventing a constant.",
+   "gates_met": {
+    "named": false,
+    "deterministic": true,
+    "evidenced": false,
+    "has_rules": false,
+    "computable": true
+   },
+   "unmet": [
+    "named lineage/author",
+    "citable source",
+    "declared rules"
+   ],
+   "permitted": false
+  },
+  "nadi.leaf_divination": {
+   "tradition_id": "nadi.leaf_divination",
+   "name": "Nadi leaf / folio divination",
+   "lineage": "",
+   "computable": false,
+   "deterministic": false,
+   "grain": "none",
+   "yields": "A passage from a bound folio, chosen by a rule the practitioner performs at the time of consultation.",
+   "citation": "",
+   "rules": [],
+   "notes": "Not a function of a birth chart. The selection rule is part of the ritual, not a published computation, so it cannot be replayed or tested. It is a divinatory practice and is out of scope for a computational validation protocol.",
+   "gates_met": {
+    "named": false,
+    "deterministic": false,
+    "evidenced": false,
+    "has_rules": false,
+    "computable": false
+   },
+   "unmet": [
+    "named lineage/author",
+    "deterministic procedure",
+    "citable source",
+    "declared rules",
+    "computable output"
+   ],
+   "permitted": false
+  },
+  "nadi.akshobhya_sequences": {
+   "tradition_id": "nadi.akshobhya_sequences",
+   "name": "Akshobhya / Pranava nadi sequencing",
+   "lineage": "",
+   "computable": false,
+   "deterministic": false,
+   "grain": "none",
+   "yields": "A sequence read from a nadi palm-leaf manuscript, with statements of the kind 'for those born under this nadi, X befalls them'.",
+   "citation": "",
+   "rules": [],
+   "notes": "Two distinct obstacles, and both are disqualifying for validation. First, the output is a fixed statement attached to a nadi, so it assigns a life-event summary to a birth asterism and cannot discriminate between people sharing that asterism. Second, the mapping from asterism to nadi is a claim about a particular manuscript, which we do not hold and have not read.",
+   "gates_met": {
+    "named": false,
+    "deterministic": false,
+    "evidenced": false,
+    "has_rules": false,
+    "computable": false
+   },
+   "unmet": [
+    "named lineage/author",
+    "deterministic procedure",
+    "citable source",
+    "declared rules",
+    "computable output"
+   ],
+   "permitted": false
+  }
+ }
+}
