@@ -5,11 +5,145 @@
 **Kuja status: `REGISTERED` → `NOT_IMPLEMENTED`. UNCHANGED. Nothing encoded.**
 **No AV table, engine, chart, risk or prediction logic touched. No PDF. v5 hash untouched.**
 
-## FINAL EVIDENCE CLASSIFICATION: **PARTIALLY VERIFIED**
+**FINAL STATUS: SOURCE GATE PASSED — five-house formation specification frozen.**
+**Implementation remains `NOT_IMPLEMENTED`.**
 
-The 1st-house question is **RESOLVED IN FAVOUR OF THE 1ST HOUSE** at Level 2. The overall rule remains unencoded pending your approval.
+> **Update, 2026-10-05 — human approval given.** The six items requested before
+> implementation are recorded in §11 below. The short form:
+>
+> 1. **PDF/page/image reference** — PDF page index **712 of 818**, printed page
+>    **692** (left-hand folio), item
+>    `brihatparasarahorasastrawithenglishtranslationgirishchandsharmavolume2_433_w`.
+> 2. **Sanskrit reading containing `लग्ने`** —
+>    `लग्ने व्यये सुखे वाऽपि सप्तमे वाऽष्टमे कुजे । शुभदृग्योगहीने च पति हन्ति न संशयः ।।४७।।`
+> 3. **Confidence** — **HIGH.** `लग्ने` read in **20 of 21** independent OCR
+>    passes across 200–600 dpi and psm 6/4/7/11/12. The single dissenting pass
+>    also corrupted `सुखे`→`सुले` and `वाऽष्टमे`→`वाण्टमे`, so it is a degraded
+>    read, not a variant. The confidence gate **passed**, so
+>    `IMAGE_READ_HIGH_CONFIDENCE_REQUIRED` was **not** triggered.
+> 4. **Santhanam discrepancy** — recorded in §12 as a translation /
+>    textual-rendering issue. Santhanam has **not** been amended.
+> 5. **Final specification** — `KUJA_FORMATION_HOUSES = {1, 4, 7, 8, 12}` from
+>    Lagna.
+> 6. **2nd house** — **remains UNSUPPORTED.** No `द्वितीय` occurs in v. 47.
+>
+> **This document's original verdict — SOURCE NOT VERIFIED — is superseded.**
+> It stood on the grounds that no second source could be read. Image-level OCR
+> of a second edition's pages changed that, and the conclusion below is the
+> amended one. The earlier verdict was not quietly edited out of the record.
 
 ---
+
+## 11. Approval-gate record
+
+### 11.1 Exact image reference
+
+| Field | Value |
+|---|---|
+| Archive item | `brihatparasarahorasastrawithenglishtranslationgirishchandsharmavolume2_433_w` |
+| Translator | Girish Chandra Sharma |
+| Volume | II |
+| **PDF page index** | **712** (0-based, of 818) |
+| **Printed page** | **692** (left-hand folio) |
+| Verse band | ~14–18% down the page |
+| Rendering | PyMuPDF `get_pixmap`, 200–600 dpi |
+| OCR | tesseract 5, `-l san`, psm 6/4/7/11/12 |
+| Prerequisite | `san.traineddata` installed to `~/.local/share/tessdata/` |
+| Neighbour check | p.710 = vv. 39–42; p.713 = vv. 52–54 |
+
+### 11.2 The Sanskrit reading
+
+Line 1, as read:
+
+> **लग्ने व्यये सुखे वाऽपि सप्तमे वाऽष्टमे कुजे ।**
+
+Line 2:
+
+> **शुभदृग्योगहीने च पति हन्ति न संशयः ।।४७।।**
+
+Tokenisation — five bhava-locatives, no more:
+
+| Token | House | Note |
+|---|---|---|
+| `लग्ने` | **1** | locative of `लग्न`, the ascendant |
+| `व्यये` | 12 | `व्यय` |
+| `सुखे` | 4 | `सुख` |
+| `वाऽपि` | — | sandhi `va + api`; couples `सुखे` to `सप्तमे` |
+| `सप्तमे` | 7 | |
+| `वाऽष्टमे` | 8 | sandhi `va + asthame`, "and the 8th" |
+| `कुजे` | — | `कुज` = Mars, the subject |
+
+The enumeration is **grammatically closed** at five — a `च` + list pattern with no continuation marker — so a sixth house is not hiding after `कुजे`.
+
+### 11.3 Confidence
+
+| Measure | Result |
+|---|---|
+| OCR passes run | 21 (5 dpi × 4 psm, plus extras) |
+| Passes reading `लग्ने` | **20** |
+| Passes not reading it | 1 — and that pass also corrupted two other words in the same line |
+| Distinct readings | 3, differing only by danda spacing and the one degraded pass |
+
+**Verdict: HIGH confidence.** The confidence gate passed; the
+`IMAGE_READ_HIGH_CONFIDENCE_REQUIRED` stop was not triggered.
+
+### 11.4 Final five-house specification
+
+```
+KUJA_FORMATION_HOUSES    = {1, 4, 7, 8, 12}
+KUJA_FORMATION_REFERENCE = "ascendant"
+Source                   = BPHS Ch. 80, v. 47
+Exact text               = लग्ने व्यये सुखे वाऽपि सप्तमे वाऽष्टमे कुजे ।
+                            शुभदृग्योगहीने च पति हन्ति न संशयः ।।४७।।
+Recorded in              = methods/dosha_registry.py, as a frozen
+                            formation_rule with exact_text and source_ref
+Implementation           = NOT_IMPLEMENTED (no executor exists)
+```
+
+### 11.5 What was deliberately not introduced
+
+| Not introduced | Why |
+|---|---|
+| 2nd house | No `द्वितीय` in v. 47. The six-house modern rule has no support in any inspected primary text. |
+| Moon reference | Unstated in every text inspected. |
+| Venus reference | Unstated in every text inspected. |
+| Numerical orb | Source specifies none. `orb_tolerance = UNSPECIFIED_BY_SOURCE`. |
+| Severity grades | Absent from the passage. `strength_rules = []`. |
+| Further bhanga conditions | Own/exaltation sign, Jupiter's aspect, 7th-lord placements — unsourced. |
+| Interpretation text | Written only after a computed result exists. |
+
+The benefic clause stayed with **formation** — `शुभदृग्योगहीने` qualifies when the yoga forms; it is not a cancellation. Encoding it as a bhanga would invert the source.
+
+---
+
+## 12. Santhanam discrepancy — recorded, not corrected
+
+| | |
+|---|---|
+| **Santhanam English, vol. II** | *"The woman born becomes a widow, if Mars be in the 12th, 4th, 7th or 8th from the Ascendant unaspected by or associated with any benefic."* — **four** houses, no Lagna term. |
+| **Girish/Chatur Sanskrit, from page image** | `लग्ने व्यये सुखे वाऽपि सप्तमे वाऽष्टमे कुजे` — **five** houses, `लग्ने` present. |
+| **Classification** | Translation / textual-rendering discrepancy **within one tradition** (both are BPHS Ch. 80 v. 47). |
+| **Action taken** | Recorded. Santhanam has **not** been amended anywhere, and no claim is made that the two recensions are identical. |
+| **Why not two separate specs** | Same work, same chapter, same verse. A rendering difference within one text is a translation issue, not a second competing rule. Two specs would imply two doctrines where the evidence shows one passage rendered two ways. |
+| **Still open** | *Why* the English omits it — translator's choice, or a materially different underlying recension — remains **unestablished**. This bounds how much weight any single BPHS edition can carry, and is not settled by the present evidence. |
+
+---
+
+## 13. Evidence classification (final)
+
+| Element | Classification |
+|---|---|
+| Formation houses 1 / 4 / 7 / 8 / 12 from Lagna | **VERIFIED** |
+| Benefic-free condition, attached to formation | **VERIFIED** |
+| v. 47 female, v. 48 extends to male | **VERIFIED** |
+| Mutual-marriage bhanga, v. 49 | **VERIFIED** |
+| 2nd house | **NOT SUPPORTED** |
+| Moon / Venus reference | **NOT SUPPORTED** |
+| Orb / boundary | **UNRESOLVED — UNSPECIFIED_BY_SOURCE** |
+| Strength / severity | **NOT SUPPORTED — absent** |
+| Cause of the Santhanam discrepancy | **UNRESOLVED** |
+
+**Source gate: PASSED.** Implementation status: **NOT_IMPLEMENTED**, pending an executor plus the brief's per-dosha tests.
 
 ## 1. Source metadata
 

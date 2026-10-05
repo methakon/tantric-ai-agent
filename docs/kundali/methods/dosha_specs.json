@@ -8,38 +8,72 @@
  "doshas": {
   "dosha.kuja": {
    "dosha_id": "dosha.kuja",
-   "name": "Kuja Dosha (Manglik)",
-   "school": "UNRESOLVED — to be named once the source is identified. Kuja/Manglik dosha is described differently in different texts, and the differences are not cosmetic: they change which houses count and from which reference point.",
+   "name": "Kuja Dosha (Manglik) — widowhood yoga, BPHS Ch. 80",
+   "school": "Parashari — Bhāratī / female-horoscope (Stri) chapter of BPHS, as transmitted. The inspected passage is written about a woman's horoscope and its consequence is widowhood; v. 48 extends the yoga to the male. The general both-sexes 'Manglik' marriage-compatibility label is a LATER expansion of this yoga and is not the same claim. Treated as one school because one text and one verse range supply it.",
    "source": {
-    "title": "",
-    "author": "",
-    "editor": "",
-    "translator": "",
-    "edition": "",
+    "title": "Brihat Parāśara Horā Śāstra",
+    "author": "Mahārishi Parāśara (traditionally); the work is a dialogue with Maitreya. Text transmitted; authorship traditional.",
+    "editor": "Girish Chandra Sharma (independent English translation with Sanskrit) — the edition actually read for the Sanskrit",
+    "translator": "Girish Chandra Sharma",
+    "edition": "Vol. II",
     "year": "",
-    "chapter": "",
-    "verse": "",
-    "page": "",
+    "chapter": "Ch. 80 (Stri / female horoscope)",
+    "verse": "v. 47 (formation); vv. 48-49 (mutual-marriage bhanga)",
+    "page": "PDF page index 712 of 818; printed page 692 (left-hand folio)",
     "table": "",
-    "url": "",
-    "local_path": "",
-    "inspected": false,
-    "note": "No citable source identified. See methods/sources/dosha_source_search.json for the search that was performed."
+    "url": "https://archive.org/details/brihatparasarahorasastrawithenglishtranslationgirishchandsharmavolume2_433_w",
+    "local_path": "archive.org item brihatparasarahorasastrawithenglishtranslationgirishchandsharmavolume2_433_w",
+    "inspected": true,
+    "note": "READ AT IMAGE LEVEL. The archive's own OCR layer for this item is unusable (0 English words across 23,919 lines), so the page images were rendered with PyMuPDF and OCR'd directly with tesseract in Devanagari (san.traineddata). The archive OCR was never trusted as text. Confidence test for the decisive word: `lagne` read in 20 of 21 independent OCR passes spanning 200-600 dpi and psm 6/4/7/11/12; the single dissenting pass also corrupted `sukhe` and `va'ashtame`, so it is a degraded read rather than a genuine variant."
    },
-   "source_version": "",
-   "formation_rules": [],
-   "cancellation_rules": [],
+   "source_version": "Santhanam English (Ranjan Publications) collated against the Girish/Chatur Sanskrit; see the discrepancy note in `notes`. Santhanam vol. 2's publication year was never established from the volume itself.",
+   "formation_rules": [
+    {
+     "rule_id": "kuja.formation.bphs_ch80_v47",
+     "school": "Parashari — BPHS Ch. 80",
+     "statement": "The yoga forms when Kuja (Mars) occupies the 1st, 4th, 7th, 8th or 12th bhava from the Ascendant, the chart being free of benefic aspect and benefic association.",
+     "reference": "ascendant",
+     "houses": [
+      1,
+      4,
+      7,
+      8,
+      12
+     ],
+     "grahas": [
+      "Mars"
+     ],
+     "exact_text": "लग्ने व्यये सुखे वाऽपि सप्तमे वाऽष्टमे कुजे । शुभदृग्योगहीने च पति हन्ति न संशयः ।।४७।।",
+     "source_ref": "BPHS Ch. 80, v. 47 — Girish/Chatur vol. 2, PDF page index 712, printed page 692",
+     "notes": "Tokenisation of line 1: laagne (1), vyaye (12), sukhe (4), va'pi (sandhi: va+api, couples sukhe to saptame), saptame (7), va'ashtame (sandhi: va+asthame, 'and the 8th'), kuje (Mars). FIVE bhava-locatives. `shubhadrigyogahine` is a condition of FORMATION — the chart being free of benefic aspect AND association — and is therefore NOT encoded as a cancellation. The 2nd house does NOT appear: no `dvityiya` is present in the verse."
+    }
+   ],
+   "cancellation_rules": [
+    {
+     "rule_id": "kuja.bhanga.bphs_ch80_v49",
+     "school": "Parashari — BPHS Ch. 80",
+     "statement": "If the girl who would kill her husband marries a man who would kill his wife, the widowhood yoga is broken.",
+     "test": "mutual marriage between two parties each holding the yoga",
+     "source_ref": "BPHS Ch. 80, v. 49 — Girish/Chatur vol. 2, PDF page index 712, printed page 692",
+     "exact_text": "स्व्रीहन्त्रा परिणीता चेत् पतिहन्त्री कुमारिका। तदा वैधव्ययोगस्य भंगो भवति निश्चयात्‌ ।।४९।।",
+     "notes": "v. 48 supplies the male side of the same yoga (`naro'pi cha`); v. 49 supplies its break. `bhango bhavati` — the yoga is broken/cancelled. Kept SEPARATE from formation: a cancelled yoga and an absent yoga are different findings."
+    }
+   ],
    "strength_rules": [],
-   "chart_scope": "D1 — TO BE CONFIRMED against the source",
-   "required_inputs": [],
-   "orb_tolerance": "TO BE CONFIRMED — orb width for a house-boundary conjunction is a convention and must be sourced, not assumed",
-   "interpretation": "NOT WRITTEN. An interpretation drafted before the rule is frozen would only rationalise whatever the code returned.",
+   "chart_scope": "D1 — TO BE CONFIRMED. The inspected verse is written about a woman's horoscope; v. 48 extends the yoga to the male, but whether the dosha is co-extensive with this widowhood yoga, and which vargas are involved, is NOT settled by the text.",
+   "required_inputs": [
+    "Mars bhava from the Ascendant",
+    "benefic aspects on Mars",
+    "benefic association with Mars"
+   ],
+   "orb_tolerance": "UNSPECIFIED_BY_SOURCE — the passage uses bhava language and states no degree orb, no sign-boundary rule and no exception. No numerical orb has been substituted, and none may be defaulted.",
+   "interpretation": "NOT WRITTEN. Interpretation is downstream of a computed result, and there is no computed result. Note also that the verse's stated consequence is widowhood — an extreme classical claim — which is not a licence to restate it as a modern marriage-compatibility verdict.",
    "implementation_status": "REGISTERED",
    "validation_status": "NOT_APPLICABLE",
-   "notes": "LEADS TO CHECK, NOT RULES. The commonly taught formation places Mars in certain houses counted from the ascendant; a competing account counts from Mars itself, and a further tradition counts from the Moon. These are different specifications with different answers, so none is encoded here. Cancellation (bhanga) is likewise left empty. Next step: obtain an identified edition, quote the passage, record chapter and verse, then freeze formation_rules.",
+   "notes": "SOURCE GATE PASSED 2026-10-05. The five-house formation specification above is source-derived and frozen. It is NOT executable: implementation_status remains REGISTERED and result_state remains NOT_IMPLEMENTED until an executor is written and tested. | TEXTUAL DISCREPANCY, RECORDED NOT CORRECTED. The Santhanam English renders v. 47 as 'Mars be in the 12th, 4th, 7th or 8th from the Ascendant' — four houses, the Lagna term absent. The Sanskrit read from the Girish/Chatur page image carries `lagne` — five houses. This is recorded as a translation/textual-rendering discrepancy within one tradition. Santhanam has NOT been silently amended anywhere, and no claim is made that the recensions are identical. | STILL UNSUPPORTED, DELIBERATELY NOT ENCODED: the 2nd house (no `dvityiya` occurs in v. 47) — the popular six-house rule has no support in any inspected primary text; Moon and Venus reference points — unsourced in every text inspected; any numerical orb — `orb_tolerance` stays UNSPECIFIED_BY_SOURCE; any severity or strength grading — absent from the passage; further bhanga conditions popular sources assert (own/exaltation sign, Jupiter's aspect, 7th-lord placements) — unsourced. | IMPLEMENTATION still requires the brief's per-dosha tests: positive, negative, boundary, bhanga, and wrong-chart-scope rejection. | SEX SCOPE is not settled: v. 47 concerns a woman's horoscope and v. 48 extends the yoga to the male, but whether the dosha is co-extensive with this widowhood yoga is a question the text does not answer. chart_scope therefore stays TO BE CONFIRMED.",
    "id": "dosha.kuja",
-   "source_citable": false,
-   "blocked_reason": "no source identified; a dosha rule recalled from memory is not a specification",
+   "source_citable": true,
+   "blocked_reason": "rules are frozen and sourced, but no implementation exists yet; a sourced specification is not executable code",
    "computable": false,
    "result_state": "NOT_IMPLEMENTED"
   }

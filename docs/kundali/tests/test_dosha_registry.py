@@ -58,24 +58,19 @@ class TestSchema(unittest.TestCase):
                              source=DR.Source(), implementation_status=bad)
 
 
-class TestKujaIsUnsourced(unittest.TestCase):
-    """Kuja/Manglik: registered, unsourced, no rules, no verdict."""
+class TestKujaIsNotComputableYet(unittest.TestCase):
+    """Kuja/Manglik: source gate PASSED, so rules are frozen — but it must
+    still not produce a verdict.
 
-    def test_status_is_registered(self):
+    This class previously asserted the spec was UNSOURCED with empty rules.
+    That premise was correct until 2026-10-05 and is now false, so the class
+    was rewritten rather than left to fail: a test asserting an obsolete
+    premise is worse than no test, because it looks like coverage.
+    """
+
+    def test_status_is_still_registered(self):
         self.assertEqual(DR.get("dosha.kuja").implementation_status,
                          "REGISTERED")
-
-    def test_formation_rules_empty(self):
-        self.assertEqual(DR.get("dosha.kuja").formation_rules, [])
-
-    def test_cancellation_rules_empty(self):
-        self.assertEqual(DR.get("dosha.kuja").cancellation_rules, [])
-
-    def test_school_unresolved_not_guessed(self):
-        self.assertIn("UNRESOLVED", DR.get("dosha.kuja").school)
-
-    def test_source_not_citable(self):
-        self.assertFalse(DR.get("dosha.kuja").source.is_citable())
 
     def test_not_computable(self):
         self.assertFalse(DR.get("dosha.kuja").computable())
@@ -83,9 +78,16 @@ class TestKujaIsUnsourced(unittest.TestCase):
     def test_result_state_is_not_implemented(self):
         self.assertEqual(DR.get("dosha.kuja").result_state(), "NOT_IMPLEMENTED")
 
-    def test_blocked_reason_states_the_source_problem(self):
+    def test_assert_computable_still_raises(self):
+        """Rules being frozen does not make the dosha computable."""
+        with self.assertRaises(PermissionError):
+            DR.assert_computable("dosha.kuja")
+
+    def test_blocked_reason_is_about_implementation_not_sourcing(self):
+        """The block reason must no longer blame a missing source — that
+        would misdescribe the current state."""
         r = DR.get("dosha.kuja").blocked_reason()
-        self.assertIn("source", r.lower())
+        self.assertIn("implementation", r.lower())
 
 
 class TestNoVerdictWithoutSource(unittest.TestCase):
@@ -200,6 +202,101 @@ class TestPromotionGate(unittest.TestCase):
     def test_unknown_dosha_raises(self):
         with self.assertRaises(KeyError):
             DR.get("dosha.does_not_exist")
+
+
+class TestKujaSpecIsFrozenButNotExecutable(unittest.TestCase):
+    """The source gate PASSED: rules are frozen. Implementation has NOT.
+
+    Both halves matter. Frozen rules mean the engine stops guessing. Still
+    NOT_IMPLEMENTED means no verdict is emitted until an executor exists and is
+    tested. A spec that quietly jumped to IMPLEMENTED would satisfy neither.
+    """
+
+    def setUp(self):
+        self.s = DR.get("dosha.kuja")
+
+    def test_still_not_implemented(self):
+        self.assertEqual(self.s.implementation_status, "REGISTERED")
+        self.assertEqual(self.s.result_state(), "NOT_IMPLEMENTED")
+        self.assertFalse(self.s.computable())
+
+    def test_evaluate_still_refuses(self):
+        out = DR.evaluate("dosha.kuja", {"Mars": {"sign_number": 1}})
+        self.assertEqual(out["state"], "NOT_IMPLEMENTED")
+        self.assertEqual(out["rules_fired"], [])
+
+    def test_source_is_now_citable(self):
+        self.assertTrue(self.s.source.is_citable())
+        self.assertEqual(self.s.source.chapter, "Ch. 80 (Stri / female horoscope)")
+        self.assertIn("712", self.s.source.page)
+
+    # -- the frozen formation specification ------------------------------
+    def test_formation_houses_are_the_source_five(self):
+        self.assertEqual(DR.KUJA_FORMATION_HOUSES, frozenset({1, 4, 7, 8, 12}))
+
+    def test_rule_houses_match_the_constant(self):
+        self.assertEqual(len(self.s.formation_rules), 1)
+        self.assertEqual(set(self.s.formation_rules[0].houses),
+                         set(DR.KUJA_FORMATION_HOUSES))
+
+    def test_reference_point_is_ascendant(self):
+        self.assertEqual(DR.KUJA_FORMATION_REFERENCE, "ascendant")
+        self.assertEqual(self.s.formation_rules[0].reference, "ascendant")
+
+    def test_verse_text_contains_lagna(self):
+        """The decisive word. If this ever changes, the spec's basis has."""
+        self.assertIn("लग्ने", self.s.formation_rules[0].exact_text)
+
+    def test_verse_text_has_no_second_house(self):
+        txt = self.s.formation_rules[0].exact_text
+        self.assertNotIn("द्वितीय", txt)
+        self.assertNotIn("दुतीय", txt)
+
+    def test_second_house_is_absent_from_the_house_set(self):
+        self.assertNotIn(2, DR.KUJA_FORMATION_HOUSES)
+
+    def test_benefic_clause_is_in_formation_not_cancellation(self):
+        """`shubhadrigyogahine` qualifies FORMATION. Encoding it as a
+        cancellation would invert the source."""
+        fr = self.s.formation_rules[0]
+        self.assertIn("benefic", fr.statement)
+        self.assertIn("condition of FORMATION", fr.notes)
+        for cr in self.s.cancellation_rules:
+            self.assertNotIn("benefic aspect", cr.statement)
+
+    # -- separation of the three specifications --------------------------
+    def test_cancellation_is_separate_and_sourced(self):
+        self.assertEqual(len(self.s.cancellation_rules), 1)
+        cr = self.s.cancellation_rules[0]
+        self.assertIn("49", cr.source_ref)
+        self.assertTrue(cr.exact_text)
+
+    def test_strength_rules_remain_empty(self):
+        """No severity gradation exists in the passage; none may be invented."""
+        self.assertEqual(self.s.strength_rules, [])
+
+    # -- things that must NOT have appeared ------------------------------
+    def test_orb_is_unspecified_not_invented(self):
+        self.assertTrue(self.s.orb_tolerance.startswith("UNSPECIFIED_BY_SOURCE"))
+
+    def test_chart_scope_still_to_be_confirmed(self):
+        self.assertIn("TO BE CONFIRMED", self.s.chart_scope)
+
+    def test_no_moon_or_venus_reference(self):
+        blob = (self.s.formation_rules[0].statement +
+                self.s.formation_rules[0].notes).lower()
+        for word in ("moon", "chandra", "venus", "shukra"):
+            self.assertNotIn(f"counted from the {word}", blob)
+
+    def test_interpretation_still_not_written(self):
+        self.assertTrue(self.s.interpretation.startswith("NOT WRITTEN"))
+
+    def test_discrepancy_is_recorded_not_silently_corrected(self):
+        n = self.s.notes
+        self.assertIn("DISCREPANCY", n)
+        self.assertIn("Santhanam", n)
+        self.assertIn("lagne", n.lower())
+        self.assertIn("NOT been silently amended", n)
 
 
 class TestPerDoshaSlotsAreEmpty(unittest.TestCase):
