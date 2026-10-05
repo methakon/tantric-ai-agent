@@ -1,0 +1,55 @@
+{
+  "_record": "P1A image-level reconnaissance — method proven on P1B, Ashtakavarga Ch.66 NOT yet located in this volume",
+  "_date": "2026-10-05",
+  "_status": "NO AV CHANGE. AV_TABLES untouched. This is a record of a proven method and an unfinished search, so the next session does not repeat it.",
+
+  "method_proven": {
+    "problem": "Archive OCR text layers for these BPHS scans are unusable. The Girish/Chatur vol.2 layer had 0 English words across 23,919 lines. Santhanam vol.2's Ch.66 contributor prose silently drops contributor planet names, yielding 277 vs the expected 337.",
+    "solution_that_worked": "Render page images with PyMuPDF, then OCR the IMAGES with tesseract in Devanagari.",
+    "prerequisite": "tesseract was installed but had only 'eng' and 'osd'. san.traineddata (12,404,680 bytes) was installed to ~/.local/share/tessdata/ and selected via TESSDATA_PREFIX. Without this the method cannot run at all.",
+    "proof": "P1B verse 47 was located and read at PDF page index 712 of 818 (printed page 692), yielding the house list 1/12/4/7/8 with laagne stable across 260/400/500 dpi and two --psm modes.",
+    "note_on_tools": "vision_analyze is unusable in this environment - the configured provider returns 401 Invalid API-key. Image reading had to be done by local OCR instead. That is a separate config fault worth fixing."
+  },
+
+  "girish_chatur_vol2_chapter_map": {
+    "file": "girish_vol2.pdf",
+    "pages": 818,
+    "confirmed": {
+      "712": "Ch. 80 (Stri), vv. 47-51 — verse 47 confirmed with printed numeral",
+      "710": "Ch. 80, vv. 39-42",
+      "713": "Ch. 80, vv. 52-54",
+      "660": "Ch. 79 — heading read as 'atha satvadigunaphaladhyayah', i.e. the Guna chapter",
+      "620": "birth-time / prasutikala material, not a numbered chapter opening",
+      "700": "Ch. 80 region, vv. 17-23"
+    },
+    "implication": "Ch. 79 sits at page index 660 while Ch. 80 sits at 712, roughly 52 pages apart. Ch. 66 should therefore lie near page index 500-560 by linear extrapolation.",
+    "searched_without_success": "Page ranges 500-620 and 430-620 were OCR'd looking for an 'ashtakavarga' chapter heading and for passages dense in graha names plus bhavas. No hit. At p500 the OCR degenerates into bracket-like noise; at p540 and p580 only the commentary layer is legible and it renders as digit noise.",
+    "why_it_failed": "This volume's chapter order does not align with the Santhanam numbering used in the earlier discovery pass, so the offset cannot be transferred between editions. The heading glyph that worked on p660 ('atha ... adhyayah') was not recovered elsewhere, possibly because the running head is cropped or in a different hand on inner leaves.",
+    "not_done": "Ch. 66 in this volume has NOT been located. No AV contributor row has been read from an image."
+  },
+
+  "girdhari_lal_1944": {
+    "file": "girdhari1944.pdf",
+    "pages": 852,
+    "stated_chapter_count": 71,
+    "target": "Ch. 80 vv. 47-49",
+    "result": "NO HIT",
+    "search_performed": "Full sweep of all 426 even-numbered pages (step 2) at 150 dpi, searching the verse-47 opening words 'lagne vyaye' / 'vyaye sukhe'.",
+    "conclusion": "Empirically consistent with the edition's own statement that it contains 71 chapters, so Ch. 80 lies beyond its extent. This edition cannot serve as the independent witness for the Kuja passage. is_citable = false for that passage.",
+    "still_useful_for": "It DOES contain a Ch. 66 and is a candidate for the Ashtakavarga contributor rows, which remain unresolved."
+  },
+
+  "state_unchanged": {
+    "AV_TABLES": ["Sun", "Moon", "Mars", "Saturn"],
+    "AV_TABLES_UNVERIFIED": ["Mercury", "Jupiter", "Venus"],
+    "expected_total_sum": 337,
+    "SAV_reported": false,
+    "kuja": "REGISTERED / NOT_IMPLEMENTED, formation_rules empty",
+    "drik_bala": "still a disclosed zero",
+    "nadi": "still closed"
+  },
+
+  "next_step_for_p1a": "Locate BPHS Ch. 66 by image OCR in an edition whose chapter order is confirmed first, rather than extrapolating from another edition's numbering. Girdhari Lal 1944 is the better candidate for this particular task precisely because it is a different recension with a known 71-chapter extent. Read the Rekhaprada contributor rows from the images and check the per-body totals against 48/49/39/54/56/52/39 = 337 before encoding anything.",
+
+  "hard_rule_still_in_force": "Do not encode a contributor row that cannot be read. A total that fails to reproduce is a finding to report, never a number to fit."
+}
