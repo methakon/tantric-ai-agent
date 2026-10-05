@@ -205,15 +205,28 @@ The image-level English prose confidently reads:
 - 11th: all except Saturn.
 - 12th: Saturn.
 
-The text at the page break contains the phrase “Venus, the Moon,” followed
-by the continuation on the next page. The full 4th-house contributor list is
-not confidently readable from the inspected image. It is recorded as:
+The text at the page break contains the phrase **“Venus, the Moon,”** at the
+bottom of PDF index 368 / printed page 859. The subsequent page begins with
+“the Ascendant, Mercury and Saturn in the 5th”; it does not supply a
+confidently readable complete 4th-house list. The 4th-house contributor list
+is therefore recorded as:
 
 ```text
 4th-house contributor list = UNREADABLE_FROM_SOURCE_IMAGE
 ```
 
-The phrase before the page break is not used to fill that cell by context.
+The phrase before the page break is not assigned to the 4th-house cell by
+context. A high-resolution recheck was run on the actual Santhanam page images:
+900-DPI and 1200-DPI crops, Tesseract English modes 3/4/6/11/12, plus the
+embedded page text. All passes stop at or vary around the same page-break
+region; none produces a stable complete 4th-house contributor list. The
+configured visual inspection provider also remains unavailable (`401 Invalid
+API-key`), so no visual claim beyond the readable OCR/image evidence is made.
+
+The source phrase “the 1st and the 4th” is visible in the preceding sentence,
+but its contributor-list scope is not sufficiently recoverable at the page
+break to assign cells safely. It is recorded as `UNCERTAIN_READ`, not used as
+a completed Jupiter row.
 
 ### Source/table conflict
 
