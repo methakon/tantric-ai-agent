@@ -1,0 +1,72 @@
+{
+  "document": "SWARNA SEKHAR DHAR — KUNDALI VERSION 2",
+  "purpose": "source-audited presentation preview; not final dossier",
+  "generated": "2026-10-06T01:50:49+05:30",
+  "input_commit": "bb2b02d95ad489543bfec8f450d70d15ae9c0713",
+  "branch": "feat/kundali-html-render-architecture",
+  "requested_checkpoint": "51812d5",
+  "v5_sha256": "bdecf2a6bcb2884d575c9f817312eaa5f14bff7aeba436536362b495614d4ca3",
+  "html": "kundali/out/v2/kundali_v2_preview.html",
+  "pdf": "kundali/out/v2/kundali_v2_preview.pdf",
+  "toc": {
+    "first": {
+      "status": 3,
+      "birth": 4,
+      "legend": 5,
+      "d1": 6,
+      "placements": 8,
+      "vargas": 9,
+      "panchanga": 10,
+      "jaimini": 11,
+      "audit": 13,
+      "av": 15,
+      "kuja": 17,
+      "validation": 19,
+      "limits": 22,
+      "technical": 23
+    },
+    "second": {
+      "status": 3,
+      "birth": 4,
+      "legend": 5,
+      "d1": 6,
+      "placements": 8,
+      "vargas": 9,
+      "panchanga": 10,
+      "jaimini": 11,
+      "audit": 13,
+      "av": 15,
+      "kuja": 17,
+      "validation": 19,
+      "limits": 22,
+      "technical": 23
+    },
+    "missing": []
+  },
+  "assets": [
+    "kundali/v2/assets/d1.svg",
+    "kundali/v2/assets/d9.svg",
+    "kundali/v2/assets/d10.svg",
+    "kundali/v2/assets/d7.svg",
+    "kundali/v2/assets/dasha_timeline.svg"
+  ],
+  "source_hashes": {
+    "kundali/out/kundali_data.json": "3b2bd9a61d196c906a80e2b168e83563d248a9f835951fdf19037caca1cb1a7e",
+    "kundali/out/risk_timeline.json": "75186f1c8d8da4523ada6c72b813240cc4fd653fc5781b563cc101c409231744",
+    "kundali/out/reference_verification.json": "baaeceebb92b5a385b6bd7100234ef93007216b5912a2d3fded2fd3649fb2cfa",
+    "kundali/out/life_event_validation.json": "fb514034129310508c25eedf526e383c8cbcd32887a5a3ff1508c3aa7dcaf416",
+    "kundali/methods/sources/ashtakavarga_source.json": "b58e1e548de9c2d5bbc95891c09ef2d0dadd1bc47071a79493cdefb0144ee691",
+    "kundali/methods/sources/shadbala_source.json": "72e48137335f45b56b53b28aec0d0ba606c5080db9049feaecd04995dabbe2b1",
+    "kundali/sources/P1A_SOURCE_VERIFICATION.md": "cb15a5d8c8b15ba680cd68fa83e25a7de2fd5e059640603b1022c460baf7e439",
+    "kundali/sources/KUJA_IMAGE_SOURCE_REVIEW.md": "539b0c0a4e454cd9bf73e383e350b3b5ed094ca654406719c2d57a560e5b528b",
+    "kundali/sources/KUJA_EXECUTOR_IMPLEMENTATION.md": "c7843ecc8dd35b4947e32f4c82d80e0473dfb5df0bfa2163691be590fe4af52d",
+    "kundali/Life_Event_Validation_Report.md": "5cbea537e3a34f9a02416c1f40f3bb42dfd8af7f43fd2f57c61390f440257e9e",
+    "kundali/out/kundali_1981_2053_v5.pdf": "bdecf2a6bcb2884d575c9f817312eaa5f14bff7aeba436536362b495614d4ca3"
+  },
+  "protected_state": {
+    "av_tables": "UNCHANGED",
+    "sav": "UNREPORTED",
+    "personal_kuja_evaluation": "NOT RUN",
+    "final_1981_2053_dossier": "NOT GENERATED"
+  }
+}

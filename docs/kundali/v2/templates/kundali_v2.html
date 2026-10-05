@@ -1,0 +1,431 @@
+{% macro chip(label, tone='neutral') -%}
+<span class="status status-{{ tone|lower|replace(' ', '-') }}">{{ label }}</span>
+{%- endmacro %}
+
+{% macro section_heading(section) -%}
+<h1 id="{{ section.slug }}"><span class="section-number">{{ "%02d"|format(section.number) }}</span> · {{ section.title }}</h1>
+{%- endmacro %}
+
+{% macro key_value(label, value, tone='neutral') -%}
+<div class="kv"><div class="kv-label">{{ label }}</div><div class="kv-value">{{ value }}{% if tone != 'neutral' %} {{ chip(tone|upper, tone) }}{% endif %}</div></div>
+{%- endmacro %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SWARNA SEKHAR DHAR — Janma Kundli &amp; Life Dossier — Version 2</title>
+  <link rel="stylesheet" href="v2.css">
+</head>
+<body>
+  <div class="cover">
+    <div class="cover-topline">TANTRA / KUNDALI · SOURCE-AUDITED PRESENTATION</div>
+    <div class="cover-rule"></div>
+    <div class="cover-kicker">VERSION 2</div>
+    <h1>SWARNA SEKHAR DHAR</h1>
+    <h2>JANMA KUNDLI &amp; LIFE DOSSIER</h2>
+    <p class="cover-subtitle">Verified Calculations, Source Review &amp; Method Status</p>
+    <div class="cover-badge">NOT FINAL DOSSIER</div>
+    <div class="cover-warning">
+      <div class="warning-label">IMPORTANT STATUS</div>
+      <p><strong>Event-level predictive validity: NOT ESTABLISHED.</strong><br>
+      Historical back-testing produced a <strong>NO-GO</strong> result.<br>
+      Astrological interpretations in this document are traditional/interpretive
+      and should not be treated as empirically validated predictions.</p>
+    </div>
+    <div class="cover-grid">
+      <div><span>Birth</span><strong>{{ birth.date }} · {{ birth.time }} IST</strong></div>
+      <div><span>Place</span><strong>{{ birth.place }}</strong></div>
+      <div><span>Calculation</span><strong>{{ birth.ayanamsha }} · {{ birth.house_system }}</strong></div>
+      <div><span>Build scope</span><strong>Core source-audited presentation only</strong></div>
+    </div>
+    <div class="cover-footer">
+      <span>Generated {{ generated }}</span>
+      <span>V2 · WAITING FOR HUMAN REVIEW</span>
+    </div>
+  </div>
+
+  <section class="toc front-section">
+    <div class="eyebrow">CONTENTS</div>
+    <h2>Table of Contents</h2>
+    <p class="lede">This edition presents the verified calculation layer and the
+      current source/method status. It does not present the final 1981–2053
+      year-wise dossier.</p>
+    <table class="toc-table">
+      <thead><tr><th>Section</th><th class="page-col">Page</th></tr></thead>
+      <tbody>
+      {% for section in sections %}
+        <tr><td><a href="#{{ section.slug }}">{{ "%02d"|format(section.number) }} · {{ section.title }}</a></td><td class="page-col">{{ toc_pages.get(section.slug, '—') }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <div class="callout neutral">
+      <strong>Reading rule.</strong> A visible status label is part of the result.
+      “SOURCE VERIFIED” does not mean “implemented”; “TRADITIONAL INTERPRETATION”
+      does not mean “validated prediction”; “PARTIAL” and “UNRESOLVED” are active
+      disclosures, not omitted work.
+    </div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[0]) }}
+    <div class="hero-status">
+      <div class="hero-status-label">VERSION 2 · SOURCE-AUDITED EDITION</div>
+      <div class="hero-status-title">NOT FINAL 1981–2053 LIFE DOSSIER</div>
+      <p>V2 is a controlled presentation of current evidence. It preserves
+        incomplete methods instead of filling them with modern convention,
+        arithmetic inference, or unsupported interpretation.</p>
+    </div>
+    <div class="grid-3">
+      <div class="status-card"><span>Historical validation</span><strong>{{ chip('NO-GO', 'nogo') }}</strong><small>Event-level predictive validity is not established.</small></div>
+      <div class="status-card"><span>Ashtakavarga</span><strong>{{ chip('PARTIAL', 'partial') }}</strong><small>4 of 7 production tables; SAV unreported.</small></div>
+      <div class="status-card"><span>Kuja personal verdict</span><strong>{{ chip('NOT COMPUTED', 'unresolved') }}</strong><small>Executor exists; authorized scope is empty.</small></div>
+    </div>
+    <h2>Explicit exclusions from this build</h2>
+    <ul class="checklist">
+      <li>No yearly 1981–2053 prediction narrative.</li>
+      <li>No final production dossier or replacement of the protected v5 PDF.</li>
+      <li>No Mercury, Jupiter or Venus values added to production Ashtakavarga tables.</li>
+      <li>No Sarvashtakavarga total calculated or reported.</li>
+      <li>No personal Kuja/Manglik verdict and no chart-scope authorization.</li>
+      <li>No completion of KP sub-lords, Tajika, D27, Nadi or unsupported Shadbala formulas.</li>
+    </ul>
+    <div class="callout nogo-box">
+      <strong>Required warning:</strong> Event-level predictive validity:
+      <strong>NOT ESTABLISHED.</strong> Historical back-testing produced a
+      <strong>NO-GO</strong> result. Astrological interpretations in this
+      document are traditional/interpretive and should not be treated as
+      empirically validated predictions.
+    </div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[1]) }}
+    <div class="two-col">
+      <div class="panel">
+        <h2>Birth record</h2>
+        {{ key_value('Subject', birth.name) }}
+        {{ key_value('Local date', birth.date) }}
+        {{ key_value('Local time', birth.time ~ ' · ' ~ birth.timezone) }}
+        {{ key_value('Place', birth.place) }}
+        {{ key_value('UTC instant', birth.utc) }}
+        {{ key_value('Julian day UT', birth.jd) }}
+      </div>
+      <div class="panel">
+        <h2>Calculation basis</h2>
+        {{ key_value('Engine', birth.engine) }}
+        {{ key_value('Ayanamsha', birth.ayanamsha ~ ' · ' ~ birth.ayanamsha_degrees ~ '°') }}
+        {{ key_value('Node convention', birth.node_type) }}
+        {{ key_value('House basis', birth.house_system) }}
+        {{ key_value('Coordinates', '%.7f N · %.7f E'|format(birth.lat, birth.lon)) }}
+        {{ key_value('Coordinate source', birth.location_source) }}
+      </div>
+    </div>
+    <div class="callout info">
+      <strong>Data status.</strong> The displayed values are read from the frozen
+      calculation dataset. This presentation layer does not rederive planetary
+      positions. The dataset’s own historical-source metadata remains:
+      <code>{{ birth.historical_source_status }}</code>.
+    </div>
+    <h2>Primary calculated anchors</h2>
+    <div class="grid-4 metric-grid">
+      <div class="metric"><span>Ascendant</span><strong>{{ ascendant.sign }}</strong><small>{{ ascendant.degree }} · {{ ascendant.nakshatra }} pada {{ ascendant.pada }}</small></div>
+      <div class="metric"><span>Moon</span><strong>{{ moon.sign }}</strong><small>{{ moon.nakshatra }} · pada {{ moon.pada }} · {{ moon.house }}th house</small></div>
+      <div class="metric"><span>D9 Lagna</span><strong>{{ varga.D9.lagna }}</strong><small>Birth-time sensitive</small></div>
+      <div class="metric"><span>Vimshottari start</span><strong>Venus</strong><small>Balance reference: {{ vim.balance }} years</small></div>
+    </div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[2]) }}
+    <p class="lede">The report separates direct records, reproducible calculations,
+      source-derived traditional rules, and interpretations. The label is part of
+      each claim’s meaning.</p>
+    <table class="legend-table">
+      <thead><tr><th>Label</th><th>Meaning in this document</th></tr></thead>
+      <tbody>
+      {% for label, meaning in validation.evidence_labels.items() %}
+        <tr><td>{{ chip(label, 'verified' if label in ['FACT','CALCULATION','VALIDATED'] else ('nogo' if label == 'NOT VALIDATED' else ('partial' if label in ['UNCERTAIN','INFERENCE'] else 'neutral'))) }}</td><td>{{ meaning }}</td></tr>
+      {% endfor %}
+      <tr><td>{{ chip('SOURCE VERIFIED', 'verified') }}</td><td>The inspected source passage or image is readable and citable; this does not by itself authorize production encoding.</td></tr>
+      <tr><td>{{ chip('NOT COMPUTABLE', 'unresolved') }}</td><td>The method or scope gate refuses a result rather than assuming missing rules.</td></tr>
+      <tr><td>{{ chip('USER-SUPPLIED', 'neutral') }}</td><td>Stated by the subject; not independently corroborated.</td></tr>
+    </tbody></table>
+    <h2>Methodology overview</h2>
+    <div class="method-flow">
+      <div><b>A</b><span>Calculation data</span><small>Frozen JSON from the astronomy engine.</small></div>
+      <div><b>B</b><span>Validation data</span><small>Independent comparisons and the NO-GO result.</small></div>
+      <div><b>C</b><span>Source review</span><small>Classical passages and explicit unresolved fields.</small></div>
+      <div><b>D</b><span>Presentation</span><small>Statuses are rendered; unsupported values are withheld.</small></div>
+    </div>
+    <div class="callout neutral"><strong>Systems remain distinct.</strong>
+      Parashari, Jaimini, KP, Nadi and other traditions are not merged into one
+      score in V2. A method audit is not a convergence claim.</div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[3]) }}
+    <div class="chart-panel">
+      <img src="{{ charts.d1 }}" class="chart chart-d1" alt="D1 Rashi chart">
+      <div class="chart-caption">D1 / Rashi chart · sidereal Lahiri · Parashari whole-sign house presentation</div>
+    </div>
+    <div class="two-col">
+      <div class="panel"><h2>Ascendant</h2>{{ key_value('Sign', ascendant.sign) }}{{ key_value('Degree', ascendant.degree) }}{{ key_value('Nakshatra', ascendant.nakshatra ~ ' · pada ' ~ ascendant.pada) }}{{ key_value('Status', 'CALCULATION') }}</div>
+      <div class="panel"><h2>House structure</h2><p>Whole-sign houses are counted from {{ ascendant.sign }} Lagna. The house table below is a presentation of the stored house assignments, not a new cusp calculation.</p>{{ key_value('D1 status', 'VERIFIED') }}{{ key_value('House comparison', '12/12 match in reference verification') }}</div>
+    </div>
+    <h2>Houses and occupants</h2>
+    <table class="data-table house-table">
+      <thead><tr><th>House</th><th>Sign</th><th>Stored occupants</th><th>Traditional domain</th></tr></thead>
+      <tbody>{% for row in houses %}<tr><td>{{ row.house }}</td><td>{{ row.sign }}</td><td>{{ row.occupants }}</td><td>{{ row.theme }}</td></tr>{% endfor %}</tbody>
+    </table>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[4]) }}
+    <p class="section-note">{{ chip('CALCULATION', 'verified') }} Positions are displayed exactly from the current dataset; dignity words are traditional classifications stored by the engine, not empirical findings.</p>
+    <table class="data-table planet-table">
+      <thead><tr><th>Body</th><th>Sign</th><th>Degree</th><th>House</th><th>Nakshatra</th><th>Pada</th><th>Stored state</th></tr></thead>
+      <tbody>{% for p in planets %}<tr><td><strong>{{ p.body }}</strong></td><td>{{ p.sign }}</td><td>{{ p.degree }}</td><td>{{ p.house }}</td><td>{{ p.nakshatra }}</td><td>{{ p.pada }}</td><td>{{ p.state }}</td></tr>{% endfor %}</tbody>
+    </table>
+    <div class="callout info"><strong>Relevant reference separation.</strong>
+      Moon: Aries / Bharani pada 2. Sun: Scorpio / Jyeshtha pada 2. Mars: Virgo /
+      Uttara Phalguni pada 2. Mercury: Scorpio / Jyeshtha pada 2. The same
+      nakshatra fields are used in the Vimshottari source comparison.</div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[5]) }}
+    <div class="varga-grid">
+      {% for code in ['D9','D10','D7'] %}
+      <div class="varga-card">
+        <div class="varga-head"><h2>{{ code }} · {{ 'Navamsa' if code == 'D9' else ('Dasamsa' if code == 'D10' else 'Saptamsa') }}</h2>{{ chip('VERIFIED', 'verified') }}<span>Lagna: <strong>{{ varga[code].lagna }}</strong></span></div>
+        <img src="{{ charts[code|lower] }}" class="chart chart-varga" alt="{{ code }} chart">
+        <table class="mini-table"><thead><tr><th>Body</th><th>Sign</th><th>Deg.</th></tr></thead><tbody>{% for p in varga[code].rows %}<tr{% if p.lagna %} class="lagna-row"{% endif %}><td>{{ p.body }}</td><td>{{ p.sign }}</td><td>{{ p.degree }}</td></tr>{% endfor %}</tbody></table>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="callout caution"><strong>Birth-time sensitivity.</strong> D9
+      and other varga placements are shown as verified calculations against the
+      current reference comparison. Their use in any later interpretation must
+      carry the documented birth-time sensitivity; V2 does not turn them into
+      predictive evidence.</div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[6]) }}
+    <div class="two-col">
+      <div class="panel"><h2>Panchanga at birth</h2>
+        {{ key_value('Civil weekday', panchanga.civil_weekday or panchanga.vara) }}
+        {{ key_value('Tithi', panchanga.tithi) }}
+        {{ key_value('Nakshatra', panchanga.nakshatra ~ ' · pada ' ~ panchanga.nakshatra_pada) }}
+        {{ key_value('Nakshatra lord', panchanga.nakshatra_lord) }}
+        {{ key_value('Yoga', panchanga.yoga) }}
+        {{ key_value('Karana', panchanga.karana) }}
+        {{ key_value('Sunrise', panchanga.sunrise) }}
+      </div>
+      <div class="panel"><h2>Field-level caveats</h2>
+        <p>{{ panchanga.vara_note }}</p>
+        <p><strong>Reference comparison:</strong> the independent record and the
+          supplied reference differ on weekday convention and yoga naming. The
+          stored independent values are shown without silently replacing them.</p>
+        <p><strong>Sunset:</strong> {{ panchanga.sunset }}.</p>
+      </div>
+    </div>
+    <h2>Vimshottari sequence</h2>
+    <div class="callout info"><strong>{{ chip('VERIFIED', 'verified') }}</strong>
+      Moon nakshatra {{ vim.nakshatra }}, pada {{ vim.pada }}; reference balance
+      at birth {{ vim.balance }} years for Venus. The independently reproduced
+      sequence is displayed below.</div>
+    <table class="data-table dasha-table"><thead><tr><th>Mahadasha lord</th><th>Start</th><th>End</th><th>Years</th></tr></thead><tbody>{% for p in vim.periods %}<tr><td><strong>{{ p.lord }}</strong></td><td>{{ p.start }}</td><td>{{ p.end }}</td><td>{{ p.years }}</td></tr>{% endfor %}</tbody></table>
+    <img src="assets/dasha_timeline.svg" class="chart chart-timeline" alt="Vimshottari dasha timeline">
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[7]) }}
+    <div class="two-col">
+      <div class="panel"><h2>Jaimini karaka schemes</h2>
+        <h3>7-karaka comparison scheme {{ chip('VERIFIED', 'verified') }}</h3>
+        <table class="mini-table"><thead><tr><th>Karaka</th><th>Planet</th></tr></thead><tbody>{% for k, v in jaimini.seven.items() %}<tr><td>{{ k }}</td><td>{{ v }}</td></tr>{% endfor %}</tbody></table>
+        <h3>8-karaka production scheme {{ chip('SCHEME-DEPENDENT', 'partial') }}</h3>
+        <table class="mini-table"><thead><tr><th>Karaka</th><th>Planet</th></tr></thead><tbody>{% for k, v in jaimini.eight.items() %}<tr><td>{{ k }}</td><td>{{ v }}</td></tr>{% endfor %}</tbody></table>
+      </div>
+      <div class="panel"><h2>Arudha / key outputs</h2>
+        {{ key_value('8-karaka Atmakaraka', jaimini.atmakaraka) }}
+        {{ key_value('8-karaka Karakamsha', jaimini.karakamsha) }}
+        {{ key_value('Darakaraka', jaimini.darakaraka) }}
+        {{ key_value('Upapada Lagna', jaimini.upapada) }}
+        {% for k, v in jaimini.arudha.items() %}{{ key_value(k, v) }}{% endfor %}
+      </div>
+    </div>
+    <div class="callout neutral"><strong>Scheme distinction.</strong> {{ jaimini.scheme_note }}</div>
+    <h2>Mean-node and true-node separation</h2>
+    <table class="data-table"><thead><tr><th>Node result</th><th>Sign / degree</th><th>House</th><th>Use</th></tr></thead><tbody>
+      <tr><td>Mean Rahu</td><td>{{ nodes.mean_node_rahu.sign }} · {{ dms(nodes.mean_node_rahu.deg_in_sign) }}</td><td>{{ nodes.mean_node_rahu.house_whole_sign }}</td><td>{{ nodes.mean_node_rahu.used_by }}</td></tr>
+      <tr><td>True Rahu</td><td>{{ nodes.true_node_rahu.sign }} · {{ dms(nodes.true_node_rahu.deg_in_sign) }}</td><td>{{ nodes.true_node_rahu.house_whole_sign }}</td><td>{{ nodes.true_node_rahu.used_by }}</td></tr>
+    </tbody></table>
+    <p class="section-note">{{ nodes.why_house_changes }}</p>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[8]) }}
+    <p class="lede">This matrix is the V2 control surface. “Production use” means
+      what the report is allowed to show, not that every method is predictive.</p>
+    <table class="audit-table"><thead><tr><th>Method</th><th>Status</th><th>Source / validation</th><th>Production use in V2</th></tr></thead><tbody>
+      {% for row in methods %}<tr><td><strong>{{ row.method }}</strong></td><td>{{ chip(row.status, row.tone) }}</td><td>{{ row.source }}</td><td>{{ row.use }}</td></tr>{% endfor %}
+    </tbody></table>
+    <div class="callout nogo-box"><strong>Global validation boundary.</strong>
+      The calculation layer can be verified against source data or independent
+      recomputation. That does not validate the traditional interpretation as a
+      prediction. The historical event test below is explicitly NO-GO.</div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[9]) }}
+    <div class="hero-status partial-box"><div class="hero-status-label">ASHTAKAVARGA · P1A SOURCE-FIRST GATE</div><div class="hero-status-title">{{ chip('PARTIAL', 'partial') }} · SAV UNREPORTED</div><p>{{ av.reason }}</p></div>
+    <h2>Verified production BAV tables</h2>
+    <p class="section-note">These are the four tables currently retained in
+      production. Values are displayed from the frozen calculation dataset and
+      are not expanded into a complete SAV.</p>
+    <table class="av-table"><thead><tr><th>Target</th>{% for sign in ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'] %}<th>{{ sign[:3] }}</th>{% endfor %}<th>Total</th></tr></thead><tbody>
+      {% for row in av.rows %}<tr><td><strong>{{ row.body }}</strong></td>{% for value in row.bindus %}<td>{{ value }}</td>{% endfor %}<td><strong>{{ row.total }}</strong></td></tr>{% endfor %}
+    </tbody></table>
+    <div class="grid-2">
+      <div class="panel"><h2>Reference context only</h2>
+        <table class="mini-table"><thead><tr><th>Target</th><th>Documented expected total</th><th>Production</th></tr></thead><tbody>{% for body, total in av.expected.items() %}<tr><td>{{ body }}</td><td>{{ total }}</td><td>{% if body in av.computed %}retained{% else %}excluded{% endif %}</td></tr>{% endfor %}</tbody></table>
+        <p class="small">The expected seven-table totals sum to 337, but that
+          reference total is not calculated here.</p>
+      </div>
+      <div class="panel"><h2>Unresolved source state</h2>
+        {% for row in source_rows %}<div class="source-mini"><strong>{{ row.method }}</strong> {{ chip(row.status, row.tone) }}<p>{{ row.detail }}</p><small>{{ row.source }}</small></div>{% endfor %}
+        <p><strong>277-vs-337:</strong> unresolved. No row was reconstructed
+          from the aggregate or from arithmetic.</p>
+      </div>
+    </div>
+    <div class="callout nogo-box"><strong>Hard rule.</strong> SAV is not
+      reported. The partial verified-table column sum is not the classical SAV,
+      and classical SAV strength bands do not apply to it.</div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[10]) }}
+    <div class="hero-status partial-box"><div class="hero-status-label">SOURCE GATE</div><div class="hero-status-title">KUJA FORMATION RULE FROZEN · EXECUTOR IMPLEMENTED</div><p>Production chart scope is default-deny: <code>AUTHORIZED_SCOPES = ()</code>.</p></div>
+    <div class="two-col">
+      <div class="panel"><h2>Source evidence</h2>
+        <p><strong>BPHS Ch. 80 v.47</strong><br>Girish/Chatur Vol. II, PDF index page 712, printed page 692.</p>
+        <blockquote lang="sa">लग्ने व्यये सुखे वाऽपि सप्तमे वाऽष्टमे कुजे ।<br>शुभदृग्योगहीने च पति हन्ति न संशयः ।।४७।।</blockquote>
+        <p>The image-level reading of <strong>लग्ने</strong> is high confidence
+          (20/21 OCR passes). It establishes the 1st-house term.</p>
+      </div>
+      <div class="panel"><h2>Frozen specification</h2>
+        <div class="rule-display">KUJA_FORMATION_HOUSES<br><strong>{1, 4, 7, 8, 12}</strong><br><small>from Lagna</small></div>
+        <ul class="tight"><li>Benefic-free clause belongs to formation.</li><li>v.49 mutual-match cancellation remains separate.</li><li>Strength: UNSPECIFIED_BY_SOURCE.</li><li>Orb: UNSPECIFIED_BY_SOURCE.</li></ul>
+      </div>
+    </div>
+    <h2>Source discrepancy and exclusions</h2>
+    <div class="callout info">The inspected Sanskrit witness contains <strong>लग्ने</strong>;
+      the Santhanam English rendering does not explicitly reproduce the 1st-house
+      term. The reason for the discrepancy remains unestablished. This is recorded
+      neutrally and Santhanam is not silently corrected.</div>
+    <table class="data-table"><thead><tr><th>Feature</th><th>Current status</th></tr></thead><tbody>
+      <tr><td>2nd house</td><td>{{ chip('NOT SUPPORTED', 'unresolved') }}</td></tr>
+      <tr><td>Moon / Venus reference points</td><td>{{ chip('NOT SUPPORTED', 'unresolved') }}</td></tr>
+      <tr><td>Numerical orb</td><td>{{ chip('UNSPECIFIED BY SOURCE', 'unresolved') }}</td></tr>
+      <tr><td>Severity scale</td><td>{{ chip('NOT SUPPORTED', 'unresolved') }}</td></tr>
+      <tr><td>Additional bhanga rules</td><td>{{ chip('NOT INTRODUCED', 'unresolved') }}</td></tr>
+      <tr><td>Executor</td><td>{{ chip('IMPLEMENTED', 'verified') }} · uses authoritative whole-sign house helper</td></tr>
+      <tr><td>Production scope</td><td><code>AUTHORIZED_SCOPES = ()</code> · default-deny</td></tr>
+      <tr><td>Personal Kuja verdict</td><td>{{ chip('NOT COMPUTED', 'unresolved') }}</td></tr>
+    </tbody></table>
+    <div class="callout nogo-box"><strong>Personal Kuja status:</strong>
+      NOT COMPUTED. This document does not state that Swarna is Manglik or
+      non-Manglik. No chart scope was inferred from sex, modern convention,
+      calculator behavior or the wording of one translation.</div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[11]) }}
+    <div class="validation-banner"><div class="validation-word">NO-GO</div><div><strong>Event-level predictive validity: NOT ESTABLISHED.</strong><br>{{ validation.statement }}</div></div>
+    <div class="grid-4 metric-grid validation-metrics">
+      <div class="metric"><span>Absolute test</span><strong>3 / 12 / 3 / 2</strong><small>MATCH · PARTIAL · WEAK · NO MATCH</small></div>
+      <div class="metric"><span>Null base rate</span><strong>80.5%</strong><small>MATCH+PARTIAL in 1,022 arbitrary category-years</small></div>
+      <div class="metric"><span>Rank median p</span><strong>0.500</strong><small>Exactly chance; 0/20 events in top decile</small></div>
+      <div class="metric"><span>Bottom decile</span><strong>3 / 20</strong><small>Events landed in the null’s bottom decile</small></div>
+    </div>
+    <h2>Null control and rank test</h2>
+    <div class="two-col">
+      <div class="panel"><h3>Null control</h3><p>{{ validation.null_control.why }}</p><p><strong>{{ validation.null_control.category_years_tested }}</strong> arbitrary category-years were tested.</p></div>
+      <div class="panel"><h3>Rank test</h3><p>{{ validation.rank_test.reading }}</p><p>Best single p: <strong>{{ validation.rank_test.best_single_p }}</strong>; expected hits by chance: <strong>{{ validation.rank_test.expected_hits_by_chance }}</strong>.</p></div>
+    </div>
+    <h2>Event-level matrix</h2>
+    <table class="data-table event-table"><thead><tr><th>ID</th><th>Year</th><th>Event</th><th>Verdict</th><th>Houses</th><th>p(rank)</th></tr></thead><tbody>{% for row in event_rows %}<tr><td>{{ row.id }}</td><td>{{ row.year }}</td><td>{{ row.event }}</td><td>{{ row.verdict }}</td><td>{{ row.houses }}</td><td>{{ row.p }}</td></tr>{% endfor %}</tbody></table>
+    <h2>Contradictions and protocol boundary</h2>
+    <table class="data-table"><thead><tr><th>Claim</th><th>Observed evidence</th><th>Status</th></tr></thead><tbody>{% for row in validation.contradicted %}<tr><td>{{ row.claim }}</td><td>{{ row.evidence }}</td><td>{{ chip(row.status, 'nogo') }}</td></tr>{% endfor %}</tbody></table>
+    <div class="callout caution"><strong>Documentary conflict.</strong>
+      Father’s death year remains unresolved: 2018 is family recollection; 2019
+      is an uninspected official claim. Astrology is not used to adjudicate that
+      documentary fact.</div>
+    <p class="small"><strong>Protocol caveat:</strong> {{ validation.protocol_caveat }}</p>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[12]) }}
+    <h2>Open research gates</h2>
+    <table class="audit-table"><thead><tr><th>Item</th><th>Status</th><th>What remains unresolved</th></tr></thead><tbody>
+      <tr><td>Ashtakavarga P1A</td><td>{{ chip('PARTIAL', 'partial') }}</td><td>Jupiter 4th-house contributor list; complete source freeze before any new production row or SAV.</td></tr>
+      <tr><td>Shadbala</td><td>{{ chip('PARTIAL', 'partial') }}</td><td>Citable formula source, component examples and Drik Bala implementation/source freeze.</td></tr>
+      <tr><td>KP</td><td>{{ chip('PARTIAL', 'partial') }}</td><td>House cusps and sub-lords are not computed.</td></tr>
+      <tr><td>Tajika</td><td>{{ chip('NOT COMPUTED', 'unresolved') }}</td><td>No verified calculation is available.</td></tr>
+      <tr><td>D27 / Bhreshta</td><td>{{ chip('NOT IMPLEMENTED', 'unresolved') }}</td><td>One of the 16 varga divisions remains absent.</td></tr>
+      <tr><td>Nadi</td><td>{{ chip('DEFAULT-DENY', 'unresolved') }}</td><td>No named deterministic lineage, citable source and declared rules for a computable variant.</td></tr>
+      <tr><td>Father’s death record</td><td>{{ chip('NOT YET VERIFIED', 'unresolved') }}</td><td>Official documentary inspection is still required; the chart cannot settle it.</td></tr>
+      <tr><td>Historical source imagery</td><td>{{ chip('PENDING', 'partial') }}</td><td>The calculation dataset carries a pending historical-image validation metadata field.</td></tr>
+    </tbody></table>
+    <h2>What V2 deliberately does not claim</h2>
+    <ul class="checklist"><li>It does not claim empirical predictive power.</li><li>It does not use the current method matrix as a score.</li><li>It does not use partial Ashtakavarga totals as strength bands.</li><li>It does not use traditional interpretations to resolve documentary facts.</li><li>It does not convert a registered source rule into an authorized personal verdict.</li></ul>
+    <div class="callout neutral"><strong>Human review gate.</strong> This is the
+      stopping point requested for Version 2. Further content expansion or a
+      final PDF requires human review of this source/status presentation.</div>
+  </section>
+
+  <div class="pagebreak"></div>
+  <section class="report-section">
+    {{ section_heading(sections[13]) }}
+    <h2>Repository and protected baseline</h2>
+    <table class="data-table technical-table"><tbody>
+      <tr><th>Input branch</th><td>{{ branch }}</td></tr>
+      <tr><th>Input commit inspected</th><td><code>{{ actual_head }}</code></td></tr>
+      <tr><th>User checkpoint supplied</th><td><code>{{ requested_checkpoint }}</code></td></tr>
+      <tr><th>Protected v5 SHA-256</th><td><code>{{ v5_hash }}</code></td></tr>
+      <tr><th>Current regression</th><td><strong>83/83 PASS</strong> (run during this build)</td></tr>
+      <tr><th>AV_TABLES</th><td><strong>UNCHANGED</strong> · Sun, Moon, Mars, Saturn only</td></tr>
+      <tr><th>SAV</th><td><strong>UNREPORTED</strong></td></tr>
+      <tr><th>Personal Kuja evaluation</th><td><strong>NOT RUN</strong></td></tr>
+      <tr><th>Final 1981–2053 dossier</th><td><strong>NOT GENERATED</strong></td></tr>
+    </tbody></table>
+    <p class="small">The inspected repository was ahead of the user-supplied
+      51812d5 checkpoint by source-audit documentation commits. V2 records the
+      actual input commit rather than mislabelling it.</p>
+    <h2>Source register</h2>
+    <ul class="source-register">{% for source in source_registry %}<li><code>{{ source }}</code></li>{% endfor %}</ul>
+    <h2>Build and QA contract</h2>
+    <div class="grid-2">
+      <div class="panel"><h3>Build artifacts</h3><ul class="tight"><li>Dedicated V2 HTML source in <code>out/v2/</code>.</li><li>Dedicated V2 PDF preview in <code>out/v2/</code>.</li><li>Copied SVG assets are limited to D1, D9, D10, D7 and Vimshottari timeline.</li><li>Source/status manifest records input hashes and protected-state declarations.</li></ul></div>
+      <div class="panel"><h3>QA checks</h3><ul class="tight"><li>TOC resolved in two stable render passes.</li><li>Required warnings and status labels present in PDF text.</li><li>Charts, fonts, tables and PDF geometry checked programmatically.</li><li>No SAV value is presented as calculated; no personal Kuja verdict is present.</li></ul></div>
+    </div>
+    <div class="final-signoff"><strong>VERSION 2 PREVIEW — HUMAN REVIEW REQUIRED</strong><br>Source-audited presentation complete; final dossier intentionally not generated.</div>
+  </section>
+</body>
+</html>
