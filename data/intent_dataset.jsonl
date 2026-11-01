@@ -1,0 +1,425 @@
+{"text": "hi", "label": "GREETING"}
+{"text": "hii", "label": "GREETING"}
+{"text": "hiii there", "label": "GREETING"}
+{"text": "hello", "label": "GREETING"}
+{"text": "hellow", "label": "GREETING"}
+{"text": "helo guruji", "label": "GREETING"}
+{"text": "hey", "label": "GREETING"}
+{"text": "hey there", "label": "GREETING"}
+{"text": "heya", "label": "GREETING"}
+{"text": "yo", "label": "GREETING"}
+{"text": "good morning", "label": "GREETING"}
+{"text": "good morning acharya", "label": "GREETING"}
+{"text": "good afternoon", "label": "GREETING"}
+{"text": "good evening guruji", "label": "GREETING"}
+{"text": "good night", "label": "GREETING"}
+{"text": "namaste", "label": "GREETING"}
+{"text": "namaste guruji", "label": "GREETING"}
+{"text": "namaskar", "label": "GREETING"}
+{"text": "namaskar acharya", "label": "GREETING"}
+{"text": "pranam", "label": "GREETING"}
+{"text": "pranam baba", "label": "GREETING"}
+{"text": "greetings", "label": "GREETING"}
+{"text": "হাই", "label": "GREETING"}
+{"text": "হ্যালো", "label": "GREETING"}
+{"text": "হ্যালো গুরুজি", "label": "GREETING"}
+{"text": "নমস্কার", "label": "GREETING"}
+{"text": "নমস্কার গুরুজি", "label": "GREETING"}
+{"text": "নমস্কার আচার্য", "label": "GREETING"}
+{"text": "প্রণাম", "label": "GREETING"}
+{"text": "প্রণাম বাবা", "label": "GREETING"}
+{"text": "প্রণাম ঠাকুর", "label": "GREETING"}
+{"text": "সুপ্রভাত", "label": "GREETING"}
+{"text": "শুভ সকাল", "label": "GREETING"}
+{"text": "শুভ সন্ধ্যা", "label": "GREETING"}
+{"text": "আদাব", "label": "GREETING"}
+{"text": "how are you", "label": "HOWARE"}
+{"text": "how are you doing", "label": "HOWARE"}
+{"text": "how are you today", "label": "HOWARE"}
+{"text": "how r u", "label": "HOWARE"}
+{"text": "how are you guruji", "label": "HOWARE"}
+{"text": "hope you are well", "label": "HOWARE"}
+{"text": "hope you are doing fine", "label": "HOWARE"}
+{"text": "are you doing okay", "label": "HOWARE"}
+{"text": "how is everything with you", "label": "HOWARE"}
+{"text": "kemon acho", "label": "HOWARE"}
+{"text": "kemon achen", "label": "HOWARE"}
+{"text": "কেমন আছো", "label": "HOWARE"}
+{"text": "কেমন আছেন", "label": "HOWARE"}
+{"text": "কেমন আছেন গুরুজি", "label": "HOWARE"}
+{"text": "আপনি কেমন আছেন", "label": "HOWARE"}
+{"text": "তুমি কেমন আছো গুরুজি", "label": "HOWARE"}
+{"text": "ভালো আছেন তো", "label": "HOWARE"}
+{"text": "সব ঠিকঠাক তো", "label": "HOWARE"}
+{"text": "আপনার দিন কেমন কাটছে", "label": "HOWARE"}
+{"text": "thanks", "label": "THANKS"}
+{"text": "thank you", "label": "THANKS"}
+{"text": "thank you so much", "label": "THANKS"}
+{"text": "thanks a lot guruji", "label": "THANKS"}
+{"text": "thank you very much acharya", "label": "THANKS"}
+{"text": "thnx", "label": "THANKS"}
+{"text": "thx a lot", "label": "THANKS"}
+{"text": "many thanks", "label": "THANKS"}
+{"text": "grateful to you", "label": "THANKS"}
+{"text": "i really appreciate this", "label": "THANKS"}
+{"text": "that was very helpful thank you", "label": "THANKS"}
+{"text": "ধন্যবাদ", "label": "THANKS"}
+{"text": "অনেক ধন্যবাদ", "label": "THANKS"}
+{"text": "আপনাকে অনেক ধন্যবাদ", "label": "THANKS"}
+{"text": "থ্যাংকস", "label": "THANKS"}
+{"text": "অসংখ্য ধন্যবাদ গুরুজি", "label": "THANKS"}
+{"text": "প্রণাম জানাই ধন্যবাদ", "label": "THANKS"}
+{"text": "খুব উপকার হলো ধন্যবাদ", "label": "THANKS"}
+{"text": "কৃতজ্ঞ রইলাম", "label": "THANKS"}
+{"text": "who are you", "label": "IDENTITY"}
+{"text": "who are you really", "label": "IDENTITY"}
+{"text": "what is your name", "label": "IDENTITY"}
+{"text": "what's your name", "label": "IDENTITY"}
+{"text": "tell me your name", "label": "IDENTITY"}
+{"text": "what are you", "label": "IDENTITY"}
+{"text": "what can you do", "label": "IDENTITY"}
+{"text": "what can you do for me", "label": "IDENTITY"}
+{"text": "how can you help me", "label": "IDENTITY"}
+{"text": "what do you do", "label": "IDENTITY"}
+{"text": "are you a real astrologer", "label": "IDENTITY"}
+{"text": "are you an ai", "label": "IDENTITY"}
+{"text": "who am i talking to", "label": "IDENTITY"}
+{"text": "introduce yourself", "label": "IDENTITY"}
+{"text": "what systems do you use", "label": "IDENTITY"}
+{"text": "তুমি কে", "label": "IDENTITY"}
+{"text": "আপনি কে", "label": "IDENTITY"}
+{"text": "কে তুমি", "label": "IDENTITY"}
+{"text": "তোমার নাম কি", "label": "IDENTITY"}
+{"text": "তোমার নাম কী", "label": "IDENTITY"}
+{"text": "আপনার নাম কি", "label": "IDENTITY"}
+{"text": "আপনার পরিচয় কি", "label": "IDENTITY"}
+{"text": "তুমি কী করতে পারো", "label": "IDENTITY"}
+{"text": "আপনি আমাকে কীভাবে সাহায্য করবেন", "label": "IDENTITY"}
+{"text": "আপনি কি সত্যিকারের জ্যোতিষী", "label": "IDENTITY"}
+{"text": "কোন কোন পদ্ধতিতে বিচার করেন", "label": "IDENTITY"}
+{"text": "marriage", "label": "TOPIC_MARRIAGE"}
+{"text": "when will i get married", "label": "TOPIC_MARRIAGE"}
+{"text": "when is my marriage", "label": "TOPIC_MARRIAGE"}
+{"text": "at what age will i marry", "label": "TOPIC_MARRIAGE"}
+{"text": "will i have a love marriage or arranged", "label": "TOPIC_MARRIAGE"}
+{"text": "is there a love marriage in my chart", "label": "TOPIC_MARRIAGE"}
+{"text": "will i have a second marriage", "label": "TOPIC_MARRIAGE"}
+{"text": "my marriage prospects", "label": "TOPIC_MARRIAGE"}
+{"text": "problems in my relationship", "label": "TOPIC_MARRIAGE"}
+{"text": "my husband and i keep fighting", "label": "TOPIC_MARRIAGE"}
+{"text": "will my wife and i reconcile", "label": "TOPIC_MARRIAGE"}
+{"text": "is my 7th house afflicted for marriage", "label": "TOPIC_MARRIAGE"}
+{"text": "do i have manglik dosha for marriage", "label": "TOPIC_MARRIAGE"}
+{"text": "will i ever settle down with someone", "label": "TOPIC_MARRIAGE"}
+{"text": "will i find a life partner", "label": "TOPIC_MARRIAGE"}
+{"text": "am i going to stay single forever", "label": "TOPIC_MARRIAGE"}
+{"text": "kundli matching for marriage", "label": "TOPIC_MARRIAGE"}
+{"text": "is this girl compatible with me", "label": "TOPIC_MARRIAGE"}
+{"text": "will my engagement lead to marriage", "label": "TOPIC_MARRIAGE"}
+{"text": "বিয়ে", "label": "TOPIC_MARRIAGE"}
+{"text": "বিয়ে কবে হবে", "label": "TOPIC_MARRIAGE"}
+{"text": "আমার বিয়ে কবে হবে", "label": "TOPIC_MARRIAGE"}
+{"text": "কত বছর বয়সে বিয়ে হবে", "label": "TOPIC_MARRIAGE"}
+{"text": "আমার বিবাহ যোগ আছে কি", "label": "TOPIC_MARRIAGE"}
+{"text": "প্রেমের বিয়ে হবে কি", "label": "TOPIC_MARRIAGE"}
+{"text": "দ্বিতীয় বিবাহ হবে কি", "label": "TOPIC_MARRIAGE"}
+{"text": "শাদি কবে", "label": "TOPIC_MARRIAGE"}
+{"text": "সম্পর্ক নিয়ে সমস্যা", "label": "TOPIC_MARRIAGE"}
+{"text": "স্বামীর সাথে অশান্তি", "label": "TOPIC_MARRIAGE"}
+{"text": "স্ত্রীর সাথে মনোমালিন্য", "label": "TOPIC_MARRIAGE"}
+{"text": "কবে ঘর বাঁধব", "label": "TOPIC_MARRIAGE"}
+{"text": "জীবনসঙ্গী পাব কি", "label": "TOPIC_MARRIAGE"}
+{"text": "আমার কি মাঙ্গলিক দোষ আছে", "label": "TOPIC_MARRIAGE"}
+{"text": "সপ্তম ভাব কেমন বিয়ের জন্য", "label": "TOPIC_MARRIAGE"}
+{"text": "কুষ্ঠি মিলিয়ে দেখবেন বিয়ের জন্য", "label": "TOPIC_MARRIAGE"}
+{"text": "job", "label": "TOPIC_CAREER"}
+{"text": "will i get a job", "label": "TOPIC_CAREER"}
+{"text": "when will i get a government job", "label": "TOPIC_CAREER"}
+{"text": "my career is stuck", "label": "TOPIC_CAREER"}
+{"text": "should i change my job", "label": "TOPIC_CAREER"}
+{"text": "should i switch companies", "label": "TOPIC_CAREER"}
+{"text": "will i get a promotion this year", "label": "TOPIC_CAREER"}
+{"text": "promotion chances in my chart", "label": "TOPIC_CAREER"}
+{"text": "will my business grow", "label": "TOPIC_CAREER"}
+{"text": "should i start my own business", "label": "TOPIC_CAREER"}
+{"text": "job or business which suits me", "label": "TOPIC_CAREER"}
+{"text": "what career is right for me", "label": "TOPIC_CAREER"}
+{"text": "which field should i choose", "label": "TOPIC_CAREER"}
+{"text": "will i go abroad for work", "label": "TOPIC_CAREER"}
+{"text": "foreign job opportunities in my chart", "label": "TOPIC_CAREER"}
+{"text": "what does my 10th house say about career", "label": "TOPIC_CAREER"}
+{"text": "is this a good dasha for career growth", "label": "TOPIC_CAREER"}
+{"text": "work has been going nowhere for me", "label": "TOPIC_CAREER"}
+{"text": "i am stuck in the same position for years", "label": "TOPIC_CAREER"}
+{"text": "i lost my job will i find another", "label": "TOPIC_CAREER"}
+{"text": "চাকরি", "label": "TOPIC_CAREER"}
+{"text": "চাকরি হবে কি", "label": "TOPIC_CAREER"}
+{"text": "সরকারি চাকরি কবে হবে", "label": "TOPIC_CAREER"}
+{"text": "কর্ম নিয়ে চিন্তা", "label": "TOPIC_CAREER"}
+{"text": "ব্যবসা কেমন চলবে", "label": "TOPIC_CAREER"}
+{"text": "নিজের ব্যবসা শুরু করব কি", "label": "TOPIC_CAREER"}
+{"text": "প্রমোশন হবে কি এ বছর", "label": "TOPIC_CAREER"}
+{"text": "চাকরি বদলানো উচিত কি", "label": "TOPIC_CAREER"}
+{"text": "কোন পেশা আমার জন্য ভালো", "label": "TOPIC_CAREER"}
+{"text": "বিদেশে চাকরির যোগ আছে কি", "label": "TOPIC_CAREER"}
+{"text": "দশম ভাব কর্মের জন্য কেমন", "label": "TOPIC_CAREER"}
+{"text": "কাজে কোনো উন্নতি হচ্ছে না", "label": "TOPIC_CAREER"}
+{"text": "চাকরি চলে গেছে নতুন পাব কি", "label": "TOPIC_CAREER"}
+{"text": "এই দশায় কর্মে উন্নতি হবে কি", "label": "TOPIC_CAREER"}
+{"text": "health", "label": "TOPIC_HEALTH"}
+{"text": "i am always sick", "label": "TOPIC_HEALTH"}
+{"text": "my health is bad", "label": "TOPIC_HEALTH"}
+{"text": "chronic illness in my chart", "label": "TOPIC_HEALTH"}
+{"text": "which house shows my health problems", "label": "TOPIC_HEALTH"}
+{"text": "will my health improve this year", "label": "TOPIC_HEALTH"}
+{"text": "my 6th house and disease", "label": "TOPIC_HEALTH"}
+{"text": "body is weak these days", "label": "TOPIC_HEALTH"}
+{"text": "i keep falling ill lately", "label": "TOPIC_HEALTH"}
+{"text": "i feel weak and tired all the time", "label": "TOPIC_HEALTH"}
+{"text": "my body keeps breaking down", "label": "TOPIC_HEALTH"}
+{"text": "mental peace has left me", "label": "TOPIC_HEALTH"}
+{"text": "i have been very anxious and restless", "label": "TOPIC_HEALTH"}
+{"text": "will my surgery go well", "label": "TOPIC_HEALTH"}
+{"text": "is there a remedy for my long illness", "label": "TOPIC_HEALTH"}
+{"text": "স্বাস্থ্য", "label": "TOPIC_HEALTH"}
+{"text": "শরীর ভালো যাচ্ছে না", "label": "TOPIC_HEALTH"}
+{"text": "অসুখ কাটছে না", "label": "TOPIC_HEALTH"}
+{"text": "রোগ নিয়ে চিন্তা", "label": "TOPIC_HEALTH"}
+{"text": "শরীর দুর্বল লাগে", "label": "TOPIC_HEALTH"}
+{"text": "ঘন ঘন অসুস্থ হয়ে পড়ি", "label": "TOPIC_HEALTH"}
+{"text": "সারাক্ষণ ক্লান্ত লাগে", "label": "TOPIC_HEALTH"}
+{"text": "এ বছর স্বাস্থ্য ভালো হবে কি", "label": "TOPIC_HEALTH"}
+{"text": "ষষ্ঠ ভাব আর রোগ", "label": "TOPIC_HEALTH"}
+{"text": "মানসিক শান্তি নেই", "label": "TOPIC_HEALTH"}
+{"text": "খুব দুশ্চিন্তা আর অস্থিরতা", "label": "TOPIC_HEALTH"}
+{"text": "দীর্ঘ রোগের কোনো প্রতিকার আছে কি", "label": "TOPIC_HEALTH"}
+{"text": "money", "label": "TOPIC_FINANCE"}
+{"text": "i have money problems", "label": "TOPIC_FINANCE"}
+{"text": "financial troubles", "label": "TOPIC_FINANCE"}
+{"text": "when will my financial condition improve", "label": "TOPIC_FINANCE"}
+{"text": "i am drowning in debt", "label": "TOPIC_FINANCE"}
+{"text": "when will my loan clear", "label": "TOPIC_FINANCE"}
+{"text": "will i ever be wealthy", "label": "TOPIC_FINANCE"}
+{"text": "is there wealth yoga in my chart", "label": "TOPIC_FINANCE"}
+{"text": "what does my 2nd house say about money", "label": "TOPIC_FINANCE"}
+{"text": "11th house gains in my chart", "label": "TOPIC_FINANCE"}
+{"text": "should i invest in property", "label": "TOPIC_FINANCE"}
+{"text": "will my investments pay off", "label": "TOPIC_FINANCE"}
+{"text": "my earnings never seem to last the month", "label": "TOPIC_FINANCE"}
+{"text": "i can never save any money", "label": "TOPIC_FINANCE"}
+{"text": "cash keeps slipping away from me", "label": "TOPIC_FINANCE"}
+{"text": "sudden financial loss keeps happening", "label": "TOPIC_FINANCE"}
+{"text": "অর্থ", "label": "TOPIC_FINANCE"}
+{"text": "টাকা-পয়সার সমস্যা", "label": "TOPIC_FINANCE"}
+{"text": "ঋণ শোধ হবে কবে", "label": "TOPIC_FINANCE"}
+{"text": "আর্থিক অবস্থা খারাপ", "label": "TOPIC_FINANCE"}
+{"text": "আর্থিক অবস্থা কবে ফিরবে", "label": "TOPIC_FINANCE"}
+{"text": "লোন নিয়ে চিন্তা", "label": "TOPIC_FINANCE"}
+{"text": "আমার কি ধনযোগ আছে", "label": "TOPIC_FINANCE"}
+{"text": "দ্বিতীয় ভাব ধনের জন্য কেমন", "label": "TOPIC_FINANCE"}
+{"text": "একাদশ ভাবে লাভ কেমন", "label": "TOPIC_FINANCE"}
+{"text": "জমি-বাড়িতে বিনিয়োগ করব কি", "label": "TOPIC_FINANCE"}
+{"text": "টাকা হাতে থাকে না", "label": "TOPIC_FINANCE"}
+{"text": "মাস গেলে কিছুই জমে না", "label": "TOPIC_FINANCE"}
+{"text": "হঠাৎ হঠাৎ আর্থিক ক্ষতি হচ্ছে", "label": "TOPIC_FINANCE"}
+{"text": "which mantra should i chant", "label": "TOPIC_SADHANA"}
+{"text": "what mantra is good for me", "label": "TOPIC_SADHANA"}
+{"text": "how many times should i chant the bija mantra", "label": "TOPIC_SADHANA"}
+{"text": "how do i meditate", "label": "TOPIC_SADHANA"}
+{"text": "teach me pranayama", "label": "TOPIC_SADHANA"}
+{"text": "what sadhana suits me", "label": "TOPIC_SADHANA"}
+{"text": "which deity should i worship", "label": "TOPIC_SADHANA"}
+{"text": "which yantra should i keep at home", "label": "TOPIC_SADHANA"}
+{"text": "how to energise my yantra", "label": "TOPIC_SADHANA"}
+{"text": "what remedy do you suggest", "label": "TOPIC_SADHANA"}
+{"text": "which gemstone should i wear", "label": "TOPIC_SADHANA"}
+{"text": "is there a shanti puja for my planet", "label": "TOPIC_SADHANA"}
+{"text": "tell me a remedy for saturn", "label": "TOPIC_SADHANA"}
+{"text": "how do i start a daily spiritual practice", "label": "TOPIC_SADHANA"}
+{"text": "which goddess mantra for my moon", "label": "TOPIC_SADHANA"}
+{"text": "জপ কিভাবে করব", "label": "TOPIC_SADHANA"}
+{"text": "কোন মন্ত্র জপ করব", "label": "TOPIC_SADHANA"}
+{"text": "আমার জন্য কোন মন্ত্র ভালো", "label": "TOPIC_SADHANA"}
+{"text": "বীজ মন্ত্র কতবার জপ করব", "label": "TOPIC_SADHANA"}
+{"text": "ধ্যান শেখান", "label": "TOPIC_SADHANA"}
+{"text": "সাধনা নিয়ে বলুন", "label": "TOPIC_SADHANA"}
+{"text": "প্রাণায়াম কিভাবে করব", "label": "TOPIC_SADHANA"}
+{"text": "কোন যন্ত্র বাড়িতে রাখব", "label": "TOPIC_SADHANA"}
+{"text": "কোন দেবতার উপাসনা করব", "label": "TOPIC_SADHANA"}
+{"text": "কোন রত্ন ধারণ করব", "label": "TOPIC_SADHANA"}
+{"text": "শনির জন্য কোনো প্রতিকার বলুন", "label": "TOPIC_SADHANA"}
+{"text": "আমার গ্রহের জন্য শান্তি পুজো আছে কি", "label": "TOPIC_SADHANA"}
+{"text": "প্রতিদিনের সাধনা কীভাবে শুরু করব", "label": "TOPIC_SADHANA"}
+{"text": "children", "label": "TOPIC_CHILDREN"}
+{"text": "will i have children", "label": "TOPIC_CHILDREN"}
+{"text": "when will we have a baby", "label": "TOPIC_CHILDREN"}
+{"text": "problems with childbirth in my chart", "label": "TOPIC_CHILDREN"}
+{"text": "is there santan yoga in my kundli", "label": "TOPIC_CHILDREN"}
+{"text": "will i have a son or a daughter", "label": "TOPIC_CHILDREN"}
+{"text": "my 5th house and children", "label": "TOPIC_CHILDREN"}
+{"text": "about my son's future", "label": "TOPIC_CHILDREN"}
+{"text": "about my daughter's education", "label": "TOPIC_CHILDREN"}
+{"text": "will we be blessed with a child", "label": "TOPIC_CHILDREN"}
+{"text": "we are trying to start a family", "label": "TOPIC_CHILDREN"}
+{"text": "delay in conceiving is there a remedy", "label": "TOPIC_CHILDREN"}
+{"text": "সন্তান", "label": "TOPIC_CHILDREN"}
+{"text": "সন্তান হবে কি", "label": "TOPIC_CHILDREN"}
+{"text": "কবে সন্তান হবে", "label": "TOPIC_CHILDREN"}
+{"text": "ছেলে না মেয়ে হবে", "label": "TOPIC_CHILDREN"}
+{"text": "সন্তান যোগ আছে কি", "label": "TOPIC_CHILDREN"}
+{"text": "প্রেগনেন্সি নিয়ে প্রশ্ন", "label": "TOPIC_CHILDREN"}
+{"text": "পঞ্চম ভাব আর সন্তান", "label": "TOPIC_CHILDREN"}
+{"text": "ছেলের ভবিষ্যৎ নিয়ে জানতে চাই", "label": "TOPIC_CHILDREN"}
+{"text": "মেয়ের পড়াশোনা নিয়ে চিন্তা", "label": "TOPIC_CHILDREN"}
+{"text": "ঘরে নতুন অতিথি আসবে কি", "label": "TOPIC_CHILDREN"}
+{"text": "সন্তান হতে দেরি হচ্ছে প্রতিকার আছে কি", "label": "TOPIC_CHILDREN"}
+{"text": "family", "label": "TOPIC_FAMILY"}
+{"text": "problems in my family", "label": "TOPIC_FAMILY"}
+{"text": "there is no peace at home", "label": "TOPIC_FAMILY"}
+{"text": "trouble with my in laws", "label": "TOPIC_FAMILY"}
+{"text": "my parents and me keep clashing", "label": "TOPIC_FAMILY"}
+{"text": "disputes over family property", "label": "TOPIC_FAMILY"}
+{"text": "my brother and i are estranged", "label": "TOPIC_FAMILY"}
+{"text": "can you check my whole family's charts", "label": "TOPIC_FAMILY"}
+{"text": "i want a reading for my mother and father", "label": "TOPIC_FAMILY"}
+{"text": "compare my chart with my son's", "label": "TOPIC_FAMILY"}
+{"text": "ancestral issues in my family", "label": "TOPIC_FAMILY"}
+{"text": "পরিবার", "label": "TOPIC_FAMILY"}
+{"text": "পরিবারে অশান্তি", "label": "TOPIC_FAMILY"}
+{"text": "ঘরে শান্তি নেই", "label": "TOPIC_FAMILY"}
+{"text": "মা-বাবার সাথে সমস্যা", "label": "TOPIC_FAMILY"}
+{"text": "শ্বশুরবাড়ি নিয়ে সমস্যা", "label": "TOPIC_FAMILY"}
+{"text": "পারিবারিক সম্পত্তি নিয়ে বিবাদ", "label": "TOPIC_FAMILY"}
+{"text": "ভাইয়ের সাথে বিচ্ছেদ", "label": "TOPIC_FAMILY"}
+{"text": "পুরো পরিবারের কুষ্ঠি দেখবেন", "label": "TOPIC_FAMILY"}
+{"text": "মা আর বাবার কোষ্ঠি দেখতে চাই", "label": "TOPIC_FAMILY"}
+{"text": "আমার আর ছেলের চার্ট মিলিয়ে দেখুন", "label": "TOPIC_FAMILY"}
+{"text": "বংশগত সমস্যা পরিবারে", "label": "TOPIC_FAMILY"}
+{"text": "sade sati", "label": "TOPIC_SADESATI"}
+{"text": "am i in sade sati right now", "label": "TOPIC_SADESATI"}
+{"text": "when does my sade sati end", "label": "TOPIC_SADESATI"}
+{"text": "sadesati effects on me", "label": "TOPIC_SADESATI"}
+{"text": "shani sade sati phase", "label": "TOPIC_SADESATI"}
+{"text": "is saturn troubling me now", "label": "TOPIC_SADESATI"}
+{"text": "which phase of sade sati am i in", "label": "TOPIC_SADESATI"}
+{"text": "is shani dhaiya affecting me", "label": "TOPIC_SADESATI"}
+{"text": "saturn transit over my moon", "label": "TOPIC_SADESATI"}
+{"text": "remedy for sade sati", "label": "TOPIC_SADESATI"}
+{"text": "সাড়ে সাতী", "label": "TOPIC_SADESATI"}
+{"text": "আমার সাড়ে সাতী চলছে কি", "label": "TOPIC_SADESATI"}
+{"text": "সাড়ে সাতী কবে শেষ হবে", "label": "TOPIC_SADESATI"}
+{"text": "শনির সাড়ে সাতী", "label": "TOPIC_SADESATI"}
+{"text": "শনি কি এখন পীড়া দিচ্ছে", "label": "TOPIC_SADESATI"}
+{"text": "সাড়ে সাতীর কোন পর্যায়ে আছি", "label": "TOPIC_SADESATI"}
+{"text": "সাড়ে সাত বছরের শনি", "label": "TOPIC_SADESATI"}
+{"text": "চন্দ্রের উপর শনির গোচর", "label": "TOPIC_SADESATI"}
+{"text": "সাড়ে সাতীর প্রতিকার", "label": "TOPIC_SADESATI"}
+{"text": "will you read my birth chart", "label": "TOPIC_CHART"}
+{"text": "please make my kundli", "label": "TOPIC_CHART"}
+{"text": "i want my full horoscope reading", "label": "TOPIC_CHART"}
+{"text": "cast my natal chart", "label": "TOPIC_CHART"}
+{"text": "what is my rashi and nakshatra", "label": "TOPIC_CHART"}
+{"text": "which nakshatra and pada am i born in", "label": "TOPIC_CHART"}
+{"text": "what is my moon sign", "label": "TOPIC_CHART"}
+{"text": "what is my lagna or ascendant", "label": "TOPIC_CHART"}
+{"text": "who is my atmakaraka", "label": "TOPIC_CHART"}
+{"text": "which mahadasha am i running", "label": "TOPIC_CHART"}
+{"text": "what is my current vimshottari dasha", "label": "TOPIC_CHART"}
+{"text": "when does my next antardasha start", "label": "TOPIC_CHART"}
+{"text": "explain my navamsa d9 chart", "label": "TOPIC_CHART"}
+{"text": "what does my d60 shashtiamsa show", "label": "TOPIC_CHART"}
+{"text": "give me a general life reading from my chart", "label": "TOPIC_CHART"}
+{"text": "what do the planets say about my life", "label": "TOPIC_CHART"}
+{"text": "আমার কোষ্ঠি বানিয়ে দিন", "label": "TOPIC_CHART"}
+{"text": "আমার কুষ্ঠি বিচার করুন", "label": "TOPIC_CHART"}
+{"text": "পুরো জন্মছক দেখতে চাই", "label": "TOPIC_CHART"}
+{"text": "আমার রাশি আর নক্ষত্র কি", "label": "TOPIC_CHART"}
+{"text": "কোন নক্ষত্র আর পদে জন্ম", "label": "TOPIC_CHART"}
+{"text": "আমার চন্দ্র রাশি কি", "label": "TOPIC_CHART"}
+{"text": "আমার লগ্ন কি", "label": "TOPIC_CHART"}
+{"text": "আমার আত্মকারক কে", "label": "TOPIC_CHART"}
+{"text": "এখন কোন মহাদশা চলছে", "label": "TOPIC_CHART"}
+{"text": "আমার বর্তমান বিংশোত্তরী দশা কি", "label": "TOPIC_CHART"}
+{"text": "পরের অন্তর্দশা কবে শুরু", "label": "TOPIC_CHART"}
+{"text": "আমার নবাংশ চার্ট ব্যাখ্যা করুন", "label": "TOPIC_CHART"}
+{"text": "জীবনের সামগ্রিক বিচার দিন", "label": "TOPIC_CHART"}
+{"text": "who was gorakhnath", "label": "LINEAGE_Q"}
+{"text": "tell me about matsyendranath", "label": "LINEAGE_Q"}
+{"text": "teachings of bamakhepa", "label": "LINEAGE_Q"}
+{"text": "about baba kinaram", "label": "LINEAGE_Q"}
+{"text": "who is aghoreshwar bhagwan ram", "label": "LINEAGE_Q"}
+{"text": "what did the nath yogis teach", "label": "LINEAGE_Q"}
+{"text": "tell me about the aghor lineage", "label": "LINEAGE_Q"}
+{"text": "what is the aghori tradition about", "label": "LINEAGE_Q"}
+{"text": "goraksha shataka meaning", "label": "LINEAGE_Q"}
+{"text": "explain the kaula tradition", "label": "LINEAGE_Q"}
+{"text": "what do the tantras say about the goddess", "label": "LINEAGE_Q"}
+{"text": "tell me a teaching from the mahanirvana tantra", "label": "LINEAGE_Q"}
+{"text": "who was tarapith's famous sadhaka", "label": "LINEAGE_Q"}
+{"text": "what is the meaning of kundalini in the nath texts", "label": "LINEAGE_Q"}
+{"text": "share some wisdom from the masters", "label": "LINEAGE_Q"}
+{"text": "গোরক্ষনাথ কে ছিলেন", "label": "LINEAGE_Q"}
+{"text": "মৎস্যেন্দ্রনাথ সম্পর্কে বলুন", "label": "LINEAGE_Q"}
+{"text": "বামাক্ষ্যাপার সাধনা সম্পর্কে বলুন", "label": "LINEAGE_Q"}
+{"text": "বাবা কিনারাম কে ছিলেন", "label": "LINEAGE_Q"}
+{"text": "অঘোরেশ্বর ভগবান রাম কে", "label": "LINEAGE_Q"}
+{"text": "অঘোর পরম্পরা নিয়ে বলুন", "label": "LINEAGE_Q"}
+{"text": "নাথ যোগীদের শিক্ষা কী", "label": "LINEAGE_Q"}
+{"text": "তারাপীঠের বামাক্ষ্যাপা", "label": "LINEAGE_Q"}
+{"text": "কৌল পরম্পরা কী", "label": "LINEAGE_Q"}
+{"text": "মহানির্বাণ তন্ত্রের একটি বচন বলুন", "label": "LINEAGE_Q"}
+{"text": "গুরুদের কাছ থেকে কিছু জ্ঞান দিন", "label": "LINEAGE_Q"}
+{"text": "কুলকুণ্ডলিনী নিয়ে নাথ গ্রন্থে কী আছে", "label": "LINEAGE_Q"}
+{"text": "ok", "label": "OTHER"}
+{"text": "okay", "label": "OTHER"}
+{"text": "hmm", "label": "OTHER"}
+{"text": "i see", "label": "OTHER"}
+{"text": "got it", "label": "OTHER"}
+{"text": "alright", "label": "OTHER"}
+{"text": "tell me more", "label": "OTHER"}
+{"text": "go on", "label": "OTHER"}
+{"text": "what should i do now", "label": "OTHER"}
+{"text": "can you help me", "label": "OTHER"}
+{"text": "i need some guidance", "label": "OTHER"}
+{"text": "what do you offer", "label": "OTHER"}
+{"text": "i am not sure what to ask", "label": "OTHER"}
+{"text": "how does this work", "label": "OTHER"}
+{"text": "what information do you need from me", "label": "OTHER"}
+{"text": "can i ask you something", "label": "OTHER"}
+{"text": "আচ্ছা", "label": "OTHER"}
+{"text": "ঠিক আছে", "label": "OTHER"}
+{"text": "বুঝলাম", "label": "OTHER"}
+{"text": "আর একটু বলুন", "label": "OTHER"}
+{"text": "তারপর বলুন", "label": "OTHER"}
+{"text": "আমি কী করব এখন", "label": "OTHER"}
+{"text": "একটু সাহায্য করবেন", "label": "OTHER"}
+{"text": "আমার পথনির্দেশ দরকার", "label": "OTHER"}
+{"text": "তুমি কী কী দিতে পারো", "label": "OTHER"}
+{"text": "এটা কীভাবে কাজ করে", "label": "OTHER"}
+{"text": "আমার কাছ থেকে কী তথ্য লাগবে", "label": "OTHER"}
+{"text": "কিছু জিজ্ঞেস করতে পারি", "label": "OTHER"}
+{"text": "how do i destroy my enemy", "label": "UNSAFE"}
+{"text": "give me a marana mantra for my rival", "label": "UNSAFE"}
+{"text": "i want to curse someone who wronged me", "label": "UNSAFE"}
+{"text": "cast black magic on my neighbour", "label": "UNSAFE"}
+{"text": "how to do uchatan on my enemy", "label": "UNSAFE"}
+{"text": "vashikaran to make my ex come back", "label": "UNSAFE"}
+{"text": "a spell to control my husband's mind", "label": "UNSAFE"}
+{"text": "make this girl fall in love with me by force", "label": "UNSAFE"}
+{"text": "when exactly will i die", "label": "UNSAFE"}
+{"text": "how many years do i have left to live", "label": "UNSAFE"}
+{"text": "when will my father die", "label": "UNSAFE"}
+{"text": "predict the date of my death", "label": "UNSAFE"}
+{"text": "i want to end my life", "label": "UNSAFE"}
+{"text": "i feel like killing myself", "label": "UNSAFE"}
+{"text": "শত্রুকে কীভাবে ধ্বংস করব", "label": "UNSAFE"}
+{"text": "শত্রুর জন্য মারণ মন্ত্র দিন", "label": "UNSAFE"}
+{"text": "কারো উপর কালো জাদু করতে চাই", "label": "UNSAFE"}
+{"text": "বশীকরণ করে ওকে ফিরিয়ে আনতে চাই", "label": "UNSAFE"}
+{"text": "স্বামীকে বশ করার উপায় বলুন", "label": "UNSAFE"}
+{"text": "আমি কবে মরব", "label": "UNSAFE"}
+{"text": "আর কত বছর বাঁচব", "label": "UNSAFE"}
+{"text": "বাবা কবে মারা যাবে", "label": "UNSAFE"}
+{"text": "আমার মৃত্যুর তারিখ বলুন", "label": "UNSAFE"}
+{"text": "আমি জীবন শেষ করে দিতে চাই", "label": "UNSAFE"}
+{"text": "আত্মহত্যা করতে ইচ্ছে করছে", "label": "UNSAFE"}

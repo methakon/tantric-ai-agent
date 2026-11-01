@@ -1,0 +1,188 @@
+# Intent Classifier (Tier 4 — tiny neural/ML intent router)
+
+A small, offline, deterministic-in-behaviour intent classifier that routes a
+seeker's message to the correct existing responder. It replaces the brittle
+regex cascade in `consultation_engine._conversational_reply` /
+`_lineage_consultation` with a learned model that generalises across phrasings
+it was never hand-coded for — in **one mixed Bengali + English model**.
+
+It never generates content. It only predicts **which deterministic responder to
+call**. All astrology facts still come from Swiss Ephemeris, all remedies from
+the seeded tables, all yantras from the C++ engine.
+
+---
+
+## 1. Design
+
+```
+user text ─> TF-IDF features (char 2–5 grams + word 1–2 grams, mixed bn/en)
+          ─> LogisticRegression (multinomial)
+          ─> (intent, confidence)
+                 │
+     confidence ≥ threshold ? ─ yes ─> route to the intent's responder
+                 │
+                 └─ no ─────────────> fall back to the existing rule-based path
+```
+
+- **Features:** character n-grams (2–5) capture Bengali conjuncts/morphology and
+  typo tolerance; word n-grams (1–2) capture English keywords. Char n-grams are
+  what make a single mixed-language model work without language detection.
+- **Classifier:** multinomial Logistic Regression — a linear model with
+  `predict_proba`, so we get a calibrated-ish confidence per message.
+- **Determinism:** inference is a pure function of the message once the model is
+  trained; the same input always yields the same intent. (Variation in the
+  *reply wording* still comes from the existing `pick()` rotation, not the model.)
+
+### Why not an LLM
+Hardware and safety. A generating LLM needs ≥1 GB RAM and risks fabricating
+astrology, which the engine's contract forbids ("nothing here guesses"). This
+classifier is tens of MB at most, sub-millisecond, and cannot invent facts.
+
+---
+
+## 2. Intent labels
+
+Derived directly from the existing routing in `consultation_engine.py`:
+
+| Label | Routes to | Example (bn / en) |
+|-------|-----------|-------------------|
+| `GREETING` | conversational greeting | "নমস্কার" / "hi there" |
+| `HOWARE` | conversational well-being | "কেমন আছো" / "how are you" |
+| `THANKS` | conversational thanks | "ধন্যবাদ" / "thank you" |
+| `IDENTITY` | conversational identity | "তুমি কে" / "who are you" |
+| `TOPIC_MARRIAGE` | topic → ask for birth data | "বিয়ে কবে হবে" / "marriage prospects" |
+| `TOPIC_CAREER` | topic → ask for birth data | "চাকরি" / "career change" |
+| `TOPIC_HEALTH` | topic → ask for birth data | "শরীর খারাপ" / "health issues" |
+| `TOPIC_FINANCE` | topic → ask for birth data | "টাকা-পয়সা" / "money problems" |
+| `TOPIC_SADHANA` | topic → ask for birth data | "জপ-ধ্যান" / "which mantra" |
+| `TOPIC_CHILDREN` | topic → ask for birth data | "সন্তান" / "children" |
+| `TOPIC_FAMILY` | topic → ask for birth data | "পরিবার" / "family" |
+| `TOPIC_SADESATI` | topic → sade sati reading | "সাড়ে সাতী" / "shani sade sati" |
+| `TOPIC_CHART` | chart request → compute (or ask for birth data) | "আমার কোষ্ঠি বানান" / "which mahadasha am i running" |
+| `LINEAGE_Q` | C++ lineage wisdom bank | "গোরক্ষনাথ" / "who was Bamakhepa" |
+| `UNSAFE` | refusal path (defense-in-depth safety net) | "when will my father die" / "বশীকরণ শেখান" |
+| `OTHER` | full protocol guidance (ask for birth data) | anything unmatched |
+
+> `BIRTH_DATA` is intentionally **not** a classifier label. A message that
+> contains a parseable date/time/place is detected by `parse_birth()` (structured
+> extraction, which must stay exact) and always wins before the classifier runs.
+
+### Safety: defense in depth
+
+`UNSAFE` is a **second** safety layer, never the only one. The order in
+`compose_consultation` is:
+
+1. `safety_check()` — the authoritative gate. It runs the C++ `SafetyValidator`
+   **and** a Python keyword port (bn/en/hi) covering harmful rites, coercive
+   Vashikaran, fatalistic death/lifespan (first- and third-person), and
+   mental-health crisis. Either source blocking → refusal. This is
+   high-precision and does not depend on classifier confidence.
+2. Classifier `UNSAFE` — a recall net for novel/oblique phrasings the keyword
+   lists do not enumerate. A confident `UNSAFE` routes to the refusal builder.
+   It can only *add* refusals; it never downgrades a block to PERMITTED.
+
+Because the keyword gate is confidence-independent, low-confidence harmful
+phrasings (e.g. "give me a marana mantra") are still caught by the keyword
+"marana"/"বশীকরণ" match even when the classifier is unsure.
+
+---
+
+## 3. Files
+
+| Path | Role |
+|------|------|
+| `data/intent_dataset.jsonl` | Labeled seed examples (bn + en), one `{"text","label"}` per line |
+| `scripts/train_intent_classifier.py` | Offline trainer → writes the model + a report |
+| `scripts/intent_classifier.py` | Runtime: loads the model once, `classify(text) -> (label, conf)` |
+| `models/intent_clf.joblib` | The trained pipeline (git-ignored; regenerated by the trainer) |
+
+---
+
+## 4. Training (offline)
+
+```bash
+source venv/bin/activate
+python3 scripts/train_intent_classifier.py            # trains from data/intent_dataset.jsonl
+python3 scripts/train_intent_classifier.py --report   # also prints per-class metrics
+```
+
+The trainer does a stratified train/test split, fits the TF-IDF + LogReg
+pipeline, prints accuracy + a classification report, and saves
+`models/intent_clf.joblib`. Retraining is seconds on CPU.
+
+Dependencies: `scikit-learn`, `numpy`, `joblib` — **already in the venv**. No new
+packages.
+
+---
+
+## 5. Runtime integration
+
+`scripts/intent_classifier.py` exposes:
+
+```python
+from intent_classifier import classify
+label, conf = classify("বিয়ে কবে হবে")   # -> ("TOPIC_MARRIAGE", 0.91)
+```
+
+- The model is loaded **once** at import (tens of MB resident) and cached.
+- If `models/intent_clf.joblib` is missing or fails to load, `classify()`
+  returns `(None, 0.0)` and the caller falls back to the existing rules —
+  the same graceful-degradation pattern used for a missing engine binary.
+
+`consultation_engine.py` calls `classify()` inside the non-birth-data branch of
+`compose_consultation`, **after** `parse_birth` and the safety gate:
+
+```
+safety gate (unchanged)
+  → parse_birth: if birth data present → deterministic chart path (classifier skipped)
+  → classify(message):
+       conf ≥ CONFIDENCE_THRESHOLD → dispatch to the predicted intent's responder
+       else                         → existing regex rules → guidance fallback
+```
+
+`CONFIDENCE_THRESHOLD` (default **0.55**) is the safety valve: a low-confidence
+prediction never overrides the hand-written rules. Tune it from the training
+report.
+
+---
+
+## 6. Improvement loop
+
+The model starts from a bootstrapped seed set and improves with real traffic:
+
+1. Real messages are already auditable (`audit_learning_logs.json`).
+2. Periodically label a batch and append to `data/intent_dataset.jsonl`.
+3. Re-run the trainer. No code change, no redeploy of logic — just a new model file.
+
+The current seed set is **425 examples across 16 intents** (mixed Bengali +
+English, with transliterated Hindi on the `UNSAFE` side). Each intent has
+~19–35 examples spanning direct keywords, oblique/colloquial phrasings, and
+project-specific concept vocabulary (nakshatra, pada, lagna, Atmakaraka,
+Vimshottari Mahadasha/Antardasha, D9/D12/D60, Arudha, sade sati, manglik,
+santan yoga, dhan yoga). Grow it as real queries arrive.
+
+---
+
+## 7. Size & resource budget
+
+| Item | Size |
+|------|------|
+| `models/intent_clf.joblib` | ~1–10 MB (grows slowly with vocab) |
+| Resident RAM at runtime | a few MB to low tens of MB |
+| Inference latency | sub-millisecond per message |
+| New dependencies | none |
+
+Comfortably within the stated 1 GB RAM ceiling and far below the 20–50 MB of the
+classic AIML chatbots — while being an actual learned classifier rather than a
+canned-answer lookup table.
+
+---
+
+## 8. Limits
+
+- Routes to **predefined intents only**; a genuinely new intent category needs
+  new labeled examples + a retrain.
+- Quality scales with the labeled dataset; the v1 seed set will misroute some
+  edge phrasings until the log→label→retrain loop fills gaps.
+- It classifies intent, it does not compose answers — answer quality and safety
+  remain owned by the deterministic engine and templates.

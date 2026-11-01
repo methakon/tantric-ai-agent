@@ -3,6 +3,9 @@ __pycache__/
 *.o
 *.a
 *.pyc
+# Trained intent-classifier model — regenerable from data/intent_dataset.jsonl
+# via scripts/train_intent_classifier.py. The dataset + scripts are tracked.
+models/*.joblib
 build/
 dist/
 *.wav

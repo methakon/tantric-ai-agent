@@ -107,15 +107,60 @@ YANTRA_RENDERABLE = {
 
 # Fail-safe safety port (used only if the C++ binary is unavailable)
 _FALLBACK_BLOCKED = {
-    "BLOCKED_HARMFUL_RITE": ["marana", "kill enemy", "destroy enemy",
-                             "vidveshana", "ucchatana", "break marriage",
-                             "ruin business"],
-    "BLOCKED_FATALISTIC": ["when will i die", "when exactly will i die",
-                           "how long will i live", "my death date",
-                           "date of my death"],
-    "BLOCKED_COERCIVE": ["vashikaran", "control his mind", "control her mind",
-                         "make him love me", "make her love me"],
-    "BLOCKED_MENTAL_HEALTH": ["kill myself", "end my life", "suicide"],
+    "BLOCKED_HARMFUL_RITE": [
+        # English
+        "marana", "maran", "kill enemy", "kill my enemy", "destroy enemy",
+        "destroy my enemy", "harm my enemy", "curse my enemy", "black magic on",
+        "vidveshana", "ucchatana", "uchatan", "break their marriage",
+        "break his marriage", "break her marriage", "ruin their business",
+        "ruin his business", "ruin her life", "put a hex", "cast a spell on",
+        # Bengali
+        "শত্রু নাশ", "শত্রুকে ধ্বংস", "শত্রুর সর্বনাশ", "মারণ", "অভিশাপ দিতে",
+        "কালো জাদু", "সংসার ভাঙতে", "ব্যবসা নষ্ট",
+        # Hindi (transliteration seen in chat)
+        "shatru nash", "dushman ko", "kala jadu", "nuksan pahunchana",
+    ],
+    "BLOCKED_FATALISTIC": [
+        # English — first and third person death/lifespan
+        "when will i die", "when exactly will i die", "when do i die",
+        "how long will i live", "how many years will i live", "my death date",
+        "date of my death", "time of my death", "when will my death",
+        "when will my father die", "when will my mother die",
+        "when will my husband die", "when will my wife die",
+        "when will he die", "when will she die", "when will they die",
+        "how long will my father live", "how long will my mother live",
+        "will i die soon", "am i going to die", "lifespan",
+        # Bengali
+        "কবে মরব", "আমি কবে মরব", "কবে মারা যাব", "আমার মৃত্যু কবে",
+        "কতদিন বাঁচব", "কবে মরবে", "বাবা কবে মারা যাবে",
+        "মা কবে মারা যাবে", "আয়ু কত", "মৃত্যুর সময়",
+        # Hindi transliteration
+        "kab marunga", "kab maroonga", "meri mrityu", "kitne saal jiyunga",
+        "kab marega", "pita kab marenge",
+    ],
+    "BLOCKED_COERCIVE": [
+        # English — coercive attraction / mind control
+        "vashikaran", "vasikaran", "bashikaran", "control his mind",
+        "control her mind", "control my husband", "control my wife",
+        "make him love me", "make her love me", "make him marry me",
+        "make her marry me", "make my ex come back", "bring my ex back",
+        "force him to", "force her to", "make him obey", "make her obey",
+        "attract a specific person", "put him under my control",
+        # Bengali
+        "বশীকরণ", "বশ করতে", "বশ করার", "তাকে আমার বশে",
+        "প্রেমে বাধ্য করতে", "ফিরিয়ে আনতে বাধ্য", "আমার কথা শুনতে বাধ্য",
+        # Hindi transliteration
+        "vash mein karna", "apne vash", "wapas laane ka",
+    ],
+    "BLOCKED_MENTAL_HEALTH": [
+        "kill myself", "end my life", "end it all", "suicide", "suicidal",
+        "want to die", "don't want to live", "no reason to live",
+        "harm myself", "hurt myself",
+        # Bengali
+        "আত্মহত্যা", "মরে যেতে চাই", "বাঁচতে চাই না", "নিজেকে শেষ",
+        # Hindi transliteration
+        "aatmahatya", "marna chahta", "jeena nahi chahta",
+    ],
 }
 
 
@@ -123,21 +168,33 @@ _FALLBACK_BLOCKED = {
 # Safety gate
 # ============================================================
 def safety_check(text: str) -> str:
-    """Return PERMITTED | BLOCKED_* using the C++ validator when possible."""
+    """Return PERMITTED | BLOCKED_* — defense in depth.
+
+    The C++ SafetyValidator is authoritative for the patterns it covers, but
+    its coverage of third-person death, Bengali/Hindi phrasings, and some
+    coercive forms is incomplete. So the Python fail-safe patterns run
+    *in addition* (not only when the engine is absent): if EITHER the engine
+    OR the pattern port flags the text, it is blocked. A BLOCKED verdict is
+    never downgraded to PERMITTED.
+    """
+    low = (text or "").lower()
+    # 1) Python pattern port — always evaluated (closes known engine gaps).
+    for verdict, pats in _FALLBACK_BLOCKED.items():
+        if any(p in low for p in pats):
+            return verdict
+    # 2) C++ validator — authoritative when it blocks; also catches patterns
+    #    the port does not enumerate.
     if os.path.exists(ENGINE):
         try:
             r = subprocess.run([ENGINE, "--safety", text],
                                capture_output=True, text=True, timeout=5)
             verdict = r.stdout.strip().splitlines()[-1] if r.stdout.strip() else ""
-            if verdict.startswith("PERMITTED") or verdict.startswith("BLOCKED"):
+            if verdict.startswith("BLOCKED"):
                 return verdict
+            if verdict.startswith("PERMITTED"):
+                return "PERMITTED"
         except Exception as e:
             print(f"[WARN] safety subprocess failed: {e}", file=sys.stderr)
-    # Fail-safe port (kept in sync with include/safety_validator.hpp)
-    low = text.lower()
-    for verdict, pats in _FALLBACK_BLOCKED.items():
-        if any(p in low for p in pats):
-            return verdict
     return "PERMITTED"
 
 
@@ -367,6 +424,37 @@ _UPLOAD_RE = re.compile(r'^\[uploaded:\s*(.+?)\]$')
 # chart replies stays fully deterministic — this affects only the voice).
 _CONVO_N = 0
 
+# ---- Tier-4 intent classifier (optional, graceful fallback) -------------
+# A tiny TF-IDF + LogisticRegression model (scripts/intent_classifier.py)
+# catches phrasings the hand-written regexes below miss. It NEVER overrides
+# birth-data parsing or the safety gate, and it only *routes* — the reply
+# text still comes from the deterministic builders in this file. If the
+# model is absent or unsure, routing falls back to the regex rules exactly
+# as before. Map from classifier label -> the trigger the rules already use.
+_CLF_TO_TOPIC = {
+    "TOPIC_MARRIAGE": "বিয়ে",
+    "TOPIC_CAREER": "কর্ম",
+    "TOPIC_HEALTH": "স্বাস্থ্য",
+    "TOPIC_FINANCE": "অর্থ",
+    "TOPIC_SADHANA": "সাধনা",
+    "TOPIC_CHILDREN": "সন্তান",
+    "TOPIC_FAMILY": "পরিবার",
+    "TOPIC_SADESATI": "সাড়ে সাতী",
+}
+
+
+def _clf_intent(content: str):
+    """Return a confident intent label from the ML classifier, or None.
+
+    Silent, dependency-safe: any import/predict failure yields None and the
+    caller keeps its regex behaviour.
+    """
+    try:
+        from intent_classifier import classify_confident
+        return classify_confident(content or "")
+    except Exception:
+        return None
+
 # ---- session memory (per user, in-process) ------------------------------
 # After a chart or family consultation, the computed context is stashed
 # under the session key so FOLLOW-UP questions ("what about my job…",
@@ -471,7 +559,13 @@ def _lineage_consultation(content: str, lang: str):
         if key in text:
             topic = val
             break
-    if master is None and topic is None:
+    # Classifier assist: a confident LINEAGE_Q lets a lineage question
+    # through even when no master/topic keyword matched (the C++ bank
+    # returns grounded default teachings for empty master+topic). Regex
+    # matches still take priority and set master/topic precisely.
+    clf_lineage = (master is None and topic is None
+                   and _clf_intent(content) == "LINEAGE_Q")
+    if master is None and topic is None and not clf_lineage:
         return None
     # Birth data always takes priority: a message with a parseable chart
     # is a consultation, not a lineage question.
@@ -553,6 +647,11 @@ def _conversational_reply(content: str, lang: str):
     seed = (sum(ord(c) for c in text) + datetime.date.today().toordinal()
             + _CONVO_N) % 97
 
+    # Classifier assist: a confident label catches phrasings the regexes
+    # below miss. Used only to *widen* matching, never to override a regex
+    # hit (the regexes are exact and win first).
+    clf = _clf_intent(content)
+
     def pick(seq):
         return seq[seed % len(seq)]
 
@@ -564,6 +663,13 @@ def _conversational_reply(content: str, lang: str):
     thanks = re.search(r"(thanks|thank\s*you|thnx|ধন্যবাদ|থ্যাংকস)", text)
     who = re.search(r"(who\s*are\s*you|your\s*name|তুমি\s*কে|কে\s*তুমি|"
                     r"তোমার\s*নাম|আপনি\s*কে)", text)
+
+    # fold the classifier verdict into the boolean signals (regex still
+    # wins when it matches; the classifier only fills gaps)
+    greet = greet or (clf == "GREETING")
+    howare = howare or (clf == "HOWARE")
+    thanks = thanks or (clf == "THANKS")
+    who = who or (clf == "IDENTITY")
 
     if who:
         if lang == "en":
@@ -656,7 +762,7 @@ def _conversational_reply(content: str, lang: str):
                                      "shani", "শনি"]),
     }
     for key, (label, words) in topics.items():
-        if any(w in text for w in words):
+        if any(w in text for w in words) or (_CLF_TO_TOPIC.get(clf) == key):
             if lang == "en":
                 return pick([
                     f"Talking about {key} — good. For a reliable answer I "
@@ -960,6 +1066,18 @@ def compose_consultation(content: str, lang: str, registered=None,
     verdict = safety_check(content)
     if verdict.startswith("BLOCKED"):
         body = _refusal(verdict, lang)
+        chunks = _split_chunks(body)
+        resp = _pack(chunks, lang, None, None)
+        resp["_mode"] = "refusal"
+        return resp
+
+    # Defense in depth: the ML classifier is a second safety net for
+    # harmful phrasings the keyword gate above does not enumerate (novel
+    # wordings, mixed script). It only *adds* refusals, never downgrades a
+    # PERMITTED verdict into anything permissive. A confident UNSAFE maps to
+    # the harmful-rite refusal (the generic benevolent-reframing message).
+    if _clf_intent(content) == "UNSAFE":
+        body = _refusal("BLOCKED_HARMFUL_RITE", lang)
         chunks = _split_chunks(body)
         resp = _pack(chunks, lang, None, None)
         resp["_mode"] = "refusal"
